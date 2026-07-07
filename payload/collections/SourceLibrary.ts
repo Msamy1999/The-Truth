@@ -1,4 +1,13 @@
 import type { CollectionConfig } from "payload";
+import {
+  revalidateAfterChange,
+  revalidateAfterDelete,
+} from "../hooks/revalidate";
+
+const contentHooks = {
+  afterChange: [revalidateAfterChange],
+  afterDelete: [revalidateAfterDelete],
+};
 
 const citationTypeOptions = [
   "quran",
@@ -15,6 +24,7 @@ const citationTypeOptions = [
 
 export const SourceLibraryCategories: CollectionConfig = {
   slug: "source-library-categories",
+  hooks: contentHooks,
   admin: {
     useAsTitle: "title",
     defaultColumns: ["title", "order"],
@@ -34,6 +44,7 @@ export const SourceLibraryCategories: CollectionConfig = {
 
 export const SourceLibraryItems: CollectionConfig = {
   slug: "source-library-items",
+  hooks: contentHooks,
   admin: {
     useAsTitle: "title",
     defaultColumns: ["title", "type", "category", "status"],

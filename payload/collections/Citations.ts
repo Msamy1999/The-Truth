@@ -1,4 +1,8 @@
 import type { CollectionConfig } from "payload";
+import {
+  revalidateAfterChange,
+  revalidateAfterDelete,
+} from "../hooks/revalidate";
 
 const citationTypeOptions = [
   "quran",
@@ -21,6 +25,10 @@ const citationTypeOptions = [
  */
 export const Citations: CollectionConfig = {
   slug: "citations",
+  hooks: {
+    afterChange: [revalidateAfterChange],
+    afterDelete: [revalidateAfterDelete],
+  },
   admin: {
     useAsTitle: "title",
     defaultColumns: ["citationKey", "title", "type", "status"],

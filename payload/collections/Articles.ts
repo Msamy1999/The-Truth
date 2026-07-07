@@ -1,4 +1,9 @@
 import type { CollectionConfig } from "payload";
+import { blockUnverifiedPublish } from "../hooks/blockUnverifiedPublish";
+import {
+  revalidateAfterChange,
+  revalidateAfterDelete,
+} from "../hooks/revalidate";
 
 const categorySlugOptions = [
   "quran-vs-bible",
@@ -48,6 +53,11 @@ export const Articles: CollectionConfig = {
   slug: "articles",
   versions: {
     drafts: true,
+  },
+  hooks: {
+    beforeChange: [blockUnverifiedPublish],
+    afterChange: [revalidateAfterChange],
+    afterDelete: [revalidateAfterDelete],
   },
   admin: {
     useAsTitle: "title",

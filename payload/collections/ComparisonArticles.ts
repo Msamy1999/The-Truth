@@ -1,4 +1,9 @@
 import type { CollectionConfig } from "payload";
+import { blockUnverifiedPublish } from "../hooks/blockUnverifiedPublish";
+import {
+  revalidateAfterChange,
+  revalidateAfterDelete,
+} from "../hooks/revalidate";
 
 const localizedTextarea = (name: string) =>
   ({
@@ -17,9 +22,14 @@ export const ComparisonArticles: CollectionConfig = {
   versions: {
     drafts: true,
   },
+  hooks: {
+    beforeChange: [blockUnverifiedPublish],
+    afterChange: [revalidateAfterChange],
+    afterDelete: [revalidateAfterDelete],
+  },
   admin: {
     useAsTitle: "mainQuestion",
-    defaultColumns: ["slug", "mainQuestion"],
+    defaultColumns: ["slug", "mainQuestion", "status"],
   },
   fields: [
     {
@@ -31,6 +41,22 @@ export const ComparisonArticles: CollectionConfig = {
       admin: {
         position: "sidebar",
         description: "Must match the slug of the base article record.",
+      },
+    },
+    {
+      name: "status",
+      type: "select",
+      required: true,
+      defaultValue: "draft",
+      options: [
+        { label: "Draft", value: "draft" },
+        { label: "Under review", value: "reviewed" },
+        { label: "Published", value: "published" },
+      ],
+      admin: {
+        position: "sidebar",
+        description:
+          "Published requires every linked citation and scripture record to be verified (enforced by the publish gate).",
       },
     },
     { name: "mainQuestion", type: "text", required: true, localized: true },

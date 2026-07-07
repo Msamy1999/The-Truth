@@ -1,4 +1,8 @@
 import type { CollectionConfig } from "payload";
+import {
+  revalidateAfterChange,
+  revalidateAfterDelete,
+} from "../hooks/revalidate";
 
 const topicTagOptions = [
   "Jesus",
@@ -15,6 +19,10 @@ const topicTagOptions = [
 
 export const GlossaryTerms: CollectionConfig = {
   slug: "glossary-terms",
+  hooks: {
+    afterChange: [revalidateAfterChange],
+    afterDelete: [revalidateAfterDelete],
+  },
   admin: {
     useAsTitle: "term",
     defaultColumns: ["term", "category"],

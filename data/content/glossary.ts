@@ -77,7 +77,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     "Revelation",
     "Source-pending draft: divine communication or guidance. Future entry should compare usage in Islam and Christianity with cited sources.",
     "Scripture",
-    ["Quran", "Gospel", "Injil"],
+    ["Gospel", "Injil"],
   ),
   term(
     "Canon",
@@ -95,7 +95,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     "Hadith",
     "Source-pending draft: reports connected to the Prophet Muhammad's words, actions, or approvals. Future entry should cite hadith methodology sources.",
     "Sources",
-    ["Sunnah", "Tafsir"],
+    ["Sunnah"],
   ),
   term(
     "Sunnah",

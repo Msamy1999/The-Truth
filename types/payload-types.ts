@@ -267,6 +267,10 @@ export interface ComparisonArticle {
    * Must match the slug of the base article record.
    */
   slug: string;
+  /**
+   * Published requires every linked citation and scripture record to be verified (enforced by the publish gate).
+   */
+  status: 'draft' | 'reviewed' | 'published';
   mainQuestion: string;
   beginnerSummary: string;
   quranicPerspective: string;
@@ -591,6 +595,7 @@ export interface ArticlesSelect<T extends boolean = true> {
  */
 export interface ComparisonArticlesSelect<T extends boolean = true> {
   slug?: T;
+  status?: T;
   mainQuestion?: T;
   beginnerSummary?: T;
   quranicPerspective?: T;

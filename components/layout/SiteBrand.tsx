@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { siteName, siteNameArabic } from "@/lib/seo";
+import { siteName, siteNameArabic } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 type SiteBrandProps = {

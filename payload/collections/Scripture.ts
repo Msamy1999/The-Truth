@@ -1,4 +1,13 @@
 import type { CollectionConfig } from "payload";
+import {
+  revalidateAfterChange,
+  revalidateAfterDelete,
+} from "../hooks/revalidate";
+
+const contentHooks = {
+  afterChange: [revalidateAfterChange],
+  afterDelete: [revalidateAfterDelete],
+};
 
 const verificationFields: CollectionConfig["fields"] = [
   {
@@ -33,6 +42,7 @@ const verificationFields: CollectionConfig["fields"] = [
  */
 export const QuranVerses: CollectionConfig = {
   slug: "quran-verses",
+  hooks: contentHooks,
   admin: {
     useAsTitle: "reference",
     defaultColumns: ["reference", "surahName", "status"],
@@ -61,6 +71,7 @@ export const QuranVerses: CollectionConfig = {
 
 export const BibleVerses: CollectionConfig = {
   slug: "bible-verses",
+  hooks: contentHooks,
   admin: {
     useAsTitle: "reference",
     defaultColumns: ["reference", "book", "version", "status"],
