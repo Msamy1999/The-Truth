@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "surahName": "Source pending",
+    "surahNumber": 0,
+    "ayahNumber": 0,
+    "arabic": "[VERIFIED ARABIC QURAN TEXT PENDING]",
+    "translation": "[Verified English Quran translation pending.]",
+    "translator": "Source pending",
+    "reference": "Quran reference pending",
+    "arabicTafsirNote": null,
+    "notes": "Draft placeholder. Replace with exact Arabic, translation, surah, ayah, and translator attribution before use.",
+    "status": "pending",
+    "sourceAttribution": null,
+    "updatedAt": "2026-07-07T03:06:20.845Z",
+    "createdAt": "2026-07-07T03:06:20.845Z"
+  }
+]

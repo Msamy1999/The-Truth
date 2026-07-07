@@ -1,0 +1,963 @@
+[
+  {
+    "id": 1,
+    "term": "Allah",
+    "pronunciation": "source pending",
+    "definition": "Source-pending draft: the Arabic word for God. Future notes should distinguish language, theology, and usage by Arabic-speaking Muslims and Christians.",
+    "category": "Theology",
+    "relatedTerms": [
+      {
+        "id": 2,
+        "term": "Tawhid",
+        "pronunciation": "source pending",
+        "definition": "Source-pending draft: Islamic monotheism, centered on worshiping God alone. Future definition should cite Quran, hadith, and reliable theology sources.",
+        "category": "Theology",
+        "relatedTerms": [
+          1,
+          8,
+          3
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:25.656Z",
+        "createdAt": "2026-07-07T03:06:21.312Z"
+      },
+      {
+        "id": 9,
+        "term": "Revelation",
+        "pronunciation": null,
+        "definition": "Source-pending draft: divine communication or guidance. Future entry should compare usage in Islam and Christianity with cited sources.",
+        "category": "Scripture",
+        "relatedTerms": [
+          6,
+          7
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:28.534Z",
+        "createdAt": "2026-07-07T03:06:23.368Z"
+      }
+    ],
+    "citations": [
+      {
+        "id": 4,
+        "citationKey": "citation-needed-general",
+        "type": "other",
+        "title": "Citation needed",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Use this marker only for draft material that must not be published until a real source is attached.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.772Z",
+        "createdAt": "2026-07-07T03:06:20.772Z"
+      }
+    ],
+    "updatedAt": "2026-07-07T03:06:25.303Z",
+    "createdAt": "2026-07-07T03:06:21.112Z"
+  },
+  {
+    "id": 2,
+    "term": "Tawhid",
+    "pronunciation": "source pending",
+    "definition": "Source-pending draft: Islamic monotheism, centered on worshiping God alone. Future definition should cite Quran, hadith, and reliable theology sources.",
+    "category": "Theology",
+    "relatedTerms": [
+      {
+        "id": 1,
+        "term": "Allah",
+        "pronunciation": "source pending",
+        "definition": "Source-pending draft: the Arabic word for God. Future notes should distinguish language, theology, and usage by Arabic-speaking Muslims and Christians.",
+        "category": "Theology",
+        "relatedTerms": [
+          2,
+          9
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:25.303Z",
+        "createdAt": "2026-07-07T03:06:21.112Z"
+      },
+      {
+        "id": 8,
+        "term": "Shirk",
+        "pronunciation": null,
+        "definition": "Source-pending draft: Islamic theological term related to associating partners with God. Future entry should cite Quran and reliable Islamic sources.",
+        "category": "Theology",
+        "relatedTerms": [
+          2,
+          1
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:28.114Z",
+        "createdAt": "2026-07-07T03:06:22.845Z"
+      },
+      {
+        "id": 3,
+        "term": "Trinity",
+        "pronunciation": "source pending",
+        "definition": "Source-pending draft: Christian doctrine about Father, Son, and Holy Spirit. Future definition should cite recognized Christian sources and avoid caricature.",
+        "category": "Theology",
+        "relatedTerms": [
+          2,
+          4
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:26.037Z",
+        "createdAt": "2026-07-07T03:06:21.588Z"
+      }
+    ],
+    "citations": [
+      {
+        "id": 4,
+        "citationKey": "citation-needed-general",
+        "type": "other",
+        "title": "Citation needed",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Use this marker only for draft material that must not be published until a real source is attached.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.772Z",
+        "createdAt": "2026-07-07T03:06:20.772Z"
+      }
+    ],
+    "updatedAt": "2026-07-07T03:06:25.656Z",
+    "createdAt": "2026-07-07T03:06:21.312Z"
+  },
+  {
+    "id": 3,
+    "term": "Trinity",
+    "pronunciation": "source pending",
+    "definition": "Source-pending draft: Christian doctrine about Father, Son, and Holy Spirit. Future definition should cite recognized Christian sources and avoid caricature.",
+    "category": "Theology",
+    "relatedTerms": [
+      {
+        "id": 2,
+        "term": "Tawhid",
+        "pronunciation": "source pending",
+        "definition": "Source-pending draft: Islamic monotheism, centered on worshiping God alone. Future definition should cite Quran, hadith, and reliable theology sources.",
+        "category": "Theology",
+        "relatedTerms": [
+          1,
+          8,
+          3
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:25.656Z",
+        "createdAt": "2026-07-07T03:06:21.312Z"
+      },
+      {
+        "id": 4,
+        "term": "Incarnation",
+        "pronunciation": null,
+        "definition": "Source-pending draft: Christian theological term related to God and Jesus. Future entry should cite Christian sources before comparison.",
+        "category": "Theology",
+        "relatedTerms": [
+          3,
+          5
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:26.558Z",
+        "createdAt": "2026-07-07T03:06:21.854Z"
+      }
+    ],
+    "citations": [
+      {
+        "id": 4,
+        "citationKey": "citation-needed-general",
+        "type": "other",
+        "title": "Citation needed",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Use this marker only for draft material that must not be published until a real source is attached.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.772Z",
+        "createdAt": "2026-07-07T03:06:20.772Z"
+      }
+    ],
+    "updatedAt": "2026-07-07T03:06:26.037Z",
+    "createdAt": "2026-07-07T03:06:21.588Z"
+  },
+  {
+    "id": 4,
+    "term": "Incarnation",
+    "pronunciation": null,
+    "definition": "Source-pending draft: Christian theological term related to God and Jesus. Future entry should cite Christian sources before comparison.",
+    "category": "Theology",
+    "relatedTerms": [
+      {
+        "id": 3,
+        "term": "Trinity",
+        "pronunciation": "source pending",
+        "definition": "Source-pending draft: Christian doctrine about Father, Son, and Holy Spirit. Future definition should cite recognized Christian sources and avoid caricature.",
+        "category": "Theology",
+        "relatedTerms": [
+          2,
+          4
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:26.037Z",
+        "createdAt": "2026-07-07T03:06:21.588Z"
+      },
+      {
+        "id": 5,
+        "term": "Messiah",
+        "pronunciation": null,
+        "definition": "Source-pending draft: a title used for Jesus in Christian and Islamic discussions. Future entry should define the term from relevant sources.",
+        "category": "Jesus",
+        "relatedTerms": [
+          6,
+          7
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:26.891Z",
+        "createdAt": "2026-07-07T03:06:22.174Z"
+      }
+    ],
+    "citations": [
+      {
+        "id": 4,
+        "citationKey": "citation-needed-general",
+        "type": "other",
+        "title": "Citation needed",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Use this marker only for draft material that must not be published until a real source is attached.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.772Z",
+        "createdAt": "2026-07-07T03:06:20.772Z"
+      }
+    ],
+    "updatedAt": "2026-07-07T03:06:26.558Z",
+    "createdAt": "2026-07-07T03:06:21.854Z"
+  },
+  {
+    "id": 5,
+    "term": "Messiah",
+    "pronunciation": null,
+    "definition": "Source-pending draft: a title used for Jesus in Christian and Islamic discussions. Future entry should define the term from relevant sources.",
+    "category": "Jesus",
+    "relatedTerms": [
+      {
+        "id": 6,
+        "term": "Gospel",
+        "pronunciation": null,
+        "definition": "Source-pending draft: term often used for the message of Jesus or the written Gospel texts, depending on context. Future entry should separate these meanings.",
+        "category": "Scripture",
+        "relatedTerms": [
+          7,
+          10
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:27.313Z",
+        "createdAt": "2026-07-07T03:06:22.376Z"
+      },
+      {
+        "id": 7,
+        "term": "Injil",
+        "pronunciation": null,
+        "definition": "Source-pending draft: Arabic/Quranic term often translated as Gospel. Future notes should cite Quran references and scholarly explanations.",
+        "category": "Scripture",
+        "relatedTerms": [
+          6,
+          9
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:27.670Z",
+        "createdAt": "2026-07-07T03:06:22.576Z"
+      }
+    ],
+    "citations": [
+      {
+        "id": 4,
+        "citationKey": "citation-needed-general",
+        "type": "other",
+        "title": "Citation needed",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Use this marker only for draft material that must not be published until a real source is attached.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.772Z",
+        "createdAt": "2026-07-07T03:06:20.772Z"
+      }
+    ],
+    "updatedAt": "2026-07-07T03:06:26.891Z",
+    "createdAt": "2026-07-07T03:06:22.174Z"
+  },
+  {
+    "id": 6,
+    "term": "Gospel",
+    "pronunciation": null,
+    "definition": "Source-pending draft: term often used for the message of Jesus or the written Gospel texts, depending on context. Future entry should separate these meanings.",
+    "category": "Scripture",
+    "relatedTerms": [
+      {
+        "id": 7,
+        "term": "Injil",
+        "pronunciation": null,
+        "definition": "Source-pending draft: Arabic/Quranic term often translated as Gospel. Future notes should cite Quran references and scholarly explanations.",
+        "category": "Scripture",
+        "relatedTerms": [
+          6,
+          9
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:27.670Z",
+        "createdAt": "2026-07-07T03:06:22.576Z"
+      },
+      {
+        "id": 10,
+        "term": "Canon",
+        "pronunciation": null,
+        "definition": "Source-pending draft: recognized collection of authoritative scriptures. Future entry should cite sources on biblical canon and Islamic scripture separately.",
+        "category": "History",
+        "relatedTerms": [
+          11,
+          6
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:28.868Z",
+        "createdAt": "2026-07-07T03:06:23.576Z"
+      }
+    ],
+    "citations": [
+      {
+        "id": 4,
+        "citationKey": "citation-needed-general",
+        "type": "other",
+        "title": "Citation needed",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Use this marker only for draft material that must not be published until a real source is attached.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.772Z",
+        "createdAt": "2026-07-07T03:06:20.772Z"
+      }
+    ],
+    "updatedAt": "2026-07-07T03:06:27.313Z",
+    "createdAt": "2026-07-07T03:06:22.376Z"
+  },
+  {
+    "id": 7,
+    "term": "Injil",
+    "pronunciation": null,
+    "definition": "Source-pending draft: Arabic/Quranic term often translated as Gospel. Future notes should cite Quran references and scholarly explanations.",
+    "category": "Scripture",
+    "relatedTerms": [
+      {
+        "id": 6,
+        "term": "Gospel",
+        "pronunciation": null,
+        "definition": "Source-pending draft: term often used for the message of Jesus or the written Gospel texts, depending on context. Future entry should separate these meanings.",
+        "category": "Scripture",
+        "relatedTerms": [
+          7,
+          10
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:27.313Z",
+        "createdAt": "2026-07-07T03:06:22.376Z"
+      },
+      {
+        "id": 9,
+        "term": "Revelation",
+        "pronunciation": null,
+        "definition": "Source-pending draft: divine communication or guidance. Future entry should compare usage in Islam and Christianity with cited sources.",
+        "category": "Scripture",
+        "relatedTerms": [
+          6,
+          7
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:28.534Z",
+        "createdAt": "2026-07-07T03:06:23.368Z"
+      }
+    ],
+    "citations": [
+      {
+        "id": 4,
+        "citationKey": "citation-needed-general",
+        "type": "other",
+        "title": "Citation needed",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Use this marker only for draft material that must not be published until a real source is attached.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.772Z",
+        "createdAt": "2026-07-07T03:06:20.772Z"
+      }
+    ],
+    "updatedAt": "2026-07-07T03:06:27.670Z",
+    "createdAt": "2026-07-07T03:06:22.576Z"
+  },
+  {
+    "id": 8,
+    "term": "Shirk",
+    "pronunciation": null,
+    "definition": "Source-pending draft: Islamic theological term related to associating partners with God. Future entry should cite Quran and reliable Islamic sources.",
+    "category": "Theology",
+    "relatedTerms": [
+      {
+        "id": 2,
+        "term": "Tawhid",
+        "pronunciation": "source pending",
+        "definition": "Source-pending draft: Islamic monotheism, centered on worshiping God alone. Future definition should cite Quran, hadith, and reliable theology sources.",
+        "category": "Theology",
+        "relatedTerms": [
+          1,
+          8,
+          3
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:25.656Z",
+        "createdAt": "2026-07-07T03:06:21.312Z"
+      },
+      {
+        "id": 1,
+        "term": "Allah",
+        "pronunciation": "source pending",
+        "definition": "Source-pending draft: the Arabic word for God. Future notes should distinguish language, theology, and usage by Arabic-speaking Muslims and Christians.",
+        "category": "Theology",
+        "relatedTerms": [
+          2,
+          9
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:25.303Z",
+        "createdAt": "2026-07-07T03:06:21.112Z"
+      }
+    ],
+    "citations": [
+      {
+        "id": 4,
+        "citationKey": "citation-needed-general",
+        "type": "other",
+        "title": "Citation needed",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Use this marker only for draft material that must not be published until a real source is attached.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.772Z",
+        "createdAt": "2026-07-07T03:06:20.772Z"
+      }
+    ],
+    "updatedAt": "2026-07-07T03:06:28.114Z",
+    "createdAt": "2026-07-07T03:06:22.845Z"
+  },
+  {
+    "id": 9,
+    "term": "Revelation",
+    "pronunciation": null,
+    "definition": "Source-pending draft: divine communication or guidance. Future entry should compare usage in Islam and Christianity with cited sources.",
+    "category": "Scripture",
+    "relatedTerms": [
+      {
+        "id": 6,
+        "term": "Gospel",
+        "pronunciation": null,
+        "definition": "Source-pending draft: term often used for the message of Jesus or the written Gospel texts, depending on context. Future entry should separate these meanings.",
+        "category": "Scripture",
+        "relatedTerms": [
+          7,
+          10
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:27.313Z",
+        "createdAt": "2026-07-07T03:06:22.376Z"
+      },
+      {
+        "id": 7,
+        "term": "Injil",
+        "pronunciation": null,
+        "definition": "Source-pending draft: Arabic/Quranic term often translated as Gospel. Future notes should cite Quran references and scholarly explanations.",
+        "category": "Scripture",
+        "relatedTerms": [
+          6,
+          9
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:27.670Z",
+        "createdAt": "2026-07-07T03:06:22.576Z"
+      }
+    ],
+    "citations": [
+      {
+        "id": 4,
+        "citationKey": "citation-needed-general",
+        "type": "other",
+        "title": "Citation needed",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Use this marker only for draft material that must not be published until a real source is attached.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.772Z",
+        "createdAt": "2026-07-07T03:06:20.772Z"
+      }
+    ],
+    "updatedAt": "2026-07-07T03:06:28.534Z",
+    "createdAt": "2026-07-07T03:06:23.368Z"
+  },
+  {
+    "id": 10,
+    "term": "Canon",
+    "pronunciation": null,
+    "definition": "Source-pending draft: recognized collection of authoritative scriptures. Future entry should cite sources on biblical canon and Islamic scripture separately.",
+    "category": "History",
+    "relatedTerms": [
+      {
+        "id": 11,
+        "term": "Manuscript",
+        "pronunciation": null,
+        "definition": "Source-pending draft: a handwritten textual witness. Future entry should cite manuscript studies before using examples.",
+        "category": "History",
+        "relatedTerms": [
+          10,
+          9
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:29.270Z",
+        "createdAt": "2026-07-07T03:06:23.801Z"
+      },
+      {
+        "id": 6,
+        "term": "Gospel",
+        "pronunciation": null,
+        "definition": "Source-pending draft: term often used for the message of Jesus or the written Gospel texts, depending on context. Future entry should separate these meanings.",
+        "category": "Scripture",
+        "relatedTerms": [
+          7,
+          10
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:27.313Z",
+        "createdAt": "2026-07-07T03:06:22.376Z"
+      }
+    ],
+    "citations": [
+      {
+        "id": 4,
+        "citationKey": "citation-needed-general",
+        "type": "other",
+        "title": "Citation needed",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Use this marker only for draft material that must not be published until a real source is attached.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.772Z",
+        "createdAt": "2026-07-07T03:06:20.772Z"
+      }
+    ],
+    "updatedAt": "2026-07-07T03:06:28.868Z",
+    "createdAt": "2026-07-07T03:06:23.576Z"
+  },
+  {
+    "id": 11,
+    "term": "Manuscript",
+    "pronunciation": null,
+    "definition": "Source-pending draft: a handwritten textual witness. Future entry should cite manuscript studies before using examples.",
+    "category": "History",
+    "relatedTerms": [
+      {
+        "id": 10,
+        "term": "Canon",
+        "pronunciation": null,
+        "definition": "Source-pending draft: recognized collection of authoritative scriptures. Future entry should cite sources on biblical canon and Islamic scripture separately.",
+        "category": "History",
+        "relatedTerms": [
+          11,
+          6
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:28.868Z",
+        "createdAt": "2026-07-07T03:06:23.576Z"
+      },
+      {
+        "id": 9,
+        "term": "Revelation",
+        "pronunciation": null,
+        "definition": "Source-pending draft: divine communication or guidance. Future entry should compare usage in Islam and Christianity with cited sources.",
+        "category": "Scripture",
+        "relatedTerms": [
+          6,
+          7
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:28.534Z",
+        "createdAt": "2026-07-07T03:06:23.368Z"
+      }
+    ],
+    "citations": [
+      {
+        "id": 4,
+        "citationKey": "citation-needed-general",
+        "type": "other",
+        "title": "Citation needed",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Use this marker only for draft material that must not be published until a real source is attached.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.772Z",
+        "createdAt": "2026-07-07T03:06:20.772Z"
+      }
+    ],
+    "updatedAt": "2026-07-07T03:06:29.270Z",
+    "createdAt": "2026-07-07T03:06:23.801Z"
+  },
+  {
+    "id": 12,
+    "term": "Hadith",
+    "pronunciation": null,
+    "definition": "Source-pending draft: reports connected to the Prophet Muhammad's words, actions, or approvals. Future entry should cite hadith methodology sources.",
+    "category": "Sources",
+    "relatedTerms": [
+      {
+        "id": 13,
+        "term": "Sunnah",
+        "pronunciation": null,
+        "definition": "Source-pending draft: prophetic practice and guidance in Islam. Future entry should distinguish Sunnah from hadith with sources.",
+        "category": "Sources",
+        "relatedTerms": [
+          12
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:30.072Z",
+        "createdAt": "2026-07-07T03:06:24.344Z"
+      }
+    ],
+    "citations": [
+      {
+        "id": 4,
+        "citationKey": "citation-needed-general",
+        "type": "other",
+        "title": "Citation needed",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Use this marker only for draft material that must not be published until a real source is attached.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.772Z",
+        "createdAt": "2026-07-07T03:06:20.772Z"
+      }
+    ],
+    "updatedAt": "2026-07-07T03:06:29.657Z",
+    "createdAt": "2026-07-07T03:06:24.105Z"
+  },
+  {
+    "id": 13,
+    "term": "Sunnah",
+    "pronunciation": null,
+    "definition": "Source-pending draft: prophetic practice and guidance in Islam. Future entry should distinguish Sunnah from hadith with sources.",
+    "category": "Sources",
+    "relatedTerms": [
+      {
+        "id": 12,
+        "term": "Hadith",
+        "pronunciation": null,
+        "definition": "Source-pending draft: reports connected to the Prophet Muhammad's words, actions, or approvals. Future entry should cite hadith methodology sources.",
+        "category": "Sources",
+        "relatedTerms": [
+          13
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:29.657Z",
+        "createdAt": "2026-07-07T03:06:24.105Z"
+      }
+    ],
+    "citations": [
+      {
+        "id": 4,
+        "citationKey": "citation-needed-general",
+        "type": "other",
+        "title": "Citation needed",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Use this marker only for draft material that must not be published until a real source is attached.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.772Z",
+        "createdAt": "2026-07-07T03:06:20.772Z"
+      }
+    ],
+    "updatedAt": "2026-07-07T03:06:30.072Z",
+    "createdAt": "2026-07-07T03:06:24.344Z"
+  },
+  {
+    "id": 14,
+    "term": "Salvation",
+    "pronunciation": null,
+    "definition": "Source-pending draft: term for being saved or reaching final success. Future entry should compare Islamic and Christian usage carefully.",
+    "category": "Purpose",
+    "relatedTerms": [
+      {
+        "id": 15,
+        "term": "Atonement",
+        "pronunciation": null,
+        "definition": "Source-pending draft: Christian theological term connected to sin, forgiveness, and reconciliation. Future entry should cite Christian sources.",
+        "category": "Theology",
+        "relatedTerms": [
+          14,
+          16
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:30.990Z",
+        "createdAt": "2026-07-07T03:06:24.735Z"
+      },
+      {
+        "id": 16,
+        "term": "Original sin",
+        "pronunciation": null,
+        "definition": "Source-pending draft: Christian theological concept related to sin and humanity. Future entry should explain differing Christian views fairly.",
+        "category": "Theology",
+        "relatedTerms": [
+          14,
+          15
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:31.336Z",
+        "createdAt": "2026-07-07T03:06:24.979Z"
+      }
+    ],
+    "citations": [
+      {
+        "id": 4,
+        "citationKey": "citation-needed-general",
+        "type": "other",
+        "title": "Citation needed",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Use this marker only for draft material that must not be published until a real source is attached.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.772Z",
+        "createdAt": "2026-07-07T03:06:20.772Z"
+      }
+    ],
+    "updatedAt": "2026-07-07T03:06:30.455Z",
+    "createdAt": "2026-07-07T03:06:24.545Z"
+  },
+  {
+    "id": 15,
+    "term": "Atonement",
+    "pronunciation": null,
+    "definition": "Source-pending draft: Christian theological term connected to sin, forgiveness, and reconciliation. Future entry should cite Christian sources.",
+    "category": "Theology",
+    "relatedTerms": [
+      {
+        "id": 14,
+        "term": "Salvation",
+        "pronunciation": null,
+        "definition": "Source-pending draft: term for being saved or reaching final success. Future entry should compare Islamic and Christian usage carefully.",
+        "category": "Purpose",
+        "relatedTerms": [
+          15,
+          16
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:30.455Z",
+        "createdAt": "2026-07-07T03:06:24.545Z"
+      },
+      {
+        "id": 16,
+        "term": "Original sin",
+        "pronunciation": null,
+        "definition": "Source-pending draft: Christian theological concept related to sin and humanity. Future entry should explain differing Christian views fairly.",
+        "category": "Theology",
+        "relatedTerms": [
+          14,
+          15
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:31.336Z",
+        "createdAt": "2026-07-07T03:06:24.979Z"
+      }
+    ],
+    "citations": [
+      {
+        "id": 4,
+        "citationKey": "citation-needed-general",
+        "type": "other",
+        "title": "Citation needed",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Use this marker only for draft material that must not be published until a real source is attached.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.772Z",
+        "createdAt": "2026-07-07T03:06:20.772Z"
+      }
+    ],
+    "updatedAt": "2026-07-07T03:06:30.990Z",
+    "createdAt": "2026-07-07T03:06:24.735Z"
+  },
+  {
+    "id": 16,
+    "term": "Original sin",
+    "pronunciation": null,
+    "definition": "Source-pending draft: Christian theological concept related to sin and humanity. Future entry should explain differing Christian views fairly.",
+    "category": "Theology",
+    "relatedTerms": [
+      {
+        "id": 14,
+        "term": "Salvation",
+        "pronunciation": null,
+        "definition": "Source-pending draft: term for being saved or reaching final success. Future entry should compare Islamic and Christian usage carefully.",
+        "category": "Purpose",
+        "relatedTerms": [
+          15,
+          16
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:30.455Z",
+        "createdAt": "2026-07-07T03:06:24.545Z"
+      },
+      {
+        "id": 15,
+        "term": "Atonement",
+        "pronunciation": null,
+        "definition": "Source-pending draft: Christian theological term connected to sin, forgiveness, and reconciliation. Future entry should cite Christian sources.",
+        "category": "Theology",
+        "relatedTerms": [
+          14,
+          16
+        ],
+        "citations": [
+          4
+        ],
+        "updatedAt": "2026-07-07T03:06:30.990Z",
+        "createdAt": "2026-07-07T03:06:24.735Z"
+      }
+    ],
+    "citations": [
+      {
+        "id": 4,
+        "citationKey": "citation-needed-general",
+        "type": "other",
+        "title": "Citation needed",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Use this marker only for draft material that must not be published until a real source is attached.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.772Z",
+        "createdAt": "2026-07-07T03:06:20.772Z"
+      }
+    ],
+    "updatedAt": "2026-07-07T03:06:31.336Z",
+    "createdAt": "2026-07-07T03:06:24.979Z"
+  }
+]

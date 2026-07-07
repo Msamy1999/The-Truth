@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "The Straight Path",
+    "slug": "the-straight-path",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "straightpath",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "bundleIdentifier": "com.thestraightpath.app",
+      "supportsTablet": true,
+      "infoPlist": {
+        "CFBundleAllowMixedLocalizations": true
+      }
+    },
+    "android": {
+      "package": "com.thestraightpath.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#18776B",
+        "foregroundImage": "./assets/images/adaptive-foreground.png",
+        "backgroundImage": "./assets/images/adaptive-background.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#f7faf9",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 120,
+          "dark": {
+            "backgroundColor": "#101a17"
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false,
+      "reactCompiler": true
+    }
+  }
+}

@@ -1,0 +1,1311 @@
+{
+  "categories": [
+    {
+      "slug": "quran-vs-bible",
+      "title": "Quran vs Bible",
+      "href": "/quran-vs-bible",
+      "description": "A beginner-friendly hub for comparing major questions in the Quran and Bible with clear source status.",
+      "icon": "scripture",
+      "tags": [
+        "Scripture",
+        "Theology"
+      ],
+      "futureTopics": [
+        {
+          "title": "Who is God?",
+          "description": "A draft comparison of how God is described, worshiped, and understood.",
+          "href": "/articles/who-is-god-quran-and-bible-comparison"
+        },
+        {
+          "title": "Who is Jesus?",
+          "description": "A study path for comparing Jesus with scripture, interpretation, and context kept separate.",
+          "href": "/articles/who-is-jesus"
+        },
+        {
+          "title": "What is revelation?",
+          "description": "A planned study on scripture, prophethood, inspiration, and source attribution."
+        },
+        {
+          "title": "What is salvation?",
+          "description": "A planned comparison of forgiveness, accountability, mercy, and purpose."
+        },
+        {
+          "title": "What is sin?",
+          "description": "A planned topic for personal responsibility, repentance, and moral accountability."
+        },
+        {
+          "title": "What is worship?",
+          "description": "A planned study on worshiping God, prayer, obedience, and devotion."
+        },
+        {
+          "title": "What is the Day of Judgment?",
+          "description": "A planned comparison of accountability, resurrection, judgment, and final destiny."
+        },
+        {
+          "title": "What is the final message?",
+          "description": "A planned research path about prophecy, revelation, and the completion of guidance."
+        }
+      ],
+      "relatedSlugs": [
+        "preservation",
+        "jesus",
+        "sources"
+      ]
+    },
+    {
+      "slug": "jesus",
+      "title": "Jesus in Islam & Christianity",
+      "href": "/jesus",
+      "description": "A respectful path for Christians and other seekers to study Jesus through scripture, theology, and history.",
+      "icon": "jesus",
+      "tags": [
+        "Jesus",
+        "Theology"
+      ],
+      "futureTopics": [
+        {
+          "title": "Who is Jesus?",
+          "description": "A draft study for defining the main question before comparing scripture and interpretation.",
+          "href": "/articles/who-is-jesus"
+        },
+        {
+          "title": "The miraculous birth of Jesus",
+          "description": "A planned study with Quran and Bible passages to be added only after verification."
+        },
+        {
+          "title": "The miracles of Jesus",
+          "description": "A planned topic for comparing miracles with clear references and source notes."
+        },
+        {
+          "title": "Did Jesus worship God?",
+          "description": "A draft Christian-facing study question with scripture placeholders.",
+          "href": "/articles/did-jesus-worship-god"
+        },
+        {
+          "title": "Did Jesus claim to be God?",
+          "description": "A planned study separating text, interpretation, and theological argument."
+        },
+        {
+          "title": "Jesus and the Trinity",
+          "description": "A planned bridge into Tawhid, Trinity, incarnation, and worship.",
+          "href": "/tawhid-vs-trinity"
+        },
+        {
+          "title": "Jesus as Messiah",
+          "description": "A planned study on the meaning of Messiah in Islamic and Christian discussions."
+        },
+        {
+          "title": "The crucifixion question",
+          "description": "A planned careful comparison with source status kept visible."
+        },
+        {
+          "title": "The second coming of Jesus",
+          "description": "A planned study of future expectation with scripture and source placeholders."
+        },
+        {
+          "title": "Who follows Jesus more closely?",
+          "description": "A draft article framework for comparing devotion, worship, and obedience respectfully.",
+          "href": "/articles/who-follows-jesus-more-closely"
+        }
+      ],
+      "relatedSlugs": [
+        "tawhid-vs-trinity",
+        "quran-vs-bible",
+        "questions"
+      ]
+    },
+    {
+      "slug": "preservation",
+      "title": "Preservation of Scripture",
+      "href": "/preservation",
+      "description": "A source-conscious study area for transmission, manuscripts, compilation, and why preservation matters.",
+      "icon": "preservation",
+      "tags": [
+        "Preservation",
+        "History",
+        "Scripture"
+      ],
+      "futureTopics": [
+        {
+          "title": "How the Quran was preserved",
+          "description": "A draft study framework for preservation, source status, and careful definitions.",
+          "href": "/articles/how-was-the-quran-preserved"
+        },
+        {
+          "title": "Oral memorization of the Quran",
+          "description": "A planned study on memorization that needs verified sources before claims are made."
+        },
+        {
+          "title": "Written compilation of the Quran",
+          "description": "A planned topic for compilation history with source placeholders."
+        },
+        {
+          "title": "Early Quran manuscripts",
+          "description": "A planned manuscript topic with no manuscript data added until verified."
+        },
+        {
+          "title": "Uthmanic standardization",
+          "description": "A planned study requiring careful historical source review."
+        },
+        {
+          "title": "Qira'at explained simply",
+          "description": "A planned beginner explanation with terminology and source safeguards."
+        },
+        {
+          "title": "Bible manuscript transmission",
+          "description": "A draft comparison article about transmission questions and source status.",
+          "href": "/articles/how-was-the-bible-transmitted"
+        },
+        {
+          "title": "Gospel authorship and dating",
+          "description": "A planned historical topic with citations required before publication."
+        },
+        {
+          "title": "Biblical canon formation",
+          "description": "A planned study on canon history and source types."
+        },
+        {
+          "title": "Textual variants explained",
+          "description": "A planned beginner topic on variants, evidence, and fair evaluation."
+        },
+        {
+          "title": "Why preservation matters",
+          "description": "A planned reflection on why source history matters for seekers."
+        }
+      ],
+      "relatedSlugs": [
+        "quran-vs-bible",
+        "history",
+        "sources"
+      ]
+    },
+    {
+      "slug": "difficult-questions",
+      "title": "Contradictions & Difficult Questions",
+      "href": "/difficult-questions",
+      "description": "A careful space for hard questions, context, fair representation, and source-backed responses.",
+      "icon": "questions",
+      "tags": [
+        "Questions",
+        "Scripture"
+      ],
+      "futureTopics": [
+        {
+          "title": "What is a contradiction?",
+          "description": "A planned method page for defining contradiction before evaluating examples."
+        },
+        {
+          "title": "Genealogies of Jesus",
+          "description": "A planned question page with Bible references and source notes pending."
+        },
+        {
+          "title": "The death of Judas",
+          "description": "A planned comparison that must quote exact passages and versions before analysis."
+        },
+        {
+          "title": "The timing of the crucifixion",
+          "description": "A planned topic requiring careful context and source attribution."
+        },
+        {
+          "title": "Did anyone see God?",
+          "description": "A planned question page separating text, interpretation, and theology."
+        },
+        {
+          "title": "Is original sin just?",
+          "description": "A planned bridge into salvation, responsibility, and justice.",
+          "href": "/articles/original-sin-vs-personal-responsibility"
+        },
+        {
+          "title": "Can God become man?",
+          "description": "A planned theology question linked to incarnation and Tawhid."
+        },
+        {
+          "title": "Does salvation require a sacrifice?",
+          "description": "A planned study linked to forgiveness, mercy, and atonement.",
+          "href": "/articles/forgiveness-in-islam-and-christianity"
+        }
+      ],
+      "relatedSlugs": [
+        "questions",
+        "quran-vs-bible",
+        "sources"
+      ]
+    },
+    {
+      "slug": "scientific-signs",
+      "title": "Scientific & Natural Signs",
+      "href": "/scientific-signs",
+      "description": "A cautious category for future discussions about the natural world, interpretation, and the limits of argument.",
+      "icon": "science",
+      "tags": [
+        "Science",
+        "Theology"
+      ],
+      "futureTopics": [
+        {
+          "title": "Interpretation caution guide",
+          "description": "A planned note on avoiding overstatement when discussing scripture and the natural world."
+        },
+        {
+          "title": "Natural signs source map",
+          "description": "A placeholder for future passages, commentary, and source attribution."
+        },
+        {
+          "title": "Limits of scientific claims",
+          "description": "A future study note separating observation, interpretation, and argument."
+        }
+      ],
+      "relatedSlugs": [
+        "history",
+        "questions",
+        "sources"
+      ]
+    },
+    {
+      "slug": "history",
+      "title": "Historical Evidence",
+      "href": "/history",
+      "description": "A place to gather historical context, timelines, and source-based background for major claims.",
+      "icon": "history",
+      "tags": [
+        "History",
+        "Sources"
+      ],
+      "futureTopics": [
+        {
+          "title": "Timeline template",
+          "description": "A planned layout for dates, events, sources, and uncertainty notes."
+        },
+        {
+          "title": "Primary vs secondary sources",
+          "description": "A future article explaining how source types will be presented."
+        },
+        {
+          "title": "Historical method notes",
+          "description": "A placeholder for careful standards before drawing historical conclusions."
+        }
+      ],
+      "relatedSlugs": [
+        "preservation",
+        "sources",
+        "jesus"
+      ]
+    },
+    {
+      "slug": "tawhid-vs-trinity",
+      "title": "Tawhid vs Trinity",
+      "href": "/tawhid-vs-trinity",
+      "description": "A respectful comparison of Islamic monotheism and Christian Trinitarian theology using definitions and sources.",
+      "icon": "theology",
+      "tags": [
+        "Theology",
+        "Jesus"
+      ],
+      "futureTopics": [
+        {
+          "title": "What is Tawhid?",
+          "description": "A draft beginner article defining the topic with source placeholders.",
+          "href": "/articles/what-is-tawhid"
+        },
+        {
+          "title": "What is the Trinity?",
+          "description": "A draft article intended to explain Christian belief fairly before comparison.",
+          "href": "/articles/what-is-the-trinity"
+        },
+        {
+          "title": "Did the prophets teach pure monotheism?",
+          "description": "A planned study needing verified scripture and historical sources."
+        },
+        {
+          "title": "Did Jesus worship the Father?",
+          "description": "A planned bridge topic linked to Jesus and worship.",
+          "href": "/articles/did-jesus-worship-god"
+        },
+        {
+          "title": "Incarnation explained",
+          "description": "A planned Christian-theology explainer requiring careful sourcing."
+        },
+        {
+          "title": "Shirk explained",
+          "description": "A planned Islamic-theology explainer requiring careful sourcing."
+        },
+        {
+          "title": "God's nature in Islam and Christianity",
+          "description": "A planned comparison of divine nature, attributes, and worship."
+        },
+        {
+          "title": "Worshiping God alone",
+          "description": "A planned study on worship, devotion, and theological consistency."
+        }
+      ],
+      "relatedSlugs": [
+        "jesus",
+        "salvation",
+        "glossary"
+      ]
+    },
+    {
+      "slug": "salvation",
+      "title": "Salvation & Purpose of Life",
+      "href": "/salvation",
+      "description": "A future guide to worship, forgiveness, accountability, mercy, and purpose with sources separated from commentary.",
+      "icon": "salvation",
+      "tags": [
+        "Purpose",
+        "Theology"
+      ],
+      "futureTopics": [
+        {
+          "title": "Purpose of life in Islam and Christianity",
+          "description": "A planned beginner study of worship, meaning, and accountability."
+        },
+        {
+          "title": "Sin and repentance",
+          "description": "A planned comparison of sin, repentance, mercy, and return to God."
+        },
+        {
+          "title": "Original sin vs personal responsibility",
+          "description": "A draft article comparing the issue with fair framing and source placeholders.",
+          "href": "/articles/original-sin-vs-personal-responsibility"
+        },
+        {
+          "title": "Grace, mercy, faith, and deeds",
+          "description": "A planned study of key salvation terms and how each tradition uses them."
+        },
+        {
+          "title": "Forgiveness without blood sacrifice",
+          "description": "A draft article about forgiveness, sacrifice, mercy, and justice.",
+          "href": "/articles/forgiveness-in-islam-and-christianity"
+        },
+        {
+          "title": "Heaven and Hell",
+          "description": "A planned study of final destiny and source-backed definitions."
+        },
+        {
+          "title": "Judgment Day",
+          "description": "A planned comparison of accountability and divine justice."
+        },
+        {
+          "title": "Why Islam's view of salvation is coherent",
+          "description": "A planned Islamic conclusion page that must be argued with sources."
+        }
+      ],
+      "relatedSlugs": [
+        "tawhid-vs-trinity",
+        "questions",
+        "jesus"
+      ]
+    },
+    {
+      "slug": "prophecies",
+      "title": "Prophecies & Signs",
+      "href": "/prophecies",
+      "description": "A future index for prophecy discussions, interpretive frameworks, and source-backed notes.",
+      "icon": "prophecies",
+      "tags": [
+        "Prophecy",
+        "History"
+      ],
+      "futureTopics": [
+        {
+          "title": "Prophecy claim checklist",
+          "description": "A planned method for recording the text, interpretation, dating, and source status."
+        },
+        {
+          "title": "Context and fulfillment notes",
+          "description": "A future article structure for keeping context visible while comparing interpretations."
+        },
+        {
+          "title": "Source status table",
+          "description": "A placeholder for tracking which references are verified and which are pending."
+        }
+      ],
+      "relatedSlugs": [
+        "history",
+        "quran-vs-bible",
+        "sources"
+      ]
+    },
+    {
+      "slug": "questions",
+      "title": "Common Questions",
+      "href": "/questions",
+      "description": "Short beginner-friendly answers will live here, with links to deeper cited studies.",
+      "icon": "questions",
+      "tags": [
+        "Questions"
+      ],
+      "futureTopics": [
+        {
+          "title": "New reader questions",
+          "description": "A planned collection for visitors who are just beginning comparative study."
+        },
+        {
+          "title": "Christian visitor questions",
+          "description": "A future section for respectful questions Christians commonly ask about Islam."
+        },
+        {
+          "title": "Muslim study questions",
+          "description": "A placeholder for organized study prompts and citation-backed answers."
+        }
+      ],
+      "relatedSlugs": [
+        "difficult-questions",
+        "salvation",
+        "glossary"
+      ]
+    },
+    {
+      "slug": "glossary",
+      "title": "Glossary",
+      "href": "/glossary",
+      "description": "Definitions for theological, historical, Arabic, and biblical terms used across the library.",
+      "icon": "glossary",
+      "tags": [
+        "Sources",
+        "Theology"
+      ],
+      "futureTopics": [
+        {
+          "title": "Arabic terms",
+          "description": "A future glossary section for Arabic words with transliteration and source notes."
+        },
+        {
+          "title": "Biblical terms",
+          "description": "A planned glossary section for terms used in Bible and Christian theology discussions."
+        },
+        {
+          "title": "Historical method terms",
+          "description": "A placeholder for terms that appear in source criticism and history articles."
+        }
+      ],
+      "relatedSlugs": [
+        "sources",
+        "tawhid-vs-trinity",
+        "questions"
+      ]
+    },
+    {
+      "slug": "sources",
+      "title": "Source Library",
+      "href": "/sources",
+      "description": "A structured place to track translations, primary texts, academic references, and source status.",
+      "icon": "sources",
+      "tags": [
+        "Sources",
+        "Scripture",
+        "History"
+      ],
+      "futureTopics": [
+        {
+          "title": "Translation registry",
+          "description": "A planned list of Quran translations, Bible versions, and how each source is cited."
+        },
+        {
+          "title": "Citation status labels",
+          "description": "A future guide to verified, source-pending, and citation-needed labels."
+        },
+        {
+          "title": "Primary source index",
+          "description": "A placeholder index for primary texts and source access notes."
+        }
+      ],
+      "relatedSlugs": [
+        "glossary",
+        "history",
+        "quran-vs-bible"
+      ]
+    }
+  ],
+  "home": {
+    "mainPaths": [
+      {
+        "id": "learn-islam",
+        "title": "Learn Islam",
+        "description": "Start with foundations: Allah, Tawhid, the Quran, the Prophet ﷺ, the pillars, and daily worship.",
+        "href": "/islam-overview",
+        "tag": "Start here"
+      },
+      {
+        "id": "compare-islam-christianity",
+        "title": "Compare Islam & Christianity",
+        "description": "A dedicated branch for Jesus, scripture, preservation, theology, and salvation, built for Christian visitors.",
+        "href": "/islam-christianity",
+        "tag": "For Christians"
+      },
+      {
+        "id": "questions-from-atheists-and-agnostics",
+        "title": "Questions from atheists and agnostics",
+        "description": "Careful, source-aware paths for doubt, meaning, evidence, and belief.",
+        "href": "/atheism-agnosticism",
+        "tag": "Doubt"
+      },
+      {
+        "id": "people-of-palestine",
+        "title": "People of Palestine",
+        "description": "A respectful, human-centered section on dignity, context, and responsible learning.",
+        "href": "/people-of-palestine",
+        "tag": "People"
+      },
+      {
+        "id": "common-questions",
+        "title": "Common Questions",
+        "description": "Beginner-friendly answers with draft status kept visible until sources are verified.",
+        "href": "/questions",
+        "tag": "Questions"
+      }
+    ],
+    "christianLearningPath": [
+      {
+        "title": "Start with Jesus",
+        "description": "Begin with worship, prayer, obedience, and how claims about God are framed.",
+        "href": "/jesus"
+      },
+      {
+        "title": "Study Tawhid",
+        "description": "Learn how Islamic monotheism defines worship, prophethood, and devotion to God.",
+        "href": "/tawhid-vs-trinity"
+      },
+      {
+        "title": "Compare the Quran and Bible",
+        "description": "Prepare to compare verified Quran passages and Bible passages with translation and source attribution.",
+        "href": "/quran-vs-bible"
+      },
+      {
+        "title": "Study preservation",
+        "description": "Trace questions about transmission, manuscripts, and historical context for both scriptures.",
+        "href": "/preservation"
+      },
+      {
+        "title": "Study salvation",
+        "description": "Compare worship, forgiveness, accountability, and purpose across both traditions.",
+        "href": "/salvation"
+      },
+      {
+        "title": "Read common questions",
+        "description": "Bring the evidence together through scripture, theology, preservation, and purpose.",
+        "href": "/questions"
+      }
+    ],
+    "comparisonMethods": [
+      {
+        "title": "Sources first",
+        "description": "Start with exact references and clearly label translation, version, or source-status details."
+      },
+      {
+        "title": "Historical context",
+        "description": "Place claims in context before drawing conclusions from them."
+      },
+      {
+        "title": "Scholarly sources",
+        "description": "Use named sources and mark draft material as source pending."
+      },
+      {
+        "title": "Respectful tone",
+        "description": "Speak to Muslims, Christians, and sincere seekers without mockery or hostility."
+      },
+      {
+        "title": "Clear citations",
+        "description": "Keep scripture, interpretation, history, and argument visibly separated."
+      },
+      {
+        "title": "Corrections welcome",
+        "description": "Draft pages are not final. Readers can flag errors, and sourced corrections are welcomed before publication."
+      }
+    ],
+    "featuredResearchCards": [
+      {
+        "title": "Who is Jesus?",
+        "description": "A draft comparison template for studying Jesus with scripture and context separated.",
+        "href": "/articles/who-is-jesus",
+        "label": "Draft article"
+      },
+      {
+        "title": "Did Jesus worship God?",
+        "description": "A planned study question for future sourced scripture and interpretation.",
+        "href": "/articles/did-jesus-worship-god",
+        "label": "Draft article"
+      },
+      {
+        "title": "Was the Quran preserved?",
+        "description": "A draft template for preservation questions, source status, and careful context.",
+        "href": "/articles/was-the-quran-preserved",
+        "label": "Draft article"
+      },
+      {
+        "title": "Tawhid vs Trinity",
+        "description": "A planned comparison of definitions, beliefs, and evidence with citations.",
+        "href": "/articles/what-is-tawhid",
+        "label": "Draft article"
+      },
+      {
+        "title": "Salvation in Islam and Christianity",
+        "description": "A planned study path about worship, forgiveness, accountability, and purpose.",
+        "href": "/articles/forgiveness-in-islam-and-christianity",
+        "label": "Draft article"
+      }
+    ]
+  },
+  "trees": {
+    "islam-overview": [
+      {
+        "id": "who-is-allah",
+        "title": "Who is Allah?",
+        "description": "Planned beginner topic on the Islamic understanding of God, His names, and His attributes.",
+        "tag": "Planned"
+      },
+      {
+        "id": "what-is-tawhid",
+        "title": "What is Tawhid?",
+        "description": "A draft beginner article defining Islamic monotheism with source placeholders.",
+        "href": "/articles/what-is-tawhid",
+        "status": "draft"
+      },
+      {
+        "id": "what-is-the-quran",
+        "title": "What is the Quran?",
+        "description": "Planned introduction to revelation, structure, and how the Quran will be cited across the library.",
+        "tag": "Planned"
+      },
+      {
+        "id": "who-is-prophet-muhammad",
+        "title": "Who is Prophet Muhammad ﷺ?",
+        "description": "Planned beginner biography with sourced dates and events added only after verification.",
+        "tag": "Planned"
+      },
+      {
+        "id": "what-are-the-prophets",
+        "title": "What are the prophets?",
+        "description": "Planned overview of prophethood in Islam and the shared line of messengers.",
+        "tag": "Planned"
+      },
+      {
+        "id": "five-pillars-of-islam",
+        "title": "Five pillars of Islam",
+        "description": "Planned beginner explanation of the five acts of worship that structure Muslim practice.",
+        "tag": "Planned"
+      },
+      {
+        "id": "six-pillars-of-faith",
+        "title": "Six pillars of faith",
+        "description": "Planned explanation of the core articles of Islamic belief (Iman).",
+        "tag": "Planned"
+      },
+      {
+        "id": "worship-and-daily-life",
+        "title": "Worship and daily life",
+        "description": "Planned overview of how worship shapes daily routine, character, and community.",
+        "tag": "Planned"
+      },
+      {
+        "id": "why-islam",
+        "title": "Why Islam?",
+        "description": "Planned closing argument bringing scripture, theology, preservation, and purpose together.",
+        "tag": "Planned"
+      }
+    ],
+    "islam-christianity": [
+      {
+        "id": "quran-vs-bible",
+        "title": "Quran vs Bible",
+        "description": "A beginner-friendly hub for comparing major questions in the Quran and Bible with clear source status.",
+        "href": "/quran-vs-bible",
+        "defaultOpen": true,
+        "children": [
+          {
+            "title": "Who is God?",
+            "description": "A draft comparison of how God is described, worshiped, and understood.",
+            "href": "/articles/who-is-god-quran-and-bible-comparison",
+            "status": "draft"
+          },
+          {
+            "title": "Who is Jesus?",
+            "description": "A draft study path for comparing Jesus with scripture, interpretation, and context kept separate.",
+            "href": "/articles/who-is-jesus",
+            "status": "draft"
+          },
+          {
+            "title": "What is revelation?",
+            "description": "Planned source-pending study on scripture, prophethood, inspiration, and source attribution.",
+            "href": "/quran-vs-bible#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "What is salvation?",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/quran-vs-bible#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "What is sin?",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/quran-vs-bible#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "What is worship?",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/quran-vs-bible#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "The Day of Judgment",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/quran-vs-bible#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "The final message",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/quran-vs-bible#future-topics",
+            "tag": "Planned"
+          }
+        ]
+      },
+      {
+        "id": "jesus",
+        "title": "Jesus in Islam & Christianity",
+        "description": "A respectful path for Christians and other seekers to study Jesus through scripture, theology, and history.",
+        "href": "/jesus",
+        "defaultOpen": true,
+        "children": [
+          {
+            "title": "Who is Jesus?",
+            "description": "A draft study for defining the main question before comparing scripture and interpretation.",
+            "href": "/articles/who-is-jesus",
+            "status": "draft"
+          },
+          {
+            "title": "The miraculous birth of Jesus",
+            "description": "Planned source-pending study with exact Quran and Bible passages added only after verification.",
+            "href": "/jesus#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "The miracles of Jesus",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/jesus#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Did Jesus worship God?",
+            "description": "A draft study question about prayer, worship, obedience, and what those actions mean.",
+            "href": "/articles/did-jesus-worship-god",
+            "status": "draft"
+          },
+          {
+            "title": "Did Jesus claim to be God?",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/jesus#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Jesus and the Trinity",
+            "description": "Planned bridge into Tawhid, Trinity, incarnation, and worship.",
+            "href": "/jesus#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Jesus as Messiah",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/jesus#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "The crucifixion question",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/jesus#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "The second coming of Jesus",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/jesus#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Who follows Jesus more closely?",
+            "description": "A draft framework for comparing devotion, worship, and obedience respectfully.",
+            "href": "/articles/who-follows-jesus-more-closely",
+            "status": "draft"
+          }
+        ]
+      },
+      {
+        "id": "preservation",
+        "title": "Preservation of Scripture",
+        "description": "A source-conscious study area for transmission, manuscripts, compilation, and why preservation matters.",
+        "href": "/preservation",
+        "children": [
+          {
+            "title": "How the Quran was preserved",
+            "description": "A draft framework for preservation, source status, and careful definitions.",
+            "href": "/articles/how-was-the-quran-preserved",
+            "status": "draft"
+          },
+          {
+            "title": "Oral memorization of the Quran",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/preservation#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Written compilation of the Quran",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/preservation#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Early Quran manuscripts",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/preservation#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Uthmanic standardization",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/preservation#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Qira'at explained simply",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/preservation#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Bible manuscript transmission",
+            "description": "A draft comparison article about transmission questions and source status.",
+            "href": "/articles/how-was-the-bible-transmitted",
+            "status": "draft"
+          },
+          {
+            "title": "Gospel authorship and dating",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/preservation#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Biblical canon formation",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/preservation#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Textual variants explained",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/preservation#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Why preservation matters",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/preservation#future-topics",
+            "tag": "Planned"
+          }
+        ]
+      },
+      {
+        "id": "difficult-questions",
+        "title": "Contradictions & Difficult Questions",
+        "description": "A careful space for hard questions, context, fair representation, and source-backed responses.",
+        "href": "/difficult-questions",
+        "children": [
+          {
+            "title": "What is a contradiction?",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/difficult-questions#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Genealogies of Jesus",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/difficult-questions#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "The death of Judas",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/difficult-questions#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "The timing of the crucifixion",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/difficult-questions#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Did anyone see God?",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/difficult-questions#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Is original sin just?",
+            "description": "A draft comparison of inherited guilt, accountability, repentance, and justice.",
+            "href": "/articles/original-sin-vs-personal-responsibility",
+            "status": "draft"
+          },
+          {
+            "title": "Can God become man?",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/difficult-questions#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Does salvation require a sacrifice?",
+            "description": "A draft study linked to forgiveness, sacrifice, mercy, and justice.",
+            "href": "/articles/forgiveness-in-islam-and-christianity",
+            "status": "draft"
+          }
+        ]
+      },
+      {
+        "id": "scientific-signs",
+        "title": "Scientific & Natural Signs",
+        "description": "A cautious category for future discussions about the natural world, interpretation, and the limits of argument.",
+        "href": "/scientific-signs",
+        "children": [
+          {
+            "title": "How to approach scientific claims carefully",
+            "description": "Planned guide for avoiding overstatement when discussing scripture and the natural world.",
+            "href": "/scientific-signs#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Embryology",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/scientific-signs#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Cosmology",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/scientific-signs#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Mountains",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/scientific-signs#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Seas and barriers",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/scientific-signs#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Creation and nature",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/scientific-signs#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Strong vs debated arguments",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/scientific-signs#future-topics",
+            "tag": "Planned"
+          }
+        ]
+      },
+      {
+        "id": "history",
+        "title": "Historical Evidence",
+        "description": "A place to gather historical context, timelines, and source-based background for major claims.",
+        "href": "/history",
+        "children": [
+          {
+            "title": "The historical Jesus",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/history#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Early Christianity",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/history#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Paul and his influence",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/history#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Gospel authorship and dating",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/history#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Council of Nicaea",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/history#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Development of Trinity doctrine",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/history#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Quranic revelation history",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/history#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Early Islamic preservation",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/history#future-topics",
+            "tag": "Planned"
+          }
+        ]
+      },
+      {
+        "id": "tawhid-vs-trinity",
+        "title": "Tawhid vs Trinity",
+        "description": "A respectful comparison of Islamic monotheism and Christian Trinitarian theology using definitions and sources.",
+        "href": "/tawhid-vs-trinity",
+        "children": [
+          {
+            "title": "What is Tawhid?",
+            "description": "A draft beginner article defining the topic with source placeholders.",
+            "href": "/articles/what-is-tawhid",
+            "status": "draft"
+          },
+          {
+            "title": "What is the Trinity?",
+            "description": "A draft article intended to explain Christian belief fairly before comparison.",
+            "href": "/articles/what-is-the-trinity",
+            "status": "draft"
+          },
+          {
+            "title": "Did the prophets teach pure monotheism?",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/tawhid-vs-trinity#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Did Jesus worship the Father?",
+            "description": "A draft bridge topic linked to Jesus and worship.",
+            "href": "/articles/did-jesus-worship-god",
+            "status": "draft"
+          },
+          {
+            "title": "Incarnation explained",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/tawhid-vs-trinity#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Shirk explained",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/tawhid-vs-trinity#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "God's nature in Islam and Christianity",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/tawhid-vs-trinity#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Worshiping God alone",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/tawhid-vs-trinity#future-topics",
+            "tag": "Planned"
+          }
+        ]
+      },
+      {
+        "id": "salvation",
+        "title": "Salvation & Purpose of Life",
+        "description": "A future guide to worship, forgiveness, accountability, mercy, and purpose with sources separated from commentary.",
+        "href": "/salvation",
+        "children": [
+          {
+            "title": "Purpose of life in Islam and Christianity",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/salvation#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Sin and repentance",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/salvation#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Original sin vs personal responsibility",
+            "description": "A draft comparison of inherited guilt, accountability, repentance, and justice.",
+            "href": "/articles/original-sin-vs-personal-responsibility",
+            "status": "draft"
+          },
+          {
+            "title": "Grace, mercy, faith, and deeds",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/salvation#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Forgiveness without blood sacrifice",
+            "description": "A draft article about forgiveness, sacrifice, mercy, and justice.",
+            "href": "/articles/forgiveness-in-islam-and-christianity",
+            "status": "draft"
+          },
+          {
+            "title": "Heaven and Hell",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/salvation#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Judgment Day",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/salvation#future-topics",
+            "tag": "Planned"
+          }
+        ]
+      },
+      {
+        "id": "prophecies",
+        "title": "Prophecies & Signs",
+        "description": "A future index for prophecy discussions, interpretive frameworks, and source-backed notes.",
+        "href": "/prophecies",
+        "children": [
+          {
+            "title": "Prophecies about Jesus",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/prophecies#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Possible prophecies about Muhammad",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/prophecies#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Quranic fulfilled prophecies",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/prophecies#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "Biblical prophecies and interpretation",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/prophecies#future-topics",
+            "tag": "Planned"
+          },
+          {
+            "title": "End-times beliefs",
+            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
+            "href": "/prophecies#future-topics",
+            "tag": "Planned"
+          }
+        ]
+      }
+    ],
+    "atheism-agnosticism": [
+      {
+        "id": "does-god-exist",
+        "title": "Does God exist?",
+        "description": "Planned topic on classical and contemporary arguments for a creator, with sources to be added before claims are made.",
+        "tag": "Planned"
+      },
+      {
+        "id": "why-believe-in-revelation",
+        "title": "Why believe in revelation?",
+        "description": "Planned topic on why a creator would communicate through revelation rather than leaving humanity to guess.",
+        "tag": "Planned"
+      },
+      {
+        "id": "why-islam-not-just-a-creator",
+        "title": "Why Islam and not just \"a creator\"?",
+        "description": "Planned topic bridging belief in a creator to the specific claims of Islam.",
+        "tag": "Planned"
+      },
+      {
+        "id": "the-problem-of-evil",
+        "title": "The problem of evil",
+        "description": "Planned topic addressing suffering, free will, and divine justice with careful framing.",
+        "tag": "Planned"
+      },
+      {
+        "id": "morality-without-god",
+        "title": "Morality without God",
+        "description": "Planned topic examining the grounding of moral obligation with and without a creator.",
+        "tag": "Planned"
+      },
+      {
+        "id": "purpose-of-life",
+        "title": "Purpose of life",
+        "description": "Planned topic on meaning, purpose, and accountability from an Islamic perspective.",
+        "tag": "Planned"
+      },
+      {
+        "id": "consciousness-and-the-soul",
+        "title": "Consciousness and the soul",
+        "description": "Planned topic on the soul, consciousness, and the limits of purely physical explanations.",
+        "tag": "Planned"
+      },
+      {
+        "id": "science-and-religion",
+        "title": "Science and religion",
+        "description": "Planned topic on how scientific inquiry and revealed guidance relate, with cautious, source-checked claims.",
+        "tag": "Planned"
+      },
+      {
+        "id": "why-the-quran",
+        "title": "Why the Quran?",
+        "description": "Planned closing topic on why the Quran is presented as the preserved, final revelation.",
+        "tag": "Planned"
+      }
+    ],
+    "people-of-palestine": [
+      {
+        "id": "who-are-the-people-of-palestine",
+        "title": "Who are the people of Palestine?",
+        "description": "Planned introduction focused on human dignity, community, and daily life rather than politics or slogans.",
+        "tag": "Planned"
+      },
+      {
+        "id": "why-palestine-matters-to-muslims",
+        "title": "Why Palestine matters to Muslims",
+        "description": "Planned topic on the religious, historical, and human ties Muslims feel toward Palestine, written carefully and without inflammatory language.",
+        "tag": "Planned"
+      },
+      {
+        "id": "jerusalem-and-al-aqsa",
+        "title": "Jerusalem and Al-Aqsa",
+        "description": "Planned topic on the significance of Jerusalem and Al-Aqsa Mosque, with historical claims added only after verification.",
+        "tag": "Planned"
+      },
+      {
+        "id": "human-dignity-and-justice",
+        "title": "Human dignity and justice",
+        "description": "Planned reflection on dignity, compassion, and justice as shared human and Islamic values.",
+        "tag": "Planned"
+      },
+      {
+        "id": "how-to-learn-responsibly",
+        "title": "How to learn responsibly",
+        "description": "Planned guide for evaluating sources, avoiding propaganda, and reading history and news carefully.",
+        "tag": "Planned"
+      },
+      {
+        "id": "source-library-for-palestine",
+        "title": "Source library for Palestine",
+        "description": "A dedicated, verified reading list is planned. Until then, the general source library tracks citation status.",
+        "href": "/sources",
+        "tag": "Planned"
+      }
+    ]
+  }
+}

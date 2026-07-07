@@ -1,0 +1,160 @@
+[
+  {
+    "id": 1,
+    "slug": "was-the-quran-preserved",
+    "status": "draft",
+    "mainQuestion": "What sources and definitions are needed before studying Quran preservation?",
+    "beginnerSummary": "Draft placeholder. A finished article should define preservation, identify the evidence being discussed, separate manuscript context from argument, and cite every source.",
+    "quranicPerspective": "Placeholder for verified Quranic material relevant to preservation. Add exact Arabic, translation, reference, and translator attribution before publication.",
+    "biblicalPerspective": "Placeholder for comparison material from Bible studies only if directly relevant and verified with exact version/source data.",
+    "historicalContext": "Placeholder for manuscript and transmission context. Add specific historical sources before making any claims.",
+    "christianInterpretation": "Placeholder for cited Christian or biblical-studies perspectives where relevant. Represent sources accurately and respectfully.",
+    "islamicResponse": "Placeholder for sourced Islamic response. Add claims only after source review.",
+    "keyDifferences": [
+      {
+        "id": "6a4c6d779222582b205e2ad9",
+        "difference": "Placeholder: define preservation before comparing traditions or evidence."
+      },
+      {
+        "id": "6a4c6d779222582b205e2ada",
+        "difference": "Placeholder: identify whether a point is textual, historical, theological, or interpretive."
+      },
+      {
+        "id": "6a4c6d779222582b205e2adb",
+        "difference": "Placeholder: keep source status visible until all references are verified."
+      }
+    ],
+    "commonObjections": [
+      {
+        "id": "6a4c6d779222582b205e2adc",
+        "objection": "Placeholder question about manuscript evidence.",
+        "response": "Placeholder response. Future content must identify exact manuscripts, dates, and sources before drawing conclusions."
+      },
+      {
+        "id": "6a4c6d779222582b205e2add",
+        "objection": "Placeholder question about translation and original language.",
+        "response": "Placeholder response. Future content should separate original-language evidence from translation notes."
+      }
+    ],
+    "respectfulConclusion": "Draft placeholder. A finished conclusion should summarize the verified evidence without overstating what the sources prove.",
+    "quranVerses": [
+      {
+        "id": 1,
+        "surahName": "Source pending",
+        "surahNumber": 0,
+        "ayahNumber": 0,
+        "arabic": "[VERIFIED ARABIC QURAN TEXT PENDING]",
+        "translation": "[Verified English Quran translation pending.]",
+        "translator": "Source pending",
+        "reference": "Quran reference pending",
+        "arabicTafsirNote": null,
+        "notes": "Draft placeholder. Replace with exact Arabic, translation, surah, ayah, and translator attribution before use.",
+        "status": "pending",
+        "sourceAttribution": null,
+        "updatedAt": "2026-07-07T03:06:20.845Z",
+        "createdAt": "2026-07-07T03:06:20.845Z"
+      }
+    ],
+    "bibleVerses": [
+      {
+        "id": 1,
+        "book": "Source pending",
+        "chapter": 0,
+        "verse": "0",
+        "text": "[Verified Bible verse text pending.]",
+        "arabicText": null,
+        "arabicSource": null,
+        "version": "Source pending",
+        "reference": "Bible reference pending",
+        "notes": "Draft placeholder. Replace with exact book, chapter, verse, version, and source attribution before use.",
+        "status": "pending",
+        "sourceAttribution": null,
+        "updatedAt": "2026-07-07T03:06:20.978Z",
+        "createdAt": "2026-07-07T03:06:20.978Z"
+      }
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "citationKey": "source-pending-quran-translation",
+        "type": "quran",
+        "title": "Source pending: verified Quran Arabic text and English translation",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Placeholder only. Replace with a verified Quran text source and named translator before publication.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.398Z",
+        "createdAt": "2026-07-07T03:06:20.397Z"
+      },
+      {
+        "id": 2,
+        "citationKey": "source-pending-bible-version",
+        "type": "bible",
+        "title": "Source pending: verified Bible passage and version",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Placeholder only. Replace with the exact Bible version, publisher/source, and passage reference before publication.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.592Z",
+        "createdAt": "2026-07-07T03:06:20.592Z"
+      },
+      {
+        "id": 3,
+        "citationKey": "source-pending-academic-context",
+        "type": "academic",
+        "title": "Source pending: historical or academic context",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Placeholder only. Replace with a specific academic source before making historical claims.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.689Z",
+        "createdAt": "2026-07-07T03:06:20.689Z"
+      },
+      {
+        "id": 4,
+        "citationKey": "citation-needed-general",
+        "type": "other",
+        "title": "Citation needed",
+        "author": null,
+        "publisher": null,
+        "year": null,
+        "url": null,
+        "note": "Use this marker only for draft material that must not be published until a real source is attached.",
+        "status": "pending",
+        "verifiedBy": null,
+        "verifiedDate": null,
+        "updatedAt": "2026-07-07T03:06:20.772Z",
+        "createdAt": "2026-07-07T03:06:20.772Z"
+      }
+    ],
+    "relatedTopics": [
+      {
+        "id": "6a4c6d779222582b205e2ade",
+        "topic": "Preservation of Scripture"
+      },
+      {
+        "id": "6a4c6d779222582b205e2adf",
+        "topic": "Source Library"
+      },
+      {
+        "id": "6a4c6d779222582b205e2ae0",
+        "topic": "Historical Evidence"
+      }
+    ],
+    "updatedAt": "2026-07-07T03:07:35.449Z",
+    "createdAt": "2026-07-07T03:07:35.448Z",
+    "_status": "draft"
+  }
+]

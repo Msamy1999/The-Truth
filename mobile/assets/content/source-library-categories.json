@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Quran translations",
+    "description": "Future verified Quran text and translation sources, with translator attribution.",
+    "order": 0,
+    "updatedAt": "2026-07-07T03:06:31.962Z",
+    "createdAt": "2026-07-07T03:06:31.962Z"
+  },
+  {
+    "id": 2,
+    "title": "Tafsir",
+    "description": "Future Quran commentary sources for interpretation notes and deeper study.",
+    "order": 1,
+    "updatedAt": "2026-07-07T03:06:32.246Z",
+    "createdAt": "2026-07-07T03:06:32.246Z"
+  },
+  {
+    "id": 3,
+    "title": "Hadith",
+    "description": "Future hadith sources with exact collection, grading/status where appropriate, and reference details.",
+    "order": 2,
+    "updatedAt": "2026-07-07T03:06:32.528Z",
+    "createdAt": "2026-07-07T03:06:32.528Z"
+  },
+  {
+    "id": 4,
+    "title": "Bible translations",
+    "description": "Future Bible translation/version sources for quoted passages and comparison tables.",
+    "order": 3,
+    "updatedAt": "2026-07-07T03:06:32.878Z",
+    "createdAt": "2026-07-07T03:06:32.878Z"
+  },
+  {
+    "id": 5,
+    "title": "Christian commentaries",
+    "description": "Future Christian interpretation sources represented fairly and with clear attribution.",
+    "order": 4,
+    "updatedAt": "2026-07-07T03:06:33.145Z",
+    "createdAt": "2026-07-07T03:06:33.145Z"
+  },
+  {
+    "id": 6,
+    "title": "Academic books",
+    "description": "Future academic sources for historical, textual, and theological background.",
+    "order": 5,
+    "updatedAt": "2026-07-07T03:06:33.422Z",
+    "createdAt": "2026-07-07T03:06:33.422Z"
+  },
+  {
+    "id": 7,
+    "title": "Manuscript resources",
+    "description": "Future manuscript databases or catalogues for preservation and transmission studies.",
+    "order": 6,
+    "updatedAt": "2026-07-07T03:06:33.756Z",
+    "createdAt": "2026-07-07T03:06:33.756Z"
+  },
+  {
+    "id": 8,
+    "title": "Historical sources",
+    "description": "Future primary and secondary historical sources, with uncertainty clearly labeled.",
+    "order": 7,
+    "updatedAt": "2026-07-07T03:06:34.090Z",
+    "createdAt": "2026-07-07T03:06:34.090Z"
+  },
+  {
+    "id": 9,
+    "title": "Articles and essays",
+    "description": "Future shorter references for essays, articles, and carefully reviewed online resources.",
+    "order": 8,
+    "updatedAt": "2026-07-07T03:06:34.614Z",
+    "createdAt": "2026-07-07T03:06:34.614Z"
+  }
+]

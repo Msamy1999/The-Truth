@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "title": "Source pending: Quran Arabic text and English translation",
+    "type": "quran",
+    "category": {
+      "id": 1,
+      "title": "Quran translations",
+      "description": "Future verified Quran text and translation sources, with translator attribution.",
+      "order": 0,
+      "updatedAt": "2026-07-07T03:06:31.962Z",
+      "createdAt": "2026-07-07T03:06:31.962Z"
+    },
+    "authorOrPublisher": null,
+    "year": null,
+    "url": null,
+    "notes": "Add a verified Quran text source and named translator before publishing verse cards.",
+    "status": "pending",
+    "updatedAt": "2026-07-07T03:06:32.102Z",
+    "createdAt": "2026-07-07T03:06:32.102Z"
+  },
+  {
+    "id": 2,
+    "title": "Source pending: tafsir reference",
+    "type": "tafsir",
+    "category": {
+      "id": 2,
+      "title": "Tafsir",
+      "description": "Future Quran commentary sources for interpretation notes and deeper study.",
+      "order": 1,
+      "updatedAt": "2026-07-07T03:06:32.246Z",
+      "createdAt": "2026-07-07T03:06:32.246Z"
+    },
+    "authorOrPublisher": null,
+    "year": null,
+    "url": null,
+    "notes": "Add exact tafsir title, author, edition/publisher, and passage reference before use.",
+    "status": "pending",
+    "updatedAt": "2026-07-07T03:06:32.390Z",
+    "createdAt": "2026-07-07T03:06:32.390Z"
+  },
+  {
+    "id": 3,
+    "title": "Source pending: hadith collection reference",
+    "type": "hadith",
+    "category": {
+      "id": 3,
+      "title": "Hadith",
+      "description": "Future hadith sources with exact collection, grading/status where appropriate, and reference details.",
+      "order": 2,
+      "updatedAt": "2026-07-07T03:06:32.528Z",
+      "createdAt": "2026-07-07T03:06:32.528Z"
+    },
+    "authorOrPublisher": null,
+    "year": null,
+    "url": null,
+    "notes": "Add exact collection, book/chapter, hadith number or reference, and verification notes before use.",
+    "status": "pending",
+    "updatedAt": "2026-07-07T03:06:32.732Z",
+    "createdAt": "2026-07-07T03:06:32.732Z"
+  },
+  {
+    "id": 4,
+    "title": "Source pending: Bible translation/version",
+    "type": "bible",
+    "category": {
+      "id": 4,
+      "title": "Bible translations",
+      "description": "Future Bible translation/version sources for quoted passages and comparison tables.",
+      "order": 3,
+      "updatedAt": "2026-07-07T03:06:32.878Z",
+      "createdAt": "2026-07-07T03:06:32.878Z"
+    },
+    "authorOrPublisher": null,
+    "year": null,
+    "url": null,
+    "notes": "Add exact Bible version, publisher/source, and usage notes before publishing Bible quotations.",
+    "status": "pending",
+    "updatedAt": "2026-07-07T03:06:33.012Z",
+    "createdAt": "2026-07-07T03:06:33.012Z"
+  },
+  {
+    "id": 5,
+    "title": "Source pending: Christian commentary",
+    "type": "christian-commentary",
+    "category": {
+      "id": 5,
+      "title": "Christian commentaries",
+      "description": "Future Christian interpretation sources represented fairly and with clear attribution.",
+      "order": 4,
+      "updatedAt": "2026-07-07T03:06:33.145Z",
+      "createdAt": "2026-07-07T03:06:33.145Z"
+    },
+    "authorOrPublisher": null,
+    "year": null,
+    "url": null,
+    "notes": "Add title, author, publisher, year, and passage/topic before summarizing Christian interpretation.",
+    "status": "pending",
+    "updatedAt": "2026-07-07T03:06:33.279Z",
+    "createdAt": "2026-07-07T03:06:33.279Z"
+  },
+  {
+    "id": 6,
+    "title": "Source pending: academic book",
+    "type": "book",
+    "category": {
+      "id": 6,
+      "title": "Academic books",
+      "description": "Future academic sources for historical, textual, and theological background.",
+      "order": 5,
+      "updatedAt": "2026-07-07T03:06:33.422Z",
+      "createdAt": "2026-07-07T03:06:33.422Z"
+    },
+    "authorOrPublisher": null,
+    "year": null,
+    "url": null,
+    "notes": "Add complete bibliographic data before using this source for claims.",
+    "status": "pending",
+    "updatedAt": "2026-07-07T03:06:33.579Z",
+    "createdAt": "2026-07-07T03:06:33.579Z"
+  },
+  {
+    "id": 7,
+    "title": "Source pending: manuscript resource",
+    "type": "manuscript",
+    "category": {
+      "id": 7,
+      "title": "Manuscript resources",
+      "description": "Future manuscript databases or catalogues for preservation and transmission studies.",
+      "order": 6,
+      "updatedAt": "2026-07-07T03:06:33.756Z",
+      "createdAt": "2026-07-07T03:06:33.756Z"
+    },
+    "authorOrPublisher": null,
+    "year": null,
+    "url": null,
+    "notes": "Add exact manuscript identifiers, repository/catalogue links, dates, and source notes only after verification.",
+    "status": "pending",
+    "updatedAt": "2026-07-07T03:06:33.946Z",
+    "createdAt": "2026-07-07T03:06:33.946Z"
+  },
+  {
+    "id": 8,
+    "title": "Source pending: historical source",
+    "type": "academic",
+    "category": {
+      "id": 8,
+      "title": "Historical sources",
+      "description": "Future primary and secondary historical sources, with uncertainty clearly labeled.",
+      "order": 7,
+      "updatedAt": "2026-07-07T03:06:34.090Z",
+      "createdAt": "2026-07-07T03:06:34.090Z"
+    },
+    "authorOrPublisher": null,
+    "year": null,
+    "url": null,
+    "notes": "Add source type, author, title, date/year, publisher or repository, and relevance notes before use.",
+    "status": "pending",
+    "updatedAt": "2026-07-07T03:06:34.323Z",
+    "createdAt": "2026-07-07T03:06:34.323Z"
+  },
+  {
+    "id": 9,
+    "title": "Source pending: article or essay",
+    "type": "article",
+    "category": {
+      "id": 9,
+      "title": "Articles and essays",
+      "description": "Future shorter references for essays, articles, and carefully reviewed online resources.",
+      "order": 8,
+      "updatedAt": "2026-07-07T03:06:34.614Z",
+      "createdAt": "2026-07-07T03:06:34.614Z"
+    },
+    "authorOrPublisher": null,
+    "year": null,
+    "url": null,
+    "notes": "Add title, author, publication, date/year, URL if available, and reason for use before citing.",
+    "status": "pending",
+    "updatedAt": "2026-07-07T03:06:34.790Z",
+    "createdAt": "2026-07-07T03:06:34.790Z"
+  }
+]
