@@ -1,15 +1,14 @@
-import { ScrollView, StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import {
   Body,
   Card,
-  Eyebrow,
   Pill,
   Row,
+  SectionHeader,
   StatusPill,
-  Title,
 } from "../components/ui";
 import { useContent } from "../lib/content";
-import { useTheme } from "../lib/theme";
+import { space, type, useTheme } from "../lib/theme";
 
 export default function SourcesScreen() {
   const theme = useTheme();
@@ -20,23 +19,29 @@ export default function SourcesScreen() {
       style={{ backgroundColor: theme.background }}
       contentContainerStyle={styles.container}
     >
-      <Body>
-        Every source is tracked with a pending/verified status. Nothing is
-        cited as verified until it has actually been checked.
-      </Body>
+      <Card style={{ borderLeftWidth: 3, borderLeftColor: theme.accent }}>
+        <Body muted={false}>
+          Every source is tracked with a pending/verified status. Nothing is
+          cited as verified until it has actually been checked.
+        </Body>
+      </Card>
 
       {content.sources.map((category) => (
         <View key={category.title} style={styles.section}>
-          <Eyebrow>{category.title}</Eyebrow>
+          <SectionHeader>{category.title}</SectionHeader>
           <Body>{category.description}</Body>
           <View style={styles.list}>
             {category.items.map((item) => (
-              <Card key={item.id}>
+              <Card key={item.id} style={{ gap: 6 }}>
                 <Row>
                   <Pill label={item.type} />
                   <StatusPill status={item.status} />
                 </Row>
-                <Title size={14}>{item.title}</Title>
+                <Text
+                  style={[type.cardTitle, { color: theme.foreground, fontSize: 14.5 }]}
+                >
+                  {item.title}
+                </Text>
                 <Body>{item.notes}</Body>
               </Card>
             ))}
@@ -48,7 +53,7 @@ export default function SourcesScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 16, gap: 8, paddingBottom: 48 },
-  section: { gap: 6, marginTop: 12 },
-  list: { gap: 10, marginTop: 4 },
+  container: { padding: space.lg, gap: space.sm, paddingBottom: 48 },
+  section: { gap: space.xs },
+  list: { gap: space.sm, marginTop: space.xs },
 });

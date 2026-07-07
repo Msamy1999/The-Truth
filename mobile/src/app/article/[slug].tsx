@@ -4,16 +4,16 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import {
   Body,
   Card,
-  Eyebrow,
-  LinkCard,
+  ListRow,
   Pill,
   Row,
+  SectionHeader,
   StatusPill,
-  Title,
+  categoryIcon,
 } from "../../components/ui";
 import { useContent } from "../../lib/content";
 import { useBookmarks, useFontScale } from "../../lib/store";
-import { useTheme } from "../../lib/theme";
+import { space, type, useTheme } from "../../lib/theme";
 
 export default function ArticleScreen() {
   const { slug } = useLocalSearchParams<{ slug: string }>();
@@ -27,7 +27,14 @@ export default function ArticleScreen() {
   if (!article) {
     return (
       <View style={[styles.missing, { backgroundColor: theme.background }]}>
-        <Title size={18}>Article not found</Title>
+        <Ionicons
+          name="document-outline"
+          size={32}
+          color={theme.mutedForeground}
+        />
+        <Text style={[type.title, { color: theme.foreground }]}>
+          Article not found
+        </Text>
         <Body>This article may not be available offline yet.</Body>
       </View>
     );
@@ -45,17 +52,23 @@ export default function ArticleScreen() {
     <>
       <Stack.Screen
         options={{
-          title: article.title,
+          title: "",
           headerRight: () => (
-            <Row>
+            <View style={styles.headerActions}>
               <Pressable
                 onPress={cycle}
                 accessibilityLabel="Change reading text size"
                 hitSlop={8}
-                style={styles.headerButton}
+                style={({ pressed }) => [
+                  styles.headerButton,
+                  {
+                    backgroundColor: theme.accentSoft,
+                    opacity: pressed ? 0.7 : 1,
+                  },
+                ]}
               >
-                <Text style={{ color: theme.accent, fontWeight: "700" }}>
-                  A{fontScale > 1 ? "+" : ""}
+                <Text style={{ color: theme.accent, fontWeight: "800", fontSize: 13 }}>
+                  A{fontScale > 1.2 ? "++" : fontScale > 1 ? "+" : ""}
                 </Text>
               </Pressable>
               <Pressable
@@ -64,15 +77,21 @@ export default function ArticleScreen() {
                   bookmarked ? "Remove bookmark" : "Add bookmark"
                 }
                 hitSlop={8}
-                style={styles.headerButton}
+                style={({ pressed }) => [
+                  styles.headerButton,
+                  {
+                    backgroundColor: theme.accentSoft,
+                    opacity: pressed ? 0.7 : 1,
+                  },
+                ]}
               >
                 <Ionicons
                   name={bookmarked ? "bookmark" : "bookmark-outline"}
-                  size={20}
+                  size={16}
                   color={theme.accent}
                 />
               </Pressable>
-            </Row>
+            </View>
           ),
         }}
       />
@@ -80,64 +99,84 @@ export default function ArticleScreen() {
         style={{ backgroundColor: theme.background }}
         contentContainerStyle={styles.container}
       >
-        <Eyebrow>Research article</Eyebrow>
-        <Title size={22}>{article.title}</Title>
+        <Text style={[type.label, { color: theme.accent }]}>
+          Research article
+        </Text>
+        <Text style={[type.display, { color: theme.foreground, fontSize: 24, lineHeight: 31 }]}>
+          {article.title}
+        </Text>
         <Body scale={fontScale}>{article.subtitle}</Body>
         <Row>
           <StatusPill status={article.status} />
           {article.tags.map((tag) => (
             <Pill key={tag} label={tag} />
           ))}
-          <Pill label={article.audienceLevel} />
         </Row>
-        <Body>Last updated: {article.lastUpdated}</Body>
+        <Text style={[type.caption, { color: theme.mutedForeground }]}>
+          Last updated {article.lastUpdated}
+        </Text>
 
-        <Card>
-          <Eyebrow>Beginner summary</Eyebrow>
-          <Body scale={fontScale}>{article.summary}</Body>
+        <Card style={{ borderLeftWidth: 3, borderLeftColor: theme.accent }}>
+          <Text style={[type.label, { color: theme.accent }]}>
+            Beginner summary
+          </Text>
+          <Body scale={fontScale} muted={false}>
+            {article.summary}
+          </Body>
         </Card>
 
         {article.sections.map((section) => (
           <View key={section.id} style={styles.section}>
-            <Eyebrow>{section.kind}</Eyebrow>
-            <Title size={17}>{section.title}</Title>
+            <View style={styles.sectionRule}>
+              <View style={[styles.rule, { backgroundColor: theme.hairline }]} />
+              <Text style={[type.label, { color: theme.accent }]}>
+                {section.kind}
+              </Text>
+              <View style={[styles.rule, { backgroundColor: theme.hairline }]} />
+            </View>
+            <Text style={[type.title, { color: theme.foreground, fontSize: 18 }]}>
+              {section.title}
+            </Text>
             <Body scale={fontScale}>{section.body}</Body>
             {section.citationIds.length > 0 ? (
-              <Body>
-                Source markers to verify: {section.citationIds.join(", ")}
-              </Body>
+              <Text style={[type.caption, { color: theme.mutedForeground, fontStyle: "italic" }]}>
+                Sources to verify: {section.citationIds.join(", ")}
+              </Text>
             ) : null}
           </View>
         ))}
 
-        <View style={styles.section}>
-          <Eyebrow>Sources</Eyebrow>
-          <View style={styles.list}>
-            {citations.map((citation) => (
-              <Card key={citation.id}>
-                <Row>
-                  <Pill label={citation.type} />
-                  <StatusPill status={citation.status} />
-                </Row>
-                <Title size={14}>{citation.title}</Title>
-                {citation.note ? <Body>{citation.note}</Body> : null}
-              </Card>
-            ))}
-          </View>
+        <SectionHeader>Sources</SectionHeader>
+        <View style={styles.list}>
+          {citations.map((citation) => (
+            <Card key={citation.id} style={{ gap: 6 }}>
+              <Row>
+                <Pill label={citation.type} />
+                <StatusPill status={citation.status} />
+              </Row>
+              <Text style={[type.cardTitle, { color: theme.foreground, fontSize: 14.5 }]}>
+                {citation.title}
+              </Text>
+              {citation.note ? <Body>{citation.note}</Body> : null}
+            </Card>
+          ))}
         </View>
 
         {related.length > 0 ? (
-          <View style={styles.section}>
-            <Eyebrow>Related articles</Eyebrow>
+          <>
+            <SectionHeader>Related articles</SectionHeader>
             <View style={styles.list}>
               {related.map((item) => (
-                <LinkCard key={item.slug} href={`/article/${item.slug}`}>
-                  <Title size={15}>{item.title}</Title>
-                  <Body>{item.summary}</Body>
-                </LinkCard>
+                <ListRow
+                  key={item.slug}
+                  href={`/article/${item.slug}`}
+                  icon={categoryIcon(item.category)}
+                  title={item.title}
+                  subtitle={item.summary}
+                />
               ))}
             </View>
-          </View>
+          </>
         ) : null}
       </ScrollView>
     </>
@@ -145,9 +184,23 @@ export default function ArticleScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 16, gap: 10, paddingBottom: 48 },
-  section: { gap: 6, marginTop: 10 },
-  list: { gap: 10 },
-  missing: { flex: 1, padding: 24, gap: 8 },
-  headerButton: { paddingHorizontal: 6, paddingVertical: 4 },
+  container: { padding: space.lg, gap: space.sm, paddingBottom: 56 },
+  headerActions: { flexDirection: "row", gap: space.sm, paddingRight: 16 },
+  headerButton: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  section: { gap: 6, marginTop: space.md },
+  sectionRule: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: space.sm,
+    marginBottom: 2,
+  },
+  rule: { flex: 1, height: StyleSheet.hairlineWidth },
+  list: { gap: space.sm },
+  missing: { flex: 1, padding: 24, gap: space.sm, alignItems: "center", justifyContent: "center" },
 });

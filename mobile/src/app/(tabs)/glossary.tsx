@@ -1,8 +1,16 @@
+import { Ionicons } from "@expo/vector-icons";
 import { useMemo, useState } from "react";
-import { ScrollView, StyleSheet, TextInput, View } from "react-native";
-import { Body, Card, Eyebrow, Pill, Row, Title } from "../../components/ui";
+import {
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from "react-native";
+import { Body, Card, Pill, Row, SectionHeader } from "../../components/ui";
 import { useContent } from "../../lib/content";
-import { useTheme } from "../../lib/theme";
+import { radius, space, type, useTheme } from "../../lib/theme";
 
 export default function GlossaryScreen() {
   const theme = useTheme();
@@ -11,9 +19,7 @@ export default function GlossaryScreen() {
 
   const results = useMemo(() => {
     const normalized = query.trim().toLowerCase();
-    if (!normalized) {
-      return content.glossary;
-    }
+    if (!normalized) return content.glossary;
 
     return content.glossary.filter((entry) =>
       [entry.term, entry.definition, entry.category, ...entry.relatedTerms]
@@ -29,32 +35,48 @@ export default function GlossaryScreen() {
       contentContainerStyle={styles.container}
       keyboardShouldPersistTaps="handled"
     >
-      <TextInput
-        value={query}
-        onChangeText={setQuery}
-        placeholder="Search glossary terms"
-        placeholderTextColor={theme.mutedForeground}
-        accessibilityLabel="Search glossary terms"
+      <View
         style={[
-          styles.input,
-          {
-            backgroundColor: theme.card,
-            borderColor: theme.border,
-            color: theme.foreground,
-          },
+          styles.inputWrap,
+          { backgroundColor: theme.card, borderColor: theme.border },
         ]}
-      />
+      >
+        <Ionicons name="search" size={17} color={theme.mutedForeground} />
+        <TextInput
+          value={query}
+          onChangeText={setQuery}
+          placeholder="Search glossary terms"
+          placeholderTextColor={theme.mutedForeground}
+          accessibilityLabel="Search glossary terms"
+          style={[styles.input, { color: theme.foreground }]}
+        />
+        {query.length > 0 ? (
+          <Pressable
+            onPress={() => setQuery("")}
+            hitSlop={10}
+            accessibilityLabel="Clear search"
+          >
+            <Ionicons
+              name="close-circle"
+              size={18}
+              color={theme.mutedForeground}
+            />
+          </Pressable>
+        ) : null}
+      </View>
 
-      <Eyebrow>
+      <SectionHeader>
         {results.length} term{results.length === 1 ? "" : "s"}
-      </Eyebrow>
+      </SectionHeader>
       <View style={styles.list}>
         {results.map((entry) => (
           <Card key={entry.term}>
-            <Row>
-              <Title size={16}>{entry.term}</Title>
-              <Pill label={entry.category} />
-            </Row>
+            <View style={styles.termLine}>
+              <Text style={[type.cardTitle, { color: theme.foreground, flex: 1 }]}>
+                {entry.term}
+              </Text>
+              <Pill label={entry.category} tone="accent" />
+            </View>
             <Body>{entry.definition}</Body>
             {entry.relatedTerms.length > 0 ? (
               <Row>
@@ -66,7 +88,14 @@ export default function GlossaryScreen() {
           </Card>
         ))}
         {results.length === 0 ? (
-          <Body>No terms found. Try a broader search.</Body>
+          <View style={styles.empty}>
+            <Ionicons
+              name="book-outline"
+              size={32}
+              color={theme.mutedForeground}
+            />
+            <Body>No terms match “{query.trim()}”.</Body>
+          </View>
         ) : null}
       </View>
     </ScrollView>
@@ -74,14 +103,21 @@ export default function GlossaryScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 16, gap: 10, paddingBottom: 40 },
-  input: {
-    borderWidth: 1,
-    borderRadius: 10,
-    paddingHorizontal: 14,
-    paddingVertical: 12,
-    fontSize: 15,
-    marginBottom: 6,
+  container: { padding: space.lg, gap: space.sm, paddingBottom: 48 },
+  inputWrap: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: space.sm,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderRadius: radius.md,
+    paddingHorizontal: space.md,
   },
-  list: { gap: 10 },
+  input: { flex: 1, fontSize: 15, paddingVertical: 12 },
+  list: { gap: space.sm },
+  termLine: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: space.sm,
+  },
+  empty: { alignItems: "center", gap: space.sm, paddingVertical: space.xxl },
 });

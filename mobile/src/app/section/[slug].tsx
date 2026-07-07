@@ -1,11 +1,11 @@
 import { Ionicons } from "@expo/vector-icons";
-import { Link, Stack, useLocalSearchParams } from "expo-router";
+import { Stack, useLocalSearchParams, useRouter } from "expo-router";
 import { useState } from "react";
-import { Pressable, ScrollView, StyleSheet, View } from "react-native";
-import { Body, Eyebrow, Pill, Row, Title } from "../../components/ui";
+import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Pill, SectionHeader } from "../../components/ui";
 import { getTrees } from "../../lib/content";
+import { useTheme, radius, space, type } from "../../lib/theme";
 import type { ResearchTreeNode } from "../../lib/types";
-import { useTheme } from "../../lib/theme";
 
 const SECTION_TITLES: Record<string, string> = {
   "islam-overview": "Islam Overview",
@@ -19,7 +19,6 @@ function toAppRoute(href: string | undefined): string | undefined {
   if (href.startsWith("/articles/")) {
     return href.replace("/articles/", "/article/");
   }
-  // Category hrefs like /jesus or /preservation#future-topics.
   const clean = href.split("#")[0].replace(/^\//, "");
   if (!clean) return undefined;
   return `/category/${clean}`;
@@ -39,7 +38,7 @@ export default function SectionScreen() {
         style={{ backgroundColor: theme.background }}
         contentContainerStyle={styles.container}
       >
-        <Eyebrow>Study map</Eyebrow>
+        <SectionHeader top={false}>Study map</SectionHeader>
         <View style={styles.list}>
           {nodes.map((node, index) => (
             <TreeNode key={node.id ?? `${node.title}-${index}`} node={node} />
@@ -52,6 +51,7 @@ export default function SectionScreen() {
 
 function TreeNode({ node }: { node: ResearchTreeNode }) {
   const theme = useTheme();
+  const router = useRouter();
   const [open, setOpen] = useState(Boolean(node.defaultOpen));
   const hasChildren = Boolean(node.children?.length);
   const route = toAppRoute(node.href);
@@ -68,21 +68,38 @@ function TreeNode({ node }: { node: ResearchTreeNode }) {
           onPress={() => setOpen((current) => !current)}
           accessibilityRole="button"
           accessibilityLabel={`${open ? "Collapse" : "Expand"} ${node.title}`}
-          style={styles.branchHeader}
+          style={({ pressed }) => [
+            styles.branchHeader,
+            pressed && { opacity: 0.7 },
+          ]}
         >
-          <Ionicons
-            name={open ? "chevron-down" : "chevron-forward"}
-            size={16}
-            color={theme.accent}
-          />
-          <View style={{ flex: 1 }}>
-            <Title size={15}>{node.title}</Title>
+          <View
+            style={[styles.chevronBadge, { backgroundColor: theme.accentSoft }]}
+          >
+            <Ionicons
+              name={open ? "chevron-down" : "chevron-forward"}
+              size={14}
+              color={theme.accent}
+            />
           </View>
+          <Text
+            style={[type.cardTitle, { color: theme.foreground, flex: 1 }]}
+          >
+            {node.title}
+          </Text>
+          {node.children ? (
+            <Text style={[type.caption, { color: theme.mutedForeground }]}>
+              {node.children.length}
+            </Text>
+          ) : null}
         </Pressable>
         {open ? (
-          <View style={[styles.children, { borderLeftColor: theme.border }]}>
+          <View style={[styles.children, { borderLeftColor: theme.hairline }]}>
             {node.children!.map((child, index) => (
-              <TreeNode key={child.id ?? `${child.title}-${index}`} node={child} />
+              <TreeNode
+                key={child.id ?? `${child.title}-${index}`}
+                node={child}
+              />
             ))}
           </View>
         ) : null}
@@ -91,25 +108,46 @@ function TreeNode({ node }: { node: ResearchTreeNode }) {
   }
 
   const inner = (
-    <Row>
+    <>
       <Ionicons
         name="document-text-outline"
-        size={14}
-        color={theme.mutedForeground}
+        size={15}
+        color={route ? theme.accent : theme.mutedForeground}
       />
-      <View style={{ flex: 1 }}>
-        <Body muted={false}>{node.title}</Body>
-      </View>
-      {node.tag ? <Pill label={node.tag} /> : null}
+      <Text
+        style={[
+          type.body,
+          {
+            color: theme.foreground,
+            flex: 1,
+            fontSize: 14.5,
+          },
+        ]}
+      >
+        {node.title}
+      </Text>
       {node.status ? <Pill label={node.status} tone="gold" /> : null}
-    </Row>
+      {!node.status && node.tag ? <Pill label={node.tag} /> : null}
+      {route ? (
+        <Ionicons
+          name="chevron-forward"
+          size={14}
+          color={theme.mutedForeground}
+          style={{ opacity: 0.7 }}
+        />
+      ) : null}
+    </>
   );
 
   if (route) {
     return (
-      <Link href={route as never} asChild>
-        <Pressable style={styles.leaf}>{inner}</Pressable>
-      </Link>
+      <Pressable
+        onPress={() => router.push(route as never)}
+        accessibilityRole="link"
+        style={({ pressed }) => [styles.leaf, pressed && { opacity: 0.6 }]}
+      >
+        {inner}
+      </Pressable>
     );
   }
 
@@ -117,10 +155,33 @@ function TreeNode({ node }: { node: ResearchTreeNode }) {
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 16, gap: 8, paddingBottom: 48 },
-  list: { gap: 10 },
-  branch: { borderWidth: 1, borderRadius: 12, padding: 10, gap: 4 },
-  branchHeader: { flexDirection: "row", alignItems: "center", gap: 8 },
-  children: { borderLeftWidth: 1, marginLeft: 7, paddingLeft: 10, gap: 2 },
-  leaf: { paddingVertical: 7 },
+  container: { padding: space.lg, gap: space.sm, paddingBottom: 48 },
+  list: { gap: space.sm },
+  branch: {
+    borderWidth: StyleSheet.hairlineWidth,
+    borderRadius: radius.lg,
+    padding: space.md,
+    gap: space.xs,
+  },
+  branchHeader: { flexDirection: "row", alignItems: "center", gap: space.md },
+  chevronBadge: {
+    width: 26,
+    height: 26,
+    borderRadius: 13,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  children: {
+    borderLeftWidth: 1,
+    marginLeft: 12,
+    paddingLeft: space.md,
+    marginTop: space.xs,
+    gap: 2,
+  },
+  leaf: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: space.sm,
+    paddingVertical: 8,
+  },
 });

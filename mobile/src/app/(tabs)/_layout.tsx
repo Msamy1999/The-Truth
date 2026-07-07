@@ -1,59 +1,71 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
-import { useTheme } from "../../lib/theme";
+import { ThemeToggleButton } from "../../components/ui";
+import { useThemeContext } from "../../lib/theme";
+
+function tabIcon(
+  outline: keyof typeof Ionicons.glyphMap,
+  filled: keyof typeof Ionicons.glyphMap,
+) {
+  return ({
+    color,
+    size,
+    focused,
+  }: {
+    color: string;
+    size: number;
+    focused: boolean;
+  }) => <Ionicons name={focused ? filled : outline} size={size} color={color} />;
+}
 
 export default function TabsLayout() {
-  const theme = useTheme();
+  const { palette } = useThemeContext();
 
   return (
     <Tabs
       screenOptions={{
-        headerStyle: { backgroundColor: theme.background },
-        headerTintColor: theme.foreground,
+        headerStyle: { backgroundColor: palette.background },
+        headerTintColor: palette.foreground,
         headerTitleStyle: { fontWeight: "700" },
+        headerShadowVisible: false,
+        headerRight: () => <ThemeToggleButton />,
+        headerRightContainerStyle: { paddingRight: 16 },
         tabBarStyle: {
-          backgroundColor: theme.card,
-          borderTopColor: theme.border,
+          backgroundColor: palette.card,
+          borderTopColor: palette.hairline,
         },
-        tabBarActiveTintColor: theme.accent,
-        tabBarInactiveTintColor: theme.mutedForeground,
-        sceneStyle: { backgroundColor: theme.background },
+        tabBarActiveTintColor: palette.accent,
+        tabBarInactiveTintColor: palette.mutedForeground,
+        tabBarLabelStyle: { fontWeight: "600", fontSize: 10.5 },
+        sceneStyle: { backgroundColor: palette.background },
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
           title: "Home",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="home-outline" size={size} color={color} />
-          ),
+          tabBarIcon: tabIcon("home-outline", "home"),
         }}
       />
       <Tabs.Screen
         name="library"
         options={{
           title: "Library",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="library-outline" size={size} color={color} />
-          ),
+          tabBarIcon: tabIcon("library-outline", "library"),
         }}
       />
       <Tabs.Screen
         name="search"
         options={{
           title: "Search",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="search-outline" size={size} color={color} />
-          ),
+          tabBarIcon: tabIcon("search-outline", "search"),
         }}
       />
       <Tabs.Screen
         name="glossary"
         options={{
           title: "Glossary",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="book-outline" size={size} color={color} />
-          ),
+          tabBarIcon: tabIcon("reader-outline", "reader"),
         }}
       />
     </Tabs>

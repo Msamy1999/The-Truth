@@ -1,17 +1,19 @@
+import { Ionicons } from "@expo/vector-icons";
 import { Stack, useLocalSearchParams } from "expo-router";
-import { ScrollView, StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import {
   Body,
   Card,
-  Eyebrow,
-  LinkCard,
+  IconBadge,
+  ListRow,
   Pill,
   Row,
+  SectionHeader,
   StatusPill,
-  Title,
+  categoryIcon,
 } from "../../components/ui";
 import { useContent } from "../../lib/content";
-import { useTheme } from "../../lib/theme";
+import { space, type, useTheme } from "../../lib/theme";
 
 export default function CategoryScreen() {
   const { slug } = useLocalSearchParams<{ slug: string }>();
@@ -21,13 +23,14 @@ export default function CategoryScreen() {
   const category = content.categories.find((item) => item.slug === slug);
 
   if (!category) {
-    // Section pages that are not categories (e.g. islam-overview) show the
-    // closest matching content: nothing found → gentle empty state.
     return (
       <View style={[styles.missing, { backgroundColor: theme.background }]}>
-        <Title size={18}>Section not available in the app yet</Title>
+        <Ionicons name="albums-outline" size={32} color={theme.mutedForeground} />
+        <Text style={[type.title, { color: theme.foreground }]}>
+          Section not in the app yet
+        </Text>
         <Body>
-          This part of the library is on the website. The app currently covers
+          This part of the library lives on the website for now. The app covers
           the research categories, articles, glossary, and sources.
         </Body>
       </View>
@@ -40,68 +43,78 @@ export default function CategoryScreen() {
 
   return (
     <>
-      <Stack.Screen options={{ title: category.title }} />
+      <Stack.Screen options={{ title: "" }} />
       <ScrollView
         style={{ backgroundColor: theme.background }}
         contentContainerStyle={styles.container}
       >
-        <Eyebrow>Research category</Eyebrow>
-        <Title size={20}>{category.title}</Title>
+        <View style={styles.header}>
+          <IconBadge icon={categoryIcon(category.icon)} size={46} />
+          <View style={{ flex: 1, gap: 4 }}>
+            <Text style={[type.display, { color: theme.foreground, fontSize: 22, lineHeight: 28 }]}>
+              {category.title}
+            </Text>
+            <Row>
+              {category.tags.map((tag) => (
+                <Pill key={tag} label={tag} />
+              ))}
+            </Row>
+          </View>
+        </View>
         <Body>{category.description}</Body>
-        <Row>
-          {category.tags.map((tag) => (
-            <Pill key={tag} label={tag} />
-          ))}
-        </Row>
 
         {articles.length > 0 ? (
-          <View style={styles.section}>
-            <Eyebrow>Draft articles</Eyebrow>
+          <>
+            <SectionHeader>Draft articles</SectionHeader>
             <View style={styles.list}>
               {articles.map((article) => (
-                <LinkCard key={article.slug} href={`/article/${article.slug}`}>
-                  <Row>
-                    <Title size={15}>{article.title}</Title>
-                    <StatusPill status={article.status} />
-                  </Row>
-                  <Body>{article.summary}</Body>
-                </LinkCard>
+                <ListRow
+                  key={article.slug}
+                  href={`/article/${article.slug}`}
+                  icon="document-text-outline"
+                  title={article.title}
+                  subtitle={article.summary}
+                  pill={<StatusPill status={article.status} />}
+                />
               ))}
             </View>
-          </View>
+          </>
         ) : null}
 
-        <View style={styles.section}>
-          <Eyebrow>Planned studies</Eyebrow>
-          <View style={styles.list}>
-            {category.futureTopics.map((topic) => {
-              const articleHref = topic.href?.startsWith("/articles/")
-                ? topic.href.replace("/articles/", "/article/")
-                : undefined;
+        <SectionHeader>Planned studies</SectionHeader>
+        <View style={styles.list}>
+          {category.futureTopics.map((topic) => {
+            const articleHref = topic.href?.startsWith("/articles/")
+              ? topic.href.replace("/articles/", "/article/")
+              : undefined;
 
-              if (articleHref) {
-                return (
-                  <LinkCard key={topic.title} href={articleHref}>
-                    <Row>
-                      <Title size={15}>{topic.title}</Title>
-                      <Pill label="Draft article" tone="gold" />
-                    </Row>
-                    <Body>{topic.description}</Body>
-                  </LinkCard>
-                );
-              }
-
+            if (articleHref) {
               return (
-                <Card key={topic.title}>
-                  <Row>
-                    <Title size={15}>{topic.title}</Title>
-                    <Pill label="Planned" />
-                  </Row>
-                  <Body>{topic.description}</Body>
-                </Card>
+                <ListRow
+                  key={topic.title}
+                  href={articleHref}
+                  icon="document-text-outline"
+                  title={topic.title}
+                  subtitle={topic.description}
+                  pill={<Pill label="Draft" tone="gold" />}
+                />
               );
-            })}
-          </View>
+            }
+
+            return (
+              <Card key={topic.title} style={{ gap: 4 }}>
+                <View style={styles.plannedLine}>
+                  <Text
+                    style={[type.cardTitle, { color: theme.foreground, flex: 1 }]}
+                  >
+                    {topic.title}
+                  </Text>
+                  <Pill label="Planned" />
+                </View>
+                <Body>{topic.description}</Body>
+              </Card>
+            );
+          })}
         </View>
       </ScrollView>
     </>
@@ -109,8 +122,15 @@ export default function CategoryScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 16, gap: 8, paddingBottom: 48 },
-  section: { gap: 6, marginTop: 12 },
-  list: { gap: 10 },
-  missing: { flex: 1, padding: 24, gap: 8 },
+  container: { padding: space.lg, gap: space.sm, paddingBottom: 48 },
+  header: { flexDirection: "row", gap: space.md, alignItems: "center" },
+  list: { gap: space.sm },
+  plannedLine: { flexDirection: "row", alignItems: "center", gap: space.sm },
+  missing: {
+    flex: 1,
+    padding: 24,
+    gap: space.sm,
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });

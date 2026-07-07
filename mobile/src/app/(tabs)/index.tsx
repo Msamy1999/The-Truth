@@ -1,8 +1,48 @@
+import { Image } from "react-native";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
-import { Body, Eyebrow, LinkCard, Pill, Row, Title } from "../../components/ui";
+import {
+  Body,
+  Card,
+  ListRow,
+  SectionHeader,
+  categoryIcon,
+} from "../../components/ui";
 import { useContent } from "../../lib/content";
 import { useBookmarks } from "../../lib/store";
-import { siteName, siteNameArabic, useTheme } from "../../lib/theme";
+import {
+  radius,
+  siteName,
+  siteNameArabic,
+  space,
+  type,
+  useTheme,
+} from "../../lib/theme";
+
+const PATH_ICONS: Record<string, string> = {
+  "learn-islam": "school-outline",
+  "compare-islam-christianity": "git-compare-outline",
+  "questions-from-atheists-and-agnostics": "help-circle-outline",
+  "people-of-palestine": "people-outline",
+  "common-questions": "chatbubbles-outline",
+};
+
+const TREE_SECTIONS = [
+  "islam-overview",
+  "islam-christianity",
+  "atheism-agnosticism",
+  "people-of-palestine",
+];
+
+function toRoute(href: string): string {
+  if (href.startsWith("/articles/")) {
+    return href.replace("/articles/", "/article/");
+  }
+  if (href === "/sources") return "/sources";
+  if (href === "/glossary") return "/glossary";
+  const slug = href.replace("/", "");
+  if (TREE_SECTIONS.includes(slug)) return `/section/${slug}`;
+  return `/category/${slug}`;
+}
 
 export default function HomeScreen() {
   const theme = useTheme();
@@ -18,109 +58,157 @@ export default function HomeScreen() {
       style={{ backgroundColor: theme.background }}
       contentContainerStyle={styles.container}
     >
-      <View style={styles.brand}>
-        <Title size={26}>{siteName}</Title>
-        <Text
-          style={[styles.arabic, { color: theme.mutedForeground }]}
-          // Quranic/Arabic text renders right-to-left inside the English UI.
-        >
-          {siteNameArabic}
-        </Text>
-        <Body>
-          An Islamic knowledge and research library for sincere seekers —
-          source-aware study with honest draft labels.
-        </Body>
+      {/* Hero */}
+      <View
+        style={[
+          styles.hero,
+          { backgroundColor: theme.accentSoft, borderColor: theme.border },
+        ]}
+      >
+        <Image
+          source={require("../../../assets/images/icon.png")}
+          style={styles.heroMark}
+          accessibilityIgnoresInvertColors
+        />
+        <View style={{ flex: 1, gap: 2 }}>
+          <Text style={[type.display, { color: theme.foreground, fontSize: 24, lineHeight: 30 }]}>
+            {siteName}
+          </Text>
+          <Text style={[styles.arabic, { color: theme.accent }]}>
+            {siteNameArabic}
+          </Text>
+        </View>
       </View>
+      <Body>
+        An Islamic knowledge and research library for sincere seekers —
+        source-aware study with honest draft labels.
+      </Body>
 
-      <Eyebrow>Main paths</Eyebrow>
+      <SectionHeader>Main paths</SectionHeader>
       <View style={styles.list}>
         {content.home.mainPaths.map((path) => (
-          <LinkCard key={path.id ?? path.title} href={toRoute(path.href ?? "/")}>
-            <Row>
-              <Title size={16}>{path.title}</Title>
-              {path.tag ? <Pill label={path.tag} /> : null}
-            </Row>
-            {path.description ? <Body>{path.description}</Body> : null}
-          </LinkCard>
+          <ListRow
+            key={path.id ?? path.title}
+            href={toRoute(path.href ?? "/")}
+            icon={(PATH_ICONS[path.id ?? ""] ?? "compass-outline") as never}
+            title={path.title}
+            subtitle={path.description}
+          />
         ))}
       </View>
 
       {bookmarkedArticles.length > 0 ? (
         <>
-          <Eyebrow>Your bookmarks</Eyebrow>
+          <SectionHeader>Your bookmarks</SectionHeader>
           <View style={styles.list}>
             {bookmarkedArticles.map((article) => (
-              <LinkCard key={article.slug} href={`/article/${article.slug}`}>
-                <Title size={16}>{article.title}</Title>
-                <Body>{article.summary}</Body>
-              </LinkCard>
+              <ListRow
+                key={article.slug}
+                href={`/article/${article.slug}`}
+                icon="bookmark-outline"
+                title={article.title}
+                subtitle={article.summary}
+              />
             ))}
           </View>
         </>
       ) : null}
 
-      <Eyebrow>Recommended path for Christians</Eyebrow>
-      <View style={styles.list}>
+      <SectionHeader>Recommended path for Christians</SectionHeader>
+      <Card style={{ gap: 0, paddingVertical: space.xs }}>
         {content.home.christianLearningPath.map((step, index) => (
-          <LinkCard key={step.title} href={toRoute(step.href)}>
-            <Row>
-              <View style={[styles.stepBadge, { backgroundColor: theme.muted }]}>
-                <Text style={{ color: theme.accent, fontWeight: "700" }}>
-                  {index + 1}
-                </Text>
-              </View>
-              <Title size={15}>{step.title}</Title>
-            </Row>
-            <Body>{step.description}</Body>
-          </LinkCard>
+          <View
+            key={step.title}
+            style={[
+              styles.step,
+              index > 0 && {
+                borderTopWidth: StyleSheet.hairlineWidth,
+                borderTopColor: theme.hairline,
+              },
+            ]}
+          >
+            <View style={[styles.stepNumber, { backgroundColor: theme.accentSoft }]}>
+              <Text style={{ color: theme.accent, fontWeight: "700", fontSize: 13 }}>
+                {index + 1}
+              </Text>
+            </View>
+            <View style={{ flex: 1, gap: 2 }}>
+              <Text style={[type.cardTitle, { color: theme.foreground }]}>
+                {step.title}
+              </Text>
+              <Text style={[type.caption, { color: theme.mutedForeground }]}>
+                {step.description}
+              </Text>
+            </View>
+          </View>
+        ))}
+      </Card>
+
+      <SectionHeader>How we study</SectionHeader>
+      <Card style={{ gap: space.md }}>
+        {content.home.comparisonMethods.map((method) => (
+          <View key={method.title} style={styles.method}>
+            <View style={[styles.methodDot, { backgroundColor: theme.accent }]} />
+            <View style={{ flex: 1 }}>
+              <Text style={[type.cardTitle, { color: theme.foreground, fontSize: 14.5 }]}>
+                {method.title}
+              </Text>
+              <Text style={[type.caption, { color: theme.mutedForeground }]}>
+                {method.description}
+              </Text>
+            </View>
+          </View>
+        ))}
+      </Card>
+
+      <SectionHeader>Featured research</SectionHeader>
+      <View style={styles.list}>
+        {content.home.featuredResearchCards.map((card) => (
+          <ListRow
+            key={card.title}
+            href={toRoute(card.href)}
+            icon={categoryIcon("scripture")}
+            title={card.title}
+            subtitle={card.description}
+          />
         ))}
       </View>
     </ScrollView>
   );
 }
 
-/**
- * Maps website hrefs from the shared content data onto app routes.
- * Category pages map to /category/[slug]; articles map to /article/[slug].
- */
-const TREE_SECTIONS = [
-  "islam-overview",
-  "islam-christianity",
-  "atheism-agnosticism",
-  "people-of-palestine",
-];
-
-function toRoute(href: string): string {
-  if (href.startsWith("/articles/")) {
-    return href.replace("/articles/", "/article/");
-  }
-  if (href === "/sources") {
-    return "/sources";
-  }
-  if (href === "/glossary") {
-    return "/glossary";
-  }
-  const slug = href.replace("/", "");
-  if (TREE_SECTIONS.includes(slug)) {
-    return `/section/${slug}`;
-  }
-  return `/category/${slug}`;
-}
-
 const styles = StyleSheet.create({
-  container: { padding: 16, gap: 10, paddingBottom: 40 },
-  brand: { gap: 6, marginBottom: 10 },
+  container: { padding: space.lg, gap: space.sm, paddingBottom: 48 },
+  hero: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: space.lg,
+    borderRadius: radius.lg,
+    borderWidth: StyleSheet.hairlineWidth,
+    padding: space.lg,
+  },
+  heroMark: { width: 52, height: 52, borderRadius: 14 },
   arabic: {
-    fontSize: 18,
+    fontSize: 17,
+    fontWeight: "600",
     writingDirection: "rtl",
     textAlign: "left",
   },
-  list: { gap: 10, marginBottom: 14 },
-  stepBadge: {
+  list: { gap: space.sm },
+  step: {
+    flexDirection: "row",
+    gap: space.md,
+    alignItems: "flex-start",
+    paddingVertical: space.md,
+  },
+  stepNumber: {
     width: 26,
     height: 26,
-    borderRadius: 6,
+    borderRadius: 13,
     alignItems: "center",
     justifyContent: "center",
+    marginTop: 1,
   },
+  method: { flexDirection: "row", gap: space.md, alignItems: "flex-start" },
+  methodDot: { width: 7, height: 7, borderRadius: 4, marginTop: 7 },
 });

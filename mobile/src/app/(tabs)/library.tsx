@@ -1,7 +1,7 @@
 import { ScrollView, StyleSheet, View } from "react-native";
-import { Body, Eyebrow, LinkCard, Pill, Row, Title } from "../../components/ui";
+import { ListRow, SectionHeader, categoryIcon } from "../../components/ui";
 import { useContent } from "../../lib/content";
-import { useTheme } from "../../lib/theme";
+import { space, useTheme } from "../../lib/theme";
 
 export default function LibraryScreen() {
   const theme = useTheme();
@@ -12,34 +12,61 @@ export default function LibraryScreen() {
       style={{ backgroundColor: theme.background }}
       contentContainerStyle={styles.container}
     >
-      <Eyebrow>Research categories</Eyebrow>
+      <SectionHeader top={false}>Research categories</SectionHeader>
       <View style={styles.list}>
         {content.categories.map((category) => (
-          <LinkCard key={category.slug} href={`/category/${category.slug}`}>
-            <Row>
-              <Title size={16}>{category.title}</Title>
-              {category.tags[0] ? <Pill label={category.tags[0]} /> : null}
-            </Row>
-            <Body>{category.description}</Body>
-          </LinkCard>
+          <ListRow
+            key={category.slug}
+            href={`/category/${category.slug}`}
+            icon={categoryIcon(category.icon)}
+            title={category.title}
+            subtitle={category.description}
+          />
         ))}
       </View>
 
-      <Eyebrow>Reference</Eyebrow>
+      <SectionHeader>Study sections</SectionHeader>
       <View style={styles.list}>
-        <LinkCard href="/sources">
-          <Title size={16}>Source Library</Title>
-          <Body>
-            Track translations, primary texts, scholarly sources, and citation
-            status before claims are published.
-          </Body>
-        </LinkCard>
+        <ListRow
+          href="/section/islam-overview"
+          icon="school-outline"
+          title="Islam Overview"
+          subtitle="Foundations, worship, and the question every path leads to."
+        />
+        <ListRow
+          href="/section/islam-christianity"
+          icon="git-compare-outline"
+          title="Islam & Christianity"
+          subtitle="The full comparison tree: nine branches, every study question."
+        />
+        <ListRow
+          href="/section/atheism-agnosticism"
+          icon="help-circle-outline"
+          title="Atheism & Agnosticism"
+          subtitle="Planned answers for skeptics and honest doubt."
+        />
+        <ListRow
+          href="/section/people-of-palestine"
+          icon="people-outline"
+          title="People of Palestine"
+          subtitle="A careful, human-centered study outline."
+        />
+      </View>
+
+      <SectionHeader>Reference</SectionHeader>
+      <View style={styles.list}>
+        <ListRow
+          href="/sources"
+          icon="library-outline"
+          title="Source Library"
+          subtitle="Translations, primary texts, and citation status."
+        />
       </View>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 16, gap: 10, paddingBottom: 40 },
-  list: { gap: 10, marginBottom: 14 },
+  container: { padding: space.lg, gap: space.sm, paddingBottom: 48 },
+  list: { gap: space.sm },
 });
