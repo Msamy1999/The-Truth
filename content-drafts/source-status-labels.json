@@ -1,0 +1,172 @@
+{
+  "slug": "source-status-labels",
+  "title": "How This Library Labels Its Sources",
+  "subtitle": "What Draft, Under Review, Published, Source Pending, and Verified mean — and why nothing goes live until every citation is checked",
+  "category": "sources",
+  "audienceLevel": "beginner",
+  "summary": "Every article and every quotation in this library carries a visible status label. Articles move through Draft, Under Review, and Published, while individual citations and scripture quotations are marked Source Pending until they have been checked word-for-word against a named original, at which point they become Verified. No article is published until every citation inside it is verified. This page explains each label, why the system exists, and how you can report an error if you find one.",
+  "tags": [
+    "Sources",
+    "Scripture",
+    "Questions"
+  ],
+  "seo": {
+    "metaTitle": "How This Library Labels Its Sources | The Straight Path",
+    "metaDescription": "Learn what Draft, Under Review, Published, Source Pending, and Verified mean in this Islamic research library, why every citation is checked before publication, and how to report errors.",
+    "keywords": [
+      "source verification",
+      "citation labels",
+      "verified scripture quotations",
+      "Islamic research standards",
+      "Quran 49:6 verify news",
+      "comparative religion sources",
+      "trust system"
+    ]
+  },
+  "sections": [
+    {
+      "sectionId": "beginner-summary",
+      "title": "In Brief",
+      "kind": "summary",
+      "body": "Every article in this library carries a status label — Draft, Under Review, or Published — and every quotation inside it carries its own label: Source Pending until it has been checked word-for-word against a named original, then Verified. One hard rule connects them: no article is published until every citation in it is verified.\n\nIf you spot a mistake, you can report it; a confirmed error sends the article back into review."
+    },
+    {
+      "sectionId": "introduction",
+      "title": "Why a Trust System at All?",
+      "kind": "notes",
+      "body": "Anyone who has read religious debates online knows the problem: verses with wrong references, scholars quoted saying things they never said, claims copied from page to page until they feel true. A bad argument for the truth still damages trust.\n\nThis library exists for sincere seekers weighing questions that may shape the rest of their lives. Such readers deserve better than 'trust us.' So we label the checking status of every article and every citation — and we keep the labels honest even when the honest answer is 'not fully checked yet.'"
+    },
+    {
+      "sectionId": "main-question",
+      "title": "What Do the Labels Mean?",
+      "kind": "notes",
+      "body": "There are two families of labels: one for whole articles, one for individual citations.\n\nArticles move through three stages. Draft means the article is written but not yet checked; it is not shown to general readers. Under Review means checking is underway: quotations are compared against their originals, historical claims against reference works, and the framing of both religions' positions is read for fairness. Published means the article passed the full review and is visible in the library.\n\nCitations have a two-stage life. Source Pending means a quotation has been entered but not yet checked. Verified means it was compared word-for-word against a named source: the Tanzil Uthmani text with the Saheeh International translation for the Quran, the World English Bible for the Bible, and the original page for scholarly quotations. A citation that cannot be traced to its original is removed.\n\nOne hard rule connects the two systems: an article cannot be Published while any citation is still Source Pending. No exceptions.\n\nReaders complete the system. Every published article carries an error-report link, and a confirmed error — a misquoted verse, a wrong date, an unfair summary of a Christian position — returns the article to Under Review until it is fixed."
+    },
+    {
+      "sectionId": "historical-context",
+      "title": "An Old Standard, Not a New Gimmick",
+      "kind": "history",
+      "body": "The instinct behind these labels is ancient, and especially deep in Islamic scholarship. To separate reliable reports (hadith) of the Prophet Muhammad's words and actions (peace be upon him) from unreliable ones, Muslim scholars demanded an isnad — a stated chain of the people who transmitted each report — studied those transmitters' memory and honesty, and openly graded reports from sound to fabricated.\n\nChristian scholarship built its own discipline, textual criticism: gathering the Bible's hand-copied manuscripts, comparing their differences, and openly printing variant readings in modern critical editions.\n\nThese labels are a small, modern echo of both traditions: state where every claim comes from, and let the grade be public."
+    },
+    {
+      "sectionId": "quranic-perspective",
+      "title": "What the Quran Says About Verifying Information",
+      "kind": "scripture",
+      "body": "The Quran addresses the handling of information directly. In Surah Al-Hujuraat, God commands:\n\nيَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِن جَآءَكُمْ فَاسِقٌۢ بِنَبَإٍۢ فَتَبَيَّنُوٓا۟ أَن تُصِيبُوا۟ قَوْمًۢا بِجَهَٰلَةٍۢ فَتُصْبِحُوا۟ عَلَىٰ مَا فَعَلْتُمْ نَٰدِمِينَ\n\n'O you who have believed, if there comes to you a disobedient one with information, investigate, lest you harm a people out of ignorance and become, over what you have done, regretful.' (Quran 49:6, Saheeh International)\n\nThe key Arabic command is fatabayyanu — investigate, make things clear before acting. This verse is the operating rule behind the Source Pending label: a quotation stays unpublished until verification is complete.\n\nA second verse widens the principle. In Surah Al-Israa, God says:\n\nوَلَا تَقْفُ مَا لَيْسَ لَكَ بِهِۦ عِلْمٌ ۚ إِنَّ ٱلسَّمْعَ وَٱلْبَصَرَ وَٱلْفُؤَادَ كُلُّ أُو۟لَٰٓئِكَ كَانَ عَنْهُ مَسْـُٔولًۭا\n\n'And do not pursue that of which you have no knowledge. Indeed, the hearing, the sight and the heart - about all those [one] will be questioned.' (Quran 17:36, Saheeh International)\n\nRepeating an unchecked claim is not neutral; a person is accountable before God for what they pass along. So the labels err on the side of caution: better for a true quotation to wait than for a false one to travel under our name."
+    },
+    {
+      "sectionId": "biblical-perspective",
+      "title": "A Standard Christians Recognize Too",
+      "kind": "scripture",
+      "body": "This article needs no Bible quotations, but the instinct to verify is one Christians recognize from their own scripture. Paul instructs the church in Thessalonica:\n\n'Test all things, and hold firmly that which is good.' (1 Thessalonians 5:21, World English Bible)\n\nWe quote it as an invitation: test this library by its own standard. Every Bible verse here is drawn verbatim from the World English Bible, a modern public-domain translation — never paraphrased from memory, never trimmed to change its sense, never marked Verified until checked against that named edition. If a Christian reader ever finds their scripture misquoted here, the error-report link exists precisely for them."
+    },
+    {
+      "sectionId": "comparison",
+      "title": "One Standard for Both Religions",
+      "kind": "argument",
+      "body": "A trust system is only trustworthy if it is symmetrical, so the labels apply identically to Islamic and Christian material. A Quran verse and a Bible verse pass through the same pipeline; a claim about early church history meets the same evidentiary bar as one about early Islamic history; an untraceable quotation is removed whether it comes from a Christian scholar or a Muslim one.\n\nThe same symmetry governs descriptions: before any comparison is drawn, each religion's position is presented the way its own mainstream scholarship states it. An article that summarized the Trinity in words no informed Christian would accept could not survive review, any more than one misstating Tawhid (the Islamic doctrine of God's absolute oneness).\n\nThis is not neutrality about truth — this library argues openly for Islam. But a true position gains nothing from weakened opposition: Islam's case is strongest when the Christian case is presented at full strength and every quotation on both sides is exact."
+    },
+    {
+      "sectionId": "common-misconceptions",
+      "title": "What the Labels Do Not Mean",
+      "kind": "interpretation",
+      "body": "'Draft means the article is wrong.' No — it means checking has not finished, so the label does not yet ask for your trust.\n\n'Verified means the library endorses the source.' No — Verified is a claim about accurate quotation, not agreement. A Bible verse marked Verified matches the World English Bible exactly; it does not mean we accept every doctrine built on it.\n\n'Published means final.' No — a confirmed error can send a published article back to Under Review. The labels are a live status, not an unbreakable seal.\n\n'The labels are just branding.' That claim is testable: pick any quotation in a published article and check it against the named source; if the words are not there, the error report works."
+    },
+    {
+      "sectionId": "islamic-conclusion",
+      "title": "Verification as an Act of Faith",
+      "kind": "argument",
+      "body": "For Muslims, careful sourcing is not merely good editorial practice; it is obedience. The Quran commands believers to 'investigate' information before acting on it (Quran 49:6) and warns that a person 'will be questioned' about what they repeat (Quran 17:36). A library built to present Islam's case is therefore bound, by Islam itself, to the strictest accuracy — especially when quoting the scriptures of others.\n\nThere is a quiet argument inside the system too: a position that fears checking hides its sources, while a position confident of the truth invites scrutiny.\n\nSo read published articles knowing every citation has been verified, treat Draft and Source Pending with the caution they ask for, and if you find an error, report it. Correcting us is not an attack; it is a service to the truth we are all accountable for."
+    },
+    {
+      "sectionId": "faq",
+      "title": "Frequently Asked Questions",
+      "kind": "notes",
+      "body": "Q: What is the difference between Draft and Under Review?\nA: Draft means checking has not finished and the article is not shown to general readers; Under Review means checking is actively underway.\n\nQ: What does Verified mean for a scripture quotation?\nA: It was compared word-for-word against a named edition — a claim about accurate quotation, not endorsement of any interpretation.\n\nQ: Can a Published article lose its status?\nA: Yes. A confirmed error rolls it back to Under Review until fixed.\n\nQ: How do I report an error?\nA: Use the error-report link on any published article; describe the problem and, if you can, point to the correct source.\n\nQ: Why does one unverified citation hold up a whole article?\nA: Because a single false quotation can mislead a seeker, and the Quran commands verification before information is acted on (Quran 49:6)."
+    },
+    {
+      "sectionId": "further-reading",
+      "title": "Further Reading",
+      "kind": "sources",
+      "body": "The verification instinct behind these labels has deep roots in both traditions. These works introduce how Muslim scholars authenticated reports about the Prophet Muhammad (peace be upon him) and how Christian scholars study the Bible's transmission. None is quoted in this article; they are starting points for the larger story."
+    }
+  ],
+  "quranVerses": [
+    {
+      "surahName": "Al-Hujuraat",
+      "surahNumber": 49,
+      "ayahNumber": 6,
+      "reference": "Quran 49:6",
+      "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِن جَآءَكُمْ فَاسِقٌۢ بِنَبَإٍۢ فَتَبَيَّنُوٓا۟ أَن تُصِيبُوا۟ قَوْمًۢا بِجَهَٰلَةٍۢ فَتُصْبِحُوا۟ عَلَىٰ مَا فَعَلْتُمْ نَٰدِمِينَ",
+      "translation": "O you who have believed, if there comes to you a disobedient one with information, investigate, lest you harm a people out of ignorance and become, over what you have done, regretful.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Israa",
+      "surahNumber": 17,
+      "ayahNumber": 36,
+      "reference": "Quran 17:36",
+      "arabic": "وَلَا تَقْفُ مَا لَيْسَ لَكَ بِهِۦ عِلْمٌ ۚ إِنَّ ٱلسَّمْعَ وَٱلْبَصَرَ وَٱلْفُؤَادَ كُلُّ أُو۟لَٰٓئِكَ كَانَ عَنْهُ مَسْـُٔولًۭا",
+      "translation": "And do not pursue that of which you have no knowledge. Indeed, the hearing, the sight and the heart - about all those [one] will be questioned.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    }
+  ],
+  "bibleVerses": [
+    {
+      "book": "1 Thessalonians",
+      "chapter": 5,
+      "verse": "21",
+      "reference": "1 Thessalonians 5:21",
+      "text": "Test all things, and hold firmly that which is good.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is the difference between Draft and Under Review?",
+      "answer": "Draft means the article's checking has not finished and it is not shown to general readers. Under Review means checking is actively underway: quotations are being compared against their originals and the framing of both religions' positions is being read for fairness."
+    },
+    {
+      "question": "What does Verified mean for a scripture quotation?",
+      "answer": "It was compared word-for-word against a named edition — the Tanzil Uthmani Arabic text with the Saheeh International translation for Quran verses, and the World English Bible for Bible verses. Verified is a claim about accurate quotation, not endorsement of any interpretation of the verse."
+    },
+    {
+      "question": "Can a Published article lose its Published status?",
+      "answer": "Yes. If a reader report or a later review confirms an error, the article is rolled back to Under Review until the problem is fixed. Publication is a checkpoint that can be revisited, not a permanent seal."
+    },
+    {
+      "question": "How do I report an error?",
+      "answer": "Use the error-report link on any published article. Describe what you believe is wrong and, if possible, point to the correct source. Confirmed errors are corrected, and the article returns to review while the fix is made."
+    },
+    {
+      "question": "Why does one unverified citation hold up a whole article?",
+      "answer": "Because a single false quotation can mislead a reader on questions of eternal weight, and the Quran commands believers to verify information before acting on it (Quran 49:6). A true quotation loses nothing by waiting, but a false one must never be published under this library's name."
+    }
+  ],
+  "relatedSlugs": [
+    "how-to-read-comparisons",
+    "how-was-the-quran-preserved",
+    "how-was-the-bible-transmitted",
+    "was-the-quran-preserved"
+  ],
+  "furtherReading": [
+    {
+      "title": "Hadith: Muhammad's Legacy in the Medieval and Modern World",
+      "author": "Jonathan A. C. Brown",
+      "note": "An accessible academic introduction to how Muslim scholars authenticated reports about the Prophet, including chains of transmission and narrator criticism — the historical ancestor of source-verification systems like this library's."
+    },
+    {
+      "title": "Studies in Hadith Methodology and Literature",
+      "author": "Muhammad Mustafa al-Azami",
+      "note": "A concise Muslim scholar's account of the classical methods used to grade reports as sound, weak, or fabricated."
+    },
+    {
+      "title": "The Text of the New Testament: Its Transmission, Corruption, and Restoration",
+      "author": "Bruce M. Metzger and Bart D. Ehrman",
+      "note": "The standard introduction to Christian textual criticism — how scholars compare biblical manuscripts and rate the confidence behind different readings."
+    }
+  ]
+}
