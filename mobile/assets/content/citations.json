@@ -62,5 +62,37 @@
     "verifiedDate": null,
     "updatedAt": "2026-07-07T03:06:20.772Z",
     "createdAt": "2026-07-07T03:06:20.772Z"
+  },
+  {
+    "id": 5,
+    "citationKey": "quran-tanzil-sahih-international",
+    "type": "quran",
+    "title": "The Quran — Tanzil Uthmani text with Saheeh International translation (served via api.alquran.cloud)",
+    "author": null,
+    "publisher": null,
+    "year": null,
+    "url": "https://alquran.cloud",
+    "note": "Arabic text and translation fetched programmatically per verse; verify spot-checks against a printed mushaf and the published Saheeh International edition before final publication.",
+    "status": "pending",
+    "verifiedBy": null,
+    "verifiedDate": null,
+    "updatedAt": "2026-07-07T13:31:16.877Z",
+    "createdAt": "2026-07-07T13:31:16.875Z"
+  },
+  {
+    "id": 6,
+    "citationKey": "bible-web-translation",
+    "type": "bible",
+    "title": "The Holy Bible, World English Bible (public domain)",
+    "author": null,
+    "publisher": null,
+    "year": null,
+    "url": "https://worldenglish.bible",
+    "note": "Verse text fetched programmatically via bible-api.com; public-domain translation suitable for quotation.",
+    "status": "pending",
+    "verifiedBy": null,
+    "verifiedDate": null,
+    "updatedAt": "2026-07-07T13:31:17.705Z",
+    "createdAt": "2026-07-07T13:31:17.704Z"
   }
 ]
