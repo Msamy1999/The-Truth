@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 160 20% 98%;
+  --foreground: 158 20% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 158 20% 12%;
+  --muted: 210 24% 96%;
+  --muted-foreground: 214 14% 37%;
+  --border: 156 16% 85%;
+  --accent: 172 67% 28%;
+  --accent-foreground: 0 0% 100%;
+  --secondary: 223 47% 32%;
+  --secondary-foreground: 0 0% 100%;
+  --gold: 42 74% 45%;
+}
+
+.light {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+  --background: 161 20% 8%;
+  --foreground: 160 25% 94%;
+  --card: 160 18% 11%;
+  --card-foreground: 160 25% 94%;
+  --muted: 161 14% 16%;
+  --muted-foreground: 162 10% 72%;
+  --border: 160 10% 25%;
+  --accent: 173 58% 48%;
+  --accent-foreground: 166 30% 8%;
+  --secondary: 217 52% 70%;
+  --secondary-foreground: 217 36% 12%;
+  --gold: 42 80% 60%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply text-balance font-semibold;
+  }
+
+  p {
+    @apply text-pretty leading-7;
+  }
+
+  a {
+    @apply underline-offset-4;
+  }
+
+  /*
+   * Prefer dedicated Arabic/Quranic typefaces for correct naskh shaping and
+   * diacritic positioning, then fall back to platform Arabic fonts.
+   */
+  [lang="ar"] {
+    font-family: "Amiri", "Scheherazade New", "Noto Naskh Arabic",
+      "Traditional Arabic", "Segoe UI", Tahoma, Arial, sans-serif;
+    line-height: 2;
+  }
+
+  ::selection {
+    @apply bg-accent text-accent-foreground;
+  }
+}

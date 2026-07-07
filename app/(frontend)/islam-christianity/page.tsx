@@ -1,0 +1,84 @@
+import type { Metadata } from "next";
+import { GitBranch } from "lucide-react";
+import { Callout } from "@/components/content/Callout";
+import { ResearchTree } from "@/components/content/ResearchTree";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { Container } from "@/components/layout/Container";
+import { PageHeader } from "@/components/layout/PageHeader";
+import { Section } from "@/components/layout/Section";
+import { Tag } from "@/components/ui/Tag";
+import { getResearchTree } from "@/lib/content";
+
+export const metadata: Metadata = {
+  title: "Islam & Christianity",
+  description:
+    "A respectful branch of the library for Christian visitors and seekers comparing Islam and Christianity through source-aware draft paths.",
+  alternates: {
+    canonical: "/islam-christianity",
+  },
+  openGraph: {
+    title: "Islam & Christianity",
+    description:
+      "Study Jesus, scripture, preservation, theology, salvation, and difficult questions through a respectful source-aware branch.",
+  },
+};
+
+export default async function IslamChristianityPage() {
+  const islamChristianityTree = await getResearchTree("islam-christianity");
+
+  return (
+    <>
+      <Section className="border-b border-border" spacing="lg">
+        <Container>
+          <Breadcrumbs
+            items={[
+              { label: "Library", href: "/" },
+              { label: "Islam & Christianity" },
+            ]}
+          />
+          <div className="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <div>
+              <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-md bg-muted text-accent sm:mb-4 sm:h-11 sm:w-11">
+                <GitBranch aria-hidden="true" className="h-4 w-4 sm:h-5 sm:w-5" />
+              </div>
+              <PageHeader
+                eyebrow="Major section"
+                title="Islam & Christianity"
+                subtitle="A dedicated branch for Christian visitors and sincere seekers studying Jesus, scripture, preservation, theology, salvation, and difficult questions."
+              />
+              <div className="mt-6 flex flex-wrap gap-2">
+                <Tag>Jesus</Tag>
+                <Tag>Scripture</Tag>
+                <Tag>Theology</Tag>
+                <Tag>Source pending</Tag>
+              </div>
+            </div>
+            <Callout type="respectful-reminder" title="Respectful comparison">
+              This section keeps Christian and Islamic claims separated from
+              interpretation, history, and argument. Draft branches should not
+              publish final claims until citations and source details are added.
+            </Callout>
+          </div>
+        </Container>
+      </Section>
+
+      <Section tone="muted">
+        <Container>
+          <PageHeader
+            titleAs="h2"
+            eyebrow="Branch map"
+            title="Follow the comparison tree"
+            subtitle="Comparison paths are grouped by question so readers can move from broad themes into draft articles and planned studies."
+          />
+          <div className="mt-8">
+            <ResearchTree
+              title="Islam & Christianity"
+              description="A research-library tree for comparison branches, draft articles, and source-pending study topics."
+              nodes={islamChristianityTree}
+            />
+          </div>
+        </Container>
+      </Section>
+    </>
+  );
+}
