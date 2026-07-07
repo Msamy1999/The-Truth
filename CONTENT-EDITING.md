@@ -127,6 +127,40 @@ Payload CMS 3 is installed **inside** this Next.js app:
 - Toolchain: upgraded to Next 16.2 + React 19.2 (Payload requires it),
   project is now ESM (`"type": "module"`).
 
-**Next (Phase 2):** seed script migrating `data/content/*.ts` into Payload,
-the no-fabrication publish gate hook, and a parity check against the old
-data before cutover.
+## CMS Phases 2–4 status (completed)
+
+**The CMS is now live — the website reads all editorial content from Payload.**
+
+- **Seed done:** all 13 articles, 16 glossary terms, 4 citations, 2 scripture
+  placeholders, 9 source categories + 9 items, and the comparison article were
+  migrated (`payload/seed.ts`, idempotent) and verified field-by-field against
+  the legacy files (`payload/parity-check.ts` — run both with
+  `npx tsx --env-file=.env <script>`; `payload run` silently no-ops on this
+  setup, use tsx directly via `env $(cat .env | xargs) npx tsx <script>`).
+- **Publish gate live:** `payload/hooks/blockUnverifiedPublish.ts` blocks
+  `status: published` on any article/comparison that links a pending citation,
+  an unverified verse, or still contains placeholder markers
+  (`[VERIFIED ... PENDING]`, `[Add Quran verse:`, "Source pending",
+  "citation needed"). Verified by a negative test.
+- **Cutover done:** `lib/content` helpers now query the Payload Local API and
+  map documents back to the domain types; no page changed. The legacy
+  `data/content/*.ts` files remain only as the seed source / rollback and are
+  no longer read by the site.
+- **Instant publishing:** afterChange/afterDelete hooks revalidate the site,
+  so edits at `/admin` go live in seconds with no rebuild.
+- **Public API open (Phase 4):** content collections are world-readable via
+  REST (`/api/articles`, `/api/glossary-terms`, ...); writes and the users
+  collection stay authenticated. `/api/content-manifest` returns
+  per-collection counts + `lastUpdated` for the mobile app's delta sync.
+
+## How to edit content NOW
+
+1. Open `/admin` in any browser (desktop or phone).
+2. First visit: create the admin account.
+3. Edit articles, glossary terms, citations, source library records; save.
+4. The live site updates within seconds — no rebuild, no deploy.
+5. To publish an article for real, every linked citation must first be marked
+   Verified — the gate will otherwise refuse with a clear message.
+
+Site structure (categories, navigation, research trees, homepage sections)
+remains code-defined by design — editing those is still a code change.

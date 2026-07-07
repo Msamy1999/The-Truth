@@ -2,7 +2,8 @@ import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
-import { absoluteUrl, siteDescription, siteName } from "@/lib/seo";
+import { ServiceWorkerRegistration } from "@/components/pwa/ServiceWorkerRegistration";
+import { absoluteUrl, siteDescription, siteName } from "@/lib/site-config";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -47,6 +48,11 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
+  appleWebApp: {
+    capable: true,
+    title: siteName,
+    statusBarStyle: "default",
+  },
 };
 
 export const viewport: Viewport = {
@@ -82,6 +88,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           Skip to content
         </a>
         <div className="flex min-h-screen flex-col">
+          <ServiceWorkerRegistration />
           <SiteHeader />
           <main id="main-content" className="flex-1" tabIndex={-1}>
             {children}
