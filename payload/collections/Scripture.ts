@@ -42,6 +42,10 @@ const verificationFields: CollectionConfig["fields"] = [
  */
 export const QuranVerses: CollectionConfig = {
   slug: "quran-verses",
+  access: {
+    // Public read for the website and future mobile app; writes stay authenticated.
+    read: () => true,
+  },
   hooks: contentHooks,
   admin: {
     useAsTitle: "reference",
@@ -71,6 +75,10 @@ export const QuranVerses: CollectionConfig = {
 
 export const BibleVerses: CollectionConfig = {
   slug: "bible-verses",
+  access: {
+    // Public read for the website and future mobile app; writes stay authenticated.
+    read: () => true,
+  },
   hooks: contentHooks,
   admin: {
     useAsTitle: "reference",

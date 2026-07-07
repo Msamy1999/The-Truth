@@ -24,6 +24,10 @@ const citationTypeOptions = [
 
 export const SourceLibraryCategories: CollectionConfig = {
   slug: "source-library-categories",
+  access: {
+    // Public read for the website and future mobile app; writes stay authenticated.
+    read: () => true,
+  },
   hooks: contentHooks,
   admin: {
     useAsTitle: "title",
@@ -44,6 +48,10 @@ export const SourceLibraryCategories: CollectionConfig = {
 
 export const SourceLibraryItems: CollectionConfig = {
   slug: "source-library-items",
+  access: {
+    // Public read for the website and future mobile app; writes stay authenticated.
+    read: () => true,
+  },
   hooks: contentHooks,
   admin: {
     useAsTitle: "title",

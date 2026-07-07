@@ -19,6 +19,10 @@ const topicTagOptions = [
 
 export const GlossaryTerms: CollectionConfig = {
   slug: "glossary-terms",
+  access: {
+    // Public read for the website and future mobile app; writes stay authenticated.
+    read: () => true,
+  },
   hooks: {
     afterChange: [revalidateAfterChange],
     afterDelete: [revalidateAfterDelete],

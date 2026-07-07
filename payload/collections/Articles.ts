@@ -51,6 +51,10 @@ const sectionKindOptions = [
  */
 export const Articles: CollectionConfig = {
   slug: "articles",
+  access: {
+    // Public read for the website and future mobile app; writes stay authenticated.
+    read: () => true,
+  },
   versions: {
     drafts: true,
   },

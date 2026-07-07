@@ -25,6 +25,10 @@ const citationTypeOptions = [
  */
 export const Citations: CollectionConfig = {
   slug: "citations",
+  access: {
+    // Public read for the website and future mobile app; writes stay authenticated.
+    read: () => true,
+  },
   hooks: {
     afterChange: [revalidateAfterChange],
     afterDelete: [revalidateAfterDelete],

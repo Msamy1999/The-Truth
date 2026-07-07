@@ -58,6 +58,58 @@ export default buildConfig({
   graphQL: {
     disable: true,
   },
+  endpoints: [
+    {
+      /**
+       * Cheap change-detection for the future mobile app: per-collection
+       * counts + latest updatedAt. Served at /api/content-manifest.
+       */
+      path: "/content-manifest",
+      method: "get",
+      handler: async (req) => {
+        const collections = [
+          "articles",
+          "comparison-articles",
+          "citations",
+          "quran-verses",
+          "bible-verses",
+          "glossary-terms",
+          "source-library-categories",
+          "source-library-items",
+        ] as const;
+
+        const manifest: Record<
+          string,
+          { count: number; lastUpdated: string | null }
+        > = {};
+
+        for (const collection of collections) {
+          const [latest, total] = await Promise.all([
+            req.payload.find({
+              collection,
+              sort: "-updatedAt",
+              limit: 1,
+              depth: 0,
+            }),
+            req.payload.count({ collection }),
+          ]);
+
+          manifest[collection] = {
+            count: total.totalDocs,
+            lastUpdated:
+              (latest.docs[0] as { updatedAt?: string } | undefined)
+                ?.updatedAt ?? null,
+          };
+        }
+
+        return Response.json(manifest, {
+          headers: {
+            "Cache-Control": "public, s-maxage=60, stale-while-revalidate=300",
+          },
+        });
+      },
+    },
+  ],
   secret: process.env.PAYLOAD_SECRET ?? "",
   typescript: {
     outputFile: path.resolve(dirname, "types/payload-types.ts"),

@@ -19,6 +19,10 @@ const localizedTextarea = (name: string) =>
  */
 export const ComparisonArticles: CollectionConfig = {
   slug: "comparison-articles",
+  access: {
+    // Public read for the website and future mobile app; writes stay authenticated.
+    read: () => true,
+  },
   versions: {
     drafts: true,
   },
