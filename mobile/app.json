@@ -20,8 +20,7 @@
         "backgroundColor": "#18776B",
         "foregroundImage": "./assets/images/adaptive-foreground.png",
         "backgroundImage": "./assets/images/adaptive-background.png"
-      },
-      "predictiveBackGestureEnabled": false
+      }
     },
     "web": {
       "output": "static",
@@ -40,10 +39,6 @@
           }
         }
       ]
-    ],
-    "experiments": {
-      "typedRoutes": false,
-      "reactCompiler": true
-    }
+    ]
   }
 }
