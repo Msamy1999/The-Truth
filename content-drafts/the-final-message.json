@@ -1,0 +1,231 @@
+{
+  "slug": "the-final-message",
+  "title": "The Final Message",
+  "subtitle": "Why Islam holds that Muhammad is the Seal of the Prophets, and how that claim relates to the Christian conviction that God's word culminated in Christ",
+  "category": "quran-vs-bible",
+  "audienceLevel": "beginner",
+  "summary": "Islam teaches that Muhammad is \"the Seal of the Prophets\" (khatam an-nabiyyin), the last in a single continuous line of messengers running from Adam through Jesus, and that the Quran is God's final, complete, and preserved revelation. Christianity teaches that God's revelation reached its climax not in a further prophet but in the person of Jesus Christ himself, as the Epistle to the Hebrews states. This article presents both claims in each tradition's own terms and then explains the Islamic argument for why a further scripture-bearing prophet was still needed after Jesus's earthly ministry.",
+  "tags": [
+    "Jesus",
+    "Prophecy",
+    "Theology",
+    "Scripture",
+    "History"
+  ],
+  "seo": {
+    "metaTitle": "The Final Message: Islam's Finality of Prophethood and Hebrews 1:1-2",
+    "metaDescription": "Why Islam calls Muhammad the Seal of the Prophets, how that compares with Hebrews 1:1-2 on Christ as God's final word, and the Islamic case for a final scripture-bearing prophet after Jesus.",
+    "keywords": [
+      "Seal of the Prophets",
+      "khatam an-nabiyyin",
+      "Quran 33:40",
+      "finality of prophethood",
+      "Hebrews 1:1-2",
+      "last prophet in Islam",
+      "Ahmad in the Quran",
+      "Paraclete Muhammad",
+      "Quran 5:3",
+      "Quran 61:6"
+    ]
+  },
+  "sections": [
+    {
+      "sectionId": "beginner-summary",
+      "title": "In Brief",
+      "kind": "summary",
+      "body": "Islam teaches that Muhammad is \"the Seal of the Prophets\" (khatam an-nabiyyin) — the last in a single, continuous line of messengers that began with Adam and included Noah, Abraham, Moses, and Jesus. The Quran is held by Muslims to be God's final and unaltered revelation, completing rather than canceling everything that came before.\n\nChristianity teaches something related but different: that God's revelation reached its climax not in a further prophet, but in Jesus Christ himself. As the New Testament puts it, God \"has at the end of these days spoken to us by his Son.\" (Hebrews 1:1-2)\n\nThis article lays out both claims fairly, in each tradition's own terms, and then explains the Islamic case for why a further scripture-bearing prophet was still needed after Jesus's earthly ministry ended."
+    },
+    {
+      "sectionId": "introduction",
+      "title": "Introduction",
+      "kind": "notes",
+      "body": "Nearly every scripture-based faith makes some claim about completion. Judaism looks to the covenant given at Sinai. Christianity looks to Jesus as God's climactic self-disclosure. Islam looks to Muhammad as the last in a long chain of messengers stretching back to Adam, and to the Quran as God's final revealed book. Comparing these claims fairly means being precise about what each tradition actually asserts, rather than assuming \"final\" means the same thing twice.\n\nThis article focuses on two related claims: the Islamic doctrine, drawn from Quran 33:40, that Muhammad is Khatam an-Nabiyyin — the Seal of the Prophets — and the Christian conviction, rooted in Hebrews 1:1-2, that God's word reached its final expression in his Son. Both traditions honor Jesus as a genuine messenger of God: the Quran calls him al-Masih (the Messiah), affirms his virgin birth, and devotes an entire chapter, Surah Maryam, to his mother. The disagreement is not about whether Jesus mattered, but about what, theologically, happened after him.\n\nTwo terms help. A nabi (prophet) receives revelation; a rasul (messenger) is a prophet sent with a new scripture or law for a community. Khatam literally means a seal or stamp, the kind pressed into wax to close and authenticate a letter, marking it complete."
+    },
+    {
+      "sectionId": "main-question",
+      "title": "The Question We Are Answering",
+      "kind": "notes",
+      "body": "The specific question is this: if Christians hold, on the authority of Hebrews 1:1-2, that God's revelation reached its culmination in Jesus, why does Islam insist a further prophet — with a further scripture — was still necessary six centuries later? And what precisely does Islam mean by the \"Seal of the Prophets\"?\n\nSunni and Shia scholarship alike has long read Quran 33:40 as closing the prophetic office entirely: no prophet of any kind follows Muhammad. This is a settled article of faith rather than a live debate, though a few modern movements have proposed narrower readings, discussed later in this article, and these remain minority positions rejected by the overwhelming majority of Muslim scholars.\n\nAnswering the question means reading what the Quran says about Muhammad's place in the prophetic line, what the New Testament says about Jesus's place in God's self-revelation, and then asking honestly whether both claims can be true, and how."
+    },
+    {
+      "sectionId": "historical-context",
+      "title": "One Prophetic Line, Two Endings",
+      "kind": "history",
+      "body": "Islamic teaching describes one long prophetic mission rather than a series of unrelated religions. The Quran names dozens of earlier prophets — Adam, Noah, Abraham, Moses, David, and Jesus among them — as carriers of one essential message across different times and nations: one God, deserving of worship, and humanity accountable to Him. Each new messenger typically renewed that message for a particular people, and later generations often altered or forgot parts of what they had received, prompting the next messenger.\n\nMuhammad's prophetic career is dated by Muslim and non-Muslim historians alike to roughly 610 to 632 CE, from his first revelation outside Mecca to his death in Medina. Islamic tradition places one of the last revelations, Quran 5:3, during his final pilgrimage to Mecca in 632 CE, the Farewell Pilgrimage — treated within the tradition as marking the moment the message reached its completed form.\n\nChristian tradition situates the New Testament's own claim of culmination differently: not at the end of a long prophetic career, but in the person of Jesus of Nazareth in first-century Roman Judea. The Epistle to the Hebrews, written for an early Jewish-Christian audience later in the first century CE, looks back on the whole history of Israelite prophecy and presents Jesus as the point it had been moving toward.\n\nBoth traditions agree that prophetic history reaches a decisive turning point. They disagree about where it falls and what form it takes: a person alone, for Christianity; a person and one final scripture-bearing prophet, for Islam."
+    },
+    {
+      "sectionId": "quranic-perspective",
+      "title": "The Quran's Case for Finality",
+      "kind": "scripture",
+      "body": "The Quran's clearest statement on this subject comes in Surah al-Ahzab, addressed in its immediate context to a controversy over an adopted son, but reaching a much larger conclusion:\n\nمَّا كَانَ مُحَمَّدٌ أَبَا أَحَدٍ مِّن رِّجَالِكُمْ وَلَٰكِن رَّسُولَ ٱللَّهِ وَخَاتَمَ ٱلنَّبِيِّينَ ۗ وَكَانَ ٱللَّهُ بِكُلِّ شَيْءٍ عَلِيمًا\n\n\"Muhammad is not the father of [any] one of your men, but [he is] the Messenger of Allah and last of the prophets. And ever is Allah, of all things, Knowing.\" (Quran 33:40)\n\nThe phrase rendered here as \"last of the prophets\" is, in Arabic, khatam an-nabiyyin — literally the Seal of the Prophets. Classical and modern Muslim scholars, across Sunni and Shia schools, read this verse as closing the prophetic office altogether: after Muhammad, God sends no further prophet to any people, of any kind. The verse's immediate purpose — clarifying that Muhammad's adopted son Zayd was not, by adoption, entitled to treat him as a biological father — is paired with this far larger claim, as though to say: whatever family ties he lacks, his prophetic office is unique and terminal.\n\nA second key verse, from Surah al-Ma'idah, is traditionally linked to the Farewell Pilgrimage near the end of Muhammad's life:\n\nحُرِّمَتْ عَلَيْكُمُ ٱلْمَيْتَةُ وَٱلدَّمُ وَلَحْمُ ٱلْخِنزِيرِ وَمَا أُهِلَّ لِغَيْرِ ٱللَّهِ بِهِ وَٱلْمُنْخَنِقَةُ وَٱلْمَوْقُوذَةُ وَٱلْمُتَرَدِّيَةُ وَٱلنَّطِيحَةُ وَمَا أَكَلَ ٱلسَّبُعُ إِلَّا مَا ذَكَّيْتُمْ وَمَا ذُبِحَ عَلَى ٱلنُّصُبِ وَأَن تَسْتَقْسِمُوا بِٱلْأَزْلَامِ ۚ ذَٰلِكُمْ فِسْقٌ ۗ ٱلْيَوْمَ يَئِسَ ٱلَّذِينَ كَفَرُوا مِن دِينِكُمْ فَلَا تَخْشَوْهُمْ وَٱخْشَوْنِ ۚ ٱلْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ وَأَتْمَمْتُ عَلَيْكُمْ نِعْمَتِي وَرَضِيتُ لَكُمُ ٱلْإِسْلَامَ دِينًا ۚ فَمَنِ ٱضْطُرَّ فِي مَخْمَصَةٍ غَيْرَ مُتَجَانِفٍ لِّإِثْمٍ ۙ فَإِنَّ ٱللَّهَ غَفُورٌ رَّحِيمٌ\n\n\"Prohibited to you are dead animals, blood, the flesh of swine, and that which has been dedicated to other than Allah, and [those animals] killed by strangling or by a violent blow or by a head-long fall or by the goring of horns, and those from which a wild animal has eaten, except what you [are able to] slaughter [before its death], and those which are sacrificed on stone altars, and [prohibited is] that you seek decision through divining arrows. That is grave disobedience. This day those who disbelieve have despaired of [defeating] your religion; so fear them not, but fear Me. This day I have perfected for you your religion and completed My favor upon you and have approved for you Islam as religion. But whoever is forced by severe hunger with no inclination to sin - then indeed, Allah is Forgiving and Merciful.\" (Quran 5:3)\n\nMuslims read the line \"This day I have perfected for you your religion... and have approved for you Islam as religion\" as God's own declaration that the revelation begun with Adam and carried through Noah, Abraham, Moses, and Jesus reached its fullness in Muhammad's mission. Nothing essential remained to be added; the religion was, in that sense, whole.\n\nThe Quran also presents Jesus's own ministry as anticipating this ending point. In Surah as-Saff:\n\nوَإِذْ قَالَ عِيسَى ٱبْنُ مَرْيَمَ يَا بَنِي إِسْرَائِيلَ إِنِّي رَسُولُ ٱللَّهِ إِلَيْكُم مُّصَدِّقًا لِّمَا بَيْنَ يَدَيَّ مِنَ ٱلتَّوْرَاةِ وَمُبَشِّرًا بِرَسُولٍ يَأْتِي مِن بَعْدِي ٱسْمُهُ أَحْمَدُ ۖ فَلَمَّا جَاءَهُم بِٱلْبَيِّنَاتِ قَالُوا هَٰذَا سِحْرٌ مُّبِينٌ\n\n\"And [mention] when Jesus, the son of Mary, said, 'O children of Israel, indeed I am the messenger of Allah to you confirming what came before me of the Torah and bringing good tidings of a messenger to come after me, whose name is Ahmad.' But when he came to them with clear evidences, they said, 'This is obvious magic.'\" (Quran 61:6)\n\nIn the Quran's account, Jesus is not silent about a coming messenger. He describes himself as sent specifically \"to the children of Israel,\" confirming the Torah, and foretells a further messenger named Ahmad — a name built, like Muhammad, from the Arabic root h-m-d, meaning \"praise.\"\n\nA further verse addresses why, in Islamic understanding, one more messenger was needed after a prophet already sent specifically to Israel. In Surah al-A'raf, Muhammad is instructed:\n\nقُلْ يَا أَيُّهَا ٱلنَّاسُ إِنِّي رَسُولُ ٱللَّهِ إِلَيْكُمْ جَمِيعًا ٱلَّذِي لَهُ مُلْكُ ٱلسَّمَاوَاتِ وَٱلْأَرْضِ ۖ لَا إِلَٰهَ إِلَّا هُوَ يُحْيِي وَيُمِيتُ ۖ فَآمِنُوا بِٱللَّهِ وَرَسُولِهِ ٱلنَّبِيِّ ٱلْأُمِّيِّ ٱلَّذِي يُؤْمِنُ بِٱللَّهِ وَكَلِمَاتِهِ وَٱتَّبِعُوهُ لَعَلَّكُمْ تَهْتَدُونَ\n\n\"Say, [O Muhammad], 'O mankind, indeed I am the Messenger of Allah to you all, [from Him] to whom belongs the dominion of the heavens and the earth. There is no deity except Him; He gives life and causes death.' So believe in Allah and His Messenger, the unlettered prophet, who believes in Allah and His words, and follow him that you may be guided.\" (Quran 7:158)\n\nThe contrast matters. Both the Quran (in 61:6) and the New Testament describe Jesus's earthly ministry as focused on the house of Israel rather than explicitly addressed to every nation. Quran 7:158, by contrast, has Muhammad address \"mankind\" as a whole, without ethnic qualifier. Muslims read this shift as part of the reason a further messenger was necessary: not to correct Jesus, but to extend God's call, in a fully universal and textually fixed form, to the entire human race."
+    },
+    {
+      "sectionId": "biblical-perspective",
+      "title": "Christ as God's Final Word",
+      "kind": "scripture",
+      "body": "Mainstream Christian theology draws its clearest statement of finality from the Epistle to the Hebrews, written for Jewish Christians weighing how the new faith related to Israel's prophetic history:\n\n\"God, having in the past spoken to the fathers through the prophets at many times and in various ways, has at the end of these days spoken to us by his Son, whom he appointed heir of all things, through whom also he made the worlds.\" (Hebrews 1:1-2)\n\nClassical and contemporary Christian scholarship reads this as a deliberate contrast: the \"many times and various ways\" God spoke through the Israelite prophets are set against one final mode of speech — God speaking \"by his Son.\" In historic Christian theology the Son is not merely another prophet relaying a message but God's own Word made flesh, a theme echoed in John's Gospel. On this reading, once God has spoken through his own Son, no further prophetic figure is needed. This is the mainstream position across Catholic, Orthodox, and Protestant theology alike.\n\nA second passage, from Jesus's farewell discourse on the night before his crucifixion in John's Gospel, is often discussed here:\n\n“I have yet many things to tell you, but you can’t bear them now. However when he, the Spirit of truth, has come, he will guide you into all truth, for he will not speak from himself; but whatever he hears, he will speak. He will declare to you things that are coming.” (John 16:12-13)\n\nIn mainstream Christian interpretation, \"he\" refers to the Holy Spirit — called the Paraclete, a Greek term meaning Helper or Advocate, in the surrounding chapters of John's Gospel. Christian scholarship reads this as a promise fulfilled at Pentecost, recounted in the Acts of the Apostles. On this reading, no further human prophet is in view — only the Spirit's ongoing work deepening the church's understanding of what Christ had already revealed.\n\nA third passage, from Jesus's end-times teaching in Matthew's Gospel, is also sometimes raised here:\n\n\"This Good News of the Kingdom will be preached in the whole world for a testimony to all the nations, and then the end will come.\" (Matthew 24:14)\n\nMainstream Christian reading treats this verse as describing the church's missionary task — spreading the message about Jesus to every nation — as the condition preceding Christ's own return, not a prediction of an intervening prophet. The only figure still to come after Jesus's earthly ministry, in this understanding, is Jesus himself, returning at the end of the age.\n\nIn fairness, this has been Christian theology's settled majority position throughout its history: the apostolic testimony gathered in the New Testament canon is complete and closed, with no subsequent prophetic figure or scripture of equal authority anticipated."
+    },
+    {
+      "sectionId": "comparison",
+      "title": "Two Claims of Finality, Compared",
+      "kind": "argument",
+      "body": "Laid side by side, the two claims share a similar shape before they diverge in content. Both traditions hold that prophetic revelation reaches a genuine, decisive turning point rather than continuing indefinitely. Hebrews 1:1-2 contrasts the fragmented, multiform prophetic speech of the past with a single, final mode of divine communication; Quran 5:3 speaks of a single day on which religion was \"perfected.\" Neither tradition treats revelation as open-ended. The disagreement is over what closes the process: a person alone, in Christianity, or a person and one further scripture-bearing prophet, in Islam.\n\nThe Islamic case for why a further messenger was needed rests substantially on scope. Even by the New Testament's own account, Jesus's earthly ministry was addressed in the first instance to Israel, and his early followers debated at length, afterward, whether his message extended to non-Jewish nations. The Quran's account in 61:6 agrees with this scope: Jesus calls himself \"the messenger of Allah to you\" — addressing the children of Israel specifically. Quran 7:158, by contrast, has Muhammad addressing \"mankind\" as a whole. Muslims argue that this widening of scope, from one nation to every nation, is itself a reason God's plan required one further messenger: to deliver, in explicitly universal terms and a single fixed text, the call already implicit in the message given to Israel's prophets and to Jesus.\n\nA more contested argument concerns John 16:12-13. Since the medieval period, some Muslim scholars have connected this passage — a coming Helper who \"will not speak from himself\" but relays what he hears, and \"declare[s]... things that are coming\" — to a human messenger, linking the Greek parakletos (\"Helper\") to the similar-sounding periklytos (\"renowned,\" paralleling the name Ahmad in 61:6). In fairness, this is a minority argument even within Muslim scholarship, and mainstream Christian and secular scholarship rejects it outright: every surviving Greek manuscript reads parakletos, and the surrounding chapters repeatedly identify this figure as \"the Spirit of truth,\" not a human being. Muslims who raise the passage today lean less on that disputed wordplay and more on its substance — a figure who relays only what he is given and discloses future things — which some see as resonant with how the Quran describes Muhammad's own revelation. That is a thematic argument, not a manuscript claim.\n\nA final strand concerns durability. Whatever closes God's revelation, Muslims argue, needs to remain intact for the entire remaining span of human history, since neither tradition expects further correction. Islam holds this is why the final revelation was memorized and written down within a single prophetic lifetime, rather than compiled by later hands over subsequent decades, as mainstream Christian scholarship itself describes for the New Testament writings — a question treated at length in the companion articles on how the Quran and the Bible were each transmitted."
+    },
+    {
+      "sectionId": "common-misconceptions",
+      "title": "Common Misconceptions",
+      "kind": "interpretation",
+      "body": "It is sometimes assumed that calling Muhammad the final prophet must mean Islam regards Jesus as a lesser or discredited figure. The opposite is closer to the truth. The Quran affirms Jesus's virgin birth, calls him the Messiah, describes him performing miracles by God's permission, and devotes an entire chapter to his mother, Mary — the only woman named as a chapter's subject in the Quran. Islamic tradition also holds that Jesus was raised to God rather than dying on the cross, and that he will return before the Day of Judgment. Muhammad's finality does not diminish Jesus's honor; it completes the mission both belonged to.\n\nA second misconception, more internal to Islamic debate, is that \"Seal of the Prophets\" might be read loosely — as meaning merely \"the best\" prophet, or leaving the office open to a future claimant. Historically and today, the overwhelming consensus of both Sunni and Shia scholarship rejects this: khatam an-nabiyyin means prophethood, in any form, ended with Muhammad. Movements claiming a prophet after him — most notably the Ahmadiyya movement, which emerged in nineteenth-century South Asia — are regarded as outside mainstream Islam by near-total Muslim consensus, precisely because they reject this settled reading of Quran 33:40.\n\nA third misconception runs the other way: that Hebrews 1:1-2 directly refutes Islam's finality claim, as though the two verses were competing head-to-head. In fairness, Hebrews makes a claim about the sufficiency of God's self-disclosure in Christ for the purposes its author had in view — chiefly, reassuring Jewish Christians who saw the Levitical system as unfinished business — not a blanket prophecy ruling out every future religious figure. That said, the traditions do genuinely conflict: mainstream Christian theology treats the New Testament canon as closed and would not accept a subsequent prophetic claim of Muhammad's kind. The disagreement is real; it rests on different grounds than a flat contradiction between the two verses.\n\nFinally, as noted above, the philological argument connecting John's Paraclete to the name Ahmad is sometimes presented as settled manuscript proof. It is not — every Greek manuscript reads parakletos, not periklytos — and readers should distinguish that claim from the broader, more defensible theological argument about the passage's substance."
+    },
+    {
+      "sectionId": "islamic-conclusion",
+      "title": "The Islamic Conclusion",
+      "kind": "argument",
+      "body": "Put together, the Islamic case for finality does not ask anyone to diminish Jesus or dismiss Hebrews 1:1-2's claim about him. It asks for a wider lens on the same history both traditions already describe. The Quran presents one continuous prophetic mission — Adam, Noah, Abraham, Moses, Jesus, Muhammad — carrying the same essential call to worship one God, each renewed and, where needed, corrected across generations.\n\nWithin that mission, Islam holds that Jesus's own ministry, focused on Israel, pointed forward rather than backward, foretelling, in the Quran's account (61:6), a further messenger to come. Muhammad, in Islamic understanding, is that messenger: sent not to one nation but, as Quran 7:158 states, to \"mankind\" as a whole, given a revelation Muslims hold was fixed in memory and writing within his own lifetime — hence \"Seal of the Prophets\" (33:40), and hence the declaration that religion had been \"perfected\" (5:3).\n\nMuslims hold this as fulfillment rather than rivalry. Just as Hebrews describes Christ as the culmination the earlier prophets pointed toward, Islam describes Muhammad as the culmination the earlier prophets — including Jesus — pointed toward. Seen this way, the two traditions share more of their underlying grammar than is often noticed: both insist that God's self-disclosure is not endless but arrives somewhere, decisively. They differ, honestly, on where — the real question worth sitting with, rather than dismissing the other tradition's claim or assuming the two claims must be identical."
+    },
+    {
+      "sectionId": "faq",
+      "title": "Frequently Asked Questions",
+      "kind": "notes",
+      "body": "Q: Does calling Muhammad the last prophet mean Islam rejects or diminishes Jesus?\nA: No. The Quran honors Jesus as the Messiah, born of a virgin, who performed miracles by God's permission, and holds that he will return before the Day of Judgment. Muhammad's finality is understood as completing the mission Jesus belonged to, not replacing him.\n\nQ: What does \"Seal of the Prophets\" (khatam an-nabiyyin) actually mean?\nA: Khatam literally means a seal or stamp, the kind pressed into wax to close and authenticate a letter. Mainstream Sunni and Shia scholarship reads Quran 33:40 as declaring that Muhammad closes the prophetic office permanently.\n\nQ: If mainstream Christian and secular scholarship reject the Ahmad/Paraclete connection, why do some Muslims still raise John 16:12-13?\nA: The philological argument linking the Greek parakletos to periklytos is a minority position the manuscript evidence does not support. Some Muslim writers raise the passage instead for its thematic content, as a resonance worth noting rather than manuscript proof.\n\nQ: Are there Muslim groups that accept a prophet after Muhammad?\nA: A small number of modern movements, most notably the Ahmadiyya movement founded in nineteenth-century South Asia, hold such a view. The overwhelming majority of Sunni and Shia scholarship regards this as a departure from mainstream Islamic belief.\n\nQ: Doesn't Hebrews 1:1-2 directly contradict Islam's claim of a later prophet?\nA: It asserts that God's revelation reached its highest expression in Christ. It is not phrased as a prediction ruling out every future religious claimant. The traditions do disagree in practice — mainstream Christianity treats its canon as closed — but on different grounds than a flat contradiction.\n\nQ: Why does Islam think a final prophet was still needed if Jesus already came?\nA: Because Jesus's own ministry was addressed specifically to the children of Israel, as both Quran 61:6 and the Gospels describe, while Quran 7:158 presents Muhammad's mission as addressed to \"mankind\" without qualification — a universal, textually fixed form Muslims see the earlier missions as not yet having delivered."
+    },
+    {
+      "sectionId": "further-reading",
+      "title": "Further Reading",
+      "kind": "sources",
+      "body": "Jonathan A.C. Brown's Muhammad: A Very Short Introduction offers a concise scholarly overview of Muhammad's life and prophetic career, including the doctrine of finality. F.F. Bruce's commentary The Epistle to the Hebrews explains, from a mainstream Christian scholarly perspective, how the letter presents Christ as the culmination of prophetic revelation. Tarif Khalidi's The Muslim Jesus: Sayings and Stories in Islamic Literature collects centuries of Islamic writing that honors Jesus, useful for seeing how seriously Muslim tradition treats him. Mahmoud Ayoub's The Qur'an and Its Interpreters surveys classical tafsir on key verses, including those on prophecy and Jesus. Raymond E. Brown's Anchor Bible commentary on the Gospel of John offers a mainstream scholarly treatment of Jesus's Farewell Discourse and the Paraclete passages discussed in this article."
+    }
+  ],
+  "quranVerses": [
+    {
+      "surahName": "Al-Ahzaab",
+      "surahNumber": 33,
+      "ayahNumber": 40,
+      "reference": "Quran 33:40",
+      "arabic": "مَّا كَانَ مُحَمَّدٌ أَبَا أَحَدٍ مِّن رِّجَالِكُمْ وَلَٰكِن رَّسُولَ ٱللَّهِ وَخَاتَمَ ٱلنَّبِيِّينَ ۗ وَكَانَ ٱللَّهُ بِكُلِّ شَيْءٍ عَلِيمًا",
+      "translation": "Muhammad is not the father of [any] one of your men, but [he is] the Messenger of Allah and last of the prophets. And ever is Allah, of all things, Knowing.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Maaida",
+      "surahNumber": 5,
+      "ayahNumber": 3,
+      "reference": "Quran 5:3",
+      "arabic": "حُرِّمَتْ عَلَيْكُمُ ٱلْمَيْتَةُ وَٱلدَّمُ وَلَحْمُ ٱلْخِنزِيرِ وَمَا أُهِلَّ لِغَيْرِ ٱللَّهِ بِهِ وَٱلْمُنْخَنِقَةُ وَٱلْمَوْقُوذَةُ وَٱلْمُتَرَدِّيَةُ وَٱلنَّطِيحَةُ وَمَا أَكَلَ ٱلسَّبُعُ إِلَّا مَا ذَكَّيْتُمْ وَمَا ذُبِحَ عَلَى ٱلنُّصُبِ وَأَن تَسْتَقْسِمُوا بِٱلْأَزْلَامِ ۚ ذَٰلِكُمْ فِسْقٌ ۗ ٱلْيَوْمَ يَئِسَ ٱلَّذِينَ كَفَرُوا مِن دِينِكُمْ فَلَا تَخْشَوْهُمْ وَٱخْشَوْنِ ۚ ٱلْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ وَأَتْمَمْتُ عَلَيْكُمْ نِعْمَتِي وَرَضِيتُ لَكُمُ ٱلْإِسْلَامَ دِينًا ۚ فَمَنِ ٱضْطُرَّ فِي مَخْمَصَةٍ غَيْرَ مُتَجَانِفٍ لِّإِثْمٍ ۙ فَإِنَّ ٱللَّهَ غَفُورٌ رَّحِيمٌ",
+      "translation": "Prohibited to you are dead animals, blood, the flesh of swine, and that which has been dedicated to other than Allah, and [those animals] killed by strangling or by a violent blow or by a head-long fall or by the goring of horns, and those from which a wild animal has eaten, except what you [are able to] slaughter [before its death], and those which are sacrificed on stone altars, and [prohibited is] that you seek decision through divining arrows. That is grave disobedience. This day those who disbelieve have despaired of [defeating] your religion; so fear them not, but fear Me. This day I have perfected for you your religion and completed My favor upon you and have approved for you Islam as religion. But whoever is forced by severe hunger with no inclination to sin - then indeed, Allah is Forgiving and Merciful.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "As-Saff",
+      "surahNumber": 61,
+      "ayahNumber": 6,
+      "reference": "Quran 61:6",
+      "arabic": "وَإِذْ قَالَ عِيسَى ٱبْنُ مَرْيَمَ يَا بَنِي إِسْرَائِيلَ إِنِّي رَسُولُ ٱللَّهِ إِلَيْكُم مُّصَدِّقًا لِّمَا بَيْنَ يَدَيَّ مِنَ ٱلتَّوْرَاةِ وَمُبَشِّرًا بِرَسُولٍ يَأْتِي مِن بَعْدِي ٱسْمُهُ أَحْمَدُ ۖ فَلَمَّا جَاءَهُم بِٱلْبَيِّنَاتِ قَالُوا هَٰذَا سِحْرٌ مُّبِينٌ",
+      "translation": "And [mention] when Jesus, the son of Mary, said, \"O children of Israel, indeed I am the messenger of Allah to you confirming what came before me of the Torah and bringing good tidings of a messenger to come after me, whose name is Ahmad.\" But when he came to them with clear evidences, they said, \"This is obvious magic.\"",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-A'raaf",
+      "surahNumber": 7,
+      "ayahNumber": 158,
+      "reference": "Quran 7:158",
+      "arabic": "قُلْ يَا أَيُّهَا ٱلنَّاسُ إِنِّي رَسُولُ ٱللَّهِ إِلَيْكُمْ جَمِيعًا ٱلَّذِي لَهُ مُلْكُ ٱلسَّمَاوَاتِ وَٱلْأَرْضِ ۖ لَا إِلَٰهَ إِلَّا هُوَ يُحْيِي وَيُمِيتُ ۖ فَآمِنُوا بِٱللَّهِ وَرَسُولِهِ ٱلنَّبِيِّ ٱلْأُمِّيِّ ٱلَّذِي يُؤْمِنُ بِٱللَّهِ وَكَلِمَاتِهِ وَٱتَّبِعُوهُ لَعَلَّكُمْ تَهْتَدُونَ",
+      "translation": "Say, [O Muhammad], \"O mankind, indeed I am the Messenger of Allah to you all, [from Him] to whom belongs the dominion of the heavens and the earth. There is no deity except Him; He gives life and causes death.\" So believe in Allah and His Messenger, the unlettered prophet, who believes in Allah and His words, and follow him that you may be guided.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    }
+  ],
+  "bibleVerses": [
+    {
+      "book": "Hebrews",
+      "chapter": 1,
+      "verse": "1-2",
+      "reference": "Hebrews 1:1-2",
+      "text": "God, having in the past spoken to the fathers through the prophets at many times and in various ways, has at the end of these days spoken to us by his Son, whom he appointed heir of all things, through whom also he made the worlds.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "John",
+      "chapter": 16,
+      "verse": "12-13",
+      "reference": "John 16:12-13",
+      "text": "“I have yet many things to tell you, but you can’t bear them now. However when he, the Spirit of truth, has come, he will guide you into all truth, for he will not speak from himself; but whatever he hears, he will speak. He will declare to you things that are coming.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 24,
+      "verse": "14",
+      "reference": "Matthew 24:14",
+      "text": "This Good News of the Kingdom will be preached in the whole world for a testimony to all the nations, and then the end will come.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does calling Muhammad the last prophet mean Islam rejects or diminishes Jesus?",
+      "answer": "No. The Quran honors Jesus as the Messiah, born of a virgin, who performed miracles by God's permission, and holds that he will return before the Day of Judgment. Muhammad's finality is understood as completing the mission Jesus belonged to, not replacing him."
+    },
+    {
+      "question": "What does \"Seal of the Prophets\" (khatam an-nabiyyin) actually mean?",
+      "answer": "Khatam literally means a seal or stamp, the kind pressed into wax to close and authenticate a letter. Mainstream Sunni and Shia scholarship reads Quran 33:40 as declaring that Muhammad closes the prophetic office permanently."
+    },
+    {
+      "question": "If mainstream Christian and secular scholarship reject the Ahmad/Paraclete connection, why do some Muslims still raise John 16:12-13?",
+      "answer": "The philological argument linking the Greek parakletos to periklytos is a minority position the manuscript evidence does not support. Some Muslim writers raise the passage instead for its thematic content, as a resonance worth noting rather than manuscript proof."
+    },
+    {
+      "question": "Are there Muslim groups that accept a prophet after Muhammad?",
+      "answer": "A small number of modern movements, most notably the Ahmadiyya movement founded in nineteenth-century South Asia, hold such a view. The overwhelming majority of Sunni and Shia scholarship regards this as a departure from mainstream Islamic belief."
+    },
+    {
+      "question": "Doesn't Hebrews 1:1-2 directly contradict Islam's claim of a later prophet?",
+      "answer": "It asserts that God's revelation reached its highest expression in Christ. It is not phrased as a prediction ruling out every future religious claimant. The traditions do disagree in practice — mainstream Christianity treats its canon as closed — but on different grounds than a flat contradiction."
+    },
+    {
+      "question": "Why does Islam think a final prophet was still needed if Jesus already came?",
+      "answer": "Because Jesus's own ministry was addressed specifically to the children of Israel, as both Quran 61:6 and the Gospels describe, while Quran 7:158 presents Muhammad's mission as addressed to \"mankind\" without qualification — a universal, textually fixed form Muslims see the earlier missions as not yet having delivered."
+    }
+  ],
+  "relatedSlugs": [
+    "who-is-jesus",
+    "how-was-the-quran-preserved",
+    "how-was-the-bible-transmitted",
+    "what-is-revelation",
+    "the-day-of-judgment",
+    "what-is-tawhid"
+  ],
+  "furtherReading": [
+    {
+      "title": "Muhammad: A Very Short Introduction",
+      "author": "Jonathan A.C. Brown",
+      "note": "A concise scholarly overview of Muhammad's life and prophetic career, including the doctrine of finality."
+    },
+    {
+      "title": "The Epistle to the Hebrews (New International Commentary on the New Testament)",
+      "author": "F.F. Bruce",
+      "note": "A standard mainstream Christian commentary explaining how Hebrews presents Christ as the culmination of prophetic revelation."
+    },
+    {
+      "title": "The Muslim Jesus: Sayings and Stories in Islamic Literature",
+      "author": "Tarif Khalidi",
+      "note": "A collection of centuries of Islamic literature honoring Jesus, useful for seeing how seriously Muslim tradition treats him."
+    },
+    {
+      "title": "The Qur'an and Its Interpreters",
+      "author": "Mahmoud Ayoub",
+      "note": "A scholarly survey of classical tafsir on key Quranic verses, including those on prophecy and Jesus."
+    },
+    {
+      "title": "The Gospel According to John (XIII-XXI) (Anchor Bible)",
+      "author": "Raymond E. Brown",
+      "note": "A mainstream scholarly commentary on Jesus's Farewell Discourse and the Paraclete passages in John's Gospel."
+    }
+  ]
+}
