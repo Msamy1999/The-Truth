@@ -1,0 +1,181 @@
+{
+  "slug": "biblical-canon-formation",
+  "title": "Biblical Canon Formation",
+  "subtitle": "How the Bible's books were gathered over centuries — and why the Quran's canon took only one generation",
+  "category": "preservation",
+  "audienceLevel": "beginner",
+  "summary": "The Bible's list of authoritative books — its canon — was not fixed all at once. It emerged gradually over several centuries, through criteria like apostolic origin and widespread use, debated writings, and regional councils, and Catholic, Orthodox, and Protestant Bibles still differ in content today. This article traces that history as mainstream Christian scholarship describes it, then compares it with the Quran's compilation into a single, undisputed text within about one generation of the Prophet Muhammad's death.",
+  "tags": [
+    "Preservation",
+    "History",
+    "Scripture",
+    "Sources"
+  ],
+  "seo": {
+    "metaTitle": "Biblical Canon Formation: How the Bible's Books Were Chosen",
+    "metaDescription": "How the New Testament and Old Testament canons took shape over centuries — criteria, councils, and the Catholic-Orthodox-Protestant divide — compared with the Quran's single, one-generation canon.",
+    "keywords": [
+      "biblical canon",
+      "New Testament canon",
+      "Council of Hippo",
+      "Council of Carthage",
+      "Athanasius",
+      "deuterocanonical books",
+      "Council of Trent",
+      "Quran compilation",
+      "Uthman",
+      "canon of scripture"
+    ]
+  },
+  "sections": [
+    {
+      "sectionId": "beginner-summary",
+      "title": "In Brief",
+      "kind": "summary",
+      "body": "The Bible that Christians read today did not arrive as one finished book with an agreed table of contents. Its collection into a single canon — the recognized list of scripture — took shape gradually over several centuries, through debate, criteria, and regional councils. Even now, Catholic, Orthodox, and Protestant Bibles do not contain exactly the same books.\n\nThe Quran's history looks different. Muslims hold that its text was completed within the Prophet Muhammad's lifetime, gathered into one manuscript within about a year of his death, and standardized into a single master copy within roughly two decades more. Every Muslim community since has used the same 114 surahs. This article traces both histories, as mainstream scholarship on each side describes them."
+    },
+    {
+      "sectionId": "introduction",
+      "title": "Introduction",
+      "kind": "notes",
+      "body": "Every scripture, before it becomes a book on a shelf, raises a question: which writings actually belong? Christians and Muslims both affirm that God revealed guidance to humanity, but the process by which that guidance became a fixed, bounded collection of texts looks very different in the two traditions.\n\nFor Christians, canon describes the recognized list of authoritative scripture. Fixing that list was not instantaneous. Letters and Gospels were written by different authors across decades and cities, and only gradually came to be read together as \"the Bible.\" Mainstream church historians — including devout Christian scholars — describe a process of recognition stretched across several centuries, using specific criteria, argued out at regional councils, and still not fully unified across Christian traditions today.\n\nThis article sets that history beside the Quran's much shorter compilation story, using what each tradition's own sources report, so the comparison stays fair to both."
+    },
+    {
+      "sectionId": "main-question",
+      "title": "The Question We Are Asking",
+      "kind": "notes",
+      "body": "The question here is simple to state: how did each community decide which books belong in its scripture, and how long did that take?\n\nFor the Bible, that means asking about criteria (what qualified a book for inclusion), timeline (when the list became fixed), and unity (whether all Christians ended up agreeing). For the Quran, it means asking whether a comparable process existed, and how it differed in shape and speed.\n\nThis is a historical question, not a question about sincerity. Devout believers on both sides transmitted their scriptures as carefully as they knew how; what follows are differences in process and outcome, reported by each tradition's own historians."
+    },
+    {
+      "sectionId": "historical-context",
+      "title": "How the Biblical Canon Took Shape",
+      "kind": "history",
+      "body": "Mainstream church history describes New Testament canon formation as a process of recognition rather than invention: councils did not compose new texts, but ratified books already read as authoritative in most churches. Historians typically name three overlapping criteria: apostolic origin (written by an apostle or a close associate), doctrinal consistency (matching the wider body of accepted teaching), and widespread use (already read in worship across many church communities, not just one).\n\nApplying those criteria took time. Around the middle of the second century, a teacher named Marcion proposed a much shorter list of accepted writings, a move many historians think pushed the wider church toward clarifying its own list in response. The Muratorian fragment, a damaged document usually dated to around the late second century, is often cited as the earliest surviving list of mostly New Testament books, though scholars debate its exact date. The theologian Origen, writing around 250, discussed a list resembling the eventual twenty-seven books, while noting that several — including Hebrews, James, 2 Peter, 2 and 3 John, and Revelation — remained disputed in different regions. The historian Eusebius, writing in the early fourth century, sorted New Testament writings into three groups: universally accepted, disputed but widely read, and rejected — a snapshot of a canon still being negotiated.\n\nThe first document to list exactly the twenty-seven books of today's New Testament — no more, no fewer — is a letter written by Athanasius, bishop of Alexandria, for Easter of the year 367, though even this was his own judgment, not yet a churchwide ruling. Regional councils took up the question soon after: the Synod of Hippo in 393, and the Councils of Carthage in 397 and 419, are cited by church historians as the first council records affirming a twenty-seven-book New Testament matching the modern list. These were regional North African meetings, not decisions binding on the whole church at the time; their significance lies in showing how far consensus had already spread, not in creating that consensus from nothing.\n\nThe Old Testament canon carries its own, still-unresolved history of disagreement. Early Christians generally read the Hebrew scriptures in a Greek translation called the Septuagint, which circulated alongside several additional books — among them Tobit, Judith, Wisdom, Sirach, Baruch, and 1 and 2 Maccabees — not part of the Hebrew Bible used in Jewish communities. At the Reformation, Martin Luther and other reformers followed the narrower Hebrew list for the Old Testament, placing those extra books in a separate section called the Apocrypha. The Catholic Church responded at the Council of Trent in 1546, formally affirming the longer list, including the disputed books, as fully canonical. Eastern Orthodox churches recognize a still broader list that varies somewhat by tradition (Greek, Slavonic, and others). The result: Catholic, Protestant, and Orthodox Bibles do not contain the same number of Old Testament books to this day — a difference openly acknowledged by scholars in every one of those traditions, not a secret uncovered from outside."
+    },
+    {
+      "sectionId": "quranic-perspective",
+      "title": "The Quran's Claim to a Completed Revelation",
+      "kind": "scripture",
+      "body": "The Quran's own claim about the completion of revelation appears in Surah al-Ma'idah, in a verse Muslim scholars generally place near the end of the Prophet Muhammad's life, during his final pilgrimage. Most of the verse addresses dietary law, but it closes with a claim about the state of the religion itself:\n\nحُرِّمَتْ عَلَيْكُمُ ٱلْمَيْتَةُ وَٱلدَّمُ وَلَحْمُ ٱلْخِنزِيرِ وَمَآ أُهِلَّ لِغَيْرِ ٱللَّهِ بِهِۦ وَٱلْمُنْخَنِقَةُ وَٱلْمَوْقُوذَةُ وَٱلْمُتَرَدِّيَةُ وَٱلنَّطِيحَةُ وَمَآ أَكَلَ ٱلسَّبُعُ إِلَّا مَا ذَكَّيْتُمْ وَمَا ذُبِحَ عَلَى ٱلنُّصُبِ وَأَن تَسْتَقْسِمُوا۟ بِٱلْأَزْلَٰمِ ۚ ذَٰلِكُمْ فِسْقٌ ۗ ٱلْيَوْمَ يَئِسَ ٱلَّذِينَ كَفَرُوا۟ مِن دِينِكُمْ فَلَا تَخْشَوْهُمْ وَٱخْشَوْنِ ۚ ٱلْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ وَأَتْمَمْتُ عَلَيْكُمْ نِعْمَتِى وَرَضِيتُ لَكُمُ ٱلْإِسْلَٰمَ دِينًۭا ۚ فَمَنِ ٱضْطُرَّ فِى مَخْمَصَةٍ غَيْرَ مُتَجَانِفٍۢ لِّإِثْمٍۢ ۙ فَإِنَّ ٱللَّهَ غَفُورٌۭ رَّحِيمٌۭ\n\n\"Prohibited to you are dead animals, blood, the flesh of swine, and that which has been dedicated to other than Allah, and [those animals] killed by strangling or by a violent blow or by a head-long fall or by the goring of horns, and those from which a wild animal has eaten, except what you [are able to] slaughter [before its death], and those which are sacrificed on stone altars, and [prohibited is] that you seek decision through divining arrows. That is grave disobedience. This day those who disbelieve have despaired of [defeating] your religion; so fear them not, but fear Me. This day I have perfected for you your religion and completed My favor upon you and have approved for you Islam as religion. But whoever is forced by severe hunger with no inclination to sin - then indeed, Allah is Forgiving and Merciful.\" (Quran 5:3)\n\nThe clause that matters for this topic reads: \"This day I have perfected for you your religion and completed My favor upon you and have approved for you Islam as religion.\" Muslims read this as God declaring, within the Prophet's own lifetime, that revelation was complete — not left open for later generations to add to, debate, or vote on centuries afterward.\n\nIslamic tradition reports a fast, documented process of fixing that completed revelation in writing, covered in detail elsewhere in this library: a compilation into one manuscript under the caliph Abu Bakr within about a year of the Prophet's death, after many who had memorized the Quran were killed in the Battle of Yamama around 633, followed roughly two decades later by a single standardized master copy produced under the caliph Uthman and distributed to the major cities of the growing Muslim world. Sunni and Shia Muslims alike have used the same 114 surahs, in the same order and content, ever since."
+    },
+    {
+      "sectionId": "biblical-perspective",
+      "title": "What the New Testament Says About Itself",
+      "kind": "scripture",
+      "body": "The New Testament contains statements Christians have long used to describe scripture's nature, though — as mainstream commentators themselves note — these statements were written before the New Testament existed as a fixed collection with an agreed table of contents.\n\nThe best known is Paul's description in a letter to Timothy:\n\n\"Every Scripture is God-breathed and profitable for teaching, for reproof, for correction, and for instruction in righteousness,\" (2 Timothy 3:16)\n\nThis verse anchors the Christian doctrine that scripture carries divine origin and authority. It is worth noting, as commentators point out, that the \"Scripture\" its first readers would have understood is chiefly the Hebrew scriptures Timothy had known since childhood; the letter does not, and could not, hand its readers a list of which later Christian writings would also count as \"God-breathed\" — that list was still generations from being settled.\n\nA second passage, from the letter known as 2 Peter, is unusually revealing about the canon's early, unsettled state:\n\n\"Regard the patience of our Lord as salvation; even as our beloved brother Paul also, according to the wisdom given to him, wrote to you;\nas also in all of his letters, speaking in them of these things. In those, there are some things that are hard to understand, which the ignorant and unsettled twist, as they also do to the other Scriptures, to their own destruction.\" (2 Peter 3:15-16)\n\nThis passage places Paul's letters alongside \"the other Scriptures\" — evidence that some of Paul's writings were already read as scripture-like by the time it was written. But church historians also note the irony: 2 Peter itself was among the most disputed books in the early canon debates. Eusebius, writing in the fourth century, listed it among the \"disputed\" books rather than the universally accepted ones, and questions about its authorship persisted long afterward. The very letter that speaks confidently of \"other Scriptures\" was, for generations, one of the last books widely accepted as scripture itself."
+    },
+    {
+      "sectionId": "comparison",
+      "title": "One Generation Versus Several Centuries",
+      "kind": "argument",
+      "body": "Placed side by side, the two canon histories differ in timeline, mechanism, and outcome.\n\nTimeline: Islamic tradition describes the Quran's text as recited in full within the Prophet's own lifetime (Quran 5:3 declares the religion \"perfected\" before his death), compiled into one manuscript within about a year afterward, and standardized into one master copy within roughly two more decades — the whole process complete within a single generation. The New Testament's canon, by contrast, took shape over roughly three centuries: from second-century lists, through Origen's disputed catalogue around 250 and Eusebius's three-way classification around 325, to Athanasius's first exact list in 367 and regional councils affirming that list in 393, 397, and 419.\n\nMechanism: the Quran's process involved one existing, complete oral recitation, memorized whole by many companions, checked against written fragments, and unified once under one caliph's authority. The New Testament's process involved dozens of separate documents by different authors across decades, judged individually against apostolic origin, doctrinal consistency, and church usage, city by city, without one central authority able to settle the question quickly.\n\nOutcome: the Quran's table of contents — 114 surahs — has been identical across every Muslim community, Sunni and Shia, East and West, since the Uthmanic standardization; there is no Muslim tradition with a shorter or longer Quran. The Bible's outcome differs: Protestant Bibles contain 66 books, following the Hebrew Bible's Old Testament list; Catholic Bibles contain 73, adding the deuterocanonical books affirmed at the Council of Trent in 1546; and Eastern Orthodox Bibles contain a still broader list varying somewhat between Greek, Slavonic, and other traditions. Three major branches of one religion, each holding its own Bible, differ by more than a dozen books — a state of affairs mainstream church historians describe candidly rather than deny.\n\nNone of this reflects insincerity on the Christian side; the disagreement is the visible residue of a fast-growing, geographically scattered movement making careful judgments over centuries, documented by the church's own scholars. The comparison is simply that one canon closed within a generation, while the other took centuries and still differs by tradition."
+    },
+    {
+      "sectionId": "common-misconceptions",
+      "title": "Common Misconceptions",
+      "kind": "interpretation",
+      "body": "A few misconceptions cloud this comparison on both sides.\n\n\"The councils invented the books of the New Testament.\" This is a popular idea, but church historians describe the regional councils at Hippo and Carthage as ratifying books already in widespread use, not selecting brand-new texts by vote. The heavy work of recognition had already happened informally, over generations, before any council recorded a list.\n\n\"All Christians read the same Bible.\" In fact, as shown above, Catholic, Protestant, and Orthodox Bibles differ in their Old Testament contents — a difference openly discussed in Christian scholarship, rooted in the Reformation-era dispute over the deuterocanonical books and the Council of Trent's 1546 response, not something hidden from ordinary believers.\n\n\"Muslims claim the Quran had no compilation history at all, unlike the honestly documented Bible.\" This is also inaccurate. Islamic tradition preserves a detailed, named history of the Quran's compilation — the committee work under Abu Bakr, the later standardization under Uthman — discussed at length elsewhere in this library. The claim is not that the Quran appeared with no process, but that its process was fast, supervised within one generation, and produced one universally agreed result, rather than a centuries-long, regionally uneven one.\n\n\"Disputed books like 2 Peter mean the New Testament is unreliable.\" Mainstream scholarship draws a narrower conclusion: a handful of books were debated longer than others, while the great majority of the New Testament's content was agreed upon early and widely. A real dispute over a few books is not the same as wholesale uncertainty about the whole collection."
+    },
+    {
+      "sectionId": "islamic-conclusion",
+      "title": "The Islamic Conclusion",
+      "kind": "argument",
+      "body": "For Muslims, this history is not merely academic; it connects directly to the Quran's own claim in Surah al-Ma'idah that God \"perfected\" the religion and completed His favor within the Prophet's lifetime (Quran 5:3). If revelation truly closed at that moment, it is reasonable to expect the resulting scripture to be gathered and fixed quickly and without lasting division — and Islamic tradition reports exactly that: a complete recitation in one generation, a written compilation within about a year of the Prophet's death, and a single standardized copy within roughly two decades more.\n\nThe Bible's history, honestly reported by the Christian scholars who study it, tells a different kind of story: composition and reflection stretched across many authors and many decades, and the community's judgment about which books belonged took centuries to settle — and never fully settled the same way in every branch of the church.\n\nThis does not require doubting the sincerity of any Christian scholar or scribe involved; it is simply the shape their own history took, openly acknowledged in their own textbooks. For a Muslim, the comparison is read as one more piece of evidence supporting the Quran's own description of itself as a scripture perfected at a single moment and guarded afterward — a claim explored with its own dedicated verses in the companion article on the Quran's preservation."
+    },
+    {
+      "sectionId": "faq",
+      "title": "Frequently Asked Questions",
+      "kind": "notes",
+      "body": "Q: Did church councils choose which books belong in the New Testament?\nA: Not by vote or selection from scratch. Mainstream church history describes councils such as Hippo (393) and Carthage (397, 419) as recognizing and ratifying books already read as scripture in most churches, following criteria like apostolic origin and widespread use, rather than creating a new list.\n\nQ: Why do Catholic, Orthodox, and Protestant Bibles have different numbers of books?\nA: The difference concerns the Old Testament. Protestant Bibles follow the shorter Hebrew Bible list (39 Old Testament books); Catholic Bibles include additional deuterocanonical books, affirmed at the Council of Trent in 1546; Eastern Orthodox Bibles include a still broader list that varies somewhat by tradition. All three go back to disagreements over the Greek Septuagint versus the Hebrew canon.\n\nQ: How long did it take to fix the New Testament's twenty-seven books?\nA: Historians trace the process from second-century lists through Origen's discussion around 250 and Eusebius's three-way classification around 325, to Athanasius's first exact list of all twenty-seven books in 367, and regional councils affirming that list by 419 — roughly three centuries.\n\nQ: Does the Quran have a similar history of disputed or excluded books?\nA: No. Islamic tradition records no rival Muslim community with a shorter or longer Quran, no equivalent of deuterocanonical debate, and no book ever excluded after having been treated as scripture. The 114-surah text has been the same across Sunni and Shia Islam since Uthman's standardization.\n\nQ: Does 2 Timothy 3:16 tell us which books count as Scripture?\nA: No. It states that Scripture is God-breathed and useful for teaching, but it does not list which books qualify — that question was still open when the letter was written and took centuries more to settle."
+    },
+    {
+      "sectionId": "further-reading",
+      "title": "Further Reading",
+      "kind": "sources",
+      "body": "Bruce M. Metzger — The Canon of the New Testament: Its Origin, Development, and Significance. A standard scholarly history of how the twenty-seven-book New Testament canon took shape.\n\nF. F. Bruce — The Canon of Scripture. An evangelical Christian scholar's account of canon formation for both the Old and New Testaments.\n\nLee Martin McDonald — The Biblical Canon: Its Origin, Transmission, and Authority. A detailed survey of the debates and criteria behind canon formation.\n\nMuhammad Mustafa al-Azami — The History of the Qur'anic Text from Revelation to Compilation: A Comparative Study with the Old and New Testaments. A Muslim scholar's comparative study of Quranic and biblical transmission.\n\nA note on sources: the Quran quotation was fetched from api.alquran.cloud (Tanzil Uthmani text; Saheeh International translation) and the Bible quotations from bible-api.com (World English Bible), reproduced verbatim. Historical dates for councils and letters (Hippo 393, Carthage 397 and 419, Athanasius's letter 367, Council of Trent 1546) reflect the dates commonly given in mainstream church history and encyclopedic reference works."
+    }
+  ],
+  "quranVerses": [
+    {
+      "surahName": "Al-Maaida",
+      "surahNumber": 5,
+      "ayahNumber": 3,
+      "reference": "Quran 5:3",
+      "arabic": "حُرِّمَتْ عَلَيْكُمُ ٱلْمَيْتَةُ وَٱلدَّمُ وَلَحْمُ ٱلْخِنزِيرِ وَمَآ أُهِلَّ لِغَيْرِ ٱللَّهِ بِهِۦ وَٱلْمُنْخَنِقَةُ وَٱلْمَوْقُوذَةُ وَٱلْمُتَرَدِّيَةُ وَٱلنَّطِيحَةُ وَمَآ أَكَلَ ٱلسَّبُعُ إِلَّا مَا ذَكَّيْتُمْ وَمَا ذُبِحَ عَلَى ٱلنُّصُبِ وَأَن تَسْتَقْسِمُوا۟ بِٱلْأَزْلَٰمِ ۚ ذَٰلِكُمْ فِسْقٌ ۗ ٱلْيَوْمَ يَئِسَ ٱلَّذِينَ كَفَرُوا۟ مِن دِينِكُمْ فَلَا تَخْشَوْهُمْ وَٱخْشَوْنِ ۚ ٱلْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ وَأَتْمَمْتُ عَلَيْكُمْ نِعْمَتِى وَرَضِيتُ لَكُمُ ٱلْإِسْلَٰمَ دِينًۭا ۚ فَمَنِ ٱضْطُرَّ فِى مَخْمَصَةٍ غَيْرَ مُتَجَانِفٍۢ لِّإِثْمٍۢ ۙ فَإِنَّ ٱللَّهَ غَفُورٌۭ رَّحِيمٌۭ",
+      "translation": "Prohibited to you are dead animals, blood, the flesh of swine, and that which has been dedicated to other than Allah, and [those animals] killed by strangling or by a violent blow or by a head-long fall or by the goring of horns, and those from which a wild animal has eaten, except what you [are able to] slaughter [before its death], and those which are sacrificed on stone altars, and [prohibited is] that you seek decision through divining arrows. That is grave disobedience. This day those who disbelieve have despaired of [defeating] your religion; so fear them not, but fear Me. This day I have perfected for you your religion and completed My favor upon you and have approved for you Islam as religion. But whoever is forced by severe hunger with no inclination to sin - then indeed, Allah is Forgiving and Merciful.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    }
+  ],
+  "bibleVerses": [
+    {
+      "book": "2 Timothy",
+      "chapter": 3,
+      "verse": "16",
+      "reference": "2 Timothy 3:16",
+      "text": "Every Scripture is God-breathed and profitable for teaching, for reproof, for correction, and for instruction in righteousness,",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "2 Peter",
+      "chapter": 3,
+      "verse": "15-16",
+      "reference": "2 Peter 3:15-16",
+      "text": "Regard the patience of our Lord as salvation; even as our beloved brother Paul also, according to the wisdom given to him, wrote to you;\nas also in all of his letters, speaking in them of these things. In those, there are some things that are hard to understand, which the ignorant and unsettled twist, as they also do to the other Scriptures, to their own destruction.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Did church councils choose which books belong in the New Testament?",
+      "answer": "Not by vote or selection from scratch. Mainstream church history describes councils such as Hippo (393) and Carthage (397, 419) as recognizing and ratifying books already read as scripture in most churches, following criteria like apostolic origin and widespread use, rather than creating a new list."
+    },
+    {
+      "question": "Why do Catholic, Orthodox, and Protestant Bibles have different numbers of books?",
+      "answer": "The difference concerns the Old Testament. Protestant Bibles follow the shorter Hebrew Bible list (39 Old Testament books); Catholic Bibles include additional deuterocanonical books, affirmed at the Council of Trent in 1546; Eastern Orthodox Bibles include a still broader list that varies somewhat by tradition. All three go back to disagreements over the Greek Septuagint versus the Hebrew canon."
+    },
+    {
+      "question": "How long did it take to fix the New Testament's twenty-seven books?",
+      "answer": "Historians trace the process from second-century lists through Origen's discussion around 250 and Eusebius's three-way classification around 325, to Athanasius's first exact list of all twenty-seven books in 367, and regional councils affirming that list by 419 — roughly three centuries."
+    },
+    {
+      "question": "Does the Quran have a similar history of disputed or excluded books?",
+      "answer": "No. Islamic tradition records no rival Muslim community with a shorter or longer Quran, no equivalent of deuterocanonical debate, and no book ever excluded after having been treated as scripture. The 114-surah text has been the same across Sunni and Shia Islam since Uthman's standardization."
+    },
+    {
+      "question": "Does 2 Timothy 3:16 tell us which books count as Scripture?",
+      "answer": "No. It states that Scripture is God-breathed and useful for teaching, but it does not list which books qualify — that question was still open when the letter was written and took centuries more to settle."
+    }
+  ],
+  "relatedSlugs": [
+    "how-was-the-bible-transmitted",
+    "gospel-authorship-and-dating",
+    "textual-variants-explained",
+    "uthmanic-standardization",
+    "why-preservation-matters"
+  ],
+  "furtherReading": [
+    {
+      "title": "The Canon of the New Testament: Its Origin, Development, and Significance",
+      "author": "Bruce M. Metzger",
+      "note": "A standard scholarly history of how the twenty-seven-book New Testament canon took shape."
+    },
+    {
+      "title": "The Canon of Scripture",
+      "author": "F. F. Bruce",
+      "note": "An evangelical Christian scholar's account of canon formation for both the Old and New Testaments."
+    },
+    {
+      "title": "The Biblical Canon: Its Origin, Transmission, and Authority",
+      "author": "Lee Martin McDonald",
+      "note": "A detailed survey of the debates and criteria behind canon formation."
+    },
+    {
+      "title": "The History of the Qur'anic Text from Revelation to Compilation: A Comparative Study with the Old and New Testaments",
+      "author": "Muhammad Mustafa al-Azami",
+      "note": "A Muslim scholar's comparative study of Quranic and biblical transmission."
+    }
+  ]
+}
