@@ -845,33 +845,33 @@
           },
           {
             "title": "Oral memorization of the Quran",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/preservation#future-topics",
-            "tag": "Planned"
+            "description": "How companion memorization created an independent oral check on the text from the start.",
+            "href": "/articles/oral-memorization-of-the-quran",
+            "status": "draft"
           },
           {
             "title": "Written compilation of the Quran",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/preservation#future-topics",
-            "tag": "Planned"
+            "description": "From verses recorded during revelation to Abu Bakr's single verified copy after Yamama.",
+            "href": "/articles/written-compilation-of-the-quran",
+            "status": "draft"
           },
           {
             "title": "Early Quran manuscripts",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/preservation#future-topics",
-            "tag": "Planned"
+            "description": "What the Birmingham fragment, Sanaa palimpsest, and early codices actually establish.",
+            "href": "/articles/early-quran-manuscripts",
+            "status": "draft"
           },
           {
             "title": "Uthmanic standardization",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/preservation#future-topics",
-            "tag": "Planned"
+            "description": "Why unifying spelling across regional copies was standardization, not alteration.",
+            "href": "/articles/uthmanic-standardization",
+            "status": "draft"
           },
           {
             "title": "Qira'at explained simply",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/preservation#future-topics",
-            "tag": "Planned"
+            "description": "Certified recitation modes traced by unbroken chains, read from one fixed written text.",
+            "href": "/articles/qiraat-explained-simply",
+            "status": "draft"
           },
           {
             "title": "Bible manuscript transmission",
@@ -881,27 +881,27 @@
           },
           {
             "title": "Gospel authorship and dating",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/preservation#future-topics",
-            "tag": "Planned"
+            "description": "What mainstream scholarship says about who wrote the Gospels, and when.",
+            "href": "/articles/gospel-authorship-and-dating",
+            "status": "draft"
           },
           {
             "title": "Biblical canon formation",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/preservation#future-topics",
-            "tag": "Planned"
+            "description": "How the Bible's list of authoritative books took shape over centuries.",
+            "href": "/articles/biblical-canon-formation",
+            "status": "draft"
           },
           {
             "title": "Textual variants explained",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/preservation#future-topics",
-            "tag": "Planned"
+            "description": "The longer ending of Mark and the story in John 8, explained in plain language.",
+            "href": "/articles/textual-variants-explained",
+            "status": "draft"
           },
           {
             "title": "Why preservation matters",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/preservation#future-topics",
-            "tag": "Planned"
+            "description": "How Quranic verbatim preservation and Christian views of scriptural authority differ.",
+            "href": "/articles/why-preservation-matters",
+            "status": "draft"
           }
         ]
       },
@@ -1037,9 +1037,9 @@
           },
           {
             "title": "Gospel authorship and dating",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/history#future-topics",
-            "tag": "Planned"
+            "description": "What mainstream scholarship says about who wrote the Gospels, and when.",
+            "href": "/articles/gospel-authorship-and-dating",
+            "status": "draft"
           },
           {
             "title": "Council of Nicaea",
