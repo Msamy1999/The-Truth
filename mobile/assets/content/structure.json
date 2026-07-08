@@ -726,39 +726,39 @@
           },
           {
             "title": "What is revelation?",
-            "description": "Planned source-pending study on scripture, prophethood, inspiration, and source attribution.",
-            "href": "/quran-vs-bible#future-topics",
-            "tag": "Planned"
+            "description": "A draft study on the Quran-Christ asymmetry: verbatim revelation versus the Word made flesh.",
+            "href": "/articles/what-is-revelation",
+            "status": "draft"
           },
           {
             "title": "What is salvation?",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/quran-vs-bible#future-topics",
-            "tag": "Planned"
+            "description": "A draft comparison of grace, faith, and deeds in each tradition's account of being saved.",
+            "href": "/articles/what-is-salvation",
+            "status": "draft"
           },
           {
             "title": "What is sin?",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/quran-vs-bible#future-topics",
-            "tag": "Planned"
+            "description": "A draft comparison of sin as inherited condition versus a free moral choice.",
+            "href": "/articles/what-is-sin",
+            "status": "draft"
           },
           {
             "title": "What is worship?",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/quran-vs-bible#future-topics",
-            "tag": "Planned"
+            "description": "A draft study of worship due to God alone and how each tradition understands it.",
+            "href": "/articles/what-is-worship",
+            "status": "draft"
           },
           {
             "title": "The Day of Judgment",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/quran-vs-bible#future-topics",
-            "tag": "Planned"
+            "description": "A draft comparison of resurrection, accountability, and final judgment in both scriptures.",
+            "href": "/articles/the-day-of-judgment",
+            "status": "draft"
           },
           {
             "title": "The final message",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/quran-vs-bible#future-topics",
-            "tag": "Planned"
+            "description": "A draft study of the Islamic claim of a final, completing revelation after Christ.",
+            "href": "/articles/the-final-message",
+            "status": "draft"
           }
         ]
       },
