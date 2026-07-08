@@ -53,6 +53,29 @@ const TARGETS = {
       { book: "matthew", chapter: 4, verse: "10" },
     ],
   },
+  "gospel-authorship-and-dating": {
+    bible: [{ book: "john", chapter: 21, verse: "24-25" }],
+  },
+  "oral-memorization-of-the-quran": {
+    quran: [
+      { surahNumber: 75, ayahNumber: 18 },
+      { surahNumber: 29, ayahNumber: 49 },
+    ],
+  },
+  "textual-variants-explained": {
+    quran: [{ surahNumber: 15, ayahNumber: 9 }],
+    bible: [
+      { book: "mark", chapter: 16, verse: "9-20" },
+      { book: "john", chapter: 8, verse: "1-11" },
+    ],
+  },
+  "why-preservation-matters": {
+    quran: [{ surahNumber: 4, ayahNumber: 82 }],
+  },
+  "gospel-authorship-and-dating": {
+    bible: [{ book: "john", chapter: 21, verse: "24-25" }],
+    quran: [{ surahNumber: 4, ayahNumber: 82 }],
+  },
 };
 
 let totalFixed = 0;
