@@ -777,15 +777,15 @@
           },
           {
             "title": "The miraculous birth of Jesus",
-            "description": "Planned source-pending study with exact Quran and Bible passages added only after verification.",
-            "href": "/jesus#future-topics",
-            "tag": "Planned"
+            "description": "A draft study of the virgin birth as affirmed in both scriptures, and what each tradition concludes from it.",
+            "href": "/articles/the-miraculous-birth-of-jesus",
+            "status": "draft"
           },
           {
             "title": "The miracles of Jesus",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/jesus#future-topics",
-            "tag": "Planned"
+            "description": "A draft study of the miracles reported in both scriptures and what they establish about Jesus.",
+            "href": "/articles/the-miracles-of-jesus",
+            "status": "draft"
           },
           {
             "title": "Did Jesus worship God?",
@@ -795,9 +795,9 @@
           },
           {
             "title": "Did Jesus claim to be God?",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/jesus#future-topics",
-            "tag": "Planned"
+            "description": "A draft study separating text, interpretation, and theological argument on the pivotal question.",
+            "href": "/articles/did-jesus-claim-to-be-god",
+            "status": "draft"
           },
           {
             "title": "Jesus and the Trinity",
@@ -807,21 +807,21 @@
           },
           {
             "title": "Jesus as Messiah",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/jesus#future-topics",
-            "tag": "Planned"
+            "description": "A draft study on the shared title of Messiah and what each tradition means by it.",
+            "href": "/articles/jesus-as-messiah",
+            "status": "draft"
           },
           {
             "title": "The crucifixion question",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/jesus#future-topics",
-            "tag": "Planned"
+            "description": "A draft study presenting the Christian, historical-critical, and Quranic positions fairly.",
+            "href": "/articles/the-crucifixion-question",
+            "status": "draft"
           },
           {
             "title": "The second coming of Jesus",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/jesus#future-topics",
-            "tag": "Planned"
+            "description": "A draft study of the shared expectation of Jesus' return.",
+            "href": "/articles/the-second-coming-of-jesus",
+            "status": "draft"
           },
           {
             "title": "Who follows Jesus more closely?",
