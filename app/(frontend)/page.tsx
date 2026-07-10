@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowRight, BookOpen, CheckCircle, Heart, Library, Search } from "lucide-react";
@@ -6,6 +5,7 @@ import { Callout } from "@/components/content/Callout";
 import { ResearchTree } from "@/components/content/ResearchTree";
 import { TopicCard } from "@/components/content/TopicCard";
 import { Container } from "@/components/layout/Container";
+import { LogoMark } from "@/components/layout/LogoMark";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { ButtonLink } from "@/components/ui/Button";
@@ -35,16 +35,26 @@ export default async function HomePage() {
     <>
       <section className="border-b border-border">
         <Container>
-          <div className="relative mx-auto aspect-[16/11] w-full overflow-hidden rounded-xl border border-border shadow-soft sm:aspect-[16/8] lg:aspect-[16/6]">
-            <Image
-              src="/hero-scriptures-2x.jpg"
-              alt="The Quran, the Bible, and the Torah placed side by side on a wooden table"
-              fill
-              priority
-              quality={90}
-              sizes="(min-width: 1152px) 1088px, 100vw"
-              className="object-cover"
+          <div className="relative mx-auto w-full overflow-hidden rounded-xl border border-border bg-card shadow-soft">
+            {/* Soft radial accent glow behind the mark. */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_90%_at_50%_42%,hsl(var(--accent)/0.14),transparent_72%)]"
             />
+            {/* Oversized, very subtle background echo of the mark. */}
+            <LogoMark className="pointer-events-none absolute -bottom-16 -right-10 h-56 w-56 text-accent opacity-[0.06] sm:-bottom-28 sm:-right-16 sm:h-96 sm:w-96" />
+            <div className="relative flex flex-col items-center px-4 py-10 text-center sm:py-14 lg:py-16">
+              <LogoMark
+                title={`${siteName} logo: three wandering paths merging into one straight path`}
+                className="h-24 w-24 max-w-full text-accent sm:h-32 sm:w-32 lg:h-36 lg:w-36"
+              />
+              <p className="mt-4 text-xl font-semibold text-foreground sm:text-2xl">
+                {siteName}
+              </p>
+              <p lang="ar" dir="rtl" className="mt-1 text-sm text-muted-foreground sm:text-base">
+                {siteNameArabic}
+              </p>
+            </div>
           </div>
           <div className="mx-auto max-w-3xl pt-5 sm:pt-8">
             <p className="mb-3 inline-flex rounded-md border border-border bg-card px-2.5 py-1 text-xs font-medium text-muted-foreground shadow-soft sm:text-sm">

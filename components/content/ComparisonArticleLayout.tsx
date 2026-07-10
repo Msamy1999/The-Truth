@@ -4,6 +4,7 @@ import { TopicCard } from "@/components/content/TopicCard";
 import { VerseCard } from "@/components/content/VerseCard";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Card } from "@/components/ui/Card";
+import { buildComparisonPlainText } from "@/lib/article-text";
 import { categoryIconMap, fallbackCategoryIcon } from "@/lib/category-icons";
 import type {
   Article,
@@ -36,6 +37,7 @@ export function ComparisonArticleLayout({
       category={category}
       citations={citations}
       relatedArticles={relatedArticles}
+      plainText={buildComparisonPlainText(article, comparison)}
       tocItems={[
         { id: "main-question", title: "Main question" },
         { id: "scripture-preview", title: "Scripture preview" },

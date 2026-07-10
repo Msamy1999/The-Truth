@@ -5,6 +5,7 @@ import {
   getArticleStatusDescription,
   getArticleStatusLabel,
 } from "@/components/content/ArticleStatusBadge";
+import { ArticleTools } from "@/components/content/ArticleTools";
 import { Callout } from "@/components/content/Callout";
 import { CitationList } from "@/components/content/CitationList";
 import { TopicCard } from "@/components/content/TopicCard";
@@ -14,6 +15,7 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { Card } from "@/components/ui/Card";
 import { Tag } from "@/components/ui/Tag";
+import { buildArticlePlainText } from "@/lib/article-text";
 import { categoryIconMap, fallbackCategoryIcon } from "@/lib/category-icons";
 import type { Article, Citation, SiteCategory } from "@/types/content";
 
@@ -26,6 +28,12 @@ type ArticleLayoutProps = {
     id: string;
     title: string;
   }>;
+  /**
+   * Plain-text override for the read-aloud/copy tools. Layouts that render
+   * custom children (e.g. comparison articles) pass their own text here;
+   * otherwise it is built from the article sections.
+   */
+  plainText?: string;
   children?: ReactNode;
 };
 
@@ -35,11 +43,13 @@ export function ArticleLayout({
   citations,
   relatedArticles,
   tocItems,
+  plainText,
   children,
 }: ArticleLayoutProps) {
   const CategoryIcon = categoryIconMap[category.icon] ?? fallbackCategoryIcon;
   const tableOfContents =
     tocItems ?? article.sections.map((section) => ({ id: section.id, title: section.title }));
+  const articleText = plainText ?? buildArticlePlainText(article);
 
   return (
     <>
@@ -76,6 +86,9 @@ export function ArticleLayout({
               >
                 {getArticleStatusDescription(article.status)}
               </Callout>
+            </div>
+            <div className="mt-5">
+              <ArticleTools articleText={articleText} articleTitle={article.title} />
             </div>
           </div>
         </Container>

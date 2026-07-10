@@ -30,8 +30,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/hero-scriptures-2x.jpg",
-        alt: "The Quran, the Bible, and the Torah placed side by side on a wooden table",
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "The Straight Path logo: three wandering paths merging into one straight path",
       },
     ],
   },
@@ -39,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteName,
     description: siteDescription,
-    images: ["/hero-scriptures-2x.jpg"],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,

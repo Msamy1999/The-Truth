@@ -1,6 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Stack, useLocalSearchParams } from "expo-router";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ArticleTools } from "../../components/ArticleTools";
 import {
   Body,
   Card,
@@ -116,11 +117,13 @@ export default function ArticleScreen() {
           Last updated {article.lastUpdated}
         </Text>
 
+        <ArticleTools article={article} />
+
         <Card style={{ borderLeftWidth: 3, borderLeftColor: theme.accent }}>
           <Text style={[type.label, { color: theme.accent }]}>
             Beginner summary
           </Text>
-          <Body scale={fontScale} muted={false}>
+          <Body scale={fontScale} muted={false} selectable>
             {article.summary}
           </Body>
         </Card>
@@ -137,7 +140,9 @@ export default function ArticleScreen() {
             <Text style={[type.title, { color: theme.foreground, fontSize: 18 }]}>
               {section.title}
             </Text>
-            <Body scale={fontScale}>{section.body}</Body>
+            <Body scale={fontScale} selectable>
+              {section.body}
+            </Body>
             {section.citationIds.length > 0 ? (
               <Text style={[type.caption, { color: theme.mutedForeground, fontStyle: "italic" }]}>
                 Sources to verify: {section.citationIds.join(", ")}

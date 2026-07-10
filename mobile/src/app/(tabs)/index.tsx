@@ -1,5 +1,5 @@
-import { Image } from "react-native";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { LogoMark } from "../../components/LogoMark";
 import {
   Body,
   Card,
@@ -65,11 +65,7 @@ export default function HomeScreen() {
           { backgroundColor: theme.accentSoft, borderColor: theme.border },
         ]}
       >
-        <Image
-          source={require("../../../assets/images/icon.png")}
-          style={styles.heroMark}
-          accessibilityIgnoresInvertColors
-        />
+        <LogoMark size={34} />
         <View style={{ flex: 1, gap: 2 }}>
           <Text style={[type.display, { color: theme.foreground, fontSize: 24, lineHeight: 30 }]}>
             {siteName}
@@ -187,7 +183,6 @@ const styles = StyleSheet.create({
     borderWidth: StyleSheet.hairlineWidth,
     padding: space.lg,
   },
-  heroMark: { width: 52, height: 52, borderRadius: 14 },
   arabic: {
     fontSize: 17,
     fontWeight: "600",

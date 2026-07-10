@@ -301,14 +301,18 @@ export function Body({
   children,
   muted = true,
   scale = 1,
+  selectable = false,
 }: {
   children: ReactNode;
   muted?: boolean;
   scale?: number;
+  /** Allow users to select/copy the text (article reading surfaces only). */
+  selectable?: boolean;
 }) {
   const theme = useTheme();
   return (
     <Text
+      selectable={selectable}
       style={{
         color: muted ? theme.mutedForeground : theme.foreground,
         fontSize: type.body.fontSize * scale,

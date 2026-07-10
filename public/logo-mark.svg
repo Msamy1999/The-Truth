@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="The Straight Path logo">
+  <!-- Three wandering paths converging into one straight path -->
+  <path d="M6 13 C 16 13, 21 30, 29.5 31.7" stroke="currentColor" stroke-width="4" stroke-linecap="round" opacity="0.45" />
+  <path d="M6 32 C 12 27.5, 17 36.5, 29.5 32" stroke="currentColor" stroke-width="4" stroke-linecap="round" opacity="0.65" />
+  <path d="M6 51 C 16 51, 21 34, 29.5 32.3" stroke="currentColor" stroke-width="4" stroke-linecap="round" opacity="0.45" />
+  <!-- The one straight path -->
+  <path d="M30 32 L51 32" stroke="currentColor" stroke-width="6" stroke-linecap="round" />
+  <!-- Destination point -->
+  <circle cx="57.5" cy="32" r="3.4" fill="#C8951E" />
+</svg>
