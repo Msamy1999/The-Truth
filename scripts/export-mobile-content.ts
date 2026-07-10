@@ -27,14 +27,24 @@ const API = process.env.API_URL ?? "http://127.0.0.1:3000";
 const OUT = path.resolve(__dirname, "../mobile/assets/content");
 
 async function fetchAll(collection: string) {
-  const response = await fetch(
-    `${API}/api/${collection}?limit=200&depth=1&sort=createdAt`,
-  );
-  if (!response.ok) {
-    throw new Error(`${collection}: HTTP ${response.status}`);
+  const docs: unknown[] = [];
+  let page = 1;
+  while (true) {
+    const response = await fetch(
+      `${API}/api/${collection}?limit=200&depth=1&sort=createdAt&page=${page}`,
+    );
+    if (!response.ok) {
+      throw new Error(`${collection}: HTTP ${response.status}`);
+    }
+    const data = (await response.json()) as {
+      docs: unknown[];
+      hasNextPage: boolean;
+    };
+    docs.push(...data.docs);
+    if (!data.hasNextPage) break;
+    page += 1;
   }
-  const data = (await response.json()) as { docs: unknown[] };
-  return data.docs;
+  return docs;
 }
 
 async function main() {

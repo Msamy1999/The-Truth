@@ -3,9 +3,9 @@ import { getCategoryBySlug } from "@/lib/content";
 import { getCategoryMetadata } from "@/lib/seo";
 
 export function generateMetadata() {
-  return getCategoryMetadata("salvation");
+  return getCategoryMetadata("historical-evidence");
 }
 
-export default async function SalvationPage() {
-  return <CategoryPage category={await getCategoryBySlug("salvation")} />;
+export default async function HistoricalEvidencePage() {
+  return <CategoryPage category={await getCategoryBySlug("historical-evidence")} />;
 }

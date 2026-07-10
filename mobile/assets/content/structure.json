@@ -1,9 +1,9 @@
 {
   "categories": [
     {
-      "slug": "quran-vs-bible",
-      "title": "Quran vs Bible",
-      "href": "/quran-vs-bible",
+      "slug": "the-quran-and-the-bible",
+      "title": "The Quran & the Bible",
+      "href": "/the-quran-and-the-bible",
       "description": "A beginner-friendly hub for comparing major questions in the Quran and Bible with clear source status.",
       "icon": "scripture",
       "tags": [
@@ -48,14 +48,14 @@
       ],
       "relatedSlugs": [
         "preservation",
-        "jesus",
+        "jesus-in-islam-and-christianity",
         "sources"
       ]
     },
     {
-      "slug": "jesus",
+      "slug": "jesus-in-islam-and-christianity",
       "title": "Jesus in Islam & Christianity",
-      "href": "/jesus",
+      "href": "/jesus-in-islam-and-christianity",
       "description": "A respectful path for Christians and other seekers to study Jesus through scripture, theology, and history.",
       "icon": "jesus",
       "tags": [
@@ -88,7 +88,7 @@
         {
           "title": "Jesus and the Trinity",
           "description": "A planned bridge into Tawhid, Trinity, incarnation, and worship.",
-          "href": "/tawhid-vs-trinity"
+          "href": "/tawhid-and-the-trinity"
         },
         {
           "title": "Jesus as Messiah",
@@ -109,8 +109,8 @@
         }
       ],
       "relatedSlugs": [
-        "tawhid-vs-trinity",
-        "quran-vs-bible",
+        "tawhid-and-the-trinity",
+        "the-quran-and-the-bible",
         "questions"
       ]
     },
@@ -174,8 +174,8 @@
         }
       ],
       "relatedSlugs": [
-        "quran-vs-bible",
-        "history",
+        "the-quran-and-the-bible",
+        "religious-history",
         "sources"
       ]
     },
@@ -227,7 +227,7 @@
       ],
       "relatedSlugs": [
         "questions",
-        "quran-vs-bible",
+        "the-quran-and-the-bible",
         "sources"
       ]
     },
@@ -256,16 +256,16 @@
         }
       ],
       "relatedSlugs": [
-        "history",
+        "religious-history",
         "questions",
         "sources"
       ]
     },
     {
-      "slug": "history",
-      "title": "Historical Evidence",
-      "href": "/history",
-      "description": "A place to gather historical context, timelines, and source-based background for major claims.",
+      "slug": "religious-history",
+      "title": "Religious History",
+      "href": "/religious-history",
+      "description": "The history of early Christianity and Islam side by side — Jesus' era through Nicaea and the development of Trinity doctrine, and the Quran's own revelation and early preservation history.",
       "icon": "history",
       "tags": [
         "History",
@@ -273,28 +273,70 @@
       ],
       "futureTopics": [
         {
-          "title": "Timeline template",
-          "description": "A planned layout for dates, events, sources, and uncertainty notes."
+          "title": "The historical Jesus",
+          "description": "What mainstream historical-critical scholarship holds about Jesus, compared with the Quran's account.",
+          "href": "/articles/the-historical-jesus"
         },
         {
-          "title": "Primary vs secondary sources",
-          "description": "A future article explaining how source types will be presented."
+          "title": "Early Christianity",
+          "description": "From the crucifixion and resurrection claim through persecution to Constantine and Nicaea.",
+          "href": "/articles/early-christianity"
         },
         {
-          "title": "Historical method notes",
-          "description": "A placeholder for careful standards before drawing historical conclusions."
+          "title": "The Council of Nicaea",
+          "description": "Why Constantine convened Nicaea in 325 CE, and the Islamic critique of doctrine settled by council.",
+          "href": "/articles/council-of-nicaea"
+        },
+        {
+          "title": "Quranic revelation history",
+          "description": "How the Quran was revealed over 23 years and preserved through memorization and early writing.",
+          "href": "/articles/quranic-revelation-history"
         }
       ],
       "relatedSlugs": [
         "preservation",
-        "sources",
-        "jesus"
+        "historical-evidence",
+        "sources"
       ]
     },
     {
-      "slug": "tawhid-vs-trinity",
-      "title": "Tawhid vs Trinity",
-      "href": "/tawhid-vs-trinity",
+      "slug": "historical-evidence",
+      "title": "Historical Evidence",
+      "href": "/historical-evidence",
+      "description": "Historical and archaeological support for the content within the Quran and Bible — ways the Quran's accounts align with historical plausibility, such as its distinct terms for Egypt's rulers across the Exodus and Youssef narratives.",
+      "icon": "sources",
+      "tags": [
+        "History",
+        "Sources",
+        "Scripture"
+      ],
+      "futureTopics": [
+        {
+          "title": "The Exodus in historical context",
+          "description": "Comparing the Biblical and Quranic Exodus accounts against historical and archaeological evidence.",
+          "href": "/articles/the-exodus-in-historical-context"
+        },
+        {
+          "title": "Pharaoh vs King: Youssef's story in history",
+          "description": "Why the Quran uses 'king' for Egypt's ruler in Youssef's time but 'pharaoh' in Moses' time.",
+          "href": "/articles/pharaoh-vs-king-youssef-story"
+        },
+        {
+          "title": "Archeological evidence for Quranic accounts",
+          "description": "What archaeology shows about the Quran's accounts of Ad, Thamud, Sodom, Babel, and Pharaoh's army.",
+          "href": "/articles/archeological-evidence-for-quranic-accounts"
+        }
+      ],
+      "relatedSlugs": [
+        "religious-history",
+        "preservation",
+        "sources"
+      ]
+    },
+    {
+      "slug": "tawhid-and-the-trinity",
+      "title": "Tawhid & the Trinity",
+      "href": "/tawhid-and-the-trinity",
       "description": "A respectful comparison of Islamic monotheism and Christian Trinitarian theology using definitions and sources.",
       "icon": "theology",
       "tags": [
@@ -339,15 +381,15 @@
         }
       ],
       "relatedSlugs": [
-        "jesus",
-        "salvation",
+        "jesus-in-islam-and-christianity",
+        "salvation-and-purpose-of-life",
         "glossary"
       ]
     },
     {
-      "slug": "salvation",
+      "slug": "salvation-and-purpose-of-life",
       "title": "Salvation & Purpose of Life",
-      "href": "/salvation",
+      "href": "/salvation-and-purpose-of-life",
       "description": "A future guide to worship, forgiveness, accountability, mercy, and purpose with sources separated from commentary.",
       "icon": "salvation",
       "tags": [
@@ -391,16 +433,16 @@
         }
       ],
       "relatedSlugs": [
-        "tawhid-vs-trinity",
+        "tawhid-and-the-trinity",
         "questions",
-        "jesus"
+        "jesus-in-islam-and-christianity"
       ]
     },
     {
       "slug": "prophecies",
       "title": "Prophecies & Signs",
       "href": "/prophecies",
-      "description": "A future index for prophecy discussions, interpretive frameworks, and source-backed notes.",
+      "description": "Prophecies about Jesus and Muhammad each tradition claims, Quranic and Biblical prophecy interpretation, and shared end-times beliefs.",
       "icon": "prophecies",
       "tags": [
         "Prophecy",
@@ -408,22 +450,93 @@
       ],
       "futureTopics": [
         {
-          "title": "Prophecy claim checklist",
-          "description": "A planned method for recording the text, interpretation, dating, and source status."
+          "title": "Prophecies about Jesus",
+          "description": "Old Testament passages Christians read as predicting Jesus, and the scholarly debate around them.",
+          "href": "/articles/prophecies-about-jesus"
         },
         {
-          "title": "Context and fulfillment notes",
-          "description": "A future article structure for keeping context visible while comparing interpretations."
+          "title": "Possible prophecies about Muhammad",
+          "description": "Biblical passages some Muslims read as foretelling Muhammad, and the Christian response.",
+          "href": "/articles/possible-prophecies-about-muhammad"
         },
         {
-          "title": "Source status table",
-          "description": "A placeholder for tracking which references are verified and which are pending."
+          "title": "End-times beliefs",
+          "description": "Islamic and Christian end-times beliefs, from the Dajjal and Gog and Magog to the Rapture and Tribulation.",
+          "href": "/articles/end-times-beliefs"
         }
       ],
       "relatedSlugs": [
-        "history",
-        "quran-vs-bible",
+        "religious-history",
+        "the-quran-and-the-bible",
         "sources"
+      ]
+    },
+    {
+      "slug": "war-and-violence",
+      "title": "War & Violence",
+      "href": "/war-and-violence",
+      "description": "Islamic jurisprudence and Christian Just War tradition on armed conflict, self-defense, the Crusades, and how extremist groups misuse both traditions' texts.",
+      "icon": "warAndViolence",
+      "tags": [
+        "Theology",
+        "History",
+        "Scripture"
+      ],
+      "futureTopics": [
+        {
+          "title": "Jihad and Just War theory",
+          "description": "Islamic jurisprudence on armed struggle compared with the Christian Just War tradition.",
+          "href": "/articles/jihad-and-just-war-theory"
+        },
+        {
+          "title": "Crusades and Islamic history",
+          "description": "The Crusades' religious and political dimensions, and how both traditions narrate the conflict.",
+          "href": "/articles/crusades-and-islamic-history"
+        },
+        {
+          "title": "Terrorism and extremism: Islamic perspective",
+          "description": "Mainstream Islamic condemnation of terrorism, and how extremist groups misuse Islamic texts.",
+          "href": "/articles/terrorism-and-extremism-islamic-perspective"
+        }
+      ],
+      "relatedSlugs": [
+        "difficult-questions",
+        "questions",
+        "sources"
+      ]
+    },
+    {
+      "slug": "women",
+      "title": "Women",
+      "href": "/women",
+      "description": "The status of women in the Quran and Bible, inheritance and testimony, marriage and divorce, modesty, and female scholarship and leadership in both traditions.",
+      "icon": "women",
+      "tags": [
+        "Theology",
+        "History",
+        "Scripture"
+      ],
+      "futureTopics": [
+        {
+          "title": "Women in the Quran and Bible",
+          "description": "The role and status of women across key passages in both the Quran and the Bible.",
+          "href": "/articles/women-in-the-quran-and-bible"
+        },
+        {
+          "title": "Marriage and divorce",
+          "description": "Islamic marriage contracts and divorce compared with Christian sacramental and Protestant views.",
+          "href": "/articles/marriage-and-divorce"
+        },
+        {
+          "title": "Female scholars and leaders",
+          "description": "Women in Islamic scholarship and Christian church history, from Aisha to Deborah and Priscilla.",
+          "href": "/articles/female-scholars-and-leaders"
+        }
+      ],
+      "relatedSlugs": [
+        "the-quran-and-the-bible",
+        "questions",
+        "glossary"
       ]
     },
     {
@@ -451,7 +564,7 @@
       ],
       "relatedSlugs": [
         "difficult-questions",
-        "salvation",
+        "salvation-and-purpose-of-life",
         "glossary"
       ]
     },
@@ -481,7 +594,7 @@
       ],
       "relatedSlugs": [
         "sources",
-        "tawhid-vs-trinity",
+        "tawhid-and-the-trinity",
         "questions"
       ]
     },
@@ -512,8 +625,8 @@
       ],
       "relatedSlugs": [
         "glossary",
-        "history",
-        "quran-vs-bible"
+        "religious-history",
+        "the-quran-and-the-bible"
       ]
     }
   ],
@@ -559,17 +672,17 @@
       {
         "title": "Start with Jesus",
         "description": "Begin with worship, prayer, obedience, and how claims about God are framed.",
-        "href": "/jesus"
+        "href": "/jesus-in-islam-and-christianity"
       },
       {
         "title": "Study Tawhid",
         "description": "Learn how Islamic monotheism defines worship, prophethood, and devotion to God.",
-        "href": "/tawhid-vs-trinity"
+        "href": "/tawhid-and-the-trinity"
       },
       {
         "title": "Compare the Quran and Bible",
         "description": "Prepare to compare verified Quran passages and Bible passages with translation and source attribution.",
-        "href": "/quran-vs-bible"
+        "href": "/the-quran-and-the-bible"
       },
       {
         "title": "Study preservation",
@@ -579,7 +692,7 @@
       {
         "title": "Study salvation",
         "description": "Compare worship, forgiveness, accountability, and purpose across both traditions.",
-        "href": "/salvation"
+        "href": "/salvation-and-purpose-of-life"
       },
       {
         "title": "Read common questions",
@@ -706,10 +819,10 @@
     ],
     "islam-christianity": [
       {
-        "id": "quran-vs-bible",
-        "title": "Quran vs Bible",
+        "id": "the-quran-and-the-bible",
+        "title": "The Quran & the Bible",
         "description": "A beginner-friendly hub for comparing major questions in the Quran and Bible with clear source status.",
-        "href": "/quran-vs-bible",
+        "href": "/the-quran-and-the-bible",
         "defaultOpen": true,
         "children": [
           {
@@ -763,10 +876,10 @@
         ]
       },
       {
-        "id": "jesus",
+        "id": "jesus-in-islam-and-christianity",
         "title": "Jesus in Islam & Christianity",
         "description": "A respectful path for Christians and other seekers to study Jesus through scripture, theology, and history.",
-        "href": "/jesus",
+        "href": "/jesus-in-islam-and-christianity",
         "defaultOpen": true,
         "children": [
           {
@@ -802,7 +915,7 @@
           {
             "title": "Jesus and the Trinity",
             "description": "Planned bridge into Tawhid, Trinity, incarnation, and worship.",
-            "href": "/jesus#future-topics",
+            "href": "/tawhid-and-the-trinity#future-topics",
             "tag": "Planned"
           },
           {
@@ -913,33 +1026,33 @@
         "children": [
           {
             "title": "What is a contradiction?",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/difficult-questions#future-topics",
-            "tag": "Planned"
+            "description": "A framing article distinguishing genuine contradictions from textual variants, harmonizable difficulties, and interpretation.",
+            "href": "/articles/what-is-a-contradiction",
+            "status": "draft"
           },
           {
             "title": "Genealogies of Jesus",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/difficult-questions#future-topics",
-            "tag": "Planned"
+            "description": "Why Matthew and Luke give Jesus two different genealogies, and how each tradition reads the difficulty.",
+            "href": "/articles/genealogies-of-jesus",
+            "status": "draft"
           },
           {
             "title": "The death of Judas",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/difficult-questions#future-topics",
-            "tag": "Planned"
+            "description": "Matthew's hanging and Acts' falling-headlong accounts of Judas' death, and how each is read.",
+            "href": "/articles/the-death-of-judas",
+            "status": "draft"
           },
           {
             "title": "The timing of the crucifixion",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/difficult-questions#future-topics",
-            "tag": "Planned"
+            "description": "Reconciling the Synoptic and Johannine timing of the Last Supper and crucifixion with Passover.",
+            "href": "/articles/the-timing-of-the-crucifixion",
+            "status": "draft"
           },
           {
             "title": "Did anyone see God?",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/difficult-questions#future-topics",
-            "tag": "Planned"
+            "description": "Moses at Sinai, John 1:18, and Quran 6:103 and 7:143 on seeing God.",
+            "href": "/articles/did-anyone-see-god",
+            "status": "draft"
           },
           {
             "title": "Is original sin just?",
@@ -949,9 +1062,9 @@
           },
           {
             "title": "Can God become man?",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/difficult-questions#future-topics",
-            "tag": "Planned"
+            "description": "The Incarnation and Tawhid's objection to it, presented as a difference in starting premises about God.",
+            "href": "/articles/can-god-become-man",
+            "status": "draft"
           },
           {
             "title": "Does salvation require a sacrifice?",
@@ -969,71 +1082,71 @@
         "children": [
           {
             "title": "How to approach scientific claims carefully",
-            "description": "Planned guide for avoiding overstatement when discussing scripture and the natural world.",
-            "href": "/scientific-signs#future-topics",
-            "tag": "Planned"
+            "description": "A framing guide for avoiding overstatement when discussing scripture and the natural world.",
+            "href": "/articles/how-to-approach-scientific-claims-carefully",
+            "status": "draft"
           },
           {
             "title": "Embryology",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/scientific-signs#future-topics",
-            "tag": "Planned"
+            "description": "The Quran's stages of fetal development in Surah 23, compared with modern embryology.",
+            "href": "/articles/embryology",
+            "status": "draft"
           },
           {
             "title": "Cosmology",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/scientific-signs#future-topics",
-            "tag": "Planned"
+            "description": "The Quran's account of the heavens and earth being joined then separated, and modern cosmology.",
+            "href": "/articles/cosmology",
+            "status": "draft"
           },
           {
             "title": "Mountains",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/scientific-signs#future-topics",
-            "tag": "Planned"
+            "description": "The Quran's description of mountains as stabilizing pegs, read alongside plate tectonics.",
+            "href": "/articles/mountains",
+            "status": "draft"
           },
           {
             "title": "Seas and barriers",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/scientific-signs#future-topics",
-            "tag": "Planned"
+            "description": "The Quran's barrier between two seas, and the oceanography of density and salinity stratification.",
+            "href": "/articles/seas-and-barriers",
+            "status": "draft"
           },
           {
             "title": "Creation and nature",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/scientific-signs#future-topics",
-            "tag": "Planned"
+            "description": "Design arguments from creation in the Quran, the Bible, and the Darwinian challenge to them.",
+            "href": "/articles/creation-and-nature",
+            "status": "draft"
           },
           {
             "title": "Strong vs debated arguments",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/scientific-signs#future-topics",
-            "tag": "Planned"
+            "description": "An honest audit of which Quran-and-science claims are well-supported, debated, or overstated.",
+            "href": "/articles/strong-vs-debated-scientific-claims",
+            "status": "draft"
           }
         ]
       },
       {
-        "id": "history",
-        "title": "Historical Evidence",
-        "description": "A place to gather historical context, timelines, and source-based background for major claims.",
-        "href": "/history",
+        "id": "religious-history",
+        "title": "Religious History",
+        "description": "The history of early Christianity and Islam side by side — Jesus' era through Nicaea and the development of Trinity doctrine, and the Quran's own revelation and early preservation history.",
+        "href": "/religious-history",
         "children": [
           {
             "title": "The historical Jesus",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/history#future-topics",
-            "tag": "Planned"
+            "description": "What mainstream historical-critical scholarship holds about Jesus, compared with the Quran's account.",
+            "href": "/articles/the-historical-jesus",
+            "status": "draft"
           },
           {
             "title": "Early Christianity",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/history#future-topics",
-            "tag": "Planned"
+            "description": "From the crucifixion and resurrection claim through persecution to Constantine and Nicaea.",
+            "href": "/articles/early-christianity",
+            "status": "draft"
           },
           {
             "title": "Paul and his influence",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/history#future-topics",
-            "tag": "Planned"
+            "description": "Paul's letters, his calling, and his lasting influence on Christian theology and practice.",
+            "href": "/articles/paul-and-his-influence",
+            "status": "draft"
           },
           {
             "title": "Gospel authorship and dating",
@@ -1043,35 +1156,73 @@
           },
           {
             "title": "Council of Nicaea",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/history#future-topics",
-            "tag": "Planned"
+            "description": "Why Constantine convened Nicaea in 325 CE, and the Islamic critique of doctrine settled by council.",
+            "href": "/articles/council-of-nicaea",
+            "status": "draft"
           },
           {
             "title": "Development of Trinity doctrine",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/history#future-topics",
-            "tag": "Planned"
+            "description": "How Trinity doctrine developed over centuries of councils and debate, and the Quran's strict monotheism.",
+            "href": "/articles/development-of-trinity-doctrine",
+            "status": "draft"
           },
           {
             "title": "Quranic revelation history",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/history#future-topics",
-            "tag": "Planned"
+            "description": "How the Quran was revealed over 23 years and preserved through memorization and early writing.",
+            "href": "/articles/quranic-revelation-history",
+            "status": "draft"
           },
           {
             "title": "Early Islamic preservation",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/history#future-topics",
-            "tag": "Planned"
+            "description": "How hadith transmission developed from companions' memorization to codified written collections.",
+            "href": "/articles/early-islamic-preservation",
+            "status": "draft"
           }
         ]
       },
       {
-        "id": "tawhid-vs-trinity",
-        "title": "Tawhid vs Trinity",
+        "id": "historical-evidence",
+        "title": "Historical Evidence",
+        "description": "Historical and archaeological support for the content within the Quran and Bible — ways the Quran's accounts align with historical plausibility, such as its distinct terms for Egypt's rulers across the Exodus and Youssef narratives.",
+        "href": "/historical-evidence",
+        "children": [
+          {
+            "title": "The Exodus in historical context",
+            "description": "Comparing the Biblical and Quranic Exodus accounts against historical and archaeological evidence.",
+            "href": "/articles/the-exodus-in-historical-context",
+            "status": "draft"
+          },
+          {
+            "title": "Pharaoh vs King: Youssef's story in history",
+            "description": "Why the Quran uses 'king' for Egypt's ruler in Youssef's time but 'pharaoh' in Moses' time.",
+            "href": "/articles/pharaoh-vs-king-youssef-story",
+            "status": "draft"
+          },
+          {
+            "title": "Archeological evidence for Quranic accounts",
+            "description": "What archaeology shows about the Quran's accounts of Ad, Thamud, Sodom, Babel, and Pharaoh's army.",
+            "href": "/articles/archeological-evidence-for-quranic-accounts",
+            "status": "draft"
+          },
+          {
+            "title": "Historical support for Biblical narratives",
+            "description": "Archaeological and historical support for David's kingdom, Jesus' birth, the crucifixion, and Paul.",
+            "href": "/articles/historical-support-for-biblical-narratives",
+            "status": "draft"
+          },
+          {
+            "title": "Chronological alignment: Quranic and Biblical timelines",
+            "description": "Comparing where the Quran and Bible place Abraham, Moses, David, and Jesus in time.",
+            "href": "/articles/chronological-alignment-quranic-biblical-timelines",
+            "status": "draft"
+          }
+        ]
+      },
+      {
+        "id": "tawhid-and-the-trinity",
+        "title": "Tawhid & the Trinity",
         "description": "A respectful comparison of Islamic monotheism and Christian Trinitarian theology using definitions and sources.",
-        "href": "/tawhid-vs-trinity",
+        "href": "/tawhid-and-the-trinity",
         "children": [
           {
             "title": "What is Tawhid?",
@@ -1087,9 +1238,9 @@
           },
           {
             "title": "Did the prophets teach pure monotheism?",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/tawhid-vs-trinity#future-topics",
-            "tag": "Planned"
+            "description": "Competing Islamic and Christian claims about what Abraham, Moses, and Jesus taught about God's nature.",
+            "href": "/articles/did-prophets-teach-pure-monotheism",
+            "status": "draft"
           },
           {
             "title": "Did Jesus worship the Father?",
@@ -1099,47 +1250,47 @@
           },
           {
             "title": "Incarnation explained",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/tawhid-vs-trinity#future-topics",
-            "tag": "Planned"
+            "description": "The hypostatic union and kenosis explained, alongside the Islamic theological objection to it.",
+            "href": "/articles/incarnation-explained",
+            "status": "draft"
           },
           {
             "title": "Shirk explained",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/tawhid-vs-trinity#future-topics",
-            "tag": "Planned"
+            "description": "What shirk means in Islam, and the Muslim-Christian debate over whether the Trinity constitutes it.",
+            "href": "/articles/shirk-explained",
+            "status": "draft"
           },
           {
             "title": "God's nature in Islam and Christianity",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/tawhid-vs-trinity#future-topics",
-            "tag": "Planned"
+            "description": "Comparing the 99 names of Allah with Christian divine attributes and the doctrine of the Trinity.",
+            "href": "/articles/gods-nature-islam-christianity",
+            "status": "draft"
           },
           {
             "title": "Worshiping God alone",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/tawhid-vs-trinity#future-topics",
-            "tag": "Planned"
+            "description": "How Islam and Christianity both demand exclusive devotion to God alone, in their own terms.",
+            "href": "/articles/worshiping-god-alone",
+            "status": "draft"
           }
         ]
       },
       {
-        "id": "salvation",
+        "id": "salvation-and-purpose-of-life",
         "title": "Salvation & Purpose of Life",
         "description": "A future guide to worship, forgiveness, accountability, mercy, and purpose with sources separated from commentary.",
-        "href": "/salvation",
+        "href": "/salvation-and-purpose-of-life",
         "children": [
           {
             "title": "Purpose of life in Islam and Christianity",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/salvation#future-topics",
-            "tag": "Planned"
+            "description": "Worship and stewardship in Islam, and love of God and neighbor in Christianity, as life's purpose.",
+            "href": "/articles/purpose-of-life",
+            "status": "draft"
           },
           {
             "title": "Sin and repentance",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/salvation#future-topics",
-            "tag": "Planned"
+            "description": "How Islam and Christianity each understand sin, and the path back to God through repentance.",
+            "href": "/articles/sin-and-repentance",
+            "status": "draft"
           },
           {
             "title": "Original sin vs personal responsibility",
@@ -1149,9 +1300,9 @@
           },
           {
             "title": "Grace, mercy, faith, and deeds",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/salvation#future-topics",
-            "tag": "Planned"
+            "description": "Sola fide, Catholic and Orthodox synergy, and the Islamic balance of trust in God and deeds.",
+            "href": "/articles/grace-mercy-faith-deeds",
+            "status": "draft"
           },
           {
             "title": "Forgiveness without blood sacrifice",
@@ -1161,53 +1312,129 @@
           },
           {
             "title": "Heaven and Hell",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/salvation#future-topics",
-            "tag": "Planned"
+            "description": "Jannah and Jahannam alongside the Christian heaven and hell, in both traditions' own imagery.",
+            "href": "/articles/heaven-and-hell",
+            "status": "draft"
           },
           {
             "title": "Judgment Day",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/salvation#future-topics",
-            "tag": "Planned"
+            "description": "Yawm al-Qiyamah and the Last Judgment, compared across both traditions' eschatology.",
+            "href": "/articles/judgment-day",
+            "status": "draft"
           }
         ]
       },
       {
         "id": "prophecies",
         "title": "Prophecies & Signs",
-        "description": "A future index for prophecy discussions, interpretive frameworks, and source-backed notes.",
+        "description": "Prophecies about Jesus and Muhammad each tradition claims, Quranic and Biblical prophecy interpretation, and shared end-times beliefs.",
         "href": "/prophecies",
         "children": [
           {
             "title": "Prophecies about Jesus",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/prophecies#future-topics",
-            "tag": "Planned"
+            "description": "Old Testament passages Christians read as predicting Jesus, and the scholarly debate around them.",
+            "href": "/articles/prophecies-about-jesus",
+            "status": "draft"
           },
           {
             "title": "Possible prophecies about Muhammad",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/prophecies#future-topics",
-            "tag": "Planned"
+            "description": "Biblical passages some Muslims read as foretelling Muhammad, and the Christian response.",
+            "href": "/articles/possible-prophecies-about-muhammad",
+            "status": "draft"
           },
           {
             "title": "Quranic fulfilled prophecies",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/prophecies#future-topics",
-            "tag": "Planned"
+            "description": "The Quran's claims of fulfilled prophecy, examined alongside scholarly critique.",
+            "href": "/articles/quranic-fulfilled-prophecies",
+            "status": "draft"
           },
           {
             "title": "Biblical prophecies and interpretation",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/prophecies#future-topics",
-            "tag": "Planned"
+            "description": "Preterist, historicist, and futurist frameworks for reading Biblical prophecy.",
+            "href": "/articles/biblical-prophecies-and-interpretation",
+            "status": "draft"
           },
           {
             "title": "End-times beliefs",
-            "description": "Planned source-pending topic. Add verified references, translations, and context before publishing claims.",
-            "href": "/prophecies#future-topics",
-            "tag": "Planned"
+            "description": "Islamic and Christian end-times beliefs, from the Dajjal and Gog and Magog to the Rapture and Tribulation.",
+            "href": "/articles/end-times-beliefs",
+            "status": "draft"
+          }
+        ]
+      },
+      {
+        "id": "war-and-violence",
+        "title": "War & Violence",
+        "description": "Islamic jurisprudence and Christian Just War tradition on armed conflict, self-defense, the Crusades, and how extremist groups misuse both traditions' texts.",
+        "href": "/war-and-violence",
+        "children": [
+          {
+            "title": "Jihad and Just War theory",
+            "description": "Islamic jurisprudence on armed struggle compared with the Christian Just War tradition.",
+            "href": "/articles/jihad-and-just-war-theory",
+            "status": "draft"
+          },
+          {
+            "title": "Crusades and Islamic history",
+            "description": "The Crusades' religious and political dimensions, and how both traditions narrate the conflict.",
+            "href": "/articles/crusades-and-islamic-history",
+            "status": "draft"
+          },
+          {
+            "title": "Self-defense in scripture",
+            "description": "What the Quran and Bible say about the right to defend life and property.",
+            "href": "/articles/self-defense-in-scripture",
+            "status": "draft"
+          },
+          {
+            "title": "Punishment for apostasy and war",
+            "description": "Islamic jurisprudence on apostasy law, compared with the history of Christian heresy trials.",
+            "href": "/articles/punishment-for-apostasy-and-war",
+            "status": "draft"
+          },
+          {
+            "title": "Terrorism and extremism: Islamic perspective",
+            "description": "Mainstream Islamic condemnation of terrorism, and how extremist groups misuse Islamic texts.",
+            "href": "/articles/terrorism-and-extremism-islamic-perspective",
+            "status": "draft"
+          }
+        ]
+      },
+      {
+        "id": "women",
+        "title": "Women",
+        "description": "The status of women in the Quran and Bible, inheritance and testimony, marriage and divorce, modesty, and female scholarship and leadership in both traditions.",
+        "href": "/women",
+        "children": [
+          {
+            "title": "Women in the Quran and Bible",
+            "description": "The role and status of women across key passages in both the Quran and the Bible.",
+            "href": "/articles/women-in-the-quran-and-bible",
+            "status": "draft"
+          },
+          {
+            "title": "Inheritance and testimony",
+            "description": "Islamic and Biblical law on inheritance shares and the legal weight of testimony.",
+            "href": "/articles/inheritance-and-testimony",
+            "status": "draft"
+          },
+          {
+            "title": "Marriage and divorce",
+            "description": "Islamic marriage contracts and divorce compared with Christian sacramental and Protestant views.",
+            "href": "/articles/marriage-and-divorce",
+            "status": "draft"
+          },
+          {
+            "title": "Modesty and dress",
+            "description": "Scriptural roots of hijab and Christian modesty teaching, and the diversity within each tradition.",
+            "href": "/articles/modesty-and-dress",
+            "status": "draft"
+          },
+          {
+            "title": "Female scholars and leaders",
+            "description": "Women in Islamic scholarship and Christian church history, from Aisha to Deborah and Priscilla.",
+            "href": "/articles/female-scholars-and-leaders",
+            "status": "draft"
           }
         ]
       }

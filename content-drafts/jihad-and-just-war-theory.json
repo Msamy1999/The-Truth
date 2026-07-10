@@ -1,0 +1,257 @@
+{
+  "slug": "jihad-and-just-war-theory",
+  "title": "Jihad and Just War Theory",
+  "subtitle": "Understanding Islamic and Christian Ethical Frameworks for Armed Conflict",
+  "category": "war-and-violence",
+  "audienceLevel": "intermediate",
+  "summary": "Both Islamic jurisprudence and Christian theological tradition developed sophisticated ethical frameworks governing armed conflict. This article examines the Quranic concept of jihad and qital (struggle and combat), Christian Just War doctrine from Augustine and Aquinas, and the conditions both traditions place on defensive warfare—along with how extremists have distorted these teachings.",
+  "tags": [
+    "Theology",
+    "Scripture",
+    "History",
+    "Questions",
+    "Sources"
+  ],
+  "seo": {
+    "metaTitle": "Jihad and Just War Theory: Islamic and Christian Perspectives",
+    "metaDescription": "Compare Islamic jihad and Christian Just War theory as ethical frameworks for armed conflict. Examine scriptural foundations, traditional jurisprudence, and how extremists misuse these teachings.",
+    "keywords": [
+      "jihad",
+      "just war theory",
+      "Islamic jurisprudence",
+      "Christian ethics",
+      "qital",
+      "defensive war",
+      "Augustine",
+      "Aquinas"
+    ]
+  },
+  "sections": [
+    {
+      "sectionId": "introduction",
+      "title": "Introduction: War Ethics in Two Traditions",
+      "kind": "summary",
+      "body": "War and armed conflict exist as moral dilemmas across all human civilizations. Rather than glorifying violence or condemning all armed response without exception, both Islamic and Christian traditions developed principled frameworks to distinguish legitimate from illegitimate uses of force. These frameworks share surprising similarities: both emphasize defensive necessity, both restrict targeting and methods, both demand restraint and proportionality, and both recognize that conflict is permissible only under strictly defined conditions. This article examines these two ethical systems and the criteria they establish for when—and under what conditions—armed struggle is morally acceptable."
+    },
+    {
+      "sectionId": "jihad-terminology",
+      "title": "Jihad: Terminology and Core Meanings",
+      "kind": "interpretation",
+      "body": "The Arabic word jihad (جهاد) literally means \"struggle,\" \"effort,\" or \"striving.\" It does not inherently mean \"war\" or \"fighting.\" In Islamic tradition, jihad encompasses a spectrum of meanings: the personal spiritual struggle against evil impulses (often called the \"greater jihad,\" a framing traced to a hadith whose chain of transmission is widely considered weak or unreliable by hadith scholars—it does not appear in Bukhari or Muslim, and critics such as Ibn Taymiyyah rejected it—even though the greater-jihad concept itself is well attested elsewhere in the Quran and authentic hadith), intellectual effort in learning and teaching, advocacy and debate on matters of faith, and organized armed defense against aggression (qital—قتال, literally \"fighting\" or \"combat\"). Contemporary Western discourse often conflates \"jihad\" exclusively with military action, but Islamic scholars distinguish between these forms. The internal, spiritual dimension (battling one's own self) is considered the highest form of jihad. Armed struggle is discussed separately under the specific legal category of qital, with its own detailed jurisprudential rules. Extremist groups deliberately erase these distinctions to justify indiscriminate violence as \"jihad,\" but this represents a radical departure from traditional Islamic teaching across all established schools of law."
+    },
+    {
+      "sectionId": "quran-on-qital",
+      "title": "Quranic Passages on Combat and Defensive War",
+      "kind": "scripture",
+      "body": "The Qur'an permits fighting against those who actively wage war and oppression, but its passages establish clear boundaries. Multiple verses establish that combat is authorized only when initiated by aggressors, and fighting must cease when the opponent stops. The permission for fighting comes as a response to oppression and injustice. Verse 22:39 explicitly grants permission to those who are being wronged, establishing defense as the foundational justification. Verses 2:190-193 outline constraints: fighting must not involve transgression, must avoid sacred spaces unless the enemy initiates there, and must stop when the opponent stops fighting and returns to justice. These verses prioritize minimizing conflict and establishing conditions for peace—the ultimate goal is not endless warfare but the cessation of oppression and the restoration of religious freedom.\n\nA full account of the Qur'an's war passages must also engage directly with Quran 9:5 and 9:29, sometimes called the \"sword verses\" (ayat al-sayf), revealed later in the Quran's chronology within Surah At-Tawba. Quran 9:5 states: \"And when the sacred months have passed, then kill the polytheists wherever you find them and capture them and besiege them and sit in wait for them at every place of ambush. But if they should repent, establish prayer, and give zakah, let them [go] on their way. Indeed, Allah is Forgiving and Merciful.\" Quran 9:29 states: \"Fight those who do not believe in Allah or in the Last Day and who do not consider unlawful what Allah and His Messenger have made unlawful and who do not adopt the religion of truth from those who were given the Scripture - [fight] until they give the jizyah willingly while they are humbled.\" These verses, read in isolation, appear considerably less conditional than 2:190-193 and 22:39. This is not a minor textual footnote: a significant body of classical exegesis, including positions associated with al-Tabari and Ibn Kathir, held that 9:5 abrogated (naskh) a number of earlier verses counseling restraint or narrowly conditional fighting, on the theory that later Medinan revelation could supersede earlier rulings. Under this classical abrogation thesis, the obligation to fight polytheists (and, per 9:29, to fight People of the Book until they pay the jizya) was read as a more general and less conditional command than 2:190's defensive framing suggests. This is a genuine, long-standing position within classical Islamic legal theory—not a modern invention. The mainstream contemporary response, held by many though not all scholars, is contextual rather than a flat denial that the abrogation thesis was ever held: it argues that 9:5 and 9:29 must be read together with the surrounding verses of the same passage (9:1-4 and 9:12-13 in particular), which specify that the command applies to specific groups who had broken prior treaties and initiated hostilities against the early Muslim community, not to polytheists or People of the Book in general or in perpetuity. Scholars such as Mahmoud Shaltut and, more recently, Wahbah al-Zuhayli have argued on this basis that the classical abrogation apparatus was applied too broadly to these verses by some medieval jurists, and that the historical occasion of revelation (asbab al-nuzul) limits their scope. This remains a live, contested question within Islamic scholarship rather than a settled one, and readers should understand that both the abrogation thesis and the contextual reading are held by serious, non-extremist scholars; the disagreement concerns the verses' proper scope and historical context, not merely their legitimacy versus illegitimacy."
+    },
+    {
+      "sectionId": "christian-just-war",
+      "title": "Christian Just War Doctrine: Augustine and Aquinas",
+      "kind": "history",
+      "body": "Christian Just War theory emerged in the 4th century through Augustine of Hippo in response to questions about Christian participation in warfare and state defense. Augustine established three core criteria: legitimate authority (only rulers, not private citizens, may wage war), just cause (typically defense against aggression or protection of the innocent), and right intention (wars must be fought for the stated just cause, not for hidden motives of greed or conquest). Thomas Aquinas (13th century) refined this framework further, adding conditions regarding proportionality and the principle of double effect—distinguishing intended harm from foreseen but unintended consequences. Later theologians added prohibitions on certain methods and weapons, restrictions on targeting civilians, and the requirement of last resort (all peaceful alternatives exhausted before resorting to arms). Christian Just War doctrine is not a blank check for violence; rather, it is a set of restrictive conditions meant to permit armed force only in the most severe and necessary circumstances. Both Augustine and Aquinas wrote in contexts where Christian kingdoms existed, and their frameworks assumed that legitimate authority rested with rulers who could be held accountable—a principle incompatible with terrorism or the actions of non-state actors claiming religious justification."
+    },
+    {
+      "sectionId": "comparative-framework",
+      "title": "Comparing Islamic and Christian Ethical Frameworks",
+      "kind": "argument",
+      "body": "When examined carefully, Islamic jurisprudence on qital and Christian Just War theory share fundamental principles: (1) War requires a just cause, not arbitrary desire for conflict. Islamic law requires that fighting occur in response to aggression and oppression; Christian doctrine requires legitimate authority and just cause. Both reject wars of conquest or greed. (2) Legitimate authority is required. Islamic jurisprudence restricts military action to properly constituted governments and recognized leaders with established legal standing; Christian tradition similarly restricts war to legitimate sovereigns. Both reject private individuals declaring war on their own. (3) Fighting must be proportionate and necessary. Islamic law requires cessation when the opponent surrenders or ceases fighting; Christian doctrine requires exhaustion of alternatives and proportionality in response. (4) Methods and targets are constrained. Islamic jurisprudence prohibits killing non-combatants, destroying crops and livestock without military necessity, killing women and children, and pursuing the enemy into sacred spaces without cause. Christian tradition similarly developed detailed laws protecting civilians, prohibiting certain weapons, and limiting destruction. (5) The goal is peace and justice. Both traditions view war as a regrettable necessity, not an end in itself. Islamic passages repeatedly emphasize ceasing hostilities once the opponent stops; Christian doctrine speaks of restoring peace as war's ultimate objective. (6) Religious motivation does not override ethical rules. Both traditions insist that fighting \"for God\" or \"for faith\" does not permit behavior that violates the ethical codes—sacred motivation does not justify profane conduct. These striking parallels suggest that both traditions grappled with the same fundamental ethical problem: how to permit necessary defense while preventing the unbounded brutality that accompanies unrestrained warfare."
+    },
+    {
+      "sectionId": "traditional-jurisprudence",
+      "title": "Detailed Rules in Islamic Jurisprudence",
+      "kind": "interpretation",
+      "body": "The major Islamic schools of law (Hanafi, Maliki, Shafii, Hanbali) developed detailed jurisprudential codes (fiqh) governing permissible warfare. These include: prohibition on targeting non-combatants (women, children, elderly, monks, and the disabled); prohibition on wanton destruction of property, crops, and animals except when militarily necessary; restrictions on using certain weapons or methods that cause unnecessary suffering; prohibition on desecration of the dead or mutilation of bodies; cessation of hostilities when the opponent surrenders or ceases fighting; and specific rules about treaties and safe passage. Commanders were required to have knowledge of these rules and train their forces in them. Violations were considered serious moral transgressions. A significant point of scholarly debate is whether classical jurisprudence permitted offensive jihad (jihad al-talab) under the Dar al-Islam/Dar al-Harb framework, distinct from reactive defense. Medieval fiqh manuals, including those of al-Sarakhsi and Averroes, articulated doctrines of offensive war in certain circumstances, and (as discussed above) a number of classical exegetes held that Quran 9:5 abrogated some of the earlier, more restrictive verses. This offensive-jihad doctrine was a genuine, mainstream position within classical Islamic legal theory for much of Islamic history, held by serious non-extremist jurists, not merely a distortion later invented by militants. Many contemporary Islamic scholars and institutions, representing an influential and widely followed—though not universally held—strand of modern scholarship, argue instead that the defensive dimension is foundational and reinterpret classical doctrines through that lens, emphasizing the specific historical circumstances in which the offensive-war rulings arose. Contemporary Islamic organizations and scholars who hold this view invoke it as the baseline for legitimate warfare today. This sophisticated jurisprudence developed over centuries of legal scholarship, and it was genuinely implemented (if imperfectly, as with all human law) across Islamic history, in both its classical offensive-jihad and modern defense-focused forms. Modern extremist groups that claim to act under Islamic law while systematically targeting civilians, using suicide bombing, and violating treaties depart from the procedural safeguards that even the classical offensive-jihad jurists required—legitimate authority to declare war, protection of non-combatants, and observance of treaties—as well as from the modern defense-focused mainstream. Many contemporary Islamic scholars argue that extremist actions therefore do not represent a legitimate school within Islamic thought but a rejection of the ethical framework that traditional jurists, across both the offensive and defensive positions, constructed; this is a widely held scholarly and normative judgment, though it should be read as such rather than as an uncontested historical fact, since the classical offensive-jihad tradition itself remains a genuine, non-extremist position that some traditionalist scholars continue to hold today."
+    },
+    {
+      "sectionId": "modern-misuse",
+      "title": "Distortion by Extremist Groups",
+      "kind": "argument",
+      "body": "Extremist organizations have deliberately reframed Islamic teaching on jihad to justify indiscriminate terrorism. Their innovations include: (1) Erasing the distinction between military struggle (qital) and other forms of jihad, claiming all \"jihad\" is warfare; (2) Removing the requirement for legitimate authority, declaring that any individual or group can declare war unilaterally; (3) Eliminating the defensive requirement, claiming that \"spreading Islam\" or \"punishing apostasy\" are legitimate causes for initiating armed conflict (contrary to traditional Islamic schools); (4) Abolishing protections for non-combatants, arguing that Western civilians are valid targets because their governments are \"at war with Islam\" (contradicting explicit jurisprudential rules and Prophetic example); (5) Abandoning the requirement for treaty observance and good faith; (6) Using hostage-taking, torture, and suicide bombing—methods explicitly prohibited in traditional Islamic jurisprudence. These groups often cite selective Quranic verses out of context while ignoring the verses that establish limiting conditions. When Islamic scholars and organizations worldwide have condemned these groups, they have done so not on arbitrary grounds but precisely because these actions violate the Islamic ethical framework these groups claim to uphold. According to mainstream Islamic scholarship, the distance between traditional Islamic teaching and extremist practice reflects a fundamental abandonment of jurisprudential ethics rather than a difference of scholarly interpretation."
+    },
+    {
+      "sectionId": "sources-and-interpretation",
+      "title": "Scriptural Sources and Interpretive Challenges",
+      "kind": "sources",
+      "body": "Both the Qur'an and the Bible contain passages addressing warfare and violence, and both require careful interpretive work. The Qur'an's verses on fighting appear primarily in surahs dealing with the early Muslim community's struggle for survival against Meccan persecution (Surah 2, Surah 22, Surah 47). Christian scripture similarly contains passages about authorities bearing the sword (Romans 13), Jesus's statement to buy swords (Luke 22:36), and Old Testament accounts of military conflict. A significant challenge for Christian Just War theory is posed by the Old Testament's herem passages—commands attributed to God to utterly destroy entire populations in conquest of Canaan. Deuteronomy 20:16-18, for instance, commands that in certain cities \"you shall save alive nothing that breathes\" but rather \"utterly destroy them.\" These texts appear to flatly contradict civilian-protection principles that are central to both Islamic jurisprudence and Christian Just War doctrine. Christian theological responses to this problem have taken several forms: Augustine and Aquinas argued that the herem commands were bounded to a specific historical moment (the Canaanite conquest) and tied to God's direct command rather than establishing a general law of war applicable across history and cultures. Contemporary philosophers of religion Paul Copan and Matthew Flannagan have developed this historical-particularity argument further, contending (in works such as Copan's \"Is God a Moral Monster?\" and their co-authored \"Did God Really Command Genocide?\") that the herem language is best read as standard ancient Near Eastern hyperbolic conquest rhetoric—comparable to similar total-destruction formulas in other ancient Near Eastern military records where the underlying events were more limited routs rather than literal extermination—and that the command was a one-time, divinely bounded exception tied to a specific act of judgment rather than a reusable rule of warfare. This defense is contested: critics, including philosopher Randal Rauser and biblical scholars who read the conquest narratives as reflecting a more literal ideology of extermination, argue that the hyperbole reading is not adequate to the text's plain sense or its historical reception, and that it risks minimizing a genuinely troubling command rather than resolving it; others note that even a bounded, one-time reading still requires explaining why a just and loving God would command it at all. Modern Christian scholars more broadly note that the New Testament's emphasis on peace, forgiveness, and reconciliation represents a development beyond or reinterpretation of Old Testament warfare law. Interpreters in both traditions must grapple with historical context: these ancient military law texts were written in times of active conflict, for communities under existential threat. The ethical question is how to apply ancient warfare law to modern contexts. Muslim scholars have developed sophisticated methodology: determining when a verse is specific to a historical context versus establishing timeless principle, identifying verses that abrogate earlier rulings, and distinguishing permanent law (haram/halal) from strategic decisions dependent on circumstance. Christian theologians similarly ask how Old Testament war narratives apply to Christian ethics, and whether the New Testament represents a development in moral understanding. Both traditions reject simple-minded proof-texting and demand careful reasoning from foundational principles. Yet both traditions also agree on fundamentals: war is never good; it is sometimes necessary; it must be tightly constrained; and it must serve justice, not hatred."
+    },
+    {
+      "sectionId": "conclusion",
+      "title": "Conclusion: Ethical Frameworks, Not Blank Checks",
+      "kind": "summary",
+      "body": "Jihad in Islamic tradition and Just War theory in Christian tradition are not excuses for violence—they are restraints upon it. Both developed from the reality that human beings sometimes face unjust aggression and may need to defend themselves, their families, and their communities. Rather than either endorsing unlimited warfare or claiming that all violence is always wrong, both traditions asked: Under what conditions, with what safeguards, and pursuing what goals might armed response be morally justifiable? Their answers converge on remarkably similar ground: legitimate authority, defensive necessity, just cause, proportionality, protection of non-combatants, and the goal of restoring peace. Many mainstream scholars in both traditions argue that extremist distortions that discard these principles represent an innovation rather than a conservative reading of Islamic or Christian sources. Readers should hold that claim alongside the fact, discussed earlier in this article, that debates over the proper scope of legitimate warfare—including the classical offensive-jihad (jihad al-talab) tradition and its relationship to the \"sword verses\" (Quran 9:5, 9:29)—have genuine roots within mainstream historical jurisprudence itself, not only among modern extremists; the disagreement between classical and contemporary mainstream positions is real and unresolved, even as both differ sharply from extremist practice. The fact that both Islamic and Christian traditions developed such frameworks demonstrates that ethical thinking about war is not unique to one culture but emerges wherever human beings seriously grapple with the moral weight of conflict. Mainstream Islamic scholars and institutions maintain that when extremist groups claim their actions follow traditional Islamic teaching, this claim contradicts the classical ethical framework that regulated warfare. According to contemporary Islamic scholarship, the authoritative traditional teaching is the jurisprudential framework that permits defensive war only under severe constraints and in service of genuine justice—the very framework that extremists systematically violate. This pattern of a tradition's own standards being violated in its name is not unique to Islamic history: Just War criteria have likewise been invoked to rationalize wars that later generations, including Christian theologians themselves, have judged to have violated the tradition's own just-cause, right-intention, and non-combatant protections—the Crusades, various colonial-era conquests, and the European wars of religion among them (see the companion article on the Crusades and Islamic history for a detailed account of one such episode). Neither tradition's historical record of misuse by its own adherents should be read as evidence against the ethical framework itself; in both cases, mainstream scholars distinguish the framework's stated principles from the failure—sometimes severe—of historical actors to live up to them."
+    }
+  ],
+  "quranVerses": [
+    {
+      "surahName": "Al-Baqara",
+      "surahNumber": 2,
+      "ayahNumber": 190,
+      "reference": "Quran 2:190",
+      "arabic": "وَقَٰتِلُوا۟ فِى سَبِيلِ ٱللَّهِ ٱلَّذِينَ يُقَٰتِلُونَكُمْ وَلَا تَعْتَدُوٓا۟ ۚ إِنَّ ٱللَّهَ لَا يُحِبُّ ٱلْمُعْتَدِينَ",
+      "translation": "Fight in the way of Allah those who fight you but do not transgress. Indeed. Allah does not like transgressors.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Baqara",
+      "surahNumber": 2,
+      "ayahNumber": 191,
+      "reference": "Quran 2:191",
+      "arabic": "وَٱقْتُلُوهُمْ حَيْثُ ثَقِفْتُمُوهُمْ وَأَخْرِجُوهُم مِّنْ حَيْثُ أَخْرَجُوكُمْ ۚ وَٱلْفِتْنَةُ أَشَدُّ مِنَ ٱلْقَتْلِ ۚ وَلَا تُقَٰتِلُوهُمْ عِندَ ٱلْمَسْجِدِ ٱلْحَرَامِ حَتَّىٰ يُقَٰتِلُوكُمْ فِيهِ ۖ فَإِن قَٰتَلُوكُمْ فَٱقْتُلُوهُمْ ۗ كَذَٰلِكَ جَزَآءُ ٱلْكَٰفِرِينَ",
+      "translation": "And kill them wherever you overtake them and expel them from wherever they have expelled you, and fitnah is worse than killing. And do not fight them at al-Masjid al- Haram until they fight you there. But if they fight you, then kill them. Such is the recompense of the disbelievers.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Baqara",
+      "surahNumber": 2,
+      "ayahNumber": 193,
+      "reference": "Quran 2:193",
+      "arabic": "وَقَٰتِلُوهُمْ حَتَّىٰ لَا تَكُونَ فِتْنَةٌۭ وَيَكُونَ ٱلدِّينُ لِلَّهِ ۖ فَإِنِ ٱنتَهَوْا۟ فَلَا عُدْوَٰنَ إِلَّا عَلَى ٱلظَّٰلِمِينَ",
+      "translation": "Fight them until there is no [more] fitnah and [until] worship is [acknowledged to be] for Allah. But if they cease, then there is to be no aggression except against the oppressors.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Hajj",
+      "surahNumber": 22,
+      "ayahNumber": 39,
+      "reference": "Quran 22:39",
+      "arabic": "أُذِنَ لِلَّذِينَ يُقَٰتَلُونَ بِأَنَّهُمْ ظُلِمُوا۟ ۚ وَإِنَّ ٱللَّهَ عَلَىٰ نَصْرِهِمْ لَقَدِيرٌ",
+      "translation": "Permission [to fight] has been given to those who are being fought, because they were wronged. And indeed, Allah is competent to give them victory.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "At-Tawba",
+      "surahNumber": 9,
+      "ayahNumber": 5,
+      "reference": "Quran 9:5",
+      "arabic": "فَإِذَا ٱنسَلَخَ ٱلْأَشْهُرُ ٱلْحُرُمُ فَٱقْتُلُوا۟ ٱلْمُشْرِكِينَ حَيْثُ وَجَدتُّمُوهُمْ وَخُذُوهُمْ وَٱحْصُرُوهُمْ وَٱقْعُدُوا۟ لَهُمْ كُلَّ مَرْصَدٍۢ ۚ فَإِن تَابُوا۟ وَأَقَامُوا۟ ٱلصَّلَوٰةَ وَءَاتَوُا۟ ٱلزَّكَوٰةَ فَخَلُّوا۟ سَبِيلَهُمْ ۚ إِنَّ ٱللَّهَ غَفُورٌۭ رَّحِيمٌۭ",
+      "translation": "And when the sacred months have passed, then kill the polytheists wherever you find them and capture them and besiege them and sit in wait for them at every place of ambush. But if they should repent, establish prayer, and give zakah, let them [go] on their way. Indeed, Allah is Forgiving and Merciful.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "At-Tawba",
+      "surahNumber": 9,
+      "ayahNumber": 29,
+      "reference": "Quran 9:29",
+      "arabic": "قَٰتِلُوا۟ ٱلَّذِينَ لَا يُؤْمِنُونَ بِٱللَّهِ وَلَا بِٱلْيَوْمِ ٱلْءَاخِرِ وَلَا يُحَرِّمُونَ مَا حَرَّمَ ٱللَّهُ وَرَسُولُهُۥ وَلَا يَدِينُونَ دِينَ ٱلْحَقِّ مِنَ ٱلَّذِينَ أُوتُوا۟ ٱلْكِتَٰبَ حَتَّىٰ يُعْطُوا۟ ٱلْجِزْيَةَ عَن يَدٍۢ وَهُمْ صَٰغِرُونَ",
+      "translation": "Fight those who do not believe in Allah or in the Last Day and who do not consider unlawful what Allah and His Messenger have made unlawful and who do not adopt the religion of truth from those who were given the Scripture - [fight] until they give the jizyah willingly while they are humbled.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    }
+  ],
+  "bibleVerses": [
+    {
+      "book": "Romans",
+      "chapter": 13,
+      "verse": "1-7",
+      "reference": "Romans 13:1-7",
+      "text": "Let every soul be in subjection to the higher authorities, for there is no authority except from God, and those who exist are ordained by God. Therefore he who resists the authority, withstands the ordinance of God; and those who withstand will receive to themselves judgment. For rulers are not a terror to the good work, but to the evil. Do you desire to have no fear of the authority? Do that which is good, and you will have praise from the same, for he is a servant of God to you for good. But if you do that which is evil, be afraid, for he doesn’t bear the sword in vain; for he is a servant of God, an avenger for wrath to him who does evil. Therefore you need to be in subjection, not only because of the wrath, but also for conscience’ sake. For this reason you also pay taxes, for they are servants of God’s service, attending continually on this very thing. Therefore give everyone what you owe: if you owe taxes, pay taxes; if customs, then customs; if respect, then respect; if honor, then honor.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Luke",
+      "chapter": 22,
+      "verse": "36",
+      "reference": "Luke 22:36",
+      "text": "Then he said to them, “But now, whoever has a purse, let him take it, and likewise a wallet. Whoever has none, let him sell his cloak, and buy a sword.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 26,
+      "verse": "52",
+      "reference": "Matthew 26:52",
+      "text": "Then Jesus said to him, “Put your sword back into its place, for all those who take the sword will die by the sword.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Ecclesiastes",
+      "chapter": 3,
+      "verse": "8",
+      "reference": "Ecclesiastes 3:8",
+      "text": "a time to love, and a time to hate; a time for war, and a time for peace.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Deuteronomy",
+      "chapter": 20,
+      "verse": "16-18",
+      "reference": "Deuteronomy 20:16-18",
+      "text": "But of the cities of these peoples, that Yahweh your God gives you for an inheritance, you shall save alive nothing that breathes; but you shall utterly destroy them: the Hittite, the Amorite, the Canaanite, the Perizzite, the Hivite, and the Jebusite; as Yahweh your God has commanded you; that they not teach you to follow all their abominations, which they have done to their gods; so would you sin against Yahweh your God.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "1 Peter",
+      "chapter": 2,
+      "verse": "13-14",
+      "reference": "1 Peter 2:13-14",
+      "text": "Therefore subject yourselves to every ordinance of man for the Lord’s sake: whether to the king, as supreme; or to governors, as sent by him for vengeance on evildoers and for praise to those who do well.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does 'jihad' mean 'holy war'?",
+      "answer": "Not necessarily. The Arabic word 'jihad' means 'struggle' or 'effort' and encompasses many forms: spiritual struggle against evil impulses, intellectual pursuit of knowledge, advocacy for justice, and (under specific conditions) armed defense. The term 'qital' specifically means 'fighting' or 'combat.' Extremists conflate these meanings to justify violence, but traditional Islamic scholarship maintains careful distinctions between different forms of jihad and strictly regulates the conditions under which armed struggle is permissible."
+    },
+    {
+      "question": "What conditions must Islamic jurisprudence establish for fighting to be permissible?",
+      "answer": "Traditional Islamic law requires: (1) that fighting occurs in response to aggression or oppression, not as initiation of conflict; (2) that a legitimate authority (qualified ruler or government) declares it; (3) that non-combatants are protected; (4) that the goal is to stop oppression and restore justice, not to conquer territory or force conversion; (5) that fighting ceases when the opponent stops; and (6) that methods conform to established ethical rules. These conditions appear in the jurisprudence of all four major Islamic schools."
+    },
+    {
+      "question": "How does Christian Just War theory compare to Islamic jurisprudence?",
+      "answer": "Both traditions establish similar restrictive conditions: legitimate authority must declare war (not private individuals); a just cause is required (typically defense or protection of the innocent); right intention must accompany action (not hidden motives); proportionality and last resort must be observed; and non-combatants must be protected. Both reject unlimited warfare and view armed conflict as a regrettable necessity rather than a good. The frameworks developed independently but converge on remarkably similar ethical principles."
+    },
+    {
+      "question": "Can extremist groups' actions be justified by Islamic teaching?",
+      "answer": "No. Extremist groups deliberately violate core principles of Islamic jurisprudence, including protection of non-combatants, observance of treaties, requirement of legitimate authority, and the defensive justification for fighting. When they target civilians, use suicide bombing, or initiate aggression without defensive cause, they contradict centuries of unanimous Islamic scholarly consensus. Islamic scholars worldwide have condemned these actions precisely because they violate Islamic law, not because they represent a different interpretation of it."
+    },
+    {
+      "question": "Does the Bible support war in all circumstances?",
+      "answer": "No. Christian teaching, especially since Augustine, has developed Just War theory as a limiting framework. The New Testament emphasizes peace, reconciliation, and limits on violence. When Christians (like Paul in Romans 13) acknowledge that legitimate authorities may employ force, they frame this narrowly: authorities are responsible to God and must use force justly, not arbitrarily. Jesus's saying 'those who live by the sword die by the sword' (Matthew 26:52) encodes a warning about violence's consequences even as it acknowledges the reality of swords and conflict."
+    },
+    {
+      "question": "How should modern readers interpret ancient texts about warfare?",
+      "answer": "Both Islamic and Christian traditions employ sophisticated interpretive methods to understand ancient military law in modern contexts. Scholars ask: Is this verse specific to a historical situation, or does it establish a timeless principle? Does this represent a development or change in teaching? How do we apply principles from ancient warfare (when war was hand-to-hand) to modern weaponry and technology? Both traditions reject proof-texting and demand careful reasoning about foundational ethical principles. This interpretive work is ongoing and legitimate, but it must remain grounded in the ethical framework that the tradition itself established."
+    }
+  ],
+  "relatedSlugs": [
+    "crusades-and-islamic-history",
+    "self-defense-in-scripture",
+    "terrorism-and-extremism-islamic-perspective",
+    "punishment-for-apostasy-and-war"
+  ],
+  "furtherReading": [
+    {
+      "title": "When God Says War Is Right: The Christian's Perspective on When and How to Fight",
+      "author": "Darrell M. Cole",
+      "note": "Accessible overview of Christian Just War thinking, relating the tradition to Romans 13 and applying it to modern conflicts, including a post-9/11 comparison with Islamic just-war reasoning."
+    },
+    {
+      "title": "Arguing the Just War in Islam",
+      "author": "John Kelsay",
+      "note": "Scholarly study (Harvard University Press, 2007) of the shari'a-based jurisprudential tradition on war, tracing how classical and contemporary Muslim jurists have argued over the legitimacy and limits of armed conflict."
+    },
+    {
+      "title": "Fiqh al-Jihad (\"The Jurisprudence of Jihad: A Comparative Study of Its Rulings and Philosophy in Light of the Quran and Sunnah\")",
+      "author": "Yusuf al-Qaradawi",
+      "note": "A major two-volume contemporary Islamic legal study (published in Arabic, 2009) arguing for a defensive, restrictive reading of the rules of jihad and against the targeting of civilians, grounded in detailed jurisprudential sources."
+    },
+    {
+      "title": "Just Wars, Holy Wars, and Jihads: Christian, Jewish, and Muslim Encounters and Exchanges",
+      "author": "Sohail H. Hashmi (editor)",
+      "note": "Edited volume (Oxford University Press, 2012) comparing Christian, Jewish, and Muslim traditions of ethical reasoning about war across history, from the early Islamic conquests to the present."
+    }
+  ]
+}

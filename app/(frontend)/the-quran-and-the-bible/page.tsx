@@ -3,9 +3,9 @@ import { getCategoryBySlug } from "@/lib/content";
 import { getCategoryMetadata } from "@/lib/seo";
 
 export function generateMetadata() {
-  return getCategoryMetadata("quran-vs-bible");
+  return getCategoryMetadata("the-quran-and-the-bible");
 }
 
-export default async function QuranVsBiblePage() {
-  return <CategoryPage category={await getCategoryBySlug("quran-vs-bible")} />;
+export default async function TheQuranAndTheBiblePage() {
+  return <CategoryPage category={await getCategoryBySlug("the-quran-and-the-bible")} />;
 }

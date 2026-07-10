@@ -3,9 +3,9 @@ import { getCategoryBySlug } from "@/lib/content";
 import { getCategoryMetadata } from "@/lib/seo";
 
 export function generateMetadata() {
-  return getCategoryMetadata("jesus");
+  return getCategoryMetadata("tawhid-and-the-trinity");
 }
 
-export default async function JesusPage() {
-  return <CategoryPage category={await getCategoryBySlug("jesus")} />;
+export default async function TawhidAndTheTrinityPage() {
+  return <CategoryPage category={await getCategoryBySlug("tawhid-and-the-trinity")} />;
 }

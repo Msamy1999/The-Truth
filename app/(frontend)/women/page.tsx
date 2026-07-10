@@ -3,9 +3,9 @@ import { getCategoryBySlug } from "@/lib/content";
 import { getCategoryMetadata } from "@/lib/seo";
 
 export function generateMetadata() {
-  return getCategoryMetadata("history");
+  return getCategoryMetadata("women");
 }
 
-export default async function HistoryPage() {
-  return <CategoryPage category={await getCategoryBySlug("history")} />;
+export default async function WomenPage() {
+  return <CategoryPage category={await getCategoryBySlug("women")} />;
 }

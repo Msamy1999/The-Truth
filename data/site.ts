@@ -6,9 +6,9 @@ function topic(title: string, description: string, href?: string): FutureTopic {
 
 export const siteCategories = [
   {
-    slug: "quran-vs-bible",
-    title: "Quran vs Bible",
-    href: "/quran-vs-bible",
+    slug: "the-quran-and-the-bible",
+    title: "The Quran & the Bible",
+    href: "/the-quran-and-the-bible",
     description:
       "A beginner-friendly hub for comparing major questions in the Quran and Bible with clear source status.",
     icon: "scripture",
@@ -49,12 +49,12 @@ export const siteCategories = [
         "A planned research path about prophecy, revelation, and the completion of guidance.",
       ),
     ],
-    relatedSlugs: ["preservation", "jesus", "sources"],
+    relatedSlugs: ["preservation", "jesus-in-islam-and-christianity", "sources"],
   },
   {
-    slug: "jesus",
+    slug: "jesus-in-islam-and-christianity",
     title: "Jesus in Islam & Christianity",
-    href: "/jesus",
+    href: "/jesus-in-islam-and-christianity",
     description:
       "A respectful path for Christians and other seekers to study Jesus through scripture, theology, and history.",
     icon: "jesus",
@@ -85,7 +85,7 @@ export const siteCategories = [
       topic(
         "Jesus and the Trinity",
         "A planned bridge into Tawhid, Trinity, incarnation, and worship.",
-        "/tawhid-vs-trinity",
+        "/tawhid-and-the-trinity",
       ),
       topic(
         "Jesus as Messiah",
@@ -105,7 +105,7 @@ export const siteCategories = [
         "/articles/who-follows-jesus-more-closely",
       ),
     ],
-    relatedSlugs: ["tawhid-vs-trinity", "quran-vs-bible", "questions"],
+    relatedSlugs: ["tawhid-and-the-trinity", "the-quran-and-the-bible", "questions"],
   },
   {
     slug: "preservation",
@@ -163,7 +163,7 @@ export const siteCategories = [
         "A planned reflection on why source history matters for seekers.",
       ),
     ],
-    relatedSlugs: ["quran-vs-bible", "history", "sources"],
+    relatedSlugs: ["the-quran-and-the-bible", "religious-history", "sources"],
   },
   {
     slug: "difficult-questions",
@@ -209,7 +209,7 @@ export const siteCategories = [
         "/articles/forgiveness-in-islam-and-christianity",
       ),
     ],
-    relatedSlugs: ["questions", "quran-vs-bible", "sources"],
+    relatedSlugs: ["questions", "the-quran-and-the-bible", "sources"],
   },
   {
     slug: "scientific-signs",
@@ -233,36 +233,71 @@ export const siteCategories = [
         "A future study note separating observation, interpretation, and argument.",
       ),
     ],
-    relatedSlugs: ["history", "questions", "sources"],
+    relatedSlugs: ["religious-history", "questions", "sources"],
   },
   {
-    slug: "history",
-    title: "Historical Evidence",
-    href: "/history",
+    slug: "religious-history",
+    title: "Religious History",
+    href: "/religious-history",
     description:
-      "A place to gather historical context, timelines, and source-based background for major claims.",
+      "The history of early Christianity and Islam side by side — Jesus' era through Nicaea and the development of Trinity doctrine, and the Quran's own revelation and early preservation history.",
     icon: "history",
     tags: ["History", "Sources"],
     futureTopics: [
       topic(
-        "Timeline template",
-        "A planned layout for dates, events, sources, and uncertainty notes.",
+        "The historical Jesus",
+        "What mainstream historical-critical scholarship holds about Jesus, compared with the Quran's account.",
+        "/articles/the-historical-jesus",
       ),
       topic(
-        "Primary vs secondary sources",
-        "A future article explaining how source types will be presented.",
+        "Early Christianity",
+        "From the crucifixion and resurrection claim through persecution to Constantine and Nicaea.",
+        "/articles/early-christianity",
       ),
       topic(
-        "Historical method notes",
-        "A placeholder for careful standards before drawing historical conclusions.",
+        "The Council of Nicaea",
+        "Why Constantine convened Nicaea in 325 CE, and the Islamic critique of doctrine settled by council.",
+        "/articles/council-of-nicaea",
+      ),
+      topic(
+        "Quranic revelation history",
+        "How the Quran was revealed over 23 years and preserved through memorization and early writing.",
+        "/articles/quranic-revelation-history",
       ),
     ],
-    relatedSlugs: ["preservation", "sources", "jesus"],
+    relatedSlugs: ["preservation", "historical-evidence", "sources"],
   },
   {
-    slug: "tawhid-vs-trinity",
-    title: "Tawhid vs Trinity",
-    href: "/tawhid-vs-trinity",
+    slug: "historical-evidence",
+    title: "Historical Evidence",
+    href: "/historical-evidence",
+    description:
+      "Historical and archaeological support for the content within the Quran and Bible — ways the Quran's accounts align with historical plausibility, such as its distinct terms for Egypt's rulers across the Exodus and Youssef narratives.",
+    icon: "sources",
+    tags: ["History", "Sources", "Scripture"],
+    futureTopics: [
+      topic(
+        "The Exodus in historical context",
+        "Comparing the Biblical and Quranic Exodus accounts against historical and archaeological evidence.",
+        "/articles/the-exodus-in-historical-context",
+      ),
+      topic(
+        "Pharaoh vs King: Youssef's story in history",
+        "Why the Quran uses 'king' for Egypt's ruler in Youssef's time but 'pharaoh' in Moses' time.",
+        "/articles/pharaoh-vs-king-youssef-story",
+      ),
+      topic(
+        "Archeological evidence for Quranic accounts",
+        "What archaeology shows about the Quran's accounts of Ad, Thamud, Sodom, Babel, and Pharaoh's army.",
+        "/articles/archeological-evidence-for-quranic-accounts",
+      ),
+    ],
+    relatedSlugs: ["religious-history", "preservation", "sources"],
+  },
+  {
+    slug: "tawhid-and-the-trinity",
+    title: "Tawhid & the Trinity",
+    href: "/tawhid-and-the-trinity",
     description:
       "A respectful comparison of Islamic monotheism and Christian Trinitarian theology using definitions and sources.",
     icon: "theology",
@@ -304,12 +339,12 @@ export const siteCategories = [
         "A planned study on worship, devotion, and theological consistency.",
       ),
     ],
-    relatedSlugs: ["jesus", "salvation", "glossary"],
+    relatedSlugs: ["jesus-in-islam-and-christianity", "salvation-and-purpose-of-life", "glossary"],
   },
   {
-    slug: "salvation",
+    slug: "salvation-and-purpose-of-life",
     title: "Salvation & Purpose of Life",
-    href: "/salvation",
+    href: "/salvation-and-purpose-of-life",
     description:
       "A future guide to worship, forgiveness, accountability, mercy, and purpose with sources separated from commentary.",
     icon: "salvation",
@@ -350,31 +385,88 @@ export const siteCategories = [
         "A planned Islamic conclusion page that must be argued with sources.",
       ),
     ],
-    relatedSlugs: ["tawhid-vs-trinity", "questions", "jesus"],
+    relatedSlugs: ["tawhid-and-the-trinity", "questions", "jesus-in-islam-and-christianity"],
   },
   {
     slug: "prophecies",
     title: "Prophecies & Signs",
     href: "/prophecies",
     description:
-      "A future index for prophecy discussions, interpretive frameworks, and source-backed notes.",
+      "Prophecies about Jesus and Muhammad each tradition claims, Quranic and Biblical prophecy interpretation, and shared end-times beliefs.",
     icon: "prophecies",
     tags: ["Prophecy", "History"],
     futureTopics: [
       topic(
-        "Prophecy claim checklist",
-        "A planned method for recording the text, interpretation, dating, and source status.",
+        "Prophecies about Jesus",
+        "Old Testament passages Christians read as predicting Jesus, and the scholarly debate around them.",
+        "/articles/prophecies-about-jesus",
       ),
       topic(
-        "Context and fulfillment notes",
-        "A future article structure for keeping context visible while comparing interpretations.",
+        "Possible prophecies about Muhammad",
+        "Biblical passages some Muslims read as foretelling Muhammad, and the Christian response.",
+        "/articles/possible-prophecies-about-muhammad",
       ),
       topic(
-        "Source status table",
-        "A placeholder for tracking which references are verified and which are pending.",
+        "End-times beliefs",
+        "Islamic and Christian end-times beliefs, from the Dajjal and Gog and Magog to the Rapture and Tribulation.",
+        "/articles/end-times-beliefs",
       ),
     ],
-    relatedSlugs: ["history", "quran-vs-bible", "sources"],
+    relatedSlugs: ["religious-history", "the-quran-and-the-bible", "sources"],
+  },
+  {
+    slug: "war-and-violence",
+    title: "War & Violence",
+    href: "/war-and-violence",
+    description:
+      "Islamic jurisprudence and Christian Just War tradition on armed conflict, self-defense, the Crusades, and how extremist groups misuse both traditions' texts.",
+    icon: "warAndViolence",
+    tags: ["Theology", "History", "Scripture"],
+    futureTopics: [
+      topic(
+        "Jihad and Just War theory",
+        "Islamic jurisprudence on armed struggle compared with the Christian Just War tradition.",
+        "/articles/jihad-and-just-war-theory",
+      ),
+      topic(
+        "Crusades and Islamic history",
+        "The Crusades' religious and political dimensions, and how both traditions narrate the conflict.",
+        "/articles/crusades-and-islamic-history",
+      ),
+      topic(
+        "Terrorism and extremism: Islamic perspective",
+        "Mainstream Islamic condemnation of terrorism, and how extremist groups misuse Islamic texts.",
+        "/articles/terrorism-and-extremism-islamic-perspective",
+      ),
+    ],
+    relatedSlugs: ["difficult-questions", "questions", "sources"],
+  },
+  {
+    slug: "women",
+    title: "Women",
+    href: "/women",
+    description:
+      "The status of women in the Quran and Bible, inheritance and testimony, marriage and divorce, modesty, and female scholarship and leadership in both traditions.",
+    icon: "women",
+    tags: ["Theology", "History", "Scripture"],
+    futureTopics: [
+      topic(
+        "Women in the Quran and Bible",
+        "The role and status of women across key passages in both the Quran and the Bible.",
+        "/articles/women-in-the-quran-and-bible",
+      ),
+      topic(
+        "Marriage and divorce",
+        "Islamic marriage contracts and divorce compared with Christian sacramental and Protestant views.",
+        "/articles/marriage-and-divorce",
+      ),
+      topic(
+        "Female scholars and leaders",
+        "Women in Islamic scholarship and Christian church history, from Aisha to Deborah and Priscilla.",
+        "/articles/female-scholars-and-leaders",
+      ),
+    ],
+    relatedSlugs: ["the-quran-and-the-bible", "questions", "glossary"],
   },
   {
     slug: "questions",
@@ -398,7 +490,7 @@ export const siteCategories = [
         "A placeholder for organized study prompts and citation-backed answers.",
       ),
     ],
-    relatedSlugs: ["difficult-questions", "salvation", "glossary"],
+    relatedSlugs: ["difficult-questions", "salvation-and-purpose-of-life", "glossary"],
   },
   {
     slug: "glossary",
@@ -422,7 +514,7 @@ export const siteCategories = [
         "A placeholder for terms that appear in source criticism and history articles.",
       ),
     ],
-    relatedSlugs: ["sources", "tawhid-vs-trinity", "questions"],
+    relatedSlugs: ["sources", "tawhid-and-the-trinity", "questions"],
   },
   {
     slug: "sources",
@@ -446,27 +538,30 @@ export const siteCategories = [
         "A placeholder index for primary texts and source access notes.",
       ),
     ],
-    relatedSlugs: ["glossary", "history", "quran-vs-bible"],
+    relatedSlugs: ["glossary", "religious-history", "the-quran-and-the-bible"],
   },
 ] satisfies SiteCategory[];
 
 export const islamChristianityCategorySlugs = [
-  "quran-vs-bible",
-  "jesus",
+  "the-quran-and-the-bible",
+  "jesus-in-islam-and-christianity",
+  "tawhid-and-the-trinity",
+  "salvation-and-purpose-of-life",
   "preservation",
-  "difficult-questions",
-  "scientific-signs",
-  "history",
-  "tawhid-vs-trinity",
-  "salvation",
+  "religious-history",
+  "war-and-violence",
+  "women",
+  "historical-evidence",
   "prophecies",
+  "scientific-signs",
+  "difficult-questions",
 ] satisfies CategorySlug[];
 
 export const learnIslamCategorySlugs = [
-  "tawhid-vs-trinity",
-  "quran-vs-bible",
+  "tawhid-and-the-trinity",
+  "the-quran-and-the-bible",
   "preservation",
-  "salvation",
+  "salvation-and-purpose-of-life",
   "questions",
   "glossary",
   "sources",

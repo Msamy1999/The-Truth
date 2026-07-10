@@ -11,6 +11,8 @@ import {
   ScrollText,
   ShieldCheck,
   Sparkles,
+  Swords,
+  Users,
   type LucideIcon,
 } from "lucide-react";
 import type { CategoryIcon } from "@/types/content";
@@ -27,6 +29,8 @@ export const categoryIconMap = {
   prophecies: Sparkles,
   glossary: FileText,
   sources: Library,
+  warAndViolence: Swords,
+  women: Users,
 } satisfies Record<CategoryIcon, LucideIcon>;
 
 export const fallbackCategoryIcon = ScrollText;

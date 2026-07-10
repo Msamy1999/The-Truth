@@ -168,15 +168,18 @@ export interface Article {
   subtitle: string;
   slug: string;
   category:
-    | 'quran-vs-bible'
-    | 'jesus'
+    | 'the-quran-and-the-bible'
+    | 'jesus-in-islam-and-christianity'
     | 'preservation'
     | 'difficult-questions'
     | 'scientific-signs'
-    | 'history'
-    | 'tawhid-vs-trinity'
-    | 'salvation'
+    | 'religious-history'
+    | 'historical-evidence'
+    | 'tawhid-and-the-trinity'
+    | 'salvation-and-purpose-of-life'
     | 'prophecies'
+    | 'war-and-violence'
+    | 'women'
     | 'questions'
     | 'glossary'
     | 'sources';

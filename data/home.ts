@@ -52,19 +52,19 @@ export const christianLearningPath = [
     title: "Start with Jesus",
     description:
       "Begin with worship, prayer, obedience, and how claims about God are framed.",
-    href: "/jesus",
+    href: "/jesus-in-islam-and-christianity",
   },
   {
     title: "Study Tawhid",
     description:
       "Learn how Islamic monotheism defines worship, prophethood, and devotion to God.",
-    href: "/tawhid-vs-trinity",
+    href: "/tawhid-and-the-trinity",
   },
   {
     title: "Compare the Quran and Bible",
     description:
       "Prepare to compare verified Quran passages and Bible passages with translation and source attribution.",
-    href: "/quran-vs-bible",
+    href: "/the-quran-and-the-bible",
   },
   {
     title: "Study preservation",
@@ -76,7 +76,7 @@ export const christianLearningPath = [
     title: "Study salvation",
     description:
       "Compare worship, forgiveness, accountability, and purpose across both traditions.",
-    href: "/salvation",
+    href: "/salvation-and-purpose-of-life",
   },
   {
     title: "Read common questions",

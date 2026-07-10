@@ -53,7 +53,7 @@ function planned(title: string, categoryHref: string, description?: string) {
 
 export const islamChristianityBranches: IslamChristianityBranchDef[] = [
   branch(
-    "quran-vs-bible",
+    "the-quran-and-the-bible",
     [
       topic(
         "Who is God?",
@@ -107,7 +107,7 @@ export const islamChristianityBranches: IslamChristianityBranchDef[] = [
     { defaultOpen: true },
   ),
   branch(
-    "jesus",
+    "jesus-in-islam-and-christianity",
     [
       topic(
         "Who is Jesus?",
@@ -141,7 +141,7 @@ export const islamChristianityBranches: IslamChristianityBranchDef[] = [
       ),
       planned(
         "Jesus and the Trinity",
-        "/jesus",
+        "/tawhid-and-the-trinity",
         "Planned bridge into Tawhid, Trinity, incarnation, and worship.",
       ),
       topic(
@@ -240,18 +240,48 @@ export const islamChristianityBranches: IslamChristianityBranchDef[] = [
     ),
   ]),
   branch("difficult-questions", [
-    planned("What is a contradiction?", "/difficult-questions"),
-    planned("Genealogies of Jesus", "/difficult-questions"),
-    planned("The death of Judas", "/difficult-questions"),
-    planned("The timing of the crucifixion", "/difficult-questions"),
-    planned("Did anyone see God?", "/difficult-questions"),
+    topic(
+      "What is a contradiction?",
+      "/articles/what-is-a-contradiction",
+      "A framing article distinguishing genuine contradictions from textual variants, harmonizable difficulties, and interpretation.",
+      "draft",
+    ),
+    topic(
+      "Genealogies of Jesus",
+      "/articles/genealogies-of-jesus",
+      "Why Matthew and Luke give Jesus two different genealogies, and how each tradition reads the difficulty.",
+      "draft",
+    ),
+    topic(
+      "The death of Judas",
+      "/articles/the-death-of-judas",
+      "Matthew's hanging and Acts' falling-headlong accounts of Judas' death, and how each is read.",
+      "draft",
+    ),
+    topic(
+      "The timing of the crucifixion",
+      "/articles/the-timing-of-the-crucifixion",
+      "Reconciling the Synoptic and Johannine timing of the Last Supper and crucifixion with Passover.",
+      "draft",
+    ),
+    topic(
+      "Did anyone see God?",
+      "/articles/did-anyone-see-god",
+      "Moses at Sinai, John 1:18, and Quran 6:103 and 7:143 on seeing God.",
+      "draft",
+    ),
     topic(
       "Is original sin just?",
       "/articles/original-sin-vs-personal-responsibility",
       "A draft comparison of inherited guilt, accountability, repentance, and justice.",
       "draft",
     ),
-    planned("Can God become man?", "/difficult-questions"),
+    topic(
+      "Can God become man?",
+      "/articles/can-god-become-man",
+      "The Incarnation and Tawhid's objection to it, presented as a difference in starting premises about God.",
+      "draft",
+    ),
     topic(
       "Does salvation require a sacrifice?",
       "/articles/forgiveness-in-islam-and-christianity",
@@ -260,34 +290,132 @@ export const islamChristianityBranches: IslamChristianityBranchDef[] = [
     ),
   ]),
   branch("scientific-signs", [
-    planned(
+    topic(
       "How to approach scientific claims carefully",
-      "/scientific-signs",
-      "Planned guide for avoiding overstatement when discussing scripture and the natural world.",
+      "/articles/how-to-approach-scientific-claims-carefully",
+      "A framing guide for avoiding overstatement when discussing scripture and the natural world.",
+      "draft",
     ),
-    planned("Embryology", "/scientific-signs"),
-    planned("Cosmology", "/scientific-signs"),
-    planned("Mountains", "/scientific-signs"),
-    planned("Seas and barriers", "/scientific-signs"),
-    planned("Creation and nature", "/scientific-signs"),
-    planned("Strong vs debated arguments", "/scientific-signs"),
+    topic(
+      "Embryology",
+      "/articles/embryology",
+      "The Quran's stages of fetal development in Surah 23, compared with modern embryology.",
+      "draft",
+    ),
+    topic(
+      "Cosmology",
+      "/articles/cosmology",
+      "The Quran's account of the heavens and earth being joined then separated, and modern cosmology.",
+      "draft",
+    ),
+    topic(
+      "Mountains",
+      "/articles/mountains",
+      "The Quran's description of mountains as stabilizing pegs, read alongside plate tectonics.",
+      "draft",
+    ),
+    topic(
+      "Seas and barriers",
+      "/articles/seas-and-barriers",
+      "The Quran's barrier between two seas, and the oceanography of density and salinity stratification.",
+      "draft",
+    ),
+    topic(
+      "Creation and nature",
+      "/articles/creation-and-nature",
+      "Design arguments from creation in the Quran, the Bible, and the Darwinian challenge to them.",
+      "draft",
+    ),
+    topic(
+      "Strong vs debated arguments",
+      "/articles/strong-vs-debated-scientific-claims",
+      "An honest audit of which Quran-and-science claims are well-supported, debated, or overstated.",
+      "draft",
+    ),
   ]),
-  branch("history", [
-    planned("The historical Jesus", "/history"),
-    planned("Early Christianity", "/history"),
-    planned("Paul and his influence", "/history"),
+  branch("religious-history", [
+    topic(
+      "The historical Jesus",
+      "/articles/the-historical-jesus",
+      "What mainstream historical-critical scholarship holds about Jesus, compared with the Quran's account.",
+      "draft",
+    ),
+    topic(
+      "Early Christianity",
+      "/articles/early-christianity",
+      "From the crucifixion and resurrection claim through persecution to Constantine and Nicaea.",
+      "draft",
+    ),
+    topic(
+      "Paul and his influence",
+      "/articles/paul-and-his-influence",
+      "Paul's letters, his calling, and his lasting influence on Christian theology and practice.",
+      "draft",
+    ),
     topic(
       "Gospel authorship and dating",
       "/articles/gospel-authorship-and-dating",
       "What mainstream scholarship says about who wrote the Gospels, and when.",
       "draft",
     ),
-    planned("Council of Nicaea", "/history"),
-    planned("Development of Trinity doctrine", "/history"),
-    planned("Quranic revelation history", "/history"),
-    planned("Early Islamic preservation", "/history"),
+    topic(
+      "Council of Nicaea",
+      "/articles/council-of-nicaea",
+      "Why Constantine convened Nicaea in 325 CE, and the Islamic critique of doctrine settled by council.",
+      "draft",
+    ),
+    topic(
+      "Development of Trinity doctrine",
+      "/articles/development-of-trinity-doctrine",
+      "How Trinity doctrine developed over centuries of councils and debate, and the Quran's strict monotheism.",
+      "draft",
+    ),
+    topic(
+      "Quranic revelation history",
+      "/articles/quranic-revelation-history",
+      "How the Quran was revealed over 23 years and preserved through memorization and early writing.",
+      "draft",
+    ),
+    topic(
+      "Early Islamic preservation",
+      "/articles/early-islamic-preservation",
+      "How hadith transmission developed from companions' memorization to codified written collections.",
+      "draft",
+    ),
   ]),
-  branch("tawhid-vs-trinity", [
+  branch("historical-evidence", [
+    topic(
+      "The Exodus in historical context",
+      "/articles/the-exodus-in-historical-context",
+      "Comparing the Biblical and Quranic Exodus accounts against historical and archaeological evidence.",
+      "draft",
+    ),
+    topic(
+      "Pharaoh vs King: Youssef's story in history",
+      "/articles/pharaoh-vs-king-youssef-story",
+      "Why the Quran uses 'king' for Egypt's ruler in Youssef's time but 'pharaoh' in Moses' time.",
+      "draft",
+    ),
+    topic(
+      "Archeological evidence for Quranic accounts",
+      "/articles/archeological-evidence-for-quranic-accounts",
+      "What archaeology shows about the Quran's accounts of Ad, Thamud, Sodom, Babel, and Pharaoh's army.",
+      "draft",
+    ),
+    topic(
+      "Historical support for Biblical narratives",
+      "/articles/historical-support-for-biblical-narratives",
+      "Archaeological and historical support for David's kingdom, Jesus' birth, the crucifixion, and Paul.",
+      "draft",
+    ),
+    topic(
+      "Chronological alignment: Quranic and Biblical timelines",
+      "/articles/chronological-alignment-quranic-biblical-timelines",
+      "Comparing where the Quran and Bible place Abraham, Moses, David, and Jesus in time.",
+      "draft",
+    ),
+  ]),
+  branch("tawhid-and-the-trinity", [
     topic(
       "What is Tawhid?",
       "/articles/what-is-tawhid",
@@ -300,42 +428,181 @@ export const islamChristianityBranches: IslamChristianityBranchDef[] = [
       "A draft article intended to explain Christian belief fairly before comparison.",
       "draft",
     ),
-    planned("Did the prophets teach pure monotheism?", "/tawhid-vs-trinity"),
+    topic(
+      "Did the prophets teach pure monotheism?",
+      "/articles/did-prophets-teach-pure-monotheism",
+      "Competing Islamic and Christian claims about what Abraham, Moses, and Jesus taught about God's nature.",
+      "draft",
+    ),
     topic(
       "Did Jesus worship the Father?",
       "/articles/did-jesus-worship-god",
       "A draft bridge topic linked to Jesus and worship.",
       "draft",
     ),
-    planned("Incarnation explained", "/tawhid-vs-trinity"),
-    planned("Shirk explained", "/tawhid-vs-trinity"),
-    planned("God's nature in Islam and Christianity", "/tawhid-vs-trinity"),
-    planned("Worshiping God alone", "/tawhid-vs-trinity"),
+    topic(
+      "Incarnation explained",
+      "/articles/incarnation-explained",
+      "The hypostatic union and kenosis explained, alongside the Islamic theological objection to it.",
+      "draft",
+    ),
+    topic(
+      "Shirk explained",
+      "/articles/shirk-explained",
+      "What shirk means in Islam, and the Muslim-Christian debate over whether the Trinity constitutes it.",
+      "draft",
+    ),
+    topic(
+      "God's nature in Islam and Christianity",
+      "/articles/gods-nature-islam-christianity",
+      "Comparing the 99 names of Allah with Christian divine attributes and the doctrine of the Trinity.",
+      "draft",
+    ),
+    topic(
+      "Worshiping God alone",
+      "/articles/worshiping-god-alone",
+      "How Islam and Christianity both demand exclusive devotion to God alone, in their own terms.",
+      "draft",
+    ),
   ]),
-  branch("salvation", [
-    planned("Purpose of life in Islam and Christianity", "/salvation"),
-    planned("Sin and repentance", "/salvation"),
+  branch("salvation-and-purpose-of-life", [
+    topic(
+      "Purpose of life in Islam and Christianity",
+      "/articles/purpose-of-life",
+      "Worship and stewardship in Islam, and love of God and neighbor in Christianity, as life's purpose.",
+      "draft",
+    ),
+    topic(
+      "Sin and repentance",
+      "/articles/sin-and-repentance",
+      "How Islam and Christianity each understand sin, and the path back to God through repentance.",
+      "draft",
+    ),
     topic(
       "Original sin vs personal responsibility",
       "/articles/original-sin-vs-personal-responsibility",
       "A draft comparison of inherited guilt, accountability, repentance, and justice.",
       "draft",
     ),
-    planned("Grace, mercy, faith, and deeds", "/salvation"),
+    topic(
+      "Grace, mercy, faith, and deeds",
+      "/articles/grace-mercy-faith-deeds",
+      "Sola fide, Catholic and Orthodox synergy, and the Islamic balance of trust in God and deeds.",
+      "draft",
+    ),
     topic(
       "Forgiveness without blood sacrifice",
       "/articles/forgiveness-in-islam-and-christianity",
       "A draft article about forgiveness, sacrifice, mercy, and justice.",
       "draft",
     ),
-    planned("Heaven and Hell", "/salvation"),
-    planned("Judgment Day", "/salvation"),
+    topic(
+      "Heaven and Hell",
+      "/articles/heaven-and-hell",
+      "Jannah and Jahannam alongside the Christian heaven and hell, in both traditions' own imagery.",
+      "draft",
+    ),
+    topic(
+      "Judgment Day",
+      "/articles/judgment-day",
+      "Yawm al-Qiyamah and the Last Judgment, compared across both traditions' eschatology.",
+      "draft",
+    ),
   ]),
   branch("prophecies", [
-    planned("Prophecies about Jesus", "/prophecies"),
-    planned("Possible prophecies about Muhammad", "/prophecies"),
-    planned("Quranic fulfilled prophecies", "/prophecies"),
-    planned("Biblical prophecies and interpretation", "/prophecies"),
-    planned("End-times beliefs", "/prophecies"),
+    topic(
+      "Prophecies about Jesus",
+      "/articles/prophecies-about-jesus",
+      "Old Testament passages Christians read as predicting Jesus, and the scholarly debate around them.",
+      "draft",
+    ),
+    topic(
+      "Possible prophecies about Muhammad",
+      "/articles/possible-prophecies-about-muhammad",
+      "Biblical passages some Muslims read as foretelling Muhammad, and the Christian response.",
+      "draft",
+    ),
+    topic(
+      "Quranic fulfilled prophecies",
+      "/articles/quranic-fulfilled-prophecies",
+      "The Quran's claims of fulfilled prophecy, examined alongside scholarly critique.",
+      "draft",
+    ),
+    topic(
+      "Biblical prophecies and interpretation",
+      "/articles/biblical-prophecies-and-interpretation",
+      "Preterist, historicist, and futurist frameworks for reading Biblical prophecy.",
+      "draft",
+    ),
+    topic(
+      "End-times beliefs",
+      "/articles/end-times-beliefs",
+      "Islamic and Christian end-times beliefs, from the Dajjal and Gog and Magog to the Rapture and Tribulation.",
+      "draft",
+    ),
+  ]),
+  branch("war-and-violence", [
+    topic(
+      "Jihad and Just War theory",
+      "/articles/jihad-and-just-war-theory",
+      "Islamic jurisprudence on armed struggle compared with the Christian Just War tradition.",
+      "draft",
+    ),
+    topic(
+      "Crusades and Islamic history",
+      "/articles/crusades-and-islamic-history",
+      "The Crusades' religious and political dimensions, and how both traditions narrate the conflict.",
+      "draft",
+    ),
+    topic(
+      "Self-defense in scripture",
+      "/articles/self-defense-in-scripture",
+      "What the Quran and Bible say about the right to defend life and property.",
+      "draft",
+    ),
+    topic(
+      "Punishment for apostasy and war",
+      "/articles/punishment-for-apostasy-and-war",
+      "Islamic jurisprudence on apostasy law, compared with the history of Christian heresy trials.",
+      "draft",
+    ),
+    topic(
+      "Terrorism and extremism: Islamic perspective",
+      "/articles/terrorism-and-extremism-islamic-perspective",
+      "Mainstream Islamic condemnation of terrorism, and how extremist groups misuse Islamic texts.",
+      "draft",
+    ),
+  ]),
+  branch("women", [
+    topic(
+      "Women in the Quran and Bible",
+      "/articles/women-in-the-quran-and-bible",
+      "The role and status of women across key passages in both the Quran and the Bible.",
+      "draft",
+    ),
+    topic(
+      "Inheritance and testimony",
+      "/articles/inheritance-and-testimony",
+      "Islamic and Biblical law on inheritance shares and the legal weight of testimony.",
+      "draft",
+    ),
+    topic(
+      "Marriage and divorce",
+      "/articles/marriage-and-divorce",
+      "Islamic marriage contracts and divorce compared with Christian sacramental and Protestant views.",
+      "draft",
+    ),
+    topic(
+      "Modesty and dress",
+      "/articles/modesty-and-dress",
+      "Scriptural roots of hijab and Christian modesty teaching, and the diversity within each tradition.",
+      "draft",
+    ),
+    topic(
+      "Female scholars and leaders",
+      "/articles/female-scholars-and-leaders",
+      "Women in Islamic scholarship and Christian church history, from Aisha to Deborah and Priscilla.",
+      "draft",
+    ),
   ]),
 ];

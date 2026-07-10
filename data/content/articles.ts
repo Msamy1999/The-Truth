@@ -271,7 +271,7 @@ export const articles: Article[] = [
     title: "Who is Jesus?",
     subtitle:
       "A draft Christian-facing study of Jesus with scripture, interpretation, and context kept separate.",
-    category: "jesus",
+    category: "jesus-in-islam-and-christianity",
     summary:
       "Draft placeholder. This article will compare Islamic and Christian claims about Jesus with verified scripture and careful interpretation.",
     tags: ["Jesus", "Theology", "Scripture"],
@@ -287,7 +287,7 @@ export const articles: Article[] = [
     title: "Did Jesus worship God?",
     subtitle:
       "A draft study question about prayer, worship, obedience, and what those actions mean.",
-    category: "jesus",
+    category: "jesus-in-islam-and-christianity",
     summary:
       "Draft placeholder. This article will ask how Jesus' worship and prayer should be understood, while treating Christian belief respectfully.",
     tags: ["Jesus", "Theology", "Scripture"],
@@ -299,7 +299,7 @@ export const articles: Article[] = [
     title: "Who follows Jesus more closely?",
     subtitle:
       "A draft comparison about worship, obedience, belief, and love for Jesus.",
-    category: "jesus",
+    category: "jesus-in-islam-and-christianity",
     summary:
       "Draft placeholder. This article will compare claims about following Jesus without mocking Christian devotion or Muslim conviction.",
     tags: ["Jesus", "Theology", "Questions"],
@@ -311,7 +311,7 @@ export const articles: Article[] = [
     title: "Who is God? Quran and Bible comparison",
     subtitle:
       "A draft comparison of divine identity, worship, and revelation with source placeholders.",
-    category: "quran-vs-bible",
+    category: "the-quran-and-the-bible",
     summary:
       "Draft placeholder. This article will compare how God is described and worshiped, using verified scripture and fair interpretation.",
     tags: ["Scripture", "Theology"],
@@ -347,7 +347,7 @@ export const articles: Article[] = [
     title: "What is Tawhid?",
     subtitle:
       "A draft explanation of Islamic monotheism for Christian and seeker audiences.",
-    category: "tawhid-vs-trinity",
+    category: "tawhid-and-the-trinity",
     summary:
       "Draft placeholder. This article will define Tawhid clearly and compare it respectfully with Christian theology.",
     tags: ["Theology", "Jesus"],
@@ -359,7 +359,7 @@ export const articles: Article[] = [
     title: "What is the Trinity?",
     subtitle:
       "A draft article for explaining Christian belief fairly before comparison with Tawhid.",
-    category: "tawhid-vs-trinity",
+    category: "tawhid-and-the-trinity",
     summary:
       "Draft placeholder. This article will explain Trinitarian belief with Christian sources before presenting Islamic comparison.",
     tags: ["Theology", "Jesus"],
@@ -371,7 +371,7 @@ export const articles: Article[] = [
     title: "Original sin vs personal responsibility",
     subtitle:
       "A draft comparison of inherited guilt, accountability, repentance, and justice.",
-    category: "salvation",
+    category: "salvation-and-purpose-of-life",
     summary:
       "Draft placeholder. This article will compare original sin and personal responsibility while representing Christian belief fairly.",
     tags: ["Purpose", "Theology", "Questions"],
@@ -383,7 +383,7 @@ export const articles: Article[] = [
     title: "Forgiveness in Islam and Christianity",
     subtitle:
       "A draft comparison of mercy, repentance, sacrifice, faith, and deeds.",
-    category: "salvation",
+    category: "salvation-and-purpose-of-life",
     summary:
       "Draft placeholder. This article will compare forgiveness in Islam and Christianity with scripture placeholders and fair theological framing.",
     tags: ["Purpose", "Theology", "Questions"],
@@ -406,7 +406,7 @@ export const articles: Article[] = [
     slug: "how-to-read-comparisons",
     title: "How to Read Comparisons Carefully",
     subtitle: "A draft template for future beginner-friendly study pages.",
-    category: "quran-vs-bible",
+    category: "the-quran-and-the-bible",
     summary:
       "Placeholder article showing how future content can separate scripture, interpretation, history, and argument.",
     tags: ["Scripture", "Questions"],
