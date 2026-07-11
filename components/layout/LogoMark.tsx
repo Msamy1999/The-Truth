@@ -1,10 +1,11 @@
 /**
  * Inline-SVG rendering of public/logo-mark.svg (keep the two in sync).
  *
- * Three wandering paths converging into one straight path, ending at a gold
- * destination point. Strokes use currentColor so the mark follows the text
- * colour of its parent (e.g. `text-accent`) in light and dark mode; size it
- * with Tailwind classes such as `h-8 w-8`.
+ * "Road to the light": a straight road in perspective, open at the horizon,
+ * receding toward a white light with a warm gold glow. Road strokes use
+ * currentColor so the mark follows the text colour of its parent (e.g.
+ * `text-accent`) in light and dark mode; size it with Tailwind classes such
+ * as `h-8 w-8`.
  */
 type LogoMarkProps = {
   className?: string;
@@ -23,32 +24,35 @@ export function LogoMark({ className, title }: LogoMarkProps) {
       aria-hidden={title ? undefined : true}
     >
       {title ? <title>{title}</title> : null}
-      {/* Three wandering paths converging into one straight path */}
+      {/* The white light at the end of the road, with a warm glow */}
+      <circle cx="32" cy="15.5" r="11" fill="#C8951E" opacity="0.18" />
+      <circle cx="32" cy="15.5" r="7" fill="#C8951E" opacity="0.4" />
+      <circle cx="32" cy="15.5" r="4.2" fill="#FFFFFF" stroke="#C8951E" strokeWidth="1.6" />
+      {/* The straight road, in perspective, open at the horizon */}
+      <path d="M15 58 L26.8 27" stroke="currentColor" strokeWidth="4.6" strokeLinecap="round" />
+      <path d="M49 58 L37.2 27" stroke="currentColor" strokeWidth="4.6" strokeLinecap="round" />
+      {/* Center line receding toward the light */}
       <path
-        d="M6 13 C 16 13, 21 30, 29.5 31.7"
+        d="M32 55.5 L32 49.5"
         stroke="currentColor"
-        strokeWidth="4"
+        strokeWidth="3.4"
         strokeLinecap="round"
-        opacity="0.45"
+        opacity="0.6"
       />
       <path
-        d="M6 32 C 12 27.5, 17 36.5, 29.5 32"
+        d="M32 44 L32 39"
         stroke="currentColor"
-        strokeWidth="4"
+        strokeWidth="2.7"
         strokeLinecap="round"
-        opacity="0.65"
+        opacity="0.6"
       />
       <path
-        d="M6 51 C 16 51, 21 34, 29.5 32.3"
+        d="M32 34 L32 30.5"
         stroke="currentColor"
-        strokeWidth="4"
+        strokeWidth="2.1"
         strokeLinecap="round"
-        opacity="0.45"
+        opacity="0.6"
       />
-      {/* The one straight path */}
-      <path d="M30 32 L51 32" stroke="currentColor" strokeWidth="6" strokeLinecap="round" />
-      {/* Destination point */}
-      <circle cx="57.5" cy="32" r="3.4" fill="#C8951E" />
     </svg>
   );
 }

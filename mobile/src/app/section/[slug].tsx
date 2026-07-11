@@ -93,6 +93,17 @@ function TreeNode({ node }: { node: ResearchTreeNode }) {
             </Text>
           ) : null}
         </Pressable>
+        {open && node.description ? (
+          <Text
+            style={[
+              type.caption,
+              styles.branchDescription,
+              { color: theme.mutedForeground },
+            ]}
+          >
+            {node.description}
+          </Text>
+        ) : null}
         {open ? (
           <View style={[styles.children, { borderLeftColor: theme.hairline }]}>
             {node.children!.map((child, index) => (
@@ -164,6 +175,11 @@ const styles = StyleSheet.create({
     gap: space.xs,
   },
   branchHeader: { flexDirection: "row", alignItems: "center", gap: space.md },
+  branchDescription: {
+    marginLeft: 26 + space.md,
+    marginTop: 2,
+    lineHeight: 17,
+  },
   chevronBadge: {
     width: 26,
     height: 26,

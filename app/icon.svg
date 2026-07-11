@@ -6,12 +6,15 @@
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="14" fill="url(#bg)" />
-  <!-- Three wandering paths converging into one straight path -->
-  <path d="M10 16 C 19 16, 23.5 30.5, 31 31.7" stroke="#F4EDE1" stroke-width="3.6" stroke-linecap="round" opacity="0.5" />
-  <path d="M10 32 C 15.5 28, 20 36, 31 32" stroke="#F4EDE1" stroke-width="3.6" stroke-linecap="round" opacity="0.7" />
-  <path d="M10 48 C 19 48, 23.5 33.5, 31 32.3" stroke="#F4EDE1" stroke-width="3.6" stroke-linecap="round" opacity="0.5" />
-  <!-- The one straight path -->
-  <path d="M31.5 32 L49 32" stroke="#FFFFFF" stroke-width="5.2" stroke-linecap="round" />
-  <!-- Destination point -->
-  <circle cx="54.5" cy="32" r="3" fill="#C8951E" />
+  <!-- The white light at the end of the road, with a warm glow -->
+  <circle cx="32" cy="17.5" r="10.5" fill="#E7B94A" opacity="0.22" />
+  <circle cx="32" cy="17.5" r="6.6" fill="#E7B94A" opacity="0.4" />
+  <circle cx="32" cy="17.5" r="4" fill="#FFFFFF" />
+  <!-- The straight road, in perspective, open at the horizon -->
+  <path d="M17 55 L27.6 28" stroke="#F4EDE1" stroke-width="4.2" stroke-linecap="round" />
+  <path d="M47 55 L36.4 28" stroke="#F4EDE1" stroke-width="4.2" stroke-linecap="round" />
+  <!-- Center line receding toward the light -->
+  <path d="M32 52.5 L32 47.5" stroke="#F4EDE1" stroke-width="3" stroke-linecap="round" opacity="0.65" />
+  <path d="M32 42.5 L32 38.3" stroke="#F4EDE1" stroke-width="2.5" stroke-linecap="round" opacity="0.65" />
+  <path d="M32 33.8 L32 30.8" stroke="#F4EDE1" stroke-width="2" stroke-linecap="round" opacity="0.65" />
 </svg>

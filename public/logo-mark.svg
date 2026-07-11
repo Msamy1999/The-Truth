@@ -1,10 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="The Straight Path logo">
-  <!-- Three wandering paths converging into one straight path -->
-  <path d="M6 13 C 16 13, 21 30, 29.5 31.7" stroke="currentColor" stroke-width="4" stroke-linecap="round" opacity="0.45" />
-  <path d="M6 32 C 12 27.5, 17 36.5, 29.5 32" stroke="currentColor" stroke-width="4" stroke-linecap="round" opacity="0.65" />
-  <path d="M6 51 C 16 51, 21 34, 29.5 32.3" stroke="currentColor" stroke-width="4" stroke-linecap="round" opacity="0.45" />
-  <!-- The one straight path -->
-  <path d="M30 32 L51 32" stroke="currentColor" stroke-width="6" stroke-linecap="round" />
-  <!-- Destination point -->
-  <circle cx="57.5" cy="32" r="3.4" fill="#C8951E" />
+  <!-- The white light at the end of the road, with a warm glow -->
+  <circle cx="32" cy="15.5" r="11" fill="#C8951E" opacity="0.18" />
+  <circle cx="32" cy="15.5" r="7" fill="#C8951E" opacity="0.4" />
+  <circle cx="32" cy="15.5" r="4.2" fill="#FFFFFF" stroke="#C8951E" stroke-width="1.6" />
+  <!-- The straight road, in perspective, open at the horizon -->
+  <path d="M15 58 L26.8 27" stroke="currentColor" stroke-width="4.6" stroke-linecap="round" />
+  <path d="M49 58 L37.2 27" stroke="currentColor" stroke-width="4.6" stroke-linecap="round" />
+  <!-- Center line receding toward the light -->
+  <path d="M32 55.5 L32 49.5" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" opacity="0.6" />
+  <path d="M32 44 L32 39" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" opacity="0.6" />
+  <path d="M32 34 L32 30.5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" opacity="0.6" />
 </svg>

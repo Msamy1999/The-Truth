@@ -16,13 +16,75 @@ type PlayState = "idle" | "playing" | "paused";
 
 type CopyStatus = { kind: "success" | "error"; message: string } | null;
 
-const MAX_CHUNK_LENGTH = 220;
+const MAX_CHUNK_LENGTH = 360;
 const KEEP_ALIVE_MS = 10_000;
 const COPY_STATUS_MS = 2_500;
+const VOICE_RETRY_MS = 400;
 
 /**
- * Split text into sentence-sized chunks (~220 chars). Chrome silently stops
- * long utterances after ~15 seconds, so we queue many short ones instead.
+ * Rank English voices by expected quality. Higher score wins.
+ * Edge "Natural" neural voices > Chrome "Google" cloud voices > other
+ * online/remote voices > good Apple local voices > platform default.
+ */
+function scoreVoice(voice: SpeechSynthesisVoice): number {
+  const name = voice.name.toLowerCase();
+  let score = 0;
+  if (name.includes("natural")) {
+    score += 100;
+  }
+  if (name.includes("google")) {
+    score += 80;
+  }
+  if (name.includes("online")) {
+    score += 60;
+  }
+  if (!voice.localService) {
+    score += 40;
+  }
+  if (name.includes("samantha") || name.includes("daniel")) {
+    score += 20;
+  }
+  if (voice.default) {
+    score += 1;
+  }
+  return score;
+}
+
+function pickBestEnglishVoice(
+  voices: SpeechSynthesisVoice[],
+): SpeechSynthesisVoice | null {
+  let best: SpeechSynthesisVoice | null = null;
+  let bestScore = -1;
+  for (const voice of voices) {
+    if (!voice.lang.toLowerCase().startsWith("en")) {
+      continue;
+    }
+    const score = scoreVoice(voice);
+    if (score > bestScore) {
+      best = voice;
+      bestScore = score;
+    }
+  }
+  return best;
+}
+
+/**
+ * Speech-only cleanup: strip leftover markdown symbols, soften em-dashes
+ * into commas for better pacing, and collapse whitespace. The Copy button
+ * keeps the untouched articleText for full fidelity.
+ */
+function toSpeechText(text: string): string {
+  return text
+    .replace(/[*_#`]+/g, "")
+    .replace(/\s*[—–]\s*/g, ", ")
+    .replace(/[ \t]+/g, " ")
+    .replace(/ ?\n ?/g, "\n");
+}
+
+/**
+ * Split text into sentence-accumulating chunks (~360 chars), never breaking
+ * mid-sentence unless a single sentence exceeds the limit. Chrome silently
+ * stops long utterances after ~15 seconds, so we queue several short ones.
  */
 function chunkText(text: string): string[] {
   const chunks: string[] = [];
@@ -80,7 +142,7 @@ function chunkText(text: string): string[] {
     }
   }
 
-  return chunks;
+  return chunks.map((chunk) => chunk.trim()).filter(Boolean);
 }
 
 const toolButtonClass =
@@ -100,6 +162,7 @@ export function ArticleTools({
   const [speechSupported, setSpeechSupported] = useState(false);
   const [playState, setPlayState] = useState<PlayState>("idle");
   const [copyStatus, setCopyStatus] = useState<CopyStatus>(null);
+  const [voiceName, setVoiceName] = useState("");
 
   const stoppedRef = useRef(false);
   const keepAliveRef = useRef<number | null>(null);
@@ -112,18 +175,22 @@ export function ArticleTools({
     }
     setSpeechSupported(true);
 
+    // getVoices() is async-populated: Chrome often returns [] on first call.
+    // Listen for voiceschanged AND retry once after a short timeout.
     const pickVoice = () => {
-      const voices = window.speechSynthesis.getVoices();
-      voiceRef.current =
-        voices.find((voice) => voice.lang.startsWith("en") && voice.default) ??
-        voices.find((voice) => voice.lang.startsWith("en")) ??
-        null;
+      const best = pickBestEnglishVoice(window.speechSynthesis.getVoices());
+      if (best) {
+        voiceRef.current = best;
+        setVoiceName(best.name);
+      }
     };
 
     pickVoice();
     window.speechSynthesis.addEventListener("voiceschanged", pickVoice);
+    const retryTimeout = window.setTimeout(pickVoice, VOICE_RETRY_MS);
     return () => {
       window.speechSynthesis.removeEventListener("voiceschanged", pickVoice);
+      window.clearTimeout(retryTimeout);
     };
   }, []);
 
@@ -181,7 +248,11 @@ export function ArticleTools({
     const utterance = new SpeechSynthesisUtterance(chunks[index]);
     if (voiceRef.current) {
       utterance.voice = voiceRef.current;
+      utterance.lang = voiceRef.current.lang;
     }
+    utterance.rate = 1;
+    utterance.pitch = 1;
+    utterance.volume = 1;
     utterance.onend = () => {
       if (!stoppedRef.current) {
         speakChunk(chunks, index + 1);
@@ -199,7 +270,7 @@ export function ArticleTools({
   function handlePlay() {
     const synth = window.speechSynthesis;
     synth.cancel();
-    const chunks = chunkText(articleText);
+    const chunks = chunkText(toSpeechText(articleText));
     if (chunks.length === 0) {
       return;
     }
@@ -281,7 +352,10 @@ export function ArticleTools({
   }
 
   return (
-    <div className={cn("flex flex-wrap items-center gap-2", className)}>
+    <div
+      data-voice={voiceName || undefined}
+      className={cn("flex flex-wrap items-center gap-2", className)}
+    >
       <div
         role="group"
         aria-label={`Reading tools for ${articleTitle}`}

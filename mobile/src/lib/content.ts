@@ -17,6 +17,7 @@ import type {
 const API_URL = process.env.EXPO_PUBLIC_API_URL ?? "";
 const CACHE_KEY = "content-cache-v1";
 const MANIFEST_KEY = "content-manifest-v1";
+const CACHE_BUNDLE_KEY = "content-cache-bundle-fingerprint-v1";
 
 /* eslint-disable @typescript-eslint/no-require-imports */
 const bundledStructure = require("../../assets/content/structure.json");
@@ -161,6 +162,18 @@ const bundledContent: AppContent = buildContent({
   sourceItems: bundledSourceItems,
 });
 
+/**
+ * Identifies the snapshot this binary shipped with. When an app update brings
+ * a newer bundled snapshot, any AsyncStorage cache written against the OLD
+ * bundle must be discarded — otherwise stale cached articles would shadow the
+ * fresher bundled content until the next successful API refresh.
+ */
+const bundleFingerprint = `${bundledArticles.length}:${bundledArticles.reduce(
+  (latest: string, doc: any) =>
+    String(doc.updatedAt ?? "") > latest ? String(doc.updatedAt ?? "") : latest,
+  "",
+)}`;
+
 export function getTrees(): Record<string, any> {
   return bundledStructure.trees;
 }
@@ -170,12 +183,22 @@ export function getTrees(): Record<string, any> {
 // ---------------------------------------------------------------------------
 
 async function fetchCollection(collection: string): Promise<any[]> {
-  const response = await fetch(
-    `${API_URL}/api/${collection}?limit=200&depth=1&sort=createdAt`,
-  );
-  if (!response.ok) throw new Error(`${collection}: HTTP ${response.status}`);
-  const data = (await response.json()) as { docs: any[] };
-  return data.docs;
+  const docs: any[] = [];
+  let page = 1;
+  while (true) {
+    const response = await fetch(
+      `${API_URL}/api/${collection}?limit=200&depth=1&sort=createdAt&page=${page}`,
+    );
+    if (!response.ok) throw new Error(`${collection}: HTTP ${response.status}`);
+    const data = (await response.json()) as {
+      docs: any[];
+      hasNextPage: boolean;
+    };
+    docs.push(...data.docs);
+    if (!data.hasNextPage) break;
+    page += 1;
+  }
+  return docs;
 }
 
 async function refreshFromApi(): Promise<AppContent | null> {
@@ -203,6 +226,7 @@ async function refreshFromApi(): Promise<AppContent | null> {
     const raw = { articles, citations, glossary, sourceCategories, sourceItems };
     await AsyncStorage.setItem(CACHE_KEY, JSON.stringify(raw));
     await AsyncStorage.setItem(MANIFEST_KEY, manifest);
+    await AsyncStorage.setItem(CACHE_BUNDLE_KEY, bundleFingerprint);
     return buildContent(raw);
   } catch {
     return null; // Offline or API unreachable — bundled/cached content stands.
@@ -211,6 +235,13 @@ async function refreshFromApi(): Promise<AppContent | null> {
 
 async function loadCached(): Promise<AppContent | null> {
   try {
+    // A cache written against an older bundled snapshot is stale by
+    // definition (the app update shipped fresher data) — discard it.
+    const cachedFingerprint = await AsyncStorage.getItem(CACHE_BUNDLE_KEY);
+    if (cachedFingerprint !== bundleFingerprint) {
+      await AsyncStorage.multiRemove([CACHE_KEY, MANIFEST_KEY, CACHE_BUNDLE_KEY]);
+      return null;
+    }
     const cached = await AsyncStorage.getItem(CACHE_KEY);
     if (!cached) return null;
     return buildContent(JSON.parse(cached));

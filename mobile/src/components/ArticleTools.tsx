@@ -64,7 +64,29 @@ export function buildArticleText(article: Article): string {
     .join("\n\n");
 }
 
-/** Keep a safety margin under the platform's per-utterance limit. */
+/**
+ * Listening-only cleanup applied on top of `buildArticleText` before the text
+ * is chunked for TTS. The Copy button keeps the untouched `buildArticleText`
+ * output — this only changes what the speech engine hears:
+ * - em/en dashes read badly ("dash"), so they become a comma pause;
+ * - stray markdown/formatting symbols are dropped;
+ * - runs of spaces/tabs collapse so the engine does not stutter.
+ * Paragraph breaks (newlines) are preserved for the chunker.
+ */
+function prepareForSpeech(text: string): string {
+  return text
+    .replace(/\s*[—–]\s*/g, ", ")
+    .replace(/[#*_`>|~]/g, "")
+    .replace(/[ \t]+/g, " ")
+    .replace(/ ?\n ?/g, "\n")
+    .trim();
+}
+
+/**
+ * Per-chunk target. Kept well under the platform's per-utterance limit
+ * (Speech.maxSpeechInputLength, ~4000 chars) so whole sentences are always
+ * accumulated into a chunk and inter-chunk pauses stay rare.
+ */
 const CHUNK_LIMIT = Math.max(
   500,
   Math.min(Speech.maxSpeechInputLength, 4000) - 200,
@@ -118,6 +140,66 @@ function chunkText(text: string, limit: number): string[] {
 }
 
 // ---------------------------------------------------------------------------
+// Voice selection
+// ---------------------------------------------------------------------------
+
+/** Language passed to every utterance so the engine never guesses. */
+const SPEECH_LANGUAGE = "en-US";
+
+const isEnglish = (voice: Speech.Voice) =>
+  voice.language?.toLowerCase().startsWith("en") ?? false;
+
+const isEnUS = (voice: Speech.Voice) =>
+  (voice.language ?? "").toLowerCase().replace("_", "-") === "en-us";
+
+/**
+ * Pick the best-sounding English voice available on this device.
+ *
+ * iOS ships "Enhanced" (higher-bitrate) variants of its voices; the Siri
+ * voices among them sound the most natural. Android's Google TTS exposes
+ * on-device and network voices — the "network" ones are the higher-quality
+ * synthesis. Returns `undefined` (system default) when nothing matches.
+ */
+async function pickBestEnglishVoice(): Promise<string | undefined> {
+  try {
+    const voices = await Speech.getAvailableVoicesAsync();
+    const english = voices.filter(isEnglish);
+    const enUS = english.filter(isEnUS);
+
+    if (Platform.OS === "ios") {
+      const enhanced = english.filter(
+        (voice) => voice.quality === Speech.VoiceQuality.Enhanced,
+      );
+      const siri = enhanced.find((voice) =>
+        voice.identifier.toLowerCase().includes("siri"),
+      );
+      if (siri) return siri.identifier;
+      const enhancedUS = enhanced.find(isEnUS);
+      if (enhancedUS) return enhancedUS.identifier;
+      if (enhanced[0]) return enhanced[0].identifier;
+      return enUS[0]?.identifier;
+    }
+
+    // Android (Google TTS): prefer network-quality en-US voices.
+    const network = enUS.find(
+      (voice) =>
+        voice.identifier.toLowerCase().includes("network") ||
+        voice.name?.toLowerCase().includes("network"),
+    );
+    return (network ?? enUS[0] ?? english[0])?.identifier;
+  } catch {
+    return undefined; // Voice listing failed — let the system default speak.
+  }
+}
+
+/** Resolve the voice once per app session; every article reuses the result. */
+let cachedVoicePromise: Promise<string | undefined> | null = null;
+function getBestEnglishVoice(): Promise<string | undefined> {
+  if (!cachedVoicePromise) cachedVoicePromise = pickBestEnglishVoice();
+  return cachedVoicePromise;
+}
+
+// ---------------------------------------------------------------------------
 // Toolbar button
 // ---------------------------------------------------------------------------
 
@@ -162,6 +244,9 @@ const CAN_PAUSE = Platform.OS === "ios";
 export function ArticleTools({ article }: { article: Article }) {
   const theme = useTheme();
   const fullText = useMemo(() => buildArticleText(article), [article]);
+  // What the TTS engine reads: same text with listening-only cleanup applied.
+  // The Copy button keeps `fullText` untouched.
+  const speechText = useMemo(() => prepareForSpeech(fullText), [fullText]);
 
   const [status, setStatus] = useState<SpeechStatus>("idle");
   // Invalidates in-flight onDone callbacks after a stop/restart, so a stale
@@ -169,6 +254,7 @@ export function ArticleTools({ article }: { article: Article }) {
   const sessionRef = useRef(0);
   const chunksRef = useRef<string[]>([]);
   const indexRef = useRef(0);
+  const voiceRef = useRef<string | undefined>(undefined);
 
   const speakChunk = useCallback((session: number) => {
     const chunk = chunksRef.current[indexRef.current];
@@ -177,6 +263,10 @@ export function ArticleTools({ article }: { article: Article }) {
       return;
     }
     Speech.speak(chunk, {
+      voice: voiceRef.current,
+      language: SPEECH_LANGUAGE,
+      rate: 1.0,
+      pitch: 1.0,
       onDone: () => {
         if (sessionRef.current !== session) return;
         indexRef.current += 1;
@@ -188,14 +278,19 @@ export function ArticleTools({ article }: { article: Article }) {
     });
   }, []);
 
-  const startReading = useCallback(() => {
+  const startReading = useCallback(async () => {
     sessionRef.current += 1;
-    chunksRef.current = chunkText(fullText, CHUNK_LIMIT);
+    const session = sessionRef.current;
+    chunksRef.current = chunkText(speechText, CHUNK_LIMIT);
     indexRef.current = 0;
     if (chunksRef.current.length === 0) return;
     setStatus("speaking");
-    speakChunk(sessionRef.current);
-  }, [fullText, speakChunk]);
+    // Lazily resolve the best voice on first play (cached for the session).
+    voiceRef.current = await getBestEnglishVoice();
+    // The user may have stopped or left the screen while we awaited.
+    if (sessionRef.current !== session) return;
+    speakChunk(session);
+  }, [speechText, speakChunk]);
 
   const stopReading = useCallback(() => {
     sessionRef.current += 1;
