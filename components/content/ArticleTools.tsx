@@ -12,7 +12,7 @@ type ArticleToolsProps = {
   className?: string;
 };
 
-type PlayState = "idle" | "playing" | "paused";
+type PlayState = "idle" | "loading" | "playing" | "paused";
 
 type CopyStatus = { kind: "success" | "error"; message: string } | null;
 
@@ -20,9 +20,11 @@ const MAX_CHUNK_LENGTH = 360;
 const KEEP_ALIVE_MS = 10_000;
 const COPY_STATUS_MS = 2_500;
 const VOICE_RETRY_MS = 400;
+const NEURAL_VOICE = "en-US-AndrewMultilingualNeural";
 
 /**
- * Rank English voices by expected quality. Higher score wins.
+ * Rank English voices by expected quality — used only by the on-device
+ * FALLBACK engine when the server's neural voice is unreachable.
  * Edge "Natural" neural voices > Chrome "Google" cloud voices > other
  * online/remote voices > good Apple local voices > platform default.
  */
@@ -83,8 +85,9 @@ function toSpeechText(text: string): string {
 
 /**
  * Split text into sentence-accumulating chunks (~360 chars), never breaking
- * mid-sentence unless a single sentence exceeds the limit. Chrome silently
- * stops long utterances after ~15 seconds, so we queue several short ones.
+ * mid-sentence unless a single sentence exceeds the limit. Short chunks keep
+ * the neural stream's time-to-first-audio low (each chunk synthesizes while
+ * the previous one plays) and dodge Chrome's ~15s cutoff in the fallback.
  */
 function chunkText(text: string): string[] {
   const chunks: string[] = [];
@@ -145,6 +148,14 @@ function chunkText(text: string): string[] {
   return chunks.map((chunk) => chunk.trim()).filter(Boolean);
 }
 
+/**
+ * A ~44-byte silent WAV. Played synchronously inside the click handler it
+ * "unlocks" the audio element on Safari/iOS, whose autoplay policy would
+ * otherwise reject the real play() that happens after the first TTS fetch.
+ */
+const SILENT_WAV =
+  "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA";
+
 const toolButtonClass =
   "inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 
@@ -165,9 +176,17 @@ export function ArticleTools({
   const [voiceName, setVoiceName] = useState("");
 
   const stoppedRef = useRef(false);
+  /** Increments on every play/stop so stale async callbacks self-discard. */
+  const sessionRef = useRef(0);
   const keepAliveRef = useRef<number | null>(null);
   const copyTimeoutRef = useRef<number | null>(null);
   const voiceRef = useRef<SpeechSynthesisVoice | null>(null);
+  /** "neural" (server audio) or "system" (speechSynthesis fallback). */
+  const engineRef = useRef<"neural" | "system">("neural");
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const objectUrlRef = useRef<string | null>(null);
+  const prefetchRef = useRef<Promise<Blob> | null>(null);
+  const abortRef = useRef<AbortController | null>(null);
 
   useEffect(() => {
     if (typeof window === "undefined" || !("speechSynthesis" in window)) {
@@ -181,7 +200,6 @@ export function ArticleTools({
       const best = pickBestEnglishVoice(window.speechSynthesis.getVoices());
       if (best) {
         voiceRef.current = best;
-        setVoiceName(best.name);
       }
     };
 
@@ -194,10 +212,20 @@ export function ArticleTools({
     };
   }, []);
 
-  // Cancel speech and timers on unmount and on route change.
+  // Stop playback and timers on unmount and on route change.
   useEffect(() => {
     return () => {
+      sessionRef.current += 1;
       stoppedRef.current = true;
+      abortRef.current?.abort();
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.removeAttribute("src");
+      }
+      if (objectUrlRef.current) {
+        URL.revokeObjectURL(objectUrlRef.current);
+        objectUrlRef.current = null;
+      }
       if (keepAliveRef.current !== null) {
         window.clearInterval(keepAliveRef.current);
         keepAliveRef.current = null;
@@ -236,6 +264,88 @@ export function ArticleTools({
     setPlayState("idle");
   }
 
+  // -------------------------------------------------------------------------
+  // Primary engine: server-side neural voice, played as a queued audio stream.
+  // -------------------------------------------------------------------------
+
+  function fetchChunkBlob(chunk: string, signal: AbortSignal): Promise<Blob> {
+    return fetch(
+      `/api/tts?text=${encodeURIComponent(chunk)}&voice=${NEURAL_VOICE}`,
+      { signal },
+    ).then((response) => {
+      if (!response.ok) {
+        throw new Error(`TTS ${response.status}`);
+      }
+      return response.blob();
+    });
+  }
+
+  function getAudio(): HTMLAudioElement {
+    if (!audioRef.current) {
+      audioRef.current = new Audio();
+      audioRef.current.preload = "auto";
+    }
+    return audioRef.current;
+  }
+
+  async function playNeuralChunk(
+    chunks: string[],
+    index: number,
+    session: number,
+  ): Promise<void> {
+    if (session !== sessionRef.current || stoppedRef.current) {
+      return;
+    }
+    if (index >= chunks.length) {
+      finishPlayback();
+      return;
+    }
+
+    const signal = abortRef.current?.signal as AbortSignal;
+    const blob = await (prefetchRef.current ?? fetchChunkBlob(chunks[index], signal));
+    prefetchRef.current =
+      index + 1 < chunks.length
+        ? fetchChunkBlob(chunks[index + 1], signal).catch(() => {
+            // Prefetch failures resurface when the chunk is actually needed.
+            prefetchRef.current = null;
+            return fetchChunkBlob(chunks[index + 1], signal);
+          })
+        : null;
+
+    if (session !== sessionRef.current || stoppedRef.current) {
+      return;
+    }
+
+    const audio = getAudio();
+    if (objectUrlRef.current) {
+      URL.revokeObjectURL(objectUrlRef.current);
+    }
+    objectUrlRef.current = URL.createObjectURL(blob);
+    audio.src = objectUrlRef.current;
+
+    audio.onended = () => {
+      void playNeuralChunk(chunks, index + 1, session).catch(() => {
+        if (session === sessionRef.current) {
+          finishPlayback();
+        }
+      });
+    };
+    audio.onerror = () => {
+      if (session === sessionRef.current) {
+        finishPlayback();
+      }
+    };
+
+    await audio.play();
+    if (session === sessionRef.current && !stoppedRef.current) {
+      setPlayState("playing");
+    }
+  }
+
+  // -------------------------------------------------------------------------
+  // Fallback engine: on-device speechSynthesis (best available system voice).
+  // -------------------------------------------------------------------------
+
   function speakChunk(chunks: string[], index: number) {
     if (stoppedRef.current) {
       return;
@@ -267,35 +377,88 @@ export function ArticleTools({
     window.speechSynthesis.speak(utterance);
   }
 
-  function handlePlay() {
-    const synth = window.speechSynthesis;
-    synth.cancel();
-    const chunks = chunkText(toSpeechText(articleText));
-    if (chunks.length === 0) {
+  function startSystemFallback(chunks: string[]) {
+    if (!speechSupported) {
+      finishPlayback();
       return;
     }
-    stoppedRef.current = false;
+    engineRef.current = "system";
+    setVoiceName(voiceRef.current?.name ?? "system default");
+    window.speechSynthesis.cancel();
     setPlayState("playing");
     startKeepAlive();
     speakChunk(chunks, 0);
   }
 
+  // -------------------------------------------------------------------------
+  // Controls
+  // -------------------------------------------------------------------------
+
+  function handlePlay() {
+    const chunks = chunkText(toSpeechText(articleText));
+    if (chunks.length === 0) {
+      return;
+    }
+
+    sessionRef.current += 1;
+    const session = sessionRef.current;
+    stoppedRef.current = false;
+    abortRef.current = new AbortController();
+    prefetchRef.current = null;
+    engineRef.current = "neural";
+    setVoiceName(`neural:${NEURAL_VOICE}`);
+    setPlayState("loading");
+
+    // Unlock the audio element within this user gesture (Safari/iOS policy).
+    const audio = getAudio();
+    audio.src = SILENT_WAV;
+    void audio.play().catch(() => {});
+
+    playNeuralChunk(chunks, 0, session).catch(() => {
+      // Server voice unreachable — fall back to the device's own engine.
+      if (session === sessionRef.current && !stoppedRef.current) {
+        startSystemFallback(chunks);
+      }
+    });
+  }
+
   function handlePause() {
-    clearKeepAlive();
-    window.speechSynthesis.pause();
+    if (engineRef.current === "neural") {
+      audioRef.current?.pause();
+    } else {
+      clearKeepAlive();
+      window.speechSynthesis.pause();
+    }
     setPlayState("paused");
   }
 
   function handleResume() {
-    window.speechSynthesis.resume();
-    startKeepAlive();
+    if (engineRef.current === "neural") {
+      void audioRef.current?.play();
+    } else {
+      window.speechSynthesis.resume();
+      startKeepAlive();
+    }
     setPlayState("playing");
   }
 
   function handleStop() {
+    sessionRef.current += 1;
     stoppedRef.current = true;
+    abortRef.current?.abort();
+    prefetchRef.current = null;
     clearKeepAlive();
-    window.speechSynthesis.cancel();
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.removeAttribute("src");
+    }
+    if (objectUrlRef.current) {
+      URL.revokeObjectURL(objectUrlRef.current);
+      objectUrlRef.current = null;
+    }
+    if (speechSupported) {
+      window.speechSynthesis.cancel();
+    }
     setPlayState("idle");
   }
 
@@ -361,7 +524,7 @@ export function ArticleTools({
         aria-label={`Reading tools for ${articleTitle}`}
         className="flex flex-wrap items-center gap-2"
       >
-        {speechSupported && playState === "idle" ? (
+        {playState === "idle" ? (
           <button
             type="button"
             onClick={handlePlay}
@@ -372,7 +535,18 @@ export function ArticleTools({
             Read article
           </button>
         ) : null}
-        {speechSupported && playState === "playing" ? (
+        {playState === "loading" ? (
+          <button
+            type="button"
+            disabled
+            aria-label="Preparing audio"
+            className={cn(toolButtonClass, primaryToolClass, "opacity-70")}
+          >
+            <Volume2 aria-hidden="true" className="h-4 w-4 animate-pulse" />
+            Preparing…
+          </button>
+        ) : null}
+        {playState === "playing" ? (
           <button
             type="button"
             onClick={handlePause}
@@ -383,7 +557,7 @@ export function ArticleTools({
             Pause
           </button>
         ) : null}
-        {speechSupported && playState === "paused" ? (
+        {playState === "paused" ? (
           <button
             type="button"
             onClick={handleResume}
@@ -394,7 +568,7 @@ export function ArticleTools({
             Resume
           </button>
         ) : null}
-        {speechSupported && playState !== "idle" ? (
+        {playState === "playing" || playState === "paused" ? (
           <button
             type="button"
             onClick={handleStop}

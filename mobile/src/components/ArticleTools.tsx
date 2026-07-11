@@ -1,15 +1,20 @@
 /**
- * Article toolbar: "Read article" (text-to-speech via expo-speech) and
- * "Copy article" (expo-clipboard). Sits directly under the article header.
+ * Article toolbar: "Read article" (text-to-speech) and "Copy article"
+ * (expo-clipboard). Sits directly under the article header.
  *
- * TTS notes:
- * - expo-speech caps each utterance at Speech.maxSpeechInputLength (~4000
- *   chars), so the article text is chunked by paragraph/sentence and the
- *   chunks are chained through each utterance's onDone callback.
- * - Speech.pause()/resume() are iOS-only (the Android TTS engine cannot
- *   pause mid-utterance), so on Android we only offer Stop while speaking.
+ * TTS engines, in order of preference:
+ * 1. NEURAL (primary): streams MP3 chunks from the site's /api/tts endpoint
+ *    (Microsoft Edge neural voices) via expo-av — dramatically more natural
+ *    than any on-device engine, and pause/resume works on BOTH platforms.
+ *    Requires EXPO_PUBLIC_API_URL to be reachable (same Wi-Fi as the PC in
+ *    dev). Chunks are prefetched while the previous one plays.
+ * 2. SYSTEM (fallback, offline-safe): expo-speech with the best available
+ *    on-device voice. expo-speech caps utterances at maxSpeechInputLength
+ *    (~4000 chars) so text is chunked and chained via onDone. Pause/resume
+ *    is iOS-only there (Android's engine cannot pause mid-utterance).
  */
 import { Ionicons } from "@expo/vector-icons";
+import { Audio } from "expo-av";
 import * as Clipboard from "expo-clipboard";
 import { useFocusEffect } from "expo-router";
 import * as Speech from "expo-speech";
@@ -28,6 +33,12 @@ import type { Article } from "../lib/types";
 import { Card } from "./ui";
 
 type IoniconName = ComponentProps<typeof Ionicons>["name"];
+
+const API_URL = process.env.EXPO_PUBLIC_API_URL ?? "";
+const NEURAL_VOICE = "en-US-AndrewMultilingualNeural";
+/** Small chunks keep time-to-first-audio low; the next chunk synthesizes on
+ * the server while the current one plays. */
+const NEURAL_CHUNK_LIMIT = 360;
 
 // ---------------------------------------------------------------------------
 // Text preparation
@@ -67,11 +78,7 @@ export function buildArticleText(article: Article): string {
 /**
  * Listening-only cleanup applied on top of `buildArticleText` before the text
  * is chunked for TTS. The Copy button keeps the untouched `buildArticleText`
- * output — this only changes what the speech engine hears:
- * - em/en dashes read badly ("dash"), so they become a comma pause;
- * - stray markdown/formatting symbols are dropped;
- * - runs of spaces/tabs collapse so the engine does not stutter.
- * Paragraph breaks (newlines) are preserved for the chunker.
+ * output — this only changes what the speech engine hears.
  */
 function prepareForSpeech(text: string): string {
   return text
@@ -83,11 +90,11 @@ function prepareForSpeech(text: string): string {
 }
 
 /**
- * Per-chunk target. Kept well under the platform's per-utterance limit
- * (Speech.maxSpeechInputLength, ~4000 chars) so whole sentences are always
- * accumulated into a chunk and inter-chunk pauses stay rare.
+ * System-fallback chunk target. Kept well under the platform's per-utterance
+ * limit (Speech.maxSpeechInputLength, ~4000 chars) so whole sentences are
+ * always accumulated into a chunk and inter-chunk pauses stay rare.
  */
-const CHUNK_LIMIT = Math.max(
+const SYSTEM_CHUNK_LIMIT = Math.max(
   500,
   Math.min(Speech.maxSpeechInputLength, 4000) - 200,
 );
@@ -140,7 +147,7 @@ function chunkText(text: string, limit: number): string[] {
 }
 
 // ---------------------------------------------------------------------------
-// Voice selection
+// System-fallback voice selection
 // ---------------------------------------------------------------------------
 
 /** Language passed to every utterance so the engine never guesses. */
@@ -153,12 +160,9 @@ const isEnUS = (voice: Speech.Voice) =>
   (voice.language ?? "").toLowerCase().replace("_", "-") === "en-us";
 
 /**
- * Pick the best-sounding English voice available on this device.
- *
- * iOS ships "Enhanced" (higher-bitrate) variants of its voices; the Siri
- * voices among them sound the most natural. Android's Google TTS exposes
- * on-device and network voices — the "network" ones are the higher-quality
- * synthesis. Returns `undefined` (system default) when nothing matches.
+ * Pick the best-sounding English voice available on this device (used only
+ * by the offline fallback). iOS ships "Enhanced" higher-bitrate variants;
+ * Android's Google TTS "network" voices are its higher-quality synthesis.
  */
 async function pickBestEnglishVoice(): Promise<string | undefined> {
   try {
@@ -199,6 +203,24 @@ function getBestEnglishVoice(): Promise<string | undefined> {
   return cachedVoicePromise;
 }
 
+/** Configure the audio session once (plays even with the iOS mute switch on). */
+let audioModeReady: Promise<void> | null = null;
+function ensureAudioMode(): Promise<void> {
+  if (!audioModeReady) {
+    audioModeReady = Audio.setAudioModeAsync({
+      playsInSilentModeIOS: true,
+      staysActiveInBackground: false,
+    }).catch(() => {
+      audioModeReady = null;
+    }) as Promise<void>;
+  }
+  return audioModeReady;
+}
+
+function neuralChunkUri(chunk: string): string {
+  return `${API_URL}/api/tts?text=${encodeURIComponent(chunk)}&voice=${NEURAL_VOICE}`;
+}
+
 // ---------------------------------------------------------------------------
 // Toolbar button
 // ---------------------------------------------------------------------------
@@ -208,22 +230,28 @@ function ToolButton({
   label,
   accessibilityLabel,
   onPress,
+  disabled,
 }: {
   icon: IoniconName;
   label: string;
   accessibilityLabel: string;
-  onPress: () => void;
+  onPress?: () => void;
+  disabled?: boolean;
 }) {
   const theme = useTheme();
   return (
     <Pressable
       onPress={onPress}
+      disabled={disabled}
       accessibilityRole="button"
       accessibilityLabel={accessibilityLabel}
       hitSlop={4}
       style={({ pressed }) => [
         styles.button,
-        { backgroundColor: theme.accentSoft, opacity: pressed ? 0.7 : 1 },
+        {
+          backgroundColor: theme.accentSoft,
+          opacity: disabled ? 0.6 : pressed ? 0.7 : 1,
+        },
       ]}
     >
       <Ionicons name={icon} size={16} color={theme.accent} />
@@ -236,10 +264,11 @@ function ToolButton({
 // ArticleTools
 // ---------------------------------------------------------------------------
 
-type SpeechStatus = "idle" | "speaking" | "paused";
+type SpeechStatus = "idle" | "loading" | "speaking" | "paused";
+type Engine = "neural" | "system";
 
 /** Pause/resume mid-utterance is only implemented by iOS's speech engine. */
-const CAN_PAUSE = Platform.OS === "ios";
+const SYSTEM_CAN_PAUSE = Platform.OS === "ios";
 
 export function ArticleTools({ article }: { article: Article }) {
   const theme = useTheme();
@@ -249,12 +278,100 @@ export function ArticleTools({ article }: { article: Article }) {
   const speechText = useMemo(() => prepareForSpeech(fullText), [fullText]);
 
   const [status, setStatus] = useState<SpeechStatus>("idle");
-  // Invalidates in-flight onDone callbacks after a stop/restart, so a stale
-  // utterance finishing can never re-chain or flip the UI state.
+  const [engine, setEngine] = useState<Engine>("neural");
+  // Invalidates in-flight callbacks after a stop/restart, so a stale chunk
+  // finishing can never re-chain or flip the UI state.
   const sessionRef = useRef(0);
   const chunksRef = useRef<string[]>([]);
   const indexRef = useRef(0);
   const voiceRef = useRef<string | undefined>(undefined);
+  const soundRef = useRef<Audio.Sound | null>(null);
+  const nextSoundRef = useRef<Audio.Sound | null>(null);
+
+  const unloadSounds = useCallback(async () => {
+    const current = soundRef.current;
+    const next = nextSoundRef.current;
+    soundRef.current = null;
+    nextSoundRef.current = null;
+    try {
+      await current?.unloadAsync();
+    } catch {}
+    try {
+      await next?.unloadAsync();
+    } catch {}
+  }, []);
+
+  // --- Neural engine -------------------------------------------------------
+
+  const playNeuralChunk = useCallback(
+    async (session: number): Promise<void> => {
+      if (sessionRef.current !== session) return;
+      const chunk = chunksRef.current[indexRef.current];
+      if (!chunk) {
+        await unloadSounds();
+        if (sessionRef.current === session) setStatus("idle");
+        return;
+      }
+
+      // Use the prefetched sound if available, otherwise load now.
+      let sound = nextSoundRef.current;
+      nextSoundRef.current = null;
+      if (!sound) {
+        const created = await Audio.Sound.createAsync(
+          { uri: neuralChunkUri(chunk) },
+          { shouldPlay: false },
+        );
+        sound = created.sound;
+      }
+      if (sessionRef.current !== session) {
+        try {
+          await sound.unloadAsync();
+        } catch {}
+        return;
+      }
+
+      // Release the previous chunk's sound and take ownership of this one.
+      const previous = soundRef.current;
+      soundRef.current = sound;
+      if (previous) {
+        try {
+          await previous.unloadAsync();
+        } catch {}
+      }
+
+      // Prefetch the next chunk while this one plays.
+      const nextChunk = chunksRef.current[indexRef.current + 1];
+      if (nextChunk) {
+        Audio.Sound.createAsync({ uri: neuralChunkUri(nextChunk) }, { shouldPlay: false })
+          .then(({ sound: prefetched }) => {
+            if (sessionRef.current === session && !nextSoundRef.current) {
+              nextSoundRef.current = prefetched;
+            } else {
+              prefetched.unloadAsync().catch(() => {});
+            }
+          })
+          .catch(() => {
+            // Prefetch failure is retried when the chunk is actually needed.
+          });
+      }
+
+      sound.setOnPlaybackStatusUpdate((playback) => {
+        if (!playback.isLoaded || sessionRef.current !== session) return;
+        if (playback.didJustFinish) {
+          indexRef.current += 1;
+          void playNeuralChunk(session).catch(() => {
+            if (sessionRef.current === session) setStatus("idle");
+          });
+        }
+      });
+
+      await sound.playAsync();
+      if (sessionRef.current === session) setStatus("speaking");
+    },
+    [unloadSounds],
+  );
+
+  // --- System fallback engine ----------------------------------------------
 
   const speakChunk = useCallback((session: number) => {
     const chunk = chunksRef.current[indexRef.current];
@@ -278,35 +395,71 @@ export function ArticleTools({ article }: { article: Article }) {
     });
   }, []);
 
+  const startSystemFallback = useCallback(
+    async (session: number) => {
+      setEngine("system");
+      chunksRef.current = chunkText(speechText, SYSTEM_CHUNK_LIMIT);
+      indexRef.current = 0;
+      voiceRef.current = await getBestEnglishVoice();
+      if (sessionRef.current !== session) return;
+      setStatus("speaking");
+      speakChunk(session);
+    },
+    [speechText, speakChunk],
+  );
+
+  // --- Controls --------------------------------------------------------------
+
   const startReading = useCallback(async () => {
     sessionRef.current += 1;
     const session = sessionRef.current;
-    chunksRef.current = chunkText(speechText, CHUNK_LIMIT);
-    indexRef.current = 0;
-    if (chunksRef.current.length === 0) return;
-    setStatus("speaking");
-    // Lazily resolve the best voice on first play (cached for the session).
-    voiceRef.current = await getBestEnglishVoice();
-    // The user may have stopped or left the screen while we awaited.
-    if (sessionRef.current !== session) return;
-    speakChunk(session);
-  }, [speechText, speakChunk]);
+    setStatus("loading");
+
+    if (API_URL) {
+      try {
+        setEngine("neural");
+        chunksRef.current = chunkText(speechText, NEURAL_CHUNK_LIMIT);
+        indexRef.current = 0;
+        if (chunksRef.current.length === 0) {
+          setStatus("idle");
+          return;
+        }
+        await ensureAudioMode();
+        await playNeuralChunk(session);
+        return;
+      } catch {
+        // Server voice unreachable (offline / different network) — fall back.
+        if (sessionRef.current !== session) return;
+        await unloadSounds();
+      }
+    }
+    await startSystemFallback(session);
+  }, [speechText, playNeuralChunk, startSystemFallback, unloadSounds]);
 
   const stopReading = useCallback(() => {
     sessionRef.current += 1;
     Speech.stop();
+    void unloadSounds();
     setStatus("idle");
-  }, []);
+  }, [unloadSounds]);
 
   const pauseReading = useCallback(() => {
-    Speech.pause();
+    if (engine === "neural") {
+      soundRef.current?.pauseAsync().catch(() => {});
+    } else {
+      Speech.pause();
+    }
     setStatus("paused");
-  }, []);
+  }, [engine]);
 
   const resumeReading = useCallback(() => {
-    Speech.resume();
+    if (engine === "neural") {
+      soundRef.current?.playAsync().catch(() => {});
+    } else {
+      Speech.resume();
+    }
     setStatus("speaking");
-  }, []);
+  }, [engine]);
 
   // Stop speech when the screen loses focus (e.g. opening a related article).
   useFocusEffect(
@@ -314,9 +467,10 @@ export function ArticleTools({ article }: { article: Article }) {
       return () => {
         sessionRef.current += 1;
         Speech.stop();
+        void unloadSounds();
         setStatus("idle");
       };
-    }, []),
+    }, [unloadSounds]),
   );
 
   // Copy + confirmation banner ------------------------------------------------
@@ -345,14 +499,17 @@ export function ArticleTools({ article }: { article: Article }) {
     }, 2500);
   }, [bannerAnim, fullText]);
 
-  // Always release the speech engine and timers on unmount.
+  // Always release the audio/speech engines and timers on unmount.
   useEffect(() => {
     return () => {
       sessionRef.current += 1;
       Speech.stop();
+      void unloadSounds();
       if (copyTimer.current) clearTimeout(copyTimer.current);
     };
-  }, []);
+  }, [unloadSounds]);
+
+  const canPause = engine === "neural" || SYSTEM_CAN_PAUSE;
 
   return (
     <Card style={styles.toolbar}>
@@ -365,7 +522,15 @@ export function ArticleTools({ article }: { article: Article }) {
             onPress={startReading}
           />
         ) : null}
-        {status === "speaking" && CAN_PAUSE ? (
+        {status === "loading" ? (
+          <ToolButton
+            icon="volume-high-outline"
+            label="Preparing…"
+            accessibilityLabel="Preparing audio"
+            disabled
+          />
+        ) : null}
+        {status === "speaking" && canPause ? (
           <ToolButton
             icon="pause-outline"
             label="Pause"
@@ -381,7 +546,7 @@ export function ArticleTools({ article }: { article: Article }) {
             onPress={resumeReading}
           />
         ) : null}
-        {status !== "idle" ? (
+        {status === "speaking" || status === "paused" ? (
           <ToolButton
             icon="stop-outline"
             label="Stop"
