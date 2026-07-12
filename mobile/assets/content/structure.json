@@ -914,9 +914,9 @@
           },
           {
             "title": "Jesus and the Trinity",
-            "description": "Planned bridge into Tawhid, Trinity, incarnation, and worship.",
-            "href": "/tawhid-and-the-trinity#future-topics",
-            "tag": "Planned"
+            "description": "The Incarnation explained: how Christians understand God becoming man, and the Islamic response.",
+            "href": "/articles/incarnation-explained",
+            "status": "draft"
           },
           {
             "title": "Jesus as Messiah",
@@ -941,279 +941,11 @@
             "description": "A draft framework for comparing devotion, worship, and obedience respectfully.",
             "href": "/articles/who-follows-jesus-more-closely",
             "status": "draft"
-          }
-        ]
-      },
-      {
-        "id": "preservation",
-        "title": "Preservation of Scripture",
-        "description": "A source-conscious study area for transmission, manuscripts, compilation, and why preservation matters.",
-        "href": "/preservation",
-        "children": [
-          {
-            "title": "How the Quran was preserved",
-            "description": "A draft framework for preservation, source status, and careful definitions.",
-            "href": "/articles/how-was-the-quran-preserved",
-            "status": "draft"
           },
           {
-            "title": "Oral memorization of the Quran",
-            "description": "How companion memorization created an independent oral check on the text from the start.",
-            "href": "/articles/oral-memorization-of-the-quran",
-            "status": "draft"
-          },
-          {
-            "title": "Written compilation of the Quran",
-            "description": "From verses recorded during revelation to Abu Bakr's single verified copy after Yamama.",
-            "href": "/articles/written-compilation-of-the-quran",
-            "status": "draft"
-          },
-          {
-            "title": "Early Quran manuscripts",
-            "description": "What the Birmingham fragment, Sanaa palimpsest, and early codices actually establish.",
-            "href": "/articles/early-quran-manuscripts",
-            "status": "draft"
-          },
-          {
-            "title": "Uthmanic standardization",
-            "description": "Why unifying spelling across regional copies was standardization, not alteration.",
-            "href": "/articles/uthmanic-standardization",
-            "status": "draft"
-          },
-          {
-            "title": "Qira'at explained simply",
-            "description": "Certified recitation modes traced by unbroken chains, read from one fixed written text.",
-            "href": "/articles/qiraat-explained-simply",
-            "status": "draft"
-          },
-          {
-            "title": "Bible manuscript transmission",
-            "description": "A draft comparison article about transmission questions and source status.",
-            "href": "/articles/how-was-the-bible-transmitted",
-            "status": "draft"
-          },
-          {
-            "title": "Gospel authorship and dating",
-            "description": "What mainstream scholarship says about who wrote the Gospels, and when.",
-            "href": "/articles/gospel-authorship-and-dating",
-            "status": "draft"
-          },
-          {
-            "title": "Biblical canon formation",
-            "description": "How the Bible's list of authoritative books took shape over centuries.",
-            "href": "/articles/biblical-canon-formation",
-            "status": "draft"
-          },
-          {
-            "title": "Textual variants explained",
-            "description": "The longer ending of Mark and the story in John 8, explained in plain language.",
-            "href": "/articles/textual-variants-explained",
-            "status": "draft"
-          },
-          {
-            "title": "Why preservation matters",
-            "description": "How Quranic verbatim preservation and Christian views of scriptural authority differ.",
-            "href": "/articles/why-preservation-matters",
-            "status": "draft"
-          }
-        ]
-      },
-      {
-        "id": "difficult-questions",
-        "title": "Contradictions & Difficult Questions",
-        "description": "A careful space for hard questions, context, fair representation, and source-backed responses.",
-        "href": "/difficult-questions",
-        "children": [
-          {
-            "title": "What is a contradiction?",
-            "description": "A framing article distinguishing genuine contradictions from textual variants, harmonizable difficulties, and interpretation.",
-            "href": "/articles/what-is-a-contradiction",
-            "status": "draft"
-          },
-          {
-            "title": "Genealogies of Jesus",
-            "description": "Why Matthew and Luke give Jesus two different genealogies, and how each tradition reads the difficulty.",
-            "href": "/articles/genealogies-of-jesus",
-            "status": "draft"
-          },
-          {
-            "title": "The death of Judas",
-            "description": "Matthew's hanging and Acts' falling-headlong accounts of Judas' death, and how each is read.",
-            "href": "/articles/the-death-of-judas",
-            "status": "draft"
-          },
-          {
-            "title": "The timing of the crucifixion",
-            "description": "Reconciling the Synoptic and Johannine timing of the Last Supper and crucifixion with Passover.",
-            "href": "/articles/the-timing-of-the-crucifixion",
-            "status": "draft"
-          },
-          {
-            "title": "Did anyone see God?",
-            "description": "Moses at Sinai, John 1:18, and Quran 6:103 and 7:143 on seeing God.",
-            "href": "/articles/did-anyone-see-god",
-            "status": "draft"
-          },
-          {
-            "title": "Is original sin just?",
-            "description": "A draft comparison of inherited guilt, accountability, repentance, and justice.",
-            "href": "/articles/original-sin-vs-personal-responsibility",
-            "status": "draft"
-          },
-          {
-            "title": "Can God become man?",
-            "description": "The Incarnation and Tawhid's objection to it, presented as a difference in starting premises about God.",
-            "href": "/articles/can-god-become-man",
-            "status": "draft"
-          },
-          {
-            "title": "Does salvation require a sacrifice?",
-            "description": "A draft study linked to forgiveness, sacrifice, mercy, and justice.",
-            "href": "/articles/forgiveness-in-islam-and-christianity",
-            "status": "draft"
-          }
-        ]
-      },
-      {
-        "id": "scientific-signs",
-        "title": "Scientific & Natural Signs",
-        "description": "A cautious category for future discussions about the natural world, interpretation, and the limits of argument.",
-        "href": "/scientific-signs",
-        "children": [
-          {
-            "title": "How to approach scientific claims carefully",
-            "description": "A framing guide for avoiding overstatement when discussing scripture and the natural world.",
-            "href": "/articles/how-to-approach-scientific-claims-carefully",
-            "status": "draft"
-          },
-          {
-            "title": "Embryology",
-            "description": "The Quran's stages of fetal development in Surah 23, compared with modern embryology.",
-            "href": "/articles/embryology",
-            "status": "draft"
-          },
-          {
-            "title": "Cosmology",
-            "description": "The Quran's account of the heavens and earth being joined then separated, and modern cosmology.",
-            "href": "/articles/cosmology",
-            "status": "draft"
-          },
-          {
-            "title": "Mountains",
-            "description": "The Quran's description of mountains as stabilizing pegs, read alongside plate tectonics.",
-            "href": "/articles/mountains",
-            "status": "draft"
-          },
-          {
-            "title": "Seas and barriers",
-            "description": "The Quran's barrier between two seas, and the oceanography of density and salinity stratification.",
-            "href": "/articles/seas-and-barriers",
-            "status": "draft"
-          },
-          {
-            "title": "Creation and nature",
-            "description": "Design arguments from creation in the Quran, the Bible, and the Darwinian challenge to them.",
-            "href": "/articles/creation-and-nature",
-            "status": "draft"
-          },
-          {
-            "title": "Strong vs debated arguments",
-            "description": "An honest audit of which Quran-and-science claims are well-supported, debated, or overstated.",
-            "href": "/articles/strong-vs-debated-scientific-claims",
-            "status": "draft"
-          }
-        ]
-      },
-      {
-        "id": "religious-history",
-        "title": "Religious History",
-        "description": "The history of early Christianity and Islam side by side — Jesus' era through Nicaea and the development of Trinity doctrine, and the Quran's own revelation and early preservation history.",
-        "href": "/religious-history",
-        "children": [
-          {
-            "title": "The historical Jesus",
-            "description": "What mainstream historical-critical scholarship holds about Jesus, compared with the Quran's account.",
-            "href": "/articles/the-historical-jesus",
-            "status": "draft"
-          },
-          {
-            "title": "Early Christianity",
-            "description": "From the crucifixion and resurrection claim through persecution to Constantine and Nicaea.",
-            "href": "/articles/early-christianity",
-            "status": "draft"
-          },
-          {
-            "title": "Paul and his influence",
-            "description": "Paul's letters, his calling, and his lasting influence on Christian theology and practice.",
-            "href": "/articles/paul-and-his-influence",
-            "status": "draft"
-          },
-          {
-            "title": "Gospel authorship and dating",
-            "description": "What mainstream scholarship says about who wrote the Gospels, and when.",
-            "href": "/articles/gospel-authorship-and-dating",
-            "status": "draft"
-          },
-          {
-            "title": "Council of Nicaea",
-            "description": "Why Constantine convened Nicaea in 325 CE, and the Islamic critique of doctrine settled by council.",
-            "href": "/articles/council-of-nicaea",
-            "status": "draft"
-          },
-          {
-            "title": "Development of Trinity doctrine",
-            "description": "How Trinity doctrine developed over centuries of councils and debate, and the Quran's strict monotheism.",
-            "href": "/articles/development-of-trinity-doctrine",
-            "status": "draft"
-          },
-          {
-            "title": "Quranic revelation history",
-            "description": "How the Quran was revealed over 23 years and preserved through memorization and early writing.",
-            "href": "/articles/quranic-revelation-history",
-            "status": "draft"
-          },
-          {
-            "title": "Early Islamic preservation",
-            "description": "How hadith transmission developed from companions' memorization to codified written collections.",
-            "href": "/articles/early-islamic-preservation",
-            "status": "draft"
-          }
-        ]
-      },
-      {
-        "id": "historical-evidence",
-        "title": "Historical Evidence",
-        "description": "Historical and archaeological support for the content within the Quran and Bible — ways the Quran's accounts align with historical plausibility, such as its distinct terms for Egypt's rulers across the Exodus and Youssef narratives.",
-        "href": "/historical-evidence",
-        "children": [
-          {
-            "title": "The Exodus in historical context",
-            "description": "Comparing the Biblical and Quranic Exodus accounts against historical and archaeological evidence.",
-            "href": "/articles/the-exodus-in-historical-context",
-            "status": "draft"
-          },
-          {
-            "title": "Pharaoh vs King: Youssef's story in history",
-            "description": "Why the Quran uses 'king' for Egypt's ruler in Youssef's time but 'pharaoh' in Moses' time.",
-            "href": "/articles/pharaoh-vs-king-youssef-story",
-            "status": "draft"
-          },
-          {
-            "title": "Archeological evidence for Quranic accounts",
-            "description": "What archaeology shows about the Quran's accounts of Ad, Thamud, Sodom, Babel, and Pharaoh's army.",
-            "href": "/articles/archeological-evidence-for-quranic-accounts",
-            "status": "draft"
-          },
-          {
-            "title": "Historical support for Biblical narratives",
-            "description": "Archaeological and historical support for David's kingdom, Jesus' birth, the crucifixion, and Paul.",
-            "href": "/articles/historical-support-for-biblical-narratives",
-            "status": "draft"
-          },
-          {
-            "title": "Chronological alignment: Quranic and Biblical timelines",
-            "description": "Comparing where the Quran and Bible place Abraham, Moses, David, and Jesus in time.",
-            "href": "/articles/chronological-alignment-quranic-biblical-timelines",
+            "title": "The divinity verses examined one by one",
+            "description": "John 1:1, 8:58, 10:30, 20:28, and four Pauline texts, each with the Trinitarian and unitarian readings.",
+            "href": "/articles/the-divinity-verses-examined",
             "status": "draft"
           }
         ]
@@ -1325,6 +1057,274 @@
         ]
       },
       {
+        "id": "preservation",
+        "title": "Preservation of Scripture",
+        "description": "A source-conscious study area for transmission, manuscripts, compilation, and why preservation matters.",
+        "href": "/preservation",
+        "children": [
+          {
+            "title": "How the Quran was preserved",
+            "description": "A draft framework for preservation, source status, and careful definitions.",
+            "href": "/articles/how-was-the-quran-preserved",
+            "status": "draft"
+          },
+          {
+            "title": "Oral memorization of the Quran",
+            "description": "How companion memorization created an independent oral check on the text from the start.",
+            "href": "/articles/oral-memorization-of-the-quran",
+            "status": "draft"
+          },
+          {
+            "title": "Written compilation of the Quran",
+            "description": "From verses recorded during revelation to Abu Bakr's single verified copy after Yamama.",
+            "href": "/articles/written-compilation-of-the-quran",
+            "status": "draft"
+          },
+          {
+            "title": "Early Quran manuscripts",
+            "description": "What the Birmingham fragment, Sanaa palimpsest, and early codices actually establish.",
+            "href": "/articles/early-quran-manuscripts",
+            "status": "draft"
+          },
+          {
+            "title": "Uthmanic standardization",
+            "description": "Why unifying spelling across regional copies was standardization, not alteration.",
+            "href": "/articles/uthmanic-standardization",
+            "status": "draft"
+          },
+          {
+            "title": "Qira'at explained simply",
+            "description": "Certified recitation modes traced by unbroken chains, read from one fixed written text.",
+            "href": "/articles/qiraat-explained-simply",
+            "status": "draft"
+          },
+          {
+            "title": "Bible manuscript transmission",
+            "description": "A draft comparison article about transmission questions and source status.",
+            "href": "/articles/how-was-the-bible-transmitted",
+            "status": "draft"
+          },
+          {
+            "title": "Gospel authorship and dating",
+            "description": "What mainstream scholarship says about who wrote the Gospels, and when.",
+            "href": "/articles/gospel-authorship-and-dating",
+            "status": "draft"
+          },
+          {
+            "title": "Biblical canon formation",
+            "description": "How the Bible's list of authoritative books took shape over centuries.",
+            "href": "/articles/biblical-canon-formation",
+            "status": "draft"
+          },
+          {
+            "title": "Textual variants explained",
+            "description": "The longer ending of Mark and the story in John 8, explained in plain language.",
+            "href": "/articles/textual-variants-explained",
+            "status": "draft"
+          },
+          {
+            "title": "When was Deuteronomy written?",
+            "description": "The scholarly consensus on Deuteronomy's dating, and what a scripture's composition history means for its authority.",
+            "href": "/articles/when-was-deuteronomy-written",
+            "status": "draft"
+          },
+          {
+            "title": "Pseudepigrapha in the New Testament",
+            "description": "What mainstream scholarship says about books written in someone else's name, especially 2 Peter.",
+            "href": "/articles/pseudepigrapha-in-the-new-testament",
+            "status": "draft"
+          }
+        ]
+      },
+      {
+        "id": "religious-history",
+        "title": "Religious History",
+        "description": "The history of early Christianity and Islam side by side — Jesus' era through Nicaea and the development of Trinity doctrine, and the Quran's own revelation and early preservation history.",
+        "href": "/religious-history",
+        "children": [
+          {
+            "title": "The historical Jesus",
+            "description": "What mainstream historical-critical scholarship holds about Jesus, compared with the Quran's account.",
+            "href": "/articles/the-historical-jesus",
+            "status": "draft"
+          },
+          {
+            "title": "Early Christianity",
+            "description": "From the crucifixion and resurrection claim through persecution to Constantine and Nicaea.",
+            "href": "/articles/early-christianity",
+            "status": "draft"
+          },
+          {
+            "title": "Paul and his influence",
+            "description": "Paul's letters, his calling, and his lasting influence on Christian theology and practice.",
+            "href": "/articles/paul-and-his-influence",
+            "status": "draft"
+          },
+          {
+            "title": "Gospel authorship and dating",
+            "description": "What mainstream scholarship says about who wrote the Gospels, and when.",
+            "href": "/articles/gospel-authorship-and-dating",
+            "status": "draft"
+          },
+          {
+            "title": "Council of Nicaea",
+            "description": "Why Constantine convened Nicaea in 325 CE, and the Islamic critique of doctrine settled by council.",
+            "href": "/articles/council-of-nicaea",
+            "status": "draft"
+          },
+          {
+            "title": "Development of Trinity doctrine",
+            "description": "How Trinity doctrine developed over centuries of councils and debate, and the Quran's strict monotheism.",
+            "href": "/articles/development-of-trinity-doctrine",
+            "status": "draft"
+          },
+          {
+            "title": "Quranic revelation history",
+            "description": "How the Quran was revealed over 23 years and preserved through memorization and early writing.",
+            "href": "/articles/quranic-revelation-history",
+            "status": "draft"
+          },
+          {
+            "title": "Early Islamic preservation",
+            "description": "How hadith transmission developed from companions' memorization to codified written collections.",
+            "href": "/articles/early-islamic-preservation",
+            "status": "draft"
+          }
+        ]
+      },
+      {
+        "id": "war-and-violence",
+        "title": "War & Violence",
+        "description": "Islamic jurisprudence and Christian Just War tradition on armed conflict, self-defense, the Crusades, and how extremist groups misuse both traditions' texts.",
+        "href": "/war-and-violence",
+        "children": [
+          {
+            "title": "Jihad and Just War theory",
+            "description": "Islamic jurisprudence on armed struggle compared with the Christian Just War tradition.",
+            "href": "/articles/jihad-and-just-war-theory",
+            "status": "draft"
+          },
+          {
+            "title": "Crusades and Islamic history",
+            "description": "The Crusades' religious and political dimensions, and how both traditions narrate the conflict.",
+            "href": "/articles/crusades-and-islamic-history",
+            "status": "draft"
+          },
+          {
+            "title": "Self-defense in scripture",
+            "description": "What the Quran and Bible say about the right to defend life and property.",
+            "href": "/articles/self-defense-in-scripture",
+            "status": "draft"
+          },
+          {
+            "title": "Punishment for apostasy and war",
+            "description": "Islamic jurisprudence on apostasy law, compared with the history of Christian heresy trials.",
+            "href": "/articles/punishment-for-apostasy-and-war",
+            "status": "draft"
+          },
+          {
+            "title": "Civilian protection in Islamic law and the Biblical tradition",
+            "description": "Who may be fought and who may never be targeted, in Islamic jurisprudence and the Biblical herem texts.",
+            "href": "/articles/civilian-protection-in-war",
+            "status": "draft"
+          },
+          {
+            "title": "The rights of non-Muslims under Islamic law",
+            "description": "What Islamic law guarantees non-Muslims in life, property, worship, and legal protection.",
+            "href": "/articles/rights-of-non-muslims",
+            "status": "draft"
+          }
+        ]
+      },
+      {
+        "id": "women",
+        "title": "Women",
+        "description": "The status of women in the Quran and Bible, inheritance and testimony, marriage and divorce, modesty, and female scholarship and leadership in both traditions.",
+        "href": "/women",
+        "children": [
+          {
+            "title": "Women in the Quran and Bible",
+            "description": "The role and status of women across key passages in both the Quran and the Bible.",
+            "href": "/articles/women-in-the-quran-and-bible",
+            "status": "draft"
+          },
+          {
+            "title": "Inheritance and testimony",
+            "description": "Islamic and Biblical law on inheritance shares and the legal weight of testimony.",
+            "href": "/articles/inheritance-and-testimony",
+            "status": "draft"
+          },
+          {
+            "title": "Marriage and divorce",
+            "description": "Islamic marriage contracts and divorce compared with Christian sacramental and Protestant views.",
+            "href": "/articles/marriage-and-divorce",
+            "status": "draft"
+          },
+          {
+            "title": "Modesty and dress",
+            "description": "Scriptural roots of hijab and Christian modesty teaching, and the diversity within each tradition.",
+            "href": "/articles/modesty-and-dress",
+            "status": "draft"
+          },
+          {
+            "title": "Eve in Islam and Christianity",
+            "description": "How the two traditions read Eve and the fall, and what follows for all women.",
+            "href": "/articles/eve-in-islam-and-christianity",
+            "status": "draft"
+          },
+          {
+            "title": "Women's worth: classical Christian voices and the Islamic tradition",
+            "description": "Tertullian, Jerome, Aquinas, and Basil on women, alongside the Islamic textual tradition and modern responses.",
+            "href": "/articles/womens-worth-classical-voices",
+            "status": "draft"
+          }
+        ]
+      },
+      {
+        "id": "historical-evidence",
+        "title": "Historical Evidence",
+        "description": "Historical and archaeological support for the content within the Quran and Bible — ways the Quran's accounts align with historical plausibility, such as its distinct terms for Egypt's rulers across the Exodus and Youssef narratives.",
+        "href": "/historical-evidence",
+        "children": [
+          {
+            "title": "The Exodus in historical context",
+            "description": "Comparing the Biblical and Quranic Exodus accounts against historical and archaeological evidence.",
+            "href": "/articles/the-exodus-in-historical-context",
+            "status": "draft"
+          },
+          {
+            "title": "Pharaoh vs King: Youssef's story in history",
+            "description": "Why the Quran uses 'king' for Egypt's ruler in Youssef's time but 'pharaoh' in Moses' time.",
+            "href": "/articles/pharaoh-vs-king-youssef-story",
+            "status": "draft"
+          },
+          {
+            "title": "Archeological evidence for Quranic accounts",
+            "description": "What archaeology shows about the Quran's accounts of Ad, Thamud, Sodom, Babel, and Pharaoh's army.",
+            "href": "/articles/archeological-evidence-for-quranic-accounts",
+            "status": "draft"
+          },
+          {
+            "title": "Historical support for Biblical narratives",
+            "description": "Archaeological and historical support for David's kingdom, Jesus' birth, the crucifixion, and Paul.",
+            "href": "/articles/historical-support-for-biblical-narratives",
+            "status": "draft"
+          },
+          {
+            "title": "James, Josephus, and the earliest external evidence",
+            "description": "What Josephus's Testimonium and James passages actually say, and what the authenticity debate shows.",
+            "href": "/articles/james-josephus-and-external-evidence",
+            "status": "draft"
+          },
+          {
+            "title": "The crucifixion and history: how strong is the evidence?",
+            "description": "A methodological audit of what historians can and cannot establish about the crucifixion.",
+            "href": "/articles/the-crucifixion-and-history",
+            "status": "draft"
+          }
+        ]
+      },
+      {
         "id": "prophecies",
         "title": "Prophecies & Signs",
         "description": "Prophecies about Jesus and Muhammad each tradition claims, Quranic and Biblical prophecy interpretation, and shared end-times beliefs.",
@@ -1363,77 +1363,107 @@
         ]
       },
       {
-        "id": "war-and-violence",
-        "title": "War & Violence",
-        "description": "Islamic jurisprudence and Christian Just War tradition on armed conflict, self-defense, the Crusades, and how extremist groups misuse both traditions' texts.",
-        "href": "/war-and-violence",
+        "id": "scientific-signs",
+        "title": "Scientific & Natural Signs",
+        "description": "A cautious category for future discussions about the natural world, interpretation, and the limits of argument.",
+        "href": "/scientific-signs",
         "children": [
           {
-            "title": "Jihad and Just War theory",
-            "description": "Islamic jurisprudence on armed struggle compared with the Christian Just War tradition.",
-            "href": "/articles/jihad-and-just-war-theory",
+            "title": "How to approach scientific claims carefully",
+            "description": "A framing guide for avoiding overstatement when discussing scripture and the natural world.",
+            "href": "/articles/how-to-approach-scientific-claims-carefully",
             "status": "draft"
           },
           {
-            "title": "Crusades and Islamic history",
-            "description": "The Crusades' religious and political dimensions, and how both traditions narrate the conflict.",
-            "href": "/articles/crusades-and-islamic-history",
+            "title": "Embryology",
+            "description": "The Quran's stages of fetal development in Surah 23, compared with modern embryology.",
+            "href": "/articles/embryology",
             "status": "draft"
           },
           {
-            "title": "Self-defense in scripture",
-            "description": "What the Quran and Bible say about the right to defend life and property.",
-            "href": "/articles/self-defense-in-scripture",
+            "title": "Cosmology",
+            "description": "The Quran's account of the heavens and earth being joined then separated, and modern cosmology.",
+            "href": "/articles/cosmology",
             "status": "draft"
           },
           {
-            "title": "Punishment for apostasy and war",
-            "description": "Islamic jurisprudence on apostasy law, compared with the history of Christian heresy trials.",
-            "href": "/articles/punishment-for-apostasy-and-war",
+            "title": "Mountains",
+            "description": "The Quran's description of mountains as stabilizing pegs, read alongside plate tectonics.",
+            "href": "/articles/mountains",
             "status": "draft"
           },
           {
-            "title": "Terrorism and extremism: Islamic perspective",
-            "description": "Mainstream Islamic condemnation of terrorism, and how extremist groups misuse Islamic texts.",
-            "href": "/articles/terrorism-and-extremism-islamic-perspective",
+            "title": "Seas and barriers",
+            "description": "The Quran's barrier between two seas, and the oceanography of density and salinity stratification.",
+            "href": "/articles/seas-and-barriers",
+            "status": "draft"
+          },
+          {
+            "title": "Creation and nature",
+            "description": "Design arguments from creation in the Quran, the Bible, and the Darwinian challenge to them.",
+            "href": "/articles/creation-and-nature",
+            "status": "draft"
+          },
+          {
+            "title": "Celestial signs: orbits, stars, iron, and light in the Quran",
+            "description": "Orbits, star positions, plant pairs, iron, and moonlight, each honestly graded strong, flexible, or overclaimed.",
+            "href": "/articles/celestial-signs-in-the-quran",
             "status": "draft"
           }
         ]
       },
       {
-        "id": "women",
-        "title": "Women",
-        "description": "The status of women in the Quran and Bible, inheritance and testimony, marriage and divorce, modesty, and female scholarship and leadership in both traditions.",
-        "href": "/women",
+        "id": "difficult-questions",
+        "title": "Contradictions & Difficult Questions",
+        "description": "A careful space for hard questions, context, fair representation, and source-backed responses.",
+        "href": "/difficult-questions",
         "children": [
           {
-            "title": "Women in the Quran and Bible",
-            "description": "The role and status of women across key passages in both the Quran and the Bible.",
-            "href": "/articles/women-in-the-quran-and-bible",
+            "title": "What is a contradiction?",
+            "description": "A framing article distinguishing genuine contradictions from textual variants, harmonizable difficulties, and interpretation.",
+            "href": "/articles/what-is-a-contradiction",
             "status": "draft"
           },
           {
-            "title": "Inheritance and testimony",
-            "description": "Islamic and Biblical law on inheritance shares and the legal weight of testimony.",
-            "href": "/articles/inheritance-and-testimony",
+            "title": "Genealogies of Jesus",
+            "description": "Why Matthew and Luke give Jesus two different genealogies, and how each tradition reads the difficulty.",
+            "href": "/articles/genealogies-of-jesus",
             "status": "draft"
           },
           {
-            "title": "Marriage and divorce",
-            "description": "Islamic marriage contracts and divorce compared with Christian sacramental and Protestant views.",
-            "href": "/articles/marriage-and-divorce",
+            "title": "The death of Judas",
+            "description": "Matthew's hanging and Acts' falling-headlong accounts of Judas' death, and how each is read.",
+            "href": "/articles/the-death-of-judas",
             "status": "draft"
           },
           {
-            "title": "Modesty and dress",
-            "description": "Scriptural roots of hijab and Christian modesty teaching, and the diversity within each tradition.",
-            "href": "/articles/modesty-and-dress",
+            "title": "The timing of the crucifixion",
+            "description": "Reconciling the Synoptic and Johannine timing of the Last Supper and crucifixion with Passover.",
+            "href": "/articles/the-timing-of-the-crucifixion",
             "status": "draft"
           },
           {
-            "title": "Female scholars and leaders",
-            "description": "Women in Islamic scholarship and Christian church history, from Aisha to Deborah and Priscilla.",
-            "href": "/articles/female-scholars-and-leaders",
+            "title": "Did anyone see God?",
+            "description": "Moses at Sinai, John 1:18, and Quran 6:103 and 7:143 on seeing God.",
+            "href": "/articles/did-anyone-see-god",
+            "status": "draft"
+          },
+          {
+            "title": "Is original sin just?",
+            "description": "A draft comparison of inherited guilt, accountability, repentance, and justice.",
+            "href": "/articles/original-sin-vs-personal-responsibility",
+            "status": "draft"
+          },
+          {
+            "title": "Can God become man?",
+            "description": "The Incarnation and Tawhid's objection to it, presented as a difference in starting premises about God.",
+            "href": "/articles/can-god-become-man",
+            "status": "draft"
+          },
+          {
+            "title": "Why would God allow scripture to be corrupted?",
+            "description": "The theological objection Muslims raise about textual corruption, and whether it rebounds on the Quran.",
+            "href": "/articles/why-would-god-allow-corruption",
             "status": "draft"
           }
         ]

@@ -29,7 +29,7 @@ export default async function PeopleOfPalestinePage() {
 
   return (
     <>
-      <Section className="border-b border-border" spacing="lg">
+      <Section className="border-b border-border" spacing="sm">
         <Container>
           <Breadcrumbs
             items={[
@@ -37,7 +37,7 @@ export default async function PeopleOfPalestinePage() {
               { label: "People of Palestine" },
             ]}
           />
-          <div className="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="mt-5 grid gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
               <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-md bg-muted text-accent sm:mb-4 sm:h-11 sm:w-11">
                 <HandHeart aria-hidden="true" className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -47,7 +47,7 @@ export default async function PeopleOfPalestinePage() {
                 title="People of Palestine"
                 subtitle="A respectful section for future source-backed study paths related to the people of Palestine, with careful attention to dignity, context, and verified references."
               />
-              <div className="mt-6 flex flex-wrap gap-2">
+              <div className="mt-4 flex flex-wrap gap-2">
                 <Tag>Human dignity</Tag>
                 <Tag>History</Tag>
                 <Tag>Sources</Tag>

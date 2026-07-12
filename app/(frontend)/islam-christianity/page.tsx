@@ -28,7 +28,7 @@ export default async function IslamChristianityPage() {
 
   return (
     <>
-      <Section className="border-b border-border" spacing="lg">
+      <Section className="border-b border-border" spacing="sm">
         <Container>
           <Breadcrumbs
             items={[
@@ -36,7 +36,7 @@ export default async function IslamChristianityPage() {
               { label: "Islam & Christianity" },
             ]}
           />
-          <div className="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="mt-5 grid gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
               <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-md bg-muted text-accent sm:mb-4 sm:h-11 sm:w-11">
                 <GitBranch aria-hidden="true" className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -46,7 +46,7 @@ export default async function IslamChristianityPage() {
                 title="Islam & Christianity"
                 subtitle="A dedicated branch for Christian visitors and sincere seekers studying Jesus, scripture, preservation, theology, salvation, and difficult questions."
               />
-              <div className="mt-6 flex flex-wrap gap-2">
+              <div className="mt-4 flex flex-wrap gap-2">
                 <Tag>Jesus</Tag>
                 <Tag>Scripture</Tag>
                 <Tag>Theology</Tag>

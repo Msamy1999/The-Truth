@@ -48,7 +48,7 @@ export default async function IslamOverviewPage() {
 
   return (
     <>
-      <Section className="border-b border-border" spacing="lg">
+      <Section className="border-b border-border" spacing="sm">
         <Container>
           <Breadcrumbs
             items={[
@@ -56,7 +56,7 @@ export default async function IslamOverviewPage() {
               { label: "Islam Overview" },
             ]}
           />
-          <div className="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="mt-5 grid gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
               <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-md bg-muted text-accent sm:mb-4 sm:h-11 sm:w-11">
                 <BookOpenCheck aria-hidden="true" className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -66,7 +66,7 @@ export default async function IslamOverviewPage() {
                 title="Islam Overview"
                 subtitle="A broad starting point for Islamic learning paths: foundations, scripture, purpose, questions, glossary terms, and source standards."
               />
-              <div className="mt-6 flex flex-wrap gap-2">
+              <div className="mt-4 flex flex-wrap gap-2">
                 <Tag>Foundations</Tag>
                 <Tag>Questions</Tag>
                 <Tag>Sources</Tag>

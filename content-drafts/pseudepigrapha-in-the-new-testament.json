@@ -1,0 +1,233 @@
+{
+  "slug": "pseudepigrapha-in-the-new-testament",
+  "title": "Pseudepigrapha in the New Testament",
+  "subtitle": "Books written in another's name — the scholarly debate over New Testament authorship, the case of 2 Peter, and how two traditions police attribution",
+  "category": "preservation",
+  "audienceLevel": "deep-study",
+  "summary": "Mainstream New Testament scholarship holds that several canonical books were written in the name of an apostle by someone else — a practice known as pseudepigraphy — with 2 Peter as the most widely cited case. This article lays out the critical arguments and the reception history in the early church, then presents the conservative defenses of authenticity at full strength. It closes with a comparative Islamic lens: the Quran’s condemnation of writing texts and attributing them to God, its single-generation compilation, and the honest parallel of Islam’s own hadith-criticism sciences.",
+  "tags": [
+    "Preservation",
+    "Scripture",
+    "History",
+    "Sources",
+    "Questions"
+  ],
+  "seo": {
+    "metaTitle": "Pseudepigrapha in the New Testament: The 2 Peter Question",
+    "metaDescription": "What mainstream scholarship says about New Testament books written in another’s name — the disputed Pauline letters, the case of 2 Peter, conservative defenses, and an Islamic comparative view.",
+    "keywords": [
+      "pseudepigrapha",
+      "pseudonymity",
+      "who wrote 2 Peter",
+      "disputed Pauline letters",
+      "Pastoral Epistles authorship",
+      "antilegomena",
+      "Eusebius disputed books",
+      "New Testament canon",
+      "hadith criticism",
+      "Quran 2:79"
+    ]
+  },
+  "sections": [
+    {
+      "sectionId": "deep-study-summary",
+      "title": "In Brief",
+      "kind": "summary",
+      "body": "Pseudepigraphy means writing a work in someone else’s name. Mainstream New Testament scholarship — a field populated largely by Christian scholars — concludes that several canonical books carry apostolic names their actual authors did not bear. The scholarly picture is usually described in tiers: seven letters of Paul are accepted as genuine by essentially everyone; three more (Ephesians, Colossians, 2 Thessalonians) are seriously disputed; and the Pastoral Epistles (1-2 Timothy, Titus) are regarded by most critical scholars as written after Paul’s death in his name. The book most widely judged pseudonymous is 2 Peter, which was also the most hesitantly received book in the early church’s own canon lists.\n\nThis article sets out the critical case in detail — dating, dependence on Jude, the delayed-parousia problem, and the reception history recorded by Eusebius — and then presents the conservative responses at full strength, including the secretary (amanuensis) hypothesis, the testament-genre debate, and scholars such as Michael Kruger and E. M. B. Green who defend Petrine authorship. It then turns to the Islamic comparative angle: the Quran’s explicit condemnation of writing texts and calling them God’s word (Quran 2:79), the contrast with the Quran’s single-generation compilation, and the honest parallel that Islam built its own vast authenticity science — hadith criticism — precisely because false attribution is a universal problem. The two traditions differ most in where each locates its divinely guaranteed core. No winner is declared; readers are given the arguments and the sources."
+    },
+    {
+      "sectionId": "introduction",
+      "title": "What Is at Stake in a Name",
+      "kind": "notes",
+      "body": "An ancient letter that opens “Paul, an apostle of Christ Jesus” is making a claim: that the words which follow carry the authority of a specific, known man. If Paul wrote it, the claim is straightforward. If someone else wrote it a generation later and attached Paul’s name, historians call the result a pseudepigraphon — literally, a “falsely inscribed” writing. Whether such a text can still be considered honest, authoritative, or inspired is a separate and much-debated question; but the historical question of who actually wrote each New Testament book is one that modern scholarship treats as open to evidence.\n\nThe stakes are real for both faith traditions this library compares. For Christianity, the New Testament canon was assembled in significant part on the criterion of apostolicity — the early church asked whether a book came from an apostle or an apostle’s close associate before admitting it. If some canonical books are pseudonymous, then a criterion the early church itself applied would, on the critical view, have been unknowingly unmet. For Islam, the Quran directly condemns the writing of texts that are then presented as God’s word, and Islamic civilization built one of history’s largest critical apparatuses — the hadith sciences — to police exactly this problem of false attribution.\n\nTwo cautions frame everything that follows. First, the scholars who built the critical consensus described here were and are mostly Christians; this is standard seminary material, not polemic. Second, every judgment of pseudonymity is probabilistic — an inference from style, vocabulary, historical setting, and reception history — and serious scholars defend the traditional attributions. Both sides are presented here."
+    },
+    {
+      "sectionId": "pseudepigraphy-in-antiquity",
+      "title": "Writing in Another’s Name in the Ancient World",
+      "kind": "history",
+      "body": "Pseudepigraphy was widespread in antiquity. Jewish literature of the Second Temple period produced works in the names of Enoch, Moses, Solomon, and other ancient figures; Greek philosophical schools circulated letters attributed to Plato and Socrates whose authenticity was debated even in ancient times. Scholars disagree, however, about what this prevalence means. David Meade, in Pseudonymity and Canon (1986), argued that within certain Jewish traditions, writing in a revered founder’s name could function as a claim of faithful continuity with his teaching rather than as simple deceit. Bart Ehrman, in Forgery and Counterforgery (2013), argues against this that ancient readers and authors did have a concept of literary forgery and condemned it — works judged falsely attributed were labeled notha (“illegitimate” writings) and excluded.\n\nThe early church’s own behavior supports at least part of Ehrman’s point. Around the year 200, Bishop Serapion of Antioch, upon examining the so-called Gospel of Peter, wrote — as Eusebius records in Church History 6.12.3 — “For we, brethren, receive both Peter and the other apostles as Christ; but we reject intelligently the writings falsely ascribed to them, knowing that such were not handed down to us.” The Muratorian Fragment, one of the earliest canon lists, likewise rejects letters it describes as forged in Paul’s name (as translated in standard editions such as Metzger’s The Canon of the New Testament). Whatever pseudepigraphy meant elsewhere, the church that formed the canon did not knowingly accept it.\n\nStrikingly, the New Testament itself attests that forged apostolic letters were a live concern. 2 Thessalonians warns its readers: “Now, brothers, concerning the coming of our Lord Jesus Christ, and our gathering together to him, we ask you not to be quickly shaken in your mind, and not be troubled, either by spirit, or by word, or by letter as if from us, saying that the day of Christ has already come” (2 Thessalonians 2:1-2). The same letter closes with an authentication mark: “The greeting of me, Paul, with my own hand, which is the sign in every letter: this is how I write” (2 Thessalonians 3:17). Both sides of the modern debate appeal to these verses. Defenders of traditional authorship read them as Paul protecting his congregations from forgers. Critical scholars note that 2 Thessalonians is itself one of the disputed letters, and some (Ehrman among them) argue that an actual forger would have every motive to include exactly such an authentication device. The verses prove, at minimum, that first- and second-century Christians knew apostolic names could be — and were — falsely claimed."
+    },
+    {
+      "sectionId": "pauline-letter-tiers",
+      "title": "The Three Tiers of the Pauline Letters",
+      "kind": "argument",
+      "body": "Thirteen New Testament letters open in Paul’s name. Standard critical introductions — Raymond E. Brown’s An Introduction to the New Testament (1997) and Bart Ehrman’s The New Testament: A Historical Introduction are representative — describe a three-tier scholarly landscape.\n\nFirst tier: seven letters are undisputed. Romans, 1 and 2 Corinthians, Galatians, Philippians, 1 Thessalonians, and Philemon are accepted as authentically Paul’s by virtually all scholars, critical and conservative alike, on grounds of consistent style, vocabulary, theology, and historical situation.\n\nSecond tier: Ephesians, Colossians, and 2 Thessalonians are genuinely disputed. Significant numbers of scholars line up on each side. Doubts rest on differences in sentence style and vocabulary from the undisputed letters, on developed theological themes (for example, the cosmic ecclesiology of Ephesians), and, for 2 Thessalonians, on its relationship to 1 Thessalonians. Defenders reply that Paul’s style could vary with topic, occasion, co-authors, and secretaries, and that the theological development is within one mind’s reach.\n\nThird tier: the Pastoral Epistles — 1 Timothy, 2 Timothy, and Titus — are regarded by most critical scholars as pseudonymous, written perhaps a generation after Paul. The arguments: a large share of their vocabulary appears nowhere in the undisputed letters; they presuppose a more developed church-office structure (bishops, deacons, an enrolled order of widows) than the undisputed letters reflect; and they are hard to fit into the chronology of Paul’s life as known from his other letters and Acts. Conservative scholars — D. A. Carson and Douglas Moo’s An Introduction to the New Testament is the standard counter-textbook — defend authenticity, arguing that the chronology can be accommodated by a release from Roman imprisonment and later ministry, that vocabulary shifts with subject matter and age, and that greater use of a secretary could account for much of the stylistic difference. Readers should know that the tier language describes the distribution of scholarly opinion, not a settled fact: the majority position on the Pastorals is confident but contested, and it is presented here as exactly that."
+    },
+    {
+      "sectionId": "second-peter-reception",
+      "title": "The Case of 2 Peter: How the Early Church Received It",
+      "kind": "history",
+      "body": "If the Pastorals are the largest disputed block, 2 Peter is the single book whose traditional attribution is most widely doubted — and the doubt is not a modern invention. It begins in the ancient church’s own records.\n\nNo surviving Christian writer clearly cites 2 Peter by name before Origen in the early third century, and Origen himself registers the doubt. As Eusebius preserves his words (Church History 6.25.8), Peter “has left one acknowledged epistle; perhaps also a second, but this is doubtful.” A century later Eusebius gave his own, blunter verdict (Church History 3.3.1): “One epistle of Peter, that called the first, is acknowledged as genuine. And this the ancient elders used freely in their own writings as an undisputed work. But we have learned that his extant second Epistle does not belong to the canon; yet, as it has appeared profitable to many, it has been used with the other Scriptures.”\n\nWhen Eusebius drew up his famous classification of Christian writings (Church History 3.25), he sorted books into the acknowledged (homologoumena), the disputed (antilegomena), and the rejected. He wrote: “Among the disputed writings, which are nevertheless recognized by many, are extant the so-called epistle of James and that of Jude, also the second epistle of Peter, and those that are called the second and third of John, whether they belong to the evangelist or to another person of the same name.” 2 Peter is also absent from the Muratorian Fragment, the early canon list that already names most other New Testament books.\n\nThe hesitation eventually resolved. Athanasius’s Easter letter of 367 lists 2 Peter among the seven Catholic Epistles, and the late-fourth-century councils associated with Laodicea and Carthage received it. Jerome accepted it while candidly noting that many doubted it because its style differs from 1 Peter’s — and he proposed, already in the fourth century, that Peter may have used a different secretary for each letter. Doubts resurfaced at the Reformation. Michael Kruger — himself a defender of the letter’s authenticity — opens his study of the question by summarizing this trajectory: 2 Peter “was received into the New Testament canon with hesitation, considered second-class Scripture by Luther, reluctantly accepted by Calvin, rejected by Erasmus, and now is repudiated as pseudonymous by modern scholarship” (“The Authenticity of 2 Peter,” Journal of the Evangelical Theological Society 42/4, 1999, p. 645). Standard reference works, among them The Oxford Dictionary of the Christian Church (3rd ed.), likewise describe 2 Peter’s admission to the canon as notably hesitant compared with other New Testament books."
+    },
+    {
+      "sectionId": "second-peter-critical-case",
+      "title": "The Case of 2 Peter: The Critical Argument",
+      "kind": "argument",
+      "body": "Modern critical scholarship adds internal arguments to the ancient hesitation. J. N. D. Kelly’s much-quoted assessment in his 1969 commentary — “scarcely anyone nowadays doubts that 2 Peter is pseudonymous” (as quoted by Kruger, who disputes the verdict) — rests on several converging observations.\n\nFirst, style. The Greek of 2 Peter differs markedly from that of 1 Peter — a difference so visible that Jerome already had to explain it. Critical scholars judge the two letters unlikely to come from the same hand.\n\nSecond, dependence on Jude. Nearly the whole of Jude’s short letter reappears, reworked, in 2 Peter’s second chapter, and most scholars conclude 2 Peter borrowed from Jude rather than the reverse. One parallel is especially discussed. Jude tells its readers: “But you, beloved, remember the words which have been spoken before by the apostles of our Lord Jesus Christ. They said to you that ‘In the last time there will be mockers, walking after their own ungodly lusts’” (Jude 1:17-18) — the apostles’ words are recalled as a past generation’s. 2 Peter presents nearly the same prediction, but in Peter’s own voice as prophecy: “knowing this first, that in the last days mockers will come, walking after their own lusts, and saying, ‘Where is the promise of his coming? For, from the day that the fathers fell asleep, all things continue as they were from the beginning of the creation’” (2 Peter 3:3-4). On the critical reading, a later author has converted an inherited warning into an apostolic prediction after the fact.\n\nThird, the delayed parousia. The scoffers’ taunt quoted above — where is the promised coming, “from the day that the fathers fell asleep”? — is read by most critical scholars as reflecting a time when the first Christian generation (“the fathers”) had died and the expectation of Christ’s imminent return had become an open difficulty requiring pastoral response. That situation, they argue, fits the early second century better than Peter’s lifetime (Peter’s death is traditionally placed in the 60s CE).\n\nFourth, the view of Paul’s letters. The epistle urges: “Regard the patience of our Lord as salvation; even as our beloved brother Paul also, according to the wisdom given to him, wrote to you; as also in all of his letters, speaking in them of these things. In those, there are some things that are hard to understand, which the ignorant and unsettled twist, as they also do to the other Scriptures, to their own destruction” (2 Peter 3:15-16). Critical scholars note that this presupposes a collected corpus of Paul’s letters, already known widely enough to be twisted by opponents, and already ranked alongside “the other Scriptures” — a situation they judge to postdate Peter.\n\nOn these grounds, most critical scholars date 2 Peter roughly between 100 and 150 CE, making it on their view the latest-written book of the New Testament. The dating is not unanimous even among those who accept pseudonymity: Richard Bauckham’s standard commentary (Jude, 2 Peter, Word Biblical Commentary, 1983) argues for the late first century and treats the letter as a “testament” — a recognized genre of farewell discourse written in a great figure’s name — which, on his reading, original audiences would not have mistaken for a letter from Peter’s own hand."
+    },
+    {
+      "sectionId": "conservative-responses",
+      "title": "The Conservative Case for 2 Peter — at Full Strength",
+      "kind": "interpretation",
+      "body": "The defense of 2 Peter’s authenticity is a serious scholarly position, not a reflex. Its modern statements include E. M. B. Green’s 2 Peter Reconsidered (Tyndale New Testament Lecture, 1960) and Michael Kruger’s article cited above, which argues that the case for pseudonymity is, in his words, “too incomplete and insufficient” to justify the confidence with which it is asserted. The main lines of defense:\n\nOn attestation: absence of early citation is weak evidence for a very short letter with limited early circulation; several defenders argue that the Apocalypse of Peter (usually dated to the early second century) already borrows from 2 Peter, which would push 2 Peter’s composition into the first century. The letter was, in the end, examined and received by the same church that fixed the rest of the canon — hesitation followed by acceptance can be read as evidence of scrutiny, not credulity.\n\nOn style: the amanuensis (secretary) hypothesis has ancient roots — Jerome himself suggested Peter used different secretaries for the two letters. Ancient letter-writing routinely involved secretaries with real compositional freedom, and 1 Peter itself indicates it was written through Silvanus. If the Greek is substantially a secretary’s, stylistic divergence between the letters tells us little about their common author.\n\nOn Jude: literary borrowing carries no implication about authorship — established authors borrow, and the direction of dependence is itself debated, with a minority holding that Jude used 2 Peter or that both drew on a common source.\n\nOn the delayed parousia: defenders argue that “the fathers” in the scoffers’ taunt can naturally mean the Old Testament patriarchs — a common sense of the word in Jewish and early Christian usage — so the complaint that “all things continue as they were from the beginning of the creation” need not presuppose the death of the first Christian generation at all.\n\nOn the testament genre: Kruger and others counter Bauckham’s argument by disputing that 2 Peter fits a purely fictional testament genre, noting among other points that the Greek word describing the author’s approaching death can be read as “swift” rather than “soon,” weakening the claim that the letter is structured as a deathbed fiction.\n\nFinally, the letter’s self-testimony is emphatic eyewitness language: “For we did not follow cunningly devised fables, when we made known to you the power and coming of our Lord Jesus Christ, but we were eyewitnesses of his majesty” (2 Peter 1:16). Defenders take this at face value and press the moral point: a letter that condemns deception throughout would, on the pseudonymity hypothesis, itself be built on a fabricated eyewitness claim — a paradox they judge the early church would not have canonized. Critical scholars respond that convincing self-testimony is precisely what effective pseudepigraphy required. The argument, like the others here, is weighed differently by honest scholars on both sides."
+    },
+    {
+      "sectionId": "islamic-comparison",
+      "title": "An Islamic Lens: Writing a Text and Calling It God’s",
+      "kind": "argument",
+      "body": "The Quran addresses false attribution directly — not about the New Testament, but about the handling of scripture by earlier communities. In a Medinan passage it declares: “So woe to those who write the ‘scripture’ with their own hands, then say, ‘This is from Allah,’ in order to exchange it for a small price. Woe to them for what their hands have written and woe to them for what they earn” (Quran 2:79). The mainstream tafsir tradition — al-Tabari and Ibn Kathir are representative — understands the verse as addressed to particular scribes among the Jewish community of the Prophet’s time who, the commentators report, wrote material and presented it as divine revelation for worldly gain; Muslim theologians have drawn from it a general principle condemning any human composition passed off as God’s word. It should be said plainly that the verse concerns specific conduct by a specific seventh-century audience; it is quoted here because Muslims apply its principle to the authorship debates above, not because it mentions them.\n\nFrom this principle, Muslim writers engaging Christianity typically argue two things. First, a structural contrast: on the account given in the earliest Islamic sources (the compilation reports preserved in Sahih al-Bukhari), the Quran was memorized as it was revealed, substantially written down during the Prophet’s lifetime, collected within a few years of his death under Abu Bakr, and standardized under Uthman within roughly two decades — one text, one generation, with named participants. The Quran itself stakes a theological claim on this preservation: “Indeed, it is We who sent down the Qur’an and indeed, We will be its guardian” (Quran 15:9). There is, Muslims argue, no Quranic analogue to a canonical book whose attributed author is doubted by most specialists in the field.\n\nBut honesty requires the second point, and classical Islam made it about itself: false attribution is a universal problem, and Islamic civilization faced it on an enormous scale — not in the Quran, but in hadith, the reports of the Prophet’s words and deeds. Fabricated hadith appeared early and in great numbers, and Muslim scholars said so openly; the Prophet is reported to have warned, in a hadith the tradition regards as among the most rigorously authenticated: “Whosoever tells a lie against me intentionally, then surely let him occupy his seat in Hell-Fire” (Sahih al-Bukhari 1291, narrated al-Mughira; sunnah.com translation). In response, Muslim scholarship built the isnad system — every report carried a named chain of transmitters, and disciplines such as ilm al-rijal (“the science of narrators”) assessed each link’s memory, honesty, and opportunity for transmission, grading reports from rigorously authentic (sahih) down to fabricated (mawdu). The existence of this machinery is itself an admission: attribution problems arise wherever texts and authority meet. Islam’s claim is not that Muslims never forged attributions — the tradition itself records that they did — but that it built formal, named, checkable tools to detect forgery, and located its inerrant scripture in a text compiled before generational distance could do its work."
+    },
+    {
+      "sectionId": "locating-the-inerrant-core",
+      "title": "Where Each Tradition Locates Its Guaranteed Core",
+      "kind": "argument",
+      "body": "The deepest difference exposed by this topic is structural, and it is worth stating carefully because it cuts in both directions.\n\nIn Islam, the divinely guaranteed core is the Quran alone — a single text, compiled within living memory of its delivery, whose transmission Muslims treat as categorically different from every other Islamic text. Everything else, including the hadith on which law and practice heavily depend, sits outside that core in an explicitly graded system where individual reports can be, and routinely are, rejected as inauthentic without theological crisis. When a Muslim scholar discards a fabricated hadith, the system is working as designed.\n\nIn Christianity, the books whose attribution is disputed sit inside the canon itself. If 2 Peter or the Pastorals are pseudonymous, the disputed material is not in an annex of graded tradition but in the New Testament. This is why the debate carries more theological weight for Christians than the parallel hadith debates carry for Muslims — and Christian thinkers have answered it in several ways. Conservative scholars simply contest the pseudonymity verdicts, as detailed above, and their case is substantive. Others argue that inspiration attaches to the canonical text as received and recognized by the church, not to a modern verification of its human penman — on this view, God’s use of an anonymous or even conventionally pseudonymous author is no obstacle, a position developed in different forms by scholars such as Meade and Bauckham. Ehrman and others counter that the early church itself would not have accepted this reasoning, since it rejected books precisely when it judged them falsely ascribed.\n\nChristians engaging the comparison also press back on the Islamic side: the Quran’s compilation history is itself known through reports — transmitted, assessed, and graded by the very hadith system Muslims acknowledge operated amid widespread fabrication — so report-based history, they argue, cannot be treated as a uniquely Christian vulnerability. Muslims respond that the compilation accounts are corroborated by mass transmission (tawatur), by the early manuscript record, and by the absence of any rival early text, which they judge a different evidentiary situation from a single disputed letter. Both replies are serious; readers should weigh them rather than have the verdict announced. What the comparison genuinely establishes is more modest and more interesting: both traditions agree that falsely attributing words to God or His messengers is gravely wrong, both faced the problem in their own literatures, and each built its defense in a different place — Christianity in the canon-forming judgment of the early church, Islam in a compiled-early scripture plus a formal science for grading everything else."
+    },
+    {
+      "sectionId": "what-this-does-not-settle",
+      "title": "What This Debate Does and Does Not Settle",
+      "kind": "interpretation",
+      "body": "It is easy to overread this material in either direction, so the limits should be stated explicitly.\n\nPseudonymity verdicts are probabilistic. They rest on cumulative judgments about style, vocabulary, historical fit, and reception — the kind of evidence that supports confidence, not proof. The scholarly majority on 2 Peter is large and stable, but majorities in this field have shifted before, and credentialed specialists dissent. Nothing in this article should be read as “scholarship has proven 2 Peter is a forgery”; the accurate statement is that most critical scholars judge it pseudonymous, for stated reasons, while a minority defends its authenticity, also for stated reasons.\n\nA pseudonymity verdict, even if correct, would not by itself falsify Christianity. Christian theologians have articulated positions on which the inspiration and usefulness of a canonical text do not stand or fall with modern authorship attribution, and 2 Peter’s doctrinal content is not, for the most part, unique to it. Conversely, a successful defense of 2 Peter’s authenticity would not by itself resolve the wider authorship questions about the Pastorals or the disputed Paulines, which rest on partly independent evidence.\n\nNor does the comparison hand Islam a costless victory. The Muslim case for the Quran’s compilation depends on the reliability of early Islamic historical reporting, and Muslims maintain a graded, criticized hadith corpus precisely because their own tradition produced fabrications on a large scale. The honest comparative claim is about structure — where each tradition’s guaranteed core sits and how each polices attribution — not about one community being immune to a universal human temptation.\n\nFinally, every load-bearing quotation in this article is checkable: Eusebius and Serapion at the cited chapters of the Church History, the scholarly assessments in the named publications, and the scripture texts against the public translations cited below. Readers of a library like this one should never take authorship claims on trust — in either direction. That is, after all, the lesson of the topic itself."
+    },
+    {
+      "sectionId": "sources-and-method",
+      "title": "Sources and Method",
+      "kind": "sources",
+      "body": "Scripture quotations were retrieved from public sources and reproduced verbatim: Quran texts (Uthmani script with Saheeh International translation) from api.alquran.cloud; Bible texts from the public-domain World English Bible via bible-api.com. Patristic quotations (Eusebius, Church History 3.3.1, 3.25.3, 6.12.3, and Origen as preserved in 6.25.8) follow the Nicene and Post-Nicene Fathers translation as published at newadvent.org. The reception-history summary quoted from Michael Kruger appears in “The Authenticity of 2 Peter,” Journal of the Evangelical Theological Society 42/4 (December 1999), pp. 645-671; J. N. D. Kelly’s assessment is from his 1969 commentary on Peter and Jude as quoted there. The characterization of 2 Peter’s hesitant canonical reception is standard in reference works such as The Oxford Dictionary of the Christian Church (3rd ed.). The hadith quoted is Sahih al-Bukhari 1291 in the sunnah.com translation. Positions described as majority or minority views are attributed to the named scholarly literature (Brown, Ehrman, Bauckham, and Kelly for the critical side; Kruger, Green, and Carson and Moo for the conservative side; Meade and Bauckham for mediating positions). This article declares no winner; it documents a debate."
+    }
+  ],
+  "quranVerses": [
+    {
+      "surahName": "Al-Baqara",
+      "surahNumber": 2,
+      "ayahNumber": 79,
+      "reference": "Quran 2:79",
+      "arabic": "فَوَيْلٌۭ لِّلَّذِينَ يَكْتُبُونَ ٱلْكِتَٰبَ بِأَيْدِيهِمْ ثُمَّ يَقُولُونَ هَٰذَا مِنْ عِندِ ٱللَّهِ لِيَشْتَرُوا۟ بِهِۦ ثَمَنًۭا قَلِيلًۭا ۖ فَوَيْلٌۭ لَّهُم مِّمَّا كَتَبَتْ أَيْدِيهِمْ وَوَيْلٌۭ لَّهُم مِّمَّا يَكْسِبُونَ",
+      "translation": "So woe to those who write the \"scripture\" with their own hands, then say, \"This is from Allah,\" in order to exchange it for a small price. Woe to them for what their hands have written and woe to them for what they earn.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Hijr",
+      "surahNumber": 15,
+      "ayahNumber": 9,
+      "reference": "Quran 15:9",
+      "arabic": "إِنَّا نَحْنُ نَزَّلْنَا ٱلذِّكْرَ وَإِنَّا لَهُۥ لَحَٰفِظُونَ",
+      "translation": "Indeed, it is We who sent down the Qur'an and indeed, We will be its guardian.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    }
+  ],
+  "bibleVerses": [
+    {
+      "book": "2 Peter",
+      "chapter": 3,
+      "verse": "3-4",
+      "reference": "2 Peter 3:3-4",
+      "text": "knowing this first, that in the last days mockers will come, walking after their own lusts, and saying, “Where is the promise of his coming? For, from the day that the fathers fell asleep, all things continue as they were from the beginning of the creation.”",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Jude",
+      "chapter": 1,
+      "verse": "17-18",
+      "reference": "Jude 1:17-18",
+      "text": "But you, beloved, remember the words which have been spoken before by the apostles of our Lord Jesus Christ. They said to you that “In the last time there will be mockers, walking after their own ungodly lusts.”",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "2 Thessalonians",
+      "chapter": 2,
+      "verse": "1-2",
+      "reference": "2 Thessalonians 2:1-2",
+      "text": "Now, brothers, concerning the coming of our Lord Jesus Christ, and our gathering together to him, we ask you not to be quickly shaken in your mind, and not be troubled, either by spirit, or by word, or by letter as if from us, saying that the day of Christ has already come.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "2 Thessalonians",
+      "chapter": 3,
+      "verse": "17",
+      "reference": "2 Thessalonians 3:17",
+      "text": "The greeting of me, Paul, with my own hand, which is the sign in every letter: this is how I write.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "2 Peter",
+      "chapter": 1,
+      "verse": "16",
+      "reference": "2 Peter 1:16",
+      "text": "For we did not follow cunningly devised fables, when we made known to you the power and coming of our Lord Jesus Christ, but we were eyewitnesses of his majesty.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "2 Peter",
+      "chapter": 3,
+      "verse": "15-16",
+      "reference": "2 Peter 3:15-16",
+      "text": "Regard the patience of our Lord as salvation; even as our beloved brother Paul also, according to the wisdom given to him, wrote to you; as also in all of his letters, speaking in them of these things. In those, there are some things that are hard to understand, which the ignorant and unsettled twist, as they also do to the other Scriptures, to their own destruction.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What exactly does “pseudepigrapha” mean?",
+      "answer": "From Greek, it means “falsely inscribed” writings — works composed by one person but circulated under the name of another, usually a revered figure. In New Testament studies the term (or “pseudonymity”) describes the scholarly view that some canonical books carry apostolic names their actual authors did not bear."
+    },
+    {
+      "question": "Do all scholars agree that 2 Peter was not written by Peter?",
+      "answer": "No. Most critical scholars judge it pseudonymous — J. N. D. Kelly’s line that “scarcely anyone nowadays doubts” it is often quoted — but the verdict is contested. Michael Kruger, E. M. B. Green, and the textbook of Carson and Moo defend Petrine authorship, and Richard Bauckham holds a mediating view: a late-first-century “testament” whose original readers would have recognized the genre."
+    },
+    {
+      "question": "If the early church doubted 2 Peter, why is it in the Bible?",
+      "answer": "The doubts were eventually weighed and set aside: Athanasius’s Easter letter of 367 and the late-fourth-century councils received it among the seven Catholic Epistles. Defenders read that history as evidence of careful scrutiny rather than credulity; critical scholars read it as a late decision made without the linguistic and historical tools available today. Both readings of the same facts are represented in current scholarship."
+    },
+    {
+      "question": "Which Pauline letters does mainstream scholarship consider genuine?",
+      "answer": "Seven are undisputed: Romans, 1 and 2 Corinthians, Galatians, Philippians, 1 Thessalonians, and Philemon. Ephesians, Colossians, and 2 Thessalonians are seriously disputed, with scholars on both sides. Most critical scholars regard the Pastorals (1-2 Timothy, Titus) as written in Paul’s name after his death — a majority view that conservative scholarship contests in detail."
+    },
+    {
+      "question": "Does Islam have an equivalent problem of false attribution?",
+      "answer": "Yes, and classical Islam said so itself — in hadith rather than the Quran. Fabricated reports about the Prophet appeared early and in large numbers, and Muslim scholars responded by building the isnad system: named transmission chains, biographical evaluation of every narrator, and formal reliability grades. Muslims argue the Quran itself is a separate case because it was compiled within a generation; that claim rests on early Islamic reports and manuscript evidence discussed in this library’s companion articles."
+    },
+    {
+      "question": "If a biblical book is pseudonymous, does that make it worthless or Christianity false?",
+      "answer": "Not by itself. A pseudonymity verdict is a historical judgment about human authorship, and Christian theologians hold a range of positions on how inspiration relates to that question — from denying the verdicts outright to arguing that canonical authority does not depend on modern authorship verification. What the debate does affect is the argument that canonicity guarantees apostolic authorship; each reader must weigh how much rests on that link."
+    }
+  ],
+  "relatedSlugs": [
+    "gospel-authorship-and-dating",
+    "biblical-canon-formation",
+    "how-was-the-bible-transmitted",
+    "textual-variants-explained",
+    "paul-and-his-influence",
+    "written-compilation-of-the-quran"
+  ],
+  "furtherReading": [
+    {
+      "title": "Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics",
+      "author": "Bart D. Ehrman",
+      "note": "The fullest modern statement of the critical case that early Christian pseudepigraphy was forgery in the ancient world’s own terms."
+    },
+    {
+      "title": "Jude, 2 Peter (Word Biblical Commentary 50)",
+      "author": "Richard Bauckham",
+      "note": "The standard technical commentary; argues for a first-century date and reads 2 Peter as a “testament” whose pseudonymity was a transparent convention."
+    },
+    {
+      "title": "An Introduction to the New Testament",
+      "author": "D. A. Carson and Douglas J. Moo",
+      "note": "The leading conservative textbook; defends traditional authorship of the disputed letters, including 2 Peter and the Pastorals."
+    },
+    {
+      "title": "Hadith: Muhammad’s Legacy in the Medieval and Modern World",
+      "author": "Jonathan A. C. Brown",
+      "note": "An accessible academic account of hadith fabrication and the authenticity sciences Islam built in response."
+    }
+  ]
+}
