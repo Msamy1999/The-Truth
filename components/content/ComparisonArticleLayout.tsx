@@ -145,8 +145,8 @@ export function ComparisonArticleLayout({
         <div className="mt-5 space-y-4">
           {comparison.commonObjections.map((item) => (
             <Card key={item.objection} className="p-4">
-              <h3 className="text-lg leading-snug">{item.objection}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{item.response}</p>
+              <h3 className="select-text text-lg leading-snug">{item.objection}</h3>
+              <p className="mt-2 select-text text-sm text-muted-foreground">{item.response}</p>
             </Card>
           ))}
         </div>

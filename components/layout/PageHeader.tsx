@@ -37,7 +37,7 @@ export function PageHeader({
       ) : null}
       <Title
         className={cn(
-          "mt-2 leading-tight sm:mt-3",
+          "mt-2 select-text leading-tight sm:mt-3",
           titleAs === "h1"
             ? "text-2xl sm:text-3xl lg:text-4xl"
             : "text-xl sm:text-2xl lg:text-3xl",
@@ -47,7 +47,7 @@ export function PageHeader({
         {title}
       </Title>
       {subtitle ? (
-        <p className="mt-2.5 text-sm leading-6 text-muted-foreground sm:mt-4 sm:text-base sm:leading-7 lg:text-lg">
+        <p className="mt-2.5 select-text text-sm leading-6 text-muted-foreground sm:mt-4 sm:text-base sm:leading-7 lg:text-lg">
           {subtitle}
         </p>
       ) : null}

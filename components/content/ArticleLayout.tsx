@@ -204,8 +204,8 @@ function ArticleSectionBlock({
       <p className="text-xs font-semibold uppercase text-accent sm:text-sm">
         {section.kind}
       </p>
-      <h2 className="mt-2 text-lg leading-snug sm:mt-3 sm:text-xl">{section.title}</h2>
-      <p className="mt-3 whitespace-pre-line text-sm leading-6 text-muted-foreground sm:mt-4 sm:text-base sm:leading-7">{section.body}</p>
+      <h2 className="mt-2 select-text text-lg leading-snug sm:mt-3 sm:text-xl">{section.title}</h2>
+      <p className="mt-3 select-text whitespace-pre-line text-sm leading-6 text-muted-foreground sm:mt-4 sm:text-base sm:leading-7">{section.body}</p>
       {section.citationIds && section.citationIds.length > 0 ? (
         <p className="mt-4 text-xs font-medium uppercase text-muted-foreground">
           Source markers to verify: {section.citationIds.join(", ")}

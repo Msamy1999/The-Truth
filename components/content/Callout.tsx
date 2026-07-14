@@ -46,7 +46,7 @@ export function Callout({
   return (
     <aside
       className={cn(
-        "rounded-lg border p-4 text-sm leading-7",
+        "select-text rounded-lg border p-4 text-sm leading-7",
         calloutStyles[type].className,
         className,
       )}
