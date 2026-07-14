@@ -103,10 +103,13 @@ export default function ArticleScreen() {
         <Text style={[type.label, { color: theme.accent }]}>
           Research article
         </Text>
-        <Text style={[type.display, { color: theme.foreground, fontSize: 24, lineHeight: 31 }]}>
+        <Text
+          selectable
+          style={[type.display, { color: theme.foreground, fontSize: 24, lineHeight: 31 }]}
+        >
           {article.title}
         </Text>
-        <Body scale={fontScale}>{article.subtitle}</Body>
+        <Body scale={fontScale} selectable>{article.subtitle}</Body>
         <Row>
           <StatusPill status={article.status} />
           {article.tags.map((tag) => (
@@ -137,7 +140,10 @@ export default function ArticleScreen() {
               </Text>
               <View style={[styles.rule, { backgroundColor: theme.hairline }]} />
             </View>
-            <Text style={[type.title, { color: theme.foreground, fontSize: 18 }]}>
+            <Text
+              selectable
+              style={[type.title, { color: theme.foreground, fontSize: 18 }]}
+            >
               {section.title}
             </Text>
             <Body scale={fontScale} selectable>
