@@ -1,6 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Stack, useLocalSearchParams } from "expo-router";
-import { useMemo } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { ArticleTools } from "../../components/ArticleTools";
 import {
@@ -17,25 +16,6 @@ import {
 import { useContent } from "../../lib/content";
 import { useBookmarks, useFontScale } from "../../lib/store";
 import { space, type, useTheme } from "../../lib/theme";
-import type { Article } from "../../lib/types";
-
-/**
- * The title, subtitle, beginner summary, and every section (title + body)
- * as ONE continuous string, so the whole article renders in a single
- * TextInput and a drag-selection can span across section boundaries —
- * a real iOS/Android limitation is that a native text selection can never
- * cross between two separate text views, so anything meant to be
- * selectable together has to live in the same one. The trade-off: within
- * this flow every line shares one plain style (no bold/larger heading
- * text), so section titles are set off with a plain-text marker instead.
- */
-function buildSelectableFlow(article: Article): string {
-  const parts = [article.title, article.subtitle, `BEGINNER SUMMARY\n${article.summary}`];
-  for (const section of article.sections) {
-    parts.push(`${section.kind.toUpperCase()}\n${section.title}\n\n${section.body}`);
-  }
-  return parts.filter(Boolean).join("\n\n\n");
-}
 
 export default function ArticleScreen() {
   const { slug } = useLocalSearchParams<{ slug: string }>();
@@ -45,10 +25,6 @@ export default function ArticleScreen() {
   const { fontScale, cycle } = useFontScale();
 
   const article = content.articles.find((item) => item.slug === slug);
-  const selectableFlow = useMemo(
-    () => (article ? buildSelectableFlow(article) : ""),
-    [article],
-  );
 
   if (!article) {
     return (
@@ -128,6 +104,12 @@ export default function ArticleScreen() {
         <Text style={[type.label, { color: theme.accent }]}>
           Research article
         </Text>
+        <SelectableText
+          style={[type.display, { color: theme.foreground, fontSize: 24, lineHeight: 31 }]}
+        >
+          {article.title}
+        </SelectableText>
+        <Body scale={fontScale} selectable>{article.subtitle}</Body>
         <Row>
           <StatusPill status={article.status} />
           {article.tags.map((tag) => (
@@ -142,38 +124,37 @@ export default function ArticleScreen() {
 
         <Card style={{ borderLeftWidth: 3, borderLeftColor: theme.accent }}>
           <Text style={[type.label, { color: theme.accent }]}>
-            Tip: select any range below to copy it — selection can now span
-            across sections
+            Beginner summary
           </Text>
+          <Body scale={fontScale} muted={false} selectable>
+            {article.summary}
+          </Body>
         </Card>
 
-        <SelectableText
-          style={[
-            type.body,
-            {
-              color: theme.foreground,
-              fontSize: type.body.fontSize * fontScale,
-              lineHeight: type.body.lineHeight * fontScale,
-            },
-          ]}
-        >
-          {selectableFlow}
-        </SelectableText>
-
-        {article.sections.some((section) => section.citationIds.length > 0) ? (
-          <View style={{ gap: 4 }}>
-            {article.sections
-              .filter((section) => section.citationIds.length > 0)
-              .map((section) => (
-                <Text
-                  key={section.id}
-                  style={[type.caption, { color: theme.mutedForeground, fontStyle: "italic" }]}
-                >
-                  {section.title} — sources to verify: {section.citationIds.join(", ")}
-                </Text>
-              ))}
+        {article.sections.map((section) => (
+          <View key={section.id} style={styles.section}>
+            <View style={styles.sectionRule}>
+              <View style={[styles.rule, { backgroundColor: theme.hairline }]} />
+              <Text style={[type.label, { color: theme.accent }]}>
+                {section.kind}
+              </Text>
+              <View style={[styles.rule, { backgroundColor: theme.hairline }]} />
+            </View>
+            <SelectableText
+              style={[type.title, { color: theme.foreground, fontSize: 18 }]}
+            >
+              {section.title}
+            </SelectableText>
+            <Body scale={fontScale} selectable>
+              {section.body}
+            </Body>
+            {section.citationIds.length > 0 ? (
+              <Text style={[type.caption, { color: theme.mutedForeground, fontStyle: "italic" }]}>
+                Sources to verify: {section.citationIds.join(", ")}
+              </Text>
+            ) : null}
           </View>
-        ) : null}
+        ))}
 
         <SectionHeader>Sources</SectionHeader>
         <View style={styles.list}>
@@ -222,6 +203,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  section: { gap: 6, marginTop: space.md },
+  sectionRule: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: space.sm,
+    marginBottom: 2,
+  },
+  rule: { flex: 1, height: StyleSheet.hairlineWidth },
   list: { gap: space.sm },
   missing: { flex: 1, padding: 24, gap: space.sm, alignItems: "center", justifyContent: "center" },
 });
