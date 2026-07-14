@@ -6,8 +6,10 @@ import {
   Pressable,
   StyleSheet,
   Text,
+  TextInput,
   View,
   type StyleProp,
+  type TextStyle,
   type ViewStyle,
 } from "react-native";
 import { radius, space, type, useTheme, useThemeContext } from "../lib/theme";
@@ -310,18 +312,76 @@ export function Body({
   selectable?: boolean;
 }) {
   const theme = useTheme();
+  const color = muted ? theme.mutedForeground : theme.foreground;
+  const style = {
+    color,
+    fontSize: type.body.fontSize * scale,
+    lineHeight: type.body.lineHeight * scale,
+  };
+
+  // React Native's Text `selectable` prop only supports select-the-whole-
+  // block-or-nothing on iOS — no drag handles to grow/shrink a selection.
+  // A non-editable, non-scrollable multiline TextInput gets the real native
+  // selection UI (word tap + draggable handles), so it's used here whenever
+  // the text is meant to be copyable.
+  if (selectable && typeof children === "string") {
+    return <SelectableTextBlock value={children} style={style} />;
+  }
+
   return (
-    <Text
-      selectable={selectable}
-      style={{
-        color: muted ? theme.mutedForeground : theme.foreground,
-        fontSize: type.body.fontSize * scale,
-        lineHeight: type.body.lineHeight * scale,
-      }}
-    >
+    <Text selectable={selectable} style={style}>
       {children}
     </Text>
   );
+}
+
+/**
+ * Renders plain text with real native text selection (word tap + draggable
+ * handles), by using a disabled multiline TextInput instead of Text. Not
+ * editable, not focusable via tab, no keyboard/cursor — purely a read-only
+ * selection surface that looks identical to Text. Exported for callers that
+ * need a type scale other than Body's (article titles, section headings).
+ */
+export function SelectableText({
+  children,
+  style,
+}: {
+  children: string;
+  style?: StyleProp<TextStyle>;
+}) {
+  return (
+    <TextInput
+      value={children}
+      editable={false}
+      multiline
+      scrollEnabled={false}
+      showSoftInputOnFocus={false}
+      contextMenuHidden={false}
+      autoCorrect={false}
+      spellCheck={false}
+      underlineColorAndroid="transparent"
+      style={[
+        {
+          padding: 0,
+          margin: 0,
+          borderWidth: 0,
+          backgroundColor: "transparent",
+          textAlignVertical: "center",
+        },
+        style,
+      ]}
+    />
+  );
+}
+
+function SelectableTextBlock({
+  value,
+  style,
+}: {
+  value: string;
+  style: { color: string; fontSize: number; lineHeight: number };
+}) {
+  return <SelectableText style={style}>{value}</SelectableText>;
 }
 
 // ---------------------------------------------------------------------------

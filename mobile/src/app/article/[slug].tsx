@@ -9,6 +9,7 @@ import {
   Pill,
   Row,
   SectionHeader,
+  SelectableText,
   StatusPill,
   categoryIcon,
 } from "../../components/ui";
@@ -103,12 +104,11 @@ export default function ArticleScreen() {
         <Text style={[type.label, { color: theme.accent }]}>
           Research article
         </Text>
-        <Text
-          selectable
+        <SelectableText
           style={[type.display, { color: theme.foreground, fontSize: 24, lineHeight: 31 }]}
         >
           {article.title}
-        </Text>
+        </SelectableText>
         <Body scale={fontScale} selectable>{article.subtitle}</Body>
         <Row>
           <StatusPill status={article.status} />
@@ -140,12 +140,11 @@ export default function ArticleScreen() {
               </Text>
               <View style={[styles.rule, { backgroundColor: theme.hairline }]} />
             </View>
-            <Text
-              selectable
+            <SelectableText
               style={[type.title, { color: theme.foreground, fontSize: 18 }]}
             >
               {section.title}
-            </Text>
+            </SelectableText>
             <Body scale={fontScale} selectable>
               {section.body}
             </Body>
