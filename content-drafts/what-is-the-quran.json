@@ -1,0 +1,126 @@
+{
+  "slug": "what-is-the-quran",
+  "title": "What Is the Quran?",
+  "subtitle": "Islam's central scripture: revelation, guidance, recitation, and a living source of worship",
+  "category": "the-quran-and-the-bible",
+  "audienceLevel": "beginner",
+  "summary": "Muslims believe the Quran is God's final revealed scripture, delivered in Arabic to Prophet Muhammad through the angel Gabriel over about twenty-three years. Its 114 chapters guide belief, worship, ethics, and community life, while its Arabic text remains central to recitation and prayer.",
+  "tags": [
+    "Scripture",
+    "History",
+    "Preservation"
+  ],
+  "seo": {
+    "metaTitle": "What Is the Quran? Revelation and Structure Explained",
+    "metaDescription": "A beginner-friendly introduction to the Quran's revelation, 114 surahs, Meccan and Medinan passages, guidance, recitation, and preservation claim.",
+    "keywords": [
+      "what is the Quran",
+      "Quran revelation",
+      "114 surahs",
+      "Meccan and Medinan surahs",
+      "Gabriel and Muhammad",
+      "Quran preservation",
+      "Islamic scripture"
+    ]
+  },
+  "sections": [
+    {
+      "sectionId": "beginner-summary",
+      "title": "In Plain Words",
+      "kind": "summary",
+      "body": "The Quran is the central scripture of Islam. Muslims believe it is the speech of God revealed in Arabic to Prophet Muhammad, peace be upon him, through the angel Gabriel. Revelation began around 610 CE and continued until near the Prophet's death in 632 CE, a period of about twenty-three years.\n\nThe Quran is not arranged as a continuous biography or a modern textbook. Its 114 chapters, called surahs, vary greatly in length and bring together accounts of earlier prophets, teachings about God and the afterlife, moral instruction, law, prayer, warning, consolation, and signs in creation. Muslims read it for understanding, recite it as worship, memorize it, and hear portions of it in every formal prayer."
+    },
+    {
+      "sectionId": "revelation-and-gabriel",
+      "title": "Revealed Through Gabriel",
+      "kind": "scripture",
+      "body": "The Arabic word quran is connected with recitation. This reflects the way the revelation first entered the Muslim community: it was recited by Muhammad, learned by his companions, used in prayer, and also written down. Quran 2:97 names Gabriel as the angel who brought the revelation to Muhammad's heart by God's permission.\n\nMuslims distinguish the Quran from hadith. The Quran is revelation recited as scripture in its exact Arabic wording. Hadith are transmitted reports about the Prophet's words, actions, and approvals; they help explain belief and practice but are assessed through their own chains and methods of authentication. A translation of the Quran communicates its meanings, but Muslims ordinarily reserve the name Quran in the fullest sense for the Arabic revelation itself."
+    },
+    {
+      "sectionId": "guidance-and-message",
+      "title": "A Book of Guidance",
+      "kind": "interpretation",
+      "body": "The Quran describes itself as guidance. Quran 2:2 connects that guidance with taqwa, a word that includes awareness of God, reverence, and a desire to guard oneself from wrongdoing. Its aim is therefore not only to supply information. It calls the reader to recognize the Creator, worship Him alone, act justly, repent after sin, and prepare for the final return to God.\n\nMany themes recur rather than appearing only once. The accounts of Adam, Noah, Abraham, Moses, Mary, and Jesus return in different settings, each time emphasizing lessons suited to the surrounding passage. Commands may be placed beside reminders of mercy and accountability. Descriptions of nature may lead directly to questions about gratitude and resurrection. This interwoven style invites slow reading, reflection, and comparison of passages across the whole book."
+    },
+    {
+      "sectionId": "meccan-and-medinan",
+      "title": "Meccan and Medinan Revelation",
+      "kind": "history",
+      "body": "Revelation accompanied two main phases of Muhammad's mission. Meccan passages are those revealed before the migration to Medina in 622 CE, even if a particular passage was received outside the city of Mecca. They often emphasize God's oneness, moral awakening, earlier prophets, the resurrection, and perseverance under opposition. Medinan passages are those revealed after the migration. Alongside the same foundations of faith, they address the needs of a growing community, including worship, family and social responsibilities, public ethics, agreements, conflict, and relations with other groups.\n\nThis distinction is about period, not simply geography, and individual chapters can contain material that scholars discuss in more detail. The present written order is also not a chronological sequence. Readers therefore benefit from knowing the setting of a passage while still reading it as part of the Quran's final arrangement."
+    },
+    {
+      "sectionId": "preservation-and-study",
+      "title": "Preservation and Responsible Study",
+      "kind": "sources",
+      "body": "The Quran makes its own preservation claim in Quran 15:9. Muslim tradition understands that promise through the combined history of memorization, written collection, manuscript transmission, and carefully taught modes of recitation. Those subjects deserve evidence and detail rather than a few compressed claims, so this introduction does not try to settle the whole history in one section. The related articles on how the Quran was preserved and the history of Quranic revelation examine that material directly.\n\nA good beginner practice is to read a reliable translation alongside the Arabic when possible, notice who is speaking and what subject is being addressed, consult the surrounding verses, and use recognized commentary for difficult passages. Questions are part of serious reading. The Quran itself repeatedly asks its audience to reflect, remember, and use reason, while its recitation keeps study connected to worship."
+    }
+  ],
+  "quranVerses": [
+    {
+      "surahName": "Al-Baqarah",
+      "surahNumber": 2,
+      "ayahNumber": 97,
+      "reference": "Quran 2:97",
+      "arabic": "قُلْ مَن كَانَ عَدُوًّۭا لِّجِبْرِيلَ فَإِنَّهُۥ نَزَّلَهُۥ عَلَىٰ قَلْبِكَ بِإِذْنِ ٱللَّهِ مُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ وَهُدًۭى وَبُشْرَىٰ لِلْمُؤْمِنِينَ",
+      "translation": "Say, \"Whoever is an enemy to Gabriel - it is [none but] he who has brought the Qur'an down upon your heart, [O Muhammad], by permission of Allah, confirming that which was before it and as guidance and good tidings for the believers.\"",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Baqarah",
+      "surahNumber": 2,
+      "ayahNumber": 2,
+      "reference": "Quran 2:2",
+      "arabic": "ذَٰلِكَ ٱلْكِتَٰبُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًۭى لِّلْمُتَّقِينَ",
+      "translation": "This is the Book about which there is no doubt, a guidance for those conscious of Allah -",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Hijr",
+      "surahNumber": 15,
+      "ayahNumber": 9,
+      "reference": "Quran 15:9",
+      "arabic": "إِنَّا نَحْنُ نَزَّلْنَا ٱلذِّكْرَ وَإِنَّا لَهُۥ لَحَٰفِظُونَ",
+      "translation": "Indeed, it is We who sent down the Qur'an and indeed, We will be its guardian.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    }
+  ],
+  "bibleVerses": [],
+  "faq": [
+    {
+      "question": "How many chapters are in the Quran?",
+      "answer": "The Quran has 114 chapters, called surahs. They vary in length and are not arranged as a simple chronology of revelation."
+    },
+    {
+      "question": "Is an English translation the Quran?",
+      "answer": "A translation communicates an interpreter's rendering of the Quran's meanings. Muslims rely on translations for study, but regard the revealed Arabic wording as the Quran in the fullest liturgical sense."
+    },
+    {
+      "question": "What does Meccan or Medinan mean?",
+      "answer": "Meccan refers to revelation before Muhammad's migration to Medina in 622 CE, and Medinan refers to revelation after it. The classification is primarily chronological rather than a statement that every passage was revealed inside one of the two cities."
+    },
+    {
+      "question": "Where can I learn more about how the Quran was preserved?",
+      "answer": "See the related articles How Was the Quran Preserved? and Quranic Revelation History. They address memorization, written transmission, collection, and historical context in more depth."
+    }
+  ],
+  "relatedSlugs": [
+    "how-was-the-quran-preserved",
+    "quranic-revelation-history",
+    "what-is-revelation"
+  ],
+  "furtherReading": [
+    {
+      "title": "The Koran: A Very Short Introduction",
+      "author": "Michael Cook",
+      "note": "A concise study of the Quran as scripture, recitation, text, and historical phenomenon, published by Oxford University Press."
+    },
+    {
+      "title": "The Cambridge Companion to the Qur'an",
+      "author": "Jane Dammen McAuliffe, editor",
+      "note": "A multi-author academic introduction to the Quran's formation, themes, transmission, interpretation, and reception, published by Cambridge University Press."
+    }
+  ]
+}

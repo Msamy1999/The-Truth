@@ -1,23 +1,20 @@
 import type { ResearchTreeNode } from "@/types/domain";
 
-/**
- * Flat beginner outline for /islam-overview. Entries without an href are
- * planned, source-pending topics with no article yet — shown as
- * non-clickable rows rather than a link to nowhere.
- */
+/** Flat beginner outline for /islam-overview. */
 export const islamOverviewTree: ResearchTreeNode[] = [
   {
     id: "who-is-allah",
     title: "Who is Allah?",
     description:
-      "Planned beginner topic on the Islamic understanding of God, His names, and His attributes.",
-    tag: "Planned",
+      "The beautiful names, God's transcendence, and why Islam insists on worshipping Him alone.",
+    href: "/articles/who-is-allah",
+    status: "draft",
   },
   {
     id: "what-is-tawhid",
     title: "What is Tawhid?",
     description:
-      "A draft beginner article defining Islamic monotheism with source placeholders.",
+      "The oneness of God, the meaning of worship, and why associating partners with Him is rejected.",
     href: "/articles/what-is-tawhid",
     status: "draft",
   },
@@ -25,49 +22,56 @@ export const islamOverviewTree: ResearchTreeNode[] = [
     id: "what-is-the-quran",
     title: "What is the Quran?",
     description:
-      "Planned introduction to revelation, structure, and how the Quran will be cited across the library.",
-    tag: "Planned",
+      "Revelation through Gabriel, the Quran's 114 surahs, its guidance, and its preservation claim.",
+    href: "/articles/what-is-the-quran",
+    status: "draft",
   },
   {
     id: "who-is-prophet-muhammad",
     title: "Who is Prophet Muhammad ﷺ?",
     description:
-      "Planned beginner biography with sourced dates and events added only after verification.",
-    tag: "Planned",
+      "A beginner biography of Islam's final prophet, from Mecca and the first revelation to Medina.",
+    href: "/articles/who-is-prophet-muhammad",
+    status: "draft",
   },
   {
     id: "what-are-the-prophets",
     title: "What are the prophets?",
     description:
-      "Planned overview of prophethood in Islam and the shared line of messengers.",
-    tag: "Planned",
+      "The shared call of Abraham, Moses, Jesus, Muhammad, and all of God's true messengers.",
+    href: "/articles/what-are-the-prophets",
+    status: "draft",
   },
   {
     id: "five-pillars-of-islam",
     title: "Five pillars of Islam",
     description:
-      "Planned beginner explanation of the five acts of worship that structure Muslim practice.",
-    tag: "Planned",
+      "Shahada, prayer, Zakat, fasting Ramadan, and pilgrimage as the foundations of Muslim practice.",
+    href: "/articles/five-pillars-of-islam",
+    status: "draft",
   },
   {
     id: "six-pillars-of-faith",
     title: "Six pillars of faith",
     description:
-      "Planned explanation of the core articles of Islamic belief (Iman).",
-    tag: "Planned",
+      "Belief in God, angels, revealed books, prophets, the Last Day, and divine decree.",
+    href: "/articles/six-pillars-of-faith",
+    status: "draft",
   },
   {
     id: "worship-and-daily-life",
     title: "Worship and daily life",
     description:
-      "Planned overview of how worship shapes daily routine, character, and community.",
-    tag: "Planned",
+      "How prayer, remembrance, work, family care, and ethical character shape an ordinary Muslim day.",
+    href: "/articles/worship-and-daily-life",
+    status: "draft",
   },
   {
     id: "why-islam",
     title: "Why Islam?",
     description:
-      "Planned closing argument bringing scripture, theology, preservation, and purpose together.",
-    tag: "Planned",
+      "An affirmative invitation to one God, prophetic guidance, the Quran, mercy, and purposeful worship.",
+    href: "/articles/why-islam",
+    status: "draft",
   },
 ];

@@ -50,7 +50,7 @@ function diffPoint(a, b) {
 }
 
 const MARKERS =
-  /(TODO|PLACEHOLDER|\[Add |lorem ipsum|\bp\.\s*\d+|source pending|citation needed)/i;
+  /(TODO|PLACEHOLDER|\[Add |lorem ipsum|\[\s*p\.\s*\d+\s*\]|source pending|citation needed)/i;
 
 for (const file of readdirSync(DRAFTS_DIR).filter((f) => f.endsWith(".json"))) {
   const draft = JSON.parse(readFileSync(path.join(DRAFTS_DIR, file), "utf8"));

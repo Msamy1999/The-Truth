@@ -1,0 +1,130 @@
+{
+  "slug": "what-are-the-prophets",
+  "title": "What Are the Prophets?",
+  "subtitle": "Human messengers who called their peoples to worship God and live by His guidance",
+  "category": "tawhid-and-the-trinity",
+  "audienceLevel": "beginner",
+  "summary": "Islam teaches that God sent prophets throughout human history with one foundational call: worship Him alone and live responsibly. Muslims believe in Abraham, Moses, Jesus, Muhammad, and all God's true messengers without making any of them divine.",
+  "tags": [
+    "Prophecy",
+    "Theology",
+    "Scripture"
+  ],
+  "seo": {
+    "metaTitle": "Prophets in Islam: Their Message and Purpose",
+    "metaDescription": "Learn what prophets are in Islam, why Muslims believe in Abraham, Moses, Jesus, and Muhammad, and what finality of prophethood means.",
+    "keywords": [
+      "prophets in Islam",
+      "messengers in Islam",
+      "Abraham Moses Jesus Muhammad",
+      "nabi and rasul",
+      "final prophet",
+      "shared message of prophets",
+      "Islamic belief"
+    ]
+  },
+  "sections": [
+    {
+      "sectionId": "beginner-summary",
+      "title": "In Plain Words",
+      "kind": "summary",
+      "body": "A prophet is a human being chosen by God to receive guidance and lead people toward Him. Prophets do not become divine, share God's power, or deserve worship. Their authority comes from the One who sends them. In Islam, believing in God's messengers is an essential part of faith.\n\nThe Quran names figures familiar from the Bible, including Adam, Noah, Abraham, Ishmael, Isaac, Jacob, Joseph, Moses, Aaron, David, Solomon, Jonah, Zechariah, John, and Jesus, peace be upon them. It also names prophets associated especially with Arabian peoples, such as Hud, Salih, and Shuayb. Muslims believe Muhammad is the final prophet, not the only prophet and not the founder of an entirely disconnected message."
+    },
+    {
+      "sectionId": "one-institution-many-peoples",
+      "title": "Guidance for Many Peoples",
+      "kind": "history",
+      "body": "Islam presents prophethood as a mercy running through human history. Communities differ in language, customs, and circumstances, so particular teachings and laws could differ, but the foundation remained the same: recognize the one God, worship Him, reject false objects of worship, and practice truth and justice. Quran 21:25 states this common call in direct terms.\n\nThe Quran names twenty-five prophets, but it does not say that only those twenty-five existed. It teaches that messengers were sent beyond the figures whose stories it relates. A Muslim therefore does not dismiss the possibility that peoples outside the Quran's named settings received genuine guidance, while also avoiding claims about particular individuals without evidence.\n\nSome scholars distinguish nabi, usually translated prophet, from rasul, usually translated messenger, by saying a messenger carries a distinct commission or law while a prophet continues existing revelation. Other explanations focus on the audience or the form of revelation. The exact technical distinction has been discussed, but the beginner-level point is shared: both are chosen human recipients and teachers of divine guidance."
+    },
+    {
+      "sectionId": "abraham-moses-and-jesus",
+      "title": "Abraham, Moses, and Jesus in One Line",
+      "kind": "scripture",
+      "body": "Quran 2:136 teaches Muslims to affirm what was given to Abraham, Ishmael, Isaac, Jacob, Moses, Jesus, and the prophets. Saying that believers make no distinction between them does not mean that every prophet had the same life, rank, miracle, or law. It means Muslims may not accept God's true messenger in one age while rejecting another merely out of tribal or sectarian loyalty.\n\nAbraham is remembered as a model of pure devotion to God. Moses receives especially extensive attention in the Quran as the messenger sent to Pharaoh and the law-bearing leader of the Children of Israel. Jesus the Messiah is honored as miraculously born to Mary, a word from God conveyed to her, and a mighty messenger who performed miracles by God's permission. Islam's disagreement with Christian doctrines about Jesus's divinity does not reduce its reverence for him; belief in Jesus as a true Messiah and prophet is part of Muslim faith.\n\nMuhammad stands within this line. His mission confirms the shared foundation of earlier revelation while, in Islamic belief, bringing the final universally binding message."
+    },
+    {
+      "sectionId": "human-trustworthy-models",
+      "title": "Human, Trustworthy, and Worth Following",
+      "kind": "interpretation",
+      "body": "Prophets eat, sleep, marry, work, grieve, face danger, and die. Their humanity makes their obedience meaningful and their example possible to follow. Miracles do not prove that a prophet is divine; in the Quran they occur by God's permission as signs supporting a messenger.\n\nMuslims also hold that prophets are trustworthy in conveying revelation. God would not choose a messenger who deliberately falsified the message entrusted to him. Sunni theologians agree on their truthfulness and protection in transmitting religion, while discussing details of prophetic impeccability in different ways, including what kinds of minor human mistake could occur and how revelation corrected them. These discussions never permit accusing a prophet of betraying the message.\n\nRespect for prophets has limits set by Tawhid. Muslims send peace upon them, learn from them, and avoid insulting them, but prayer and sacrifice belong to God alone. A prophet leads away from self-worship and toward the Creator."
+    },
+    {
+      "sectionId": "finality",
+      "title": "The Finality of Prophethood",
+      "kind": "interpretation",
+      "body": "Quran 33:40 describes Muhammad as the Messenger of Allah and the last of the prophets. Mainstream Sunni and Shia Islam both understand this to mean that prophethood ends with him. Religious scholarship, spiritual insight, reform, and righteous leadership continue, but none of them makes a person a new prophet or gives that person a new revelation that replaces the Quran.\n\nFinality gives the Muslim view of history a particular shape. The earlier prophets prepare and testify to one continuous call; Muhammad closes the prophetic line; and the community after him is responsible for preserving, learning, and living the message rather than waiting for another prophet. Muslims do believe Jesus will return before the end of time, but they understand his return as that of an existing earlier prophet who follows God's final revealed law, not the beginning of a new prophethood."
+    }
+  ],
+  "quranVerses": [
+    {
+      "surahName": "Al-Anbiya",
+      "surahNumber": 21,
+      "ayahNumber": 25,
+      "reference": "Quran 21:25",
+      "arabic": "وَمَآ أَرْسَلْنَا مِن قَبْلِكَ مِن رَّسُولٍ إِلَّا نُوحِىٓ إِلَيْهِ أَنَّهُۥ لَآ إِلَٰهَ إِلَّآ أَنَا۠ فَٱعْبُدُونِ",
+      "translation": "And We sent not before you any messenger except that We revealed to him that, \"There is no deity except Me, so worship Me.\"",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Baqarah",
+      "surahNumber": 2,
+      "ayahNumber": 136,
+      "reference": "Quran 2:136",
+      "arabic": "قُولُوٓا۟ ءَامَنَّا بِٱللَّهِ وَمَآ أُنزِلَ إِلَيْنَا وَمَآ أُنزِلَ إِلَىٰٓ إِبْرَٰهِۦمَ وَإِسْمَٰعِيلَ وَإِسْحَٰقَ وَيَعْقُوبَ وَٱلْأَسْبَاطِ وَمَآ أُوتِىَ مُوسَىٰ وَعِيسَىٰ وَمَآ أُوتِىَ ٱلنَّبِيُّونَ مِن رَّبِّهِمْ لَا نُفَرِّقُ بَيْنَ أَحَدٍۢ مِّنْهُمْ وَنَحْنُ لَهُۥ مُسْلِمُونَ",
+      "translation": "Say, [O believers], \"We have believed in Allah and what has been revealed to us and what has been revealed to Abraham and Ishmael and Isaac and Jacob and the Descendants and what was given to Moses and Jesus and what was given to the prophets from their Lord. We make no distinction between any of them, and we are Muslims [in submission] to Him.\"",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Ahzab",
+      "surahNumber": 33,
+      "ayahNumber": 40,
+      "reference": "Quran 33:40",
+      "arabic": "مَّا كَانَ مُحَمَّدٌ أَبَآ أَحَدٍۢ مِّن رِّجَالِكُمْ وَلَٰكِن رَّسُولَ ٱللَّهِ وَخَاتَمَ ٱلنَّبِيِّۦنَ ۗ وَكَانَ ٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمًۭا",
+      "translation": "Muhammad is not the father of [any] one of your men, but [he is] the Messenger of Allah and last of the prophets. And ever is Allah, of all things, Knowing.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    }
+  ],
+  "bibleVerses": [],
+  "faq": [
+    {
+      "question": "How many prophets are there in Islam?",
+      "answer": "The Quran names twenty-five, but teaches that other messengers were sent whose stories it does not relate. Islam does not give beginners a verified complete list of every prophet in human history."
+    },
+    {
+      "question": "Do Muslims believe in Moses and Jesus?",
+      "answer": "Yes. Belief in Moses and Jesus as true messengers is part of Islamic faith. Muslims differ from Jewish and Christian theology on important questions, but they may not dismiss or insult those prophets."
+    },
+    {
+      "question": "Are prophets divine or partly divine?",
+      "answer": "No. Prophets are honored human servants chosen by God. Their miracles, knowledge, and authority come from Him, and worship remains His alone."
+    },
+    {
+      "question": "What is the difference between a prophet and a messenger?",
+      "answer": "Muslim scholars have offered several technical distinctions between nabi and rasul, often relating to a distinct commission, law, or audience. All agree that both categories refer to chosen human bearers of divine guidance, not divine beings."
+    },
+    {
+      "question": "Can a new prophet come after Muhammad?",
+      "answer": "Mainstream Islam says no. Quran 33:40 identifies Muhammad as the last of the prophets. Scholars and reformers can teach the religion, but they do not receive a new prophethood."
+    }
+  ],
+  "relatedSlugs": [
+    "did-prophets-teach-pure-monotheism",
+    "who-is-jesus",
+    "the-final-message"
+  ],
+  "furtherReading": [
+    {
+      "title": "Prophets in the Quran: An Introduction to the Quran and Muslim Exegesis",
+      "author": "Brannon M. Wheeler",
+      "note": "A source-based collection and introduction covering prophetic figures from Adam to Muhammad, published under the Continuum imprint by Bloomsbury."
+    },
+    {
+      "title": "The Cambridge Companion to the Qur'an",
+      "author": "Jane Dammen McAuliffe, editor",
+      "note": "A scholarly guide to Quranic themes, formation, and interpretation, published by Cambridge University Press."
+    }
+  ]
+}

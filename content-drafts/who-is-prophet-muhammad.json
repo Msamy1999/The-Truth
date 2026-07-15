@@ -1,0 +1,121 @@
+{
+  "slug": "who-is-prophet-muhammad",
+  "title": "Who Is Prophet Muhammad ﷺ?",
+  "subtitle": "The life, message, and human example of Islam's final prophet",
+  "category": "religious-history",
+  "audienceLevel": "beginner",
+  "summary": "Muhammad ﷺ was born in Mecca around 570 CE, began receiving revelation around 610, migrated to Medina in 622, and died in 632. Muslims believe he was God's servant and final messenger: deeply loved and followed, but never divine or worshipped.",
+  "tags": [
+    "History",
+    "Prophecy",
+    "Theology"
+  ],
+  "seo": {
+    "metaTitle": "Who Is Prophet Muhammad? A Beginner's Biography",
+    "metaDescription": "Meet Prophet Muhammad ﷺ through the key events of his life, his mission, the Hijrah, his role as messenger, and Islam's teaching that he was human, not divine.",
+    "keywords": [
+      "who is Prophet Muhammad",
+      "Muhammad biography",
+      "Muhammad in Islam",
+      "Hijrah 622",
+      "seal of the prophets",
+      "final prophet Islam",
+      "Mecca and Medina"
+    ]
+  },
+  "sections": [
+    {
+      "sectionId": "beginner-summary",
+      "title": "In Plain Words",
+      "kind": "summary",
+      "body": "Muhammad ibn Abdullah, peace and blessings be upon him, was born in Mecca in western Arabia around 570 CE. Muslims believe that when he was about forty, God began revealing the Quran to him through the angel Gabriel. For roughly twenty-three years he called people to worship God alone, care for the vulnerable, live with moral accountability, and prepare to return to their Creator.\n\nHe faced rejection and persecution in Mecca, migrated with his followers to Medina in 622 CE, helped form a new religious community there, and died in 632 CE. Islam honors him as the final prophet and as the practical example of how to live the Quran's message. Yet he remains entirely human: God's servant and messenger, never God, God's child, or an object of worship."
+    },
+    {
+      "sectionId": "early-life-and-revelation",
+      "title": "From Mecca to the First Revelation",
+      "kind": "history",
+      "body": "Muhammad was born into the Quraysh, the tribe responsible for the sanctuary at the Kaaba. His father died before he was born and his mother died while he was young, so he experienced orphanhood early. Traditional biographies remember him before prophethood as al-Amin, the trustworthy. He worked in trade and married Khadijah bint Khuwaylid, who became his first and steadfast supporter.\n\nAs an adult he would withdraw from Meccan society for reflection. Around 610 CE, during one of these retreats near Mecca, he received the first revelation through Gabriel. The experience began a mission he did not choose for status or comfort. His earliest followers included Khadijah, his close friend Abu Bakr, his young cousin Ali, and his freedman and adopted companion Zayd. The new message challenged idolatry and social complacency, bringing ridicule, pressure, and at times violent persecution upon the small community.\n\nMuhammad's call in Mecca centered on Tawhid, resurrection, repentance, justice, and care for people whom power often ignored. Some followers sought safety across the Red Sea in the Christian kingdom of Aksum. Muhammad himself remained in Mecca until a new home opened for the community in Yathrib, soon known as Medina."
+    },
+    {
+      "sectionId": "hijrah-and-medina",
+      "title": "The Hijrah and the Medinan Community",
+      "kind": "history",
+      "body": "In 622 CE Muhammad and his followers migrated from Mecca to Medina. This Hijrah, or migration, is so important that the Islamic lunar calendar counts its years from that event. It marks a transition from a persecuted minority to an organized community whose prophet also carried public responsibilities.\n\nIn Medina, Muhammad joined the emigrants from Mecca with local supporters, established the mosque as a place of prayer and community life, entered agreements with groups in and around the city, taught new practices and social duties, and led the community through periods of alliance, conflict, loss, and reconciliation. The historical record includes warfare, but his Medinan life cannot be reduced to warfare: it also includes worship, family life, charity, teaching, diplomacy, adjudication, and daily care for companions.\n\nAfter years of conflict, Mecca came under Muslim authority in 630 CE. Islamic tradition remembers Muhammad entering the city with a broad amnesty and cleansing the Kaaba of idols, restoring it to the worship of the one God. He died in Medina in 632 CE after completing his public mission."
+    },
+    {
+      "sectionId": "messenger-not-divine",
+      "title": "A Messenger, Not a Divine Being",
+      "kind": "scripture",
+      "body": "The Quran places Muhammad within the same human line as earlier messengers. Quran 3:144 says that he is a messenger before whom other messengers passed away. The verse was especially important when he died: the Muslim community's faith could not depend on pretending that its prophet was immortal. Worship belongs to God, who does not die.\n\nQuran 33:40 calls Muhammad the Messenger of Allah and the last of the prophets. Mainstream Islam understands this as the finality of prophethood: no prophet bringing a new divine mission comes after him. His message is understood as universal rather than limited to one tribe, and the Quran is received as the final scripture.\n\nMuslims therefore hold two commitments together. They love Muhammad, send blessings upon him, defend his honor, learn his teachings, and try to follow his example. They also refuse to pray to him or assign him any share of divinity. To worship Muhammad would contradict the central message he preached."
+    },
+    {
+      "sectionId": "sunnah-and-character",
+      "title": "Why His Example Matters",
+      "kind": "interpretation",
+      "body": "The Sunnah is the Prophet's normative example: his teachings, conduct, judgments, and approvals as transmitted and evaluated in the hadith tradition. It helps Muslims understand how Quranic principles take practical form, from prayer and charity to marriage, business, forgiveness, and public responsibility. Not every report attributed to Muhammad is equally reliable, which is why Muslim scholars developed detailed methods for studying transmitters and texts.\n\nFor beginners, following the Prophet is not mainly about copying seventh-century culture. It means learning the religious purpose expressed in his worship and character: sincerity before God, truthfulness, patience, courage, generosity, mercy, consultation, and justice. Legal schools sometimes differ over whether a particular action was obligatory, recommended, personal to the Prophet, or simply customary. That diversity is part of the Sunni scholarly tradition rather than evidence that the Sunnah has no value.\n\nThe best way to know Muhammad is to read the Quran he conveyed, a responsible biography that distinguishes sources, and sound hadith with context. Admiration should rest on knowledge, and knowledge should lead back to the God whom Muhammad worshipped."
+    }
+  ],
+  "quranVerses": [
+    {
+      "surahName": "Aal-e-Imran",
+      "surahNumber": 3,
+      "ayahNumber": 144,
+      "reference": "Quran 3:144",
+      "arabic": "وَمَا مُحَمَّدٌ إِلَّا رَسُولٌۭ قَدْ خَلَتْ مِن قَبْلِهِ ٱلرُّسُلُ ۚ أَفَإِي۟ن مَّاتَ أَوْ قُتِلَ ٱنقَلَبْتُمْ عَلَىٰٓ أَعْقَٰبِكُمْ ۚ وَمَن يَنقَلِبْ عَلَىٰ عَقِبَيْهِ فَلَن يَضُرَّ ٱللَّهَ شَيْـًۭٔا ۗ وَسَيَجْزِى ٱللَّهُ ٱلشَّٰكِرِينَ",
+      "translation": "Muhammad is not but a messenger. [Other] messengers have passed on before him. So if he was to die or be killed, would you turn back on your heels [to unbelief]? And he who turns back on his heels will never harm Allah at all; but Allah will reward the grateful.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Ahzab",
+      "surahNumber": 33,
+      "ayahNumber": 40,
+      "reference": "Quran 33:40",
+      "arabic": "مَّا كَانَ مُحَمَّدٌ أَبَآ أَحَدٍۢ مِّن رِّجَالِكُمْ وَلَٰكِن رَّسُولَ ٱللَّهِ وَخَاتَمَ ٱلنَّبِيِّۦنَ ۗ وَكَانَ ٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمًۭا",
+      "translation": "Muhammad is not the father of [any] one of your men, but [he is] the Messenger of Allah and last of the prophets. And ever is Allah, of all things, Knowing.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    }
+  ],
+  "bibleVerses": [],
+  "faq": [
+    {
+      "question": "What does the symbol ﷺ mean after Muhammad's name?",
+      "answer": "It is an Arabic blessing meaning that God's peace and blessings be upon him. Muslims say or write it as an expression of love and respect for the Prophet."
+    },
+    {
+      "question": "Do Muslims worship Muhammad?",
+      "answer": "No. Muslims worship Allah alone. Muhammad is honored as God's servant, messenger, and final prophet, but assigning him divinity or directing worship to him would violate Tawhid."
+    },
+    {
+      "question": "Did Muhammad write the Quran himself?",
+      "answer": "Islam's claim is that he received and recited revelation from God through Gabriel; he is its messenger, not its author. Historical study can examine the transmission and setting of that claim, while Muslim faith accepts the Quran as divine speech."
+    },
+    {
+      "question": "How do Muslims know details of Muhammad's life?",
+      "answer": "The Quran provides the earliest scriptural setting, while biography and hadith literature preserve additional reports. Scholars assess those reports by studying transmission, wording, corroboration, chronology, and historical context rather than treating every later story as equally reliable."
+    }
+  ],
+  "relatedSlugs": [
+    "quranic-revelation-history",
+    "the-final-message",
+    "possible-prophecies-about-muhammad"
+  ],
+  "furtherReading": [
+    {
+      "title": "Muhammad: His Life Based on the Earliest Sources",
+      "author": "Martin Lings",
+      "note": "A reverent and highly readable traditional biography published by The Islamic Texts Society."
+    },
+    {
+      "title": "Muhammad: A Very Short Introduction",
+      "author": "Jonathan A. C. Brown",
+      "note": "A concise introduction that presents Muslim and modern historical perspectives, published by Oxford University Press."
+    },
+    {
+      "title": "The Cambridge Companion to Muhammad",
+      "author": "Jonathan E. Brockopp, editor",
+      "note": "A collection of academic essays on Muhammad's life, historical setting, and legacy, published by Cambridge University Press."
+    }
+  ]
+}

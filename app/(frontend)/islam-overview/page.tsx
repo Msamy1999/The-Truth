@@ -88,7 +88,7 @@ export default async function IslamOverviewPage() {
             titleAs="h2"
             eyebrow="Foundations of Islam"
             title="A beginner outline, one topic at a time"
-            subtitle="Start wherever feels natural. Draft articles are linked directly; the rest are planned topics kept source-pending until they are written."
+            subtitle="Start wherever feels natural. Every foundational topic now links to a complete draft for careful reading and human review."
           />
           <div className="mt-6">
             <ResearchTree

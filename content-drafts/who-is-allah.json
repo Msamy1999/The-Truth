@@ -1,0 +1,145 @@
+{
+  "slug": "who-is-allah",
+  "title": "Who Is Allah?",
+  "subtitle": "The One God, known through His beautiful names and worshipped without partner",
+  "category": "tawhid-and-the-trinity",
+  "audienceLevel": "beginner",
+  "summary": "Allah is the Arabic name for the one Creator worshipped in Islam: eternal, incomparable, merciful, and without partner or offspring. Muslims know Him through the names and attributes He reveals while holding that nothing in creation is like Him.",
+  "tags": [
+    "Theology",
+    "Scripture"
+  ],
+  "seo": {
+    "metaTitle": "Who Is Allah? A Beginner's Guide to God in Islam",
+    "metaDescription": "Learn who Allah is in Islam, what His beautiful names mean, and how Tawhid and divine transcendence shape Muslim worship.",
+    "keywords": [
+      "who is Allah",
+      "Allah in Islam",
+      "99 names of Allah",
+      "Tawhid",
+      "God in Islam",
+      "Surah Al-Ikhlas",
+      "divine transcendence"
+    ]
+  },
+  "sections": [
+    {
+      "sectionId": "beginner-summary",
+      "title": "In Plain Words",
+      "kind": "summary",
+      "body": "Allah is the one God who created and sustains everything. He is not a tribal deity, a human being, or one god among many. Arabic-speaking Muslims, Christians, and Jews all use the word Allah for God. In Islam, the word refers to the God of Abraham, Moses, Jesus, Muhammad, and all the prophets, peace be upon them.\n\nThe heart of Islamic belief is Tawhid: Allah alone is Lord, Allah alone deserves worship, and nothing resembles Him. He has no parent, child, partner, rival, physical image, or created form. At the same time, He is not an impersonal force. The Quran introduces Him through names such as the Entirely Merciful, the Especially Merciful, the Knowing, the Creator, and the Wise."
+    },
+    {
+      "sectionId": "one-god-without-partner",
+      "title": "One God Without Partner or Offspring",
+      "kind": "scripture",
+      "body": "Surah Al-Ikhlas, chapter 112 of the Quran, is Islam's shortest complete summary of who God is. Its four verses affirm that Allah is one and the eternal refuge, then deny that He begets, is born, or has any equivalent. Muslims recite this chapter often because it draws a clear boundary between the Creator and everything created.\n\nThis is more than the claim that only one deity exists. Tawhid means that no created being shares Allah's rule, receives a portion of worship, or possesses His unique perfection. Prophets are honored servants and messengers, not parts of God. Angels carry out divine commands, but they are created. Sacred places direct worship toward Allah; they are never worshipped themselves."
+    },
+    {
+      "sectionId": "beautiful-names",
+      "title": "The Beautiful Names",
+      "kind": "interpretation",
+      "body": "The Quran says that the most beautiful names belong to Allah. Quran 59:22, for example, calls Him the Knower of the unseen and the witnessed, the Entirely Merciful, and the Especially Merciful. The next two verses in the same passage include names expressing sovereignty, purity, protection, might, creation, and wisdom.\n\nMuslims commonly speak of the ninety-nine names because the Prophet Muhammad said that Allah has ninety-nine names and that whoever knows them will enter Paradise (Sahih al-Bukhari 2736). Scholars explain that knowing or enumerating them is not merely memorizing a list. It includes learning what the names mean, calling upon Allah by them, and letting that knowledge shape character and worship. A believer who knows Allah as the Merciful hopes in His mercy; one who knows Him as the All-Knowing remembers that no hidden act or private grief escapes Him.\n\nThe famous number does not mean that God can be reduced to ninety-nine labels or that every later printed list has the same status as the Quran. The sound report establishes the number and its virtue, while scholars have discussed which particular names meet the criteria for inclusion. The safest starting point is the names clearly found in the Quran and authentic prophetic teachings."
+    },
+    {
+      "sectionId": "transcendence-and-attributes",
+      "title": "Transcendent, Yet Known",
+      "kind": "interpretation",
+      "body": "Islamic theology uses the word tanzih for declaring Allah utterly unlike creation. He is not contained by the universe, dependent on matter, limited by a body, or captured by an image. His knowledge does not resemble human learning, His life does not depend on breath or food, and His power is not borrowed from anything else.\n\nMainstream Sunni schools agree on this transcendence and on accepting the names and attributes taught by revelation. They have sometimes explained certain scriptural descriptions in different ways. Athari scholars often emphasize affirming the wording without asking how and without likening Allah to creation. Ashari and Maturidi scholars also affirm the revealed text, while sometimes using contextual or figurative interpretation to guard against a bodily understanding. These are real differences of method, but none of these schools teaches that Allah resembles created things or can be pictured.\n\nTranscendence does not make Allah distant in the sense of being unaware or uncaring. Muslims pray directly to Him without a priest or divine intermediary. They believe He hears every prayer, knows every need, accepts repentance, and is nearer in knowledge and care than any created helper could be."
+    },
+    {
+      "sectionId": "knowing-allah",
+      "title": "Knowing Allah Through Worship",
+      "kind": "notes",
+      "body": "In Islam, learning about Allah is meant to change how a person lives. If He alone creates and provides, gratitude belongs first to Him. If He alone knows the unseen, a Muslim does not place ultimate trust in omens, fortune-tellers, or charms. If He is perfectly just, moral choices matter even when no human observer is present. If He is forgiving, failure should lead to repentance rather than despair.\n\nMuslims do not claim to comprehend God's essence. A finite mind cannot contain the infinite Creator. They do claim that people can know what He has truthfully revealed about Himself. The result is a relationship shaped by love, awe, hope, gratitude, and willing obedience. Tawhid gathers all of those responses into one direction: worship Allah alone."
+    }
+  ],
+  "quranVerses": [
+    {
+      "surahName": "Al-Ikhlas",
+      "surahNumber": 112,
+      "ayahNumber": 1,
+      "reference": "Quran 112:1",
+      "arabic": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+      "translation": "Say, \"He is Allah, [who is] One,",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Ikhlas",
+      "surahNumber": 112,
+      "ayahNumber": 2,
+      "reference": "Quran 112:2",
+      "arabic": "ٱللَّهُ ٱلصَّمَدُ",
+      "translation": "Allah, the Eternal Refuge.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Ikhlas",
+      "surahNumber": 112,
+      "ayahNumber": 3,
+      "reference": "Quran 112:3",
+      "arabic": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+      "translation": "He neither begets nor is born,",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Ikhlas",
+      "surahNumber": 112,
+      "ayahNumber": 4,
+      "reference": "Quran 112:4",
+      "arabic": "وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ",
+      "translation": "Nor is there to Him any equivalent.\"",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Hashr",
+      "surahNumber": 59,
+      "ayahNumber": 22,
+      "reference": "Quran 59:22",
+      "arabic": "هُوَ ٱللَّهُ ٱلَّذِى لَآ إِلَٰهَ إِلَّا هُوَ ۖ عَٰلِمُ ٱلْغَيْبِ وَٱلشَّهَٰدَةِ ۖ هُوَ ٱلرَّحْمَٰنُ ٱلرَّحِيمُ",
+      "translation": "He is Allah, other than whom there is no deity, Knower of the unseen and the witnessed. He is the Entirely Merciful, the Especially Merciful.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    }
+  ],
+  "bibleVerses": [],
+  "faq": [
+    {
+      "question": "Is Allah a different god from the God of Abraham?",
+      "answer": "No. Allah is the ordinary Arabic word for God, also used by Arabic-speaking Christians and Jews. Muslims mean the one Creator worshipped by Abraham and the other prophets, though the faiths differ in some of their teachings about Him."
+    },
+    {
+      "question": "Can Muslims make an image of Allah?",
+      "answer": "No. Islam teaches that nothing resembles Allah and that no created form can represent Him. Muslims therefore worship without any image of God."
+    },
+    {
+      "question": "Are Allah's names separate beings or parts of Him?",
+      "answer": "No. Names such as the Merciful, the Knowing, and the Creator describe the one God. They do not divide Him into parts or persons."
+    },
+    {
+      "question": "Do all Sunni Muslims explain God's attributes in exactly the same way?",
+      "answer": "No. Athari, Ashari, and Maturidi scholars have real differences in method, especially over how some descriptions should be understood. They agree that the revealed names are true, that Allah is one, and that He does not resemble creation."
+    }
+  ],
+  "relatedSlugs": [
+    "what-is-tawhid",
+    "worshiping-god-alone",
+    "did-anyone-see-god"
+  ],
+  "furtherReading": [
+    {
+      "title": "Al-Ghazali on the Ninety-nine Beautiful Names of God",
+      "author": "Abu Hamid al-Ghazali; translated by David B. Burrell and Nazih Daher",
+      "note": "A classical exploration of the divine names in an English edition published by The Islamic Texts Society."
+    },
+    {
+      "title": "Islam: A Very Short Introduction",
+      "author": "Malise Ruthven",
+      "note": "An accessible overview of Islamic belief and history published by Oxford University Press."
+    }
+  ]
+}
