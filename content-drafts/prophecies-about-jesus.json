@@ -135,6 +135,26 @@
       "translation": "And [mention] when Jesus, the son of Mary, said, \"O children of Israel, indeed I am the messenger of Allah to you confirming what came before me of the Torah and bringing good tidings of a messenger to come after me, whose name is Ahmad.\" But when he came to them with clear evidences, they said, \"This is obvious magic.\"",
       "translator": "Saheeh International",
       "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "An-Nisaa",
+      "surahNumber": 4,
+      "ayahNumber": 157,
+      "reference": "Quran 4:157",
+      "arabic": "وَقَوْلِهِمْ إِنَّا قَتَلْنَا ٱلْمَسِيحَ عِيسَى ٱبْنَ مَرْيَمَ رَسُولَ ٱللَّهِ وَمَا قَتَلُوهُ وَمَا صَلَبُوهُ وَلَٰكِن شُبِّهَ لَهُمْ ۚ وَإِنَّ ٱلَّذِينَ ٱخْتَلَفُوا۟ فِيهِ لَفِى شَكٍّۢ مِّنْهُ ۚ مَا لَهُم بِهِۦ مِنْ عِلْمٍ إِلَّا ٱتِّبَاعَ ٱلظَّنِّ ۚ وَمَا قَتَلُوهُ يَقِينًۢا",
+      "translation": "And [for] their saying, \"Indeed, we have killed the Messiah, Jesus, the son of Mary, the messenger of Allah.\" And they did not kill him, nor did they crucify him; but [another] was made to resemble him to them. And indeed, those who differ over it are in doubt about it. They have no knowledge of it except the following of assumption. And they did not kill him, for certain.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Israa",
+      "surahNumber": 17,
+      "ayahNumber": 15,
+      "reference": "Quran 17:15",
+      "arabic": "مَّنِ ٱهْتَدَىٰ فَإِنَّمَا يَهْتَدِى لِنَفْسِهِۦ ۖ وَمَن ضَلَّ فَإِنَّمَا يَضِلُّ عَلَيْهَا ۚ وَلَا تَزِرُ وَازِرَةٌۭ وِزْرَ أُخْرَىٰ ۗ وَمَا كُنَّا مُعَذِّبِينَ حَتَّىٰ نَبْعَثَ رَسُولًۭا",
+      "translation": "Whoever is guided is only guided for [the benefit of] his soul. And whoever errs only errs against it. And no bearer of burdens will bear the burden of another. And never would We punish until We sent a messenger.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
     }
   ],
   "bibleVerses": [
@@ -162,6 +182,24 @@
       "verse": "2",
       "reference": "Micah 5:2",
       "text": "But you, Bethlehem Ephrathah, being small among the clans of Judah, out of you one will come out to me that is to be ruler in Israel; whose goings out are from of old, from ancient times.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Mark",
+      "chapter": 14,
+      "verse": "27",
+      "reference": "Mark 14:27",
+      "text": "Jesus said to them,\n“All of you will be made to stumble because of me tonight, for it is written, ‘I will strike the shepherd, and the sheep will be scattered.’\n",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Luke",
+      "chapter": 22,
+      "verse": "37",
+      "reference": "Luke 22:37",
+      "text": "\nFor I tell you that this which is written must still be fulfilled in me: ‘He was counted with transgressors.’\nFor that which concerns me has an end.”\n",
       "version": "World English Bible",
       "sourceAttribution": "bible-api.com — World English Bible (public domain)"
     }
@@ -200,14 +238,22 @@
   ],
   "furtherReading": [
     {
-      "title": "The Suffering Servant in Deutero-Isaiah: An Exegetical Study",
-      "author": "Brevard Childs",
-      "note": "Scholarly analysis of Isaiah 53 within its literary context and tradition-history; discusses multiple interpretive traditions (national Israel, individual messiah, suffering righteous one)."
+      "title": "The Suffering Servant in Deutero-Isaiah: An Historical and Critical Study",
+      "author": "Christopher R. North",
+      "note": "Historical-critical study of the servant passages and their major interpretive possibilities.",
+      "type": "book",
+      "publisher": "Oxford University Press",
+      "year": 1956,
+      "isbn": "9780198261315"
     },
     {
-      "title": "Introduction to the Old Testament as Hebrew Bible",
-      "author": "Walter Brueggemann and William C. Placher",
-      "note": "Comprehensive overview of Hebrew Bible formation, dating, and major interpretive approaches; situates prophetic texts within their historical and theological contexts."
+      "title": "An Introduction to the Old Testament: The Canon and Christian Imagination",
+      "author": "Walter Brueggemann",
+      "note": "A canonical and theological introduction to the Old Testament that situates prophetic literature within the wider corpus.",
+      "type": "book",
+      "publisher": "Westminster John Knox Press",
+      "year": 2003,
+      "isbn": "9780664224127"
     },
     {
       "title": "Jesus in the Qur'an",

@@ -6,7 +6,9 @@
     "dev": "next dev -p 4173",
     "build": "next build",
     "start": "next start -p 4173",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "verify:drafts": "node payload/verify-drafts-local.mjs",
+    "verify:scripture": "node payload/verify-drafts.mjs"
   },
   "dependencies": {
     "@payloadcms/db-sqlite": "^3.85.2",

@@ -189,6 +189,33 @@
       "text": "For there are three who testify:",
       "version": "World English Bible",
       "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 28,
+      "verse": "19-20",
+      "reference": "Matthew 28:19-20",
+      "text": "Go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all things that I commanded you. Behold, I am with you always, even to the end of the age.” Amen.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "John",
+      "chapter": 10,
+      "verse": "30",
+      "reference": "John 10:30",
+      "text": "I and the Father are one.”",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 28,
+      "verse": "19",
+      "reference": "Matthew 28:19",
+      "text": "Go\nand make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit,",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
     }
   ],
   "faq": [

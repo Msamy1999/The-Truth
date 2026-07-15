@@ -140,7 +140,7 @@ Payload CMS 3 is installed **inside** this Next.js app:
 - **Publish gate live:** `payload/hooks/blockUnverifiedPublish.ts` blocks
   `status: published` on any article/comparison that links a pending citation,
   an unverified verse, or still contains placeholder markers
-  (`[VERIFIED ... PENDING]`, `[Add Quran verse:`, "Source pending",
+  (`[VERIFIED ... PENDING]`, `[Add Quran verse:`, `[SOURCE PENDING]`,
   "citation needed"). Verified by a negative test.
 - **Cutover done:** `lib/content` helpers now query the Payload Local API and
   map documents back to the domain types; no page changed. The legacy

@@ -1,0 +1,157 @@
+{
+  "slug": "the-problem-of-evil",
+  "title": "The Problem of Evil",
+  "subtitle": "Suffering, freedom, divine goodness, and the limits of easy answers",
+  "category": "difficult-questions",
+  "audienceLevel": "intermediate",
+  "summary": "The existence and scale of suffering are among the strongest challenges to belief in a good and powerful God. Islam offers a framework involving creaturely freedom, a stable world, spiritual testing, limited human perspective, and final justice, while forbidding believers from treating another person's pain as an abstract puzzle or casually declaring it punishment.",
+  "tags": ["Theology", "Questions", "Purpose", "Sources"],
+  "seo": {
+    "metaTitle": "The Problem of Evil: An Islamic Response to Suffering",
+    "metaDescription": "Examine logical and evidential problems of evil, free will, natural suffering, divine justice, and the Islamic afterlife response.",
+    "keywords": ["problem of evil Islam", "why does God allow suffering", "free will", "natural evil", "divine justice", "atheism and suffering"]
+  },
+  "sections": [
+    {
+      "sectionId": "three-problems",
+      "title": "More Than One Problem",
+      "kind": "summary",
+      "body": "The problem of evil is often stated as a contradiction: if God is perfectly good, He would want to prevent evil; if all-powerful, He could prevent it; yet evil exists. This is the logical problem. A defense need only show a coherent possible reason why God might permit evil, such as granting significant freedom. Most contemporary discussion therefore focuses on the evidential problem: even if some suffering is compatible with God, does its apparently excessive and uneven distribution make a good God unlikely?\n\nThere is also an existential problem. A bereaved parent is not primarily asking for a syllogism. Explanations offered at the wrong moment can become cruelty. Intellectual inquiry matters, but compassion, practical help, lament, and patient presence are part of any morally serious response."
+    },
+    {
+      "sectionId": "freedom",
+      "title": "Human Freedom and Moral Evil",
+      "kind": "argument",
+      "body": "Much suffering results from what people do to one another: war, abuse, exploitation, betrayal, and neglect. A world containing agents capable of love, courage, trust, and moral responsibility also contains the possibility of refusal. Preventing every harmful choice before it had consequences might preserve comfort at the cost of significant agency and a dependable moral order.\n\nThis free-will defense addresses some moral evil, not all suffering. It does not explain earthquakes, childhood disease, animal pain before humans, or why an all-powerful God could not sometimes limit the worst results while preserving freedom. Nor does it excuse wrongdoers. Islamic teaching treats human choices as genuinely accountable within God's sovereignty, though Muslim theological schools explain the relation between divine creation and human acquisition of acts in different ways."
+    },
+    {
+      "sectionId": "stable-world",
+      "title": "A Stable World and Natural Suffering",
+      "kind": "argument",
+      "body": "Embodied life requires regular processes. The same tectonic activity associated with a habitable dynamic planet can cause earthquakes; biological systems capable of growth and adaptation can malfunction; fire warms and destroys according to consistent properties. A world in which consequences were continuously suspended to prevent injury might not support prediction, responsible action, science, or stable communities.\n\nThis explains why some risk accompanies an ordered material world, but it does not calculate why every specific tragedy was necessary. The question becomes whether God could create a comparably valuable world with much less suffering. Theists offer possibilities—unknown interdependencies, the formation of virtues, freedom, and goods extending beyond earthly life—but should admit the limits of counterfactual knowledge. A general framework is not a private explanation of why one child suffered."
+    },
+    {
+      "sectionId": "test-and-growth",
+      "title": "Life as Test—Without Blaming the Sufferer",
+      "kind": "scripture",
+      "body": "The Quran describes life and death as a test of who acts best (Quran 67:2) and prepares believers for fear, hunger, and loss while commending patient perseverance (Quran 2:155-157). A test is not information God lacks. It is the lived arena in which choices, character, solidarity, and trust become actual. Courage, forgiveness, generosity, and sacrificial love arise in response to vulnerability, though no one should romanticize trauma or seek suffering for its own sake.\n\nIslam does not authorize people to label every illness or disaster a divine punishment. The same event may be a trial, a consequence of human injustice, a feature of embodied life, or something whose purpose we do not know. Prophets themselves suffered. When another person is in pain, the first duties are mercy, aid, justice, and prayer—not confident speculation about what God thinks of them."
+    },
+    {
+      "sectionId": "perspective",
+      "title": "Limited Perspective Is Not a Complete Answer",
+      "kind": "interpretation",
+      "body": "Finite observers often cannot see all the consequences of an event or compare every possible world. It is therefore too strong to infer from 'I can see no sufficient reason' to 'there can be no sufficient reason.' The Quranic story of Moses and the mysterious servant in Quran 18:60-82 dramatizes how an apparently senseless event can sit within a wider context unknown to the observer.\n\nYet appeal to mystery can be abused. If every difficulty is answered only with 'God knows best,' belief may become insulated from all evidence. The proper claim is limited: our inability to identify a reason does not prove that no reason exists, especially within a larger case for God. Horrendous and apparently gratuitous suffering still carries evidential weight and should not be verbally dissolved."
+    },
+    {
+      "sectionId": "afterlife-and-justice",
+      "title": "Resurrection Changes the Moral Horizon",
+      "kind": "argument",
+      "body": "If earthly death ends every person, many victims never receive justice and many sacrifices remain permanently unanswered. Islam places this life within a larger story. Quran 21:47 says that perfectly just scales will be established for the Day of Resurrection and no soul will be wronged even slightly. Quran 4:40 likewise denies the least divine injustice. Restoration, judgment, mercy, and unending life can transform the total meaning of finite suffering in a way no earthly compensation can.\n\nThe afterlife response depends on the truth of resurrection; it cannot be assumed simply to rescue theism. Nor should future compensation make preventable present suffering acceptable. Belief in judgment intensifies the duty to protect victims and confront oppressors because every neglected right matters before God."
+    },
+    {
+      "sectionId": "where-the-case-stands",
+      "title": "Where the Case Stands",
+      "kind": "argument",
+      "body": "The logical existence of evil does not straightforwardly contradict a good, powerful God if morally sufficient reasons are possible. The evidential force of suffering is harder. Freedom, regular natural order, character formation, limited perspective, and final justice form a coherent Islamic response, but no one component explains every case, and their combined force depends on the wider evidence for God and revelation.\n\nFor some people suffering makes atheism more likely; for others, the reality of objective evil, the demand for ultimate justice, and experiences of mercy within suffering point beyond an indifferent universe. Neither reaction should be caricatured. Islam permits lament and protest to God alongside trust. Faith here is not calling evil good. It is opposing evil while holding that it will neither have the final word nor escape perfect judgment."
+    }
+  ],
+  "quranVerses": [
+    {
+      "surahName": "Al-Mulk",
+      "surahNumber": 67,
+      "ayahNumber": 2,
+      "reference": "Quran 67:2",
+      "arabic": "ٱلَّذِى خَلَقَ ٱلْمَوْتَ وَٱلْحَيَوٰةَ لِيَبْلُوَكُمْ أَيُّكُمْ أَحْسَنُ عَمَلًۭا ۚ وَهُوَ ٱلْعَزِيزُ ٱلْغَفُورُ",
+      "translation": "[He] who created death and life to test you [as to] which of you is best in deed - and He is the Exalted in Might, the Forgiving -",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Baqara",
+      "surahNumber": 2,
+      "ayahNumber": 155,
+      "reference": "Quran 2:155",
+      "arabic": "وَلَنَبْلُوَنَّكُم بِشَىْءٍۢ مِّنَ ٱلْخَوْفِ وَٱلْجُوعِ وَنَقْصٍۢ مِّنَ ٱلْأَمْوَٰلِ وَٱلْأَنفُسِ وَٱلثَّمَرَٰتِ ۗ وَبَشِّرِ ٱلصَّٰبِرِينَ",
+      "translation": "And We will surely test you with something of fear and hunger and a loss of wealth and lives and fruits, but give good tidings to the patient,",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Kahf",
+      "surahNumber": 18,
+      "ayahNumber": 60,
+      "reference": "Quran 18:60",
+      "arabic": "وَإِذْ قَالَ مُوسَىٰ لِفَتَىٰهُ لَآ أَبْرَحُ حَتَّىٰٓ أَبْلُغَ مَجْمَعَ ٱلْبَحْرَيْنِ أَوْ أَمْضِىَ حُقُبًۭا",
+      "translation": "And [mention] when Moses said to his servant, \"I will not cease [traveling] until I reach the junction of the two seas or continue for a long period.\"",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Anbiya",
+      "surahNumber": 21,
+      "ayahNumber": 47,
+      "reference": "Quran 21:47",
+      "arabic": "وَنَضَعُ ٱلْمَوَٰزِينَ ٱلْقِسْطَ لِيَوْمِ ٱلْقِيَٰمَةِ فَلَا تُظْلَمُ نَفْسٌۭ شَيْـًۭٔا ۖ وَإِن كَانَ مِثْقَالَ حَبَّةٍۢ مِّنْ خَرْدَلٍ أَتَيْنَا بِهَا ۗ وَكَفَىٰ بِنَا حَٰسِبِينَ",
+      "translation": "And We place the scales of justice for the Day of Resurrection, so no soul will be treated unjustly at all. And if there is [even] the weight of a mustard seed, We will bring it forth. And sufficient are We as accountant.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "An-Nisaa",
+      "surahNumber": 4,
+      "ayahNumber": 40,
+      "reference": "Quran 4:40",
+      "arabic": "إِنَّ ٱللَّهَ لَا يَظْلِمُ مِثْقَالَ ذَرَّةٍۢ ۖ وَإِن تَكُ حَسَنَةًۭ يُضَٰعِفْهَا وَيُؤْتِ مِن لَّدُنْهُ أَجْرًا عَظِيمًۭا",
+      "translation": "Indeed, Allah does not do injustice, [even] as much as an atom's weight; while if there is a good deed, He multiplies it and gives from Himself a great reward.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    }
+  ],
+  "bibleVerses": [],
+  "faq": [
+    {
+      "question": "Does Islam teach that every disaster is punishment?",
+      "answer": "No. Scripture presents suffering in several ways, including trial, the consequence of human wrongdoing, and events whose reasons remain hidden. Prophets suffered, so pain is not reliable evidence that its victim is condemned."
+    },
+    {
+      "question": "Could God give freedom but stop only the worst crimes?",
+      "answer": "This is a serious form of the evidential challenge. Theists can point to a stable order, interconnected consequences, and limited human knowledge, but cannot demonstrate why every particular intervention would undermine greater goods. The objection retains force."
+    },
+    {
+      "question": "Does patience mean remaining in abuse?",
+      "answer": "No. Patience means steadfastness in what is right, not enabling oppression. Seeking safety, lawful protection, treatment, community support, and justice can all be required responses."
+    },
+    {
+      "question": "Is saying that suffering is a test enough?",
+      "answer": "It supplies part of an Islamic framework, not a complete explanation of every event. It must be joined to freedom, mercy, human duty, resurrection, perfect justice, and humility about what people do not know."
+    }
+  ],
+  "relatedSlugs": ["does-god-exist", "morality-without-god", "purpose-of-life-atheism-agnosticism", "judgment-day"],
+  "furtherReading": [
+    {
+      "title": "Islamic Theology and the Problem of Evil",
+      "author": "Safaruk Chowdhury",
+      "publisher": "The American University in Cairo Press",
+      "year": 2021,
+      "url": "https://aucpress.com/9781649030559/islamic-theology-and-the-problem-of-evil/",
+      "type": "book",
+      "note": "A study of major Islamic theological approaches to evil, including their accounts of value, freedom, and divine wisdom."
+    },
+    {
+      "title": "The Problem of Evil",
+      "author": "Peter van Inwagen",
+      "publisher": "Oxford University Press",
+      "year": 2006,
+      "type": "book",
+      "note": "A contemporary philosophical defense of theism addressing both global and local arguments from evil."
+    },
+    {
+      "title": "The Doors of the Sea: Where Was God in the Tsunami?",
+      "author": "David Bentley Hart",
+      "publisher": "Eerdmans",
+      "year": 2005,
+      "type": "book",
+      "note": "A short Christian theological reflection that refuses to treat every tragedy as a directly intended divine lesson."
+    }
+  ]
+}

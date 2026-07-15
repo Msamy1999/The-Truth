@@ -40,7 +40,7 @@
       "sectionId": "islamic-sources",
       "title": "The Islamic Tradition: Jesus in the Quran",
       "kind": "scripture",
-      "body": "Islamic sources present Jesus (ʿĪsā) as a major prophetic figure honored in the Quran and Hadith. The Quran mentions Jesus more than 90 times, affirming his miraculous birth to Mary (Maryam), his ministry as a messenger, and his signs (miracles). Islamic tradition reveres Jesus as one of the five greatest prophets (Ulu al-'Azm), alongside Noah, Abraham, Moses, and Muhammad.\n\nHowever, Islamic theology diverges fundamentally from Christian claims on two central points:\n\n**On Divinity:** The Quran explicitly rejects the Christian doctrine that Jesus is the Son of God or divine. Surah 4:171 states, \"Say, 'He is Allah, [who is] One... He has not taken a son...'\"\n\n**On Crucifixion:** This is the most significant historical divergence. Quran 4:157 states that the Jews claimed to have killed Jesus, but that \"they did not kill him, nor did they crucify him; but [another] was made to resemble him to them.\" The Quran then affirms, \"Indeed, those who differ over it are in doubt about it. They have no knowledge of it except the following of assumption.\"\n\nQuran 3:55 provides the Islamic narrative: \"[Mention] when Allah said, 'O Jesus, indeed I will take you and raise you to Myself and purify you from those who disbelieve...\" Islamic exegesis (tafsir) interprets this as Jesus being taken alive to heaven by God before crucifixion could occur. Some classical Islamic scholars proposed that another figure was crucified in Jesus's place; others suggest the crucifixion itself did not occur. This remains a point of theological interpretation even within Islamic scholarship.\n\nMuslim scholarship affirms Jesus's prophetic mission, his virgin birth, his miracles, and his place in Islamic eschatology (he is expected to return before the Final Hour). What is explicitly denied is his crucifixion and divine sonship."
+      "body": "Islamic sources present Jesus (Isa) as a major prophetic figure honored in the Quran and hadith. The personal name Isa occurs twenty-five times in the Quran. Additional passages refer to him through titles such as the Messiah, as the son of Mary, or by context, so broader totals depend on what a compiler chooses to count and should not be presented as a simple by-name statistic.\n\nThe Quran affirms Jesus' miraculous birth to Mary, his prophetic mission, and miracles performed by God's permission. Islamic tradition counts him among the major messengers often called ulu al-azm, alongside Noah, Abraham, Moses, and Muhammad.\n\n**On divinity:** Quran 4:171 calls Jesus the Messiah, a messenger of God, and a word conveyed to Mary, then warns readers not to say 'Three' and states that God is one and exalted above having a son. The wording 'He is Allah, One' and 'He neither begets nor is born' belongs to Quran 112:1-3 and must not be quoted as though it were 4:171.\n\n**On crucifixion:** Quran 4:157 says that Jesus' opponents did not kill or crucify him and that the matter was made to appear so to them. Quran 3:55 speaks of God taking and raising Jesus. Classical exegetes offered more than one account of how to understand these verses, including substitution narratives, while agreeing on the Quran's denial that Jesus' enemies successfully killed him.\n\nMuslim tradition also expects Jesus to return before the final Hour. These claims are theological affirmations grounded in revelation; historical-critical scholarship evaluates the crucifixion differently because it works from earlier Christian and non-Christian historical sources rather than accepting the Quran as revealed testimony."
     },
     {
       "sectionId": "comparison",
@@ -79,6 +79,46 @@
       "reference": "Quran 3:55",
       "arabic": "إِذْ قَالَ ٱللَّهُ يَٰعِيسَىٰٓ إِنِّى مُتَوَفِّيكَ وَرَافِعُكَ إِلَىَّ وَمُطَهِّرُكَ مِنَ ٱلَّذِينَ كَفَرُوا۟ وَجَاعِلُ ٱلَّذِينَ ٱتَّبَعُوكَ فَوْقَ ٱلَّذِينَ كَفَرُوٓا۟ إِلَىٰ يَوْمِ ٱلْقِيَٰمَةِ ۖ ثُمَّ إِلَىَّ مَرْجِعُكُمْ فَأَحْكُمُ بَيْنَكُمْ فِيمَا كُنتُمْ فِيهِ تَخْتَلِفُونَ",
       "translation": "[Mention] when Allah said, \"O Jesus, indeed I will take you and raise you to Myself and purify you from those who disbelieve and make those who follow you [in submission to Allah alone] superior to those who disbelieve until the Day of Resurrection. Then to Me is your return, and I will judge between you concerning that in which you used to differ.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "An-Nisaa",
+      "surahNumber": 4,
+      "ayahNumber": 171,
+      "reference": "Quran 4:171",
+      "arabic": "يَٰٓأَهْلَ ٱلْكِتَٰبِ لَا تَغْلُوا۟ فِى دِينِكُمْ وَلَا تَقُولُوا۟ عَلَى ٱللَّهِ إِلَّا ٱلْحَقَّ ۚ إِنَّمَا ٱلْمَسِيحُ عِيسَى ٱبْنُ مَرْيَمَ رَسُولُ ٱللَّهِ وَكَلِمَتُهُۥٓ أَلْقَىٰهَآ إِلَىٰ مَرْيَمَ وَرُوحٌۭ مِّنْهُ ۖ فَـَٔامِنُوا۟ بِٱللَّهِ وَرُسُلِهِۦ ۖ وَلَا تَقُولُوا۟ ثَلَٰثَةٌ ۚ ٱنتَهُوا۟ خَيْرًۭا لَّكُمْ ۚ إِنَّمَا ٱللَّهُ إِلَٰهٌۭ وَٰحِدٌۭ ۖ سُبْحَٰنَهُۥٓ أَن يَكُونَ لَهُۥ وَلَدٌۭ ۘ لَّهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ وَكَفَىٰ بِٱللَّهِ وَكِيلًۭا",
+      "translation": "O People of the Scripture, do not commit excess in your religion or say about Allah except the truth. The Messiah, Jesus, the son of Mary, was but a messenger of Allah and His word which He directed to Mary and a soul [created at a command] from Him. So believe in Allah and His messengers. And do not say, \"Three\"; desist - it is better for you. Indeed, Allah is but one God. Exalted is He above having a son. To Him belongs whatever is in the heavens and whatever is on the earth. And sufficient is Allah as Disposer of affairs.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Ikhlaas",
+      "surahNumber": 112,
+      "ayahNumber": 1,
+      "reference": "Quran 112:1",
+      "arabic": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+      "translation": "Say, \"He is Allah, [who is] One,",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Ikhlaas",
+      "surahNumber": 112,
+      "ayahNumber": 2,
+      "reference": "Quran 112:2",
+      "arabic": "ٱللَّهُ ٱلصَّمَدُ",
+      "translation": "Allah, the Eternal Refuge.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Ikhlaas",
+      "surahNumber": 112,
+      "ayahNumber": 3,
+      "reference": "Quran 112:3",
+      "arabic": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+      "translation": "He neither begets nor is born,",
       "translator": "Saheeh International",
       "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
     }

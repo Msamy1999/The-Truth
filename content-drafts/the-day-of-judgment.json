@@ -74,7 +74,7 @@
       "sectionId": "common-misconceptions",
       "title": "Common Misconceptions",
       "kind": "interpretation",
-      "body": "First: \"Islam teaches that a person earns Paradise purely by good deeds, with no room for mercy.\" This is a mistaken caricature. Narrations in the major hadith collections describe the Prophet Muhammad teaching that no one enters Paradise by deeds alone, but only by God's mercy; the weighing of deeds (Quran 21:47, 99:7-8) establishes perfect justice, but entry into Paradise depends on mercy responding to faith and sincere effort, not deeds as a purchase price.\n\nSecond: \"Christianity teaches that a believer's deeds do not matter at the final judgment, since salvation is by faith alone.\" This oversimplifies. The passages quoted above - \"each one will give account of himself to God\" (Romans 14:12), judgment \"according to what he has done, whether good or bad\" (2 Corinthians 5:10), and \"judged... according to their works\" (Revelation 20:12) - show that mainstream Christian teaching holds every believer accountable for their deeds. Theologians differ on how that fits with justification by faith, but none deny that works are examined.\n\nThird: \"The Quran only cares about deeds, and the Bible only cares about who Christ is.\" Both foreground deeds heavily - the Quran's atom's weight of good or evil (Quran 99:7-8) and the Bible's books \"according to their works\" (Revelation 20:12). The real dividing line is whether a mediating figure stands between the sinner and the verdict, not whether deeds matter.\n\nFourth, some assume the sheep-and-goats parable is only about correct doctrine. In the fuller parable, the criterion Jesus names is mercy shown to the hungry, the thirsty, the stranger, and the imprisoned - close to the Quran's own commands to feed the poor and care for the orphan and the traveler."
+      "body": "First: \"Islam teaches that a person earns Paradise purely by good deeds, with no room for mercy.\" This is a mistaken caricature. Sahih Muslim 2816c records the Prophet Muhammad teaching that no one's deeds alone entitle that person to Paradise, not even the Prophet, except through God's mercy; the weighing of deeds (Quran 21:47, 99:7-8) establishes perfect justice, but entry into Paradise depends on mercy responding to faith and sincere effort, not deeds as a purchase price.\n\nSecond: \"Christianity teaches that a believer's deeds do not matter at the final judgment, since salvation is by faith alone.\" This oversimplifies. The passages quoted above - \"each one will give account of himself to God\" (Romans 14:12), judgment \"according to what he has done, whether good or bad\" (2 Corinthians 5:10), and \"judged... according to their works\" (Revelation 20:12) - show that mainstream Christian teaching holds every believer accountable for their deeds. Theologians differ on how that fits with justification by faith, but none deny that works are examined.\n\nThird: \"The Quran only cares about deeds, and the Bible only cares about who Christ is.\" Both foreground deeds heavily - the Quran's atom's weight of good or evil (Quran 99:7-8) and the Bible's books \"according to their works\" (Revelation 20:12). The real dividing line is whether a mediating figure stands between the sinner and the verdict, not whether deeds matter.\n\nFourth, some assume the sheep-and-goats parable is only about correct doctrine. In the fuller parable, the criterion Jesus names is mercy shown to the hungry, the thirsty, the stranger, and the imprisoned - close to the Quran's own commands to feed the poor and care for the orphan and the traveler."
     },
     {
       "sectionId": "islamic-conclusion",
@@ -211,6 +211,24 @@
       "verse": "12",
       "reference": "Romans 14:12",
       "text": "So then each one of us will give account of himself to God.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 25,
+      "verse": "32",
+      "reference": "Matthew 25:32",
+      "text": "\nBefore him all the nations will be gathered, and he will separate them one from another, as a shepherd separates the sheep from the goats.\n\n",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 25,
+      "verse": "31",
+      "reference": "Matthew 25:31",
+      "text": "“But when the Son of Man comes in his glory, and all the holy angels with him, then he will sit on the throne of his glory.",
       "version": "World English Bible",
       "sourceAttribution": "bible-api.com — World English Bible (public domain)"
     }

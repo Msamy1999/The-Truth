@@ -10,6 +10,9 @@
  *
  * Run with the dev server stopped:
  *   env $(cat .env | xargs) npx tsx payload/import-drafts.ts
+ *
+ * To import only selected drafts, pass their slugs as positional arguments:
+ *   npx tsx payload/import-drafts.ts what-is-tawhid why-islam
  */
 import { readdirSync, readFileSync } from "fs";
 import path from "path";
@@ -41,6 +44,22 @@ type DraftVerseBible = {
   sourceAttribution: string;
 };
 
+type DraftFurtherReading = {
+  title: string;
+  author: string;
+  note: string;
+  type?: "book" | "journalArticle" | "primaryText";
+  journal?: string;
+  year?: number;
+  volume?: string;
+  issue?: string;
+  pages?: string;
+  doi?: string;
+  url?: string;
+  publisher?: string;
+  isbn?: string;
+};
+
 type Draft = {
   slug: string;
   title: string;
@@ -53,11 +72,63 @@ type Draft = {
   quranVerses: DraftVerseQuran[];
   bibleVerses: DraftVerseBible[];
   relatedSlugs?: string[];
+  furtherReading?: DraftFurtherReading[];
 };
+
+function sourceCitationKey(source: DraftFurtherReading): string {
+  const normalized = `${source.author}-${source.title}`
+    .normalize("NFKD")
+    .replace(/[^a-zA-Z0-9]+/g, "-")
+    .replace(/^-|-$/g, "")
+    .toLowerCase()
+    .slice(0, 96);
+  return `draft-source-${normalized}`;
+}
+
+function sourceCitationType(
+  source: DraftFurtherReading,
+): "book" | "article" | "other" {
+  if (source.type === "journalArticle") return "article";
+  if (source.type === "primaryText") return "other";
+  return "book";
+}
+
+function sourceCitationNote(source: DraftFurtherReading): string {
+  const metadata = [
+    source.journal,
+    source.volume ? `vol. ${source.volume}` : undefined,
+    source.issue ? `no. ${source.issue}` : undefined,
+    source.pages ? `pp. ${source.pages}` : undefined,
+    source.doi ? `DOI ${source.doi}` : undefined,
+    source.isbn ? `ISBN ${source.isbn}` : undefined,
+  ].filter(Boolean);
+  return [source.note, metadata.join(", ")].filter(Boolean).join(" ");
+}
+
+function citationMetadataChanged(
+  current: Record<string, unknown>,
+  next: Record<string, unknown>,
+): boolean {
+  return Object.entries(next).some(
+    ([field, value]) => String(current[field] ?? "") !== String(value ?? ""),
+  );
+}
 
 async function main() {
   const payload = await getPayload({ config });
-  const files = readdirSync(DRAFTS_DIR).filter((f) => f.endsWith(".json"));
+  const allFiles = readdirSync(DRAFTS_DIR).filter((f) => f.endsWith(".json"));
+  const requestedSlugs = new Set(
+    process.argv.slice(2).map((value) => value.replace(/\.json$/i, "")),
+  );
+  const files = requestedSlugs.size
+    ? allFiles.filter((file) => requestedSlugs.has(file.replace(/\.json$/i, "")))
+    : allFiles;
+  const missingSlugs = [...requestedSlugs].filter(
+    (slug) => !allFiles.includes(`${slug}.json`),
+  );
+  if (missingSlugs.length) {
+    throw new Error(`Draft slug(s) not found: ${missingSlugs.join(", ")}`);
+  }
   console.log(`drafts found: ${files.length}`);
 
   // Edition-level citations (real, checkable sources).
@@ -180,6 +251,55 @@ async function main() {
       }
     }
 
+    // Bibliography records -------------------------------------------------
+    // Draft further-reading entries become real citation relationships so
+    // the publish gate can require source verification for every one.
+    const bibliographyCitationIds: (string | number)[] = [];
+    for (const source of draft.furtherReading ?? []) {
+      const citationKey = sourceCitationKey(source);
+      const citationData = {
+        citationKey,
+        type: sourceCitationType(source),
+        title: source.title,
+        author: source.author,
+        publisher: source.publisher ?? source.journal,
+        year: source.year,
+        url: source.url ?? (source.doi ? `https://doi.org/${source.doi}` : undefined),
+        note: sourceCitationNote(source),
+      };
+      const existingCitation = await payload.find({
+        collection: "citations",
+        where: { citationKey: { equals: citationKey } },
+        limit: 1,
+        depth: 0,
+      });
+      if (existingCitation.docs[0]) {
+        const mustReverify = citationMetadataChanged(
+          existingCitation.docs[0] as unknown as Record<string, unknown>,
+          citationData,
+        );
+        const updated = await payload.update({
+          collection: "citations",
+          id: existingCitation.docs[0].id,
+          data: {
+            ...citationData,
+            ...(mustReverify
+              ? { status: "pending", verifiedBy: null, verifiedDate: null }
+              : {}),
+          } as never,
+          depth: 0,
+        });
+        bibliographyCitationIds.push(updated.id);
+      } else {
+        const created = await payload.create({
+          collection: "citations",
+          data: { ...citationData, status: "pending" } as never,
+          depth: 0,
+        });
+        bibliographyCitationIds.push(created.id);
+      }
+    }
+
     // Article ---------------------------------------------------------------
     const existing = await payload.find({
       collection: "articles",
@@ -214,6 +334,7 @@ async function main() {
       citations: [
         citationIds["quran-tanzil-sahih-international"],
         citationIds["bible-web-translation"],
+        ...bibliographyCitationIds,
       ],
     };
 

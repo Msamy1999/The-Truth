@@ -39,13 +39,13 @@
       "sectionId": "method",
       "title": "How to Read What Follows",
       "kind": "notes",
-      "body": "This article follows a stricter method than a typical comparative essay, because the questions it examines are not primarily about theology in the abstract but about how specific Greek sentences function grammatically — questions that can, in many cases, be checked against the wider corpus of Koine Greek rather than argued from doctrine alone.\n\nFor each of the seven passages, four things are given: the verse itself, quoted from the World English Bible; the precise grammatical or lexical issue at stake in the underlying Greek text; the Trinitarian reading, attributed to named scholars and standard reference works; and the unitarian or Muslim reading, likewise attributed by name. Where a reading is a minority position among specialists — as with the “exclamation” reading of John 20:28, or the fully indefinite “a god” reading of John 1:1 — this article says so explicitly, because presenting a minority view without noting its minority status would misrepresent the state of the scholarship. Where the grammar is genuinely close to a coin flip among neutral specialists — as with the theological implications of the qualitative reading at John 1:1, or the sense of harpagmos in Philippians 2:6 — this article says that too.\n\nNo passage below is used to declare which Christology is correct. That question depends on prior commitments — about whether the New Testament’s highest language about Jesus should govern the reading of his statements of subordination, or the reverse — that the grammar of any single verse cannot settle by itself. The closing section returns to that systematic point directly."
+      "body": "This article follows a stricter method than a typical comparative essay, because the questions it examines are not primarily about theology in the abstract but about how specific Greek sentences function grammatically — questions that can, in many cases, be checked against the wider corpus of Koine Greek rather than argued from doctrine alone.\n\nFor each of the seven passages, four things are given: the verse itself, quoted from the World English Bible; the precise grammatical or lexical issue at stake in the underlying Greek text; the Trinitarian reading, attributed to named scholars and standard reference works; and the unitarian or Muslim reading, likewise attributed by name. Where a reading is a minority position among specialists — as with the “exclamation” reading of John 20:28, or the fully indefinite “a god” reading of John 1:1 — this article says so explicitly, because presenting a minority view without noting its minority status would misrepresent the state of the scholarship. Where a construction permits more than one defensible analysis — as with the sense of harpagmos in Philippians 2:6 — this article identifies the alternatives without implying an unsupported numerical division among specialists.\n\nNo passage below is used to declare which Christology is correct. That question depends on prior commitments — about whether the New Testament’s highest language about Jesus should govern the reading of his statements of subordination, or the reverse — that the grammar of any single verse cannot settle by itself. The closing section returns to that systematic point directly."
     },
     {
       "sectionId": "john-1-1",
       "title": "John 1:1 — “The Word Was God,” or “What God Was, the Word Was”?",
       "kind": "scripture",
-      "body": "John’s Gospel opens: “In the beginning was the Word, and the Word was with God, and the Word was God.” (John 1:1, World English Bible)\n\nThe Greek of the third clause reads: kai theos ēn ho logos — literally, “and God was the Word.” Two features of this clause drive the entire debate. First, word order: Greek is far more flexible than English about where a sentence’s subject and predicate fall, and here the predicate noun theos (“God”) stands before the verb ēn (“was”), while the subject ho logos (“the Word”) — marked as the subject by its article ho — follows the verb. Second, and more consequential: theos in this clause has no article. Earlier in the same verse, “the Word was with God” uses ton theon, with the article, referring to God the Father. In the very next clause, theos appears without one.\n\nMainstream Christian translations — the WEB quoted above, the KJV, NIV, ESV, NASB — render the clause “the Word was God,” taking the anarthrous theos as asserting full deity of the same kind possessed by “God” (the Father) named a moment earlier, while the distinct persons remain grammatically distinguished (the Word was with God, and was God). This reading has a long grammatical defense behind it. In 1933, E. C. Colwell published “A Definite Rule for the Use of the Article in the Greek New Testament” (Journal of Biblical Literature 52), observing that definite predicate nouns preceding the verb in Greek usually appear without the article. Applied to John 1:1c, the reasoning runs: theos here is anarthrous because it precedes the verb, not because it is indefinite — so the missing article does not, by itself, mean “a god” rather than “God.”\n\nColwell’s own rule, however, is narrower than it is sometimes made to sound, a point conceded across the theological spectrum. Colwell was describing definite nouns already known to be definite from context elsewhere; his statistics do not independently prove that theos in John 1:1c is definite in the first place — inferring definiteness backward from anarthrousness and preverbal position reverses the direction of his own argument. This limitation is now widely acknowledged among Greek grammarians regardless of their theological conclusions about the verse.\n\nThat gap was addressed differently by Philip B. Harner, whose 1973 article “Qualitative Anarthrous Predicate Nouns: Mark 15:39 and John 1:1” (Journal of Biblical Literature 92) surveyed anarthrous predicate nouns preceding the verb throughout the New Testament and found that a large majority function neither as definite nor as indefinite nouns, but qualitatively — describing the nature or character of the subject rather than its numerical identity. Harner concluded that John 1:1c is “primarily qualitative in meaning,” asserting that the Word has the nature of theos rather than identifying the Word as one particular, definite being. He pointed to the New English Bible’s 1970 rendering as capturing this sense: “When all things began, the Word already was. The Word dwelt with God, and what God was, the Word was.”\n\nThe two readings then diverge over what the qualitative sense implies theologically, and this is where genuine, ongoing disagreement lies rather than settled grammar. Mainstream Trinitarian scholars — Murray J. Harris (Jesus as God, 1992), D. A. Carson, and others — read the qualitative sense as affirming that the Word possesses the Father’s full divine nature, precisely the point later formalized at Nicaea as homoousios (“of the same essence”): not a lesser or derivative “godlikeness,” but the very nature of God, in a distinct person. On this reading, the qualitative sense is not an alternative to “the Word was God” — it is the fullest possible statement of it.\n\nUnitarian and Muslim readers of the same qualitative evidence draw a different theological conclusion. If theos here describes quality or nature rather than asserting numerical identity with “God” named in the previous clause, the verse can be read as saying the Word possessed a nature that is godlike, divine, or God-derived in character, without asserting that the Word is personally, ontologically identical to the one God to whom Jesus elsewhere prays and whom he calls “the only true God” (John 17:3). On this reading, John is doing with the Logos something comparable to what Jewish Wisdom literature had already done with personified Wisdom (Proverbs 8) — describing an agent who reveals and expresses God’s nature and speech without being a co-equal member of the Godhead. The furthest end of this spectrum is the New World Translation’s “the Word was a god,” treating theos as fully indefinite — a rendering most grammarians, Trinitarian and non-Trinitarian alike, regard as a weak minority position, since a monotheistic Jewish author is unlikely to assert the existence of “a god” beside God without qualification.\n\nWhat can be said plainly is this: the claim that Colwell’s rule alone proves “the Word was God” in the full Trinitarian sense is not accepted by careful grammarians today, on any side; the qualitative reading defended by Harner and reflected in the NEB is accepted by scholars across the theological spectrum as grammatically sound; and what that qualitative reading means theologically — full co-equal deity, or an exalted but distinct divine agent — is a live and unresolved disagreement that the Greek grammar of this one clause, by itself, does not settle."
+      "body": "John 1:1 places *theos* without the article before the verb in the clause commonly translated 'the Word was God.' The construction is often described as qualitative: it characterizes what the Word was, rather than saying that the Word was the same person as 'the God' mentioned in the preceding clause.\n\nA qualitative reading is not, however, close to a neutral scholarly coin flip between full deity and a merely godlike creature. Mainstream Johannine and Koine scholarship commonly understands the clause as attributing divine nature or quality to the Word while preserving a personal distinction from the Father. Translations such as 'what God was, the Word was' express that qualitative force without reducing it to a created agent.\n\nUnitarian interpreters may argue that agency language, wisdom traditions, and the Gospel's subordination sayings permit a lesser sense. That is a real theological reading, but it should be identified as a minority inference rather than represented as one half of an even specialist division. The verse remains one of the strongest New Testament texts used in high Christology."
     },
     {
       "sectionId": "john-8-58",
@@ -57,7 +57,7 @@
       "sectionId": "john-10-30",
       "title": "John 10:30 and John 17:21–22 — One Being, or One in Will?",
       "kind": "scripture",
-      "body": "Jesus says to a hostile crowd: “I and the Father are one.” (John 10:30, World English Bible) The Greek is hen esmen, using the neuter numeral hen (“one thing”) rather than the masculine heis (“one person”) — a grammatical detail both sides of the debate treat as significant, though they draw opposite conclusions from it.\n\nMainstream Trinitarian scholars, including D. A. Carson and Andreas Köstenberger in their commentaries on John, note that the neuter hen rules out modalism (the Father and Son are not one and the same person) while still asserting a unity deep enough to justify the crowd’s reaction two verses later: “The Jews answered him, “We don’t stone you for a good work, but for blasphemy: because you, being a man, make yourself God.”” (John 10:33, World English Bible) On this reading, the immediate narrative context — the crowd hearing a claim to deity, and Jesus’s own preceding statement that he and the Father together, with equal power, keep his sheep safe (John 10:28–29) — indicates that the “oneness” of verse 30 includes shared divine power and nature, not merely agreement of purpose.\n\nThe unitarian and Muslim reading takes the neuter hen in the opposite direction: “one thing,” grammatically, most naturally describes a unity of will, purpose, or action rather than a unity of being or essence — the kind of oneness two distinct persons can share without being numerically or ontologically one entity. The strongest textual support for this reading comes from Jesus’s own words later in the same Gospel, in his prayer for his disciples: “that they may all be one; even as you, Father, are in me, and I in you, that they also may be one in us; that the world may believe that you sent me. The glory which you have given me, I have given to them; that they may be one, even as we are one;” (John 17:21-22, World English Bible) Jesus asks that his disciples share the very same oneness — using the same vocabulary of mutual indwelling — that he shares with the Father. Since no one holds that Jesus is praying for his disciples to merge into a single divine essence with God, the parallel suggests, on the unitarian reading, that the “oneness” of both passages is relational and purposive rather than metaphysical.\n\nMainstream commentators respond that the prayer of John 17 functions by analogy rather than full equivalence: the disciples’ unity is patterned after, and made possible by, the Father-Son unity, without the passage claiming the two unities are identical in kind — the word “as” (kathōs) introduces a model to imitate, Carson argues, not a strict equation of natures. Other scholars, such as Raymond Brown, read John 10:30 as combining both dimensions at once for the Fourth Gospel: functional unity of mission and power, grounded in and pointing toward a claim about shared nature that the crowd’s own accusation of blasphemy makes explicit.\n\nThat accusation itself is met, in the text, not with a denial but with an argument: Jesus replies by quoting Psalm 82:6, “I said, you are gods,” originally addressed to human judges who received God’s word (John 10:34-36). Scholarly opinion divides sharply on how to weigh this reply. Carson and other mainstream commentators read it as an argument from the lesser to the greater: if Scripture itself can apply the word “gods” to mere human recipients of God’s word without blasphemy, then Jesus — sanctified and sent by the Father in a unique sense — has still greater warrant for language of divine sonship, so the citation strengthens rather than undercuts his claim. Unitarian readers take the same citation as evidence that “god”-language in Scripture already operates in a derivative, functional sense applied to humans, and read Jesus’s appeal to that precedent as clarifying, rather than escalating, what he had claimed — a deflection of a charge of literal deity by appeal to Scripture’s own looser use of the term. Both readings are represented in mainstream Johannine scholarship, and the passage itself does not adjudicate between them."
+      "body": "In John 10:30 Jesus says, 'I and the Father are one.' The neuter form *hen* does not mean they are one person. Trinitarian interpreters understand unity of power, action, and divine identity in the context of Jesus giving eternal life and preserving the sheep. John 17's prayer that disciples be one shows that the same word can express relational unity, but it does not by itself prove that every use has the same depth.\n\nThe appeal to Psalm 82 in John 10:34-36 is likewise debated. Some interpreters see Jesus answering a charge of blasphemy from the lesser-to-greater logic of scripture; others see the passage reinforcing the unique consecration and sending of the Son. A strictly functional or merely human-agent reading exists, but it should not be called equally representative of mainstream Johannine scholarship without evidence."
     },
     {
       "sectionId": "john-20-28",
@@ -310,6 +310,177 @@
       "verse": "32",
       "reference": "Mark 13:32",
       "text": "But of that day or that hour no one knows, not even the angels in heaven, nor the Son, but only the Father.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Philippians",
+      "chapter": 2,
+      "verse": "6",
+      "reference": "Philippians 2:6",
+      "text": "who, existing in the form of God, didn’t consider equality with God a thing to be grasped,\n",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "John",
+      "chapter": 8,
+      "verse": "59",
+      "reference": "John 8:59",
+      "text": "Therefore they took up stones to throw at him, but Jesus was hidden, and went out of the temple, having gone through the middle of them, and so passed by.\n",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Exodus",
+      "chapter": 3,
+      "verse": "14",
+      "reference": "Exodus 3:14",
+      "text": "God said to Moses, “I AM WHO I AM,” and he said, “You shall tell the children of Israel this: ‘I AM has sent me to you.’”",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 26,
+      "verse": "25",
+      "reference": "Matthew 26:25",
+      "text": "Judas, who betrayed him, answered, “It isn’t me, is it, Rabbi?”\nHe said to him,\n“You said it.”\n",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Luke",
+      "chapter": 1,
+      "verse": "19",
+      "reference": "Luke 1:19",
+      "text": "The angel answered him, “I am Gabriel, who stands in the presence of God. I was sent to speak to you, and to bring you this good news.\n",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Acts",
+      "chapter": 10,
+      "verse": "21",
+      "reference": "Acts 10:21",
+      "text": "Peter went down to the men, and said, “Behold, I am he whom you seek. Why have you come?”\n",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Acts",
+      "chapter": 22,
+      "verse": "3",
+      "reference": "Acts 22:3",
+      "text": "“I am indeed a Jew, born in Tarsus of Cilicia, but brought up in this city at the feet of Gamaliel, instructed according to the strict tradition of the law of our fathers, being zealous for God, even as you all are today.\n",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "John",
+      "chapter": 8,
+      "verse": "56",
+      "reference": "John 8:56",
+      "text": "\nYour father Abraham rejoiced to see my day. He saw it, and was glad.”\n",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "1 Peter",
+      "chapter": 1,
+      "verse": "20",
+      "reference": "1 Peter 1:20",
+      "text": "who was foreknown indeed before the foundation of the world, but was revealed in this last age for your sake,\n",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "John",
+      "chapter": 10,
+      "verse": "33",
+      "reference": "John 10:33",
+      "text": "The Jews answered him, “We don’t stone you for a good work, but for blasphemy: because you, being a man, make yourself God.”\n",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "John",
+      "chapter": 10,
+      "verse": "34-36",
+      "reference": "John 10:34-36",
+      "text": "Jesus answered them,\n“Isn’t it written in your law, ‘I said, you are gods?’\n\nIf he called them gods, to whom the word of God came (and the Scripture can’t be broken),\n\n\ndo you say of him whom the Father sanctified and sent into the world, ‘You blaspheme,’ because I said, ‘I am the Son of God?’\n\n",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "John",
+      "chapter": 20,
+      "verse": "31",
+      "reference": "John 20:31",
+      "text": "but these are written, that you may believe that Jesus is the Christ, the Son of God, and that believing you may have life in his name.\n",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Philippians",
+      "chapter": 2,
+      "verse": "5-11",
+      "reference": "Philippians 2:5-11",
+      "text": "Have this in your mind, which was also in Christ Jesus, who, existing in the form of God, didn’t consider equality with God a thing to be grasped, but emptied himself, taking the form of a servant, being made in the likeness of men. And being found in human form, he humbled himself, becoming obedient to death, yes, the death of the cross. Therefore God also highly exalted him, and gave to him the name which is above every name; that at the name of Jesus every knee should bow, of those in heaven, those on earth, and those under the earth, and that every tongue should confess that Jesus Christ is Lord, to the glory of God the Father.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Genesis",
+      "chapter": 3,
+      "verse": "5",
+      "reference": "Genesis 3:5",
+      "text": "for God knows that in the day you eat it, your eyes will be opened, and you will be like God, knowing good and evil.”\n",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "1 Corinthians",
+      "chapter": 15,
+      "verse": "45",
+      "reference": "1 Corinthians 15:45",
+      "text": "So also it is written, “The first man, Adam, became a living soul.”\n The last Adam became a life-giving spirit.\n",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Romans",
+      "chapter": 5,
+      "verse": "14",
+      "reference": "Romans 5:14",
+      "text": "Nevertheless death reigned from Adam until Moses, even over those whose sins weren’t like Adam’s disobedience, who is a foreshadowing of him who was to come.\n",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Romans",
+      "chapter": 1,
+      "verse": "20",
+      "reference": "Romans 1:20",
+      "text": "For the invisible things of him since the creation of the world are clearly seen, being perceived through the things that are made, even his everlasting power and divinity; that they may be without excuse.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "John",
+      "chapter": 3,
+      "verse": "34",
+      "reference": "John 3:34",
+      "text": "For he whom God has sent speaks the words of God; for God gives the Spirit without measure.\n",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "2 Peter",
+      "chapter": 1,
+      "verse": "1",
+      "reference": "2 Peter 1:1",
+      "text": "Simon Peter, a servant and apostle of Jesus Christ, to those who have obtained a like precious faith with us in the righteousness of our God and Savior, Jesus Christ:\n",
       "version": "World English Bible",
       "sourceAttribution": "bible-api.com — World English Bible (public domain)"
     }

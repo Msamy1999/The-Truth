@@ -49,7 +49,7 @@
       "sectionId": "signs-of-the-hour",
       "title": "Signs of the Hour in Islamic Tradition",
       "kind": "interpretation",
-      "body": "Islamic hadith literature contains extensive accounts of the signs preceding the Day of Resurrection. These signs function both as warnings and confirmations of prophecy. The major signs, mentioned in hadith collections including Sahih Muslim and Sunan Ibn Majah, include:\n\nThe Dajjal (الدجال—the Deceiver or Antichrist) emerges as a central figure, described as a one-eyed figure who will mislead many before his destruction by Jesus. The appearance of Gog and Magog (Yajooj wa Majooj), mentioned in Qur'anic passages, represents the breaking down of a wall or barrier and the emergence of these nations to corrupt the earth. The return of Jesus will be pivotal: he will pray with Muslims, break the cross (interpreted by Muslims as a metaphor for ending Christian theological errors), and establish justice before his death.\n\nOther major signs include the sun rising from the west, the emergence of a beast (Dabbat al-Ard), a massive fire that will herd humanity toward the assembly place, and the blowing of the Trumpet (Sûr) by the angel Israfeel, which will cause all creation to fall silent and cease. These accounts are drawn from hadith sources and interpreted by Islamic scholars with varying degrees of literalism and symbolism.\n\nThe Qur'an itself speaks to the proximity and urgency of the Hour, stating that it is near, though God alone possesses knowledge of its exact time. This uncertainty is intentional—believers are called to live in spiritual readiness, moral conscientiousness, and remembrance of God, as though each day might be the day of resurrection."
+      "body": "Islamic hadith literature contains extensive accounts of signs preceding the Hour, but each sign should be tied to an exact report rather than attributed vaguely to 'the hadith.' Sahih Muslim 2901a lists ten major signs, including the Dajjal, the beast, Gog and Magog, the rising of the sun from the west, three major landslides, smoke, the descent of Jesus, and a fire driving people to assembly. Individual reports supply further detail and are interpreted with differing degrees of literalism.\n\nSahih Muslim 2937a gives an extended account of the Dajjal, Jesus' descent and defeat of him, and the release of Gog and Magog. Quranic passages independently mention Gog and Magog and the beast but do not contain the full later hadith chronology.\n\nThe Trumpet is Quranic, while identifying the angel who blows it as Israfil depends on later reports and interpretive tradition. The article should keep Quranic statements, authenticated hadith, and later synthesis visibly separate."
     },
     {
       "sectionId": "gog-magog-islamic-view",
@@ -61,7 +61,7 @@
       "sectionId": "jesus-isa-islamic-eschatology",
       "title": "The Return of Jesus (Isa) in Islamic Eschatology",
       "kind": "interpretation",
-      "body": "The Islamic understanding of Jesus's role in the end times is distinctive and central. The Qur'an explicitly states that Jesus was not crucified and did not die, but was raised to God. A quranic verse asserts that all People of the Scripture will believe in Jesus before their death—Islamic scholars interpret this as referring to Jesus's second coming, when all will believe in his truthfulness before the end of the world arrives.\n\nIn Islamic eschatological tradition, Jesus descends during the final days to establish justice and true worship. He will slay the Dajjal, break the cross (understood as dismantling Christian doctrinal errors regarding his divinity), and abolish the jizyah (tax on non-Muslims), meaning that no religion but Islam will be accepted. He will pray behind an Islamic leader, emphasizing the continuity of Islamic law and community. After living among the believers, Jesus will die a natural death and be buried, establishing that he was always a human prophet, never divine.\n\nThis eschatological role differs markedly from Christian conceptions. For Muslims, Jesus's return vindicates Islamic truth and completes his prophetic mission in human history. He is not the judge presiding over all nations (that role belongs to God alone), nor does he establish a messianic kingdom distinct from Islamic governance. Rather, his return is understood as confirmation of God's final revelation to Muhammad and as a mercy to believers in the closing period of history.\n\nThe Qur'an affirms that Jesus himself is a sign (ayah) of the Hour, suggesting that reflection on his life, message, and promised return should orient believers toward awareness of God's transcendence and the certainty of judgment."
+      "body": "Mainstream Islamic eschatology expects the personal return of Jesus. Sahih al-Bukhari 2476 says that the son of Mary will descend as a just ruler, break the cross, kill swine, and abolish jizya. The report describes concrete actions; interpreting the breaking of the cross as the ending of false beliefs about Jesus is a theological explanation of the action, not a replacement for its wording.\n\nSahih Muslim 2937a places Jesus' descent within the Dajjal narrative and describes him defeating the deceiver. Other reports and later syntheses discuss the duration of his life, peace, abundance, and death. These details should be sourced individually because they do not all occur in one narration.\n\nThe Quranic basis is briefer and interpretive. Classical commentators often connect Quran 4:159 and 43:61 with Jesus' future return, while the detailed sequence comes from hadith. Islam understands the return as vindicating Jesus as Messiah and human messenger, not as God incarnate."
     },
     {
       "sectionId": "christian-eschatology",
@@ -651,9 +651,13 @@
       "note": "Systematic treatment of Christian end-times doctrine from biblical sources, examining the Second Coming, resurrection, and final judgment across New Testament texts."
     },
     {
-      "title": "Jesus in Islam and Christianity: Dialogue and Comparative Studies",
-      "author": "Jamal Badawi",
-      "note": "Comparative examination of Jesus's role in Islamic and Christian theology, including his eschatological functions in both traditions."
+      "title": "Christ in Islam and Christianity: The Representation of Jesus in the Qur'an and the Classical Muslim Commentaries",
+      "author": "Neal Robinson",
+      "note": "Academic study of Quranic and classical Muslim interpretations of Jesus, including his return, crucifixion, miracles, and birth.",
+      "type": "book",
+      "publisher": "State University of New York Press",
+      "year": 1991,
+      "isbn": "9780791405581"
     },
     {
       "title": "Revelation and its Interpretations",

@@ -13,7 +13,7 @@ import { APIError } from "payload";
 const PLACEHOLDER_PATTERNS = [
   /\[VERIFIED[^\]]*PENDING\]/i,
   /\[Add (Quran|Bible) verse:/i,
-  /Source pending/i,
+  /\[(?:SOURCE[ -]?PENDING|CITATION PENDING)\]/i,
   /citation needed/i,
 ];
 

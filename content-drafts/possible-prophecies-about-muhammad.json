@@ -99,43 +99,124 @@
                         }
                     ],
     "bibleVerses":  [
-                        {
-                            "book":  "Deuteronomy",
-                            "chapter":  18,
-                            "verse":  "15-19",
-                            "reference":  "Deuteronomy 18:15-19",
-                            "text":  "Yahweh your God will raise up to you a prophet from among you, of your brothers, like me. You shall listen to him. This is according to all that you desired of Yahweh your God in Horeb in the day of the assembly, saying, “Let me not hear again Yahweh my God’s voice, neither let me see this great fire any more, that I not die.” Yahweh said to me, “They have well said that which they have spoken. I will raise them up a prophet from among their brothers, like you. I will put my words in his mouth, and he shall speak to them all that I shall command him. It shall happen, that whoever will not listen to my words which he shall speak in my name, I will require it of him.",
-                            "version":  "World English Bible",
-                            "sourceAttribution":  "bible-api.com — World English Bible (public domain)"
-                        },
-                        {
-                            "book":  "John",
-                            "chapter":  14,
-                            "verse":  "26",
-                            "reference":  "John 14:26",
-                            "text":  "But the Counselor, the Holy Spirit, whom the Father will send in my name, he will teach you all things, and will remind you of all that I said to you.",
-                            "version":  "World English Bible",
-                            "sourceAttribution":  "bible-api.com — World English Bible (public domain)"
-                        },
-                        {
-                            "book":  "John",
-                            "chapter":  15,
-                            "verse":  "26",
-                            "reference":  "John 15:26",
-                            "text":  "“When the Counselor has come, whom I will send to you from the Father, the Spirit of truth, who proceeds from the Father, he will testify about me.",
-                            "version":  "World English Bible",
-                            "sourceAttribution":  "bible-api.com — World English Bible (public domain)"
-                        },
-                        {
-                            "book":  "John",
-                            "chapter":  16,
-                            "verse":  "7",
-                            "reference":  "John 16:7",
-                            "text":  "Nevertheless I tell you the truth: It is to your advantage that I go away, for if I don’t go away, the Counselor won’t come to you. But if I go, I will send him to you.",
-                            "version":  "World English Bible",
-                            "sourceAttribution":  "bible-api.com — World English Bible (public domain)"
-                        }
-                    ],
+      {
+        "book": "Deuteronomy",
+        "chapter": 18,
+        "verse": "15-19",
+        "reference": "Deuteronomy 18:15-19",
+        "text": "Yahweh your God will raise up to you a prophet from among you, of your brothers, like me. You shall listen to him. This is according to all that you desired of Yahweh your God in Horeb in the day of the assembly, saying, “Let me not hear again Yahweh my God’s voice, neither let me see this great fire any more, that I not die.” Yahweh said to me, “They have well said that which they have spoken. I will raise them up a prophet from among their brothers, like you. I will put my words in his mouth, and he shall speak to them all that I shall command him. It shall happen, that whoever will not listen to my words which he shall speak in my name, I will require it of him.",
+        "version": "World English Bible",
+        "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+      },
+      {
+        "book": "John",
+        "chapter": 14,
+        "verse": "26",
+        "reference": "John 14:26",
+        "text": "But the Counselor, the Holy Spirit, whom the Father will send in my name, he will teach you all things, and will remind you of all that I said to you.",
+        "version": "World English Bible",
+        "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+      },
+      {
+        "book": "John",
+        "chapter": 15,
+        "verse": "26",
+        "reference": "John 15:26",
+        "text": "“When the Counselor has come, whom I will send to you from the Father, the Spirit of truth, who proceeds from the Father, he will testify about me.",
+        "version": "World English Bible",
+        "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+      },
+      {
+        "book": "John",
+        "chapter": 16,
+        "verse": "7",
+        "reference": "John 16:7",
+        "text": "Nevertheless I tell you the truth: It is to your advantage that I go away, for if I don’t go away, the Counselor won’t come to you. But if I go, I will send him to you.",
+        "version": "World English Bible",
+        "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+      },
+      {
+        "book": "Deuteronomy",
+        "chapter": 18,
+        "verse": "18",
+        "reference": "Deuteronomy 18:18",
+        "text": "I will raise them up a prophet from among their brothers, like you. I will put my words in his mouth, and he shall speak to them all that I shall command him.\n",
+        "version": "World English Bible",
+        "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+      },
+      {
+        "book": "Deuteronomy",
+        "chapter": 18,
+        "verse": "18-19",
+        "reference": "Deuteronomy 18:18-19",
+        "text": "I will raise them up a prophet from among their brothers, like you. I will put my words in his mouth, and he shall speak to them all that I shall command him.\nIt shall happen, that whoever will not listen to my words which he shall speak in my name, I will require it of him.\n",
+        "version": "World English Bible",
+        "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+      },
+      {
+        "book": "Deuteronomy",
+        "chapter": 34,
+        "verse": "10-12",
+        "reference": "Deuteronomy 34:10-12",
+        "text": "Since then, there has not arisen a prophet in Israel like Moses, whom Yahweh knew face to face,\nin all the signs and the wonders, which Yahweh sent him to do in the land of Egypt, to Pharaoh, and to all his servants, and to all his land,\nand in all the mighty hand, and in all the awesome deeds, which Moses did in the sight of all Israel.\n",
+        "version": "World English Bible",
+        "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+      },
+      {
+        "book": "Deuteronomy",
+        "chapter": 34,
+        "verse": "10",
+        "reference": "Deuteronomy 34:10",
+        "text": "Since then, there has not arisen a prophet in Israel like Moses, whom Yahweh knew face to face,",
+        "version": "World English Bible",
+        "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+      },
+      {
+        "book": "John",
+        "chapter": 16,
+        "verse": "8-11",
+        "reference": "John 16:8-11",
+        "text": "\nWhen he has come, he will convict the world about sin, about righteousness, and about judgment;\n\n\nabout sin, because they don’t believe in me;\n\n\nabout righteousness, because I am going to my Father, and you won’t see me any more;\n\n\nabout judgment, because the prince of this world has been judged.\n\n",
+        "version": "World English Bible",
+        "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+      },
+      {
+        "book": "Acts",
+        "chapter": 3,
+        "verse": "22-26",
+        "reference": "Acts 3:22-26",
+        "text": "For Moses indeed said to the fathers, ‘The Lord God will raise up a prophet for you from among your brothers, like me. You shall listen to him in all things whatever he says to you.\nIt will be that every soul that will not listen to that prophet will be utterly destroyed from among the people.’\nYes, and all the prophets from Samuel and those who followed after, as many as have spoken, they also told of these days.\nYou are the children of the prophets, and of the covenant which God made with our fathers, saying to Abraham, ‘In your offspring will all the families of the earth be blessed.’\nGod, having raised up his servant Jesus, sent him to you first to bless you, in turning away every one of you from your wickedness.”\n",
+        "version": "World English Bible",
+        "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+      },
+      {
+        "book": "Deuteronomy",
+        "chapter": 18,
+        "verse": "15",
+        "reference": "Deuteronomy 18:15",
+        "text": "Yahweh your God will raise up to you a prophet from among you, of your brothers, like me. You shall listen to him.\n",
+        "version": "World English Bible",
+        "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+      },
+      {
+        "book": "Acts",
+        "chapter": 2,
+        "verse": "1-4",
+        "reference": "Acts 2:1-4",
+        "text": "Now when the day of Pentecost had come, they were all with one accord in one place. Suddenly there came from the sky a sound like the rushing of a mighty wind, and it filled all the house where they were sitting. Tongues like fire appeared and were distributed to them, and one sat on each of them. They were all filled with the Holy Spirit, and began to speak with other languages, as the Spirit gave them the ability to speak.",
+        "version": "World English Bible",
+        "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+      },
+      {
+        "book": "Acts",
+        "chapter": 1,
+        "verse": "3",
+        "reference": "Acts 1:3",
+        "text": "To these he also showed himself alive after he suffered, by many proofs, appearing to them over a period of forty days, and speaking about God’s Kingdom.",
+        "version": "World English Bible",
+        "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+      }
+    ],
     "faq":  [
                 {
                     "question":  "What is the Islamic argument that Deuteronomy 18:18 refers to Muhammad?",
@@ -169,25 +250,28 @@
                          "did-anyone-see-god"
                      ],
     "furtherReading":  [
-                           {
-                               "title":  "Tafsir al-Tabari",
-                               "author":  "Muhammad ibn Jarir al-Tabari",
-                               "note":  "Classical Islamic exegesis providing detailed commentary on Qur\u0027an 7:157 and 61:6, including discussion of prophecies about Muhammad in earlier scriptures."
-                           },
-                           {
-                               "title":  "Tafsir Ibn Kathir",
-                               "author":  "Ismail ibn Umar ibn Kathir",
-                               "note":  "Medieval Islamic exegetical work containing comprehensive argumentation for identifying biblical prophecies as references to Muhammad."
-                           },
-                           {
-                               "title":  "The Gospel of John",
-                               "author":  "New Testament",
-                               "note":  "Original biblical source containing John 14:26, 15:26, and 16:7 in which Jesus speaks of the coming Paraclete/Holy Spirit."
-                           },
-                           {
-                               "title":  "Word Biblical Commentary: John",
-                               "author":  "George R. Beasley-Murray",
-                               "note":  "Modern Christian scholarly analysis of the Paraclete passages with detailed examination of Greek terminology and early Christian interpretation."
-                           }
-                       ]
+      {
+        "title": "Tafsir al-Tabari",
+        "author": "Muhammad ibn Jarir al-Tabari",
+        "note": "Classical Islamic exegesis providing detailed commentary on Qur'an 7:157 and 61:6, including discussion of prophecies about Muhammad in earlier scriptures."
+      },
+      {
+        "title": "Tafsir Ibn Kathir",
+        "author": "Ismail ibn Umar ibn Kathir",
+        "note": "Medieval Islamic exegetical work containing comprehensive argumentation for identifying biblical prophecies as references to Muhammad."
+      },
+      {
+        "title": "The Gospel According to John, World English Bible",
+        "author": "Anonymous; traditionally attributed to John",
+        "note": "Primary Biblical text used for the Paraclete passages; the specific public-domain translation is identified for reproducibility.",
+        "type": "primaryText",
+        "publisher": "World English Bible",
+        "url": "https://worldenglish.bible/"
+      },
+      {
+        "title": "Word Biblical Commentary: John",
+        "author": "George R. Beasley-Murray",
+        "note": "Modern Christian scholarly analysis of the Paraclete passages with detailed examination of Greek terminology and early Christian interpretation."
+      }
+    ]
 }

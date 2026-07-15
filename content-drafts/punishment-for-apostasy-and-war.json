@@ -167,7 +167,15 @@
     {
       "title": "Apostasy in Islam",
       "author": "Rudolph Peters and Gert J.J. De Vries",
-      "note": "Foundational historical study (Die Welt des Islams, 1976) examining the gap between classical juristic doctrine on apostasy and its actual historical enforcement, particularly in the Ottoman context."
+      "note": "Foundational historical study (Die Welt des Islams, 1976) examining the gap between classical juristic doctrine on apostasy and its actual historical enforcement, particularly in the Ottoman context.",
+      "type": "journalArticle",
+      "journal": "Die Welt des Islams",
+      "year": "1976-1977",
+      "volume": "17",
+      "issue": "1/4",
+      "pages": "1-25",
+      "doi": "10.2307/1570336",
+      "url": "https://doi.org/10.2307/1570336"
     }
   ]
 }

@@ -104,6 +104,16 @@
       "translation": "Then do they not reflect upon the Qur'an? If it had been from [any] other than Allah, they would have found within it much contradiction.",
       "translator": "Saheeh International",
       "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Aal-i-Imraan",
+      "surahNumber": 3,
+      "ayahNumber": 7,
+      "reference": "Quran 3:7",
+      "arabic": "هُوَ ٱلَّذِىٓ أَنزَلَ عَلَيْكَ ٱلْكِتَٰبَ مِنْهُ ءَايَٰتٌۭ مُّحْكَمَٰتٌ هُنَّ أُمُّ ٱلْكِتَٰبِ وَأُخَرُ مُتَشَٰبِهَٰتٌۭ ۖ فَأَمَّا ٱلَّذِينَ فِى قُلُوبِهِمْ زَيْغٌۭ فَيَتَّبِعُونَ مَا تَشَٰبَهَ مِنْهُ ٱبْتِغَآءَ ٱلْفِتْنَةِ وَٱبْتِغَآءَ تَأْوِيلِهِۦ ۗ وَمَا يَعْلَمُ تَأْوِيلَهُۥٓ إِلَّا ٱللَّهُ ۗ وَٱلرَّٰسِخُونَ فِى ٱلْعِلْمِ يَقُولُونَ ءَامَنَّا بِهِۦ كُلٌّۭ مِّنْ عِندِ رَبِّنَا ۗ وَمَا يَذَّكَّرُ إِلَّآ أُو۟لُوا۟ ٱلْأَلْبَٰبِ",
+      "translation": "It is He who has sent down to you, [O Muhammad], the Book; in it are verses [that are] precise - they are the foundation of the Book - and others unspecific. As for those in whose hearts is deviation [from truth], they will follow that of it which is unspecific, seeking discord and seeking an interpretation [suitable to them]. And no one knows its [true] interpretation except Allah. But those firm in knowledge say, \"We believe in it. All [of it] is from our Lord.\" And no one will be reminded except those of understanding.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
     }
   ],
   "bibleVerses": [
@@ -122,6 +132,24 @@
       "verse": "1",
       "reference": "1 Chronicles 21:1",
       "text": "Satan stood up against Israel, and moved David to take a census of Israel.",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "1 Kings",
+      "chapter": 22,
+      "verse": "19-23",
+      "reference": "1 Kings 22:19-23",
+      "text": "Micaiah said, “Therefore hear Yahweh’s word. I saw Yahweh sitting on his throne, and all the army of heaven standing by him on his right hand and on his left.\nYahweh said, ‘Who will entice Ahab, that he may go up and fall at Ramoth Gilead?’ One said one thing; and another said another.\nA spirit came out and stood before Yahweh, and said, ‘I will entice him.’\nYahweh said to him, ‘How?’\nHe said, ‘I will go out and will be a lying spirit in the mouth of all his prophets.’\nHe said, ‘You will entice him, and will also prevail. Go out and do so.’\nNow therefore, behold, Yahweh has put a lying spirit in the mouth of all these your prophets; and Yahweh has spoken evil concerning you.”\n",
+      "version": "World English Bible",
+      "sourceAttribution": "bible-api.com — World English Bible (public domain)"
+    },
+    {
+      "book": "Genesis",
+      "chapter": 50,
+      "verse": "20",
+      "reference": "Genesis 50:20",
+      "text": "As for you, you meant evil against me, but God meant it for good, to bring to pass, as it is today, to save many people alive.\n",
       "version": "World English Bible",
       "sourceAttribution": "bible-api.com — World English Bible (public domain)"
     }

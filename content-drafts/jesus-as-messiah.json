@@ -84,7 +84,7 @@
       "sectionId": "faq",
       "title": "Frequently Asked Questions",
       "kind": "notes",
-      "body": "Q: Do Muslims believe Jesus is the Messiah?\nA: Yes. The Quran itself names him al-Masih — the Messiah — and no other figure in the Quran bears this title. Affirming it is part of mainstream Islamic belief.\n\nQ: Does the word “Messiah” itself mean “God”?\nA: No. It means “anointed one” and was used in the Hebrew Bible for human kings and priests set apart by God. The belief that the Messiah is divine is a later theological claim about Jesus, not the meaning of the word.\n\nQ: Why does the Quran call Jesus “a word from Him”?\nA: Muslims understand this as pointing to Jesus’s miraculous origin — created by God’s direct command, without a father. The same verse insists that God is one (Quran 4:171), so “word” is an honor, not a claim that Jesus is an eternal divine person.\n\nQ: Is the “false messiah” in Islamic teaching related to this title?\nA: Linguistically, yes. Narrations in Sahih al-Bukhari and Sahih Muslim describe an end-times deceiver called al-Masih ad-Dajjal, “the false messiah,” whom Jesus will confront after his return. That Arabic can attach masih even to a deceiver shows the word is a title, not a statement of divinity.\n\nQ: Do Muslims believe the Messiah will return?\nA: Yes. Mainstream Islamic teaching, drawing on the Quran’s allusions and well-known narrations in the major hadith collections, holds that Jesus will return before the end of history. See this library’s article on the second coming of Jesus.\n\nQ: Can someone accept Jesus as the Messiah without accepting the Trinity?\nA: Islam answers yes — that is precisely the Muslim position, and it mirrors the original Jewish expectation of a human, divinely appointed Messiah."
+      "body": "Q: Do Muslims believe Jesus is the Messiah?\nA: Yes. The Quran itself names him al-Masih — the Messiah — and no other figure in the Quran bears this title. Affirming it is part of mainstream Islamic belief.\n\nQ: Does the word “Messiah” itself mean “God”?\nA: No. It means “anointed one” and was used in the Hebrew Bible for human kings and priests set apart by God. The belief that the Messiah is divine is a later theological claim about Jesus, not the meaning of the word.\n\nQ: Why does the Quran call Jesus “a word from Him”?\nA: Muslims understand this as pointing to Jesus’s miraculous origin — created by God’s direct command, without a father. The same verse insists that God is one (Quran 4:171), so “word” is an honor, not a claim that Jesus is an eternal divine person.\n\nQ: Is the “false messiah” in Islamic teaching related to this title?\nA: Linguistically, yes. Reports including Sahih al-Bukhari 2476 and Sahih Muslim 2937a describe an end-times deceiver called al-Masih ad-Dajjal, “the false messiah,” whom Jesus will confront after his return. That Arabic can attach masih even to a deceiver shows the word is a title, not a statement of divinity.\n\nQ: Do Muslims believe the Messiah will return?\nA: Yes. Mainstream Islamic teaching, connecting Quran 4:159 and 43:61 with reports including Sahih al-Bukhari 2476 and Sahih Muslim 2937a, holds that Jesus will return before the end of history. See this library’s article on the second coming of Jesus.\n\nQ: Can someone accept Jesus as the Messiah without accepting the Trinity?\nA: Islam answers yes — that is precisely the Muslim position, and it mirrors the original Jewish expectation of a human, divinely appointed Messiah."
     },
     {
       "sectionId": "further-reading",
@@ -131,6 +131,16 @@
       "reference": "Quran 5:75",
       "arabic": "مَّا ٱلْمَسِيحُ ٱبْنُ مَرْيَمَ إِلَّا رَسُولٌۭ قَدْ خَلَتْ مِن قَبْلِهِ ٱلرُّسُلُ وَأُمُّهُۥ صِدِّيقَةٌۭ ۖ كَانَا يَأْكُلَانِ ٱلطَّعَامَ ۗ ٱنظُرْ كَيْفَ نُبَيِّنُ لَهُمُ ٱلْءَايَٰتِ ثُمَّ ٱنظُرْ أَنَّىٰ يُؤْفَكُونَ",
       "translation": "The Messiah, son of Mary, was not but a messenger; [other] messengers have passed on before him. And his mother was a supporter of truth. They both used to eat food. Look how We make clear to them the signs; then look how they are deluded.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "An-Nisaa",
+      "surahNumber": 4,
+      "ayahNumber": 159,
+      "reference": "Quran 4:159",
+      "arabic": "وَإِن مِّنْ أَهْلِ ٱلْكِتَٰبِ إِلَّا لَيُؤْمِنَنَّ بِهِۦ قَبْلَ مَوْتِهِۦ ۖ وَيَوْمَ ٱلْقِيَٰمَةِ يَكُونُ عَلَيْهِمْ شَهِيدًۭا",
+      "translation": "And there is none from the People of the Scripture but that he will surely believe in Jesus before his death. And on the Day of Resurrection he will be against them a witness.",
       "translator": "Saheeh International",
       "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
     }
@@ -188,11 +198,11 @@
     },
     {
       "question": "Is the “false messiah” in Islamic teaching related to this title?",
-      "answer": "Linguistically, yes. Narrations in Sahih al-Bukhari and Sahih Muslim describe a great end-times deceiver called al-Masih ad-Dajjal, “the false messiah,” whom Jesus will confront after his return. The fact that Arabic can attach the word masih even to a deceiver shows that the word itself is a title, not a statement of divinity."
+      "answer": "Linguistically, yes. Narrations including Sahih al-Bukhari 2476 and Sahih Muslim 2937a describe a great end-times deceiver called al-Masih ad-Dajjal, “the false messiah,” whom Jesus will confront after his return. The fact that Arabic can attach the word masih even to a deceiver shows that the word itself is a title, not a statement of divinity."
     },
     {
       "question": "Do Muslims believe the Messiah will return?",
-      "answer": "Yes. Mainstream Islamic teaching, drawing on the Quran’s allusions and well-known narrations in the major hadith collections, holds that Jesus will return before the end of history."
+      "answer": "Yes. Mainstream Islamic teaching connects Quran 4:159 and 43:61 with Jesus' return and relies on detailed reports including Sahih al-Bukhari 2476 and Sahih Muslim 2937a. The Quranic application is classical interpretation; the descent and Dajjal details come from hadith."
     },
     {
       "question": "Can someone accept Jesus as the Messiah without accepting the Trinity?",

@@ -1,0 +1,138 @@
+{
+  "slug": "morality-without-god",
+  "title": "Morality Without God",
+  "subtitle": "Moral character, moral knowledge, and the deeper question of what makes obligations objectively true",
+  "category": "difficult-questions",
+  "audienceLevel": "intermediate",
+  "summary": "Atheists can be compassionate, principled, and morally courageous. The philosophical debate is not whether nonbelievers can behave well, but how objective duties and human worth are grounded. This article compares secular and theistic accounts while acknowledging genuine Muslim disagreement about reason and revelation in ethics.",
+  "tags": ["Theology", "Questions", "Purpose", "Sources"],
+  "seo": {
+    "metaTitle": "Morality Without God? Secular Ethics and the Islamic Case",
+    "metaDescription": "Distinguish moral behavior, knowledge, and grounding; examine secular moral realism, evolution, the Euthyphro dilemma, and Islamic ethics.",
+    "keywords": ["morality without God", "objective morality", "Islamic ethics", "Euthyphro dilemma", "atheism and morals", "moral realism"]
+  },
+  "sections": [
+    {
+      "sectionId": "clear-away-caricature",
+      "title": "What the Question Is Not",
+      "kind": "summary",
+      "body": "People who do not believe in God can love their families, risk themselves for strangers, oppose injustice, and develop careful ethical systems. Believers can act cruelly. Claiming otherwise is both false and insulting. Social learning, empathy, conscience, law, reflection, and human experience are available across worldviews.\n\nThe philosophical question has at least three levels. **Moral behavior** asks how people actually act. **Moral knowledge** asks how they recognize right and wrong. **Moral grounding** asks what, if anything, makes claims such as 'torturing a child for amusement is wrong' true regardless of preference or social approval. God's existence is not required for the first two in any simple sense. The dispute primarily concerns the third."
+    },
+    {
+      "sectionId": "secular-options",
+      "title": "Serious Secular Accounts",
+      "kind": "argument",
+      "body": "Secular ethics is not one theory. A naturalist may ground value in the flourishing and suffering of conscious creatures. A non-natural moral realist may hold that moral truths are basic features of reality, not reducible to physical facts. A constructivist may derive obligations from principles rational agents would endorse under fair conditions. A contractualist emphasizes terms of cooperation no one could reasonably reject, while some anti-realists treat moral judgments as constructed attitudes rather than objective discoveries.\n\nEach view can guide sophisticated moral reasoning. Their challenges differ. Flourishing requires an account of whose flourishing counts and why; brute moral facts raise questions about their relation to a physical universe and our access to them; construction may struggle to bind agents who reject its procedure; anti-realism may not preserve the strong sense in which genocide seems wrong even when a society approves it. Theistic ethics also faces serious questions, so identifying difficulties in secular theories is not enough to prove God."
+    },
+    {
+      "sectionId": "evolution-and-explanation",
+      "title": "What Evolutionary Explanations Do—and Do Not—Show",
+      "kind": "sources",
+      "body": "Evolutionary and cultural accounts can help explain why humans possess empathy, reciprocity, loyalty, punishment instincts, and concern for reputation. Cooperative dispositions can aid survival in social groups. These explanations are relevant to moral psychology.\n\nBut an account of how a belief arose does not automatically decide whether it is true. Explaining the visual system evolutionarily does not show that everything seen is unreal; explaining an impulse does not show that it ought to be obeyed. The philosophical work is to move from descriptive facts about survival or preference to normative claims about what anyone should do. Secular philosophers offer several bridges, and critics debate whether they succeed. A theist must also explain how human moral cognition can be both shaped by biology and capable of recognizing genuine duties."
+    },
+    {
+      "sectionId": "theistic-grounding",
+      "title": "The Theistic Proposal",
+      "kind": "argument",
+      "body": "Islam locates moral reality within the character and will of a perfectly wise, just, and merciful Creator. Human beings have worth because they are deliberately created and morally addressed, not because intelligence, health, productivity, or social power earns it. Obligations are not merely majority preferences; every person stands before a judge who knows hidden acts and cannot be bribed. Quran 4:135 commands justice even against oneself, parents, or close relatives, and Quran 16:90 joins justice with excellence and generosity.\n\nThis framework connects moral facts, motivation, accountability, and final justice. Yet invoking God is not a shortcut. Interpreters can misunderstand revelation, disputed reports require evaluation, and applications can be shaped by culture and power. Islamic law and ethics include methods of interpretation precisely because moving from a text to a concrete judgment involves reasoning."
+    },
+    {
+      "sectionId": "euthyphro",
+      "title": "Is Goodness Arbitrary?",
+      "kind": "interpretation",
+      "body": "A classic dilemma asks whether actions are good only because God commands them, which may make morality arbitrary, or whether God commands them because they are independently good, which may seem to make God unnecessary. Muslim thinkers have offered more than one response. Mu'tazili theologians strongly affirmed that reason can recognize real moral qualities. Ash'ari approaches emphasized divine command and denied that an external standard rules over God. Maturidi and other accounts developed positions in which reason knows important values while revelation completes and authoritatively directs moral life.\n\nA common contemporary theistic answer grounds goodness in God's necessary character rather than an arbitrary choice or an external law. A perfectly good God commands consistently with wisdom and justice; cruelty for its own sake could not become good by decree. Critics may ask whether calling the divine nature good already relies on an independent moral concept. The debate shows why neither side should present a one-line solution."
+    },
+    {
+      "sectionId": "disagreement-and-fitrah",
+      "title": "Conscience, Fitrah, and Disagreement",
+      "kind": "scripture",
+      "body": "Islam can affirm moral insight outside explicit faith. Quran 30:30 speaks of the fitrah on which God created human beings, commonly understood as an original disposition oriented toward truth and worship. Reason, conscience, empathy, and experience allow people to recognize much good. Revelation recalls, corrects, and extends rather than creating every moral awareness from nothing.\n\nPersistent disagreement does not prove there is no moral truth, any more than scientific disagreement proves there is no physical truth. But disagreement should produce humility. Believers sometimes mistake inherited customs for divine commands, while secular societies can expose genuine injustice that religious communities normalized. Claims must be argued from sound sources, consistent principles, consequences, and the rights of those affected."
+    },
+    {
+      "sectionId": "balanced-conclusion",
+      "title": "What Follows—and What Does Not",
+      "kind": "argument",
+      "body": "It does not follow that an atheist has no reason to be moral, that fear of punishment is the only religious motive, or that every ethical command attributed to religion is correct. Secular theories can support moral knowledge and admirable lives. The deeper question is which worldview best explains objective value, equal human dignity, binding duties, moral knowledge, and the hope that final reality is not indifferent to justice.\n\nThe Islamic answer is that goodness is rooted in the wise Creator, known partly through reason and disposition and authoritatively guided by revelation. This answer gains force within a broader case for God; it cannot carry that entire case alone. Honest dialogue begins when character is not confused with metaethics and when both secular and religious positions present their strongest forms."
+    }
+  ],
+  "quranVerses": [
+    {
+      "surahName": "An-Nisaa",
+      "surahNumber": 4,
+      "ayahNumber": 135,
+      "reference": "Quran 4:135",
+      "arabic": "۞ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُونُوا۟ قَوَّٰمِينَ بِٱلْقِسْطِ شُهَدَآءَ لِلَّهِ وَلَوْ عَلَىٰٓ أَنفُسِكُمْ أَوِ ٱلْوَٰلِدَيْنِ وَٱلْأَقْرَبِينَ ۚ إِن يَكُنْ غَنِيًّا أَوْ فَقِيرًۭا فَٱللَّهُ أَوْلَىٰ بِهِمَا ۖ فَلَا تَتَّبِعُوا۟ ٱلْهَوَىٰٓ أَن تَعْدِلُوا۟ ۚ وَإِن تَلْوُۥٓا۟ أَوْ تُعْرِضُوا۟ فَإِنَّ ٱللَّهَ كَانَ بِمَا تَعْمَلُونَ خَبِيرًۭا",
+      "translation": "O you who have believed, be persistently standing firm in justice, witnesses for Allah, even if it be against yourselves or parents and relatives. Whether one is rich or poor, Allah is more worthy of both. So follow not [personal] inclination, lest you not be just. And if you distort [your testimony] or refuse [to give it], then indeed Allah is ever, with what you do, Acquainted.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "An-Nahl",
+      "surahNumber": 16,
+      "ayahNumber": 90,
+      "reference": "Quran 16:90",
+      "arabic": "۞ إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ ۚ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ",
+      "translation": "Indeed, Allah orders justice and good conduct and giving to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Ar-Room",
+      "surahNumber": 30,
+      "ayahNumber": 30,
+      "reference": "Quran 30:30",
+      "arabic": "فَأَقِمْ وَجْهَكَ لِلدِّينِ حَنِيفًۭا ۚ فِطْرَتَ ٱللَّهِ ٱلَّتِى فَطَرَ ٱلنَّاسَ عَلَيْهَا ۚ لَا تَبْدِيلَ لِخَلْقِ ٱللَّهِ ۚ ذَٰلِكَ ٱلدِّينُ ٱلْقَيِّمُ وَلَٰكِنَّ أَكْثَرَ ٱلنَّاسِ لَا يَعْلَمُونَ",
+      "translation": "So direct your face toward the religion, inclining to truth. [Adhere to] the fitrah of Allah upon which He has created [all] people. No change should there be in the creation of Allah. That is the correct religion, but most of the people do not know.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    }
+  ],
+  "bibleVerses": [],
+  "faq": [
+    {
+      "question": "Can atheists be genuinely good people?",
+      "answer": "Yes. The Islamic philosophical claim about grounding does not deny nonbelievers' empathy, conscience, courage, or moral knowledge. Conduct and the ultimate explanation of moral truth are separate questions."
+    },
+    {
+      "question": "Is morality just obeying commands to avoid punishment?",
+      "answer": "No. Islamic ethics includes love of God, gratitude, virtue, mercy, wisdom, justice, and concern for others. Accountability matters, but mature moral and spiritual life is not reduced to fear."
+    },
+    {
+      "question": "If morality comes from God, can anything become right by command?",
+      "answer": "Muslim schools formulate the relationship differently. A prominent response is that God's commands express His necessarily wise and just character, so arbitrary cruelty is incompatible with the source of the command. Philosophical objections to this account remain debated."
+    },
+    {
+      "question": "Does moral disagreement disprove objective morality?",
+      "answer": "Not by itself. People can disagree because of limited facts, self-interest, culture, or competing principles. Disagreement does require careful argument and humility about one's interpretations."
+    }
+  ],
+  "relatedSlugs": ["does-god-exist", "the-problem-of-evil", "purpose-of-life-atheism-agnosticism", "rights-of-non-muslims"],
+  "furtherReading": [
+    {
+      "title": "Ethics Without God",
+      "author": "Kai Nielsen",
+      "publisher": "Prometheus Books",
+      "year": 1990,
+      "url": "https://www.simonandschuster.com/books/Ethics-Without-God/Kai-Nielsen/9780879755522",
+      "type": "book",
+      "note": "A secular philosophical defense of ethics independent of religious belief."
+    },
+    {
+      "title": "God and Morality: A Philosophical History",
+      "author": "John E. Hare",
+      "publisher": "Blackwell Publishing",
+      "year": 2007,
+      "type": "book",
+      "note": "A historical and philosophical study of how moral obligation has been related to God."
+    },
+    {
+      "title": "The Moral Landscape",
+      "author": "Sam Harris",
+      "publisher": "Free Press",
+      "year": 2010,
+      "url": "https://www.simonandschuster.com/books/The-Moral-Landscape/Sam-Harris/9781439171226",
+      "type": "book",
+      "note": "A widely discussed naturalistic proposal relating moral truth to the well-being of conscious creatures."
+    }
+  ]
+}
