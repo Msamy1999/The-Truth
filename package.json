@@ -7,8 +7,10 @@
     "build": "next build",
     "start": "next start -p 4173",
     "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
     "verify:drafts": "node payload/verify-drafts-local.mjs",
-    "verify:scripture": "node payload/verify-drafts.mjs"
+    "verify:scripture": "node payload/verify-drafts.mjs",
+    "verify:quran": "node payload/verify-quran-uthmani.mjs"
   },
   "dependencies": {
     "@payloadcms/db-sqlite": "^3.85.2",
@@ -23,14 +25,18 @@
     "react-dom": "^19.2.7"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.5",
     "@types/node": "^24.0.0",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.20",
+    "eslint": "^9.39.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "playwright": "^1.61.1",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.64.0"
   },
   "type": "module"
 }

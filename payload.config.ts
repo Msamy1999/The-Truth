@@ -16,6 +16,11 @@ import { Users } from "./payload/collections/Users";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
+const payloadSecret = process.env.PAYLOAD_SECRET;
+
+if (!payloadSecret) {
+  throw new Error("PAYLOAD_SECRET must be set before starting Payload.");
+}
 
 /**
  * Payload CMS config. Notes:
@@ -110,7 +115,7 @@ export default buildConfig({
       },
     },
   ],
-  secret: process.env.PAYLOAD_SECRET ?? "",
+  secret: payloadSecret,
   typescript: {
     outputFile: path.resolve(dirname, "types/payload-types.ts"),
   },

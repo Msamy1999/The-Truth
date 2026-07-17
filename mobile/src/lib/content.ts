@@ -1,11 +1,8 @@
 /**
- * Content layer: bundled snapshot (works fully offline on first launch) +
- * live refresh from the CMS API with an AsyncStorage cache. The API base is
- * configured via EXPO_PUBLIC_API_URL; with none set the app stays on the
- * bundled/cached content.
+ * Content layer for the mobile library. All content is bundled with the app:
+ * the reader works fully offline and never writes a duplicate content cache.
+ * New material is delivered through an app update.
  */
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useEffect, useState } from "react";
 import type {
   AppContent,
   Article,
@@ -14,23 +11,12 @@ import type {
   SourceLibraryCategory,
 } from "./types";
 
-const API_URL = process.env.EXPO_PUBLIC_API_URL ?? "";
-const CACHE_KEY = "content-cache-v1";
-const MANIFEST_KEY = "content-manifest-v1";
-const CACHE_BUNDLE_KEY = "content-cache-bundle-fingerprint-v1";
-
-/* eslint-disable @typescript-eslint/no-require-imports */
 const bundledStructure = require("../../assets/content/structure.json");
 const bundledArticles = require("../../assets/content/articles.json");
 const bundledCitations = require("../../assets/content/citations.json");
 const bundledGlossary = require("../../assets/content/glossary-terms.json");
 const bundledSourceCategories = require("../../assets/content/source-library-categories.json");
 const bundledSourceItems = require("../../assets/content/source-library-items.json");
-/* eslint-enable @typescript-eslint/no-require-imports */
-
-// ---------------------------------------------------------------------------
-// CMS document → app type mappers (same logic as the website's lib/content)
-// ---------------------------------------------------------------------------
 
 function citationKeys(value: unknown): string[] {
   if (!Array.isArray(value)) return [];
@@ -162,116 +148,10 @@ const bundledContent: AppContent = buildContent({
   sourceItems: bundledSourceItems,
 });
 
-/**
- * Identifies the snapshot this binary shipped with. When an app update brings
- * a newer bundled snapshot, any AsyncStorage cache written against the OLD
- * bundle must be discarded — otherwise stale cached articles would shadow the
- * fresher bundled content until the next successful API refresh.
- */
-const bundleFingerprint = `${bundledArticles.length}:${bundledArticles.reduce(
-  (latest: string, doc: any) =>
-    String(doc.updatedAt ?? "") > latest ? String(doc.updatedAt ?? "") : latest,
-  "",
-)}`;
-
 export function getTrees(): Record<string, any> {
   return bundledStructure.trees;
 }
 
-// ---------------------------------------------------------------------------
-// Refresh: manifest-based change detection, full refetch, AsyncStorage cache
-// ---------------------------------------------------------------------------
-
-async function fetchCollection(collection: string): Promise<any[]> {
-  const docs: any[] = [];
-  let page = 1;
-  while (true) {
-    const response = await fetch(
-      `${API_URL}/api/${collection}?limit=200&depth=1&sort=createdAt&page=${page}`,
-    );
-    if (!response.ok) throw new Error(`${collection}: HTTP ${response.status}`);
-    const data = (await response.json()) as {
-      docs: any[];
-      hasNextPage: boolean;
-    };
-    docs.push(...data.docs);
-    if (!data.hasNextPage) break;
-    page += 1;
-  }
-  return docs;
-}
-
-async function refreshFromApi(): Promise<AppContent | null> {
-  if (!API_URL) return null;
-
-  try {
-    const manifestResponse = await fetch(`${API_URL}/api/content-manifest`);
-    if (!manifestResponse.ok) return null;
-    const manifest = await manifestResponse.text();
-
-    const cachedManifest = await AsyncStorage.getItem(MANIFEST_KEY);
-    if (cachedManifest === manifest) {
-      return null; // Nothing changed.
-    }
-
-    const [articles, citations, glossary, sourceCategories, sourceItems] =
-      await Promise.all([
-        fetchCollection("articles"),
-        fetchCollection("citations"),
-        fetchCollection("glossary-terms"),
-        fetchCollection("source-library-categories"),
-        fetchCollection("source-library-items"),
-      ]);
-
-    const raw = { articles, citations, glossary, sourceCategories, sourceItems };
-    await AsyncStorage.setItem(CACHE_KEY, JSON.stringify(raw));
-    await AsyncStorage.setItem(MANIFEST_KEY, manifest);
-    await AsyncStorage.setItem(CACHE_BUNDLE_KEY, bundleFingerprint);
-    return buildContent(raw);
-  } catch {
-    return null; // Offline or API unreachable — bundled/cached content stands.
-  }
-}
-
-async function loadCached(): Promise<AppContent | null> {
-  try {
-    // A cache written against an older bundled snapshot is stale by
-    // definition (the app update shipped fresher data) — discard it.
-    const cachedFingerprint = await AsyncStorage.getItem(CACHE_BUNDLE_KEY);
-    if (cachedFingerprint !== bundleFingerprint) {
-      await AsyncStorage.multiRemove([CACHE_KEY, MANIFEST_KEY, CACHE_BUNDLE_KEY]);
-      return null;
-    }
-    const cached = await AsyncStorage.getItem(CACHE_KEY);
-    if (!cached) return null;
-    return buildContent(JSON.parse(cached));
-  } catch {
-    return null;
-  }
-}
-
-// ---------------------------------------------------------------------------
-// Hook
-// ---------------------------------------------------------------------------
-
 export function useContent(): AppContent {
-  const [content, setContent] = useState<AppContent>(bundledContent);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    (async () => {
-      const cached = await loadCached();
-      if (cached && !cancelled) setContent(cached);
-
-      const fresh = await refreshFromApi();
-      if (fresh && !cancelled) setContent(fresh);
-    })();
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  return content;
+  return bundledContent;
 }

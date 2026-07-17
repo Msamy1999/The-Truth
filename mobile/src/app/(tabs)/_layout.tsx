@@ -7,7 +7,7 @@ function tabIcon(
   outline: keyof typeof Ionicons.glyphMap,
   filled: keyof typeof Ionicons.glyphMap,
 ) {
-  return ({
+  const TabIcon = ({
     color,
     size,
     focused,
@@ -16,6 +16,9 @@ function tabIcon(
     size: number;
     focused: boolean;
   }) => <Ionicons name={focused ? filled : outline} size={size} color={color} />;
+
+  TabIcon.displayName = "TabIcon";
+  return TabIcon;
 }
 
 export default function TabsLayout() {

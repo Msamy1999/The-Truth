@@ -108,7 +108,8 @@ const ThemeContext = createContext<ThemeContextValue | null>(null);
 const MODE_KEY = "theme-mode-v1";
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const systemScheme = useColorScheme() ?? "light";
+  const detectedScheme = useColorScheme();
+  const systemScheme = detectedScheme === "dark" ? "dark" : "light";
   const [mode, setMode] = useState<ThemeMode>("system");
 
   useEffect(() => {

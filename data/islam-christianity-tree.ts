@@ -47,10 +47,6 @@ function topic(
   };
 }
 
-function planned(title: string, categoryHref: string, description?: string) {
-  return topic(title, `${categoryHref}#future-topics`, description, undefined, "Planned");
-}
-
 export const islamChristianityBranches: IslamChristianityBranchDef[] = [
   branch(
     "the-quran-and-the-bible",
