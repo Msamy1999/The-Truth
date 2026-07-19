@@ -137,8 +137,25 @@ for (const { file, data: draft } of drafts) {
       if (verse[field] == null || verse[field] === "") problems.push(label + ": incomplete Bible record " + verse.reference + " (" + field + ")");
     }
   }
+  // Some articles compare many passages without reproducing every verse in
+  // full. Keep their locators explicit and validate them separately instead
+  // of treating a reference as if it were a quoted scripture record.
+  const bibleReferenceOnly = new Set();
+  for (const item of draft.bibleReferences ?? []) {
+    const reference = typeof item === "string" ? item : item?.reference;
+    if (!reference) {
+      problems.push(label + ": incomplete Bible reference-only record");
+      continue;
+    }
+    if (bibleReferenceOnly.has(reference)) {
+      problems.push(label + ": duplicate Bible reference-only record " + reference);
+    }
+    bibleReferenceOnly.add(reference);
+  }
   for (const reference of proseBibleReferences(draft)) {
-    if (!bibleStructured.has(reference)) problems.push(label + ": prose Bible reference is not structured: " + reference);
+    if (!bibleStructured.has(reference) && !bibleReferenceOnly.has(reference)) {
+      problems.push(label + ": prose Bible reference is not structured or listed: " + reference);
+    }
   }
 
   const serialized = JSON.stringify(draft);

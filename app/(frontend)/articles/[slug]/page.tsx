@@ -11,6 +11,11 @@ import {
   getRelatedArticles,
 } from "@/lib/content";
 
+// Draft records can be imported by a separate CLI process while the local
+// server remains open. Rendering the route dynamically prevents a prebuilt
+// article page from continuing to show the old draft after that import.
+export const dynamic = "force-dynamic";
+
 type ArticlePageProps = {
   params: Promise<{
     slug: string;

@@ -53,9 +53,12 @@ let payloadPromise: Promise<Payload> | null = null;
  */
 export const CONTENT_CACHE_TAG = "library-content";
 
-const contentCacheOptions: { tags: string[]; revalidate: false } = {
+const contentCacheOptions: { tags: string[]; revalidate: false | number } = {
   tags: [CONTENT_CACHE_TAG],
-  revalidate: false,
+  // Draft imports run in a separate CLI process, so they cannot invalidate
+  // this Next.js process's cache. Do not keep stale content in local dev.
+  // Production keeps the tag-based permanent cache for fast page loads.
+  revalidate: process.env.NODE_ENV === "development" ? 1 : false,
 };
 
 function getClient(): Promise<Payload> {

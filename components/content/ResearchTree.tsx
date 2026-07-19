@@ -43,7 +43,7 @@ export function ResearchTree({
         </div>
       </div>
 
-      <ol className="ml-3 mt-2 border-l border-border sm:ml-4">
+      <ol className="ml-2 mt-1.5 border-l border-border sm:ml-3">
         {nodes.map((node, index) => (
           <TreeNode
             key={node.id ?? `${node.title}-${index}`}
@@ -67,13 +67,13 @@ function TreeNode({ node, depth, isLast }: TreeNodeProps) {
   const hasChildren = Boolean(node.children?.length);
 
   return (
-    <li className={cn("relative pl-4", !isLast && "pb-1")}>
+    <li className={cn("relative pl-3", !isLast && "pb-0.5")}>
       {hasChildren ? (
         <details className={styles.details} open={node.defaultOpen}>
           <summary
             title={node.description}
             className={cn(
-              "flex cursor-pointer list-none items-start gap-1.5 rounded-md px-1.5 py-2 transition hover:bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-2 [&::-webkit-details-marker]:hidden",
+              "flex cursor-pointer list-none items-start gap-1.5 rounded-md px-1 py-1 transition hover:bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-1.5 [&::-webkit-details-marker]:hidden",
               styles.summary,
             )}
           >
@@ -90,11 +90,11 @@ function TreeNode({ node, depth, isLast }: TreeNodeProps) {
             </span>
             <NodeBadges node={node} />
           </summary>
-          <div className="ml-4 border-l border-border pb-1 pl-3 sm:ml-5 sm:pl-4">
+          <div className="ml-3 border-l border-border pb-0.5 pl-2 sm:ml-4 sm:pl-3">
             {node.href ? (
             <Link
               href={node.href}
-              className="mb-1.5 inline-flex min-h-8 items-center rounded-sm text-xs font-semibold text-accent no-underline hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="mb-0.5 inline-flex min-h-7 items-center rounded-sm text-xs font-semibold text-accent no-underline hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
                 Explore {node.title}
             </Link>
@@ -123,7 +123,7 @@ function LeafNode({ node }: { node: ResearchTreeNode }) {
     return (
       <div
         title={node.description}
-        className="flex items-start gap-1.5 rounded-md px-1.5 py-2 sm:px-2"
+        className="flex items-start gap-1.5 rounded-md px-1 py-1 sm:px-1.5"
       >
         <FileText aria-hidden="true" className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground" />
         <span className="min-w-0 flex-1 text-sm leading-snug text-foreground">{node.title}</span>
@@ -136,7 +136,7 @@ function LeafNode({ node }: { node: ResearchTreeNode }) {
     <Link
       href={node.href}
       title={node.description}
-      className="flex items-start gap-1.5 rounded-md px-1.5 py-2 text-foreground no-underline transition hover:bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-2"
+      className="flex items-start gap-1.5 rounded-md px-1 py-1 text-foreground no-underline transition hover:bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-1.5"
     >
       <FileText aria-hidden="true" className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground" />
       <span className="min-w-0 flex-1 text-sm leading-snug text-foreground">{node.title}</span>

@@ -46,6 +46,13 @@ type DraftVerseBible = {
   sourceAttribution: string;
 };
 
+// Reference-only locators are used by comparison articles that name many
+// passages without quoting each verse in full. They are validated locally but
+// deliberately are not imported as scripture records.
+type DraftBibleReference = {
+  reference: string;
+};
+
 type DraftFurtherReading = {
   title: string;
   author: string;
@@ -73,6 +80,7 @@ type Draft = {
   sections: { sectionId: string; title: string; kind: string; body: string }[];
   quranVerses: DraftVerseQuran[];
   bibleVerses: DraftVerseBible[];
+  bibleReferences?: DraftBibleReference[];
   relatedSlugs?: string[];
   furtherReading?: DraftFurtherReading[];
 };

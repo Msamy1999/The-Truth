@@ -1467,59 +1467,7 @@
                 "href": "/articles/contradictions-in-the-bible",
                 "description": "A draft map of commonly cited biblical tensions. Each item states the competing claims, why critics call it a contradiction, and the main harmonization or critical response.",
                 "tag": "Bible",
-                "status": "draft",
-                "defaultOpen": true,
-                "children": [
-                  {
-                    "title": "Creation sequence and the creation of woman",
-                    "description": "Genesis 1 presents male and female together after the living creatures; Genesis 2 narrates the man, the garden and animals, then the woman. Critics see conflicting sequence; interpreters read Genesis 2 as a topical close-up rather than a second timeline.",
-                    "href": "/articles/contradictions-in-the-bible#creation-accounts",
-                    "status": "draft",
-                    "tag": "Narrative"
-                  },
-                  {
-                    "title": "Animals on Noah's ark",
-                    "description": "Genesis 6 says two of every kind, while Genesis 7 requires seven pairs of clean animals and birds. It is a tension only if both are read as the same complete instruction; the usual harmonization treats the later command as an addition for clean animals.",
-                    "href": "/articles/contradictions-in-the-bible#ark-instructions",
-                    "status": "draft",
-                    "tag": "Numbers"
-                  },
-                  {
-                    "title": "Who incited David's census?",
-                    "description": "2 Samuel names the LORD as the mover of David; 1 Chronicles names Satan. The same act has two named agents, so critics see a direct contradiction; Christian harmonizations appeal to divine permission and secondary agency.",
-                    "href": "/articles/contradictions-in-the-bible#davids-census",
-                    "status": "draft",
-                    "tag": "History"
-                  },
-                  {
-                    "title": "Jesus' genealogies",
-                    "description": "Matthew names Jacob as Joseph's father and traces David's line through Solomon; Luke names Heli and traces it through Nathan. The lists diverge at many points, so they cannot both be one simple biological genealogy without an additional explanation.",
-                    "href": "/articles/genealogies-of-jesus",
-                    "status": "draft",
-                    "tag": "Gospels"
-                  },
-                  {
-                    "title": "Judas's death and the Field of Blood",
-                    "description": "Matthew says Judas hanged himself and the priests bought the field; Acts says Judas acquired it and fell headlong. Critics see different outcomes and purchasers; a common harmonization says the fall followed the hanging and the priests acted with Judas's money.",
-                    "href": "/articles/the-death-of-judas",
-                    "status": "draft",
-                    "tag": "Acts"
-                  },
-                  {
-                    "title": "Passover and the time of crucifixion",
-                    "description": "The Synoptics present the Last Supper as a Passover meal, while John places the trial on the preparation day and still speaks of eating Passover. Critics see incompatible chronology; proposed solutions depend on different calendar or terminology readings.",
-                    "href": "/articles/the-timing-of-the-crucifixion",
-                    "status": "draft",
-                    "tag": "Passion"
-                  },
-                  {
-                    "title": "Resurrection reports",
-                    "description": "The Gospels differ over the women named at the tomb, the time of arrival, the messengers, and later locations. These are contradictions if each account is a complete sequence; harmonizers treat several reports as selective accounts of a longer series of events.",
-                    "href": "/articles/contradictions-in-the-bible#resurrection-reports",
-                    "status": "draft",
-                    "tag": "Resurrection"
-                  }
-                ]
+                "status": "draft"
               }
             ]
           },
