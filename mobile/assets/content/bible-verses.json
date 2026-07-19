@@ -1084,7 +1084,7 @@
     "notes": null,
     "status": "pending",
     "sourceAttribution": "bible-api.com — World English Bible (public domain)",
-    "updatedAt": "2026-07-15T09:54:50.993Z",
+    "updatedAt": "2026-07-19T08:57:08.683Z",
     "createdAt": "2026-07-08T07:59:30.127Z"
   },
   {
@@ -1884,7 +1884,7 @@
     "notes": null,
     "status": "pending",
     "sourceAttribution": "bible-api.com — World English Bible (public domain)",
-    "updatedAt": "2026-07-19T08:26:30.433Z",
+    "updatedAt": "2026-07-19T08:56:57.379Z",
     "createdAt": "2026-07-10T18:43:40.646Z"
   },
   {
@@ -2172,7 +2172,7 @@
     "notes": null,
     "status": "pending",
     "sourceAttribution": "bible-api.com — World English Bible (public domain)",
-    "updatedAt": "2026-07-17T14:08:38.676Z",
+    "updatedAt": "2026-07-19T08:56:47.377Z",
     "createdAt": "2026-07-10T18:43:52.486Z"
   },
   {
@@ -3692,7 +3692,7 @@
     "notes": null,
     "status": "pending",
     "sourceAttribution": "bible-api.com — World English Bible (public domain)",
-    "updatedAt": "2026-07-15T09:50:56.259Z",
+    "updatedAt": "2026-07-19T08:56:55.764Z",
     "createdAt": "2026-07-10T18:54:44.437Z"
   },
   {
@@ -5420,7 +5420,7 @@
     "notes": null,
     "status": "pending",
     "sourceAttribution": "bible-api.com — World English Bible (public domain)",
-    "updatedAt": "2026-07-15T09:55:03.774Z",
+    "updatedAt": "2026-07-19T08:56:59.397Z",
     "createdAt": "2026-07-10T19:26:09.439Z"
   },
   {
@@ -5436,7 +5436,7 @@
     "notes": null,
     "status": "pending",
     "sourceAttribution": "bible-api.com — World English Bible (public domain)",
-    "updatedAt": "2026-07-15T09:55:04.196Z",
+    "updatedAt": "2026-07-19T08:57:01.253Z",
     "createdAt": "2026-07-10T19:26:10.615Z"
   },
   {
@@ -5676,7 +5676,7 @@
     "notes": null,
     "status": "pending",
     "sourceAttribution": "bible-api.com — World English Bible (public domain)",
-    "updatedAt": "2026-07-15T09:55:55.457Z",
+    "updatedAt": "2026-07-19T08:57:03.037Z",
     "createdAt": "2026-07-10T19:28:35.995Z"
   },
   {
@@ -5724,7 +5724,7 @@
     "notes": null,
     "status": "pending",
     "sourceAttribution": "bible-api.com — World English Bible (public domain)",
-    "updatedAt": "2026-07-15T09:55:56.148Z",
+    "updatedAt": "2026-07-19T08:57:04.953Z",
     "createdAt": "2026-07-10T19:28:39.341Z"
   },
   {
@@ -5740,7 +5740,7 @@
     "notes": null,
     "status": "pending",
     "sourceAttribution": "bible-api.com — World English Bible (public domain)",
-    "updatedAt": "2026-07-15T09:55:56.403Z",
+    "updatedAt": "2026-07-19T08:57:06.991Z",
     "createdAt": "2026-07-10T19:28:40.627Z"
   },
   {
@@ -5772,7 +5772,7 @@
     "notes": null,
     "status": "pending",
     "sourceAttribution": "bible-api.com — World English Bible (public domain)",
-    "updatedAt": "2026-07-15T09:56:12.313Z",
+    "updatedAt": "2026-07-19T08:56:52.463Z",
     "createdAt": "2026-07-10T19:29:22.838Z"
   },
   {
@@ -5788,7 +5788,7 @@
     "notes": null,
     "status": "pending",
     "sourceAttribution": "bible-api.com — World English Bible (public domain)",
-    "updatedAt": "2026-07-15T09:56:12.525Z",
+    "updatedAt": "2026-07-19T08:56:54.156Z",
     "createdAt": "2026-07-10T19:29:23.845Z"
   },
   {
@@ -7022,5 +7022,117 @@
     "sourceAttribution": "bible-api.com — World English Bible (public domain)",
     "updatedAt": "2026-07-17T14:07:55.135Z",
     "createdAt": "2026-07-17T14:07:55.135Z"
+  },
+  {
+    "id": 440,
+    "book": "Genesis",
+    "chapter": 2,
+    "verse": "21-22",
+    "text": "Yahweh God caused the man to fall into a deep sleep. As the man slept, he took one of his ribs, and closed up the flesh in its place.\nYahweh God made a woman from the rib which he had taken from the man, and brought her to the man.",
+    "arabicText": null,
+    "arabicSource": null,
+    "version": "World English Bible",
+    "reference": "Genesis 2:21-22",
+    "notes": null,
+    "status": "pending",
+    "sourceAttribution": "bible-api.com — World English Bible (public domain)",
+    "updatedAt": "2026-07-19T08:56:49.244Z",
+    "createdAt": "2026-07-19T08:56:49.244Z"
+  },
+  {
+    "id": 441,
+    "book": "Genesis",
+    "chapter": 6,
+    "verse": "19-20",
+    "text": "Of every living thing of all flesh, you shall bring two of every sort into the ship, to keep them alive with you. They shall be male and female.\nOf the birds after their kind, of the livestock after their kind, of every creeping thing of the ground after its kind, two of every sort will come to you, to keep them alive.",
+    "arabicText": null,
+    "arabicSource": null,
+    "version": "World English Bible",
+    "reference": "Genesis 6:19-20",
+    "notes": null,
+    "status": "pending",
+    "sourceAttribution": "bible-api.com — World English Bible (public domain)",
+    "updatedAt": "2026-07-19T08:56:50.310Z",
+    "createdAt": "2026-07-19T08:56:50.310Z"
+  },
+  {
+    "id": 442,
+    "book": "Genesis",
+    "chapter": 7,
+    "verse": "2-3",
+    "text": "You shall take seven pairs of every clean animal with you, the male and his female. Of the animals that are not clean, take two, the male and his female.\nAlso of the birds of the sky, seven and seven, male and female, to keep seed alive on the surface of all the earth.",
+    "arabicText": null,
+    "arabicSource": null,
+    "version": "World English Bible",
+    "reference": "Genesis 7:2-3",
+    "notes": null,
+    "status": "pending",
+    "sourceAttribution": "bible-api.com — World English Bible (public domain)",
+    "updatedAt": "2026-07-19T08:56:51.350Z",
+    "createdAt": "2026-07-19T08:56:51.350Z"
+  },
+  {
+    "id": 443,
+    "book": "Matthew",
+    "chapter": 28,
+    "verse": "1",
+    "text": "Now after the Sabbath, as it began to dawn on the first day of the week, Mary Magdalene and the other Mary came to see the tomb.",
+    "arabicText": null,
+    "arabicSource": null,
+    "version": "World English Bible",
+    "reference": "Matthew 28:1",
+    "notes": null,
+    "status": "pending",
+    "sourceAttribution": "bible-api.com — World English Bible (public domain)",
+    "updatedAt": "2026-07-19T08:57:10.505Z",
+    "createdAt": "2026-07-19T08:57:10.505Z"
+  },
+  {
+    "id": 444,
+    "book": "Mark",
+    "chapter": 16,
+    "verse": "1",
+    "text": "When the Sabbath was past, Mary Magdalene, and Mary the mother of James, and Salome, bought spices, that they might come and anoint him.",
+    "arabicText": null,
+    "arabicSource": null,
+    "version": "World English Bible",
+    "reference": "Mark 16:1",
+    "notes": null,
+    "status": "pending",
+    "sourceAttribution": "bible-api.com — World English Bible (public domain)",
+    "updatedAt": "2026-07-19T08:57:11.657Z",
+    "createdAt": "2026-07-19T08:57:11.657Z"
+  },
+  {
+    "id": 445,
+    "book": "Luke",
+    "chapter": 24,
+    "verse": "10",
+    "text": "Now they were Mary Magdalene, Joanna, and Mary the mother of James. The other women with them told these things to the apostles.",
+    "arabicText": null,
+    "arabicSource": null,
+    "version": "World English Bible",
+    "reference": "Luke 24:10",
+    "notes": null,
+    "status": "pending",
+    "sourceAttribution": "bible-api.com — World English Bible (public domain)",
+    "updatedAt": "2026-07-19T08:57:12.812Z",
+    "createdAt": "2026-07-19T08:57:12.812Z"
+  },
+  {
+    "id": 446,
+    "book": "John",
+    "chapter": 20,
+    "verse": "1",
+    "text": "Now on the first day of the week, Mary Magdalene went early, while it was still dark, to the tomb, and saw the stone taken away from the tomb.",
+    "arabicText": null,
+    "arabicSource": null,
+    "version": "World English Bible",
+    "reference": "John 20:1",
+    "notes": null,
+    "status": "pending",
+    "sourceAttribution": "bible-api.com — World English Bible (public domain)",
+    "updatedAt": "2026-07-19T08:57:14.002Z",
+    "createdAt": "2026-07-19T08:57:14.002Z"
   }
 ]

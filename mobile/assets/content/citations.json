@@ -76,7 +76,7 @@
     "status": "pending",
     "verifiedBy": null,
     "verifiedDate": null,
-    "updatedAt": "2026-07-19T08:30:37.292Z",
+    "updatedAt": "2026-07-19T08:56:45.652Z",
     "createdAt": "2026-07-07T13:31:16.875Z"
   },
   {
@@ -92,7 +92,7 @@
     "status": "pending",
     "verifiedBy": null,
     "verifiedDate": null,
-    "updatedAt": "2026-07-19T08:30:38.266Z",
+    "updatedAt": "2026-07-19T08:56:46.839Z",
     "createdAt": "2026-07-07T13:31:17.704Z"
   },
   {
@@ -2062,5 +2062,53 @@
     "verifiedDate": null,
     "updatedAt": "2026-07-19T08:31:40.602Z",
     "createdAt": "2026-07-19T08:28:49.737Z"
+  },
+  {
+    "id": 130,
+    "citationKey": "draft-source-bart-d-ehrman-jesus-interrupted-revealing-the-hidden-contradictions-in-the-bible",
+    "type": "book",
+    "title": "Jesus, Interrupted: Revealing the Hidden Contradictions in the Bible",
+    "author": "Bart D. Ehrman",
+    "publisher": "HarperOne",
+    "year": 2009,
+    "url": null,
+    "note": "A readable historical-critical presentation of major tensions in the Bible; readers should also consult scholarly responses and primary texts.",
+    "status": "pending",
+    "verifiedBy": null,
+    "verifiedDate": null,
+    "updatedAt": "2026-07-19T08:57:15.139Z",
+    "createdAt": "2026-07-19T08:57:15.139Z"
+  },
+  {
+    "id": 131,
+    "citationKey": "draft-source-craig-l-blomberg-the-historical-reliability-of-the-gospels",
+    "type": "book",
+    "title": "The Historical Reliability of the Gospels",
+    "author": "Craig L. Blomberg",
+    "publisher": "IVP Academic",
+    "year": 2007,
+    "url": null,
+    "note": "An evangelical defense of Gospel reliability that presents harmonizations of alleged discrepancies.",
+    "status": "pending",
+    "verifiedBy": null,
+    "verifiedDate": null,
+    "updatedAt": "2026-07-19T08:57:15.698Z",
+    "createdAt": "2026-07-19T08:57:15.698Z"
+  },
+  {
+    "id": 132,
+    "citationKey": "draft-source-israel-finkelstein-and-neil-asher-silberman-the-bible-unearthed",
+    "type": "book",
+    "title": "The Bible Unearthed",
+    "author": "Israel Finkelstein and Neil Asher Silberman",
+    "publisher": "Free Press",
+    "year": 2001,
+    "url": null,
+    "note": "A widely discussed archaeological and historical-critical study of biblical narratives; its conclusions remain debated among scholars.",
+    "status": "pending",
+    "verifiedBy": null,
+    "verifiedDate": null,
+    "updatedAt": "2026-07-19T08:57:16.233Z",
+    "createdAt": "2026-07-19T08:57:16.233Z"
   }
 ]
