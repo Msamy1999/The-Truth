@@ -13,14 +13,14 @@ import { getResearchTree } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Atheism & Agnosticism Answers in Islam",
   description:
-    "A source-aware draft section for questions from atheists, agnostics, skeptics, and seekers studying Islam.",
+    "Source-aware answers for atheists, agnostics, skeptics, and seekers studying Islam.",
   alternates: {
     canonical: "/atheism-agnosticism",
   },
   openGraph: {
     title: "Atheism & Agnosticism Answers in Islam",
     description:
-      "Organized draft paths for questions about belief, doubt, meaning, evidence, and source standards in Islamic study.",
+      "Carefully sourced articles about belief, doubt, meaning, evidence, morality, science, and the Quran.",
   },
 };
 
@@ -45,19 +45,19 @@ export default async function AtheismAgnosticismPage() {
               <PageHeader
                 eyebrow="Audience path"
                 title="Atheism & Agnosticism Answers in Islam"
-                subtitle="A respectful section for skeptics, agnostics, atheists, and seekers. Future answers should be built from clear definitions, careful reasoning, and verified sources."
+                subtitle="A respectful section for skeptics, agnostics, atheists, and seekers, built from clear definitions, careful reasoning, and verified sources."
               />
               <div className="mt-4 flex flex-wrap gap-2">
                 <Tag>Doubt</Tag>
                 <Tag>Meaning</Tag>
                 <Tag>Evidence</Tag>
-                <Tag>Source pending</Tag>
+                <Tag>Draft</Tag>
               </div>
             </div>
-            <Callout type="note" title="Draft standard">
-              This page is an architecture for future answers. It should not
-              make final claims until arguments, scripture references, and
-              supporting sources are reviewed.
+            <Callout type="note" title="Draft status">
+              All nine foundational articles are written, source-checked, and
+              available to read as drafts. A human editor must advance them
+              through the review and publishing workflow.
             </Callout>
           </div>
         </Container>
@@ -68,13 +68,13 @@ export default async function AtheismAgnosticismPage() {
           <PageHeader
             titleAs="h2"
             eyebrow="Question map"
-            title="Planned topics for future answers"
-            subtitle="Each topic is a placeholder for carefully sourced material and should remain source-pending until reviewed."
+            title="Foundational questions and answers"
+            subtitle="Open any topic below to read the completed article and follow the sequence from God's existence to the Quran's claim to revelation."
           />
           <div className="mt-6">
             <ResearchTree
               title="Atheism & Agnosticism"
-              description="A source-aware outline for skeptical and honest questions, in the order a careful reader might ask them."
+              description="Nine source-aware articles for skeptical and honest questions, arranged in the order a careful reader might ask them."
               nodes={atheismAgnosticismTree}
             />
           </div>

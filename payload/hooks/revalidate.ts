@@ -13,8 +13,20 @@ import type {
  * Next.js request context where revalidatePath is unavailable.
  */
 async function revalidateSite() {
+  // Bulk draft imports run outside a Next.js request and may touch hundreds
+  // of records. They do not need per-record cache invalidation because the
+  // site is restarted after the import; skipping it keeps the SQLite write
+  // transaction short and avoids blocking the local app.
+  if (process.argv.some((argument) => argument.endsWith("payload/import-drafts.ts"))) {
+    return;
+  }
+
   try {
-    const { revalidatePath } = await import("next/cache");
+    const { revalidatePath, revalidateTag } = await import("next/cache");
+    // Content queries are cached across requests; mark them stale whenever an
+    // editor saves so the next visitor gets a fast response while fresh data
+    // is prepared in the background.
+    revalidateTag("library-content", "max");
     revalidatePath("/", "layout");
   } catch {
     // Not running inside Next.js (e.g. seed script) — nothing to revalidate.

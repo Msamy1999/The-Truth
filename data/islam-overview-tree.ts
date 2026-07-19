@@ -1,7 +1,6 @@
 import type { ResearchTreeNode } from "@/types/domain";
 
-/** Flat beginner outline for /islam-overview. */
-export const islamOverviewTree: ResearchTreeNode[] = [
+const startWithGod: ResearchTreeNode[] = [
   {
     id: "who-is-allah",
     title: "Who is Allah?",
@@ -34,20 +33,15 @@ export const islamOverviewTree: ResearchTreeNode[] = [
     href: "/articles/who-is-prophet-muhammad",
     status: "draft",
   },
+];
+
+const beliefs: ResearchTreeNode[] = [
   {
     id: "what-are-the-prophets",
     title: "What are the prophets?",
     description:
       "The shared call of Abraham, Moses, Jesus, Muhammad, and all of God's true messengers.",
     href: "/articles/what-are-the-prophets",
-    status: "draft",
-  },
-  {
-    id: "five-pillars-of-islam",
-    title: "Five pillars of Islam",
-    description:
-      "Shahada, prayer, Zakat, fasting Ramadan, and pilgrimage as the foundations of Muslim practice.",
-    href: "/articles/five-pillars-of-islam",
     status: "draft",
   },
   {
@@ -58,6 +52,17 @@ export const islamOverviewTree: ResearchTreeNode[] = [
     href: "/articles/six-pillars-of-faith",
     status: "draft",
   },
+];
+
+const dailyLife: ResearchTreeNode[] = [
+  {
+    id: "five-pillars-of-islam",
+    title: "Five pillars of Islam",
+    description:
+      "Shahada, prayer, Zakat, fasting Ramadan, and pilgrimage as the foundations of Muslim practice.",
+    href: "/articles/five-pillars-of-islam",
+    status: "draft",
+  },
   {
     id: "worship-and-daily-life",
     title: "Worship and daily life",
@@ -66,12 +71,42 @@ export const islamOverviewTree: ResearchTreeNode[] = [
     href: "/articles/worship-and-daily-life",
     status: "draft",
   },
+];
+
+/** Guided beginner path for /islam-overview. */
+export const islamOverviewTree: ResearchTreeNode[] = [
   {
-    id: "why-islam",
-    title: "Why Islam?",
-    description:
-      "An affirmative invitation to one God, prophetic guidance, the Quran, mercy, and purposeful worship.",
-    href: "/articles/why-islam",
-    status: "draft",
+    id: "start-with-god-and-revelation",
+    title: "Start with God and revelation",
+    description: "God, Tawhid, the Quran, and the Prophet Muhammad ﷺ.",
+    children: startWithGod,
+    defaultOpen: true,
+  },
+  {
+    id: "what-muslims-believe",
+    title: "What Muslims believe",
+    description: "The prophets and the central articles of faith.",
+    children: beliefs,
+  },
+  {
+    id: "how-muslims-live",
+    title: "How Muslims live",
+    description: "The pillars of Islam and worship in ordinary life.",
+    children: dailyLife,
+  },
+  {
+    id: "continue-the-journey",
+    title: "Continue the journey",
+    description: "An affirmative introduction to Islam's message and purpose.",
+    children: [
+      {
+        id: "why-islam",
+        title: "Why Islam?",
+        description:
+          "An affirmative invitation to one God, prophetic guidance, the Quran, mercy, and purposeful worship.",
+        href: "/articles/why-islam",
+        status: "draft",
+      },
+    ],
   },
 ];

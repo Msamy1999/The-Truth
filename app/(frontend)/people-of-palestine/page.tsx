@@ -13,14 +13,14 @@ import { getResearchTree } from "@/lib/content";
 export const metadata: Metadata = {
   title: "People of Palestine",
   description:
-    "A respectful source-aware draft section for future study paths related to the people of Palestine.",
+    "A respectful, source-aware draft section about the people of Palestine, their religious connections, dignity, and careful research.",
   alternates: {
     canonical: "/people-of-palestine",
   },
   openGraph: {
     title: "People of Palestine",
     description:
-      "A careful draft area for future source-backed study, human dignity, history, and practical reading paths.",
+      "A careful, source-aware draft area for study of human dignity, history, religious connection, and practical reading paths.",
   },
 };
 
@@ -45,7 +45,7 @@ export default async function PeopleOfPalestinePage() {
               <PageHeader
                 eyebrow="Human section"
                 title="People of Palestine"
-                subtitle="A respectful section for future source-backed study paths related to the people of Palestine, with careful attention to dignity, context, and verified references."
+                subtitle="A respectful, source-aware draft section about the people of Palestine, with careful attention to dignity, context, and verified references."
               />
               <div className="mt-4 flex flex-wrap gap-2">
                 <Tag>Human dignity</Tag>
@@ -68,13 +68,13 @@ export default async function PeopleOfPalestinePage() {
           <PageHeader
             titleAs="h2"
             eyebrow="Study map"
-            title="Planned topics for careful study"
-            subtitle="These topics are placeholders until source-backed material is written and reviewed. No historical or current claims are made here."
+            title="Draft topics for careful study"
+            subtitle="Each topic opens a source-aware draft article. These are not final or published conclusions and should be read with the stated source limits in mind."
           />
           <div className="mt-6">
             <ResearchTree
               title="People of Palestine"
-              description="A careful, human-centered outline. Historical and current claims will only be added once sources are verified."
+              description="A careful, human-centered draft outline with direct links to each study article."
               nodes={peopleOfPalestineTree}
             />
           </div>

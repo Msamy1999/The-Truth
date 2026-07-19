@@ -1,0 +1,48 @@
+{
+  "slug": "jerusalem-and-al-aqsa",
+  "title": "Jerusalem and Al-Aqsa",
+  "subtitle": "Religious significance, shared attachments, and source-aware study",
+  "category": "religious-history",
+  "audienceLevel": "beginner",
+  "summary": "Jerusalem has profound religious importance for Muslims, Jews, and Christians. This draft explains the Islamic significance of Al-Aqsa while keeping religious tradition, historical evidence, and present-day political claims clearly distinct.",
+  "tags": ["History", "Theology", "Sources"],
+  "sections": [
+    {
+      "sectionId": "beginner-summary",
+      "title": "In Plain Words",
+      "kind": "summary",
+      "body": "Jerusalem is sacred to more than one religious community. For Muslims, Al-Aqsa is connected to the night journey and to the wider prophetic history honoured by Islam. For Jews, the Temple Mount is connected to the biblical temples and Jewish worship. For Christians, Jerusalem is central to the life, crucifixion, and resurrection traditions of Jesus.\n\nRecognising these attachments is not the same as settling every historical or political disagreement. It is the minimum needed to speak about the city accurately and respectfully."
+    },
+    {
+      "sectionId": "what-al-aqsa-means",
+      "title": "What Muslims Mean by Al-Aqsa",
+      "kind": "interpretation",
+      "body": "In common Muslim usage, Al-Aqsa can refer to the mosque building and, more broadly, to the sacred sanctuary compound in Jerusalem. Readers should not assume that every source uses the term in exactly the same architectural or legal sense. A careful article names the source and date, then explains whether it is speaking about a Qur'anic phrase, a mosque building, a sanctuary area, or an administrative institution.\n\nIslamic religious importance is grounded in scripture and tradition; historical details about the development of structures, access, and governance require separately cited historical sources."
+    },
+    {
+      "sectionId": "how-to-study",
+      "title": "How to Study a Shared Sacred City",
+      "kind": "sources",
+      "body": "Use scholarship that distinguishes archaeology, religious tradition, law, and political advocacy. Read writers from more than one community, consult primary texts in reliable editions, and check whether a claim is about an ancient period, a later institution, or a present-day event.\n\nThe city deserves precision. Sweeping statements about who has no connection to Jerusalem are historically and religiously careless, and they make serious conversation impossible."
+    }
+  ],
+  "quranVerses": [],
+  "bibleVerses": [],
+  "relatedSlugs": ["why-palestine-matters-to-muslims", "human-dignity-and-justice", "source-library-for-palestine"],
+  "furtherReading": [
+    {
+      "title": "Jerusalem: The Contested City",
+      "author": "Menachem Klein",
+      "publisher": "New York University Press",
+      "year": 2001,
+      "note": "A scholarly political history of modern Jerusalem; use it for its documented argument rather than as a substitute for primary sources."
+    },
+    {
+      "title": "Jerusalem: A Biography",
+      "author": "Simon Sebag Montefiore",
+      "publisher": "Alfred A. Knopf",
+      "year": 2011,
+      "note": "A broad narrative history useful for orientation; readers should verify individual claims against specialist scholarship."
+    }
+  ]
+}

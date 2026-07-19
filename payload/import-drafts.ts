@@ -13,6 +13,8 @@
  *
  * To import only selected drafts, pass their slugs as positional arguments:
  *   npx tsx payload/import-drafts.ts what-is-tawhid why-islam
+ * Keep selected articles at the draft stage with:
+ *   npx tsx payload/import-drafts.ts --status=draft what-is-tawhid why-islam
  */
 import { readdirSync, readFileSync } from "fs";
 import path from "path";
@@ -117,8 +119,16 @@ function citationMetadataChanged(
 async function main() {
   const payload = await getPayload({ config });
   const allFiles = readdirSync(DRAFTS_DIR).filter((f) => f.endsWith(".json"));
+  const args = process.argv.slice(2);
+  const statusArgument = args.find((value) => value.startsWith("--status="));
+  const articleStatus = statusArgument?.slice("--status=".length) ?? "draft";
+  if (!["draft", "reviewed"].includes(articleStatus)) {
+    throw new Error(`Unsupported import status: ${articleStatus}`);
+  }
   const requestedSlugs = new Set(
-    process.argv.slice(2).map((value) => value.replace(/\.json$/i, "")),
+    args
+      .filter((value) => !value.startsWith("--status="))
+      .map((value) => value.replace(/\.json$/i, "")),
   );
   const files = requestedSlugs.size
     ? allFiles.filter((file) => requestedSlugs.has(file.replace(/\.json$/i, "")))
@@ -316,7 +326,7 @@ async function main() {
       audienceLevel: draft.audienceLevel ?? "beginner",
       summary: draft.summary,
       tags: draft.tags,
-      status: "reviewed",
+      status: articleStatus,
       lastUpdated: new Date().toISOString(),
       sections: draft.sections.map((section) => ({
         sectionId: section.sectionId,
@@ -386,7 +396,7 @@ async function main() {
     }
   }
 
-  console.log("Import complete. Articles are status=reviewed (NOT published).");
+  console.log(`Import complete. Articles are status=${articleStatus} (NOT published).`);
   process.exit(0);
 }
 

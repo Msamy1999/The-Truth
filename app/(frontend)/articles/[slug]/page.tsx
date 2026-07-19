@@ -17,6 +17,30 @@ type ArticlePageProps = {
   }>;
 };
 
+/**
+ * Legacy template records must never replace a researched article. A genuine
+ * comparison needs at least one complete scripture passage before its custom
+ * comparison layout is shown.
+ */
+function hasRenderableComparison(
+  comparison: Awaited<ReturnType<typeof getComparisonArticleBySlug>>,
+) {
+  return Boolean(
+    comparison?.quranVerses.some(
+      (verse) =>
+        verse.surahNumber > 0 &&
+        verse.ayahNumber > 0 &&
+        !verse.arabic.includes("[VERIFIED"),
+    ) ||
+      comparison?.bibleVerses.some(
+        (verse) =>
+          verse.chapter > 0 &&
+          verse.verse !== 0 &&
+          !verse.text.includes("[VERIFIED"),
+      ),
+  );
+}
+
 export async function generateStaticParams() {
   const articles = await getArticles();
   return articles.map((article) => ({
@@ -59,20 +83,25 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     notFound();
   }
 
-  const comparison = await getComparisonArticleBySlug(article.slug);
+  const [comparison, relatedArticles, category] = await Promise.all([
+    getComparisonArticleBySlug(article.slug),
+    getRelatedArticles(article),
+    getCategoryBySlug(article.category),
+  ]);
+  const renderableComparison = hasRenderableComparison(comparison)
+    ? comparison
+    : undefined;
   const citationIds = Array.from(
-    new Set([...article.citations, ...(comparison?.sources ?? [])]),
+    new Set([...article.citations, ...(renderableComparison?.sources ?? [])]),
   );
   const citations = await getCitationsByIds(citationIds);
-  const relatedArticles = await getRelatedArticles(article);
-  const category = await getCategoryBySlug(article.category);
 
-  if (comparison) {
+  if (renderableComparison) {
     return (
       <ComparisonArticleLayout
         article={article}
         category={category}
-        comparison={comparison}
+        comparison={renderableComparison}
         citations={citations}
         relatedArticles={relatedArticles}
       />

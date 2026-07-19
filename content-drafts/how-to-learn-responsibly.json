@@ -1,0 +1,49 @@
+{
+  "slug": "how-to-learn-responsibly",
+  "title": "How to Learn Responsibly About Palestine",
+  "subtitle": "A practical method for sources, images, dates, and uncertainty",
+  "category": "sources",
+  "audienceLevel": "beginner",
+  "summary": "Information about Palestine can be emotionally powerful and rapidly shared. This draft gives a simple method for checking authorship, dates, evidence, imagery, and uncertainty before accepting or passing on a claim.",
+  "tags": ["Sources", "Questions", "History"],
+  "sections": [
+    {
+      "sectionId": "beginner-summary",
+      "title": "In Plain Words",
+      "kind": "summary",
+      "body": "Slow down before sharing. Ask who made the claim, when it was made, what evidence it gives, and whether an independent source confirms it. A true concern for people does not require repeating an unverified claim.\n\nThe same standards should be used for sources that agree with you and sources that do not. That is how a reader protects both truth and human dignity."
+    },
+    {
+      "sectionId": "five-questions",
+      "title": "Five Questions to Ask",
+      "kind": "sources",
+      "body": "First, who is the original source: a witness, an official body, a researcher, or an account repeating someone else? Second, what is the date and location? Third, what evidence is provided, and can it be checked? Fourth, does the wording distinguish fact, allegation, and opinion? Fifth, has a credible independent source confirmed the central claim?\n\nImages and video require extra care. A real image may be old, from another location, cropped, or paired with a false caption. If the original cannot be located, describe it as unverified rather than treating it as proof."
+    },
+    {
+      "sectionId": "reading-across-difference",
+      "title": "Read Across Difference",
+      "kind": "notes",
+      "body": "Read primary documents where possible, then compare historians, legal scholars, human-rights organisations, and reporting organisations with transparent methods. Notice what a source is qualified to establish and what it is not. A devotional text can explain a community's religious attachment; it cannot by itself settle a disputed historical claim.\n\nResponsible learning does not mean pretending every claim has equal evidence. It means stating the evidence, the source's perspective, and any uncertainty plainly."
+    }
+  ],
+  "quranVerses": [],
+  "bibleVerses": [],
+  "relatedSlugs": ["source-library-for-palestine", "human-dignity-and-justice", "who-are-the-people-of-palestine"],
+  "furtherReading": [
+    {
+      "title": "Verification Handbook",
+      "author": "Craig Silverman, editor",
+      "publisher": "European Journalism Centre",
+      "year": 2014,
+      "note": "A practical open handbook on verifying digital content and user-generated material.",
+      "url": "https://verificationhandbook.com/"
+    },
+    {
+      "title": "News Literacy: Helping Students and Teachers Decode Fake News",
+      "author": "Alan C. November",
+      "publisher": "Corwin",
+      "year": 2018,
+      "note": "A practical introduction to evaluating online information; apply its methods alongside subject-specific expertise."
+    }
+  ]
+}

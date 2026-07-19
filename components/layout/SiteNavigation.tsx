@@ -12,38 +12,66 @@ import { cn } from "@/lib/utils";
 
 export function SiteNavigation() {
   const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [isBrowseOpen, setIsBrowseOpen] = useState(false);
 
-  // Close the mobile menu with the Escape key while it is open.
   useEffect(() => {
-    if (!isOpen) {
+    if (!isMobileOpen && !isBrowseOpen) {
       return;
     }
+
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
-        setIsOpen(false);
+        setIsMobileOpen(false);
+        setIsBrowseOpen(false);
       }
     }
+
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen]);
+  }, [isBrowseOpen, isMobileOpen]);
+
+  function closeMenus() {
+    setIsMobileOpen(false);
+    setIsBrowseOpen(false);
+  }
 
   return (
     <>
-      <Container className="flex min-h-16 items-center justify-between gap-3 py-3">
-        <SiteBrand onClick={() => setIsOpen(false)} />
-        <SearchPlaceholder className="hidden max-w-sm flex-1 md:flex" />
-        <div className="flex items-center gap-2">
-          <ThemeToggle />
+      <Container className="flex h-14 items-center gap-3 py-2">
+        <SiteBrand compact onClick={closeMenus} />
+        <SearchPlaceholder className="hidden min-w-0 max-w-md flex-1 sm:flex" />
+        <div className="ml-auto flex items-center gap-2">
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-border bg-card text-foreground transition hover:bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent lg:hidden"
-            aria-controls="mobile-navigation"
-            aria-expanded={isOpen}
-            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-            onClick={() => setIsOpen((current) => !current)}
+            className="hidden h-9 items-center justify-center gap-2 rounded-md border border-border bg-card px-3 text-sm font-semibold text-foreground transition hover:bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent lg:inline-flex"
+            aria-controls="desktop-navigation"
+            aria-expanded={isBrowseOpen}
+            onClick={() => {
+              setIsBrowseOpen((current) => !current);
+              setIsMobileOpen(false);
+            }}
           >
-            {isOpen ? (
+            {isBrowseOpen ? (
+              <X aria-hidden="true" className="h-4 w-4" />
+            ) : (
+              <Menu aria-hidden="true" className="h-4 w-4" />
+            )}
+            Browse
+          </button>
+          <ThemeToggle className="h-9 w-9" />
+          <button
+            type="button"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-card text-foreground transition hover:bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent lg:hidden"
+            aria-controls="mobile-navigation"
+            aria-expanded={isMobileOpen}
+            aria-label={isMobileOpen ? "Close navigation menu" : "Open navigation menu"}
+            onClick={() => {
+              setIsMobileOpen((current) => !current);
+              setIsBrowseOpen(false);
+            }}
+          >
+            {isMobileOpen ? (
               <X aria-hidden="true" className="h-5 w-5" />
             ) : (
               <Menu aria-hidden="true" className="h-5 w-5" />
@@ -52,17 +80,20 @@ export function SiteNavigation() {
         </div>
       </Container>
 
-      <div className="hidden border-t border-border lg:block">
-        <Container className="py-2">
-          <nav
-            aria-label="Primary navigation"
-            className="flex flex-wrap gap-1"
-          >
+      <div
+        id="desktop-navigation"
+        hidden={!isBrowseOpen}
+        className={cn("border-t border-border", isBrowseOpen ? "block" : "hidden")}
+      >
+        <Container className="py-3">
+          <nav aria-label="Primary navigation" className="grid gap-1 sm:grid-cols-2 lg:grid-cols-3">
             {primaryNavItems.map((item) => (
               <HeaderLink
                 key={item.href}
                 href={item.href}
                 active={isPrimaryNavActive(pathname, item.href)}
+                onClick={() => setIsBrowseOpen(false)}
+                panel
               >
                 {item.label}
               </HeaderLink>
@@ -73,21 +104,18 @@ export function SiteNavigation() {
 
       <div
         id="mobile-navigation"
-        hidden={!isOpen}
-        className="border-t border-border lg:hidden"
+        hidden={!isMobileOpen}
+        className={cn("border-t border-border lg:hidden", isMobileOpen ? "block" : "hidden")}
       >
         <Container className="py-4">
-          <SearchPlaceholder
-            className="mb-4 flex md:hidden"
-            onClick={() => setIsOpen(false)}
-          />
+          <SearchPlaceholder className="mb-4 flex sm:hidden" onClick={closeMenus} />
           <nav aria-label="Mobile navigation" className="grid gap-1">
             {primaryNavItems.map((item) => (
               <HeaderLink
                 key={item.href}
                 href={item.href}
                 active={isPrimaryNavActive(pathname, item.href)}
-                onClick={() => setIsOpen(false)}
+                onClick={closeMenus}
                 mobile
               >
                 {item.label}
@@ -116,6 +144,7 @@ type HeaderLinkProps = {
   href: string;
   active?: boolean;
   mobile?: boolean;
+  panel?: boolean;
   onClick?: () => void;
   children: string;
 };
@@ -124,6 +153,7 @@ function HeaderLink({
   href,
   active = false,
   mobile = false,
+  panel = false,
   onClick,
   children,
 }: HeaderLinkProps) {
@@ -136,7 +166,8 @@ function HeaderLink({
         "rounded-md px-3 py-2 text-sm font-medium no-underline transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
         "text-muted-foreground hover:bg-muted hover:text-foreground",
         active && "bg-muted text-foreground",
-        mobile ? "block py-3" : "shrink-0",
+        mobile && "block py-3",
+        panel && "block",
       )}
     >
       {children}

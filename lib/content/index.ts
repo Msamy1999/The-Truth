@@ -8,6 +8,8 @@
  * deliberately stays code-defined in data/ — see CONTENT-EDITING.md.
  */
 import { getPayload, type Payload } from "payload";
+import { unstable_cache } from "next/cache";
+import { cache } from "react";
 import config from "@payload-config";
 import { atheismAgnosticismTree } from "@/data/atheism-agnosticism-tree";
 import {
@@ -30,7 +32,6 @@ import type {
   BibleDisplayVerse,
   CategorySlug,
   Citation,
-  ComparisonArticle,
   GlossaryTerm,
   QuranDisplayVerse,
   ResearchTreeNode,
@@ -44,6 +45,18 @@ import type {
 // ---------------------------------------------------------------------------
 
 let payloadPromise: Promise<Payload> | null = null;
+
+/**
+ * Every public page reads the same editorial records. Cache those database
+ * reads across requests; Payload's content hooks invalidate this tag whenever
+ * an editor saves or deletes content.
+ */
+export const CONTENT_CACHE_TAG = "library-content";
+
+const contentCacheOptions: { tags: string[]; revalidate: false } = {
+  tags: [CONTENT_CACHE_TAG],
+  revalidate: false,
+};
 
 function getClient(): Promise<Payload> {
   payloadPromise ??= getPayload({ config });
@@ -212,18 +225,112 @@ export type ResearchTreeSection =
   | "people-of-palestine";
 
 function composeIslamChristianityTree(): ResearchTreeNode[] {
-  return islamChristianityBranches.map(({ slug, children, defaultOpen }) => {
-    const category = findCategory(slug);
+  const branchBySlug = new Map(
+    islamChristianityBranches.map((branch) => [branch.slug, branch]),
+  );
 
-    return {
-      id: slug,
-      title: category.title,
-      description: category.description,
-      href: category.href,
-      defaultOpen,
-      children,
-    };
+  const topicsFor = (slug: CategorySlug): ResearchTreeNode[] =>
+    branchBySlug.get(slug)?.children ?? [];
+
+  const withoutArticle = (nodes: ResearchTreeNode[], href: string) =>
+    nodes.filter((node) => node.href !== href);
+
+  const folder = (
+    id: string,
+    title: string,
+    description: string,
+    children: ResearchTreeNode[],
+    href?: string,
+    defaultOpen = false,
+  ): ResearchTreeNode => ({
+    id,
+    title,
+    description,
+    href,
+    children,
+    defaultOpen,
   });
+
+  const jesusTopics = withoutArticle(
+    withoutArticle(topicsFor("jesus-in-islam-and-christianity"), "/articles/who-is-jesus"),
+    "/articles/incarnation-explained",
+  );
+  const theologyTopics = withoutArticle(
+    topicsFor("tawhid-and-the-trinity"),
+    "/articles/did-jesus-worship-god",
+  );
+  const scriptureTopics = withoutArticle(
+    topicsFor("preservation"),
+    "/articles/gospel-authorship-and-dating",
+  );
+  const difficultQuestionTopics = withoutArticle(
+    topicsFor("difficult-questions"),
+    "/articles/original-sin-vs-personal-responsibility",
+  );
+
+  return [
+    folder(
+      "comparison-start",
+      "Start with the main questions",
+      "The core questions readers usually need before moving into deeper comparison.",
+      topicsFor("the-quran-and-the-bible"),
+      "/the-quran-and-the-bible",
+      true,
+    ),
+    folder(
+      "jesus-and-god",
+      "Jesus and the nature of God",
+      "Study Jesus, Tawhid, the Trinity, worship, and the Incarnation in one connected path.",
+      [...jesusTopics, ...theologyTopics],
+      "/jesus-in-islam-and-christianity",
+    ),
+    folder(
+      "scripture-and-preservation",
+      "Scripture, transmission, and preservation",
+      "Questions about revelation, manuscripts, compilation, canon, and textual history.",
+      scriptureTopics,
+      "/preservation",
+    ),
+    folder(
+      "history-and-evidence",
+      "History and historical evidence",
+      "Early Christianity and Islam alongside historical and archaeological study.",
+      [
+        ...topicsFor("religious-history"),
+        ...topicsFor("historical-evidence"),
+      ],
+      "/religious-history",
+    ),
+    folder(
+      "salvation-ethics-and-society",
+      "Salvation, ethics, and society",
+      "Purpose, sin, forgiveness, final judgment, conflict, justice, and social responsibility.",
+      [
+        ...topicsFor("salvation-and-purpose-of-life"),
+        ...topicsFor("war-and-violence"),
+      ],
+    ),
+    folder(
+      "women",
+      "Women",
+      "A dedicated study branch for women, family, dignity, and religious interpretation.",
+      topicsFor("women"),
+      "/women",
+    ),
+    folder(
+      "prophecy-and-natural-world",
+      "Prophecy, science, and the natural world",
+      "Evidence claims that need especially careful interpretation and sourcing.",
+      [...topicsFor("prophecies"), ...topicsFor("scientific-signs")],
+    ),
+    folder(
+      "contradictions-and-difficult-questions",
+      "Contradictions and difficult questions",
+      "A separate space for hard passages, apparent contradictions, and theological objections.",
+      difficultQuestionTopics,
+      "/difficult-questions",
+    ),
+  ];
 }
 
 export async function getResearchTree(
@@ -241,6 +348,86 @@ export async function getResearchTree(
   }
 }
 
+/** Complete, navigable map shown on the landing page. */
+export async function getFullLibraryTree(): Promise<ResearchTreeNode[]> {
+  return [
+    {
+      id: "learn-islam",
+      title: "Learn Islam",
+      description: "Foundations, belief, worship, and why Islam.",
+      href: "/islam-overview",
+      tag: "Start here",
+      defaultOpen: true,
+      children: islamOverviewTree,
+    },
+    {
+      id: "islam-christianity",
+      title: "Islam & Christianity",
+      description:
+        "Jesus, scripture, preservation, theology, history, and difficult questions.",
+      href: "/islam-christianity",
+      tag: "Compare",
+      defaultOpen: true,
+      // Keep the complete map available without opening 92 study topics at once.
+      children: composeIslamChristianityTree().map((branch) => ({
+        ...branch,
+        defaultOpen: false,
+      })),
+    },
+    {
+      id: "atheism-agnosticism",
+      title: "Atheism & Agnosticism",
+      description: "A guided sequence on belief, doubt, meaning, and revelation.",
+      href: "/atheism-agnosticism",
+      tag: "Questions",
+      defaultOpen: true,
+      children: atheismAgnosticismTree,
+    },
+    {
+      id: "people-of-palestine",
+      title: "People of Palestine",
+      description: "Human-centred, source-aware draft study topics.",
+      href: "/people-of-palestine",
+      tag: "Drafts",
+      status: "draft",
+      defaultOpen: true,
+      children: peopleOfPalestineTree,
+    },
+    {
+      id: "research-tools",
+      title: "Research tools",
+      description: "Definitions, source standards, and beginner questions.",
+      defaultOpen: true,
+      children: [
+        {
+          id: "method",
+          title: "How we study",
+          description: "The library's source, correction, and comparison standards.",
+          href: "/method",
+        },
+        {
+          id: "common-questions",
+          title: "Common Questions",
+          description: "Short answers and links to deeper study.",
+          href: "/questions",
+        },
+        {
+          id: "glossary",
+          title: "Glossary",
+          description: "Definitions for Arabic, theological, and historical terms.",
+          href: "/glossary",
+        },
+        {
+          id: "sources",
+          title: "Source Library",
+          description: "Translations, primary texts, and citation status.",
+          href: "/sources",
+        },
+      ],
+    },
+  ];
+}
+
 // ---------------------------------------------------------------------------
 // Articles (Payload-backed)
 // ---------------------------------------------------------------------------
@@ -254,61 +441,106 @@ export type GetArticlesOptions = {
   includeDrafts?: boolean;
 };
 
+const getCachedArticleDocs = unstable_cache(
+  async (includeDrafts: boolean) => {
+    const payload = await getClient();
+
+    const result = await payload.find({
+      collection: "articles",
+      where: includeDrafts ? {} : { status: { equals: "published" } },
+      sort: "createdAt",
+      pagination: false,
+      depth: 1,
+    });
+
+    return result.docs;
+  },
+  ["article-list"],
+  contentCacheOptions,
+);
+
 export async function getArticles(
   options: GetArticlesOptions = {},
 ): Promise<Article[]> {
   const { includeDrafts = true } = options;
-  const payload = await getClient();
 
-  const result = await payload.find({
-    collection: "articles",
-    where: includeDrafts ? {} : { status: { equals: "published" } },
-    sort: "createdAt",
-    pagination: false,
-    depth: 1,
-  });
-
-  return result.docs.map((doc) => mapArticle(doc as unknown as ArticleDoc));
+  return (await getCachedArticleDocs(includeDrafts)).map((doc) =>
+    mapArticle(doc as unknown as ArticleDoc),
+  );
 }
+
+const getCachedArticlesByCategory = unstable_cache(
+  async (category: CategorySlug, includeDrafts: boolean) => {
+    const payload = await getClient();
+
+    const result = await payload.find({
+      collection: "articles",
+      where: {
+        and: [
+          { category: { equals: category } },
+          ...(includeDrafts ? [] : [{ status: { equals: "published" } }]),
+        ],
+      },
+      sort: "createdAt",
+      pagination: false,
+      depth: 1,
+    });
+
+    return result.docs;
+  },
+  ["article-list-by-category"],
+  contentCacheOptions,
+);
 
 export async function getArticlesByCategory(
   category: CategorySlug,
   options: GetArticlesOptions = {},
 ): Promise<Article[]> {
   const { includeDrafts = true } = options;
-  const payload = await getClient();
 
-  const result = await payload.find({
-    collection: "articles",
-    where: {
-      and: [
-        { category: { equals: category } },
-        ...(includeDrafts ? [] : [{ status: { equals: "published" } }]),
-      ],
-    },
-    sort: "createdAt",
-    pagination: false,
-    depth: 1,
-  });
-
-  return result.docs.map((doc) => mapArticle(doc as unknown as ArticleDoc));
+  return (await getCachedArticlesByCategory(category, includeDrafts)).map((doc) =>
+    mapArticle(doc as unknown as ArticleDoc),
+  );
 }
 
-export async function getArticleBySlug(
-  slug: string,
-): Promise<Article | undefined> {
-  const payload = await getClient();
+const getCachedArticleDocBySlug = unstable_cache(
+  async (slug: string) => {
+    const payload = await getClient();
 
-  const result = await payload.find({
-    collection: "articles",
-    where: { slug: { equals: slug } },
-    limit: 1,
-    depth: 1,
-  });
+    const result = await payload.find({
+      collection: "articles",
+      where: { slug: { equals: slug } },
+      limit: 1,
+      depth: 1,
+    });
 
-  const doc = result.docs[0];
+    return result.docs[0] ?? null;
+  },
+  ["article-by-slug"],
+  contentCacheOptions,
+);
+
+// React memoisation also avoids fetching an article twice for its page and metadata.
+export const getArticleBySlug = cache(async (slug: string) => {
+  const doc = await getCachedArticleDocBySlug(slug);
   return doc ? mapArticle(doc as unknown as ArticleDoc) : undefined;
-}
+});
+
+const getCachedRelatedArticleDocs = unstable_cache(
+  async (slugs: string[]) => {
+    const payload = await getClient();
+    const result = await payload.find({
+      collection: "articles",
+      where: { slug: { in: slugs } },
+      pagination: false,
+      depth: 1,
+    });
+
+    return result.docs;
+  },
+  ["related-articles"],
+  contentCacheOptions,
+);
 
 export async function getRelatedArticles(
   articleOrSlug: Article | string,
@@ -322,16 +554,12 @@ export async function getRelatedArticles(
     return [];
   }
 
-  const payload = await getClient();
-  const result = await payload.find({
-    collection: "articles",
-    where: { slug: { in: article.relatedArticles } },
-    pagination: false,
-    depth: 1,
-  });
+  const docs = await getCachedRelatedArticleDocs(
+    [...article.relatedArticles].sort(),
+  );
 
   const bySlug = new Map(
-    result.docs.map((doc) => {
+    docs.map((doc) => {
       const mapped = mapArticle(doc as unknown as ArticleDoc);
       return [mapped.slug, mapped] as const;
     }),
@@ -347,21 +575,35 @@ export async function getRelatedArticles(
 // Citations (Payload-backed)
 // ---------------------------------------------------------------------------
 
+const getCachedCitationDocs = unstable_cache(
+  async (ids: string[]) => {
+    if (ids.length === 0) {
+      return [];
+    }
+
+    const payload = await getClient();
+    const result = await payload.find({
+      collection: "citations",
+      where: { citationKey: { in: ids } },
+      pagination: false,
+      depth: 0,
+    });
+
+    return result.docs;
+  },
+  ["citations-by-key"],
+  contentCacheOptions,
+);
+
 export async function getCitationsByIds(ids: string[]): Promise<Citation[]> {
   if (ids.length === 0) {
     return [];
   }
 
-  const payload = await getClient();
-  const result = await payload.find({
-    collection: "citations",
-    where: { citationKey: { in: ids } },
-    pagination: false,
-    depth: 0,
-  });
+  const docs = await getCachedCitationDocs([...ids].sort());
 
   const byKey = new Map(
-    result.docs.map((doc) => {
+    docs.map((doc) => {
       const mapped = mapCitation(doc as unknown as CitationDoc);
       return [mapped.id, mapped] as const;
     }),
@@ -431,19 +673,25 @@ function mapBibleVerse(doc: BibleVerseDoc): BibleDisplayVerse {
   };
 }
 
-export async function getComparisonArticleBySlug(
-  slug: string,
-): Promise<ComparisonArticle | undefined> {
-  const payload = await getClient();
+const getCachedComparisonArticleDoc = unstable_cache(
+  async (slug: string) => {
+    const payload = await getClient();
 
-  const result = await payload.find({
-    collection: "comparison-articles",
-    where: { slug: { equals: slug } },
-    limit: 1,
-    depth: 1,
-  });
+    const result = await payload.find({
+      collection: "comparison-articles",
+      where: { slug: { equals: slug } },
+      limit: 1,
+      depth: 1,
+    });
 
-  const doc = result.docs[0] as
+    return result.docs[0] ?? null;
+  },
+  ["comparison-article-by-slug"],
+  contentCacheOptions,
+);
+
+export const getComparisonArticleBySlug = cache(async (slug: string) => {
+  const doc = (await getCachedComparisonArticleDoc(slug)) as
     | undefined
     | {
         slug: string;
@@ -495,26 +743,35 @@ export async function getComparisonArticleBySlug(
     sources: citationKeys(doc.sources),
     relatedTopics: (doc.relatedTopics ?? []).map((item) => item.topic),
   };
-}
+});
 
 // ---------------------------------------------------------------------------
 // Glossary (Payload-backed)
 // ---------------------------------------------------------------------------
 
+const getCachedGlossaryDocs = unstable_cache(
+  async (category: TopicTag | null) => {
+    const payload = await getClient();
+    const result = await payload.find({
+      collection: "glossary-terms",
+      where: category ? { category: { equals: category } } : {},
+      sort: "createdAt",
+      pagination: false,
+      depth: 1,
+    });
+
+    return result.docs;
+  },
+  ["glossary-terms"],
+  contentCacheOptions,
+);
+
 export async function getGlossaryTerms(
   category?: TopicTag,
 ): Promise<GlossaryTerm[]> {
-  const payload = await getClient();
+  const docs = await getCachedGlossaryDocs(category ?? null);
 
-  const result = await payload.find({
-    collection: "glossary-terms",
-    where: category ? { category: { equals: category } } : {},
-    sort: "createdAt",
-    pagination: false,
-    depth: 1,
-  });
-
-  return result.docs.map((doc) => {
+  return docs.map((doc) => {
     const record = doc as unknown as {
       term: string;
       pronunciation?: string | null;
@@ -547,33 +804,41 @@ export async function getGlossaryTerms(
 // Source library (Payload-backed)
 // ---------------------------------------------------------------------------
 
+const getCachedSourceLibraryDocs = unstable_cache(
+  async () => {
+    const payload = await getClient();
+    const [categoriesResult, itemsResult] = await Promise.all([
+      payload.find({
+        collection: "source-library-categories",
+        sort: "order",
+        pagination: false,
+        depth: 0,
+      }),
+      payload.find({
+        collection: "source-library-items",
+        sort: "createdAt",
+        pagination: false,
+        depth: 0,
+      }),
+    ]);
+
+    return { categories: categoriesResult.docs, items: itemsResult.docs };
+  },
+  ["source-library"],
+  contentCacheOptions,
+);
+
 export async function getSourceLibraryCategories(): Promise<
   SourceLibraryCategory[]
 > {
-  const payload = await getClient();
-
-  const [categoriesResult, itemsResult] = await Promise.all([
-    payload.find({
-      collection: "source-library-categories",
-      sort: "order",
-      pagination: false,
-      depth: 0,
-    }),
-    payload.find({
-      collection: "source-library-items",
-      sort: "createdAt",
-      pagination: false,
-      depth: 0,
-    }),
-  ]);
-
-  const categories = categoriesResult.docs as unknown as {
+  const sourceLibrary = await getCachedSourceLibraryDocs();
+  const categories = sourceLibrary.categories as unknown as {
     id: string | number;
     title: string;
     description: string;
   }[];
 
-  const items = itemsResult.docs as unknown as {
+  const items = sourceLibrary.items as unknown as {
     id: string | number;
     title: string;
     type: Citation["type"];

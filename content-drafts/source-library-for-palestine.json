@@ -1,0 +1,55 @@
+{
+  "slug": "source-library-for-palestine",
+  "title": "Source Library for Palestine",
+  "subtitle": "A reading map for primary texts, scholarship, law, and responsible reporting",
+  "category": "sources",
+  "audienceLevel": "beginner",
+  "summary": "There is no single neutral source that can answer every question about Palestine. This draft reading map explains what different source types can and cannot establish, so readers can build a careful and balanced research process.",
+  "tags": ["Sources", "History", "Questions"],
+  "sections": [
+    {
+      "sectionId": "beginner-summary",
+      "title": "In Plain Words",
+      "kind": "summary",
+      "body": "Use more than one type of source. Primary documents show what an institution or person said; they do not automatically prove that every claim in the document is correct. Scholarly books can explain context; they still have arguments and limits. Reporting can document recent events; it must be dated and checked.\n\nThe strongest reading list tells you what each item is for instead of treating every link as equal evidence."
+    },
+    {
+      "sectionId": "source-types",
+      "title": "Build a Balanced Source Set",
+      "kind": "sources",
+      "body": "Begin with primary texts in reliable editions: religious texts, legal documents, census records, archives, and official statements. Add peer-reviewed scholarship and books from established academic presses for historical context. For contemporary developments, prefer reporting that gives dates, named sources, corrections, and a clear distinction between verified facts and allegations.\n\nRead more than one scholarly perspective, especially where historians disagree. A source's political or religious perspective should be named rather than hidden, but perspective alone does not decide whether a specific piece of evidence is sound."
+    },
+    {
+      "sectionId": "using-this-library",
+      "title": "How to Use This Library",
+      "kind": "notes",
+      "body": "This draft list is an entry point, not a certification that every source is complete or impartial. Follow links to the original publisher where possible, retain publication details, and record the page or section supporting a claim. For a high-stakes legal, medical, safety, or current-affairs question, consult qualified professionals and the most recent primary material.\n\nIf a source cannot be checked, say so. Leaving a question open is more honest than filling the gap with certainty."
+    }
+  ],
+  "quranVerses": [],
+  "bibleVerses": [],
+  "relatedSlugs": ["how-to-learn-responsibly", "jerusalem-and-al-aqsa", "who-are-the-people-of-palestine"],
+  "furtherReading": [
+    {
+      "title": "The Question of Palestine",
+      "author": "United Nations",
+      "type": "primaryText",
+      "note": "United Nations portal collecting documents and background material; primary institutional sources should be read with their authorship and mandate in mind.",
+      "url": "https://www.un.org/unispal/"
+    },
+    {
+      "title": "The Palestine Question in Maps: 1878-2013",
+      "author": "P. R. Kumaraswamy",
+      "publisher": "Routledge",
+      "year": 2015,
+      "note": "A map-based historical reference; maps should be read with their dates, makers, and stated purposes."
+    },
+    {
+      "title": "Palestine and the Arab-Israeli Conflict: A History with Documents",
+      "author": "Charles D. Smith",
+      "publisher": "Bedford/St. Martin's",
+      "year": 2016,
+      "note": "A widely assigned historical survey with documents; compare it with specialist works for particular periods."
+    }
+  ]
+}

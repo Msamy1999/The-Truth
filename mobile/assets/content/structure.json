@@ -762,67 +762,96 @@
   "trees": {
     "islam-overview": [
       {
-        "id": "who-is-allah",
-        "title": "Who is Allah?",
-        "description": "The beautiful names, God's transcendence, and why Islam insists on worshipping Him alone.",
-        "href": "/articles/who-is-allah",
-        "status": "draft"
+        "id": "start-with-god-and-revelation",
+        "title": "Start with God and revelation",
+        "description": "God, Tawhid, the Quran, and the Prophet Muhammad ﷺ.",
+        "children": [
+          {
+            "id": "who-is-allah",
+            "title": "Who is Allah?",
+            "description": "The beautiful names, God's transcendence, and why Islam insists on worshipping Him alone.",
+            "href": "/articles/who-is-allah",
+            "status": "draft"
+          },
+          {
+            "id": "what-is-tawhid",
+            "title": "What is Tawhid?",
+            "description": "The oneness of God, the meaning of worship, and why associating partners with Him is rejected.",
+            "href": "/articles/what-is-tawhid",
+            "status": "draft"
+          },
+          {
+            "id": "what-is-the-quran",
+            "title": "What is the Quran?",
+            "description": "Revelation through Gabriel, the Quran's 114 surahs, its guidance, and its preservation claim.",
+            "href": "/articles/what-is-the-quran",
+            "status": "draft"
+          },
+          {
+            "id": "who-is-prophet-muhammad",
+            "title": "Who is Prophet Muhammad ﷺ?",
+            "description": "A beginner biography of Islam's final prophet, from Mecca and the first revelation to Medina.",
+            "href": "/articles/who-is-prophet-muhammad",
+            "status": "draft"
+          }
+        ],
+        "defaultOpen": true
       },
       {
-        "id": "what-is-tawhid",
-        "title": "What is Tawhid?",
-        "description": "The oneness of God, the meaning of worship, and why associating partners with Him is rejected.",
-        "href": "/articles/what-is-tawhid",
-        "status": "draft"
+        "id": "what-muslims-believe",
+        "title": "What Muslims believe",
+        "description": "The prophets and the central articles of faith.",
+        "children": [
+          {
+            "id": "what-are-the-prophets",
+            "title": "What are the prophets?",
+            "description": "The shared call of Abraham, Moses, Jesus, Muhammad, and all of God's true messengers.",
+            "href": "/articles/what-are-the-prophets",
+            "status": "draft"
+          },
+          {
+            "id": "six-pillars-of-faith",
+            "title": "Six pillars of faith",
+            "description": "Belief in God, angels, revealed books, prophets, the Last Day, and divine decree.",
+            "href": "/articles/six-pillars-of-faith",
+            "status": "draft"
+          }
+        ]
       },
       {
-        "id": "what-is-the-quran",
-        "title": "What is the Quran?",
-        "description": "Revelation through Gabriel, the Quran's 114 surahs, its guidance, and its preservation claim.",
-        "href": "/articles/what-is-the-quran",
-        "status": "draft"
+        "id": "how-muslims-live",
+        "title": "How Muslims live",
+        "description": "The pillars of Islam and worship in ordinary life.",
+        "children": [
+          {
+            "id": "five-pillars-of-islam",
+            "title": "Five pillars of Islam",
+            "description": "Shahada, prayer, Zakat, fasting Ramadan, and pilgrimage as the foundations of Muslim practice.",
+            "href": "/articles/five-pillars-of-islam",
+            "status": "draft"
+          },
+          {
+            "id": "worship-and-daily-life",
+            "title": "Worship and daily life",
+            "description": "How prayer, remembrance, work, family care, and ethical character shape an ordinary Muslim day.",
+            "href": "/articles/worship-and-daily-life",
+            "status": "draft"
+          }
+        ]
       },
       {
-        "id": "who-is-prophet-muhammad",
-        "title": "Who is Prophet Muhammad ﷺ?",
-        "description": "A beginner biography of Islam's final prophet, from Mecca and the first revelation to Medina.",
-        "href": "/articles/who-is-prophet-muhammad",
-        "status": "draft"
-      },
-      {
-        "id": "what-are-the-prophets",
-        "title": "What are the prophets?",
-        "description": "The shared call of Abraham, Moses, Jesus, Muhammad, and all of God's true messengers.",
-        "href": "/articles/what-are-the-prophets",
-        "status": "draft"
-      },
-      {
-        "id": "five-pillars-of-islam",
-        "title": "Five pillars of Islam",
-        "description": "Shahada, prayer, Zakat, fasting Ramadan, and pilgrimage as the foundations of Muslim practice.",
-        "href": "/articles/five-pillars-of-islam",
-        "status": "draft"
-      },
-      {
-        "id": "six-pillars-of-faith",
-        "title": "Six pillars of faith",
-        "description": "Belief in God, angels, revealed books, prophets, the Last Day, and divine decree.",
-        "href": "/articles/six-pillars-of-faith",
-        "status": "draft"
-      },
-      {
-        "id": "worship-and-daily-life",
-        "title": "Worship and daily life",
-        "description": "How prayer, remembrance, work, family care, and ethical character shape an ordinary Muslim day.",
-        "href": "/articles/worship-and-daily-life",
-        "status": "draft"
-      },
-      {
-        "id": "why-islam",
-        "title": "Why Islam?",
-        "description": "An affirmative invitation to one God, prophetic guidance, the Quran, mercy, and purposeful worship.",
-        "href": "/articles/why-islam",
-        "status": "draft"
+        "id": "continue-the-journey",
+        "title": "Continue the journey",
+        "description": "An affirmative introduction to Islam's message and purpose.",
+        "children": [
+          {
+            "id": "why-islam",
+            "title": "Why Islam?",
+            "description": "An affirmative invitation to one God, prophetic guidance, the Quran, mercy, and purposeful worship.",
+            "href": "/articles/why-islam",
+            "status": "draft"
+          }
+        ]
       }
     ],
     "islam-christianity": [
@@ -1479,97 +1508,180 @@
     ],
     "atheism-agnosticism": [
       {
-        "id": "does-god-exist",
-        "title": "Does God exist?",
-        "description": "Planned topic on classical and contemporary arguments for a creator, with sources to be added before claims are made.",
-        "tag": "Planned"
+        "id": "is-belief-reasonable",
+        "title": "Is belief reasonable?",
+        "description": "From God's existence to the possibility of revelation and Islam's claim.",
+        "children": [
+          {
+            "id": "does-god-exist",
+            "title": "Does God exist?",
+            "description": "A cumulative philosophical case from contingency, cosmic origins, order, and consciousness, with the strongest objections kept in view.",
+            "href": "/articles/does-god-exist",
+            "status": "draft",
+            "tag": "Foundation"
+          },
+          {
+            "id": "why-believe-in-revelation",
+            "title": "Why believe in revelation?",
+            "description": "Why divine communication is a coherent possibility and how a claimed revelation can be tested without circular reasoning.",
+            "href": "/articles/why-believe-in-revelation",
+            "status": "draft",
+            "tag": "Bridge"
+          },
+          {
+            "id": "why-islam-not-just-a-creator",
+            "title": "Why Islam and not just \"a creator\"?",
+            "description": "A step-by-step bridge from generic theism to Tawhid, prophecy, Muhammad, the Quran, and a lived response.",
+            "href": "/articles/why-islam-not-just-a-creator",
+            "status": "draft",
+            "tag": "Bridge"
+          }
+        ],
+        "defaultOpen": true
       },
       {
-        "id": "why-believe-in-revelation",
-        "title": "Why believe in revelation?",
-        "description": "Planned topic on why a creator would communicate through revelation rather than leaving humanity to guess.",
-        "tag": "Planned"
+        "id": "honest-objections",
+        "title": "Honest objections",
+        "description": "Suffering and morality considered without caricaturing nonbelief.",
+        "children": [
+          {
+            "id": "the-problem-of-evil",
+            "title": "The problem of evil",
+            "description": "Logical, evidential, and personal dimensions of suffering, considered through freedom, natural order, test, and final justice.",
+            "href": "/articles/the-problem-of-evil",
+            "status": "draft",
+            "tag": "Objection"
+          },
+          {
+            "id": "morality-without-god",
+            "title": "Morality without God",
+            "description": "A fair comparison of secular and theistic moral grounding that never confuses nonbelief with lack of character.",
+            "href": "/articles/morality-without-god",
+            "status": "draft",
+            "tag": "Ethics"
+          }
+        ]
       },
       {
-        "id": "why-islam-not-just-a-creator",
-        "title": "Why Islam and not just \"a creator\"?",
-        "description": "Planned topic bridging belief in a creator to the specific claims of Islam.",
-        "tag": "Planned"
+        "id": "meaning-mind-and-science",
+        "title": "Meaning, mind, and science",
+        "description": "Purpose, consciousness, and the relationship between science and faith.",
+        "children": [
+          {
+            "id": "purpose-of-life",
+            "title": "Purpose of life",
+            "description": "Created meaning and the Islamic claim of objective purpose through worship, stewardship, trial, and return to God.",
+            "href": "/articles/purpose-of-life-atheism-agnosticism",
+            "status": "draft",
+            "tag": "Purpose"
+          },
+          {
+            "id": "consciousness-and-the-soul",
+            "title": "Consciousness and the soul",
+            "description": "What neuroscience establishes, what the hard problem asks, and what Islam affirms without pretending the soul has been scientifically detected.",
+            "href": "/articles/consciousness-and-the-soul",
+            "status": "draft",
+            "tag": "Mind"
+          },
+          {
+            "id": "science-and-religion",
+            "title": "Science and religion",
+            "description": "A careful framework for naturalism, interpretation, evolution, miracles, and scientific claims without forced conflict or harmony.",
+            "href": "/articles/science-and-religion",
+            "status": "draft",
+            "tag": "Science"
+          }
+        ]
       },
       {
-        "id": "the-problem-of-evil",
-        "title": "The problem of evil",
-        "description": "Planned topic addressing suffering, free will, and divine justice with careful framing.",
-        "tag": "Planned"
-      },
-      {
-        "id": "morality-without-god",
-        "title": "Morality without God",
-        "description": "Planned topic examining the grounding of moral obligation with and without a creator.",
-        "tag": "Planned"
-      },
-      {
-        "id": "purpose-of-life",
-        "title": "Purpose of life",
-        "description": "Planned topic on meaning, purpose, and accountability from an Islamic perspective.",
-        "tag": "Planned"
-      },
-      {
-        "id": "consciousness-and-the-soul",
-        "title": "Consciousness and the soul",
-        "description": "Planned topic on the soul, consciousness, and the limits of purely physical explanations.",
-        "tag": "Planned"
-      },
-      {
-        "id": "science-and-religion",
-        "title": "Science and religion",
-        "description": "Planned topic on how scientific inquiry and revealed guidance relate, with cautious, source-checked claims.",
-        "tag": "Planned"
-      },
-      {
-        "id": "why-the-quran",
-        "title": "Why the Quran?",
-        "description": "Planned closing topic on why the Quran is presented as the preserved, final revelation.",
-        "tag": "Planned"
+        "id": "the-qurans-claim",
+        "title": "The Quran's claim",
+        "description": "A final study of the Quran's message, transmission, and guidance.",
+        "children": [
+          {
+            "id": "why-the-quran",
+            "title": "Why the Quran?",
+            "description": "A cumulative closing case from message, Arabic form, transmission, historical emergence, and lived guidance.",
+            "href": "/articles/why-the-quran",
+            "status": "draft",
+            "tag": "Conclusion"
+          }
+        ]
       }
     ],
     "people-of-palestine": [
       {
-        "id": "who-are-the-people-of-palestine",
-        "title": "Who are the people of Palestine?",
-        "description": "Planned introduction focused on human dignity, community, and daily life rather than politics or slogans.",
-        "tag": "Planned"
-      },
-      {
-        "id": "why-palestine-matters-to-muslims",
-        "title": "Why Palestine matters to Muslims",
-        "description": "Planned topic on the religious, historical, and human ties Muslims feel toward Palestine, written carefully and without inflammatory language.",
-        "tag": "Planned"
-      },
-      {
-        "id": "jerusalem-and-al-aqsa",
-        "title": "Jerusalem and Al-Aqsa",
-        "description": "Planned topic on the significance of Jerusalem and Al-Aqsa Mosque, with historical claims added only after verification.",
-        "tag": "Planned"
+        "id": "understanding-people-and-place",
+        "title": "Understanding people and place",
+        "description": "Draft introductions centred on people, place, and religious connection.",
+        "status": "draft",
+        "defaultOpen": true,
+        "children": [
+          {
+            "id": "who-are-the-people-of-palestine",
+            "title": "Who are the people of Palestine?",
+            "description": "A draft introduction focused on human dignity, community, and daily life rather than politics or slogans.",
+            "href": "/articles/who-are-the-people-of-palestine",
+            "tag": "Foundation",
+            "status": "draft"
+          },
+          {
+            "id": "why-palestine-matters-to-muslims",
+            "title": "Why Palestine matters to Muslims",
+            "description": "A draft on the religious, historical, and human ties Muslims feel toward Palestine, written carefully and without inflammatory language.",
+            "href": "/articles/why-palestine-matters-to-muslims",
+            "tag": "Foundation",
+            "status": "draft"
+          },
+          {
+            "id": "jerusalem-and-al-aqsa",
+            "title": "Jerusalem and Al-Aqsa",
+            "description": "A draft on the significance of Jerusalem and Al-Aqsa Mosque, with historical claims clearly distinguished from religious belief.",
+            "href": "/articles/jerusalem-and-al-aqsa",
+            "tag": "History",
+            "status": "draft"
+          }
+        ]
       },
       {
         "id": "human-dignity-and-justice",
         "title": "Human dignity and justice",
-        "description": "Planned reflection on dignity, compassion, and justice as shared human and Islamic values.",
-        "tag": "Planned"
+        "description": "A draft reflection on dignity, compassion, and justice.",
+        "status": "draft",
+        "children": [
+          {
+            "id": "human-dignity-and-justice-topic",
+            "title": "Human dignity and justice",
+            "description": "A draft reflection on dignity, compassion, and justice as shared human and Islamic values.",
+            "href": "/articles/human-dignity-and-justice",
+            "tag": "Ethics",
+            "status": "draft"
+          }
+        ]
       },
       {
-        "id": "how-to-learn-responsibly",
-        "title": "How to learn responsibly",
-        "description": "Planned guide for evaluating sources, avoiding propaganda, and reading history and news carefully.",
-        "tag": "Planned"
-      },
-      {
-        "id": "source-library-for-palestine",
-        "title": "Source library for Palestine",
-        "description": "A dedicated, verified reading list is planned. Until then, the general source library tracks citation status.",
-        "href": "/sources",
-        "tag": "Planned"
+        "id": "learn-responsibly",
+        "title": "Learn responsibly",
+        "description": "How to assess sources and avoid propaganda while reading about Palestine.",
+        "status": "draft",
+        "children": [
+          {
+            "id": "how-to-learn-responsibly",
+            "title": "How to learn responsibly",
+            "description": "A draft guide for evaluating sources, avoiding propaganda, and reading history and news carefully.",
+            "href": "/articles/how-to-learn-responsibly",
+            "tag": "Method",
+            "status": "draft"
+          },
+          {
+            "id": "source-library-for-palestine",
+            "title": "Source library for Palestine",
+            "description": "A draft reading list that separates primary sources, reference works, and current reporting.",
+            "href": "/articles/source-library-for-palestine",
+            "tag": "Sources",
+            "status": "draft"
+          }
+        ]
       }
     ]
   }

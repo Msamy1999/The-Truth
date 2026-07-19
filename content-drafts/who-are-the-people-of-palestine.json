@@ -1,0 +1,49 @@
+{
+  "slug": "who-are-the-people-of-palestine",
+  "title": "Who Are the People of Palestine?",
+  "subtitle": "A human-centred introduction to identity, place, and careful language",
+  "category": "religious-history",
+  "audienceLevel": "beginner",
+  "summary": "Palestinians are a people with diverse religious, family, regional, and cultural histories connected to Palestine. This draft introduces the subject without reducing people to a political slogan, a single religion, or a single experience.",
+  "tags": ["History", "Questions", "Sources"],
+  "sections": [
+    {
+      "sectionId": "beginner-summary",
+      "title": "In Plain Words",
+      "kind": "summary",
+      "body": "A people are more than a headline. Palestinians include Muslims, Christians, and people of other or no religious commitments; they also include families living in the area and families dispersed elsewhere. Their identities are shaped by language, local memory, work, worship, family life, and attachment to particular towns, villages, and cities.\n\nThis article uses the word Palestinian as a description of a people and a national identity, not as a shortcut for assuming that every person has the same politics, history, or belief."
+    },
+    {
+      "sectionId": "identity-and-history",
+      "title": "Identity Is Historical and Personal",
+      "kind": "history",
+      "body": "Modern national identities develop through many forces: family networks, local institutions, migration, education, language, religious communities, and changing political boundaries. Palestinian identity is studied by historians as a modern national identity with roots in the social life of Ottoman and Mandate Palestine. That description does not erase older Jewish, Christian, Muslim, Samaritan, Armenian, Bedouin, and other connections to the land.\n\nCareful study should make room for these layers rather than using history as a weapon. A historical account can describe institutions, documents, and demographic change; it should not turn whole communities into stereotypes or make present-day individuals answer for every event in the past."
+    },
+    {
+      "sectionId": "reading-with-dignity",
+      "title": "Start With Human Dignity",
+      "kind": "notes",
+      "body": "When reading about Palestine, begin with the basic fact that the people being discussed are human beings with names, families, grief, hopes, and ordinary responsibilities. Good sources distinguish a government, an armed group, a religious tradition, and a civilian population. They also state what they know, what they do not know, and how they know it.\n\nThis is a draft study guide, not a final historical account. Readers should compare a scholarly history with primary documents and reputable reporting, then check dates, authorship, and context before sharing a claim."
+    }
+  ],
+  "quranVerses": [],
+  "bibleVerses": [],
+  "relatedSlugs": ["human-dignity-and-justice", "how-to-learn-responsibly", "source-library-for-palestine"],
+  "furtherReading": [
+    {
+      "title": "Palestinian Identity: The Construction of Modern National Consciousness",
+      "author": "Rashid Khalidi",
+      "publisher": "Columbia University Press",
+      "year": 1997,
+      "note": "A major scholarly study of the development of Palestinian national consciousness; read alongside other historians for differing emphases.",
+      "url": "https://cup.columbia.edu/book/palestinian-identity/9780231105156"
+    },
+    {
+      "title": "The Palestinians: From Peasants to Revolutionaries",
+      "author": "Rosemary Sayigh",
+      "publisher": "Zed Books",
+      "year": 1979,
+      "note": "An influential social history that foregrounds Palestinian voices and displacement; its perspective should be identified when used."
+    }
+  ]
+}

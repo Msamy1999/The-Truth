@@ -1,0 +1,48 @@
+{
+  "slug": "why-palestine-matters-to-muslims",
+  "title": "Why Palestine Matters to Muslims",
+  "subtitle": "Religious connection, human concern, and careful distinctions",
+  "category": "religious-history",
+  "audienceLevel": "beginner",
+  "summary": "For many Muslims, Palestine matters because of the religious importance of Jerusalem and Al-Aqsa, the history of Muslim communities in the region, and concern for human dignity. These reasons should be explained without treating political claims as religious facts or treating people as symbols.",
+  "tags": ["History", "Theology", "Sources"],
+  "sections": [
+    {
+      "sectionId": "beginner-summary",
+      "title": "In Plain Words",
+      "kind": "summary",
+      "body": "Muslims commonly speak about Palestine with special concern because Jerusalem and Al-Aqsa have a central place in Islamic memory and worship. That concern can include love of sacred places, solidarity with people facing hardship, and a desire for justice. It does not require Muslims to ignore the dignity, grief, or religious attachments of anyone else."
+    },
+    {
+      "sectionId": "religious-connection",
+      "title": "Religious Connection",
+      "kind": "interpretation",
+      "body": "The Qur'an refers to the Prophet Muhammad's night journey from the Sacred Mosque to the farthest mosque in the opening verse of Surah al-Isra. Muslim interpretation identifies that farthest mosque with the sanctuary in Jerusalem, and this reading gives Al-Aqsa lasting religious significance. Jerusalem is also connected in Islamic tradition with earlier prophets honoured in Islam.\n\nThese are religious claims and inherited practices. They should be presented as such, while historical questions about buildings, sites, and changing institutions are investigated through evidence and cited scholarship."
+    },
+    {
+      "sectionId": "ethical-connection",
+      "title": "Religious Concern Must Remain Ethical",
+      "kind": "notes",
+      "body": "Islamic concern for a place must not erase concern for people. A Muslim reader can care about Al-Aqsa, Palestinian communities, and justice while refusing collective blame, anti-Jewish hatred, anti-Christian hostility, or unverified stories. Compassion is not weakened by accuracy; it depends on it.\n\nThis draft therefore separates religious devotion from factual claims that require sources. It also leaves room for Muslims to disagree about political analysis while maintaining the shared obligation to speak truthfully and act with dignity."
+    }
+  ],
+  "quranVerses": [],
+  "bibleVerses": [],
+  "relatedSlugs": ["jerusalem-and-al-aqsa", "human-dignity-and-justice", "how-to-learn-responsibly"],
+  "furtherReading": [
+    {
+      "title": "Jerusalem in the Qur'an",
+      "author": "Angelika Neuwirth",
+      "publisher": "Routledge",
+      "year": 2016,
+      "note": "A scholarly discussion of Qur'anic and early Islamic approaches to Jerusalem; consult the full bibliographic context before relying on a single interpretation."
+    },
+    {
+      "title": "The History of al-Tabari, Volume VI: Muhammad at Mecca",
+      "author": "al-Tabari, translated by W. Montgomery Watt and M. V. McDonald",
+      "publisher": "State University of New York Press",
+      "year": 1988,
+      "note": "An English translation of an important classical historical source; it records tradition and requires historical comparison rather than uncritical use."
+    }
+  ]
+}

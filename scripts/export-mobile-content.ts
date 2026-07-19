@@ -23,7 +23,8 @@ import { islamOverviewTree } from "../data/islam-overview-tree";
 import { peopleOfPalestineTree } from "../data/people-of-palestine-tree";
 import { siteCategories } from "../data/site";
 
-const API = process.env.API_URL ?? "http://127.0.0.1:3000";
+// Keep this aligned with the root `npm run dev` script.
+const API = process.env.API_URL ?? "http://127.0.0.1:4173";
 const OUT = path.resolve(__dirname, "../mobile/assets/content");
 
 async function fetchAll(collection: string) {

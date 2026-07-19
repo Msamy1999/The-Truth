@@ -1,0 +1,48 @@
+{
+  "slug": "human-dignity-and-justice",
+  "title": "Human Dignity and Justice",
+  "subtitle": "An ethical framework for speaking about Palestinian lives and every human life",
+  "category": "questions",
+  "audienceLevel": "beginner",
+  "summary": "A source-aware library should treat human dignity as a starting point. This draft offers an Islamic ethical framework for discussing suffering and injustice without excusing harm, spreading hatred, or making claims beyond the evidence.",
+  "tags": ["Theology", "Questions", "Sources"],
+  "sections": [
+    {
+      "sectionId": "beginner-summary",
+      "title": "In Plain Words",
+      "kind": "summary",
+      "body": "Human dignity means that a person is not merely a statistic, a slogan, or a representative of a group. Every person has moral worth. A discussion of Palestine that forgets this fails before it begins.\n\nDignity does not cancel difficult questions about history, law, security, or responsibility. It changes how those questions are asked: with truthful language, refusal of collective blame, and care for civilians and vulnerable people."
+    },
+    {
+      "sectionId": "islamic-ethics",
+      "title": "An Islamic Ethical Starting Point",
+      "kind": "interpretation",
+      "body": "The Qur'an describes the children of Adam as honoured, and Islamic ethics repeatedly joins justice with truthfulness and mercy. Muslims understand these teachings as obligations toward human beings, not permissions to value only people from their own group.\n\nApplying a principle requires humility. A religious text can guide moral reasoning, but it does not remove the need to establish facts, distinguish intentional harm from rumour, and recognise the limits of one's knowledge."
+    },
+    {
+      "sectionId": "practical-standards",
+      "title": "Practical Standards for Speech and Action",
+      "kind": "notes",
+      "body": "Do not assign guilt to an entire people for the actions of leaders, institutions, or armed groups. Do not circulate graphic images or casualty figures without checking the source, date, and context. Do not use another community's pain as a rhetorical tool.\n\nA fair response to suffering can include prayer, charitable support through accountable organisations, careful learning, and principled advocacy. It should never include dehumanisation, false witness, or celebration of harm."
+    }
+  ],
+  "quranVerses": [],
+  "bibleVerses": [],
+  "relatedSlugs": ["who-are-the-people-of-palestine", "how-to-learn-responsibly", "source-library-for-palestine"],
+  "furtherReading": [
+    {
+      "title": "The Qur'an: A New Translation",
+      "author": "M. A. S. Abdel Haleem",
+      "publisher": "Oxford University Press",
+      "year": 2004,
+      "note": "A widely used modern English translation; consult Arabic and recognised tafsir for detailed legal or theological interpretation."
+    },
+    {
+      "title": "The Ethics of War and Peace in Islam",
+      "author": "Majid Khadduri",
+      "publisher": "Johns Hopkins University Press",
+      "year": 1955,
+      "note": "A foundational academic study of Islamic legal and ethical traditions; later scholarship should be consulted for critique and development."
+    }
+  ]
+}

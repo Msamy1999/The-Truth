@@ -17,6 +17,11 @@ import { Card } from "@/components/ui/Card";
 import { Tag } from "@/components/ui/Tag";
 import { buildArticlePlainText } from "@/lib/article-text";
 import { categoryIconMap, fallbackCategoryIcon } from "@/lib/category-icons";
+import {
+  formatArabicQuranReference,
+  quranQuoteSegmentsInLine,
+  quranReferenceForQuoteSegment,
+} from "@/lib/quran";
 import type { Article, Citation, SiteCategory } from "@/types/content";
 
 type ArticleLayoutProps = {
@@ -53,7 +58,7 @@ export function ArticleLayout({
 
   return (
     <>
-      <Section className="border-b border-border" spacing="lg">
+      <Section className="border-b border-border" spacing="sm">
         <Container>
           <Breadcrumbs
             items={[
@@ -62,39 +67,41 @@ export function ArticleLayout({
               { label: article.title },
             ]}
           />
-          <div className="mt-8 max-w-4xl">
+          <div className="mt-4 max-w-4xl">
             <PageHeader
               eyebrow="Research article"
               title={article.title}
               subtitle={article.subtitle}
+              titleClassName="text-2xl sm:text-3xl lg:text-3xl"
             />
-            <div className="mt-5 flex flex-wrap items-center gap-2">
+            <div className="mt-3 flex flex-wrap items-center gap-1.5">
               <ArticleStatusBadge status={article.status} />
               {article.tags.map((tag) => (
                 <Tag key={tag}>{tag}</Tag>
               ))}
               <Tag>{article.audienceLevel}</Tag>
             </div>
-            <p className="mt-5 text-sm text-muted-foreground">
+            <p className="mt-3 text-xs text-muted-foreground sm:text-sm">
               Last updated:{" "}
               <time dateTime={article.lastUpdated}>{article.lastUpdated}</time>
             </p>
-            <div className="mt-5">
-              <Callout
-                type={article.status === "published" ? "note" : "warning"}
-                title={`${getArticleStatusLabel(article.status)} status`}
-              >
-                {getArticleStatusDescription(article.status)}
-              </Callout>
-            </div>
-            <div className="mt-5">
+            <p
+              className="mt-3 max-w-3xl rounded-md border border-border bg-muted/40 px-3 py-2 text-xs leading-5 text-muted-foreground sm:text-sm"
+              role="status"
+            >
+              <span className="font-semibold text-foreground">
+                {getArticleStatusLabel(article.status)}:{" "}
+              </span>
+              {getArticleStatusDescription(article.status)}
+            </p>
+            <div className="mt-3">
               <ArticleTools articleText={articleText} articleTitle={article.title} />
             </div>
           </div>
         </Container>
       </Section>
 
-      <Section>
+      <Section spacing="sm">
         <Container>
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start">
             <article className="min-w-0">
@@ -109,7 +116,7 @@ export function ArticleLayout({
                   ))}
               </div>
 
-              <section id="sources" className="mt-12 scroll-mt-28">
+              <section id="sources" className="mt-12 scroll-mt-20">
                 <PageHeader
                   titleAs="h2"
                   eyebrow="Sources"
@@ -122,7 +129,7 @@ export function ArticleLayout({
               </section>
 
               {relatedArticles.length > 0 ? (
-                <section id="related-articles" className="mt-12 scroll-mt-28">
+                <section id="related-articles" className="mt-12 scroll-mt-20">
                   <PageHeader
                     titleAs="h2"
                     eyebrow="Related"
@@ -146,7 +153,7 @@ export function ArticleLayout({
               ) : null}
             </article>
 
-            <aside className="order-first lg:order-none lg:sticky lg:top-32">
+            <aside className="order-first lg:order-none lg:sticky lg:top-20">
               <Card className="p-4">
                 <p className="text-sm font-semibold text-foreground">
                   On this page
@@ -200,17 +207,82 @@ function ArticleSectionBlock({
   }
 
   return (
-    <section id={section.id} className="scroll-mt-28">
+    <section id={section.id} className="scroll-mt-20">
       <p className="text-xs font-semibold uppercase text-accent sm:text-sm">
         {section.kind}
       </p>
       <h2 className="mt-2 select-text text-lg leading-snug sm:mt-3 sm:text-xl">{section.title}</h2>
-      <p className="mt-3 select-text whitespace-pre-line text-sm leading-6 text-muted-foreground sm:mt-4 sm:text-base sm:leading-7">{section.body}</p>
+      <ArticleSectionBody body={section.body} />
       {section.citationIds && section.citationIds.length > 0 ? (
         <p className="mt-4 text-xs font-medium uppercase text-muted-foreground">
           Source markers to verify: {section.citationIds.join(", ")}
         </p>
       ) : null}
     </section>
+  );
+}
+
+function ArticleSectionBody({ body }: { body: string }) {
+  const lines = body.split(/\r?\n/);
+
+  return (
+    <div className="mt-3 select-text whitespace-pre-wrap text-sm leading-6 text-muted-foreground sm:mt-4 sm:text-base sm:leading-7">
+      {lines.map((line, index) => {
+        const quotes = quranQuoteSegmentsInLine(line)
+          .map((segment) => ({
+            ...segment,
+            label: formatArabicQuranReference(
+              quranReferenceForQuoteSegment(lines, index, segment) ?? {
+                surahNumber: 0,
+                firstAyahNumber: 0,
+              },
+            ),
+          }))
+          .filter((segment): segment is typeof segment & { label: string } => Boolean(segment.label));
+
+        if (quotes.length > 0) {
+          let cursor = 0;
+          return (
+            <span key={`${index}-${line}`}>
+              {quotes.map((quote) => {
+                const before = line.slice(cursor, quote.start);
+                cursor = quote.end;
+
+                return (
+                  <span key={`${quote.start}-${quote.end}`}>
+                    {before}
+                    <span className="block py-1.5">
+                      <span
+                        lang="ar"
+                        dir="rtl"
+                        className="block text-right text-xl leading-loose text-foreground sm:text-2xl"
+                      >
+                        {quote.text.normalize("NFC")}
+                      </span>
+                      <span
+                        lang="ar"
+                        dir="rtl"
+                        className="mt-1 block text-right text-xs font-semibold text-accent sm:text-sm"
+                      >
+                        {quote.label}
+                      </span>
+                    </span>
+                  </span>
+                );
+              })}
+              {line.slice(cursor)}
+              {index < lines.length - 1 ? <br /> : null}
+            </span>
+          );
+        }
+
+        return (
+          <span key={`${index}-${line}`}>
+            {line}
+            {index < lines.length - 1 ? <br /> : null}
+          </span>
+        );
+      })}
+    </div>
   );
 }

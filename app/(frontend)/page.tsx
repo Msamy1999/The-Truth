@@ -11,7 +11,7 @@ import { Section } from "@/components/layout/Section";
 import { ButtonLink } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Tag } from "@/components/ui/Tag";
-import { getHomeData } from "@/lib/content";
+import { getFullLibraryTree, getHomeData } from "@/lib/content";
 import { siteName, siteNameArabic } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -29,60 +29,59 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
-  const { mainPaths, christianLearningPath, comparisonMethods, featuredResearchCards } = await getHomeData();
+  const [
+    { christianLearningPath, comparisonMethods, featuredResearchCards },
+    fullLibraryTree,
+  ] = await Promise.all([getHomeData(), getFullLibraryTree()]);
 
   return (
     <>
-      <section className="border-b border-border">
+      <section className="border-b border-border py-5 sm:py-7">
         <Container>
-          <div className="relative mx-auto w-full overflow-hidden rounded-xl border border-border bg-card shadow-soft">
-            {/* Soft radial accent glow behind the mark. */}
+          <div className="relative overflow-hidden rounded-xl border border-border bg-card px-5 py-6 shadow-soft sm:px-7 sm:py-7 lg:grid lg:grid-cols-[160px_minmax(0,1fr)] lg:items-center lg:gap-8 lg:px-9">
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_90%_at_50%_42%,hsl(var(--accent)/0.14),transparent_72%)]"
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_130%_at_12%_50%,hsl(var(--accent)/0.13),transparent_72%)]"
             />
-            {/* Oversized, very subtle background echo of the mark. */}
-            <LogoMark className="pointer-events-none absolute -bottom-16 -right-10 h-56 w-56 text-accent opacity-[0.06] sm:-bottom-28 sm:-right-16 sm:h-96 sm:w-96" />
-            <div className="relative flex flex-col items-center px-4 py-10 text-center sm:py-14 lg:py-16">
+            <LogoMark className="pointer-events-none absolute -bottom-16 -right-10 h-52 w-52 text-accent opacity-[0.05]" />
+
+            <div className="relative mb-5 flex items-center gap-4 lg:mb-0 lg:flex-col lg:justify-center lg:gap-2 lg:text-center">
               <LogoMark
                 title={`${siteName} logo: three wandering paths merging into one straight path`}
-                className="h-24 w-24 max-w-full text-accent sm:h-32 sm:w-32 lg:h-36 lg:w-36"
+                className="h-16 w-16 shrink-0 text-accent sm:h-20 sm:w-20 lg:h-24 lg:w-24"
               />
-              <p className="mt-4 text-xl font-semibold text-foreground sm:text-2xl">
-                {siteName}
-              </p>
-              <p lang="ar" dir="rtl" className="mt-1 text-sm text-muted-foreground sm:text-base">
-                {siteNameArabic}
-              </p>
+              <div>
+                <p className="text-base font-semibold text-foreground sm:text-lg">
+                  {siteName}
+                </p>
+                <p lang="ar" dir="rtl" className="mt-0.5 text-xs text-muted-foreground">
+                  {siteNameArabic}
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="mx-auto max-w-3xl pt-5 sm:pt-8">
-            <p className="mb-3 inline-flex rounded-md border border-border bg-card px-2.5 py-1 text-xs font-medium text-muted-foreground shadow-soft sm:text-sm">
-              For sincere seekers
-            </p>
-            <h1 className="text-2xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">
-              Learn Islam with care, clarity, and sincere questions.
-            </h1>
-            <p className="mt-3 text-sm leading-6 text-muted-foreground sm:mt-5 sm:text-base sm:leading-7 lg:text-lg">
-              {siteName}{" "}
-              <span lang="ar" dir="rtl">
-                ({siteNameArabic})
-              </span>{" "}
-              is an Islamic knowledge and research library. It introduces the
-              foundations of Islam and, for readers who bring them, answers
-              major questions about Christianity, atheism and agnosticism,
-              scripture, history, and justice &mdash; all with source
-              standards, gentle structure, and honest draft labels.
-            </p>
-            <div className="mt-5 flex flex-col gap-3 pb-6 sm:mt-7 sm:flex-row sm:pb-8">
-              <ButtonLink href="/islam-overview">
-                Start learning
-                <ArrowRight aria-hidden="true" className="h-4 w-4" />
-              </ButtonLink>
-              <ButtonLink href="/islam-christianity" variant="secondary">
-                Islam & Christianity
-                <Library aria-hidden="true" className="h-4 w-4" />
-              </ButtonLink>
+
+            <div className="relative max-w-3xl">
+              <p className="mb-2 inline-flex rounded-md border border-border bg-background/70 px-2.5 py-1 text-xs font-medium text-muted-foreground">
+                For sincere seekers
+              </p>
+              <h1 className="text-2xl font-semibold leading-tight text-foreground sm:text-3xl lg:text-4xl">
+                Learn Islam with care, clarity, and sincere questions.
+              </h1>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base sm:leading-7">
+                A source-aware Islamic research library covering the foundations
+                of Islam and careful answers about Christianity, atheism,
+                scripture, history, and justice.
+              </p>
+              <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+                <ButtonLink href="/islam-overview">
+                  Start learning
+                  <ArrowRight aria-hidden="true" className="h-4 w-4" />
+                </ButtonLink>
+                <ButtonLink href="/islam-christianity" variant="secondary">
+                  Islam & Christianity
+                  <Library aria-hidden="true" className="h-4 w-4" />
+                </ButtonLink>
+              </div>
             </div>
           </div>
         </Container>
@@ -106,19 +105,19 @@ export default async function HomePage() {
         </Container>
       </Section>
 
-      <Section id="study" tone="muted">
+      <Section id="library" tone="muted">
         <Container>
           <PageHeader
             titleAs="h2"
-            eyebrow="Main paths"
-            title="Five ways to begin"
-            subtitle="This is a path/tree view rather than a card gallery: choose a branch below to move into that part of the library."
+            eyebrow="Library map"
+            title="Explore the complete library"
+            subtitle="Every study path is gathered here. Open a branch to browse its topics, then open an article or section when you are ready."
           />
           <div className="mt-6">
             <ResearchTree
               title={siteName}
-              description="The five main entry points into the library. Glossary and the source library stay one tap away in the header and footer."
-              nodes={mainPaths}
+              description="Foundations, comparison, skeptical questions, Palestine studies, and research tools in one navigable map."
+              nodes={fullLibraryTree}
             />
           </div>
         </Container>

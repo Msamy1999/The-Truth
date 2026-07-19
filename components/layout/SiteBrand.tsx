@@ -7,17 +7,37 @@ type SiteBrandProps = {
   as?: "link" | "text";
   className?: string;
   onClick?: () => void;
+  compact?: boolean;
 };
 
-export function SiteBrand({ as = "link", className, onClick }: SiteBrandProps) {
+export function SiteBrand({
+  as = "link",
+  className,
+  onClick,
+  compact = false,
+}: SiteBrandProps) {
   const content = (
     <span className={cn("flex min-w-0 items-center gap-2.5", className)}>
-      <LogoMark className="h-8 w-8 shrink-0 text-accent" />
+      <LogoMark
+        className={cn(
+          "shrink-0 text-accent",
+          compact ? "h-6 w-6" : "h-8 w-8",
+        )}
+      />
       <span className="flex min-w-0 flex-col leading-tight">
-        <span className="text-base font-semibold text-foreground">{siteName}</span>
-        <span lang="ar" dir="rtl" className="text-right text-xs text-muted-foreground">
-          {siteNameArabic}
+        <span
+          className={cn(
+            "font-semibold text-foreground",
+            compact ? "text-sm" : "text-base",
+          )}
+        >
+          {siteName}
         </span>
+        {!compact ? (
+          <span lang="ar" dir="rtl" className="text-right text-xs text-muted-foreground">
+            {siteNameArabic}
+          </span>
+        ) : null}
       </span>
     </span>
   );

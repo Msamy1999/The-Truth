@@ -1,11 +1,6 @@
 import type { ResearchTreeNode } from "@/types/domain";
 
-/**
- * Guided reading path for /atheism-agnosticism. Draft links point to the
- * evidence-checked source articles and are promoted to published status by
- * the normal editorial workflow.
- */
-export const atheismAgnosticismTree: ResearchTreeNode[] = [
+const beliefPath: ResearchTreeNode[] = [
   {
     id: "does-god-exist",
     title: "Does God exist?",
@@ -33,6 +28,9 @@ export const atheismAgnosticismTree: ResearchTreeNode[] = [
     status: "draft",
     tag: "Bridge",
   },
+];
+
+const objections: ResearchTreeNode[] = [
   {
     id: "the-problem-of-evil",
     title: "The problem of evil",
@@ -51,6 +49,9 @@ export const atheismAgnosticismTree: ResearchTreeNode[] = [
     status: "draft",
     tag: "Ethics",
   },
+];
+
+const meaningAndScience: ResearchTreeNode[] = [
   {
     id: "purpose-of-life",
     title: "Purpose of life",
@@ -78,13 +79,43 @@ export const atheismAgnosticismTree: ResearchTreeNode[] = [
     status: "draft",
     tag: "Science",
   },
+];
+
+/** Guided reading path for questions from atheists and agnostics. */
+export const atheismAgnosticismTree: ResearchTreeNode[] = [
   {
-    id: "why-the-quran",
-    title: "Why the Quran?",
-    description:
-      "A cumulative closing case from message, Arabic form, transmission, historical emergence, and lived guidance.",
-    href: "/articles/why-the-quran",
-    status: "draft",
-    tag: "Conclusion",
+    id: "is-belief-reasonable",
+    title: "Is belief reasonable?",
+    description: "From God's existence to the possibility of revelation and Islam's claim.",
+    children: beliefPath,
+    defaultOpen: true,
+  },
+  {
+    id: "honest-objections",
+    title: "Honest objections",
+    description: "Suffering and morality considered without caricaturing nonbelief.",
+    children: objections,
+  },
+  {
+    id: "meaning-mind-and-science",
+    title: "Meaning, mind, and science",
+    description: "Purpose, consciousness, and the relationship between science and faith.",
+    children: meaningAndScience,
+  },
+  {
+    id: "the-qurans-claim",
+    title: "The Quran's claim",
+    description: "A final study of the Quran's message, transmission, and guidance.",
+    children: [
+      {
+        id: "why-the-quran",
+        title: "Why the Quran?",
+        description:
+          "A cumulative closing case from message, Arabic form, transmission, historical emergence, and lived guidance.",
+        href: "/articles/why-the-quran",
+        status: "draft",
+        tag: "Conclusion",
+      },
+    ],
   },
 ];

@@ -51,7 +51,7 @@ export function ComparisonArticleLayout({
         { id: "related-topics", title: "Related topics" },
       ]}
     >
-      <section id="main-question" className="scroll-mt-28">
+      <section id="main-question" className="scroll-mt-20">
         <PageHeader
           titleAs="h2"
           eyebrow="Main question"
@@ -60,7 +60,7 @@ export function ComparisonArticleLayout({
         />
       </section>
 
-      <section id="scripture-preview" className="scroll-mt-28">
+      <section id="scripture-preview" className="scroll-mt-20">
         <PageHeader
           titleAs="h2"
           eyebrow="Scripture preview"
@@ -77,7 +77,7 @@ export function ComparisonArticleLayout({
         </div>
       </section>
 
-      <section id="comparison" className="scroll-mt-28">
+      <section id="comparison" className="scroll-mt-20">
         <ComparisonBlock
           title="Quranic and Biblical perspectives"
           intro="The finished article should quote verified passages first, then clearly label interpretation and argument."
@@ -94,7 +94,7 @@ export function ComparisonArticleLayout({
         />
       </section>
 
-      <section id="historical-context" className="scroll-mt-28">
+      <section id="historical-context" className="scroll-mt-20">
         <PageHeader
           titleAs="h2"
           eyebrow="Historical context"
@@ -103,7 +103,7 @@ export function ComparisonArticleLayout({
         />
       </section>
 
-      <section id="interpretations" className="scroll-mt-28">
+      <section id="interpretations" className="scroll-mt-20">
         <ComparisonBlock
           title="Interpretation and response"
           left={{
@@ -119,7 +119,7 @@ export function ComparisonArticleLayout({
         />
       </section>
 
-      <section id="key-differences" className="scroll-mt-28">
+      <section id="key-differences" className="scroll-mt-20">
         <PageHeader
           titleAs="h2"
           eyebrow="Key differences"
@@ -135,7 +135,7 @@ export function ComparisonArticleLayout({
         </div>
       </section>
 
-      <section id="common-objections" className="scroll-mt-28">
+      <section id="common-objections" className="scroll-mt-20">
         <PageHeader
           titleAs="h2"
           eyebrow="Common objections"
@@ -152,13 +152,13 @@ export function ComparisonArticleLayout({
         </div>
       </section>
 
-      <section id="respectful-conclusion" className="scroll-mt-28">
+      <section id="respectful-conclusion" className="scroll-mt-20">
         <Callout type="respectful-reminder" title="Respectful conclusion">
           {comparison.respectfulConclusion}
         </Callout>
       </section>
 
-      <section id="related-topics" className="scroll-mt-28">
+      <section id="related-topics" className="scroll-mt-20">
         <PageHeader
           titleAs="h2"
           eyebrow="Related topics"
