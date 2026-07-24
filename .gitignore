@@ -19,6 +19,7 @@ pnpm-debug.log*
 # env
 .env
 .env*.local
+.secrets/
 
 # misc
 .DS_Store
@@ -29,3 +30,7 @@ payload/payload.db*
 
 # logs
 *.log
+
+# local deployment artifacts
+deployment-backups/
+*.sqlite-backup

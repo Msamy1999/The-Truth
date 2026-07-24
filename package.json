@@ -8,6 +8,7 @@
     "start": "next start -p 4173",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
+    "smoke:test": "node scripts/smoke-test.mjs",
     "verify:drafts": "node payload/verify-drafts-local.mjs",
     "verify:scripture": "node payload/verify-drafts.mjs",
     "verify:quran": "node payload/verify-quran-uthmani.mjs"
