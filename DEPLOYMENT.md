@@ -18,7 +18,8 @@ API run in one container; the mobile build remains a separate release artifact.
 - Liveness: `/healthz`
 - Database readiness: `/api/health`
 - Initial limit: 1 CPU and 1.5 GB memory
-- Runtime variables: `PAYLOAD_SECRET`, `DATABASE_URI`, `HOSTNAME`, and `PORT`
+- Runtime variables: `PAYLOAD_SECRET`, `DATABASE_URI`, `NEXT_PUBLIC_SITE_URL`,
+  `HOSTNAME`, and `PORT`
 
 The API is part of the web service, so both public domains route to the same
 container and port. No database or cache port is published.
@@ -37,6 +38,8 @@ application sourced from an immutable commit of this repository.
 - Limits: 1 CPU and 1536 MB memory
 - `PAYLOAD_SECRET`: secret, randomly generated in Coolify
 - `DATABASE_URI`: `file:/app/data/payload.db`
+- `NEXT_PUBLIC_SITE_URL`:
+  `https://the-straight-path.169.58.54.165.sslip.io`
 - `HOSTNAME`: `0.0.0.0`
 - `PORT`: `4173`
 

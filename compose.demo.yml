@@ -1,0 +1,66 @@
+name: the-straight-path
+
+services:
+  web:
+    image: the-straight-path-web:${RELEASE_TAG}
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL}
+    container_name: the-straight-path-web
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      HOSTNAME: 0.0.0.0
+      PORT: 4173
+      NODE_ENV: production
+    expose:
+      - "4173"
+    volumes:
+      - the-straight-path-sqlite-data:/app/data
+    networks:
+      - proxy
+    cpus: 1.0
+    mem_limit: 1536m
+    pids_limit: 256
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - fetch('http://127.0.0.1:4173/api/health').then((response)=>{if(!response.ok)process.exit(1)}).catch(()=>process.exit(1))
+      interval: 30s
+      timeout: 10s
+      start_period: 45s
+      retries: 3
+    labels:
+      traefik.enable: "true"
+      traefik.docker.network: coolify
+      traefik.http.middlewares.the-straight-path-gzip.compress: "true"
+      traefik.http.middlewares.the-straight-path-redirect.redirectscheme.scheme: https
+      traefik.http.routers.the-straight-path-http.entrypoints: http
+      traefik.http.routers.the-straight-path-http.middlewares: the-straight-path-redirect
+      traefik.http.routers.the-straight-path-http.rule: Host(`the-straight-path.169.58.54.165.sslip.io`) || Host(`api-the-straight-path.169.58.54.165.sslip.io`)
+      traefik.http.routers.the-straight-path-http.service: the-straight-path-web
+      traefik.http.routers.the-straight-path-https.entrypoints: https
+      traefik.http.routers.the-straight-path-https.middlewares: the-straight-path-gzip
+      traefik.http.routers.the-straight-path-https.rule: Host(`the-straight-path.169.58.54.165.sslip.io`) || Host(`api-the-straight-path.169.58.54.165.sslip.io`)
+      traefik.http.routers.the-straight-path-https.service: the-straight-path-web
+      traefik.http.routers.the-straight-path-https.tls: "true"
+      traefik.http.routers.the-straight-path-https.tls.certresolver: letsencrypt
+      traefik.http.services.the-straight-path-web.loadbalancer.server.port: "4173"
+
+volumes:
+  the-straight-path-sqlite-data:
+    name: the-straight-path-sqlite-data
+
+networks:
+  proxy:
+    external: true
+    name: coolify

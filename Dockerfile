@@ -7,9 +7,11 @@ RUN npm ci
 
 FROM node:22-bookworm-slim AS builder
 WORKDIR /app
+ARG NEXT_PUBLIC_SITE_URL=https://the-straight-path.169.58.54.165.sslip.io
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV PAYLOAD_SECRET=build-only-placeholder-not-used-at-runtime
 ENV DATABASE_URI=file:/tmp/the-straight-path-build.db
+ENV NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL}
 COPY --from=dependencies /app/node_modules ./node_modules
 COPY . .
 RUN npm run build
