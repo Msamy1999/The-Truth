@@ -14,5 +14,4 @@ deployment-backups
 .env.*
 !.env.example
 payload/payload.db*
-content-drafts
 codex-islam-overview-prompt.md
