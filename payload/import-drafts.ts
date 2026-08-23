@@ -129,6 +129,7 @@ async function main() {
   const payload = await getPayload({ config });
   const allFiles = readdirSync(DRAFTS_DIR).filter((f) => f.endsWith(".json"));
   const args = process.argv.slice(2);
+  const relationsOnly = args.includes("--relations-only");
   const statusArgument = args.find((value) => value.startsWith("--status="));
   const articleStatus = statusArgument?.slice("--status=".length) ?? "draft";
   if (!["draft", "reviewed"].includes(articleStatus)) {
@@ -136,7 +137,7 @@ async function main() {
   }
   const requestedSlugs = new Set(
     args
-      .filter((value) => !value.startsWith("--status="))
+      .filter((value) => !value.startsWith("--"))
       .map((value) => value.replace(/\.json$/i, "")),
   );
   const files = requestedSlugs.size
@@ -149,6 +150,68 @@ async function main() {
     throw new Error(`Draft slug(s) not found: ${missingSlugs.join(", ")}`);
   }
   console.log(`drafts found: ${files.length}`);
+
+  // Payload's document-lock cleanup is useful for interactive editors but
+  // adds an unnecessary competing SQLite write to this trusted import job.
+  // Disable it only inside this short-lived process; the public/admin config
+  // still keeps normal document locking enabled.
+  for (const slug of [
+    "articles",
+    "bible-verses",
+    "citations",
+    "glossary-terms",
+    "quran-verses",
+  ] as const) {
+    if (payload.collections[slug]) {
+      payload.collections[slug].config.lockDocuments = false;
+    }
+  }
+
+  // A failed full sync may leave only the inexpensive self-relationship pass
+  // unfinished. This recovery mode reads all article IDs once and completes
+  // those links without rewriting scripture, sources, or article bodies.
+  if (relationsOnly) {
+    const existingArticles = await payload.find({
+      collection: "articles",
+      depth: 0,
+      limit: 1_000,
+      pagination: false,
+      select: { slug: true },
+    });
+    const articleIdBySlug = new Map<string, string | number>(
+      existingArticles.docs.map((article) => [article.slug, article.id]),
+    );
+    let updatedRelations = 0;
+
+    for (const file of files) {
+      const draft: Draft = JSON.parse(
+        readFileSync(path.join(DRAFTS_DIR, file), "utf8"),
+      );
+      const articleId = articleIdBySlug.get(draft.slug);
+      if (articleId === undefined) {
+        throw new Error(`Cannot link missing article: ${draft.slug}`);
+      }
+      const relatedArticles = (draft.relatedSlugs ?? [])
+        .filter((slug) => slug !== draft.slug)
+        .map((slug) => articleIdBySlug.get(slug))
+        .filter((id): id is string | number => id !== undefined);
+
+      await payload.update({
+        collection: "articles",
+        id: articleId,
+        data: { relatedArticles } as never,
+        depth: 0,
+        disableTransaction: true,
+      });
+      updatedRelations += 1;
+      if (updatedRelations % 20 === 0 || updatedRelations === files.length) {
+        console.log(`related articles synced: ${updatedRelations}/${files.length}`);
+      }
+    }
+
+    console.log("Related article synchronization complete.");
+    process.exit(0);
+  }
 
   // Edition-level citations (real, checkable sources).
   const editionCitations = [
