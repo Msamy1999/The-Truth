@@ -1,6 +1,6 @@
 "use client";
 
-import { Search } from "lucide-react";
+import { Search, X } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Card } from "@/components/ui/Card";
 import { Tag } from "@/components/ui/Tag";
@@ -40,8 +40,21 @@ export function GlossaryBrowser({ terms }: GlossaryBrowserProps) {
         (!normalizedQuery || searchable.includes(normalizedQuery)) &&
         (category === allValue || term.category === category)
       );
-    });
+    }).sort((left, right) => left.term.localeCompare(right.term));
   }, [category, query, terms]);
+
+  const hasFilters = query.trim().length > 0 || category !== allValue;
+
+  function showRelatedTerm(relatedTerm: string) {
+    setQuery(relatedTerm);
+    setCategory(allValue);
+    window.requestAnimationFrame(() => {
+      document.getElementById("glossary-results")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }
 
   return (
     <div className="space-y-6">
@@ -76,8 +89,27 @@ export function GlossaryBrowser({ terms }: GlossaryBrowserProps) {
         </div>
       </Card>
 
+      <div className="flex flex-wrap items-center justify-between gap-3 px-1">
+        <p className="text-sm text-muted-foreground" aria-live="polite">
+          Showing {filteredTerms.length} of {terms.length} terms
+        </p>
+        {hasFilters ? (
+          <button
+            type="button"
+            onClick={() => {
+              setQuery("");
+              setCategory(allValue);
+            }}
+            className="inline-flex min-h-10 items-center gap-1.5 rounded-md border border-border bg-background px-3 text-sm font-medium text-foreground transition-colors hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          >
+            <X aria-hidden="true" className="h-4 w-4" />
+            Clear filters
+          </button>
+        ) : null}
+      </div>
+
       {filteredTerms.length > 0 ? (
-        <div className="grid gap-4 md:grid-cols-2">
+        <div id="glossary-results" className="grid scroll-mt-24 gap-4 md:grid-cols-2">
           {filteredTerms.map((term) => (
             <Card key={term.term} className="p-4 sm:p-5">
               <div className="flex flex-wrap items-start justify-between gap-3">
@@ -97,7 +129,15 @@ export function GlossaryBrowser({ terms }: GlossaryBrowserProps) {
               {term.relatedTerms.length > 0 ? (
                 <div className="mt-4 flex flex-wrap gap-2">
                   {term.relatedTerms.map((relatedTerm) => (
-                    <Tag key={relatedTerm}>{relatedTerm}</Tag>
+                    <button
+                      type="button"
+                      key={relatedTerm}
+                      onClick={() => showRelatedTerm(relatedTerm)}
+                      aria-label={`Show glossary definition for ${relatedTerm}`}
+                      className="rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                    >
+                      <Tag>{relatedTerm}</Tag>
+                    </button>
                   ))}
                 </div>
               ) : null}

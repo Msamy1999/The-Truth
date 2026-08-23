@@ -69,6 +69,7 @@ export interface Config {
   collections: {
     users: User;
     articles: Article;
+    'analytics-events': AnalyticsEvent;
     'comparison-articles': ComparisonArticle;
     citations: Citation;
     'quran-verses': QuranVerse;
@@ -85,6 +86,7 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     articles: ArticlesSelect<false> | ArticlesSelect<true>;
+    'analytics-events': AnalyticsEventsSelect<false> | AnalyticsEventsSelect<true>;
     'comparison-articles': ComparisonArticlesSelect<false> | ComparisonArticlesSelect<true>;
     citations: CitationsSelect<false> | CitationsSelect<true>;
     'quran-verses': QuranVersesSelect<false> | QuranVersesSelect<true>;
@@ -257,6 +259,42 @@ export interface Citation {
   status: 'pending' | 'verified';
   verifiedBy?: string | null;
   verifiedDate?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Anonymous, consented page activity. No IP addresses, raw user-agents, names, or emails are stored.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "analytics-events".
+ */
+export interface AnalyticsEvent {
+  id: number;
+  visitorId: string;
+  sessionId: string;
+  recordedAt: string;
+  enteredAt: string;
+  path: string;
+  title: string;
+  /**
+   * Origin and path only; query strings are removed.
+   */
+  entryReferrer?: string | null;
+  /**
+   * Precise active time in milliseconds; the table shows a readable duration label.
+   */
+  durationMs: number;
+  /**
+   * Human-readable active time, for example 42s or 3m 12s.
+   */
+  durationLabel: string;
+  deviceCategory: 'desktop' | 'mobile' | 'tablet' | 'unknown';
+  browserCategory: 'chrome' | 'edge' | 'firefox' | 'safari' | 'ios' | 'android' | 'other' | 'unknown';
+  language?: string | null;
+  country?: string | null;
+  region?: string | null;
+  city?: string | null;
+  exitReason: 'navigation' | 'page-hidden' | 'page-closed';
   updatedAt: string;
   createdAt: string;
 }
@@ -469,6 +507,10 @@ export interface PayloadLockedDocument {
         value: number | Article;
       } | null)
     | ({
+        relationTo: 'analytics-events';
+        value: number | AnalyticsEvent;
+      } | null)
+    | ({
         relationTo: 'comparison-articles';
         value: number | ComparisonArticle;
       } | null)
@@ -591,6 +633,30 @@ export interface ArticlesSelect<T extends boolean = true> {
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "analytics-events_select".
+ */
+export interface AnalyticsEventsSelect<T extends boolean = true> {
+  visitorId?: T;
+  sessionId?: T;
+  recordedAt?: T;
+  enteredAt?: T;
+  path?: T;
+  title?: T;
+  entryReferrer?: T;
+  durationMs?: T;
+  durationLabel?: T;
+  deviceCategory?: T;
+  browserCategory?: T;
+  language?: T;
+  country?: T;
+  region?: T;
+  city?: T;
+  exitReason?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

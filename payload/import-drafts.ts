@@ -21,6 +21,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { getPayload } from "payload";
 import config from "../payload.config";
+import { glossaryTerms } from "../data/content/glossary";
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 const DRAFTS_DIR = path.resolve(dirname, "../content-drafts");
@@ -193,6 +194,54 @@ async function main() {
       citationIds[citation.citationKey] = created.id;
     }
   }
+
+  // Glossary ---------------------------------------------------------------
+  // The release content-sync target also keeps public study definitions in
+  // step with the repository. Two passes are required for self-relations.
+  const glossaryIdByTerm = new Map<string, string | number>();
+  for (const glossaryTerm of glossaryTerms) {
+    const existing = await payload.find({
+      collection: "glossary-terms",
+      where: { term: { equals: glossaryTerm.term } },
+      limit: 1,
+      depth: 0,
+    });
+    const glossaryData = {
+      term: glossaryTerm.term,
+      pronunciation: glossaryTerm.pronunciation,
+      definition: glossaryTerm.definition,
+      category: glossaryTerm.category,
+      citations: [],
+    };
+    if (existing.docs[0]) {
+      const updated = await payload.update({
+        collection: "glossary-terms",
+        id: existing.docs[0].id,
+        data: glossaryData as never,
+        depth: 0,
+      });
+      glossaryIdByTerm.set(glossaryTerm.term, updated.id);
+    } else {
+      const created = await payload.create({
+        collection: "glossary-terms",
+        data: glossaryData as never,
+        depth: 0,
+      });
+      glossaryIdByTerm.set(glossaryTerm.term, created.id);
+    }
+  }
+  for (const glossaryTerm of glossaryTerms) {
+    const relatedTerms = glossaryTerm.relatedTerms
+      .map((termName) => glossaryIdByTerm.get(termName))
+      .filter((id): id is string | number => id !== undefined);
+    await payload.update({
+      collection: "glossary-terms",
+      id: glossaryIdByTerm.get(glossaryTerm.term)!,
+      data: { relatedTerms } as never,
+      depth: 0,
+    });
+  }
+  console.log(`glossary terms synced: ${glossaryIdByTerm.size}`);
 
   const articleIdBySlug = new Map<string, string | number>();
 

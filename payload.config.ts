@@ -4,6 +4,7 @@ import { sqliteAdapter } from "@payloadcms/db-sqlite";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { buildConfig } from "payload";
 import { Articles } from "./payload/collections/Articles";
+import { AnalyticsEvents } from "./payload/collections/AnalyticsEvents";
 import { Citations } from "./payload/collections/Citations";
 import { ComparisonArticles } from "./payload/collections/ComparisonArticles";
 import { GlossaryTerms } from "./payload/collections/Glossary";
@@ -38,6 +39,7 @@ export default buildConfig({
   collections: [
     Users,
     Articles,
+    AnalyticsEvents,
     ComparisonArticles,
     Citations,
     QuranVerses,

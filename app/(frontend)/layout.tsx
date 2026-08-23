@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { ArticleAudioProvider } from "@/components/audio/ArticleAudioProvider";
+import { AnalyticsConsentBanner } from "@/components/analytics/AnalyticsConsent";
+import { AnalyticsTracker } from "@/components/analytics/AnalyticsTracker";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { NavigationLoadingIndicator } from "@/components/layout/NavigationLoadingIndicator";
@@ -116,6 +118,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
           Skip to content
         </a>
         <ArticleAudioProvider>
+          <AnalyticsTracker />
+          <AnalyticsConsentBanner />
           <NavigationLoadingIndicator />
           <TranslationProgress />
           <div className="flex min-h-screen flex-col">

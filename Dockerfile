@@ -22,7 +22,7 @@ FROM dependencies AS content-sync
 WORKDIR /app
 ENV NODE_ENV=production
 COPY . .
-CMD ["npx", "--no-install", "tsx", "payload/import-drafts.ts", "--status=reviewed"]
+CMD ["sh", "-c", "printf 'y\\n' | npx --no-install payload migrate && npx --no-install tsx payload/import-drafts.ts --status=reviewed"]
 
 FROM node:22-bookworm-slim AS runner
 WORKDIR /app

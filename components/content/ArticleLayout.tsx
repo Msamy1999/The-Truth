@@ -353,7 +353,7 @@ function ArticleSectionBody({
                         dir="rtl"
                         translate="no"
                         data-quran-original
-                        className="notranslate block text-right text-xl leading-loose text-accent sm:text-2xl"
+                        className="notranslate block text-right text-lg leading-[1.9] text-accent sm:text-xl"
                       >
                         {quote.text.normalize("NFC")}
                       </span>
@@ -497,7 +497,7 @@ function KeyScripturePassages({
       <p className="text-xs font-semibold uppercase text-accent sm:text-sm">
         Key passage{verses.length === 1 ? "" : "s"}
       </p>
-      <div className="mt-3 grid gap-4 xl:grid-cols-2">
+      <div className="mt-3 grid gap-3 xl:grid-cols-2">
         {verses.map((verse) => (
           <VerseCard
             key={`${verse.scripture}-${verse.reference}`}

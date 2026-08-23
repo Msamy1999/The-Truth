@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { SiteBrand } from "@/components/layout/SiteBrand";
 import { primaryNavItems } from "@/lib/navigation";
+import { AnalyticsPreferences } from "@/components/analytics/AnalyticsConsent";
 
 export function SiteFooter() {
   return (
@@ -45,6 +46,13 @@ export function SiteFooter() {
             >
               Search
             </Link>
+            <Link
+              href="/privacy"
+              className="inline-flex rounded-sm no-underline hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              Privacy
+            </Link>
+            <AnalyticsPreferences />
           </div>
         </div>
       </Container>

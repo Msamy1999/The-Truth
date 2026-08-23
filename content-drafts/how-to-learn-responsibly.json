@@ -1,75 +1,67 @@
 {
   "slug": "how-to-learn-responsibly",
   "title": "How to Learn Responsibly About Palestine",
-  "subtitle": "A practical method for sources, images, dates, and uncertainty",
+  "subtitle": "A practical method for checking reports, images, dates, and claims",
   "category": "sources",
   "audienceLevel": "beginner",
-  "summary": "Information about Palestine can be emotionally powerful and rapidly shared. This draft gives a simple method for checking authorship, dates, evidence, imagery, and uncertainty before accepting or passing on a claim.",
-  "tags": [
-    "Sources",
-    "Questions",
-    "History"
-  ],
+  "summary": "Palestine is surrounded by fast-moving claims and powerful images. A responsible reader checks the original source, date, location, evidence, and independent confirmation before believing or sharing a report.",
+  "tags": ["Sources", "Questions", "History"],
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "Understanding How to Learn Responsibly About Palestine",
+      "title": "Check Before You Share",
       "kind": "summary",
-      "body": "Information about Palestine can be emotionally powerful and rapidly shared. This draft gives a simple method for checking authorship, dates, evidence, imagery, and uncertainty before accepting or passing on a claim."
+      "body": "Care for Palestinians should deepen a commitment to truth, not weaken it. The Quran warns believers to investigate reports so that people are not harmed through ignorance (Quran 49:6). A false caption or invented quotation can damage innocent people and discredit a just concern."
     },
     {
-      "sectionId": "beginner-summary",
-      "title": "In Plain Words",
-      "kind": "summary",
-      "body": "Slow down before sharing. Ask who made the claim, when it was made, what evidence it gives, and whether an independent source confirms it. A true concern for people does not require repeating an unverified claim.\n\nThe same standards should be used for sources that agree with you and sources that do not. That is how a reader protects both truth and human dignity."
-    },
-    {
-      "sectionId": "five-questions",
-      "title": "Five Questions to Ask",
+      "sectionId": "five-checks",
+      "title": "Five Quick Checks",
       "kind": "sources",
-      "body": "First, who is the original source: a witness, an official body, a researcher, or an account repeating someone else? Second, what is the date and location? Third, what evidence is provided, and can it be checked? Fourth, does the wording distinguish fact, allegation, and opinion? Fifth, has a credible independent source confirmed the central claim?\n\nImages and video require extra care. A real image may be old, from another location, cropped, or paired with a false caption. If the original cannot be located, describe it as unverified rather than treating it as proof."
+      "body": "Ask five questions: Who first made the claim? When and where did the event occur? What evidence is shown? Does the source distinguish fact from allegation or opinion? Has a credible, independent source confirmed the central point?\n\nFor photographs and videos, find the earliest upload and check whether the image is old, cropped, or from another place. For numbers, identify who produced them, what they count, and whether later revisions exist. Until a claim is verified, label it honestly as unconfirmed."
     },
     {
-      "sectionId": "reading-across-difference",
-      "title": "Read Across Difference",
+      "sectionId": "source-balance",
+      "title": "Use the Right Source for the Question",
       "kind": "notes",
-      "body": "Read primary documents where possible, then compare historians, legal scholars, human-rights organizations, and reporting organizations with transparent methods. Notice what a source is qualified to establish and what it is not. A devotional text can explain a community's religious attachment; it cannot by itself settle a disputed historical claim.\n\nResponsible learning does not mean pretending every claim has equal evidence. It means stating the evidence, the source's perspective, and any uncertainty plainly."
-    },
-    {
-      "sectionId": "worked-example",
-      "title": "A Worked Example",
-      "kind": "interpretation",
-      "body": "Suppose a post shares a photograph and says it was taken in a particular city during a particular week. First locate the earliest upload, inspect image-search or metadata evidence where available, and compare the visible landmarks with older photographs. Then check whether a reputable news organization, eyewitness account, or official record confirms the date and place. Until that chain is established, the careful description is 'the image's date and location are unverified'—not 'the image proves the claim.'\n\nThe same method applies to casualty figures or quotations. Record who first made the assertion, distinguish a reported number from a confirmed number, and check whether independent sources are actually independent rather than repeating one another."
+      "body": "Primary documents establish what an institution officially said. Historians reconstruct events from many records. Human-rights investigators assess evidence under stated methods. News reports document events as information emerges. Religious texts explain why a place or cause matters to believers. No single source type answers every question.\n\nApply the same standard to claims that support one's position and claims that challenge it. Responsible learning is not false neutrality; it is disciplined truthfulness."
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "Key Takeaways: How to Learn Responsibly About Palestine",
+      "title": "Truthful Advocacy Is Stronger Advocacy",
       "kind": "summary",
-      "body": "Reliable investigation of Islam requires primary texts, transparent source labels, and honest acknowledgment of uncertainty; careful method serves the truth-seeking question rather than replacing it.\n\nInformation about Palestine can be emotionally powerful and rapidly shared. This draft gives a simple method for checking authorship, dates, evidence, imagery, and uncertainty before accepting or passing on a claim."
+      "body": "The most helpful advocate is careful with evidence, transparent about uncertainty, and unwilling to use another person's suffering as a slogan. Verify first, speak precisely, correct mistakes openly, and keep human dignity at the center."
     }
   ],
-  "quranVerses": [],
-  "bibleVerses": [],
-  "relatedSlugs": [
-    "source-library-for-palestine",
-    "human-dignity-and-justice",
-    "who-are-the-people-of-palestine"
+  "quranVerses": [
+    {
+      "surahName": "Al-Hujurat",
+      "surahNumber": 49,
+      "ayahNumber": 6,
+      "reference": "Quran 49:6",
+      "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِن جَآءَكُمْ فَاسِقٌۢ بِنَبَإٍۢ فَتَبَيَّنُوٓا۟ أَن تُصِيبُوا۟ قَوْمًۢا بِجَهَٰلَةٍۢ فَتُصْبِحُوا۟ عَلَىٰ مَا فَعَلْتُمْ نَٰدِمِينَ",
+      "translation": "O you who have believed, if there comes to you a disobedient one with information, investigate, lest you harm a people out of ignorance and become, over what you have done, regretful.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    }
   ],
+  "bibleVerses": [],
+  "relatedSlugs": ["source-library-for-palestine", "human-dignity-and-justice", "who-are-the-people-of-palestine"],
   "furtherReading": [
     {
       "title": "Verification Handbook",
       "author": "Craig Silverman, editor",
       "publisher": "European Journalism Centre",
       "year": 2014,
-      "note": "A practical open handbook on verifying digital content and user-generated material.",
+      "note": "A practical open handbook for verifying digital and user-generated material.",
       "url": "https://verificationhandbook.com/"
     },
     {
-      "title": "News Literacy: Helping Students and Teachers Decode Fake News",
-      "author": "Alan C. November",
-      "publisher": "Corwin",
-      "year": 2018,
-      "note": "A practical introduction to evaluating online information; apply its methods alongside subject-specific expertise."
+      "title": "Palestine: A Guide to Reliable UN Records",
+      "author": "United Nations",
+      "publisher": "UNISPAL",
+      "year": 2026,
+      "note": "A searchable collection of official UN documents and a dated historical timeline.",
+      "url": "https://www.un.org/unispal/timeline/"
     }
   ],
   "faq": []

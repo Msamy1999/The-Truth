@@ -1,10 +1,10 @@
 {
   "slug": "why-palestine-matters-to-muslims",
   "title": "Why Palestine Matters to Muslims",
-  "subtitle": "Religious connection, human concern, and careful distinctions",
+  "subtitle": "Why Muslims love Al-Aqsa and seek justice for Palestine",
   "category": "religious-history",
   "audienceLevel": "beginner",
-  "summary": "For many Muslims, Palestine matters because of the religious importance of Jerusalem and Al-Aqsa, the history of Muslim communities in the region, and concern for human dignity. These reasons should be explained without treating political claims as religious facts or treating people as symbols.",
+  "summary": "Palestine matters to Muslims because Al-Aqsa is a blessed sanctuary tied to the Prophet's night journey, the history of revelation, and the first direction of prayer. Islam also commands Muslims to defend justice, protect human dignity, and speak truthfully about the suffering of the oppressed.",
   "tags": [
     "History",
     "Theology",
@@ -13,36 +13,61 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "Understanding Why Palestine Matters to Muslims",
+      "title": "Why Palestine Matters to Muslims",
       "kind": "summary",
-      "body": "For many Muslims, Palestine matters because of the religious importance of Jerusalem and Al-Aqsa, the history of Muslim communities in the region, and concern for human dignity. These reasons should be explained without treating political claims as religious facts or treating people as symbols."
-    },
-    {
-      "sectionId": "beginner-summary",
-      "title": "In Plain Words",
-      "kind": "summary",
-      "body": "Muslims commonly speak about Palestine with special concern because Jerusalem and Al-Aqsa have a central place in Islamic memory and worship. That concern can include love of sacred places, solidarity with people facing hardship, and a desire for justice. It does not require Muslims to ignore the dignity, grief, or religious attachments of anyone else."
+      "body": "Muslims speak about Palestine with special concern because Jerusalem and Al-Aqsa have a central place in Islamic faith and history. That concern includes love for a sacred place, solidarity with people facing displacement or injustice, and a desire for peace rooted in truth. It does not require Muslims to ignore the dignity, grief, or religious attachments of anyone else."
     },
     {
       "sectionId": "religious-connection",
       "title": "Religious Connection",
       "kind": "interpretation",
-      "body": "The Qur'an refers to the Prophet Muhammad's night journey from the Sacred Mosque to the farthest mosque in the opening verse of Surah al-Isra. Muslim interpretation identifies that farthest mosque with the sanctuary in Jerusalem, and this reading gives Al-Aqsa lasting religious significance. Jerusalem is also connected in Islamic tradition with earlier prophets honored in Islam.\n\nThese are religious claims and inherited practices. They should be presented as such, while historical questions about buildings, sites, and changing institutions are investigated through evidence and cited scholarship."
+      "body": "The Quran says that Allah took His servant by night from the Sacred Mosque to the Farthest Mosque, whose surroundings He blessed (Quran 17:1). Muslim hadith and tafsir identify the Farthest Mosque with the sanctuary in Jerusalem. Al-Aqsa is also linked in Islamic tradition with earlier prophets and with the first direction of prayer. This religious connection is why Muslims love the site and feel responsible for its protection."
     },
     {
       "sectionId": "ethical-connection",
       "title": "Religious Concern Must Remain Ethical",
       "kind": "notes",
-      "body": "Islamic concern for a place must not erase concern for people. Muslims can care about Al-Aqsa, Palestinian communities, and justice while refusing collective blame, anti-Jewish hatred, anti-Christian hostility, or unverified stories. Compassion is not weakened by accuracy; it depends on it.\n\nReligious devotion should be distinguished from factual claims that require reliable evidence. Muslims may disagree about political analysis while maintaining the shared obligation to speak truthfully and act with dignity."
+      "body": "Islamic concern for a sacred place must remain concern for people. The Quran commands justice even when emotions are strong: \"do not let the hatred of a people prevent you from being just\" (Quran 5:8). Muslims should oppose oppression and protect civilians while rejecting anti-Jewish hatred, anti-Christian hostility, collective blame, and unverified stories. Compassion is not weakened by accuracy; it depends on it.\n\nThe Quran also describes people expelled from their homes and mentions monasteries, churches, synagogues, and mosques as places where God's name is remembered (Quran 22:40). A Muslim response to Palestine should therefore combine love of Al-Aqsa with worship, truthful speech, mercy, and practical concern for every innocent person."
     },
     {
       "sectionId": "seeker-conclusion",
       "title": "Key Takeaways: Why Palestine Matters to Muslims",
       "kind": "summary",
-      "body": "Religious history supplies context for how communities transmitted and interpreted their teachings, but historical development is not the same thing as proof or disproof of revelation.\n\nFor many Muslims, Palestine matters because of the religious importance of Jerusalem and Al-Aqsa, the history of Muslim communities in the region, and concern for human dignity. These reasons should be explained without treating political claims as religious facts or treating people as symbols."
+      "body": "Palestine matters to Muslims because Al-Aqsa is a blessed sanctuary connected to the Prophet's night journey and the history of revelation. It also matters because Islam commands justice, protection of human dignity, and truthful concern for people facing oppression. A sincere Muslim response holds both commitments together: honor Al-Aqsa and stand for justice without hatred, falsehood, or harm to the innocent."
     }
   ],
-  "quranVerses": [],
+  "quranVerses": [
+    {
+      "surahName": "Al-Isra",
+      "surahNumber": 17,
+      "ayahNumber": 1,
+      "reference": "Quran 17:1",
+      "arabic": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ سُبْحَٰنَ ٱلَّذِىٓ أَسْرَىٰ بِعَبْدِهِۦ لَيْلًۭا مِّنَ ٱلْمَسْجِدِ ٱلْحَرَامِ إِلَى ٱلْمَسْجِدِ ٱلْأَقْصَا ٱلَّذِى بَٰرَكْنَا حَوْلَهُۥ لِنُرِيَهُۥ مِنْ ءَايَٰتِنَآ ۚ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ",
+      "translation": "Exalted is He who took His Servant by night from al-Masjid al-Haram to al-Masjid al-Aqsa, whose surroundings We have blessed, to show him of Our signs. Indeed, He is the Hearing, the Seeing.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Maidah",
+      "surahNumber": 5,
+      "ayahNumber": 8,
+      "reference": "Quran 5:8",
+      "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُونُوا۟ قَوَّٰمِينَ لِلَّهِ شُهَدَآءَ بِٱلْقِسْطِ ۖ وَلَا يَجْرِمَنَّكُمْ شَنَـَٔانُ قَوْمٍ عَلَىٰٓ أَلَّا تَعْدِلُوا۟ ۚ ٱعْدِلُوا۟ هُوَ أَقْرَبُ لِلتَّقْوَىٰ ۖ وَٱتَّقُوا۟ ٱللَّهَ ۚ إِنَّ ٱللَّهَ خَبِيرٌۢ بِمَا تَعْمَلُونَ",
+      "translation": "O you who have believed, be persistently standing firm for Allah, witnesses in justice, and do not let the hatred of a people prevent you from being just. Be just; that is nearer to righteousness. And fear Allah; indeed, Allah is Acquainted with what you do.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Hajj",
+      "surahNumber": 22,
+      "ayahNumber": 40,
+      "reference": "Quran 22:40",
+      "arabic": "ٱلَّذِينَ أُخْرِجُوا۟ مِن دِيَٰرِهِم بِغَيْرِ حَقٍّ إِلَّآ أَن يَقُولُوا۟ رَبُّنَا ٱللَّهُ ۗ وَلَوْلَا دَفْعُ ٱللَّهِ ٱلنَّاسَ بَعْضَهُم بِبَعْضٍۢ لَّهُدِّمَتْ صَوَٰمِعُ وَبِيَعٌۭ وَصَلَوَٰتٌۭ وَمَسَٰجِدُ يُذْكَرُ فِيهَا ٱسْمُ ٱللَّهِ كَثِيرًۭا ۗ وَلَيَنصُرَنَّ ٱللَّهُ مَن يَنصُرُهُۥٓ ۗ إِنَّ ٱللَّهَ لَقَوِىٌّ عَزِيزٌ",
+      "translation": "[They are] those who have been evicted from their homes without right - only because they say, \"Our Lord is Allah.\" And were it not that Allah checks the people, some by means of others, there would have been demolished monasteries, churches, synagogues, and mosques in which the name of Allah is much mentioned. And Allah will surely support those who support Him. Indeed, Allah is Powerful and Exalted in Might.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    }
+  ],
   "bibleVerses": [],
   "relatedSlugs": [
     "jerusalem-and-al-aqsa",
@@ -55,14 +80,16 @@
       "author": "Angelika Neuwirth",
       "publisher": "Routledge",
       "year": 2016,
-      "note": "A scholarly discussion of Qur'anic and early Islamic approaches to Jerusalem; consult the full bibliographic context before relying on a single interpretation."
+      "note": "A scholarly discussion of Quranic and early Islamic approaches to Jerusalem; read it with the Quran, hadith, and wider scholarship.",
+      "url": "https://www.routledge.com/Jerusalem-in-the-Quran/Neuwirth/p/book/9781138242342"
     },
     {
       "title": "The History of al-Tabari, Volume VI: Muhammad at Mecca",
       "author": "al-Tabari, translated by W. Montgomery Watt and M. V. McDonald",
       "publisher": "State University of New York Press",
       "year": 1988,
-      "note": "An English translation of an important classical historical source; it records tradition and requires historical comparison rather than uncritical use."
+      "note": "An English translation of an important classical historical source for the Prophet's early life; it records transmitted reports that should be read with source criticism.",
+      "url": "https://sunypress.edu/Books/T/The-History-of-al-Tabari-Volume-VI"
     }
   ],
   "faq": []

@@ -101,6 +101,16 @@
   ],
   "quranVerses": [
     {
+      "surahName": "Az-Zukhruf",
+      "surahNumber": 43,
+      "ayahNumber": 61,
+      "reference": "Quran 43:61",
+      "arabic": "وَإِنَّهُۥ لَعِلْمٌۭ لِّلسَّاعَةِ فَلَا تَمْتَرُنَّ بِهَا وَٱتَّبِعُونِ ۚ هَٰذَا صِرَٰطٌۭ مُّسْتَقِيمٌۭ",
+      "translation": "And indeed, Jesus will be [a sign for] knowledge of the Hour, so be not in doubt of it, and follow Me. This is a straight path.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
       "surahName": "Aal-i-Imraan",
       "surahNumber": 3,
       "ayahNumber": 45,

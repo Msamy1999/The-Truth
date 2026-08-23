@@ -72,10 +72,20 @@
       "sectionId": "seeker-conclusion",
       "title": "The Islamic Conclusion",
       "kind": "summary",
-      "body": "Islam honors the biblical prophets and has no reason to reject genuine historical evidence. At the same time, the existence of David, Pilate, Paul, or early Christian belief does not establish the Trinity, incarnation, or atoning crucifixion. The Quran invites a more direct return to the message shared by the prophets: worship the one God, receive His guidance, repent to Him, and judge later religious claims by the revelation He has preserved."
+      "body": "Islam honors the biblical prophets and has no reason to reject genuine historical evidence. At the same time, the existence of David, Pilate, Paul, or early Christian belief does not establish the Trinity, incarnation, or atoning crucifixion. The Quran invites a direct return to the message shared by the prophets: worship the one God, receive His guidance, repent to Him, and judge later religious claims by the revelation He has preserved. This approach respects history while leading the seeker back to the central question of whom humanity should worship."
     }
   ],
-  "quranVerses": [
+ "quranVerses": [
+    {
+      "surahName": "Al-Maaida",
+      "surahNumber": 5,
+      "ayahNumber": 48,
+      "reference": "Quran 5:48",
+      "arabic": "وَأَنزَلْنَآ إِلَيْكَ ٱلْكِتَٰبَ بِٱلْحَقِّ مُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ مِنَ ٱلْكِتَٰبِ وَمُهَيْمِنًا عَلَيْهِ ۖ فَٱحْكُم بَيْنَهُم بِمَآ أَنزَلَ ٱللَّهُ ۖ وَلَا تَتَّبِعْ أَهْوَآءَهُمْ عَمَّا جَآءَكَ مِنَ ٱلْحَقِّ ۚ لِكُلٍّۢ جَعَلْنَا مِنكُمْ شِرْعَةًۭ وَمِنْهَاجًۭا ۚ وَلَوْ شَآءَ ٱللَّهُ لَجَعَلَكُمْ أُمَّةًۭ وَٰحِدَةًۭ وَلَٰكِن لِّيَبْلُوَكُمْ فِى مَآ ءَاتَىٰكُمْ ۖ فَٱسْتَبِقُوا۟ ٱلْخَيْرَٰتِ ۚ إِلَى ٱللَّهِ مَرْجِعُكُمْ جَمِيعًۭا فَيُنَبِّئُكُم بِمَا كُنتُمْ فِيهِ تَخْتَلِفُونَ",
+      "translation": "And We have revealed to you, [O Muhammad], the Book in truth, confirming that which preceded it of the Scripture and as a criterion over it. So judge between them by what Allah has revealed and do not follow their inclinations away from what has come to you of the truth. To each of you We prescribed a law and a method. Had Allah willed, He would have made you one nation [united in religion], but [He intended] to test you in what He has given you; so race to [all that is] good. To Allah is your return all together, and He will [then] inform you concerning that over which you used to differ.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
     {
       "surahName": "Saad",
       "surahNumber": 38,

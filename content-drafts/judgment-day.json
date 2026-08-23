@@ -113,6 +113,26 @@
   ],
   "quranVerses": [
     {
+      "surahName": "Aal-i-Imraan",
+      "surahNumber": 3,
+      "ayahNumber": 185,
+      "reference": "Quran 3:185",
+      "arabic": "كُلُّ نَفْسٍۢ ذَآئِقَةُ ٱلْمَوْتِ ۗ وَإِنَّمَا تُوَفَّوْنَ أُجُورَكُمْ يَوْمَ ٱلْقِيَٰمَةِ ۖ فَمَن زُحْزِحَ عَنِ ٱلنَّارِ وَأُدْخِلَ ٱلْجَنَّةَ فَقَدْ فَازَ ۗ وَمَا ٱلْحَيَوٰةُ ٱلدُّنْيَآ إِلَّا مَتَٰعُ ٱلْغُرُورِ",
+      "translation": "Every soul will taste death, and you will only be given your [full] compensation on the Day of Resurrection. So he who is drawn away from the Fire and admitted to Paradise has attained [his desire]. And what is the life of this world except the enjoyment of delusion.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Infitaar",
+      "surahNumber": 82,
+      "ayahNumber": 5,
+      "reference": "Quran 82:5",
+      "arabic": "عَلِمَتْ نَفْسٌۭ مَّا قَدَّمَتْ وَأَخَّرَتْ",
+      "translation": "A soul will [then] know what it has put forth and kept back.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
       "surahName": "Al-Waaqia",
       "surahNumber": 56,
       "ayahNumber": 1,

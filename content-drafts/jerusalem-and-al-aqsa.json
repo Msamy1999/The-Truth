@@ -1,10 +1,10 @@
 {
   "slug": "jerusalem-and-al-aqsa",
   "title": "Jerusalem and Al-Aqsa",
-  "subtitle": "Religious significance, shared attachments, and historical context",
+  "subtitle": "Why Al-Aqsa matters in Islam and how to discuss Jerusalem with justice",
   "category": "religious-history",
   "audienceLevel": "beginner",
-  "summary": "Jerusalem has profound religious importance for Muslims, Jews, and Christians. This draft explains the Islamic significance of Al-Aqsa while keeping religious tradition, historical evidence, and present-day political claims clearly distinct.",
+  "summary": "Jerusalem and Al-Aqsa hold a unique place in Islamic faith and history. The Quran connects the Prophet's night journey to the Farthest Mosque, and Muslims honor Jerusalem as a land of prophets and worship. Islam also requires justice and respect for every community connected to the city.",
   "tags": [
     "History",
     "Theology",
@@ -13,42 +13,57 @@
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "Understanding Jerusalem and Al-Aqsa",
+      "title": "Why Jerusalem and Al-Aqsa Matter in Islam",
       "kind": "summary",
-      "body": "Jerusalem has profound religious importance for Muslims, Jews, and Christians. This draft explains the Islamic significance of Al-Aqsa while keeping religious tradition, historical evidence, and present-day political claims clearly distinct."
-    },
-    {
-      "sectionId": "beginner-summary",
-      "title": "In Plain Words",
-      "kind": "summary",
-      "body": "Jerusalem is sacred to more than one religious community. For Muslims, Al-Aqsa is connected to the night journey and to the wider prophetic history honored by Islam. For Jews, the Temple Mount is connected to the biblical temples and Jewish worship. For Christians, Jerusalem is central to the life, crucifixion, and resurrection traditions of Jesus.\n\nRecognising these attachments is not the same as settling every historical or political disagreement. It is the minimum needed to speak about the city accurately and respectfully."
+      "body": "Jerusalem is sacred to more than one religious community. For Muslims, Al-Aqsa is connected to the Prophet's night journey, the earlier prophets, and the first direction of prayer. Recognizing Jewish and Christian attachments does not weaken the Islamic claim; it reflects the Quranic command to speak truthfully and act justly."
     },
     {
       "sectionId": "what-al-aqsa-means",
       "title": "What Muslims Mean by Al-Aqsa",
       "kind": "interpretation",
-      "body": "In common Muslim usage, Al-Aqsa can refer to the mosque building and, more broadly, to the sacred sanctuary compound in Jerusalem. Readers should not assume that every source uses the term in exactly the same architectural or legal sense. A careful article names the source and date, then explains whether it is speaking about a Qur'anic phrase, a mosque building, a sanctuary area, or an administrative institution.\n\nIslamic religious importance is grounded in scripture and tradition; historical details about the development of structures, access, and governance require separately cited historical sources."
+      "body": "In common Muslim usage, Al-Aqsa can refer to the mosque and, more broadly, to the blessed sanctuary compound in Jerusalem. Its religious importance is grounded in the Quran and the Prophet's teachings, while details about buildings, access, and governance belong to history and law. Quran 22:40 names monasteries, churches, synagogues, and mosques when explaining the protection of places where Allah is worshipped. Muslims do not treat Al-Aqsa as sacred because of a modern political slogan; they honor it as part of the prophetic inheritance."
     },
     {
       "sectionId": "isra-and-miraj",
       "title": "The Isra and Mi'raj in Islamic Sources",
       "kind": "scripture",
-      "body": "The Qur'an's opening verse of Surah 17 describes God's night journey with His servant from the Sacred Mosque to the Farthest Mosque. The Qur'an does not name Jerusalem in that verse; Muslim hadith and centuries of tafsir identify the Farthest Mosque with the sanctuary in Jerusalem and connect the journey with the Prophet's ascent (Mi'raj). The Qur'anic wording should therefore be distinguished from the fuller details preserved in hadith and later interpretation.\n\nThis episode explains why Jerusalem is sacred in Islam, alongside its connection to earlier prophets and the first direction of prayer. It establishes religious significance; it does not by itself settle modern questions of sovereignty, archaeology, or exclusive political ownership."
+      "body": "The Quran says that Allah took His servant by night from the Sacred Mosque to the Farthest Mosque, whose surroundings He blessed (Quran 17:1). Muslim hadith and tafsir identify the Farthest Mosque with the sanctuary in Jerusalem and connect the journey with the Prophet's ascent, the Mi'raj. This is a foundational reason Muslims love Al-Aqsa. It establishes religious significance; questions of modern sovereignty and archaeology must be discussed with historical evidence and without denying the dignity of the people who live there."
     },
     {
       "sectionId": "how-to-study",
       "title": "How to Study a Shared Sacred City",
       "kind": "sources",
-      "body": "Use scholarship that distinguishes archaeology, religious tradition, law, and political advocacy. Read writers from more than one community, consult primary texts in reliable editions, and check whether a claim is about an ancient period, a later institution, or a present-day event.\n\nThe city deserves precision. Sweeping statements about who has no connection to Jerusalem are historically and religiously careless, and they make serious conversation impossible."
+      "body": "Study Jerusalem through more than one kind of source: Quran and hadith for Islamic belief, archaeology and documentary history for the past, and reliable reporting for the present. Do not confuse a religious conviction with a claim that requires historical evidence. The city deserves precision, and no political argument justifies hatred of Jews, Christians, Muslims, or any civilian population."
     },
     {
       "sectionId": "seeker-conclusion",
       "title": "Key Takeaways: Jerusalem and Al-Aqsa",
       "kind": "summary",
-      "body": "Religious history supplies context for how communities transmitted and interpreted their teachings, but historical development is not the same thing as proof or disproof of revelation.\n\nJerusalem has profound religious importance for Muslims, Jews, and Christians. This draft explains the Islamic significance of Al-Aqsa while keeping religious tradition, historical evidence, and present-day political claims clearly distinct."
+      "body": "Al-Aqsa matters to Muslims because Allah blessed its surroundings and connected it to the Prophet's night journey and the history of revelation. That devotion should produce worship, truthfulness, protection of sacred places, and justice for people—not hatred or careless claims. Muslims can uphold Al-Aqsa's Islamic significance while acknowledging the city's layered history and treating every innocent person with dignity."
     }
   ],
-  "quranVerses": [],
+  "quranVerses": [
+    {
+      "surahName": "Al-Isra",
+      "surahNumber": 17,
+      "ayahNumber": 1,
+      "reference": "Quran 17:1",
+      "arabic": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ سُبْحَٰنَ ٱلَّذِىٓ أَسْرَىٰ بِعَبْدِهِۦ لَيْلًۭا مِّنَ ٱلْمَسْجِدِ ٱلْحَرَامِ إِلَى ٱلْمَسْجِدِ ٱلْأَقْصَا ٱلَّذِى بَٰرَكْنَا حَوْلَهُۥ لِنُرِيَهُۥ مِنْ ءَايَٰتِنَآ ۚ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ",
+      "translation": "Exalted is He who took His Servant by night from al-Masjid al-Haram to al-Masjid al-Aqsa, whose surroundings We have blessed, to show him of Our signs. Indeed, He is the Hearing, the Seeing.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    },
+    {
+      "surahName": "Al-Hajj",
+      "surahNumber": 22,
+      "ayahNumber": 40,
+      "reference": "Quran 22:40",
+      "arabic": "ٱلَّذِينَ أُخْرِجُوا۟ مِن دِيَٰرِهِم بِغَيْرِ حَقٍّ إِلَّآ أَن يَقُولُوا۟ رَبُّنَا ٱللَّهُ ۗ وَلَوْلَا دَفْعُ ٱللَّهِ ٱلنَّاسَ بَعْضَهُم بِبَعْضٍۢ لَّهُدِّمَتْ صَوَٰمِعُ وَبِيَعٌۭ وَصَلَوَٰتٌۭ وَمَسَٰجِدُ يُذْكَرُ فِيهَا ٱسْمُ ٱللَّهِ كَثِيرًۭا ۗ وَلَيَنصُرَنَّ ٱللَّهُ مَن يَنصُرُهُۥٓ ۗ إِنَّ ٱللَّهَ لَقَوِىٌّ عَزِيزٌ",
+      "translation": "[They are] those who have been evicted from their homes without right - only because they say, \"Our Lord is Allah.\" And were it not that Allah checks the people, some by means of others, there would have been demolished monasteries, churches, synagogues, and mosques in which the name of Allah is much mentioned. And Allah will surely support those who support Him. Indeed, Allah is Powerful and Exalted in Might.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    }
+  ],
   "bibleVerses": [],
   "relatedSlugs": [
     "why-palestine-matters-to-muslims",
@@ -61,14 +76,16 @@
       "author": "Menachem Klein",
       "publisher": "New York University Press",
       "year": 2001,
-      "note": "A scholarly political history of modern Jerusalem; use it for its documented argument rather than as a substitute for primary sources."
+      "note": "A scholarly political history of modern Jerusalem that helps readers understand the city's modern divisions and competing claims.",
+      "url": "https://nyupress.org/9780814794778/jerusalem-the-contested-city/"
     },
     {
       "title": "Jerusalem: A Biography",
       "author": "Simon Sebag Montefiore",
       "publisher": "Alfred A. Knopf",
       "year": 2011,
-      "note": "A broad narrative history useful for orientation; readers should verify individual claims against specialist scholarship."
+      "note": "A broad narrative history useful for orientation; it should be read alongside specialist scholarship and primary sources.",
+      "url": "https://www.penguinrandomhouse.com/books/215608/jerusalem-by-simon-sebag-montefiore/"
     }
   ],
   "faq": []

@@ -12,7 +12,10 @@ export function VerseCard({ verse, className }: VerseCardProps) {
     });
 
     return (
-      <Card data-read-aloud-block className={cn("p-4 sm:p-5", className)}>
+      <Card
+        data-read-aloud-block
+        className={cn("border-accent/25 p-3.5 sm:p-4", className)}
+      >
         <p className="text-xs font-semibold uppercase tracking-wide text-accent sm:text-sm">
           Quran
         </p>
@@ -21,7 +24,7 @@ export function VerseCard({ verse, className }: VerseCardProps) {
           dir="rtl"
           translate="no"
           data-quran-original
-          className="notranslate mt-2 text-right text-[1.45rem] leading-[1.65] text-accent sm:mt-4 sm:text-3xl sm:leading-loose"
+          className="notranslate mt-2 text-right text-[1.2rem] leading-[1.8] text-accent sm:mt-3 sm:text-[1.4rem] sm:leading-[1.85]"
         >
           {verse.arabic.normalize("NFC")}
         </p>
@@ -31,15 +34,15 @@ export function VerseCard({ verse, className }: VerseCardProps) {
             dir="rtl"
             translate="no"
             data-quran-original
-            className="notranslate mt-1 text-right text-xs font-semibold leading-6 text-accent sm:mt-2 sm:text-sm"
+            className="notranslate mt-1 text-right text-[0.7rem] font-semibold leading-5 text-accent sm:text-xs"
           >
             {arabicReference}
           </p>
         ) : null}
-        <p className="mt-3 text-[0.95rem] leading-7 text-accent sm:mt-4 sm:text-base sm:leading-8">
+        <p className="mt-2.5 text-sm leading-6 text-muted-foreground sm:mt-3 sm:text-[0.95rem] sm:leading-7">
           {verse.translation}
         </p>
-        <div className="mt-3 border-t border-border/70 pt-3 sm:mt-4 sm:border-0 sm:pt-0">
+        <div className="mt-2.5 border-t border-border/70 pt-2.5 sm:mt-3">
           <p className="text-xs font-semibold leading-5 text-foreground sm:text-sm">
             {verse.reference}
           </p>

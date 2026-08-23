@@ -1,75 +1,129 @@
 {
   "slug": "source-library-for-palestine",
   "title": "Source Library for Palestine",
-  "subtitle": "A reading map for primary texts, scholarship, law, and responsible reporting",
+  "subtitle": "A practical reading map for Islamic sources, history, law, and current reporting",
   "category": "sources",
   "audienceLevel": "beginner",
-  "summary": "There is no single neutral source that can answer every question about Palestine. This draft reading map explains what different source types can and cannot establish, so readers can build a careful and balanced research process.",
-  "tags": [
-    "Sources",
-    "History",
-    "Questions"
-  ],
+  "summary": "A reliable study of Palestine needs more than a single article. This guide groups useful primary sources, historical scholarship, legal material, and dated reporting so readers can check claims and understand their limits.",
+  "tags": ["Sources", "History", "Questions"],
   "sections": [
     {
       "sectionId": "seeker-guide",
-      "title": "Understanding Source Library for Palestine",
+      "title": "How to Build a Reliable Reading List",
       "kind": "summary",
-      "body": "There is no single neutral source that can answer every question about Palestine. This draft reading map explains what different source types can and cannot establish, so readers can build a careful and balanced research process."
+      "body": "No single source answers every question about Palestine. A strong reading list combines Islamic scripture and scholarship with historical documents, academic studies, legal findings, and dated reporting. Each source should be identified by its author, purpose, date, and evidence."
     },
     {
-      "sectionId": "beginner-summary",
-      "title": "In Plain Words",
-      "kind": "summary",
-      "body": "Use more than one type of source. Primary documents show what an institution or person said; they do not automatically prove that every claim in the document is correct. Scholarly books can explain context; they still have arguments and limits. Reporting can document recent events; it must be dated and checked.\n\nThe strongest reading list tells you what each item is for instead of treating every link as equal evidence."
+      "sectionId": "verify-reports",
+      "title": "Verify Before Repeating a Claim",
+      "kind": "scripture",
+      "body": "The Qur'an teaches a principle that applies directly to news and social media:\n\n\"O you who have believed, if there comes to you a disobedient one with information, investigate, lest you harm a people out of ignorance and become, over what you have done, regretful.\" (Qur'an 49:6)\n\nCheck the original report, date, location, named sources, and later corrections. When evidence is incomplete, say that it is incomplete. Careful verification is not indifference to suffering; it is part of refusing to harm people through false claims."
     },
     {
-      "sectionId": "source-types",
-      "title": "Build a Balanced Source Set",
+      "sectionId": "islamic-sources",
+      "title": "Islamic Scripture and Scholarship",
       "kind": "sources",
-      "body": "Begin with primary texts in reliable editions: religious texts, legal documents, census records, archives, and official statements. Add peer-reviewed scholarship and books from established academic presses for historical context. For contemporary developments, prefer reporting that gives dates, named sources, corrections, and a clear distinction between verified facts and allegations.\n\nRead more than one scholarly perspective, especially where historians disagree. A source's political or religious perspective should be named rather than hidden, but perspective alone does not decide whether a specific piece of evidence is sound."
+      "body": "Begin with the Quran and soundly transmitted Prophetic teachings when asking why Palestine matters to Muslims. The opening of Surah al-Isra describes the Prophet's night journey to al-Masjid al-Aqsa, while Surah al-Hajj names monasteries, churches, synagogues, and mosques among places whose protection matters. Read these texts with recognized tafsir and responsible scholarship rather than using isolated quotations as political slogans.\n\nFor Islamic law and ethics, distinguish Quranic commands, hadith reports, classical legal reasoning, and modern political claims. They are related, but they are not interchangeable."
     },
     {
-      "sectionId": "using-this-library",
-      "title": "How to Use This Library",
+      "sectionId": "history-and-documents",
+      "title": "History and Primary Documents",
+      "kind": "history",
+      "body": "For modern history, use books that explain the late Ottoman period, the British Mandate, the 1948 Nakba, the 1967 occupation, the PLO, and the Intifadas. Pair a historian's interpretation with primary documents such as mandate records, United Nations resolutions, speeches, agreements, maps, and demographic records. A document proves what an institution recorded or said; it still requires context and comparison.\n\nRashid Khalidi and Beshara Doumani are useful for Palestinian identity and local social history. The United Nations' Palestine portal is useful for locating official documents and timelines. Academic works should be compared where historians disagree."
+    },
+    {
+      "sectionId": "law-and-current-reporting",
+      "title": "Law, Humanitarian Data, and Current Events",
+      "kind": "sources",
+      "body": "For international-law questions, read the actual judgments, advisory opinions, treaty text, and submissions rather than relying on headlines. For humanitarian conditions, prefer dated datasets and methodology notes from organizations such as the UN Office for the Coordination of Humanitarian Affairs and UNRWA. For breaking news, use reporting that names sources, distinguishes confirmed facts from allegations, and corrects errors openly.\n\nLegal and humanitarian sources answer specific questions; they do not by themselves settle every theological, historical, or political question. Keeping those categories separate makes the overall argument stronger."
+    },
+    {
+      "sectionId": "reading-principles",
+      "title": "A Simple Method for Readers",
       "kind": "notes",
-      "body": "This draft list is an entry point, not a certification that every source is complete or impartial. Follow links to the original publisher where possible, retain publication details, and record the page or section supporting a claim. For a high-stakes legal, medical, safety, or current-affairs question, consult qualified professionals and the most recent primary material.\n\nIf a source cannot be checked, say so. Leaving a question open is more honest than filling the gap with certainty."
+      "body": "For any important claim, ask four questions: Who made the claim? What evidence is provided? When was it published or recorded? Can the original material be checked? Then compare at least one source with a different perspective while keeping the evidence, not the label, central.\n\nAvoid anonymous screenshots, undated videos, cropped quotations, and claims that treat all Palestinians, Israelis, Muslims, Jews, or Christians as a single mind. The aim is truthful understanding, protection of human dignity, and moral accountability."
     },
     {
       "sectionId": "seeker-conclusion",
-      "title": "Key Takeaways: Source Library for Palestine",
+      "title": "Key Takeaways: Reading Palestine Responsibly",
       "kind": "summary",
-      "body": "Reliable investigation of Islam requires primary texts, transparent source labels, and honest acknowledgment of uncertainty; careful method serves the truth-seeking question rather than replacing it.\n\nThere is no single neutral source that can answer every question about Palestine. This draft reading map explains what different source types can and cannot establish, so readers can build a careful and balanced research process."
+      "body": "A trustworthy reading process joins faith, evidence, and humility. Read Islamic sources for the moral and religious significance of Palestine, historical scholarship for context, primary documents for what institutions recorded, and current reporting for carefully dated events. Verify before repeating, distinguish fact from interpretation, and keep justice and human dignity at the center."
     }
   ],
-  "quranVerses": [],
-  "bibleVerses": [],
-  "relatedSlugs": [
-    "how-to-learn-responsibly",
-    "jerusalem-and-al-aqsa",
-    "who-are-the-people-of-palestine"
+  "quranVerses": [
+    {
+      "surahName": "Al-Hujurat",
+      "surahNumber": 49,
+      "ayahNumber": 6,
+      "reference": "Quran 49:6",
+      "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِن جَآءَكُمْ فَاسِقٌۢ بِنَبَإٍۢ فَتَبَيَّنُوٓا۟ أَن تُصِيبُوا۟ قَوْمًۢا بِجَهَٰلَةٍۢ فَتُصْبِحُوا۟ عَلَىٰ مَا فَعَلْتُمْ نَٰدِمِينَ",
+      "translation": "O you who have believed, if there comes to you a disobedient one with information, investigate, lest you harm a people out of ignorance and become, over what you have done, regretful.",
+      "translator": "Saheeh International",
+      "sourceAttribution": "api.alquran.cloud — Tanzil Uthmani text; Saheeh International translation"
+    }
   ],
+  "bibleVerses": [],
+  "relatedSlugs": ["how-to-learn-responsibly", "jerusalem-and-al-aqsa", "who-are-the-people-of-palestine", "human-dignity-and-justice"],
   "furtherReading": [
     {
-      "title": "The Question of Palestine",
+      "title": "United Nations: Question of Palestine",
       "author": "United Nations",
       "type": "primaryText",
-      "note": "United Nations portal collecting documents and background material; primary institutional sources should be read with their authorship and mandate in mind.",
+      "note": "Official documents, resolutions, reports, and background material. Read each document with attention to its date, author, and institutional mandate.",
       "url": "https://www.un.org/unispal/"
     },
     {
-      "title": "The Palestine Question in Maps: 1878-2013",
-      "author": "P. R. Kumaraswamy",
-      "publisher": "Routledge",
-      "year": 2015,
-      "note": "A map-based historical reference; maps should be read with their dates, makers, and stated purposes."
+      "title": "United Nations Timeline of the Question of Palestine",
+      "author": "United Nations",
+      "type": "primaryText",
+      "note": "A dated orientation to major developments; use the linked documents for fuller context.",
+      "url": "https://www.un.org/unispal/timeline/"
     },
     {
-      "title": "Palestine and the Arab-Israeli Conflict: A History with Documents",
-      "author": "Charles D. Smith",
-      "publisher": "Bedford/St. Martin's",
-      "year": 2016,
-      "note": "A widely assigned historical survey with documents; compare it with specialist works for particular periods."
+      "title": "Palestinian Identity: The Construction of Modern National Consciousness",
+      "author": "Rashid Khalidi",
+      "publisher": "Columbia University Press",
+      "year": 1997,
+      "note": "A major scholarly study of Palestinian identity and its historical development.",
+      "url": "https://cup.columbia.edu/book/palestinian-identity/9780231105156"
+    },
+    {
+      "title": "Rediscovering Palestine: Merchants and Peasants in Jabal Nablus, 1700–1900",
+      "author": "Beshara B. Doumani",
+      "publisher": "University of California Press",
+      "year": 1995,
+      "note": "A social and economic history that grounds discussion of Palestine in families, towns, trade, and local institutions.",
+      "url": "https://www.ucpress.edu/book/9780520203709/rediscovering-palestine"
+    },
+    {
+      "title": "The Israel-Palestine Conflict: A History",
+      "author": "James L. Gelvin",
+      "publisher": "Cambridge University Press",
+      "year": 2021,
+      "note": "An accessible historical survey that places Palestinian and Israeli national movements in their wider context.",
+      "url": "https://www.cambridge.org/highereducation/books/israel-palestine-conflict/5D389E3231527643CCE3F861003EC172"
+    },
+    {
+      "title": "Armed Struggle and the Search for State",
+      "author": "Yezid Sayigh",
+      "publisher": "Oxford University Press",
+      "year": 1997,
+      "note": "A detailed history of the Palestinian national movement and the PLO.",
+      "url": "https://global.oup.com/academic/product/armed-struggle-and-the-search-for-state-9780198296431"
+    },
+    {
+      "title": "United Nations Office for the Coordination of Humanitarian Affairs: Occupied Palestinian Territory",
+      "author": "United Nations OCHA",
+      "type": "primaryText",
+      "note": "Situation reports, maps, and humanitarian data. Check publication dates and methodology for every statistic.",
+      "url": "https://www.ochaopt.org/"
+    },
+    {
+      "title": "UNRWA: Palestine Refugees",
+      "author": "United Nations Relief and Works Agency",
+      "type": "primaryText",
+      "note": "Official information about the agency's mandate and services to Palestine refugees; distinguish institutional reporting from independent analysis.",
+      "url": "https://www.unrwa.org/palestine-refugees"
     }
   ],
   "faq": []

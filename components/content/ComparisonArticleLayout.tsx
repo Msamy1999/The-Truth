@@ -68,14 +68,14 @@ export function ComparisonArticleLayout({
 
       <section id="scripture-preview" className="scroll-mt-20">
         <div data-read-aloud-block>
-        <PageHeader
-          titleAs="h2"
-          eyebrow="Scripture preview"
-          title="Key passages"
-          subtitle="Read the relevant passages before weighing the interpretations offered below."
-        />
+          <PageHeader
+            titleAs="h2"
+            eyebrow="Scripture preview"
+            title="Key passages"
+            subtitle="Read the relevant passages before weighing the interpretations offered below."
+          />
         </div>
-        <div className="mt-6 grid gap-4 lg:grid-cols-2">
+        <div className="mt-5 grid gap-3 xl:grid-cols-2">
           {comparison.quranVerses.map((verse) => (
             <VerseCard key={`${verse.reference}-${verse.translator}`} verse={verse} />
           ))}

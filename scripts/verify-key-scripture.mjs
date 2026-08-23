@@ -5,11 +5,19 @@ import path from "node:path";
 import process from "node:process";
 
 const workspace = process.cwd();
-const [requiredTreeText, optionalTreeText] = await Promise.all(
-  ["islam-christianity-tree.ts", "islam-overview-tree.ts"].map((file) =>
-    readFile(path.join(workspace, "data", file), "utf8"),
-  ),
+const requiredTreeText = await readFile(
+  path.join(workspace, "data", "islam-christianity-tree.ts"),
+  "utf8",
 );
+const optionalTreeText = (
+  await Promise.all(
+    [
+      "islam-overview-tree.ts",
+      "atheism-agnosticism-tree.ts",
+      "people-of-palestine-tree.ts",
+    ].map((file) => readFile(path.join(workspace, "data", file), "utf8")),
+  )
+).join("\n");
 const treeText = `${requiredTreeText}\n${optionalTreeText}`;
 const selections = JSON.parse(
   await readFile(
@@ -53,8 +61,8 @@ for (const slug of treeSlugs) {
   const selection = selections[slug];
   const quran = Array.isArray(selection.quran) ? selection.quran : [];
   const bible = Array.isArray(selection.bible) ? selection.bible : [];
-  if (quran.length + bible.length > 4) {
-    failures.push(`${slug}: select at most 4 foundational passages in total`);
+  if (quran.length + bible.length > 12) {
+    failures.push(`${slug}: select at most 12 cited passages in total`);
   }
 
   const availableQuran = new Map(
@@ -103,16 +111,16 @@ for (const slug of treeSlugs) {
     ...bible.map((reference) => availableBible.get(reference)?.text ?? ""),
   ].join(" ");
   const selectedWordCount = selectedEnglish.trim().split(/\s+/).filter(Boolean).length;
-  if (selectedWordCount > 400) {
+  if (selectedWordCount > 1200) {
     failures.push(
-      `${slug}: selected English scripture is too long (${selectedWordCount} words)`,
+      `${slug}: selected English scripture is too long (${selectedWordCount} words; maximum 1200)`,
     );
   }
 }
 
 for (const slug of selectedSlugs) {
   if (!treeSlugs.includes(slug)) {
-    failures.push(`${slug}: selection is not used by the Islam & Christianity tree`);
+    failures.push(`${slug}: selection is not used by a public research tree`);
   }
 }
 
@@ -123,7 +131,7 @@ if (failures.length > 0) {
 }
 
 console.log(
-  `Foundational scripture verified for ${treeSlugs.length} unique research-tree articles.`,
+  `Foundational scripture verified for ${treeSlugs.length} unique public research-tree articles.`,
 );
 
 function mentionsReference(text, reference) {

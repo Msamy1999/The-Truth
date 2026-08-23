@@ -13,6 +13,7 @@ export default tseslint.config(
       "public/**",
       // Generated build/report scratch directories, not part of the site.
       ".codex-spreadsheet-build/**",
+      ".codex-quran-audit/**",
       "outputs/**",
       "content-drafts/**",
     ],

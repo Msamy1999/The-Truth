@@ -1,124 +1,51 @@
 import type { GlossaryTerm, TopicTag } from "@/types/domain";
 
-// Developer warning:
-// Glossary definitions are draft, source-pending study aids. Do not treat them
-// as final theological or academic definitions until reliable sources are added.
-
 function term(
   termName: string,
+  pronunciation: string | undefined,
   definition: string,
   category: TopicTag,
   relatedTerms: string[] = [],
-  pronunciation?: string,
 ): GlossaryTerm {
-  return {
-    term: termName,
-    pronunciation,
-    definition,
-    category,
-    relatedTerms,
-    citations: ["citation-needed-general"],
-  };
+  return { term: termName, pronunciation, definition, category, relatedTerms, citations: [] };
 }
 
+/** Public, beginner-friendly definitions used by both the web and mobile apps. */
 export const glossaryTerms: GlossaryTerm[] = [
-  term(
-    "Allah",
-    "Source-pending draft: the Arabic word for God. Future notes should distinguish language, theology, and usage by Arabic-speaking Muslims and Christians.",
-    "Theology",
-    ["Tawhid", "Revelation"],
-    "source pending",
-  ),
-  term(
-    "Tawhid",
-    "Source-pending draft: Islamic monotheism, centered on worshiping God alone. Future definition should cite Quran, hadith, and reliable theology sources.",
-    "Theology",
-    ["Allah", "Shirk", "Trinity"],
-    "source pending",
-  ),
-  term(
-    "Trinity",
-    "Source-pending draft: Christian doctrine about Father, Son, and Holy Spirit. Future definition should cite recognized Christian sources and avoid caricature.",
-    "Theology",
-    ["Tawhid", "Incarnation"],
-    "source pending",
-  ),
-  term(
-    "Incarnation",
-    "Source-pending draft: Christian theological term related to God and Jesus. Future entry should cite Christian sources before comparison.",
-    "Theology",
-    ["Trinity", "Messiah"],
-  ),
-  term(
-    "Messiah",
-    "Source-pending draft: a title used for Jesus in Christian and Islamic discussions. Future entry should define the term from relevant sources.",
-    "Jesus",
-    ["Gospel", "Injil"],
-  ),
-  term(
-    "Gospel",
-    "Source-pending draft: term often used for the message of Jesus or the written Gospel texts, depending on context. Future entry should separate these meanings.",
-    "Scripture",
-    ["Injil", "Canon"],
-  ),
-  term(
-    "Injil",
-    "Source-pending draft: Arabic/Quranic term often translated as Gospel. Future notes should cite Quran references and scholarly explanations.",
-    "Scripture",
-    ["Gospel", "Revelation"],
-  ),
-  term(
-    "Shirk",
-    "Source-pending draft: Islamic theological term related to associating partners with God. Future entry should cite Quran and reliable Islamic sources.",
-    "Theology",
-    ["Tawhid", "Allah"],
-  ),
-  term(
-    "Revelation",
-    "Source-pending draft: divine communication or guidance. Future entry should compare usage in Islam and Christianity with cited sources.",
-    "Scripture",
-    ["Gospel", "Injil"],
-  ),
-  term(
-    "Canon",
-    "Source-pending draft: recognized collection of authoritative scriptures. Future entry should cite sources on biblical canon and Islamic scripture separately.",
-    "History",
-    ["Manuscript", "Gospel"],
-  ),
-  term(
-    "Manuscript",
-    "Source-pending draft: a handwritten textual witness. Future entry should cite manuscript studies before using examples.",
-    "History",
-    ["Canon", "Revelation"],
-  ),
-  term(
-    "Hadith",
-    "Source-pending draft: reports connected to the Prophet Muhammad's words, actions, or approvals. Future entry should cite hadith methodology sources.",
-    "Sources",
-    ["Sunnah"],
-  ),
-  term(
-    "Sunnah",
-    "Source-pending draft: prophetic practice and guidance in Islam. Future entry should distinguish Sunnah from hadith with sources.",
-    "Sources",
-    ["Hadith"],
-  ),
-  term(
-    "Salvation",
-    "Source-pending draft: term for being saved or reaching final success. Future entry should compare Islamic and Christian usage carefully.",
-    "Purpose",
-    ["Atonement", "Original sin"],
-  ),
-  term(
-    "Atonement",
-    "Source-pending draft: Christian theological term connected to sin, forgiveness, and reconciliation. Future entry should cite Christian sources.",
-    "Theology",
-    ["Salvation", "Original sin"],
-  ),
-  term(
-    "Original sin",
-    "Source-pending draft: Christian theological concept related to sin and humanity. Future entry should explain differing Christian views fairly.",
-    "Theology",
-    ["Salvation", "Atonement"],
-  ),
-];
+  term("Ahruf", "AH-roof", "The modes or forms in which the Quran was permitted to be recited during the Prophet Muhammad's lifetime. Muslim scholars differ over their precise nature. Ahruf are related to, but are not identical with, the later canonical qiraat.", "Preservation", ["Qiraat", "Quran"]),
+  term("Allah", "AL-lah", "The Arabic word for the one God. Arabic-speaking Muslims and Christians both use the word. In Islam, Allah is the eternal Creator, unlike creation, without partner or equal, and alone worthy of worship.", "Theology", ["Tawhid", "Shirk", "Ibadah"]),
+  term("Atonement", "uh-TONE-ment", "A Christian theological term for how sin is dealt with and reconciliation with God is achieved, especially through the death of Jesus. Christian traditions explain the mechanism in different ways. Islam teaches forgiveness through sincere repentance, faith, God's mercy, and righteous action rather than inherited guilt or a divine sacrifice.", "Theology", ["Salvation", "Original sin", "Repentance"]),
+  term("Canon", "KAN-un", "A recognized collection of writings treated by a religious community as authoritative scripture. The biblical canon developed through a long history and differs slightly among Christian traditions.", "History", ["Gospel", "Manuscript", "Revelation"]),
+  term("Dhikr", "THIKR", "Remembering Allah through praise, gratitude, repentance, Quran recitation, and taught phrases. Dhikr may be practiced at set times or throughout ordinary daily life.", "Purpose", ["Dua", "Ibadah", "Salah"]),
+  term("Dua", "doo-AH", "Personal supplication to Allah. A Muslim may ask directly for guidance, forgiveness, protection, lawful needs, or help for others without a priest or divine intermediary.", "Purpose", ["Dhikr", "Salah", "Tawhid"]),
+  term("Fiqh", "FIKH", "Human understanding of Islamic practical rulings derived from the Quran, the Sunnah, and recognized legal methods. Fiqh can contain scholarly disagreement; it should not be confused with revelation itself.", "Theology", ["Sharia", "Hadith", "Sunnah"]),
+  term("Gospel", "GOS-pel", "A word that can mean the good news preached by Jesus or one of the written New Testament accounts about his life and teaching. The four canonical Gospels are Matthew, Mark, Luke, and John.", "Scripture", ["Injil", "Canon", "Messiah"]),
+  term("Hadith", "ha-DEETH", "A report describing a saying, action, approval, or characteristic connected to the Prophet Muhammad. Hadith scholars examine chains of transmission and wording to grade reports; not every attributed report is authentic.", "Sources", ["Sunnah", "Isnad", "Fiqh"]),
+  term("Hajj", "HAJJ", "The pilgrimage to the Sacred House in Mecca performed during the appointed days by Muslims who are physically and financially able. It is one of Islam's five pillars.", "Purpose", ["Ibadah", "Ummah"]),
+  term("Ibadah", "ee-BAH-dah", "Worshipful service and willing devotion to Allah. It includes prayer and fasting, but also lawful daily actions performed sincerely and ethically for God.", "Purpose", ["Tawhid", "Salah", "Dhikr"]),
+  term("Incarnation", "in-kar-NAY-shun", "The Christian doctrine that the eternal Son or Word became human in Jesus while remaining divine. Islam honors Jesus as Messiah and prophet but rejects the claim that God became a human being.", "Theology", ["Trinity", "Messiah", "Tawhid"]),
+  term("Injil", "in-JEEL", "The revelation that the Quran says Allah gave to Jesus. Muslims distinguish this original divine revelation from the later written Gospel books, while recognizing that those books may preserve material about Jesus.", "Scripture", ["Gospel", "Revelation", "Messiah"]),
+  term("Isnad", "is-NAAD", "The chain of named transmitters through whom a hadith was reported. Hadith criticism studies whether those transmitters could have met, were reliable, and transmitted the report consistently.", "Sources", ["Hadith", "Sunnah"]),
+  term("Jihad", "ji-HAAD", "Striving or struggling in the way of Allah. Depending on context, it can include moral self-discipline, speaking truth, serving others, or lawful armed struggle. It does not mean unrestricted violence, and Islamic law forbids aggression and the deliberate killing of civilians.", "Theology", ["Sharia", "Taqwa"]),
+  term("Manuscript", "MAN-yuh-script", "A handwritten copy or fragment of a text. Manuscripts help scholars study a work's wording, date, physical production, and transmission history.", "History", ["Canon", "Qiraat", "Revelation"]),
+  term("Messiah", "muh-SY-uh", "A title applied to Jesus in both Christianity and Islam. Christians commonly understand it through Jesus's divine sonship and saving death; Muslims honor Jesus as the human Messiah and messenger of Allah.", "Jesus", ["Injil", "Incarnation", "Prophet"]),
+  term("Original sin", undefined, "A Christian doctrine concerning humanity's fallen condition through Adam's sin. Christian explanations vary. Islam teaches that Adam repented and was forgiven and that no person bears another person's guilt.", "Theology", ["Atonement", "Salvation", "Repentance"]),
+  term("Prophet", "PROF-it", "A human being chosen by God to call people to truth and righteous living. Islam teaches that prophets include Adam, Noah, Abraham, Moses, Jesus, and Muhammad; they are honored servants, not divine beings.", "Prophecy", ["Revelation", "Messiah", "Sunnah"]),
+  term("Qiraat", "qi-raa-AAT", "The canonical Quranic reading traditions transmitted through recognized reciters. They share the Uthmanic consonantal text while preserving limited, received differences in pronunciation, vowels, and occasionally wording.", "Preservation", ["Ahruf", "Quran", "Manuscript"]),
+  term("Quran", "qur-AAN", "The final revelation sent by Allah to the Prophet Muhammad in Arabic and transmitted through memorization and writing. Muslims recite its Arabic wording in worship and use translations to study its meaning.", "Scripture", ["Revelation", "Qiraat", "Tafsir"]),
+  term("Repentance", undefined, "Turning back to Allah by leaving the sin, regretting it, asking forgiveness, and resolving not to return to it. When another person was harmed, sincere repentance also requires restoring rights or repairing the harm where possible.", "Purpose", ["Salvation", "Taqwa", "Atonement"]),
+  term("Revelation", "rev-uh-LAY-shun", "Guidance communicated by God to His prophets. Islam distinguishes revelation from human inspiration and teaches that the Quran is the final, preserved criterion over earlier scriptural claims.", "Scripture", ["Quran", "Injil", "Prophet"]),
+  term("Salah", "sa-LAAH", "The formal Muslim prayer performed at appointed times with recitation, standing, bowing, and prostration. It is one of Islam's five pillars and a direct act of worship to Allah.", "Purpose", ["Ibadah", "Dua", "Dhikr"]),
+  term("Salvation", "sal-VAY-shun", "Deliverance from final loss and entry into God's mercy. Islam joins salvation to faith, repentance, righteous action, and Allah's mercy; no person earns Paradise independently of that mercy.", "Purpose", ["Repentance", "Atonement", "Original sin"]),
+  term("Sawm", "SAWM", "Fasting for Allah, especially the daily fast of Ramadan from dawn to sunset. It trains God-consciousness, self-restraint, gratitude, and concern for people in need.", "Purpose", ["Taqwa", "Ibadah", "Zakah"]),
+  term("Sharia", "sha-REE-ah", "The divinely guided way of life taught through the Quran and the Prophet's Sunnah. It includes worship, ethics, family and social responsibilities, and legal principles. Human legal interpretation of it is called fiqh.", "Theology", ["Fiqh", "Sunnah", "Quran"]),
+  term("Shirk", "SHIRK", "Associating a partner with Allah in worship or giving a created being what belongs uniquely to God. The Quran presents shirk as the opposite of Tawhid.", "Theology", ["Tawhid", "Allah", "Ibadah"]),
+  term("Sunnah", "SOON-nah", "The authoritative teaching and practice of the Prophet Muhammad. Hadith reports are a primary means by which the Sunnah is known, but the two terms are not identical.", "Sources", ["Hadith", "Isnad", "Fiqh"]),
+  term("Tafsir", "taf-SEER", "Explanation and interpretation of the Quran using Arabic language, context, other Quran passages, Prophetic teaching, and scholarly reasoning. A tafsir is human scholarship, not the Quran itself.", "Sources", ["Quran", "Hadith", "Revelation"]),
+  term("Taqwa", "TAQ-wah", "Awareness of Allah that leads a person to obey Him and avoid wrongdoing. It is often translated as God-consciousness, reverence, or mindfulness of God.", "Theology", ["Tawhid", "Sawm", "Repentance"]),
+  term("Tawhid", "taw-HEED", "The absolute oneness of Allah: He alone creates and rules, possesses perfect names and attributes, and deserves every act of worship. Tawhid is the central message of all prophets in Islam.", "Theology", ["Allah", "Shirk", "Ibadah"]),
+  term("Tawrat", "taw-RAAT", "The revelation that the Quran says Allah gave to Moses. Muslims distinguish the original Tawrat from the later textual history of the Torah or Pentateuch while honoring the genuine revelation sent to Moses.", "Scripture", ["Revelation", "Quran", "Canon"]),
+  term("Trinity", "TRIN-ih-tee", "The mainstream Christian doctrine that the one God exists eternally as Father, Son, and Holy Spirit. Christians deny that this means three gods. Islam nevertheless rejects dividing divine identity among three persons and calls people to worship Allah alone.", "Theology", ["Tawhid", "Incarnation", "Allah"]),
+  term("Ummah", "OOM-mah", "A community or people. In common Islamic usage, it often means the worldwide community of Muslims joined by faith despite differences of language, ethnicity, and nationality.", "History", ["Hajj", "Zakah"]),
+  term("Zakah", "za-KAAH", "The obligatory giving of a defined share of qualifying wealth to eligible recipients. It is one of Islam's five pillars and combines worship with social responsibility.", "Purpose", ["Ibadah", "Sawm", "Ummah"]),
+].sort((left, right) => left.term.localeCompare(right.term));

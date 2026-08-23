@@ -4,7 +4,7 @@
  * Arabic ayat embedded directly in article bodies.
  *
  * Usage:
- *   node payload/verify-quran-uthmani.mjs <path-to-quran-uthmani.json>
+ *   node payload/verify-quran-uthmani.mjs <path-to-quran-uthmani.json> [path-to-en-sahih.json]
  *
  * The input is the `quran-uthmani` edition JSON from api.alquran.cloud.
  * Keeping the reference text outside the repository avoids committing a
@@ -18,6 +18,7 @@ import { fileURLToPath } from "url";
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 const draftsDir = path.resolve(dirname, "../content-drafts");
 const sourcePath = process.argv[2];
+const translationSourcePath = process.argv[3];
 
 if (!sourcePath) {
   throw new Error(
@@ -31,6 +32,17 @@ if (!Array.isArray(surahs) || surahs.length !== 114) {
   throw new Error("The source file does not contain the expected 114 surahs.");
 }
 
+const translationSource = translationSourcePath
+  ? JSON.parse(readFileSync(translationSourcePath, "utf8"))
+  : undefined;
+const translationSurahs = translationSource?.data?.surahs;
+if (
+  translationSourcePath &&
+  (!Array.isArray(translationSurahs) || translationSurahs.length !== 114)
+) {
+  throw new Error("The translation source does not contain the expected 114 surahs.");
+}
+
 /** NFC makes equivalent Arabic combining-mark orders compare identically. */
 function normalize(text) {
   return String(text ?? "")
@@ -38,6 +50,22 @@ function normalize(text) {
     .replace(/[\u200B-\u200F\u202A-\u202E\uFEFF\u00A0]/g, "")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function normalizeEnglish(text) {
+  return String(text ?? "")
+    .normalize("NFKC")
+    .toLowerCase()
+    .replace(/[’‘]/g, "'")
+    .replace(/[^a-z0-9' ]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function translationMatches(actual, expected) {
+  const normalizedActual = normalizeEnglish(actual);
+  const normalizedExpected = normalizeEnglish(expected);
+  return normalizedActual === normalizedExpected;
 }
 
 /** Removes layout and ornamental characters for safe partial-ayah matching. */
@@ -137,8 +165,18 @@ function referenceContains(reference, ayahReference) {
 }
 
 const canonicalByReference = new Map();
+const translationByReference = new Map();
 const exactReferenceByText = new Map();
 const compactCanonical = [];
+
+// The AlQuran Cloud Saheeh dataset has a known English typo at 5:90
+// ("stone alters"). Keep the correctly spelled published wording in the site.
+const translationOverrides = new Map([
+  [
+    "5:90",
+    "O you who have believed, indeed, intoxicants, gambling, sacrificing on stone altars to other than Allah, and divining arrows are but defilement from the work of Satan, so avoid it that you may be successful.",
+  ],
+]);
 
 for (const surah of surahs) {
   for (const ayah of surah.ayahs ?? []) {
@@ -150,6 +188,15 @@ for (const surah of surahs) {
       reference,
     ]);
     compactCanonical.push({ reference, text: compactArabic(text) });
+  }
+}
+
+for (const surah of translationSurahs ?? []) {
+  for (const ayah of surah.ayahs ?? []) {
+    translationByReference.set(
+      `${surah.number}:${ayah.numberInSurah}`,
+      normalize(ayah.text),
+    );
   }
 }
 
@@ -179,6 +226,16 @@ for (const file of files) {
     }
     if (normalize(verse.arabic) !== expected) {
       problems.push(`${label}: Arabic text differs from Uthmani source at ${displayedReference}`);
+    }
+    const expectedTranslation =
+      translationOverrides.get(reference) ?? translationByReference.get(reference);
+    if (
+      expectedTranslation &&
+      !translationMatches(verse.translation, expectedTranslation)
+    ) {
+      problems.push(
+        `${label}: English text differs from Saheeh International source at ${displayedReference}`,
+      );
     }
   }
 
@@ -301,6 +358,9 @@ for (const file of files) {
 console.log(`drafts checked: ${files.length}`);
 console.log(`structured Qur'an verses checked: ${structuredCount}`);
 console.log(`Arabic body quotations checked: ${bodyQuoteCount}`);
+if (translationSourcePath) {
+  console.log(`structured English translations checked: ${structuredCount}`);
+}
 
 if (problems.length > 0) {
   console.error(`PROBLEMS (${problems.length}):`);

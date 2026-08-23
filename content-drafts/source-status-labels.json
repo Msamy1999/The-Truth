@@ -31,12 +31,6 @@
       "body": "Every article and every quotation in this library carries a visible status label. Articles move through Draft, Under Review, and Published, while individual citations and scripture quotations are marked Source Pending until they have been checked word-for-word against a named original, at which point they become Verified. No article is published until every citation inside it is verified. This page explains each label, why the system exists, and how you can report an error if you find one."
     },
     {
-      "sectionId": "beginner-summary",
-      "title": "In Brief",
-      "kind": "summary",
-      "body": "Every article in this library carries a status label — Draft, Under Review, or Published — and every quotation inside it carries its own label: Source Pending until it has been checked word-for-word against a named original, then Verified. One hard rule connects them: no article is published until every citation in it is verified.\n\nIf you spot a mistake, you can report it; a confirmed error sends the article back into review."
-    },
-    {
       "sectionId": "introduction",
       "title": "Why a Trust System at All?",
       "kind": "notes",
