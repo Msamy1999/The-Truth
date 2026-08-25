@@ -24,7 +24,7 @@ export function VerseCard({ verse, className }: VerseCardProps) {
           dir="rtl"
           translate="no"
           data-quran-original
-          className="notranslate mt-1.5 text-right text-sm leading-6 text-accent sm:mt-2 sm:text-base sm:leading-7"
+          className="notranslate mt-1.5 text-right text-xs leading-6 text-accent sm:mt-2 sm:text-sm sm:leading-7"
         >
           {verse.arabic.normalize("NFC")}
         </p>

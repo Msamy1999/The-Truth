@@ -497,7 +497,7 @@ function KeyScripturePassages({
       <p className="text-[0.7rem] font-semibold uppercase text-accent sm:text-xs">
         Key passage{verses.length === 1 ? "" : "s"}
       </p>
-      <div className="mt-2 grid grid-cols-[repeat(auto-fit,minmax(min(100%,28rem),1fr))] gap-2.5">
+      <div className="mt-2 grid grid-cols-1 gap-2.5">
         {verses.map((verse) => (
           <VerseCard
             key={`${verse.scripture}-${verse.reference}`}
