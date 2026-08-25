@@ -5,49 +5,53 @@
   "category": "sources",
   "audienceLevel": "beginner",
   "summary": "A reliable study of Palestine needs more than a single article. This guide groups useful primary sources, historical scholarship, legal material, and dated reporting so readers can check claims and understand their limits.",
-  "tags": ["Sources", "History", "Questions"],
+  "tags": [
+    "Sources",
+    "History",
+    "Questions"
+  ],
   "sections": [
     {
       "sectionId": "seeker-guide",
       "title": "How to Build a Reliable Reading List",
       "kind": "summary",
-      "body": "No single source answers every question about Palestine. A strong reading list combines Islamic scripture and scholarship with historical documents, academic studies, legal findings, and dated reporting. Each source should be identified by its author, purpose, date, and evidence."
+      "body": "No single source answers every question about Palestine. A sound list joins Islamic scripture with history, law, study, and dated reports. Note each source's author, purpose, date, and evidence."
     },
     {
       "sectionId": "verify-reports",
       "title": "Verify Before Repeating a Claim",
       "kind": "scripture",
-      "body": "The Qur'an teaches a principle that applies directly to news and social media:\n\n\"O you who have believed, if there comes to you a disobedient one with information, investigate, lest you harm a people out of ignorance and become, over what you have done, regretful.\" (Qur'an 49:6)\n\nCheck the original report, date, location, named sources, and later corrections. When evidence is incomplete, say that it is incomplete. Careful verification is not indifference to suffering; it is part of refusing to harm people through false claims."
+      "body": "The Qur'an teaches a rule for news and social media:\n\n\"O you who have believed, if there comes to you a disobedient one with information, investigate, lest you harm a people out of ignorance and become, over what you have done, regretful.\" (Qur'an 49:6)\n\nA careful review checks the first report, date, place, named sources, and later corrections. If proof is missing, the claim should be marked unverified. Checking claims is part of preventing harm."
     },
     {
       "sectionId": "islamic-sources",
       "title": "Islamic Scripture and Scholarship",
       "kind": "sources",
-      "body": "Begin with the Quran and soundly transmitted Prophetic teachings when asking why Palestine matters to Muslims. The opening of Surah al-Isra describes the Prophet's night journey to al-Masjid al-Aqsa, while Surah al-Hajj names monasteries, churches, synagogues, and mosques among places whose protection matters. Read these texts with recognized tafsir and responsible scholarship rather than using isolated quotations as political slogans.\n\nFor Islamic law and ethics, distinguish Quranic commands, hadith reports, classical legal reasoning, and modern political claims. They are related, but they are not interchangeable."
+      "body": "Begin with the Quran and sound Prophetic teachings when studying Palestine. Surah al-Isra describes the night journey to al-Masjid al-Aqsa. Surah al-Hajj names monasteries, churches, synagogues, and mosques among places worth protecting. Read these texts with trusted tafsir, not isolated slogans.\n\nFor Islamic law, separate Quranic commands, hadith, old legal reasoning, and modern political claims. They are related, but not the same."
     },
     {
       "sectionId": "history-and-documents",
       "title": "History and Primary Documents",
       "kind": "history",
-      "body": "For modern history, use books that explain the late Ottoman period, the British Mandate, the 1948 Nakba, the 1967 occupation, the PLO, and the Intifadas. Pair a historian's interpretation with primary documents such as mandate records, United Nations resolutions, speeches, agreements, maps, and demographic records. A document proves what an institution recorded or said; it still requires context and comparison.\n\nRashid Khalidi and Beshara Doumani are useful for Palestinian identity and local social history. The United Nations' Palestine portal is useful for locating official documents and timelines. Academic works should be compared where historians disagree."
+      "body": "For modern history, use books on the late Ottoman years, the British Mandate, the 1948 Nakba, the 1967 occupation, the PLO, and the Intifadas. Pair a historian's view with first-hand records: mandate files, UN resolutions, speeches, deals, maps, and population records. A document shows what an institution wrote. Context is still needed.\n\nRashid Khalidi and Beshara Doumani discuss Palestinian identity and local history. The UN Palestine portal helps find official records and timelines. Compare books when historians disagree."
     },
     {
       "sectionId": "law-and-current-reporting",
       "title": "Law, Humanitarian Data, and Current Events",
       "kind": "sources",
-      "body": "For international-law questions, read the actual judgments, advisory opinions, treaty text, and submissions rather than relying on headlines. For humanitarian conditions, prefer dated datasets and methodology notes from organizations such as the UN Office for the Coordination of Humanitarian Affairs and UNRWA. For breaking news, use reporting that names sources, distinguishes confirmed facts from allegations, and corrects errors openly.\n\nLegal and humanitarian sources answer specific questions; they do not by themselves settle every theological, historical, or political question. Keeping those categories separate makes the overall argument stronger."
+      "body": "For international law, read judgments, opinions, treaty text, and filings rather than headlines. For aid data, prefer dated figures with methods from OCHA and UNRWA. For breaking news, use reports that name sources, separate facts from claims, and correct errors.\n\nLaw and aid sources answer specific questions. They do not settle every faith, history, or politics question."
     },
     {
       "sectionId": "reading-principles",
       "title": "A Simple Method for Readers",
       "kind": "notes",
-      "body": "For any important claim, ask four questions: Who made the claim? What evidence is provided? When was it published or recorded? Can the original material be checked? Then compare at least one source with a different perspective while keeping the evidence, not the label, central.\n\nAvoid anonymous screenshots, undated videos, cropped quotations, and claims that treat all Palestinians, Israelis, Muslims, Jews, or Christians as a single mind. The aim is truthful understanding, protection of human dignity, and moral accountability."
+      "body": "For an important claim, ask: Who made it? What proof is given? When was it recorded? Can the original be checked? Compare a second view. Keep proof, not labels, central.\n\nAvoid anonymous screenshots, old videos without dates, cropped quotes, and claims that treat whole peoples as one mind. The aim is truth, human dignity, and moral duty."
     },
     {
       "sectionId": "seeker-conclusion",
       "title": "Key Takeaways: Reading Palestine Responsibly",
       "kind": "summary",
-      "body": "A trustworthy reading process joins faith, evidence, and humility. Read Islamic sources for the moral and religious significance of Palestine, historical scholarship for context, primary documents for what institutions recorded, and current reporting for carefully dated events. Verify before repeating, distinguish fact from interpretation, and keep justice and human dignity at the center."
+      "body": "A sound reading process joins faith, proof, and humility. Read Islamic sources for Palestine's religious meaning, historians for context, first-hand records for events, and current reports for dated facts. Check before repeating. Separate fact from opinion. Keep justice and human dignity central."
     }
   ],
   "quranVerses": [
@@ -63,7 +67,12 @@
     }
   ],
   "bibleVerses": [],
-  "relatedSlugs": ["how-to-learn-responsibly", "jerusalem-and-al-aqsa", "who-are-the-people-of-palestine", "human-dignity-and-justice"],
+  "relatedSlugs": [
+    "how-to-learn-responsibly",
+    "jerusalem-and-al-aqsa",
+    "who-are-the-people-of-palestine",
+    "human-dignity-and-justice"
+  ],
   "furtherReading": [
     {
       "title": "United Nations: Question of Palestine",

@@ -75,7 +75,7 @@ export function ComparisonArticleLayout({
             subtitle="Read the relevant passages before weighing the interpretations offered below."
           />
         </div>
-        <div className="mt-5 grid gap-3 xl:grid-cols-2">
+        <div className="mt-4 grid grid-cols-[repeat(auto-fit,minmax(min(100%,28rem),1fr))] gap-2.5">
           {comparison.quranVerses.map((verse) => (
             <VerseCard key={`${verse.reference}-${verse.translator}`} verse={verse} />
           ))}

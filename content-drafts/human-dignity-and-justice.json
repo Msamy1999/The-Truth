@@ -5,13 +5,17 @@
   "category": "questions",
   "audienceLevel": "beginner",
   "summary": "Islam commands Muslims to protect human dignity, establish justice, and speak truthfully—even when discussing people or causes they strongly oppose.",
-  "tags": ["Theology", "Questions", "Sources"],
+  "tags": [
+    "Theology",
+    "Questions",
+    "Sources"
+  ],
   "sections": [
     {
       "sectionId": "seeker-guide",
       "title": "Justice Is an Islamic Obligation",
       "kind": "summary",
-      "body": "Islam does not make justice conditional on nationality, religion, or political sympathy. The Qur'an commands believers to stand firmly for justice and to tell the truth even when it is difficult. This gives Muslims a clear moral framework for speaking about Palestinian lives and every other human life."
+      "body": "Islam does not make justice depend on nationality, faith, or politics. The Qur'an commands firm justice and truthful speech. This gives Muslims a clear way to speak about Palestinian lives and every human life."
     },
     {
       "sectionId": "islamic-ethics",
@@ -29,19 +33,19 @@
       "sectionId": "practical-standards",
       "title": "How to Speak and Act Responsibly",
       "kind": "notes",
-      "body": "Distinguish civilians from governments, armed groups, and political parties. Check the date, location, author, and original evidence behind a claim before repeating it. Do not circulate unverified casualty figures or images, and do not treat another community's suffering as a debating tool.\n\nA faithful response can include sincere prayer, lawful charity through accountable organizations, learning from reliable sources, and principled advocacy. It must not include dehumanization, false testimony, celebration of civilian deaths, or hatred of people because of their identity."
+      "body": "Distinguish civilians from governments, armed groups, and parties. Check a claim's date, place, author, and original proof. Do not spread unverified figures or images. Do not use suffering as a debate tool.\n\nA faithful response may include prayer, lawful charity through accountable groups, sound learning, and principled action. It must reject dehumanization, false testimony, civilian deaths, and identity-based hatred."
     },
     {
       "sectionId": "worked-example",
       "title": "Accountability Without Collective Blame",
       "kind": "argument",
-      "body": "If an armed group attacks civilians, justice requires identifying the responsible actors and condemning the attack. It does not make every member of a surrounding population guilty. If a government uses unlawful force, the same principle applies: distinguish the government's policy, the actions of particular units, and the civilians who may be harmed or may oppose it.\n\nThis distinction strengthens accountability. It protects the innocent, makes moral judgment more precise, and prevents grief from being turned into hatred."
+      "body": "If an armed group attacks civilians, identify those responsible and condemn the attack. Do not make a whole population guilty. If a government uses unlawful force, distinguish its policy, the actions of units, and the civilians who may suffer or oppose it.\n\nThis protects the innocent and prevents grief from becoming hatred."
     },
     {
       "sectionId": "seeker-conclusion",
       "title": "Key Takeaways: Human Dignity and Justice",
       "kind": "summary",
-      "body": "Islam offers a clear standard: honor human life, establish justice, verify claims, and refuse collective blame. The Qur'an requires Muslims to remain just even toward people they oppose. Applying that standard to Palestine means defending the oppressed, condemning attacks on civilians, and speaking truthfully about every side."
+      "body": "Islam offers a clear standard: honor life, establish justice, check claims, and reject collective blame. The Qur'an requires justice even toward opponents. In Palestine, that means defending the oppressed, condemning attacks on civilians, and speaking truthfully about every side."
     }
   ],
   "quranVerses": [
@@ -67,7 +71,12 @@
     }
   ],
   "bibleVerses": [],
-  "relatedSlugs": ["who-are-the-people-of-palestine", "how-to-learn-responsibly", "why-palestine-matters-to-muslims", "source-library-for-palestine"],
+  "relatedSlugs": [
+    "who-are-the-people-of-palestine",
+    "how-to-learn-responsibly",
+    "why-palestine-matters-to-muslims",
+    "source-library-for-palestine"
+  ],
   "furtherReading": [
     {
       "title": "The Qur'an: A New Translation",

@@ -14,9 +14,9 @@ export function VerseCard({ verse, className }: VerseCardProps) {
     return (
       <Card
         data-read-aloud-block
-        className={cn("border-accent/25 p-3.5 sm:p-4", className)}
+        className={cn("border-accent/25 p-3 sm:p-3.5", className)}
       >
-        <p className="text-xs font-semibold uppercase tracking-wide text-accent sm:text-sm">
+        <p className="text-[0.68rem] font-semibold uppercase tracking-wide text-accent sm:text-xs">
           Quran
         </p>
         <p
@@ -24,7 +24,7 @@ export function VerseCard({ verse, className }: VerseCardProps) {
           dir="rtl"
           translate="no"
           data-quran-original
-          className="notranslate mt-2 text-right text-[1.2rem] leading-[1.8] text-accent sm:mt-3 sm:text-[1.4rem] sm:leading-[1.85]"
+          className="notranslate mt-1.5 text-right text-sm leading-6 text-accent sm:mt-2 sm:text-base sm:leading-7"
         >
           {verse.arabic.normalize("NFC")}
         </p>
@@ -34,35 +34,35 @@ export function VerseCard({ verse, className }: VerseCardProps) {
             dir="rtl"
             translate="no"
             data-quran-original
-            className="notranslate mt-1 text-right text-[0.7rem] font-semibold leading-5 text-accent sm:text-xs"
+            className="notranslate mt-0.5 text-right text-[0.65rem] font-semibold leading-4 text-accent sm:text-[0.7rem]"
           >
             {arabicReference}
           </p>
         ) : null}
-        <p className="mt-2.5 text-sm leading-6 text-muted-foreground sm:mt-3 sm:text-[0.95rem] sm:leading-7">
+        <p className="mt-2 text-sm leading-6 text-muted-foreground sm:text-base sm:leading-7">
           {verse.translation}
         </p>
-        <div className="mt-2.5 border-t border-border/70 pt-2.5 sm:mt-3">
-          <p className="text-xs font-semibold leading-5 text-foreground sm:text-sm">
+        <div className="mt-2 border-t border-border/70 pt-2">
+          <p className="text-[0.7rem] font-semibold leading-4 text-foreground sm:text-xs">
             {verse.reference}
           </p>
           <Citation
             source={verse.translator}
             prefix="Translation"
-            className="mt-0.5 leading-5 sm:mt-1 sm:leading-6"
+            className="mt-0.5 text-[0.68rem] leading-4 sm:text-xs sm:leading-5"
           />
         </div>
         {verse.arabicTafsirNote ? (
           <div
             lang="ar"
             dir="rtl"
-            className="mt-3 rounded-md bg-muted p-2.5 text-right text-base leading-8 text-muted-foreground sm:mt-4 sm:p-3 sm:text-lg sm:leading-loose"
+            className="mt-2.5 rounded-md bg-muted p-2 text-right text-sm leading-6 text-muted-foreground sm:text-base sm:leading-7"
           >
             {verse.arabicTafsirNote}
           </div>
         ) : null}
         {verse.notes ? (
-          <div className="mt-3 rounded-md bg-muted p-2.5 text-sm leading-6 text-muted-foreground sm:mt-4 sm:p-3 sm:leading-7">
+          <div className="mt-2.5 rounded-md bg-muted p-2 text-xs leading-5 text-muted-foreground sm:text-sm sm:leading-6">
             {verse.notes}
           </div>
         ) : null}
@@ -71,41 +71,41 @@ export function VerseCard({ verse, className }: VerseCardProps) {
   }
 
   return (
-    <Card data-read-aloud-block className={cn("p-4 sm:p-5", className)}>
-      <p className="text-xs font-semibold uppercase tracking-wide text-accent sm:text-sm">
+    <Card data-read-aloud-block className={cn("p-3 sm:p-3.5", className)}>
+      <p className="text-[0.68rem] font-semibold uppercase tracking-wide text-accent sm:text-xs">
         Bible
       </p>
-      <blockquote className="mt-2 border-l-2 border-accent pl-3 text-[0.95rem] leading-7 text-accent sm:mt-4 sm:pl-4 sm:text-base sm:leading-8">
+      <blockquote className="mt-1.5 border-l-2 border-accent pl-2.5 text-sm leading-6 text-accent sm:mt-2 sm:pl-3 sm:text-base sm:leading-7">
         {verse.text}
       </blockquote>
       {verse.arabicText ? (
         <p
           lang="ar"
           dir="rtl"
-          className="mt-3 text-right text-lg leading-8 text-accent sm:mt-4 sm:text-xl sm:leading-loose"
+          className="mt-2 text-right text-sm leading-6 text-accent sm:text-base sm:leading-7"
         >
           {verse.arabicText}
         </p>
       ) : null}
-      <div className="mt-3 border-t border-border/70 pt-3 sm:mt-4 sm:border-0 sm:pt-0">
-        <p className="text-xs font-semibold leading-5 text-foreground sm:text-sm">
+      <div className="mt-2 border-t border-border/70 pt-2 sm:border-0 sm:pt-0">
+        <p className="text-[0.7rem] font-semibold leading-4 text-foreground sm:text-xs">
           {verse.reference}
         </p>
         <Citation
           source={verse.version}
           prefix="Version"
-          className="mt-0.5 leading-5 sm:mt-1 sm:leading-6"
+          className="mt-0.5 text-[0.68rem] leading-4 sm:text-xs sm:leading-5"
         />
         {verse.arabicSource ? (
           <Citation
             source={verse.arabicSource}
             prefix="Arabic source"
-            className="mt-0.5 leading-5 sm:mt-1 sm:leading-6"
+            className="mt-0.5 text-[0.68rem] leading-4 sm:text-xs sm:leading-5"
           />
         ) : null}
       </div>
       {verse.notes ? (
-        <div className="mt-3 rounded-md bg-muted p-2.5 text-sm leading-6 text-muted-foreground sm:mt-4 sm:p-3 sm:leading-7">
+        <div className="mt-2.5 rounded-md bg-muted p-2 text-xs leading-5 text-muted-foreground sm:text-sm sm:leading-6">
           {verse.notes}
         </div>
       ) : null}

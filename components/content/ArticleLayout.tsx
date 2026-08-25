@@ -493,11 +493,11 @@ function KeyScripturePassages({
   }
 
   return (
-    <div className="mt-6">
-      <p className="text-xs font-semibold uppercase text-accent sm:text-sm">
+    <div className="mt-5">
+      <p className="text-[0.7rem] font-semibold uppercase text-accent sm:text-xs">
         Key passage{verses.length === 1 ? "" : "s"}
       </p>
-      <div className="mt-3 grid gap-3 xl:grid-cols-2">
+      <div className="mt-2 grid grid-cols-[repeat(auto-fit,minmax(min(100%,28rem),1fr))] gap-2.5">
         {verses.map((verse) => (
           <VerseCard
             key={`${verse.scripture}-${verse.reference}`}
