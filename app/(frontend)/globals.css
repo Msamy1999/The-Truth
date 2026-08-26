@@ -55,32 +55,42 @@
     text-rendering: optimizeLegibility;
   }
 
-  /* Keep the on-demand translator invisible while its language control is
-   * driven by our accessible button in the header. */
-  body {
-    top: 0 !important;
-  }
+}
 
-  .goog-te-banner-frame.skiptranslate {
-    display: none !important;
-  }
+/* Keep Google Translate's injected chrome out of the reading experience.
+ * These selectors must stay outside Tailwind layers because the elements are
+ * created at runtime and must not be removed by unused-selector optimization. */
+body {
+  top: 0 !important;
+}
 
-  iframe.skiptranslate,
-  body > .skiptranslate {
-    display: none !important;
-    visibility: hidden !important;
-  }
+.goog-te-banner-frame.skiptranslate,
+.VIpgJd-ZVi9od-ORHb-OEVmcd,
+iframe.skiptranslate,
+body > .skiptranslate {
+  display: none !important;
+  visibility: hidden !important;
+}
 
-  .goog-te-gadget {
-    font-size: 0 !important;
-  }
+.goog-te-gadget {
+  font-size: 0 !important;
+}
 
-  /* The widget adds an inline highlight to every phrase it rewrites, which
-   * repaints the whole article on hover. Neutralise it. */
-  font[style*="vertical-align"] {
-    background: transparent !important;
-    box-shadow: none !important;
-  }
+/* Hide the original-text/rating balloon shown after tapping translated copy. */
+#goog-gt-tt,
+.goog-te-balloon-frame,
+iframe.goog-te-balloon-frame {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Neutralize Google's injected hover/tap highlight without changing text. */
+font[style*="vertical-align"],
+.goog-text-highlight,
+.VIpgJd-yAWNEb-VIpgJd-fmcmS-sn54Q {
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 @layer utilities {
