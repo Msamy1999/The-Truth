@@ -294,7 +294,7 @@ export interface AnalyticsEvent {
   country?: string | null;
   region?: string | null;
   city?: string | null;
-  exitReason: 'navigation' | 'page-hidden' | 'page-closed';
+  exitReason: 'active' | 'navigation' | 'page-hidden' | 'page-closed';
   updatedAt: string;
   createdAt: string;
 }

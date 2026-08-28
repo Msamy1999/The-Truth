@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { Spinner } from "@/components/ui/Spinner";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const MAX_LOADING_MS = 20_000;
 
@@ -10,14 +10,20 @@ export function NavigationLoadingIndicator() {
   const pathname = usePathname();
   const [isLoading, setIsLoading] = useState(false);
   const timeoutRef = useRef<number | null>(null);
+  const pathnameRef = useRef(pathname);
 
-  useEffect(() => {
+  const stopLoading = useCallback(() => {
     setIsLoading(false);
     if (timeoutRef.current !== null) {
       window.clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
     }
-  }, [pathname]);
+  }, []);
+
+  useEffect(() => {
+    pathnameRef.current = pathname;
+    stopLoading();
+  }, [pathname, stopLoading]);
 
   useEffect(() => {
     const startLoading = () => {
@@ -43,8 +49,11 @@ export function NavigationLoadingIndicator() {
       const target = event.target;
       if (!(target instanceof Element)) return;
       const anchor = target.closest<HTMLAnchorElement>("a[href]");
+      const rawHref = anchor?.getAttribute("href");
       if (
         !anchor ||
+        !rawHref ||
+        rawHref.startsWith("#") ||
         anchor.target === "_blank" ||
         anchor.hasAttribute("download") ||
         anchor.dataset.noNavigationLoading !== undefined
@@ -53,26 +62,38 @@ export function NavigationLoadingIndicator() {
       }
 
       const destination = new URL(anchor.href, window.location.href);
+      const currentDocument = `${window.location.pathname}${window.location.search}`;
+      const destinationDocument = `${destination.pathname}${destination.search}`;
       if (
         destination.origin !== window.location.origin ||
-        destination.pathname === window.location.pathname
+        destinationDocument === currentDocument
       ) {
         return;
       }
       startLoading();
     };
 
-    const handlePageShow = () => setIsLoading(false);
+    const handlePopState = () => {
+      if (window.location.pathname === pathnameRef.current) {
+        stopLoading();
+        return;
+      }
+      startLoading();
+    };
+    const handlePageShow = stopLoading;
+    const handleHashChange = stopLoading;
     document.addEventListener("click", handleClick, true);
-    window.addEventListener("popstate", startLoading);
+    window.addEventListener("popstate", handlePopState);
     window.addEventListener("pageshow", handlePageShow);
+    window.addEventListener("hashchange", handleHashChange);
     return () => {
       document.removeEventListener("click", handleClick, true);
-      window.removeEventListener("popstate", startLoading);
+      window.removeEventListener("popstate", handlePopState);
       window.removeEventListener("pageshow", handlePageShow);
+      window.removeEventListener("hashchange", handleHashChange);
       if (timeoutRef.current !== null) window.clearTimeout(timeoutRef.current);
     };
-  }, []);
+  }, [stopLoading]);
 
   if (!isLoading) return null;
 

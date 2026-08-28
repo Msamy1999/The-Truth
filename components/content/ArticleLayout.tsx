@@ -210,6 +210,7 @@ export function ArticleLayout({
                       <li key={item.id}>
                         <a
                           href={`#${item.id}`}
+                          data-no-navigation-loading
                           className="inline-flex items-center gap-2 rounded-sm no-underline hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                         >
                           <ArrowRight aria-hidden="true" className="h-3.5 w-3.5" />
@@ -221,6 +222,7 @@ export function ArticleLayout({
                       <li>
                         <a
                           href="#sources"
+                          data-no-navigation-loading
                           className="inline-flex items-center gap-2 rounded-sm no-underline hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                         >
                           <ArrowRight aria-hidden="true" className="h-3.5 w-3.5" />
