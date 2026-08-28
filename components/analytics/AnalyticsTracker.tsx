@@ -13,7 +13,10 @@ type PageState = {
   entryReferrer?: string;
   activeMs: number;
   activeSince: number | null;
-  sent: boolean;
+  eventId: number | null;
+  startPromise: Promise<void> | null;
+  lastReportedDurationMs: number;
+  completed: boolean;
 };
 
 function identifier(storage: Storage, key: string): string {
@@ -57,6 +60,90 @@ function activeDuration(page: PageState, now: number) {
   );
 }
 
+type AnalyticsIds = { visitorId: string; sessionId: string };
+
+function eventBody(
+  page: PageState,
+  exitReason: "active" | "navigation" | "page-hidden" | "page-closed",
+  phase: "start" | "snapshot" | "finish",
+  ids: AnalyticsIds,
+) {
+  return {
+    phase,
+    eventId: page.eventId ?? undefined,
+    visitorId: ids.visitorId,
+    sessionId: ids.sessionId,
+    path: page.path,
+    entryReferrer: page.entryReferrer,
+    durationMs: activeDuration(page, performance.now()),
+    deviceCategory: deviceCategory(),
+    browserCategory: browserCategory(),
+    language: document.documentElement.lang || "en",
+    enteredAt: page.enteredAt,
+    exitReason,
+  };
+}
+
+async function startPage(page: PageState, ids: AnalyticsIds) {
+  try {
+    const response = await fetch("/api/analytics", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(eventBody(page, "active", "start", ids)),
+      keepalive: true,
+    });
+    if (!response.ok) return;
+    const result = (await response.json()) as { id?: unknown };
+    if (typeof result.id === "number" && Number.isSafeInteger(result.id)) {
+      page.eventId = result.id;
+    }
+  } catch {
+    // Analytics must never affect navigation or reading.
+  }
+}
+
+async function updatePage(
+  page: PageState,
+  reason: "navigation" | "page-hidden" | "page-closed",
+  beacon: boolean,
+  final: boolean,
+  ids: AnalyticsIds,
+) {
+  if (final && page.completed) return;
+  if (final) page.completed = true;
+
+  if (page.eventId === null && page.startPromise) await page.startPromise;
+  if (page.eventId === null) return;
+
+  const durationMs = activeDuration(page, performance.now());
+  const body = JSON.stringify(
+    eventBody(page, reason, final ? "finish" : "snapshot", ids),
+  );
+
+  if (beacon && typeof navigator.sendBeacon === "function") {
+    const queued = navigator.sendBeacon(
+      "/api/analytics",
+      new Blob([body], { type: "application/json" }),
+    );
+    if (queued) {
+      page.lastReportedDurationMs = durationMs;
+      return;
+    }
+  }
+
+  try {
+    await fetch("/api/analytics", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body,
+      keepalive: true,
+    });
+    page.lastReportedDurationMs = durationMs;
+  } catch {
+    // Analytics must never affect navigation or reading.
+  }
+}
+
 export function AnalyticsTracker() {
   const pathname = usePathname();
   const [enabled, setEnabled] = useState(false);
@@ -84,10 +171,10 @@ export function AnalyticsTracker() {
 
     const previous = pageRef.current;
     if (previous && previous.path !== pathname) {
-      void sendPage(previous, "navigation");
+      void updatePage(previous, "navigation", false, true, idsRef.current);
     }
 
-    pageRef.current = {
+    const page: PageState = {
       path: pathname,
       enteredAt: new Date().toISOString(),
       entryReferrer: previous
@@ -95,16 +182,25 @@ export function AnalyticsTracker() {
         : document.referrer || undefined,
       activeMs: 0,
       activeSince: document.visibilityState === "hidden" ? null : performance.now(),
-      sent: false,
+      eventId: null,
+      startPromise: null,
+      lastReportedDurationMs: 0,
+      completed: false,
     };
+    pageRef.current = page;
+    page.startPromise = startPage(page, idsRef.current);
 
     const updateVisibility = () => {
       const page = pageRef.current;
-      if (!page || page.sent) return;
+      const ids = idsRef.current;
+      if (!page || !ids || page.completed) return;
       const now = performance.now();
       if (document.visibilityState === "hidden") {
         if (page.activeSince !== null) page.activeMs += now - page.activeSince;
         page.activeSince = null;
+        if (page.activeMs - page.lastReportedDurationMs >= 1_000) {
+          void updatePage(page, "page-hidden", true, false, ids);
+        }
       } else if (page.activeSince === null) {
         page.activeSince = now;
       }
@@ -115,7 +211,9 @@ export function AnalyticsTracker() {
       // A persisted page may return from the browser back-forward cache; keep
       // its in-memory timer alive until it is actually left.
       if (event.persisted) return;
-      if (pageRef.current) void sendPage(pageRef.current, "page-closed", true);
+      if (pageRef.current && idsRef.current) {
+        void updatePage(pageRef.current, "page-closed", true, true, idsRef.current);
+      }
     };
 
     document.addEventListener("visibilitychange", updateVisibility);
@@ -127,40 +225,4 @@ export function AnalyticsTracker() {
   }, [enabled, pathname]);
 
   return null;
-
-  async function sendPage(page: PageState, reason: "navigation" | "page-closed", beacon = false) {
-    if (page.sent || !idsRef.current) return;
-    page.sent = true;
-    const body = JSON.stringify({
-      visitorId: idsRef.current.visitorId,
-      sessionId: idsRef.current.sessionId,
-      path: page.path,
-      entryReferrer: page.entryReferrer,
-      durationMs: activeDuration(page, performance.now()),
-      deviceCategory: deviceCategory(),
-      browserCategory: browserCategory(),
-      language: document.documentElement.lang || "en",
-      enteredAt: page.enteredAt,
-      exitReason: reason,
-    });
-
-    if (beacon && typeof navigator.sendBeacon === "function") {
-      const queued = navigator.sendBeacon(
-        "/api/analytics",
-        new Blob([body], { type: "application/json" }),
-      );
-      if (queued) return;
-    }
-
-    try {
-      await fetch("/api/analytics", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body,
-        keepalive: true,
-      });
-    } catch {
-      // Analytics must never affect navigation or reading.
-    }
-  }
 }

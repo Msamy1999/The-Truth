@@ -12,13 +12,17 @@ export function NavigationLoadingIndicator() {
   const [isLoading, setIsLoading] = useState(false);
   const timeoutRef = useRef<number | null>(null);
 
-  useEffect(() => {
-    pathnameRef.current = pathname;
+  const stopLoading = () => {
     setIsLoading(false);
     if (timeoutRef.current !== null) {
       window.clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
     }
+  };
+
+  useEffect(() => {
+    pathnameRef.current = pathname;
+    stopLoading();
   }, [pathname]);
 
   useEffect(() => {
@@ -45,8 +49,11 @@ export function NavigationLoadingIndicator() {
       const target = event.target;
       if (!(target instanceof Element)) return;
       const anchor = target.closest<HTMLAnchorElement>("a[href]");
+      const rawHref = anchor?.getAttribute("href");
       if (
         !anchor ||
+        !rawHref ||
+        rawHref.startsWith("#") ||
         anchor.target === "_blank" ||
         anchor.hasAttribute("download") ||
         anchor.dataset.noNavigationLoading !== undefined
@@ -55,9 +62,11 @@ export function NavigationLoadingIndicator() {
       }
 
       const destination = new URL(anchor.href, window.location.href);
+      const currentDocument = `${window.location.pathname}${window.location.search}`;
+      const destinationDocument = `${destination.pathname}${destination.search}`;
       if (
         destination.origin !== window.location.origin ||
-        destination.pathname === window.location.pathname
+        destinationDocument === currentDocument
       ) {
         return;
       }
@@ -69,19 +78,22 @@ export function NavigationLoadingIndicator() {
       // Showing a full-page overlay for them left the UI covered until the
       // 20-second safety timeout because `usePathname()` never changed.
       if (window.location.pathname === pathnameRef.current) {
-        setIsLoading(false);
+        stopLoading();
         return;
       }
       startLoading();
     };
-    const handlePageShow = () => setIsLoading(false);
+    const handlePageShow = stopLoading;
+    const handleHashChange = stopLoading;
     document.addEventListener("click", handleClick, true);
     window.addEventListener("popstate", handlePopState);
     window.addEventListener("pageshow", handlePageShow);
+    window.addEventListener("hashchange", handleHashChange);
     return () => {
       document.removeEventListener("click", handleClick, true);
       window.removeEventListener("popstate", handlePopState);
       window.removeEventListener("pageshow", handlePageShow);
+      window.removeEventListener("hashchange", handleHashChange);
       if (timeoutRef.current !== null) window.clearTimeout(timeoutRef.current);
     };
   }, []);

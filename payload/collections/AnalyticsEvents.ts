@@ -106,6 +106,7 @@ export const AnalyticsEvents: CollectionConfig = {
       type: "select",
       required: true,
       options: [
+        { label: "Active", value: "active" },
         { label: "Navigation", value: "navigation" },
         { label: "Page hidden", value: "page-hidden" },
         { label: "Page closed", value: "page-closed" },

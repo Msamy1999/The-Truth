@@ -20,6 +20,8 @@ const requestsByClient = new Map<string, RateLimitEntry>();
 let globalRateLimit: RateLimitEntry = { count: 0, resetAt: Date.now() + WINDOW_MS };
 
 type AnalyticsInput = {
+  phase?: unknown;
+  eventId?: unknown;
   visitorId?: unknown;
   sessionId?: unknown;
   path?: unknown;
@@ -47,7 +49,8 @@ const BROWSER_VALUES = new Set([
   "other",
   "unknown",
 ]);
-const EXIT_REASONS = new Set(["navigation", "page-hidden", "page-closed"]);
+const PHASES = new Set(["start", "snapshot", "finish", "legacy"]);
+const EXIT_REASONS = new Set(["active", "navigation", "page-hidden", "page-closed"]);
 type DeviceCategory = "desktop" | "mobile" | "tablet" | "unknown";
 type BrowserCategory =
   | "chrome"
@@ -58,7 +61,7 @@ type BrowserCategory =
   | "android"
   | "other"
   | "unknown";
-type ExitReason = "navigation" | "page-hidden" | "page-closed";
+type ExitReason = "active" | "navigation" | "page-hidden" | "page-closed";
 
 function text(value: unknown, maxLength: number): string | null {
   if (typeof value !== "string") return null;
@@ -218,6 +221,11 @@ export async function POST(request: Request) {
   const deviceCategory = text(body.deviceCategory, 16) ?? "unknown";
   const browserCategory = text(body.browserCategory, 16) ?? "unknown";
   const exitReason = text(body.exitReason, 16) ?? "page-closed";
+  const phase = text(body.phase, 16) ?? "legacy";
+  const eventId =
+    typeof body.eventId === "number" && Number.isSafeInteger(body.eventId) && body.eventId > 0
+      ? body.eventId
+      : null;
 
   if (
     !visitorId ||
@@ -231,7 +239,11 @@ export async function POST(request: Request) {
     durationMs > MAX_DURATION_MS ||
     !DEVICE_VALUES.has(deviceCategory) ||
     !BROWSER_VALUES.has(browserCategory) ||
-    !EXIT_REASONS.has(exitReason)
+    !EXIT_REASONS.has(exitReason) ||
+    !PHASES.has(phase) ||
+    ((phase === "snapshot" || phase === "finish") && eventId === null) ||
+    (phase === "start" && exitReason !== "active") ||
+    (phase !== "start" && exitReason === "active")
   ) {
     return Response.json({ error: "Invalid analytics event" }, { status: 400 });
   }
@@ -247,7 +259,36 @@ export async function POST(request: Request) {
   try {
     const payload = await getPayload({ config: configPromise });
     await enforceAnalyticsRetention(payload);
-    await payload.create({
+
+    if (phase === "snapshot" || phase === "finish") {
+      const existing = await payload.findByID({
+        collection: "analytics-events",
+        id: eventId!,
+        overrideAccess: true,
+        depth: 0,
+      });
+      if (
+        existing.visitorId !== visitorId ||
+        existing.sessionId !== sessionId ||
+        existing.path !== path
+      ) {
+        return Response.json({ error: "Analytics event not found" }, { status: 404 });
+      }
+      await payload.update({
+        collection: "analytics-events",
+        id: eventId!,
+        overrideAccess: true,
+        depth: 0,
+        data: {
+          durationMs: Math.round(durationMs),
+          durationLabel: durationLabel(durationMs),
+          exitReason: exitReason as ExitReason,
+        },
+      });
+      return Response.json({ ok: true, id: eventId }, { status: 200 });
+    }
+
+    const record = await payload.create({
       collection: "analytics-events",
       overrideAccess: true,
       depth: 0,
@@ -267,10 +308,10 @@ export async function POST(request: Request) {
         country: headerText(request, ["cf-ipcountry"], 8),
         region: headerText(request, ["cf-region"], 80),
         city: headerText(request, ["cf-ipcity"], 80),
-        exitReason: exitReason as ExitReason,
+        exitReason: (phase === "start" ? "active" : exitReason) as ExitReason,
       },
     });
-    return Response.json({ ok: true }, { status: 201 });
+    return Response.json({ ok: true, id: record.id }, { status: 201 });
   } catch (error) {
     console.error("Analytics event could not be recorded", error);
     return Response.json({ error: "Analytics unavailable" }, { status: 503 });
