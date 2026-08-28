@@ -5,19 +5,19 @@
   "dependencies": {
     "@expo/vector-icons": "^15.0.2",
     "@react-native-async-storage/async-storage": "2.2.0",
-    "expo": "^55.0.28",
-    "expo-clipboard": "~55.0.15",
+    "expo": "~55.0.30",
+    "expo-clipboard": "~55.0.17",
     "expo-constants": "~55.0.17",
     "expo-font": "~55.0.8",
-    "expo-linking": "~55.0.16",
-    "expo-router": "~55.0.17",
-    "expo-speech": "~55.0.16",
-    "expo-splash-screen": "~55.0.23",
+    "expo-linking": "~55.0.17",
+    "expo-router": "~55.0.18",
+    "expo-speech": "~55.0.18",
+    "expo-splash-screen": "~55.0.25",
     "expo-status-bar": "~55.0.6",
-    "expo-system-ui": "~55.0.20",
+    "expo-system-ui": "~55.0.22",
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "react-native": "0.83.6",
+    "react-native": "0.83.10",
     "react-native-gesture-handler": "~2.30.0",
     "react-native-safe-area-context": "~5.6.0",
     "react-native-screens": "~4.23.0",
@@ -35,7 +35,18 @@
     "android": "expo start --android --port 8094",
     "ios": "expo start --ios --port 8094",
     "web": "expo start --web --port 8094",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "compact:content": "node scripts/compact-content-snapshot.mjs",
+    "verify:content": "node scripts/verify-content-snapshot.mjs --strict",
+    "verify:content:report": "node scripts/verify-content-snapshot.mjs",
+    "eas-build-pre-install": "node scripts/verify-content-snapshot.mjs --eas"
+  },
+  "overrides": {
+    "brace-expansion@<=1.1.17": "1.1.18",
+    "brace-expansion@4.0.0 - 5.0.8": "5.0.9",
+    "js-yaml@3.0.0 - 3.15.0": "3.15.1",
+    "js-yaml@4.0.0 - 4.3.0": "4.3.1",
+    "uuid": "11.1.1"
   },
   "private": true
 }

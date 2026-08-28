@@ -8,10 +8,12 @@ const MAX_LOADING_MS = 20_000;
 
 export function NavigationLoadingIndicator() {
   const pathname = usePathname();
+  const pathnameRef = useRef(pathname);
   const [isLoading, setIsLoading] = useState(false);
   const timeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
+    pathnameRef.current = pathname;
     setIsLoading(false);
     if (timeoutRef.current !== null) {
       window.clearTimeout(timeoutRef.current);
@@ -62,13 +64,23 @@ export function NavigationLoadingIndicator() {
       startLoading();
     };
 
+    const handlePopState = () => {
+      // Query-string and hash-only history changes do not fetch a new route.
+      // Showing a full-page overlay for them left the UI covered until the
+      // 20-second safety timeout because `usePathname()` never changed.
+      if (window.location.pathname === pathnameRef.current) {
+        setIsLoading(false);
+        return;
+      }
+      startLoading();
+    };
     const handlePageShow = () => setIsLoading(false);
     document.addEventListener("click", handleClick, true);
-    window.addEventListener("popstate", startLoading);
+    window.addEventListener("popstate", handlePopState);
     window.addEventListener("pageshow", handlePageShow);
     return () => {
       document.removeEventListener("click", handleClick, true);
-      window.removeEventListener("popstate", startLoading);
+      window.removeEventListener("popstate", handlePopState);
       window.removeEventListener("pageshow", handlePageShow);
       if (timeoutRef.current !== null) window.clearTimeout(timeoutRef.current);
     };

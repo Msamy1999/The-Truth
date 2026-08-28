@@ -9,7 +9,6 @@ import {
   Pill,
   Row,
   SectionHeader,
-  StatusPill,
   categoryIcon,
 } from "../../components/ui";
 import { useContent } from "../../lib/content";
@@ -65,7 +64,7 @@ export default function CategoryScreen() {
 
         {articles.length > 0 ? (
           <>
-            <SectionHeader>Draft articles</SectionHeader>
+            <SectionHeader>Articles</SectionHeader>
             <View style={styles.list}>
               {articles.map((article) => (
                 <ListRow
@@ -74,14 +73,13 @@ export default function CategoryScreen() {
                   icon="document-text-outline"
                   title={article.title}
                   subtitle={article.summary}
-                  pill={<StatusPill status={article.status} />}
                 />
               ))}
             </View>
           </>
         ) : null}
 
-        <SectionHeader>Planned studies</SectionHeader>
+        <SectionHeader>Related topics</SectionHeader>
         <View style={styles.list}>
           {category.futureTopics.map((topic) => {
             const articleHref = topic.href?.startsWith("/articles/")
@@ -96,7 +94,7 @@ export default function CategoryScreen() {
                   icon="document-text-outline"
                   title={topic.title}
                   subtitle={topic.description}
-                  pill={<Pill label="Draft" tone="gold" />}
+                  pill={<Pill label="Article" />}
                 />
               );
             }
@@ -109,7 +107,7 @@ export default function CategoryScreen() {
                   >
                     {topic.title}
                   </Text>
-                  <Pill label="Planned" />
+                  <Pill label="Topic" />
                 </View>
                 <Body>{topic.description}</Body>
               </Card>

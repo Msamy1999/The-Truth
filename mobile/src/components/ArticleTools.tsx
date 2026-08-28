@@ -7,7 +7,7 @@ import type { ComponentProps } from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Animated, Platform, Pressable, StyleSheet, Text, View } from "react-native";
 import { space, useTheme } from "../lib/theme";
-import type { Article } from "../lib/types";
+import type { Article, ArticleKeyScripture } from "../lib/types";
 import { Card } from "./ui";
 
 type IoniconName = ComponentProps<typeof Ionicons>["name"];
@@ -31,12 +31,28 @@ function stripMarkdown(text: string): string {
     .replace(/^\s*[-*]\s+/gm, "");
 }
 
-export function buildArticleText(article: Article): string {
+export function buildArticleText(
+  article: Article,
+  keyScripture?: ArticleKeyScripture,
+): string {
   return [
     article.title,
     article.subtitle,
     article.summary,
     ...article.sections.flatMap((section) => [section.title, section.body]),
+    ...(keyScripture
+      ? [
+          "Key passages",
+          ...keyScripture.quranVerses.flatMap((verse) => [
+            verse.reference,
+            verse.translation,
+          ]),
+          ...keyScripture.bibleVerses.flatMap((verse) => [
+            verse.reference,
+            verse.text,
+          ]),
+        ]
+      : []),
   ]
     .filter(Boolean)
     .map((part) => stripMarkdown(part).trim())
@@ -168,9 +184,18 @@ function ToolButton({
   );
 }
 
-export function ArticleTools({ article }: { article: Article }) {
+export function ArticleTools({
+  article,
+  keyScripture,
+}: {
+  article: Article;
+  keyScripture?: ArticleKeyScripture;
+}) {
   const theme = useTheme();
-  const fullText = useMemo(() => buildArticleText(article), [article]);
+  const fullText = useMemo(
+    () => buildArticleText(article, keyScripture),
+    [article, keyScripture],
+  );
   const speechText = useMemo(() => prepareForSpeech(fullText), [fullText]);
   const [status, setStatus] = useState<SpeechStatus>("idle");
   const [copied, setCopied] = useState(false);

@@ -63,7 +63,62 @@ export async function down({ db }: MigrateDownArgs): Promise<void> {
       (column) => column.name === "analytics_events_id",
     )
   ) {
-    await db.run(sql`ALTER TABLE \`payload_locked_documents_rels\` DROP COLUMN \`analytics_events_id\`;`);
+    // SQLite cannot DROP a column that is still named by an inline foreign-key
+    // definition. Rebuild Payload's polymorphic lock-relation table without
+    // the analytics column instead. The migration runner wraps this sequence
+    // in a transaction, so rows and indexes are restored together or not at
+    // all if a statement fails.
+    await db.run(sql`DROP TABLE IF EXISTS \`payload_locked_documents_rels_without_analytics\`;`);
+    await db.run(sql`CREATE TABLE \`payload_locked_documents_rels_without_analytics\` (
+      \`id\` integer PRIMARY KEY NOT NULL,
+      \`order\` integer,
+      \`parent_id\` integer NOT NULL,
+      \`path\` text NOT NULL,
+      \`users_id\` integer,
+      \`articles_id\` integer,
+      \`comparison_articles_id\` integer,
+      \`citations_id\` integer,
+      \`quran_verses_id\` integer,
+      \`bible_verses_id\` integer,
+      \`glossary_terms_id\` integer,
+      \`source_library_categories_id\` integer,
+      \`source_library_items_id\` integer,
+      FOREIGN KEY (\`parent_id\`) REFERENCES \`payload_locked_documents\`(\`id\`) ON UPDATE no action ON DELETE cascade,
+      FOREIGN KEY (\`users_id\`) REFERENCES \`users\`(\`id\`) ON UPDATE no action ON DELETE cascade,
+      FOREIGN KEY (\`articles_id\`) REFERENCES \`articles\`(\`id\`) ON UPDATE no action ON DELETE cascade,
+      FOREIGN KEY (\`comparison_articles_id\`) REFERENCES \`comparison_articles\`(\`id\`) ON UPDATE no action ON DELETE cascade,
+      FOREIGN KEY (\`citations_id\`) REFERENCES \`citations\`(\`id\`) ON UPDATE no action ON DELETE cascade,
+      FOREIGN KEY (\`quran_verses_id\`) REFERENCES \`quran_verses\`(\`id\`) ON UPDATE no action ON DELETE cascade,
+      FOREIGN KEY (\`bible_verses_id\`) REFERENCES \`bible_verses\`(\`id\`) ON UPDATE no action ON DELETE cascade,
+      FOREIGN KEY (\`glossary_terms_id\`) REFERENCES \`glossary_terms\`(\`id\`) ON UPDATE no action ON DELETE cascade,
+      FOREIGN KEY (\`source_library_categories_id\`) REFERENCES \`source_library_categories\`(\`id\`) ON UPDATE no action ON DELETE cascade,
+      FOREIGN KEY (\`source_library_items_id\`) REFERENCES \`source_library_items\`(\`id\`) ON UPDATE no action ON DELETE cascade
+    );`);
+    await db.run(sql`INSERT INTO \`payload_locked_documents_rels_without_analytics\` (
+      \`id\`, \`order\`, \`parent_id\`, \`path\`, \`users_id\`, \`articles_id\`,
+      \`comparison_articles_id\`, \`citations_id\`, \`quran_verses_id\`,
+      \`bible_verses_id\`, \`glossary_terms_id\`,
+      \`source_library_categories_id\`, \`source_library_items_id\`
+    ) SELECT
+      \`id\`, \`order\`, \`parent_id\`, \`path\`, \`users_id\`, \`articles_id\`,
+      \`comparison_articles_id\`, \`citations_id\`, \`quran_verses_id\`,
+      \`bible_verses_id\`, \`glossary_terms_id\`,
+      \`source_library_categories_id\`, \`source_library_items_id\`
+    FROM \`payload_locked_documents_rels\`;`);
+    await db.run(sql`DROP TABLE \`payload_locked_documents_rels\`;`);
+    await db.run(sql`ALTER TABLE \`payload_locked_documents_rels_without_analytics\` RENAME TO \`payload_locked_documents_rels\`;`);
+    await db.run(sql`CREATE INDEX \`payload_locked_documents_rels_order_idx\` ON \`payload_locked_documents_rels\` (\`order\`);`);
+    await db.run(sql`CREATE INDEX \`payload_locked_documents_rels_parent_idx\` ON \`payload_locked_documents_rels\` (\`parent_id\`);`);
+    await db.run(sql`CREATE INDEX \`payload_locked_documents_rels_path_idx\` ON \`payload_locked_documents_rels\` (\`path\`);`);
+    await db.run(sql`CREATE INDEX \`payload_locked_documents_rels_users_id_idx\` ON \`payload_locked_documents_rels\` (\`users_id\`);`);
+    await db.run(sql`CREATE INDEX \`payload_locked_documents_rels_articles_id_idx\` ON \`payload_locked_documents_rels\` (\`articles_id\`);`);
+    await db.run(sql`CREATE INDEX \`payload_locked_documents_rels_comparison_articles_id_idx\` ON \`payload_locked_documents_rels\` (\`comparison_articles_id\`);`);
+    await db.run(sql`CREATE INDEX \`payload_locked_documents_rels_citations_id_idx\` ON \`payload_locked_documents_rels\` (\`citations_id\`);`);
+    await db.run(sql`CREATE INDEX \`payload_locked_documents_rels_quran_verses_id_idx\` ON \`payload_locked_documents_rels\` (\`quran_verses_id\`);`);
+    await db.run(sql`CREATE INDEX \`payload_locked_documents_rels_bible_verses_id_idx\` ON \`payload_locked_documents_rels\` (\`bible_verses_id\`);`);
+    await db.run(sql`CREATE INDEX \`payload_locked_documents_rels_glossary_terms_id_idx\` ON \`payload_locked_documents_rels\` (\`glossary_terms_id\`);`);
+    await db.run(sql`CREATE INDEX \`payload_locked_documents_rels_source_library_categories__idx\` ON \`payload_locked_documents_rels\` (\`source_library_categories_id\`);`);
+    await db.run(sql`CREATE INDEX \`payload_locked_documents_rels_source_library_items_id_idx\` ON \`payload_locked_documents_rels\` (\`source_library_items_id\`);`);
   }
   await db.run(sql`DROP TABLE IF EXISTS \`analytics_events\`;`);
 }

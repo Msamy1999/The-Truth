@@ -112,7 +112,7 @@ export const siteCategories = [
     title: "Preservation of Scripture",
     href: "/preservation",
     description:
-      "A source-conscious study area for transmission, manuscripts, compilation, and why preservation matters.",
+      "An evidence-based study area for transmission, manuscripts, compilation, and why preservation matters.",
     icon: "preservation",
     tags: ["Preservation", "History", "Scripture"],
     futureTopics: [
@@ -311,7 +311,7 @@ export const siteCategories = [
     title: "Salvation & Purpose of Life",
     href: "/salvation-and-purpose-of-life",
     description:
-      "A future guide to worship, forgiveness, accountability, mercy, and purpose with sources separated from commentary.",
+      "A guide to worship, forgiveness, accountability, mercy, and purpose with sources separated from commentary.",
     icon: "salvation",
     tags: ["Purpose", "Theology"],
     futureTopics: [

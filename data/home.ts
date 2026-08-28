@@ -41,7 +41,7 @@ export const mainPaths: ResearchTreeNode[] = [
     id: "common-questions",
     title: "Common Questions",
     description:
-      "Beginner-friendly answers with draft status kept visible until sources are verified.",
+      "Beginner-friendly answers with links to deeper evidence and study.",
     href: "/questions",
     tag: "Questions",
   },
@@ -100,7 +100,7 @@ export const comparisonMethods = [
   {
     title: "Scholarly sources",
     description:
-      "Use named sources and mark draft material as source pending.",
+      "Use named historians, primary texts, and reliable academic sources.",
   },
   {
     title: "Respectful tone",
@@ -115,7 +115,7 @@ export const comparisonMethods = [
   {
     title: "Corrections welcome",
     description:
-      "Draft material is not final. Errors can be flagged, and supported corrections are welcomed before publication.",
+      "Supported corrections are welcomed so the material remains accurate and clearly sourced.",
   },
 ];
 
@@ -123,36 +123,36 @@ export const featuredResearchCards = [
   {
     title: "Who is Jesus?",
     description:
-      "A draft comparison template for studying Jesus with scripture and context separated.",
+      "A comparison of Islamic and Christian teachings about Jesus through scripture and historical context.",
     href: "/articles/who-is-jesus",
-    label: "Draft article",
+    label: "Article",
   },
   {
     title: "Did Jesus worship God?",
     description:
-      "A planned study question for future sourced scripture and interpretation.",
+      "A study of Jesus's prayer, worship, and obedience in the Gospel accounts.",
     href: "/articles/did-jesus-worship-god",
-    label: "Draft article",
+    label: "Article",
   },
   {
     title: "Was the Quran preserved?",
     description:
-      "A draft template for preservation questions, source status, and careful context.",
+      "A study of Quranic transmission, memorization, compilation, and early manuscripts.",
     href: "/articles/was-the-quran-preserved",
-    label: "Draft article",
+    label: "Article",
   },
   {
     title: "Tawhid vs Trinity",
     description:
-      "A planned comparison of definitions, beliefs, and evidence with citations.",
+      "A comparison of Islamic monotheism and Christian Trinitarian belief.",
     href: "/articles/what-is-tawhid",
-    label: "Draft article",
+    label: "Article",
   },
   {
     title: "Salvation in Islam and Christianity",
     description:
-      "A planned study path about worship, forgiveness, accountability, and purpose.",
+      "A study of worship, forgiveness, accountability, mercy, and purpose.",
     href: "/articles/forgiveness-in-islam-and-christianity",
-    label: "Draft article",
+    label: "Article",
   },
 ];

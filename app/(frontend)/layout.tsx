@@ -77,7 +77,8 @@ catch(e){d.classList.add('light');}
 try{
 var l=null;try{l=localStorage.getItem('the-straight-path-language');}catch(e){}
 if(l!=='ar'&&l!=='en'){l=document.cookie.indexOf('googtrans=/en/ar')>-1?'ar':'en';}
-d.lang=l;d.dir=l==='ar'?'rtl':'ltr';d.setAttribute('data-language',l);
+d.lang='en';d.dir='ltr';d.setAttribute('data-language','en');
+if(l==='ar'){d.setAttribute('data-requested-language','ar');}
 if(l==='ar'&&typeof Node==='function'&&Node.prototype&&!window.__straightPathTranslationGuard){
 window.__straightPathTranslationGuard=true;
 var rc=Node.prototype.removeChild;
@@ -94,17 +95,22 @@ type RootLayoutProps = Readonly<{
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className="light" suppressHydrationWarning>
+    <html
+      lang="en"
+      className="light"
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
       <body suppressHydrationWarning>
         {/*
-         * Runs before first paint so the saved theme and the saved reading
-         * direction are already in place. Deferring the direction to hydration
-         * made every Arabic page load flash left-to-right first.
+         * Runs before first paint so the saved theme is already in place. The
+         * source document remains English/LTR until translated Arabic text is
+         * confirmed; otherwise an upstream translation failure presents English
+         * copy in a false RTL layout.
          *
-         * When Arabic is the saved language it also installs the DOM guards up
-         * front: the translation widget re-applies itself from its own cookie
-         * during hydration, and an unguarded React commit against its rewritten
-         * text nodes throws and takes the whole client tree down with it.
+         * When Arabic is requested it also installs the DOM guards up front:
+         * the translation widget may rewrite text during hydration, and an
+         * unguarded React commit against those nodes can take down the client.
          */}
         <script
           dangerouslySetInnerHTML={{

@@ -9,7 +9,7 @@
  *   created/updated and linked to the article.
  *
  * Run with the dev server stopped:
- *   env $(cat .env | xargs) npx tsx payload/import-drafts.ts
+ *   npm run content:sync
  *
  * To import only selected drafts, pass their slugs as positional arguments:
  *   npx tsx payload/import-drafts.ts what-is-tawhid why-islam
@@ -19,9 +19,12 @@
 import { readdirSync, readFileSync } from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import nextEnv from "@next/env";
 import { getPayload } from "payload";
-import config from "../payload.config";
 import { glossaryTerms } from "../data/content/glossary";
+
+nextEnv.loadEnvConfig(process.cwd());
+const { default: config } = await import("../payload.config");
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 const DRAFTS_DIR = path.resolve(dirname, "../content-drafts");
@@ -498,6 +501,7 @@ async function main() {
   }
 
   // Related articles (second pass; only among known slugs) -------------------
+  let relatedArticlesSynced = 0;
   for (const file of files) {
     const draft: Draft = JSON.parse(
       readFileSync(path.join(DRAFTS_DIR, file), "utf8"),
@@ -521,7 +525,12 @@ async function main() {
         id: articleIdBySlug.get(draft.slug)!,
         data: { relatedArticles: ids as number[] },
         depth: 0,
+        disableTransaction: true,
       });
+    }
+    relatedArticlesSynced += 1;
+    if (relatedArticlesSynced % 20 === 0 || relatedArticlesSynced === files.length) {
+      console.log(`related articles synced: ${relatedArticlesSynced}/${files.length}`);
     }
   }
 

@@ -12,6 +12,7 @@ import { unstable_cache } from "next/cache";
 import { cache } from "react";
 import config from "@payload-config";
 import { atheismAgnosticismTree } from "@/data/atheism-agnosticism-tree";
+import { articleRedirects } from "@/data/article-redirects";
 import articleKeyScriptureData from "@/data/article-key-scripture.json";
 import { claimsAgainstIslamTree } from "@/data/claims-against-islam";
 import {
@@ -23,6 +24,7 @@ import {
 import { islamChristianityBranches } from "@/data/islam-christianity-tree";
 import { islamOverviewTree } from "@/data/islam-overview-tree";
 import { peopleOfPalestineTree } from "@/data/people-of-palestine-tree";
+import { cleanEditorialText } from "@/lib/reader-text";
 import {
   islamChristianityCategorySlugs,
   learnIslamCategorySlugs,
@@ -61,9 +63,10 @@ export const CONTENT_CACHE_TAG = "library-content";
 const contentCacheOptions: { tags: string[]; revalidate: false | number } = {
   tags: [CONTENT_CACHE_TAG],
   // Draft imports run in a separate CLI process, so they cannot invalidate
-  // this Next.js process's cache. Do not keep stale content in local dev.
-  // Production keeps the tag-based permanent cache for fast page loads.
-  revalidate: process.env.NODE_ENV === "development" ? 1 : false,
+  // this Next.js process's cache. Admin saves still invalidate immediately;
+  // this bounded fallback makes external content-sync changes visible even
+  // when the running web process had already warmed its cache.
+  revalidate: process.env.NODE_ENV === "development" ? 1 : 300,
 };
 
 function getClient(): Promise<Payload> {
@@ -78,58 +81,6 @@ function getClient(): Promise<Payload> {
 
 function opt<T>(value: T | null | undefined): T | undefined {
   return value ?? undefined;
-}
-
-/**
- * Keep the prose focused on the subject rather than the publishing process.
- * Draft records contain a few legacy notes that referred readers back to the
- * website, the library, or the article itself; those phrases are not part of
- * the argument and are normalized at the content boundary.
- */
-function cleanEditorialText(value: string): string {
-  const cleaned = value
-    .replace(
-      /\bWhat This Page Does(?:—|–|--|-)\s*and Does Not(?:—|–|--|-)?\s*Call a Contradiction\b/gi,
-      "What Counts—and Does Not Count—as a Contradiction",
-    )
-    .replace(
-      /\bThis page does not call manuscript additions or wording variants contradictions\.?/gi,
-      "Manuscript additions and wording variants are not counted as contradictions.",
-    )
-    .replace(/\bThis library flags such matters honestly\b/gi, "Such matters are flagged honestly")
-    .replace(/\bFollowing this library(?:'s|’s) method\b/gi, "Using these distinctions")
-    .replace(/\bsource-aware\b/gi, "well-supported")
-    .replace(/\bsource awareness\b/gi, "careful support")
-    .replace(/\bHow This Library Labels Its Sources\b/gi, "How Sources Are Labeled")
-    .replace(/\bHow to Use This Library\b/gi, "How to Use These Sources")
-    .replace(/\bthis library(?:['’]s)?\s+preservation-branch articles\b/gi, "the preservation evidence")
-    .replace(/\bthis article(?:['’]s)?\b/gi, "the discussion")
-    .replace(/\bthis library(?:['’]s)?\b/gi, "the discussion")
-    .replace(/\bin this article\b/gi, "here")
-    .replace(/\bthis draft\b/gi, "the analysis")
-    .replace(/\bthis page\b/gi, "the discussion")
-    .replace(/\bthis library\b/gi, "the discussion")
-    .replace(/\bthe library(?:'s|’s)\b/gi, "the")
-    .replace(/\bthis site\b/gi, "the discussion")
-    .replace(/\bthe site(?:'s|’s)\b/gi, "the")
-    .replace(/\bthe website\b/gi, "the discussion")
-    .replace(/\bcompanion articles?\b/gi, "related discussions")
-    .replace(/\bthese articles\b/gi, "these discussions")
-    .replace(/\bthe textual-variants article\b/gi, "the textual-variants study")
-    .replace(
-      /\bat bottom it is not a historical question\b/gi,
-      "the bottom line is not a historical question",
-    );
-
-  // Several legacy editorial labels are deliberately made impersonal above.
-  // When one of those replacements begins a sentence, retain normal English
-  // capitalization rather than rendering a sentence that starts with
-  // "the discussion" or "the analysis".
-  return cleaned.replace(
-    /(^|[.!?]\s+)(the discussion|the analysis|the preservation evidence|the bottom line|the textual-variants study|related discussions|these discussions|here)\b/g,
-    (_match, sentenceStart: string, phrase: string) =>
-      `${sentenceStart}${phrase.charAt(0).toUpperCase()}${phrase.slice(1)}`,
-  );
 }
 
 function citationKeys(value: unknown): string[] {
@@ -276,12 +227,51 @@ export function isIslamChristianityCategorySlug(slug: CategorySlug): boolean {
 // Homepage data (code-defined)
 // ---------------------------------------------------------------------------
 
+function articleSlugFromHref(href?: string): string | undefined {
+  return href?.match(/^\/articles\/([^/?#]+)$/)?.[1];
+}
+
+function filterUnavailableArticleLinks<T extends { href?: string }>(
+  items: readonly T[],
+  availableSlugs: ReadonlySet<string>,
+): T[] {
+  return items.filter((item) => {
+    const slug = articleSlugFromHref(item.href);
+    return !slug || availableSlugs.has(slug);
+  });
+}
+
+function filterResearchTree(
+  nodes: readonly ResearchTreeNode[],
+  availableSlugs: ReadonlySet<string>,
+): ResearchTreeNode[] {
+  return nodes.flatMap((node) => {
+    const slug = articleSlugFromHref(node.href);
+    if (slug && !availableSlugs.has(slug)) return [];
+    return [
+      {
+        ...node,
+        children: node.children
+          ? filterResearchTree(node.children, availableSlugs)
+          : undefined,
+      },
+    ];
+  });
+}
+
 export async function getHomeData() {
+  const availableSlugs = new Set(await getArticleSlugs());
   return {
     mainPaths,
-    christianLearningPath,
+    christianLearningPath: filterUnavailableArticleLinks(
+      christianLearningPath,
+      availableSlugs,
+    ),
     comparisonMethods,
-    featuredResearchCards,
+    featuredResearchCards: filterUnavailableArticleLinks(
+      featuredResearchCards,
+      availableSlugs,
+    ),
   };
 }
 
@@ -407,21 +397,27 @@ function composeIslamChristianityTree(): ResearchTreeNode[] {
 export async function getResearchTree(
   section: ResearchTreeSection,
 ): Promise<ResearchTreeNode[]> {
+  let tree: ResearchTreeNode[];
   switch (section) {
     case "islam-overview":
-      return islamOverviewTree;
+      tree = islamOverviewTree;
+      break;
     case "islam-christianity":
-      return composeIslamChristianityTree();
+      tree = composeIslamChristianityTree();
+      break;
     case "atheism-agnosticism":
-      return atheismAgnosticismTree;
+      tree = atheismAgnosticismTree;
+      break;
     case "people-of-palestine":
-      return peopleOfPalestineTree;
+      tree = peopleOfPalestineTree;
+      break;
   }
+  return filterResearchTree(tree, new Set(await getArticleSlugs()));
 }
 
 /** Complete, navigable map shown on the landing page. */
 export async function getFullLibraryTree(): Promise<ResearchTreeNode[]> {
-  return [
+  const tree: ResearchTreeNode[] = [
     {
       id: "learn-islam",
       title: "Learn Islam",
@@ -467,10 +463,9 @@ export async function getFullLibraryTree(): Promise<ResearchTreeNode[]> {
     {
       id: "people-of-palestine",
       title: "People of Palestine",
-      description: "Human-centred draft study topics.",
+      description: "Human-centered studies of Palestinian history, identity, dignity, and faith.",
       href: "/people-of-palestine",
-      tag: "Drafts",
-      status: "draft",
+      tag: "History",
       defaultOpen: true,
       children: peopleOfPalestineTree,
     },
@@ -507,6 +502,7 @@ export async function getFullLibraryTree(): Promise<ResearchTreeNode[]> {
       ],
     },
   ];
+  return filterResearchTree(tree, new Set(await getArticleSlugs()));
 }
 
 export type ArticleTreeBreadcrumb = {
@@ -609,34 +605,20 @@ export async function getArticlePlaybackNavigation(
 
 export type GetArticlesOptions = {
   /**
-   * Include non-published articles. Defaults to true while the entire
-   * library is placeholder drafts; flip the default (or pass false at call
-   * sites) once real verified content starts publishing.
+   * Include non-published articles. Development defaults to true so editors
+   * can review imported material locally; production defaults to false.
    */
   includeDrafts?: boolean;
 };
+
+function resolveIncludeDrafts(value?: boolean): boolean {
+  return value ?? process.env.NODE_ENV === "development";
+}
 
 /**
  * Consolidated articles remain redirectable for existing links, but are not
  * shown as separate studies in cards, related reading, or the sitemap.
  */
-export const articleRedirects: Readonly<Record<string, string>> = {
-  "can-god-become-man": "incarnation-explained",
-  "chronological-alignment-quranic-biblical-timelines":
-    "historical-support-for-biblical-narratives",
-  "did-anyone-see-god": "who-is-god-quran-and-bible-comparison",
-  "female-scholars-and-leaders": "women-in-the-quran-and-bible",
-  "judgment-day": "the-day-of-judgment",
-  "source-status-labels": "how-to-read-comparisons",
-  "strong-vs-debated-scientific-claims":
-    "how-to-approach-scientific-claims-carefully",
-  "the-death-of-judas": "contradictions-in-the-bible",
-  "the-timing-of-the-crucifixion": "contradictions-in-the-bible",
-  "genealogies-of-jesus": "contradictions-in-the-bible",
-  "why-preservation-matters": "how-was-the-quran-preserved",
-  "worshiping-god-alone": "what-is-worship",
-};
-
 export function getArticleRedirect(slug: string): string | undefined {
   return articleRedirects[slug];
 }
@@ -667,7 +649,7 @@ const getCachedArticleDocs = cache(
 export async function getArticles(
   options: GetArticlesOptions = {},
 ): Promise<Article[]> {
-  const { includeDrafts = true } = options;
+  const includeDrafts = resolveIncludeDrafts(options.includeDrafts);
 
   return (await getCachedArticleDocs(includeDrafts))
     .map((doc) => mapArticle(doc as unknown as ArticleDoc))
@@ -765,7 +747,7 @@ export async function getArticleSummariesByCategory(
 ): Promise<Article[]> {
   const docs = await getCachedArticleSummaryDocsByCategory(
     category,
-    options.includeDrafts ?? true,
+    resolveIncludeDrafts(options.includeDrafts),
   );
 
   return docs
@@ -777,7 +759,7 @@ export async function getArticlesByCategory(
   category: CategorySlug,
   options: GetArticlesOptions = {},
 ): Promise<Article[]> {
-  const { includeDrafts = true } = options;
+  const includeDrafts = resolveIncludeDrafts(options.includeDrafts);
 
   return (await getCachedArticlesByCategory(category, includeDrafts))
     .map((doc) => mapArticle(doc as unknown as ArticleDoc))
@@ -785,12 +767,19 @@ export async function getArticlesByCategory(
 }
 
 const getCachedArticleDocBySlug = unstable_cache(
-  async (slug: string) => {
+  async (slug: string, includeDrafts: boolean) => {
     const payload = await getClient();
 
     const result = await payload.find({
       collection: "articles",
-      where: { slug: { equals: slug } },
+      where: includeDrafts
+        ? { slug: { equals: slug } }
+        : {
+            and: [
+              { slug: { equals: slug } },
+              { status: { equals: "published" } },
+            ],
+          },
       limit: 1,
       // Related articles and citations are fetched separately. Avoid
       // expanding their full bodies while opening one long article.
@@ -805,12 +794,15 @@ const getCachedArticleDocBySlug = unstable_cache(
 
 // React memoisation also avoids fetching an article twice for its page and metadata.
 export const getArticleBySlug = cache(async (slug: string) => {
-  const doc = await getCachedArticleDocBySlug(slug);
+  const doc = await getCachedArticleDocBySlug(
+    slug,
+    resolveIncludeDrafts(),
+  );
   return doc ? mapArticle(doc as unknown as ArticleDoc) : undefined;
 });
 
 const getCachedRelatedArticleDocs = unstable_cache(
-  async (references: string[]) => {
+  async (references: string[], includeDrafts: boolean) => {
     const payload = await getClient();
     const ids = references.filter((reference) => /^\d+$/.test(reference));
     const slugs = references.filter((reference) => !/^\d+$/.test(reference));
@@ -820,7 +812,12 @@ const getCachedRelatedArticleDocs = unstable_cache(
     ];
     const result = await payload.find({
       collection: "articles",
-      where: (clauses.length === 1 ? clauses[0] : { or: clauses }) as never,
+      where: {
+        and: [
+          (clauses.length === 1 ? clauses[0] : { or: clauses }) as never,
+          ...(includeDrafts ? [] : [{ status: { equals: "published" } }]),
+        ],
+      },
       pagination: false,
       depth: 0,
       // Related cards never render article bodies. Some of those bodies are
@@ -858,6 +855,7 @@ export async function getRelatedArticles(
 
   const docs = await getCachedRelatedArticleDocs(
     [...article.relatedArticles].sort(),
+    resolveIncludeDrafts(),
   );
 
   const byReference = new Map<string, Article>();
@@ -902,7 +900,7 @@ const getCachedArticleSlugs = cache(async (includeDrafts: boolean) => {
 export async function getArticleSlugs(
   options: GetArticlesOptions = {},
 ): Promise<string[]> {
-  return getCachedArticleSlugs(options.includeDrafts ?? true);
+  return getCachedArticleSlugs(resolveIncludeDrafts(options.includeDrafts));
 }
 
 // ---------------------------------------------------------------------------
@@ -910,7 +908,7 @@ export async function getArticleSlugs(
 // ---------------------------------------------------------------------------
 
 const getCachedCitationDocs = unstable_cache(
-  async (ids: string[]) => {
+  async (ids: string[], includeDrafts: boolean) => {
     if (ids.length === 0) {
       return [];
     }
@@ -919,7 +917,10 @@ const getCachedCitationDocs = unstable_cache(
     const result = await payload.find({
       collection: "citations",
       where: {
-        or: [{ citationKey: { in: ids } }, { id: { in: ids } }],
+        and: [
+          { or: [{ citationKey: { in: ids } }, { id: { in: ids } }] },
+          ...(includeDrafts ? [] : [{ status: { equals: "verified" } }]),
+        ],
       },
       pagination: false,
       depth: 0,
@@ -936,7 +937,10 @@ export async function getCitationsByIds(ids: string[]): Promise<Citation[]> {
     return [];
   }
 
-  const docs = await getCachedCitationDocs([...ids].sort());
+  const docs = await getCachedCitationDocs(
+    [...ids].sort(),
+    resolveIncludeDrafts(),
+  );
 
   const byKey = new Map(
     docs.map((doc) => {
@@ -1031,13 +1035,22 @@ export function hasArticleKeyScriptureSelection(slug: string): boolean {
 }
 
 const getCachedArticleKeyScriptureDocs = unstable_cache(
-  async (quranReferences: string[], bibleReferences: string[]) => {
+  async (
+    quranReferences: string[],
+    bibleReferences: string[],
+    includeDrafts: boolean,
+  ) => {
     const payload = await getClient();
     const [quranResult, bibleResult] = await Promise.all([
       quranReferences.length > 0
         ? payload.find({
             collection: "quran-verses",
-            where: { reference: { in: quranReferences } },
+            where: {
+              and: [
+                { reference: { in: quranReferences } },
+                ...(includeDrafts ? [] : [{ status: { equals: "verified" } }]),
+              ],
+            },
             pagination: false,
             depth: 0,
           })
@@ -1045,7 +1058,12 @@ const getCachedArticleKeyScriptureDocs = unstable_cache(
       bibleReferences.length > 0
         ? payload.find({
             collection: "bible-verses",
-            where: { reference: { in: bibleReferences } },
+            where: {
+              and: [
+                { reference: { in: bibleReferences } },
+                ...(includeDrafts ? [] : [{ status: { equals: "verified" } }]),
+              ],
+            },
             pagination: false,
             depth: 0,
           })
@@ -1079,6 +1097,7 @@ export const getArticleKeyScripture = cache(
     const { quranDocs, bibleDocs } = await getCachedArticleKeyScriptureDocs(
       quranReferences,
       bibleReferences,
+      resolveIncludeDrafts(),
     );
     const quranByReference = new Map(
       quranDocs.map((doc) => {
@@ -1120,10 +1139,11 @@ export const getArticleKeyScripture = cache(
 );
 
 const getCachedComparisonArticleSlugs = unstable_cache(
-  async () => {
+  async (includeDrafts: boolean) => {
     const payload = await getClient();
     const result = await payload.find({
       collection: "comparison-articles",
+      where: includeDrafts ? {} : { status: { equals: "published" } },
       pagination: false,
       depth: 0,
       select: { slug: true },
@@ -1138,12 +1158,19 @@ const getCachedComparisonArticleSlugs = unstable_cache(
 );
 
 const getCachedComparisonArticleDoc = unstable_cache(
-  async (slug: string) => {
+  async (slug: string, includeDrafts: boolean) => {
     const payload = await getClient();
 
     const result = await payload.find({
       collection: "comparison-articles",
-      where: { slug: { equals: slug } },
+      where: includeDrafts
+        ? { slug: { equals: slug } }
+        : {
+            and: [
+              { slug: { equals: slug } },
+              { status: { equals: "published" } },
+            ],
+          },
       limit: 1,
       depth: 1,
     });
@@ -1159,12 +1186,13 @@ export const getComparisonArticleBySlug = cache(async (slug: string) => {
   // metadata-only index first so opening each of them does not issue its own
   // guaranteed-to-miss query against the comparison collection. The index is
   // invalidated by the same Payload content hooks as the full record.
-  const comparisonSlugs = await getCachedComparisonArticleSlugs();
+  const includeDrafts = resolveIncludeDrafts();
+  const comparisonSlugs = await getCachedComparisonArticleSlugs(includeDrafts);
   if (!comparisonSlugs.includes(slug)) {
     return undefined;
   }
 
-  const doc = (await getCachedComparisonArticleDoc(slug)) as
+  const doc = (await getCachedComparisonArticleDoc(slug, includeDrafts)) as
     | undefined
     | {
         slug: string;
@@ -1278,7 +1306,7 @@ export async function getGlossaryTerms(
 // ---------------------------------------------------------------------------
 
 const getCachedSourceLibraryDocs = unstable_cache(
-  async () => {
+  async (includeDrafts: boolean) => {
     const payload = await getClient();
     const [categoriesResult, itemsResult] = await Promise.all([
       payload.find({
@@ -1289,6 +1317,7 @@ const getCachedSourceLibraryDocs = unstable_cache(
       }),
       payload.find({
         collection: "source-library-items",
+        where: includeDrafts ? {} : { status: { equals: "verified" } },
         sort: "createdAt",
         pagination: false,
         depth: 0,
@@ -1304,7 +1333,10 @@ const getCachedSourceLibraryDocs = unstable_cache(
 export async function getSourceLibraryCategories(): Promise<
   SourceLibraryCategory[]
 > {
-  const sourceLibrary = await getCachedSourceLibraryDocs();
+  // This route is public even in development. Pending source records remain
+  // available in Payload's admin/API for editors, but never appear as
+  // creator-facing scaffolding in the reader experience.
+  const sourceLibrary = await getCachedSourceLibraryDocs(false);
   const categories = sourceLibrary.categories as unknown as {
     id: string | number;
     title: string;

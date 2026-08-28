@@ -60,16 +60,25 @@
 /* Keep Google Translate's injected chrome out of the reading experience.
  * These selectors must stay outside Tailwind layers because the elements are
  * created at runtime and must not be removed by unused-selector optimization. */
-body {
+html,
+body,
+html.translated-ltr body,
+html.translated-rtl body {
   top: 0 !important;
+  margin-top: 0 !important;
 }
 
 .goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame,
 .VIpgJd-ZVi9od-ORHb-OEVmcd,
+.VIpgJd-ZVi9od-ORHb,
 iframe.skiptranslate,
+iframe.goog-te-banner-frame,
+iframe[title="Language Translate Widget"],
 body > .skiptranslate {
   display: none !important;
   visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 .goog-te-gadget {
@@ -79,7 +88,9 @@ body > .skiptranslate {
 /* Hide the original-text/rating balloon shown after tapping translated copy. */
 #goog-gt-tt,
 .goog-te-balloon-frame,
-iframe.goog-te-balloon-frame {
+iframe.goog-te-balloon-frame,
+.VIpgJd-suEOdc,
+.VIpgJd-yAWNEb-hvhgNd {
   display: none !important;
   visibility: hidden !important;
   pointer-events: none !important;

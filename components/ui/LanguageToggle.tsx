@@ -8,6 +8,7 @@ import {
   getServerTranslationRun,
   getTranslationRun,
   guardReactAgainstTranslation,
+  installGoogleChromeGuard,
   LANGUAGE_EVENT,
   persistLanguage,
   protectOriginalScripture,
@@ -30,8 +31,8 @@ export function LanguageToggle({ className }: { className?: string }) {
   useEffect(() => {
     const saved = readSavedLanguage();
     setLanguage(saved);
-    setDocumentLanguage(saved);
     protectOriginalScripture();
+    installGoogleChromeGuard();
 
     const handleLanguageChange = (event: Event) => {
       const next = (event as CustomEvent<SupportedLanguage>).detail;
@@ -45,11 +46,14 @@ export function LanguageToggle({ className }: { className?: string }) {
       // The widget re-applies the saved language from its own cookie on every
       // page load. Guard React first, then let the shared run drive it; the
       // request is a no-op for whichever toggle instance gets here second.
+      // Keep the English source LTR until translated text is confirmed.
+      setDocumentLanguage("en");
       guardReactAgainstTranslation();
       void requestLanguage("ar", "restore");
     } else {
       // Keep the widget's cookie in step with our own store, otherwise a stale
       // cookie from an interrupted switch silently translates an "English" page.
+      setDocumentLanguage("en");
       persistLanguage("en");
     }
 

@@ -1,3 +1,7 @@
+"use client";
+
+import { useId } from "react";
+
 /**
  * Inline rendering of the primary Straight Path brand mark.
  *
@@ -11,6 +15,11 @@ type LogoMarkProps = {
 };
 
 export function LogoMark({ className, title }: LogoMarkProps) {
+  const idPrefix = useId().replaceAll(":", "");
+  const roadSurfaceId = `${idPrefix}-brand-road-surface`;
+  const roadEdgeId = `${idPrefix}-brand-road-edge`;
+  const frameClipId = `${idPrefix}-brand-frame-clip`;
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +32,7 @@ export function LogoMark({ className, title }: LogoMarkProps) {
       {title ? <title>{title}</title> : null}
       <defs>
         <linearGradient
-          id="brand-road-surface"
+          id={roadSurfaceId}
           x1="64"
           y1="38"
           x2="64"
@@ -34,7 +43,7 @@ export function LogoMark({ className, title }: LogoMarkProps) {
           <stop offset="1" stopColor="#16756B" stopOpacity="0.88" />
         </linearGradient>
         <linearGradient
-          id="brand-road-edge"
+          id={roadEdgeId}
           x1="64"
           y1="38"
           x2="64"
@@ -44,7 +53,7 @@ export function LogoMark({ className, title }: LogoMarkProps) {
           <stop stopColor="#FFFDF8" />
           <stop offset="1" stopColor="#F1E7D8" />
         </linearGradient>
-        <clipPath id="brand-frame-clip">
+        <clipPath id={frameClipId}>
           <rect x="4" y="4" width="120" height="120" rx="28" />
         </clipPath>
       </defs>
@@ -55,18 +64,18 @@ export function LogoMark({ className, title }: LogoMarkProps) {
       <circle cx="64" cy="30" r="9.5" fill="#E7B94A" opacity="0.65" />
       <circle cx="64" cy="30" r="5.3" fill="#FFF9E9" />
 
-      <g clipPath="url(#brand-frame-clip)">
+      <g clipPath={`url(#${frameClipId})`}>
         <path
           d="M18 126L60.3 37.2Q64 33.2 67.7 37.2L110 126H18Z"
-          fill="url(#brand-road-surface)"
+          fill={`url(#${roadSurfaceId})`}
         />
         <path
           d="M18 126L60 38L62.2 35.8L31 126H18Z"
-          fill="url(#brand-road-edge)"
+          fill={`url(#${roadEdgeId})`}
         />
         <path
           d="M97 126L65.8 35.8L68 38L110 126H97Z"
-          fill="url(#brand-road-edge)"
+          fill={`url(#${roadEdgeId})`}
         />
         <path d="M63.25 47.2L63.4 41.2H64.6L64.75 47.2H63.25Z" fill="#FFFDF8" />
         <path d="M62.7 62.8L63 52.8H65L65.3 62.8H62.7Z" fill="#FFFDF8" />

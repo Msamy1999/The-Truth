@@ -16,18 +16,27 @@ function openClaimFromHash() {
 
 export function ClaimsHashOpener() {
   useEffect(() => {
-    let retryFrame = 0;
     let retryTimer = 0;
+    let attempts = 0;
+    let stopped = false;
+
+    const ensureOpen = () => {
+      if (stopped || !window.location.hash) return;
+
+      openClaimFromHash();
+
+      // Hydration can remove an `open` attribute that was applied to the
+      // server-rendered element too early. Re-apply it briefly until the
+      // client tree is stable so tree and copied deep links stay open.
+      if (attempts >= 12) return;
+      attempts += 1;
+      retryTimer = window.setTimeout(ensureOpen, Math.min(75 + attempts * 25, 250));
+    };
 
     const openAfterNavigation = () => {
-      window.cancelAnimationFrame(retryFrame);
       window.clearTimeout(retryTimer);
-
-      if (openClaimFromHash()) return;
-
-      retryFrame = window.requestAnimationFrame(() => {
-        retryTimer = window.setTimeout(openClaimFromHash, 100);
-      });
+      attempts = 0;
+      ensureOpen();
     };
 
     openAfterNavigation();
@@ -35,7 +44,7 @@ export function ClaimsHashOpener() {
     window.addEventListener("popstate", openAfterNavigation);
 
     return () => {
-      window.cancelAnimationFrame(retryFrame);
+      stopped = true;
       window.clearTimeout(retryTimer);
       window.removeEventListener("hashchange", openAfterNavigation);
       window.removeEventListener("popstate", openAfterNavigation);

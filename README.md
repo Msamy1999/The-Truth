@@ -1,106 +1,110 @@
 # The Straight Path (الصراط المستقيم)
 
-A mobile-first Next.js Islamic research library foundation for sincere seekers, source-aware study, and respectful comparison where needed.
+A mobile-first Islamic research and dawah library for readers from all
+backgrounds. The site presents sourced articles about Islam, Christianity,
+atheism, common claims against Islam, and Palestine in a respectful, clear,
+pro-Islam voice.
 
-## Tech Stack
+## Architecture
 
-- Next.js App Router
-- TypeScript
-- Tailwind CSS
-- Local structured content and data folders for future expansion
+- Next.js App Router, React, TypeScript, and Tailwind CSS provide the website.
+- Payload CMS is embedded in the Next.js application and uses SQLite in the
+  current deployment.
+- `lib/content/` is the application-facing content boundary. Pages and shared
+  components should not query editorial storage directly.
+- Payload owns articles, comparison articles, citations, scripture, glossary,
+  source-library records, users, and consented analytics events.
+- Navigation, category structure, and research trees remain code-defined under
+  `data/` and flow through `lib/content/`.
+- `content-drafts/*.json` is reviewed import material for Payload, not a second
+  live content source.
+- `mobile/` is an Expo application that consumes the same approved content
+  contracts and bundles an offline snapshot.
 
-## Scripts
+## Local development
 
-```bash
+Requirements: Node.js 22 and npm.
+
+```powershell
+npm ci
 npm run dev
-npm run build
-npm run typecheck
 ```
 
-## Project Structure
+The site runs at `http://localhost:4173`. Create a local `.env` from
+`.env.example` and use a new local `PAYLOAD_SECRET`; never copy the production
+environment file into the repository.
+
+## Verification
+
+For ordinary web or content changes run:
+
+```powershell
+npm run typecheck
+npm run lint
+npm run verify:drafts
+npm run verify:key-scripture
+npm run verify:quran -- .codex-quran-audit/quran-uthmani.json
+npm run build
+```
+
+The Quran verifier requires a canonical Tanzil Uthmani source file. An optional
+second argument can verify the stored English translation against the approved
+Saheeh International source.
+
+For a running target:
+
+```powershell
+npm run smoke:test -- http://localhost:4173
+```
+
+For the Expo application:
+
+```powershell
+Set-Location mobile
+npm ci
+npm run lint
+npx expo install --check
+```
+
+## Main directories
 
 ```text
-app/                  App Router routes, layout, metadata, and global styles
-components/layout/    Site shell components
-components/ui/        Reusable UI primitives
-components/content/   Research and content-focused reusable components
-data/                 Local structured data
-content/              Future MDX/articles and study notes
-lib/                  Shared utilities
-types/                Shared TypeScript types
+app/                  Next.js frontend, Payload admin/API, health, TTS, analytics
+components/           Shared layout, content, audio, analytics, and UI components
+content-drafts/       Reviewed JSON import material for Payload
+data/                 Code-defined navigation plus legacy/seed evidence
+lib/content/          Application-facing content boundary
+payload/              Collections, hooks, imports, and verification tools
+mobile/               Expo client and bundled offline content snapshot
+scripts/              Smoke, scripture, export, and integrity checks
+types/                Shared domain and generated Payload types
 ```
 
-## Design System Components
+## Editorial workflow
 
-- `Container`, `Section`, `PageHeader`, and `Breadcrumbs` for page structure
-- `TopicCard`, `VerseCard`, `ComparisonBlock`, `Citation`, `Callout`, `ExpandableStudy`, and `FAQItem` for research pages
-- `Tag`, `Card`, and `ButtonLink` as small UI primitives
+The admin interface is available at `/admin`. Editorial status and source
+status are meaningful controls:
 
-## Site Map
+- Article states: Draft, Under review, Published.
+- Citation and scripture states: Source pending, Verified.
+- The publish hook rejects placeholder markers and unverified linked evidence.
+- Do not weaken the publish hook or mark evidence verified merely to pass a
+  build.
 
-The main category routes are defined in `data/site.ts` and rendered through a shared category template:
+See [CONTENT-EDITING.md](CONTENT-EDITING.md) for content operations and
+[DEPLOYMENT.md](DEPLOYMENT.md) for the isolated release, backup, health-check,
+and rollback procedure.
 
-- `/`
-- `/search`
-- `/method`
-- `/islam-overview`
-- `/islam-christianity`
-- `/atheism-agnosticism`
-- `/people-of-palestine`
-- `/the-quran-and-the-bible`
-- `/jesus-in-islam-and-christianity`
-- `/preservation`
-- `/difficult-questions`
-- `/scientific-signs`
-- `/religious-history`
-- `/historical-evidence`
-- `/tawhid-and-the-trinity`
-- `/salvation-and-purpose-of-life`
-- `/war-and-violence`
-- `/women`
-- `/prophecies`
-- `/questions`
-- `/glossary`
-- `/sources`
-- `/language-demo`
+## Public application
 
-## Content Architecture
+- Canonical site: `https://thestraightpathislam.com`
+- Health: `/healthz`
+- Database readiness: `/api/health`
+- Long-form articles: `/articles/[slug]`
+- Search: `/search`
+- Glossary: `/glossary`
+- Claims Against Islam: `/claims-against-islam`
 
-Phase 4 adds structured draft data under `data/content/` and helper functions under `lib/content/`.
-
-- `Article` records include status, audience level, sections, citation ids, and related articles.
-- `QuranVerse` and `BibleVerse` records are shaped for verified scripture text and source attribution.
-- `Citation`, `ComparisonTopic`, and `GlossaryTerm` records support safer future article pages.
-- Placeholder scripture and citations must stay draft/source-pending until verified.
-
-## Article Routing
-
-Phase 5 uses `/articles/[slug]` for long-form articles instead of category-specific article routes. This keeps one reusable article renderer for content that may belong to a category but also cross-link across Jesus, scripture, preservation, history, and source-library topics.
-
-- `ArticleLayout` renders the shared research article shell.
-- `ComparisonArticleLayout` renders structured comparison articles inside that shell.
-- Draft examples: `/articles/who-is-jesus` and `/articles/was-the-quran-preserved`.
-
-## SEO, Trust, and Accessibility Notes
-
-- Global metadata, Open Graph defaults, `robots.ts`, and `sitemap.ts` live in the App Router.
-- `/method` explains the research method, educational disclaimer, draft status labels, and correction posture.
-- Article status is shown with visible labels: Draft, Under review, and Published.
-- The layout includes a keyboard-accessible skip link and the mobile navigation uses explicit labels and focus states.
-- Light mode is the default for first-time visitors. The header theme toggle (`components/ui/ThemeToggle.tsx`) still allows an explicit dark choice; the choice persists in `localStorage` and is applied before first paint by an inline script in `app/layout.tsx`.
-- The mobile menu closes on Escape and its panel stays in the DOM so `aria-controls` always resolves.
-- Search, glossary, and source-library filters are the only intentionally client-side research tools for now.
-
-## Tree-Style Navigation
-
-`components/content/ResearchTree.tsx` renders a folder-tree/sitemap-style list (connector lines, expand/collapse via native `<details>`, optional status and tag pills) instead of a card grid. It is used for:
-
-- `/islam-christianity` (`data/islam-christianity-tree.ts`) — the nine former comparison categories as expandable branches with their subtopics.
-- `/islam-overview`, `/atheism-agnosticism`, and `/people-of-palestine` (`data/islam-overview-tree.ts`, `data/atheism-agnosticism-tree.ts`, `data/people-of-palestine-tree.ts`) — flat beginner outlines.
-- The homepage "Main paths" section (`data/home.ts`, `mainPaths`) — the five top-level entry points into the library.
-
-Nodes without an `href` render as plain descriptive rows rather than a link to nowhere; only topics with a real draft article or page get a link.
-
-## Phase 1 Scope
-
-This phase intentionally uses placeholder content only. Future phases should add sourced articles, verse cards, comparison tables, citations, topic hubs, glossary entries, and deeper study sections without fabricating citations.
+The website includes responsive English/Arabic reading, RTL handling, theme
+selection, article audio, offline navigation fallback, consent-gated first-party
+analytics, searchable content, and source-linked scripture cards.

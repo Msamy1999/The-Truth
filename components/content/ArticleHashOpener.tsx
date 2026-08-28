@@ -36,13 +36,14 @@ export function ArticleHashOpener() {
     let stopped = false;
 
     const tryOpen = () => {
-      if (stopped || openSectionFromHash()) {
-        return;
-      }
+      if (stopped || !window.location.hash) return;
+
+      openSectionFromHash();
 
       // On a cold navigation, the server HTML and the client tree can become
-      // available in separate frames. Keep the retry window short, but long
-      // enough to cover that hydration boundary.
+      // available in separate frames. Hydration can also remove an `open`
+      // attribute applied before the client tree settles, so keep enforcing
+      // the selected section for a short, bounded window.
       if (attempts >= 20) {
         return;
       }

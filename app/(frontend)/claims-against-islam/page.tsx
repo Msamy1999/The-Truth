@@ -6,6 +6,7 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
+import { safeExternalUrl } from "@/lib/external-url";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -82,14 +83,20 @@ export default function ClaimsAgainstIslamPage() {
                           <span className="mr-1.5 inline-flex rounded bg-background px-1.5 py-0.5 text-[0.7rem] font-semibold uppercase tracking-wide text-accent">
                             {source.kind}
                           </span>
-                          <a
-                            href={source.href}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="font-semibold text-accent underline decoration-accent/40 underline-offset-2 hover:text-foreground"
-                          >
-                            {source.reference}
-                          </a>
+                          {safeExternalUrl(source.href) ? (
+                            <a
+                              href={safeExternalUrl(source.href)}
+                              target="_blank"
+                              rel="noreferrer noopener"
+                              className="font-semibold text-accent underline decoration-accent/40 underline-offset-2 hover:text-foreground"
+                            >
+                              {source.reference}
+                            </a>
+                          ) : (
+                            <span className="font-semibold text-foreground">
+                              {source.reference}
+                            </span>
+                          )}
                           <span className="text-foreground"> — </span>
                           {source.summary}
                         </li>

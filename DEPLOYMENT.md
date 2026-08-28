@@ -50,10 +50,18 @@ not publish a host port for SQLite.
 
 ## Verification
 
-Run from outside the VPS:
+Before switching the web service, query the candidate release's
+`/api/content-manifest` endpoint. Do not continue when the public counts for
+articles, citations, Quran verses, Bible verses, or glossary terms are zero.
+That means the database contains only reviewed/pending records, which the
+public access rules correctly hide. Publication and verification must be
+completed through Payload's editorial workflow; never bypass those controls to
+make a deployment pass.
+
+Run the release smoke suite from outside the VPS with the public-content gate:
 
 ```powershell
-npm run smoke:test -- https://thestraightpathislam.com
+npm run smoke:test -- https://thestraightpathislam.com --require-content
 ```
 
 Also check the admin login page at `/admin`, a direct article refresh, the

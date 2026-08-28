@@ -8,7 +8,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const coreRoutes = [
     "/",
-    "/search",
     "/method",
     "/islam-overview",
     "/islam-christianity",

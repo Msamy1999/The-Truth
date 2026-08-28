@@ -1,4 +1,5 @@
 import type { CollectionConfig } from "payload";
+import { authenticated, ownerOnly } from "../access/editorial";
 import {
   revalidateAfterChange,
   revalidateAfterDelete,
@@ -43,8 +44,11 @@ const verificationFields: CollectionConfig["fields"] = [
 export const QuranVerses: CollectionConfig = {
   slug: "quran-verses",
   access: {
-    // Public read for the website and future mobile app; writes stay authenticated.
-    read: () => true,
+    read: ({ req }) =>
+      req.user ? true : { status: { equals: "verified" } },
+    create: authenticated,
+    update: authenticated,
+    delete: ownerOnly,
   },
   hooks: contentHooks,
   admin: {
@@ -76,8 +80,11 @@ export const QuranVerses: CollectionConfig = {
 export const BibleVerses: CollectionConfig = {
   slug: "bible-verses",
   access: {
-    // Public read for the website and future mobile app; writes stay authenticated.
-    read: () => true,
+    read: ({ req }) =>
+      req.user ? true : { status: { equals: "verified" } },
+    create: authenticated,
+    update: authenticated,
+    delete: ownerOnly,
   },
   hooks: contentHooks,
   admin: {

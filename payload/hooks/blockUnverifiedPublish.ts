@@ -48,16 +48,26 @@ async function assertAllVerified(
   ids: (string | number)[],
   label: string,
 ) {
-  if (ids.length === 0) {
+  const uniqueIds = Array.from(new Set(ids.map(String)));
+  if (uniqueIds.length === 0) {
     return;
   }
 
   const docs = await payload.find({
     collection,
-    where: { id: { in: ids } },
-    limit: ids.length,
+    where: { id: { in: uniqueIds } },
+    limit: uniqueIds.length,
     depth: 0,
   });
+
+  const foundIds = new Set(docs.docs.map((doc) => String(doc.id)));
+  const missingIds = uniqueIds.filter((id) => !foundIds.has(id));
+  if (missingIds.length > 0) {
+    throw new APIError(
+      `Cannot publish: ${label} references are missing: ${missingIds.join(", ")}.`,
+      400,
+    );
+  }
 
   const unverified = docs.docs.filter(
     (doc) => (doc as { status?: string }).status !== "verified",
@@ -102,15 +112,17 @@ function collectStrings(value: unknown, out: string[]): void {
 
 export const blockUnverifiedPublish: CollectionBeforeChangeHook = async ({
   data,
+  originalDoc,
   req,
 }) => {
-  if (data?.status !== "published") {
+  const document = { ...(originalDoc ?? {}), ...(data ?? {}) };
+  if (document.status !== "published") {
     return data;
   }
 
   // 1. No placeholder markers anywhere in the document's text.
   const strings: string[] = [];
-  collectStrings(data, strings);
+  collectStrings(document, strings);
   for (const text of strings) {
     const placeholder = findPlaceholder(text);
     if (placeholder) {
@@ -123,13 +135,13 @@ export const blockUnverifiedPublish: CollectionBeforeChangeHook = async ({
 
   // 2. Every linked citation must be verified (top-level and per-section).
   const citationIds = [
-    ...relationIds(data.citations),
-    ...(Array.isArray(data.sections)
-      ? data.sections.flatMap((section: { citations?: unknown }) =>
+    ...relationIds(document.citations),
+    ...(Array.isArray(document.sections)
+      ? document.sections.flatMap((section: { citations?: unknown }) =>
           relationIds(section?.citations),
         )
       : []),
-    ...relationIds(data.sources),
+    ...relationIds(document.sources),
   ];
   await assertAllVerified(req.payload, "citations", citationIds, "citations");
 
@@ -137,13 +149,13 @@ export const blockUnverifiedPublish: CollectionBeforeChangeHook = async ({
   await assertAllVerified(
     req.payload,
     "quran-verses",
-    relationIds(data.quranVerses),
+    relationIds(document.quranVerses),
     "Quran verses",
   );
   await assertAllVerified(
     req.payload,
     "bible-verses",
-    relationIds(data.bibleVerses),
+    relationIds(document.bibleVerses),
     "Bible verses",
   );
 

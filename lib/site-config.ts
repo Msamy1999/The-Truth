@@ -12,7 +12,7 @@ export const siteDescription =
   "A respectful Islamic research library for sincere seekers and careful comparison where needed.";
 
 export function getSiteUrl() {
-  return process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  return process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:4173";
 }
 
 export function absoluteUrl(path = "/") {

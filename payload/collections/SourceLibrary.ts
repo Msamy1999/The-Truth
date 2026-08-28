@@ -1,4 +1,6 @@
 import type { CollectionConfig } from "payload";
+import { validateExternalUrl } from "../../lib/external-url";
+import { authenticated, ownerOnly } from "../access/editorial";
 import {
   revalidateAfterChange,
   revalidateAfterDelete,
@@ -27,6 +29,9 @@ export const SourceLibraryCategories: CollectionConfig = {
   access: {
     // Public read for the website and future mobile app; writes stay authenticated.
     read: () => true,
+    create: authenticated,
+    update: authenticated,
+    delete: ownerOnly,
   },
   hooks: contentHooks,
   admin: {
@@ -49,8 +54,11 @@ export const SourceLibraryCategories: CollectionConfig = {
 export const SourceLibraryItems: CollectionConfig = {
   slug: "source-library-items",
   access: {
-    // Public read for the website and future mobile app; writes stay authenticated.
-    read: () => true,
+    read: ({ req }) =>
+      req.user ? true : { status: { equals: "verified" } },
+    create: authenticated,
+    update: authenticated,
+    delete: ownerOnly,
   },
   hooks: contentHooks,
   admin: {
@@ -73,7 +81,7 @@ export const SourceLibraryItems: CollectionConfig = {
     },
     { name: "authorOrPublisher", type: "text" },
     { name: "year", type: "number" },
-    { name: "url", type: "text" },
+    { name: "url", type: "text", validate: validateExternalUrl },
     { name: "notes", type: "textarea", required: true, localized: true },
     {
       name: "status",

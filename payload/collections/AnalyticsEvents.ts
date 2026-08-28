@@ -1,4 +1,5 @@
 import type { CollectionConfig } from "payload";
+import { ownerOnly } from "../access/editorial";
 
 const deviceOptions = [
   "desktop",
@@ -28,10 +29,10 @@ const browserOptions = [
 export const AnalyticsEvents: CollectionConfig = {
   slug: "analytics-events",
   access: {
-    read: ({ req }) => Boolean(req.user),
+    read: ownerOnly,
     create: () => false,
     update: () => false,
-    delete: () => false,
+    delete: ownerOnly,
   },
   admin: {
     useAsTitle: "path",
@@ -46,7 +47,7 @@ export const AnalyticsEvents: CollectionConfig = {
       "browserCategory",
     ],
     description:
-      "Anonymous, consented page activity. No IP addresses, raw user-agents, names, or emails are stored.",
+      "Consented page activity retained for up to 13 months. No IP addresses, raw user-agents, names, or emails are stored.",
   },
   fields: [
     { name: "visitorId", type: "text", required: true, index: true },

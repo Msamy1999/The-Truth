@@ -3,7 +3,7 @@ import { Container } from "@/components/layout/Container";
 
 export const metadata: Metadata = {
   title: "Privacy",
-  description: "How The Straight Path handles anonymous, consented analytics.",
+  description: "How The Straight Path handles optional, consented site analytics.",
 };
 
 export default function PrivacyPage() {
@@ -22,8 +22,8 @@ export default function PrivacyPage() {
           If consent is declined, the site does not send analytics events.
         </p>
         <p>
-          When enabled, the site records an anonymous visitor and session ID,
-          page path and title, the referring page, the time the
+          When enabled, the site records random browser and session identifiers,
+          a page path and server-derived label, the referring page, the time the
           page was active, broad device and browser categories, and country,
           region, or city headers supplied by Cloudflare when available. This is
           used to understand which pages help readers and where the site needs
@@ -31,16 +31,18 @@ export default function PrivacyPage() {
         </p>
         <p>
           The analytics record never stores an IP address, raw user-agent,
-          name, email address, advertising identifier, query string, or page
-          content. Records are visible only to authenticated site administrators
-          and are not sold or shared for advertising. Use the analytics
+          name, email address, advertising identifier, query string, external
+          referrer path, or page content. Records are visible only to site owners
+          and are not sold or shared for advertising. Records are automatically
+          removed after 13 months. Use the analytics
           control in the footer at any time to turn the feature off or on for
           future visits.
         </p>
         <p>
           Your choice is kept in a small browser preference so the site can
           remember whether analytics is allowed. It is not an account, and it
-          is not used to identify you.
+          is not used to identify you. Turning analytics off also removes the
+          random identifiers stored by this browser.
         </p>
       </div>
     </Container>

@@ -4,15 +4,20 @@
  * - Static assets (/_next/static, images, fonts): cache-first.
  * - Never touches /admin or /api (the CMS must always be live).
  */
-const VERSION = "v3";
-const CACHE_NAME = `straight-path-${VERSION}`;
+const VERSION = "v6";
+const CACHE_PREFIX = "straight-path-";
+const SHELL_CACHE = `${CACHE_PREFIX}${VERSION}-shell`;
+const PAGE_CACHE = `${CACHE_PREFIX}${VERSION}-pages`;
+const ASSET_CACHE = `${CACHE_PREFIX}${VERSION}-assets`;
 const OFFLINE_URL = "/offline";
 const PRECACHE = [OFFLINE_URL, "/icon-192.png", "/icon-512.png"];
+const MAX_PAGE_ENTRIES = 40;
+const MAX_ASSET_ENTRIES = 120;
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches
-      .open(CACHE_NAME)
+      .open(SHELL_CACHE)
       .then((cache) => cache.addAll(PRECACHE))
       .then(() => self.skipWaiting()),
   );
@@ -25,7 +30,13 @@ self.addEventListener("activate", (event) => {
       .then((keys) =>
         Promise.all(
           keys
-            .filter((key) => key !== CACHE_NAME)
+            .filter(
+              (key) =>
+                key.startsWith(CACHE_PREFIX) &&
+                key !== SHELL_CACHE &&
+                key !== PAGE_CACHE &&
+                key !== ASSET_CACHE,
+            )
             .map((key) => caches.delete(key)),
         ),
       )
@@ -39,6 +50,21 @@ function isStaticAsset(url) {
     url.pathname.startsWith("/_next/image") ||
     /\.(png|jpg|jpeg|svg|webp|ico|woff2?)$/.test(url.pathname)
   );
+}
+
+function responseMayBeStored(response) {
+  const cacheControl = response.headers.get("cache-control") ?? "";
+  return response.ok && !/(?:^|,)\s*(?:private|no-store)\b/i.test(cacheControl);
+}
+
+async function putWithLimit(cacheName, request, response, maximumEntries) {
+  const cache = await caches.open(cacheName);
+  await cache.put(request, response);
+  const keys = await cache.keys();
+  const overflow = keys.length - maximumEntries;
+  if (overflow > 0) {
+    await Promise.all(keys.slice(0, overflow).map((key) => cache.delete(key)));
+  }
 }
 
 self.addEventListener("fetch", (event) => {
@@ -58,18 +84,24 @@ self.addEventListener("fetch", (event) => {
 
   if (request.mode === "navigate") {
     event.respondWith(
-      fetch(request)
+      fetch(request, { cache: "no-store" })
         .then((response) => {
-          const copy = response.clone();
-          caches
-            .open(CACHE_NAME)
-            .then((cache) => cache.put(request, copy))
-            .catch(() => {});
+          // Do not retain search terms or tracking parameters in offline
+          // storage. Cache only clean, publicly cacheable page URLs.
+          if (url.search === "" && responseMayBeStored(response)) {
+            event.waitUntil(
+              putWithLimit(PAGE_CACHE, request, response.clone(), MAX_PAGE_ENTRIES).catch(
+                () => {},
+              ),
+            );
+          }
           return response;
         })
         .catch(async () => {
-          const cached = await caches.match(request);
-          return cached ?? (await caches.match(OFFLINE_URL));
+          const pageCache = await caches.open(PAGE_CACHE);
+          const shellCache = await caches.open(SHELL_CACHE);
+          const cached = await pageCache.match(request);
+          return cached ?? (await shellCache.match(OFFLINE_URL));
         }),
     );
     return;
@@ -81,11 +113,16 @@ self.addEventListener("fetch", (event) => {
         (cached) =>
           cached ??
           fetch(request).then((response) => {
-            const copy = response.clone();
-            caches
-              .open(CACHE_NAME)
-              .then((cache) => cache.put(request, copy))
-              .catch(() => {});
+            if (responseMayBeStored(response)) {
+              event.waitUntil(
+                putWithLimit(
+                  ASSET_CACHE,
+                  request,
+                  response.clone(),
+                  MAX_ASSET_ENTRIES,
+                ).catch(() => {}),
+              );
+            }
             return response;
           }),
       ),

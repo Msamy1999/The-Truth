@@ -1,4 +1,6 @@
 import type { CollectionConfig } from "payload";
+import { validateExternalUrl } from "../../lib/external-url";
+import { authenticated, ownerOnly } from "../access/editorial";
 import {
   revalidateAfterChange,
   revalidateAfterDelete,
@@ -26,8 +28,12 @@ const citationTypeOptions = [
 export const Citations: CollectionConfig = {
   slug: "citations",
   access: {
-    // Public read for the website and future mobile app; writes stay authenticated.
-    read: () => true,
+    // Pending evidence can contain editorial notes and must stay internal.
+    read: ({ req }) =>
+      req.user ? true : { status: { equals: "verified" } },
+    create: authenticated,
+    update: authenticated,
+    delete: ownerOnly,
   },
   hooks: {
     afterChange: [revalidateAfterChange],
@@ -63,7 +69,7 @@ export const Citations: CollectionConfig = {
     { name: "author", type: "text" },
     { name: "publisher", type: "text" },
     { name: "year", type: "number" },
-    { name: "url", type: "text" },
+    { name: "url", type: "text", validate: validateExternalUrl },
     { name: "note", type: "textarea" },
     {
       name: "status",

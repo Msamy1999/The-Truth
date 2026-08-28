@@ -60,12 +60,13 @@ export async function generateMetadata({
   params,
 }: ArticlePageProps): Promise<Metadata> {
   const { slug } = await params;
-  const article = await getArticleBySlug(slug);
+  const redirectSlug = getArticleRedirect(slug);
+  const article = await getArticleBySlug(redirectSlug ?? slug);
 
   if (!article) {
-    return {
-      title: "Article not found",
-    };
+    // Prevent a missing or unpublished article from inheriting the site's
+    // normal indexable metadata. Next adds noindex to this not-found response.
+    notFound();
   }
 
   return {

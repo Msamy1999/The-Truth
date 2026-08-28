@@ -1,5 +1,11 @@
 # Roadmap — Editable Content + iOS/Android Mobile App
 
+> Historical planning record. The web app, Payload CMS, SQLite deployment,
+> PWA, and Expo app now exist. Production runs at
+> `https://thestraightpathislam.com` on the documented VPS release workflow.
+> The Expo app currently uses a reviewed bundled snapshot; live content sync,
+> full Arabic mobile UI, and store submission remain future work.
+
 The plan for taking The Straight Path (الصراط المستقيم) from a static site with
 content in code to: (1) content editable from any device through an admin UI,
 (2) a professional installable phone experience, and (3) native iOS and
@@ -23,8 +29,10 @@ the same mobile path (PWA → Expo/React Native).
 | Rejected | Sanity / Strapi / Directus | Content leaves the repo into a third-party cloud (Sanity), or a second server to run forever (Strapi/Directus). |
 | Lighter alternative | Keystatic (git-based CMS) | Keeps the site 100% static with zero database ($0, simplest ops) — but weaker editorial workflow, no instant publish, and editing leaks git concepts (branches/PRs) to the editor. Choose this only if avoiding a database matters more than editing comfort. |
 
-**Costs:** Payload is free (MIT). Hosting: Vercel free tier + Neon Postgres
-free tier ≈ $0/mo. Apple Developer $99/year. Google Play $25 one-time.
+**Costs:** Payload is free (MIT). Web hosting and backups use the current VPS
+arrangement documented in `DEPLOYMENT.md`. Apple Developer is $99/year and
+Google Play registration is a one-time fee; verify current prices before
+purchase.
 EAS Build free tier suffices for a solo release cadence (paid $19/mo only if
 needed at launch).
 

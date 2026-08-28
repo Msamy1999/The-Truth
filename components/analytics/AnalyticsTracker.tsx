@@ -9,7 +9,6 @@ import {
 
 type PageState = {
   path: string;
-  title: string;
   enteredAt: string;
   entryReferrer?: string;
   activeMs: number;
@@ -74,6 +73,7 @@ export function AnalyticsTracker() {
   useEffect(() => {
     if (!enabled || !pathname) {
       pageRef.current = null;
+      idsRef.current = null;
       return;
     }
 
@@ -89,7 +89,6 @@ export function AnalyticsTracker() {
 
     pageRef.current = {
       path: pathname,
-      title: document.title || "The Straight Path",
       enteredAt: new Date().toISOString(),
       entryReferrer: previous
         ? `${window.location.origin}${previous.path}`
@@ -136,7 +135,6 @@ export function AnalyticsTracker() {
       visitorId: idsRef.current.visitorId,
       sessionId: idsRef.current.sessionId,
       path: page.path,
-      title: page.title,
       entryReferrer: page.entryReferrer,
       durationMs: activeDuration(page, performance.now()),
       deviceCategory: deviceCategory(),
@@ -147,11 +145,11 @@ export function AnalyticsTracker() {
     });
 
     if (beacon && typeof navigator.sendBeacon === "function") {
-      navigator.sendBeacon(
+      const queued = navigator.sendBeacon(
         "/api/analytics",
         new Blob([body], { type: "application/json" }),
       );
-      return;
+      if (queued) return;
     }
 
     try {

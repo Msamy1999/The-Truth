@@ -60,7 +60,7 @@ export function GlossaryBrowser({ terms }: GlossaryBrowserProps) {
     <div className="space-y-6">
       <Card className="p-4">
         <div className="grid gap-3 md:grid-cols-[1fr_16rem]">
-          <div className="flex items-center gap-2 rounded-md border border-border bg-background px-3 py-2">
+          <div className="flex items-center gap-2 rounded-md border border-border bg-background px-3 py-2 focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-accent">
             <Search aria-hidden="true" className="h-4 w-4 shrink-0 text-muted-foreground" />
             <input
               type="search"

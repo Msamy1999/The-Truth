@@ -3,88 +3,130 @@
 import Link from "next/link";
 import { Search } from "lucide-react";
 import type { ReactNode } from "react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Card } from "@/components/ui/Card";
 import { Tag } from "@/components/ui/Tag";
-import type { Article, AudienceLevel, SiteCategory, TopicTag } from "@/types/content";
+import type {
+  ArticleSearchFacets,
+  ArticleSearchResponse,
+  ArticleSearchResult,
+} from "@/lib/article-search";
+import type { AudienceLevel, SiteCategory, TopicTag } from "@/types/content";
 
 type ArticleSearchProps = {
-  articles: Article[];
   categories: SiteCategory[];
   initialQuery?: string;
-};
-
-type SearchResult = {
-  article: Article;
-  matchedSection?: string;
-  snippet?: string;
+  initialCategory?: string;
+  initialAudienceLevel?: typeof allValue | AudienceLevel;
+  initialTag?: typeof allValue | TopicTag;
+  initialResults: ArticleSearchResponse;
+  facets: ArticleSearchFacets;
+  articleCount: number;
 };
 
 const allValue = "all";
 
-export function ArticleSearch({ articles, categories, initialQuery = "" }: ArticleSearchProps) {
+export function ArticleSearch({
+  categories,
+  initialQuery = "",
+  initialCategory = allValue,
+  initialAudienceLevel = allValue,
+  initialTag = allValue,
+  initialResults,
+  facets,
+  articleCount,
+}: ArticleSearchProps) {
   const [query, setQuery] = useState(initialQuery);
-  const [category, setCategory] = useState(allValue);
-  const [audienceLevel, setAudienceLevel] = useState<typeof allValue | AudienceLevel>(
-    allValue,
-  );
-  const [tag, setTag] = useState<typeof allValue | TopicTag>(allValue);
+  const [category, setCategory] = useState(initialCategory);
+  const [audienceLevel, setAudienceLevel] = useState<
+    typeof allValue | AudienceLevel
+  >(initialAudienceLevel);
+  const [tag, setTag] = useState<typeof allValue | TopicTag>(initialTag);
+  const [results, setResults] = useState(initialResults);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const didMount = useRef(false);
 
   useEffect(() => {
     setQuery(initialQuery);
-  }, [initialQuery]);
+    setCategory(initialCategory);
+    setAudienceLevel(initialAudienceLevel);
+    setTag(initialTag);
+    setResults(initialResults);
+  }, [
+    initialAudienceLevel,
+    initialCategory,
+    initialQuery,
+    initialResults,
+    initialTag,
+  ]);
 
   const categoryTitles = useMemo(
     () => new Map(categories.map((item) => [item.slug, item.title])),
     [categories],
   );
-  const tags = useMemo(
-    () => Array.from(new Set(articles.flatMap((article) => article.tags))).sort(),
-    [articles],
-  );
-  const audienceLevels = useMemo(
-    () => Array.from(new Set(articles.map((article) => article.audienceLevel))).sort(),
-    [articles],
-  );
 
-  const results = useMemo(() => {
-    const words = query.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);
-    const appliesFilters = (article: Article) =>
-      (category === allValue || article.category === category) &&
-      (audienceLevel === allValue || article.audienceLevel === audienceLevel) &&
-      (tag === allValue || article.tags.includes(tag));
-    const eligible = articles.filter(appliesFilters);
-
-    if (words.length === 0) {
-      return {
-        titleMatches: eligible.map((article) => ({ article })),
-        contentMatches: [] as SearchResult[],
-      };
+  useEffect(() => {
+    if (!didMount.current) {
+      didMount.current = true;
+      return;
     }
 
-    const titleMatches = eligible
-      .filter((article) => includesAllWords(article.title, words))
-      .map((article) => ({ article }));
-    const titleSlugs = new Set(titleMatches.map(({ article }) => article.slug));
-    const contentMatches = eligible
-      .filter((article) => !titleSlugs.has(article.slug))
-      .map((article) => findContentMatch(article, words, categoryTitles))
-      .filter((result): result is SearchResult => result !== null);
+    const controller = new AbortController();
+    const timer = window.setTimeout(async () => {
+      setIsLoading(true);
+      setError(null);
+      const parameters = new URLSearchParams();
+      if (query.trim()) parameters.set("q", query.trim());
+      if (category !== allValue) parameters.set("category", category);
+      if (audienceLevel !== allValue) parameters.set("audience", audienceLevel);
+      if (tag !== allValue) parameters.set("tag", tag);
 
-    return { titleMatches, contentMatches };
-  }, [articles, audienceLevel, category, categoryTitles, query, tag]);
+      try {
+        const response = await fetch(`/api/search?${parameters}`, {
+          signal: controller.signal,
+        });
+        if (!response.ok) {
+          throw new Error(`Search failed with HTTP ${response.status}`);
+        }
+        const body = (await response.json()) as {
+          results: ArticleSearchResponse;
+        };
+        setResults(body.results);
+        window.history.replaceState(
+          window.history.state,
+          "",
+          parameters.size > 0 ? `/search?${parameters.toString()}` : "/search",
+        );
+      } catch (searchError) {
+        if ((searchError as Error).name !== "AbortError") {
+          setError("Search is temporarily unavailable. Please try again.");
+        }
+      } finally {
+        if (!controller.signal.aborted) setIsLoading(false);
+      }
+    }, 200);
+
+    return () => {
+      controller.abort();
+      window.clearTimeout(timer);
+    };
+  }, [audienceLevel, category, query, tag]);
 
   const totalResults = results.titleMatches.length + results.contentMatches.length;
   const isSearching = query.trim().length > 0;
+  const hasActiveFilters =
+    category !== allValue || audienceLevel !== allValue || tag !== allValue;
 
   return (
     <div className="space-y-6">
       <Card className="p-4">
-        <div className="flex items-center gap-2 rounded-md border border-border bg-background px-3 py-2">
+        <div className="flex items-center gap-2 rounded-md border border-border bg-background px-3 py-2 focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-accent">
           <Search aria-hidden="true" className="h-4 w-4 shrink-0 text-muted-foreground" />
           <input
             type="search"
             aria-label="Search articles"
+            maxLength={120}
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search article titles and text"
@@ -106,10 +148,12 @@ export function ArticleSearch({ articles, categories, initialQuery = "" }: Artic
           <FilterSelect
             label="Audience"
             value={audienceLevel}
-            onChange={(value) => setAudienceLevel(value as typeof allValue | AudienceLevel)}
+            onChange={(value) =>
+              setAudienceLevel(value as typeof allValue | AudienceLevel)
+            }
           >
             <option value={allValue}>All levels</option>
-            {audienceLevels.map((level) => (
+            {facets.audienceLevels.map((level) => (
               <option key={level} value={level}>
                 {level}
               </option>
@@ -121,7 +165,7 @@ export function ArticleSearch({ articles, categories, initialQuery = "" }: Artic
             onChange={(value) => setTag(value as typeof allValue | TopicTag)}
           >
             <option value={allValue}>All tags</option>
-            {tags.map((item) => (
+            {facets.tags.map((item) => (
               <option key={item} value={item}>
                 {item}
               </option>
@@ -130,13 +174,31 @@ export function ArticleSearch({ articles, categories, initialQuery = "" }: Artic
         </div>
       </Card>
 
-      <p className="text-sm text-muted-foreground">
-        {isSearching ? `Found ${totalResults} matching articles.` : `Showing all ${articles.length} articles.`}
+      <p className="text-sm text-muted-foreground" aria-live="polite">
+        {isLoading
+          ? "Searching…"
+          : isSearching
+            ? `Found ${totalResults} matching articles.`
+            : hasActiveFilters
+              ? `Showing ${totalResults} articles matching the selected filters.`
+            : `Showing all ${articleCount} articles.`}
       </p>
+
+      {error ? (
+        <p role="alert" className="text-sm font-medium text-gold">
+          {error}
+        </p>
+      ) : null}
 
       {results.titleMatches.length > 0 ? (
         <SearchResultGroup
-          title={isSearching ? "Title matches" : "All articles"}
+          title={
+            isSearching
+              ? "Title matches"
+              : hasActiveFilters
+                ? "Filtered articles"
+                : "All articles"
+          }
           results={results.titleMatches}
           categoryTitles={categoryTitles}
         />
@@ -150,7 +212,7 @@ export function ArticleSearch({ articles, categories, initialQuery = "" }: Artic
         />
       ) : null}
 
-      {totalResults === 0 ? (
+      {totalResults === 0 && !isLoading ? (
         <Card className="p-5 text-center sm:p-6">
           <h2 className="text-lg leading-snug sm:text-xl">No articles found</h2>
           <p className="mt-3 text-sm leading-6 text-muted-foreground sm:leading-7">
@@ -168,7 +230,7 @@ function SearchResultGroup({
   categoryTitles,
 }: {
   title: string;
-  results: SearchResult[];
+  results: ArticleSearchResult[];
   categoryTitles: Map<string, string>;
 }) {
   return (
@@ -179,7 +241,9 @@ function SearchResultGroup({
           <SearchResultCard
             key={result.article.slug}
             result={result}
-            categoryTitle={categoryTitles.get(result.article.category) ?? result.article.category}
+            categoryTitle={
+              categoryTitles.get(result.article.category) ?? result.article.category
+            }
           />
         ))}
       </div>
@@ -191,7 +255,7 @@ function SearchResultCard({
   result,
   categoryTitle,
 }: {
-  result: SearchResult;
+  result: ArticleSearchResult;
   categoryTitle: string;
 }) {
   const { article, matchedSection, snippet } = result;
@@ -209,7 +273,9 @@ function SearchResultCard({
       </h3>
       {matchedSection && snippet ? (
         <p className="mt-2 text-sm leading-6 text-muted-foreground sm:mt-3 sm:leading-7">
-          <span className="font-semibold text-foreground">Found in {matchedSection}: </span>
+          <span className="font-semibold text-foreground">
+            Found in {matchedSection}:{" "}
+          </span>
           {snippet}
         </p>
       ) : (
@@ -225,52 +291,6 @@ function SearchResultCard({
       </div>
     </Card>
   );
-}
-
-function findContentMatch(
-  article: Article,
-  words: string[],
-  categoryTitles: Map<string, string>,
-): SearchResult | null {
-  const articleText = [
-    article.subtitle,
-    article.summary,
-    categoryTitles.get(article.category) ?? article.category,
-    article.category,
-    ...article.tags,
-    ...article.sections.flatMap((section) => [section.title, section.body]),
-  ].join(" ");
-
-  if (!includesAllWords(articleText, words)) {
-    return null;
-  }
-
-  const section = article.sections.find((item) =>
-    words.some((word) => `${item.title} ${item.body}`.toLocaleLowerCase().includes(word)),
-  );
-  const text = section ? `${section.title}. ${section.body}` : `${article.subtitle}. ${article.summary}`;
-
-  return {
-    article,
-    matchedSection: section?.id,
-    snippet: excerptAroundMatch(text, words),
-  };
-}
-
-function includesAllWords(value: string, words: string[]) {
-  const normalized = value.toLocaleLowerCase();
-  return words.every((word) => normalized.includes(word));
-}
-
-function excerptAroundMatch(value: string, words: string[]) {
-  const normalized = value.toLocaleLowerCase();
-  const index = words
-    .map((word) => normalized.indexOf(word))
-    .filter((position) => position >= 0)
-    .sort((first, second) => first - second)[0] ?? 0;
-  const start = Math.max(0, index - 72);
-  const end = Math.min(value.length, index + 210);
-  return `${start > 0 ? "…" : ""}${value.slice(start, end).replace(/\s+/g, " ").trim()}${end < value.length ? "…" : ""}`;
 }
 
 type FilterSelectProps = {

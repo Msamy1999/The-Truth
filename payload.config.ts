@@ -85,33 +85,42 @@ export default buildConfig({
           "source-library-items",
         ] as const;
 
+        const entries = await Promise.all(
+          collections.map(async (collection) => {
+            const [latest, total] = await Promise.all([
+              req.payload.find({
+                collection,
+                sort: "-updatedAt",
+                limit: 1,
+                depth: 0,
+                overrideAccess: false,
+                req,
+              }),
+              req.payload.count({ collection, overrideAccess: false, req }),
+            ]);
+
+            return [
+              collection,
+              {
+                count: total.totalDocs,
+                lastUpdated:
+                  (latest.docs[0] as { updatedAt?: string } | undefined)
+                    ?.updatedAt ?? null,
+              },
+            ] as const;
+          }),
+        );
         const manifest: Record<
           string,
           { count: number; lastUpdated: string | null }
-        > = {};
-
-        for (const collection of collections) {
-          const [latest, total] = await Promise.all([
-            req.payload.find({
-              collection,
-              sort: "-updatedAt",
-              limit: 1,
-              depth: 0,
-            }),
-            req.payload.count({ collection }),
-          ]);
-
-          manifest[collection] = {
-            count: total.totalDocs,
-            lastUpdated:
-              (latest.docs[0] as { updatedAt?: string } | undefined)
-                ?.updatedAt ?? null,
-          };
-        }
+        > = Object.fromEntries(entries);
 
         return Response.json(manifest, {
           headers: {
-            "Cache-Control": "public, s-maxage=60, stale-while-revalidate=300",
+            "Cache-Control": req.user
+              ? "private, no-store"
+              : "public, s-maxage=60, stale-while-revalidate=300",
+            Vary: "Cookie, Authorization",
           },
         });
       },

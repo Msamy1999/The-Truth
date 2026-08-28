@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { SourceLibraryBrowser } from "@/components/content/SourceLibraryBrowser";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
+import { getSourceLibraryCategories } from "@/lib/content";
 
 export const metadata = {
   title: "Sources and Further Reading",
@@ -15,7 +17,9 @@ export const metadata = {
   },
 };
 
-export default function SourcesPage() {
+export default async function SourcesPage() {
+  const categories = await getSourceLibraryCategories();
+
   return (
     <>
       <Section className="border-b border-border" spacing="lg">
@@ -39,6 +43,11 @@ export default function SourcesPage() {
               Read the research method
             </Link>
           </div>
+        </Container>
+      </Section>
+      <Section spacing="lg">
+        <Container>
+          <SourceLibraryBrowser categories={categories} />
         </Container>
       </Section>
     </>

@@ -43,7 +43,7 @@ export default function LibraryScreen() {
           href="/section/atheism-agnosticism"
           icon="help-circle-outline"
           title="Atheism & Agnosticism"
-          subtitle="Planned answers for skeptics and honest doubt."
+          subtitle="Clear answers for skeptics and people working through honest doubt."
         />
         <ListRow
           href="/section/people-of-palestine"
@@ -56,10 +56,16 @@ export default function LibraryScreen() {
       <SectionHeader>Reference</SectionHeader>
       <View style={styles.list}>
         <ListRow
+          href="/claims"
+          icon="shield-checkmark-outline"
+          title="Claims Against Islam"
+          subtitle="Concise responses to recurring criticisms, with Quran and hadith evidence."
+        />
+        <ListRow
           href="/sources"
           icon="library-outline"
           title="Source Library"
-          subtitle="Translations, primary texts, and citation status."
+          subtitle="Primary texts and further reading used throughout the articles."
         />
       </View>
     </ScrollView>

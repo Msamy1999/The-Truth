@@ -1,4 +1,6 @@
 import type { CollectionConfig } from "payload";
+import { authenticated, ownerOnly } from "../access/editorial";
+import { enforceEditorialRole } from "../hooks/enforceEditorialRole";
 import { blockUnverifiedPublish } from "../hooks/blockUnverifiedPublish";
 import {
   revalidateAfterChange,
@@ -55,14 +57,19 @@ const sectionKindOptions = [
 export const Articles: CollectionConfig = {
   slug: "articles",
   access: {
-    // Public read for the website and future mobile app; writes stay authenticated.
-    read: () => true,
+    // Editors can inspect every workflow state. Anonymous API clients must
+    // never receive drafts or under-review records.
+    read: ({ req }) =>
+      req.user ? true : { status: { equals: "published" } },
+    create: authenticated,
+    update: authenticated,
+    delete: ownerOnly,
   },
   versions: {
     drafts: true,
   },
   hooks: {
-    beforeChange: [blockUnverifiedPublish],
+    beforeChange: [enforceEditorialRole, blockUnverifiedPublish],
     afterChange: [revalidateAfterChange],
     afterDelete: [revalidateAfterDelete],
   },

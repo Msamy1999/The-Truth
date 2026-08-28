@@ -1,24 +1,28 @@
 import configPromise from "@payload-config";
 import { getPayload } from "payload";
+import { enforceAnalyticsRetention } from "@/lib/analytics-retention";
+import { requestClientKey } from "@/lib/request-client";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
 const WINDOW_MS = 5 * 60_000;
 const MAX_REQUESTS_PER_SESSION = 120;
+const MAX_REQUESTS_PER_CLIENT = 300;
 const MAX_REQUESTS_PER_WINDOW = 2_000;
 const MAX_TRACKED_KEYS = 10_000;
 const MAX_DURATION_MS = 86_400_000;
+const MAX_BODY_BYTES = 20_000;
 
 type RateLimitEntry = { count: number; resetAt: number };
 const requestsBySession = new Map<string, RateLimitEntry>();
+const requestsByClient = new Map<string, RateLimitEntry>();
 let globalRateLimit: RateLimitEntry = { count: 0, resetAt: Date.now() + WINDOW_MS };
 
 type AnalyticsInput = {
   visitorId?: unknown;
   sessionId?: unknown;
   path?: unknown;
-  title?: unknown;
   entryReferrer?: unknown;
   durationMs?: unknown;
   deviceCategory?: unknown;
@@ -29,7 +33,9 @@ type AnalyticsInput = {
 };
 
 const ID_PATTERN = /^[a-z0-9-]{16,80}$/i;
-const PATH_PATTERN = /^\/(?!\/)[\s\S]{0,511}$/;
+// Analytics stores only a pathname. Query strings and fragments can contain
+// private search terms or tokens and must never enter the reporting database.
+const PATH_PATTERN = /^\/(?!\/)[^?#]{0,511}$/;
 const DEVICE_VALUES = new Set(["desktop", "mobile", "tablet", "unknown"]);
 const BROWSER_VALUES = new Set([
   "chrome",
@@ -75,17 +81,47 @@ function headerText(request: Request, names: string[], maxLength: number): strin
   return undefined;
 }
 
-function referrer(value: unknown): string | undefined {
+function referrer(value: unknown, siteOrigin: string): string | undefined {
   const raw = text(value, 2_000);
   if (!raw) return undefined;
   try {
     const url = new URL(raw);
     if (url.protocol !== "http:" && url.protocol !== "https:") return undefined;
-    // Do not retain query strings, fragments, credentials, or arbitrary text.
-    return `${url.origin}${url.pathname}`.slice(0, 512);
+    // Same-site paths help reconstruct reading flows. External referrers are
+    // reduced to their origin because their paths may contain personal data.
+    return url.origin === siteOrigin
+      ? `${url.origin}${url.pathname}`.slice(0, 512)
+      : url.origin.slice(0, 512);
   } catch {
     return undefined;
   }
+}
+
+const ROUTE_TITLES: Record<string, string> = {
+  "/": "Home",
+  "/atheism-agnosticism": "Atheism & Agnosticism",
+  "/claims-against-islam": "Claims Against Islam",
+  "/glossary": "Glossary",
+  "/islam-christianity": "Islam & Christianity",
+  "/islam-overview": "Islam Overview",
+  "/learn-islam": "Learn Islam",
+  "/people-of-palestine": "People of Palestine",
+  "/privacy": "Privacy",
+  "/questions": "Common Questions",
+  "/search": "Search",
+  "/sources": "Source Library",
+};
+
+function titleFromPath(path: string): string {
+  const fixed = ROUTE_TITLES[path];
+  if (fixed) return fixed;
+  const segment = path.split("/").filter(Boolean).at(-1) ?? "Page";
+  return segment
+    .split("-")
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ")
+    .slice(0, 200);
 }
 
 function validDate(value: unknown): Date {
@@ -105,29 +141,46 @@ function durationLabel(durationMs: number): string {
   return seconds === 0 ? `${minutes}m` : `${minutes}m ${seconds}s`;
 }
 
-function consumeRequest(sessionId: string): boolean {
+function cleanRateLimitMap(map: Map<string, RateLimitEntry>, now: number) {
+  if (map.size < MAX_TRACKED_KEYS) return;
+  for (const [key, entry] of map) {
+    if (entry.resetAt <= now) map.delete(key);
+  }
+  if (map.size >= MAX_TRACKED_KEYS) {
+    map.delete(map.keys().next().value!);
+  }
+}
+
+function activeEntry(
+  map: Map<string, RateLimitEntry>,
+  key: string,
+  now: number,
+): RateLimitEntry {
+  const current = map.get(key);
+  if (current && current.resetAt > now) return current;
+  const next = { count: 0, resetAt: now + WINDOW_MS };
+  map.set(key, next);
+  return next;
+}
+
+function consumeRequest(sessionId: string, client: string): boolean {
   const now = Date.now();
   if (globalRateLimit.resetAt <= now) {
     globalRateLimit = { count: 0, resetAt: now + WINDOW_MS };
   }
   if (globalRateLimit.count >= MAX_REQUESTS_PER_WINDOW) return false;
-  if (requestsBySession.size >= MAX_TRACKED_KEYS) {
-    for (const [key, entry] of requestsBySession) {
-      if (entry.resetAt <= now) requestsBySession.delete(key);
-    }
-    if (requestsBySession.size >= MAX_TRACKED_KEYS) {
-      requestsBySession.delete(requestsBySession.keys().next().value!);
-    }
+  cleanRateLimitMap(requestsBySession, now);
+  cleanRateLimitMap(requestsByClient, now);
+  const sessionEntry = activeEntry(requestsBySession, sessionId, now);
+  const clientEntry = activeEntry(requestsByClient, client, now);
+  if (
+    sessionEntry.count >= MAX_REQUESTS_PER_SESSION ||
+    clientEntry.count >= MAX_REQUESTS_PER_CLIENT
+  ) {
+    return false;
   }
-
-  const current = requestsBySession.get(sessionId);
-  if (!current || current.resetAt <= now) {
-    requestsBySession.set(sessionId, { count: 1, resetAt: now + WINDOW_MS });
-    globalRateLimit.count += 1;
-    return true;
-  }
-  if (current.count >= MAX_REQUESTS_PER_SESSION) return false;
-  current.count += 1;
+  sessionEntry.count += 1;
+  clientEntry.count += 1;
   globalRateLimit.count += 1;
   return true;
 }
@@ -143,13 +196,17 @@ export async function POST(request: Request) {
     return Response.json({ error: "Analytics consent is required" }, { status: 403 });
   }
   const contentLength = Number(request.headers.get("content-length") ?? 0);
-  if (contentLength > 20_000) {
+  if (contentLength > MAX_BODY_BYTES) {
     return Response.json({ error: "Request too large" }, { status: 413 });
   }
 
   let body: AnalyticsInput;
   try {
-    body = (await request.json()) as AnalyticsInput;
+    const rawBody = await request.text();
+    if (new TextEncoder().encode(rawBody).byteLength > MAX_BODY_BYTES) {
+      return Response.json({ error: "Request too large" }, { status: 413 });
+    }
+    body = JSON.parse(rawBody) as AnalyticsInput;
   } catch {
     return Response.json({ error: "Invalid request" }, { status: 400 });
   }
@@ -157,7 +214,6 @@ export async function POST(request: Request) {
   const visitorId = text(body.visitorId, 80);
   const sessionId = text(body.sessionId, 80);
   const path = text(body.path, 512);
-  const title = text(body.title, 200) ?? "Untitled page";
   const durationMs = typeof body.durationMs === "number" ? body.durationMs : NaN;
   const deviceCategory = text(body.deviceCategory, 16) ?? "unknown";
   const browserCategory = text(body.browserCategory, 16) ?? "unknown";
@@ -180,7 +236,7 @@ export async function POST(request: Request) {
     return Response.json({ error: "Invalid analytics event" }, { status: 400 });
   }
 
-  if (!consumeRequest(sessionId)) {
+  if (!consumeRequest(sessionId, requestClientKey(request))) {
     return Response.json(
       { error: "Too many analytics events" },
       { status: 429, headers: { "Retry-After": String(Math.ceil(WINDOW_MS / 1000)) } },
@@ -190,6 +246,7 @@ export async function POST(request: Request) {
   const now = new Date();
   try {
     const payload = await getPayload({ config: configPromise });
+    await enforceAnalyticsRetention(payload);
     await payload.create({
       collection: "analytics-events",
       overrideAccess: true,
@@ -200,8 +257,8 @@ export async function POST(request: Request) {
         recordedAt: now.toISOString(),
         enteredAt: validDate(body.enteredAt).toISOString(),
         path,
-        title,
-        entryReferrer: referrer(body.entryReferrer),
+        title: titleFromPath(path),
+        entryReferrer: referrer(body.entryReferrer, new URL(request.url).origin),
         durationMs: Math.round(durationMs),
         durationLabel: durationLabel(durationMs),
         deviceCategory: deviceCategory as DeviceCategory,

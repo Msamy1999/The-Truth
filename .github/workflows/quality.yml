@@ -1,0 +1,61 @@
+name: Quality checks
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      DATABASE_URI: file:./payload/payload.db-ci
+      NEXT_PUBLIC_SITE_URL: http://localhost:4173
+      PAYLOAD_SECRET: ci-only-placeholder-not-used-in-production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm audit --audit-level=high
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run verify:offline
+      - run: npm run verify:editorial-access
+      - run: npm run verify:reader-text
+      - run: npm run verify:drafts
+      - run: npm run verify:key-scripture
+      - run: npm run content:sync
+      - run: npm run verify:migrations
+      - run: npm run build
+
+  mobile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: mobile
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: mobile/package-lock.json
+      - run: npm ci
+      - run: npm audit --audit-level=high
+      - run: npm run lint
+      - run: npx tsc --noEmit
+      - run: npx expo install --check
+      - run: npm run verify:content:report
+      - run: npx expo export --platform web --output-dir "${RUNNER_TEMP}/straight-path-mobile-web"

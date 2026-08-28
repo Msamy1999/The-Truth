@@ -1,5 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import type { CitationSource } from "@/types/content";
+import { safeExternalUrl } from "@/lib/external-url";
 import { cn } from "@/lib/utils";
 
 type CitationProps = {
@@ -11,15 +12,16 @@ type CitationProps = {
 export function Citation({ source, prefix = "Source", className }: CitationProps) {
   const citation =
     typeof source === "string" ? { label: source, status: "pending" as const } : source;
+  const href = safeExternalUrl(citation.href);
 
   return (
     <p className={cn("text-xs leading-6 text-muted-foreground", className)}>
       <span className="font-medium text-foreground">{prefix}: </span>
-      {citation.href ? (
+      {href ? (
         <a
-          href={citation.href}
+          href={href}
           target="_blank"
-          rel="noreferrer"
+          rel="noreferrer noopener"
           className="inline-flex items-center gap-1 rounded-sm text-muted-foreground hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           {citation.label}

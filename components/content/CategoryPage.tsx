@@ -7,6 +7,7 @@ import { Tag } from "@/components/ui/Tag";
 import { categoryIconMap, fallbackCategoryIcon } from "@/lib/category-icons";
 import {
   getArticleSummariesByCategory,
+  getArticleSlugs,
   getRelatedCategories,
   isIslamChristianityCategorySlug,
 } from "@/lib/content";
@@ -20,7 +21,15 @@ type CategoryPageProps = {
 export async function CategoryPage({ category }: CategoryPageProps) {
   const Icon = categoryIconMap[category.icon] ?? fallbackCategoryIcon;
   const relatedCategories = await getRelatedCategories(category);
-  const draftArticles = await getArticleSummariesByCategory(category.slug);
+  const [draftArticles, articleSlugs] = await Promise.all([
+    getArticleSummariesByCategory(category.slug),
+    getArticleSlugs(),
+  ]);
+  const availableArticleSlugs = new Set(articleSlugs);
+  const availableTopics = category.futureTopics.filter((topic) => {
+    const articleSlug = topic.href?.match(/^\/articles\/([^/?#]+)$/)?.[1];
+    return !articleSlug || availableArticleSlugs.has(articleSlug);
+  });
   const isIslamChristianityBranch = isIslamChristianityCategorySlug(
     category.slug,
   );
@@ -86,7 +95,7 @@ export async function CategoryPage({ category }: CategoryPageProps) {
               </div>
             </div>
           ) : null}
-          {category.futureTopics.length > 0 ? (
+          {availableTopics.length > 0 ? (
             <>
               <PageHeader
                 titleAs="h2"
@@ -95,7 +104,7 @@ export async function CategoryPage({ category }: CategoryPageProps) {
                 subtitle="Questions and themes connected to this category."
               />
               <div className="mt-6 grid gap-4 md:grid-cols-3">
-                {category.futureTopics.map((topic) => (
+                {availableTopics.map((topic) => (
                   <TopicCard
                     key={topic.title}
                     title={topic.title}

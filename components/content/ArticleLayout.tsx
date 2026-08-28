@@ -12,6 +12,7 @@ import { Section } from "@/components/layout/Section";
 import { Card } from "@/components/ui/Card";
 import { Tag } from "@/components/ui/Tag";
 import { categoryIconMap, fallbackCategoryIcon } from "@/lib/category-icons";
+import { safeExternalUrl } from "@/lib/external-url";
 import {
   formatArabicQuranReference,
   quranQuoteSegmentsInLine,
@@ -648,10 +649,14 @@ function renderInlineMarkdown(text: string, keyPrefix: string): ReactNode {
   return parts.map((part, index) => {
     const linkMatch = part.match(/^\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)$/);
     if (linkMatch) {
+      const href = safeExternalUrl(linkMatch[2]);
+      if (!href) {
+        return <span key={`${keyPrefix}-${index}`}>{linkMatch[1]}</span>;
+      }
       return (
         <a
           key={`${keyPrefix}-${index}`}
-          href={linkMatch[2]}
+          href={href}
           target="_blank"
           rel="noreferrer noopener"
           className="font-medium text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent"

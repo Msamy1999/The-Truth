@@ -1,4 +1,6 @@
 import type { CollectionConfig } from "payload";
+import { authenticated, ownerOnly } from "../access/editorial";
+import { enforceEditorialRole } from "../hooks/enforceEditorialRole";
 import { blockUnverifiedPublish } from "../hooks/blockUnverifiedPublish";
 import {
   revalidateAfterChange,
@@ -20,14 +22,17 @@ const localizedTextarea = (name: string) =>
 export const ComparisonArticles: CollectionConfig = {
   slug: "comparison-articles",
   access: {
-    // Public read for the website and future mobile app; writes stay authenticated.
-    read: () => true,
+    read: ({ req }) =>
+      req.user ? true : { status: { equals: "published" } },
+    create: authenticated,
+    update: authenticated,
+    delete: ownerOnly,
   },
   versions: {
     drafts: true,
   },
   hooks: {
-    beforeChange: [blockUnverifiedPublish],
+    beforeChange: [enforceEditorialRole, blockUnverifiedPublish],
     afterChange: [revalidateAfterChange],
     afterDelete: [revalidateAfterDelete],
   },

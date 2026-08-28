@@ -263,7 +263,7 @@ export interface Citation {
   createdAt: string;
 }
 /**
- * Anonymous, consented page activity. No IP addresses, raw user-agents, names, or emails are stored.
+ * Consented page activity retained for up to 13 months. No IP addresses, raw user-agents, names, or emails are stored.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "analytics-events".

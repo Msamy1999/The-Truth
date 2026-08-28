@@ -12,6 +12,7 @@ import {
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from "react";
@@ -111,12 +112,16 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const detectedScheme = useColorScheme();
   const systemScheme = detectedScheme === "dark" ? "dark" : "light";
   const [mode, setMode] = useState<ThemeMode>("system");
+  const modeChangedLocally = useRef(false);
 
   useEffect(() => {
     AsyncStorage.getItem(MODE_KEY).then((stored) => {
+      if (modeChangedLocally.current) return;
       if (stored === "light" || stored === "dark" || stored === "system") {
         setMode(stored);
       }
+    }).catch(() => {
+      // Theme persistence is best-effort; retain the system mode on failure.
     });
   }, []);
 
@@ -128,6 +133,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       scheme,
       mode,
       toggle: () => {
+        modeChangedLocally.current = true;
         setMode(() => {
           // Toggle relative to what the user currently sees.
           const next = scheme === "dark" ? "light" : "dark";

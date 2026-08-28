@@ -40,6 +40,36 @@ export type Citation = {
   status: "pending" | "verified";
 };
 
+export type QuranVerse = {
+  scripture: "quran";
+  surahName: string;
+  surahNumber: number;
+  ayahNumber: number;
+  arabic: string;
+  translation: string;
+  translator: string;
+  reference: string;
+  notes?: string;
+  status: "pending" | "verified";
+};
+
+export type BibleVerse = {
+  scripture: "bible";
+  book: string;
+  chapter: number;
+  verse: number | string;
+  text: string;
+  version: string;
+  reference: string;
+  notes?: string;
+  status: "pending" | "verified";
+};
+
+export type ArticleKeyScripture = {
+  quranVerses: QuranVerse[];
+  bibleVerses: BibleVerse[];
+};
+
 export type GlossaryTerm = {
   term: string;
   pronunciation?: string;
@@ -64,6 +94,22 @@ export type SourceLibraryCategory = {
   title: string;
   description: string;
   items: SourceLibraryItem[];
+};
+
+export type EvidenceReference = {
+  kind: "Quran" | "Hadith";
+  reference: string;
+  summary: string;
+  href: string;
+};
+
+export type ClaimAgainstIslam = {
+  id: string;
+  title: string;
+  claim: string;
+  response: string[];
+  evidence: EvidenceReference[];
+  links?: { href: string; label: string }[];
 };
 
 export type FutureTopic = {
@@ -119,4 +165,6 @@ export type AppContent = {
   citations: Citation[];
   glossary: GlossaryTerm[];
   sources: SourceLibraryCategory[];
+  claimsAgainstIslam: ClaimAgainstIslam[];
+  keyScriptureByArticle: Record<string, ArticleKeyScripture>;
 };

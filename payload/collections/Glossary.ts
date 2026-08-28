@@ -1,4 +1,5 @@
 import type { CollectionConfig } from "payload";
+import { authenticated, ownerOnly } from "../access/editorial";
 import {
   revalidateAfterChange,
   revalidateAfterDelete,
@@ -22,6 +23,9 @@ export const GlossaryTerms: CollectionConfig = {
   access: {
     // Public read for the website and future mobile app; writes stay authenticated.
     read: () => true,
+    create: authenticated,
+    update: authenticated,
+    delete: ownerOnly,
   },
   hooks: {
     afterChange: [revalidateAfterChange],

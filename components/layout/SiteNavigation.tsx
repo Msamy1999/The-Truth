@@ -199,11 +199,17 @@ function HeaderSearch({
       role="search"
       onSubmit={onSubmit}
       className={cn(
-        "items-center gap-2 rounded-md border border-border bg-card px-3 py-2 text-muted-foreground no-underline transition hover:bg-muted hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
+        "items-center gap-2 rounded-md border border-border bg-card px-3 py-2 text-muted-foreground no-underline transition hover:bg-muted hover:text-foreground focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-accent",
         className,
       )}
     >
-      <Search aria-hidden="true" className="h-4 w-4 shrink-0" />
+      <button
+        type="submit"
+        aria-label="Search"
+        className="grid h-7 w-7 shrink-0 place-items-center rounded-sm text-muted-foreground transition hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
+      >
+        <Search aria-hidden="true" className="h-4 w-4" />
+      </button>
       <input
         type="search"
         name="q"

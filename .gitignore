@@ -34,3 +34,10 @@ payload/payload.db*
 # local deployment artifacts
 deployment-backups/
 *.sqlite-backup
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+
+# local Codex audit/build workspaces (may contain large fixture databases)
+.codex*/

@@ -1,5 +1,6 @@
 import configPromise from "@payload-config";
 import { getPayload } from "payload";
+import { enforceAnalyticsRetention } from "@/lib/analytics-retention";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -10,6 +11,7 @@ export async function GET() {
     await payload.count({
       collection: "users",
     });
+    await enforceAnalyticsRetention(payload);
 
     return Response.json(
       {

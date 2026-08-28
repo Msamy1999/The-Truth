@@ -1,17 +1,17 @@
 # The Straight Path — Mobile App (iOS + Android)
 
-Expo (React Native) app sharing content with the website. One content source:
-the Payload CMS. Edit in `/admin` on the site → the site updates in seconds →
-the app picks up changes on next launch via the content-manifest delta check.
+Expo (React Native) app sharing the website's approved content. Payload CMS is
+the editorial source; a published-and-verified snapshot is bundled before each store build
+so reading remains available offline.
 
 ## How it works
 
-- **Bundled snapshot**: `assets/content/*.json` is generated from the CMS by
+- **Bundled snapshot**: `assets/content/*.json` is generated from the public,
+  published CMS records by
   `npx tsx scripts/export-mobile-content.ts` (run from the repo root with the
   site running). First launch works fully offline.
-- **Live refresh**: if `EXPO_PUBLIC_API_URL` is set, the app checks
-  `/api/content-manifest` on launch; when content changed it refetches and
-  caches to AsyncStorage. No app-store release is ever needed for content.
+- **Updates**: regenerate the published-and-verified snapshot before a store build. The
+  current app does not fetch editorial records at runtime.
 - **Screens**: Home (main paths + bookmarks + Christian learning path),
   Library (categories), Search, Glossary, article reader (bookmark + font
   size), category detail, section study-trees, Source Library.
@@ -23,14 +23,10 @@ the app picks up changes on next launch via the content-manifest delta check.
 
 ```bash
 cd mobile
-npm install
+npm ci
 npx expo start            # scan QR with Expo Go (Android/iOS)
 npx expo start --web      # run in the browser
 ```
-
-Set the API for live refresh in `.env` or the shell:
-`EXPO_PUBLIC_API_URL=http://192.168.x.x:3000` (your machine's LAN IP so a
-phone on the same Wi-Fi can reach the dev server).
 
 ## Refresh the bundled content snapshot
 
@@ -41,6 +37,10 @@ npx tsx scripts/export-mobile-content.ts
 ```
 
 Re-run before every store build so first-launch offline content is current.
+Production EAS builds also run a mandatory snapshot gate. A build stops if any
+article is not published, any citation or scripture record is not verified, or
+placeholder evidence remains. Internal development builds may still preview
+work in progress, but they are not release artifacts.
 
 ## Build for the stores (EAS — no Mac needed)
 
@@ -51,11 +51,9 @@ One-time setup (your accounts, cannot be automated):
 3. Google Play Console — $25 one-time. **Personal accounts must run a closed
    test with 12 testers for 14 continuous days before production access —
    start this early.**
-4. Deploy the website + CMS publicly (Vercel + Neon Postgres per ROADMAP.md)
-   and put the real URL into `eas.json` (`EXPO_PUBLIC_API_URL`) — replace
-   `https://YOUR-DEPLOYED-SITE.example`.
-5. Host a privacy policy page on the site (both stores require the URL; the
-   app collects no data, keeping the forms trivial).
+4. Confirm the public website and privacy policy at
+   `https://thestraightpathislam.com` are available.
+5. Regenerate and review the bundled content snapshot.
 
 Then:
 
@@ -67,9 +65,8 @@ eas submit --platform ios
 ```
 
 Store-listing guidance (religious content): present the app as a sourced,
-educational comparative-religion library; keep screenshots showing the
-citation-first, source-pending design. See ROADMAP.md → "Store accounts and
-submission" for the full review-posture notes (Apple 1.1/4.2, Play policies).
+educational comparative-religion library; keep screenshots focused on clear
+articles, citations, offline reading, bookmarks, and search.
 
 ## Not yet included (deliberate v1 scope)
 

@@ -29,10 +29,15 @@ export function readAnalyticsConsent(): AnalyticsConsent {
 export function setAnalyticsConsent(value: Exclude<AnalyticsConsent, "unknown">) {
   try {
     window.localStorage.setItem(ANALYTICS_CONSENT_KEY, value);
+    if (value === "denied") {
+      window.localStorage.removeItem("the-straight-path-visitor-id");
+      window.sessionStorage.removeItem("the-straight-path-session-id");
+    }
   } catch {
     // If storage is unavailable, the tracker remains effectively disabled.
   }
-  document.cookie = `${ANALYTICS_CONSENT_COOKIE}=${value}; Path=/; Max-Age=31536000; SameSite=Lax`;
+  const secure = window.location.protocol === "https:" ? "; Secure" : "";
+  document.cookie = `${ANALYTICS_CONSENT_COOKIE}=${value}; Path=/; Max-Age=31536000; SameSite=Lax${secure}`;
   window.dispatchEvent(
     new CustomEvent(ANALYTICS_CONSENT_EVENT, { detail: value }),
   );
@@ -40,23 +45,27 @@ export function setAnalyticsConsent(value: Exclude<AnalyticsConsent, "unknown">)
 
 export function AnalyticsConsentBanner() {
   const [consent, setConsent] = useState<AnalyticsConsent>("unknown");
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const update = () => setConsent(readAnalyticsConsent());
     update();
+    setReady(true);
     window.addEventListener(ANALYTICS_CONSENT_EVENT, update);
     return () => window.removeEventListener(ANALYTICS_CONSENT_EVENT, update);
   }, []);
 
-  if (consent !== "unknown") return null;
+  // The preference is client-owned. Waiting for the first client read avoids
+  // flashing the banner on every navigation for readers who already chose.
+  if (!ready || consent !== "unknown") return null;
 
   return (
     <aside
       aria-label="Analytics consent"
-      className="fixed inset-x-3 bottom-3 z-[70] mx-auto max-w-2xl rounded-lg border border-border bg-card p-3 text-sm text-card-foreground shadow-soft sm:inset-x-6 sm:flex sm:items-center sm:gap-4"
+      className="fixed inset-x-3 bottom-3 z-[100] mx-auto max-w-2xl rounded-lg border border-border bg-card p-3 text-sm text-card-foreground shadow-soft sm:inset-x-6 sm:flex sm:items-center sm:gap-4"
     >
       <p className="flex-1 leading-6">
-        May we collect anonymous page visits and reading time to improve this site?
+        May we collect privacy-preserving page visits and reading time to improve this site?
         No names, emails, or IP addresses are stored.{" "}
         <a href="/privacy" className="font-medium text-accent underline">
           Privacy details
@@ -81,7 +90,7 @@ export function AnalyticsConsentBanner() {
           }}
           className="rounded-md bg-accent px-3 py-2 font-semibold text-accent-foreground hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
         >
-          Allow anonymous analytics
+          Allow site analytics
         </button>
       </div>
     </aside>
@@ -116,10 +125,10 @@ export function AnalyticsPreferences({ className }: { className?: string }) {
       }
     >
       {consent === "granted"
-        ? "Turn off anonymous analytics"
+        ? "Turn off site analytics"
         : consent === "denied"
-          ? "Allow anonymous analytics"
-          : "Decline anonymous analytics"}
+          ? "Allow site analytics"
+          : "Decline site analytics"}
     </button>
   );
 }

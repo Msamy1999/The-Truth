@@ -38,6 +38,7 @@ function toRoute(href: string): string {
     return href.replace("/articles/", "/article/");
   }
   if (href === "/sources") return "/sources";
+  if (href === "/claims-against-islam") return "/claims";
   if (href === "/glossary") return "/glossary";
   const slug = href.replace("/", "");
   if (TREE_SECTIONS.includes(slug)) return `/section/${slug}`;
@@ -76,8 +77,8 @@ export default function HomeScreen() {
         </View>
       </View>
       <Body>
-        An Islamic knowledge and research library for sincere seekers —
-        source-aware study with honest draft labels.
+        An Islamic knowledge and research library for sincere seekers, with
+        clear evidence, respectful comparison, and practical learning paths.
       </Body>
 
       <SectionHeader>Main paths</SectionHeader>
@@ -111,34 +112,31 @@ export default function HomeScreen() {
       ) : null}
 
       <SectionHeader>Recommended path for Christians</SectionHeader>
-      <Card style={{ gap: 0, paddingVertical: space.xs }}>
+      <View style={styles.list}>
         {content.home.christianLearningPath.map((step, index) => (
-          <View
+          <ListRow
             key={step.title}
-            style={[
-              styles.step,
-              index > 0 && {
-                borderTopWidth: StyleSheet.hairlineWidth,
-                borderTopColor: theme.hairline,
-              },
-            ]}
-          >
-            <View style={[styles.stepNumber, { backgroundColor: theme.accentSoft }]}>
-              <Text style={{ color: theme.accent, fontWeight: "700", fontSize: 13 }}>
-                {index + 1}
-              </Text>
-            </View>
-            <View style={{ flex: 1, gap: 2 }}>
-              <Text style={[type.cardTitle, { color: theme.foreground }]}>
-                {step.title}
-              </Text>
-              <Text style={[type.caption, { color: theme.mutedForeground }]}>
-                {step.description}
-              </Text>
-            </View>
-          </View>
+            href={toRoute(step.href)}
+            icon="navigate-outline"
+            title={step.title}
+            subtitle={step.description}
+            pill={
+              <View
+                style={[
+                  styles.stepNumber,
+                  { backgroundColor: theme.accentSoft },
+                ]}
+              >
+                <Text
+                  style={{ color: theme.accent, fontWeight: "700", fontSize: 13 }}
+                >
+                  {index + 1}
+                </Text>
+              </View>
+            }
+          />
         ))}
-      </Card>
+      </View>
 
       <SectionHeader>How we study</SectionHeader>
       <Card style={{ gap: space.md }}>
@@ -190,12 +188,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   list: { gap: space.sm },
-  step: {
-    flexDirection: "row",
-    gap: space.md,
-    alignItems: "flex-start",
-    paddingVertical: space.md,
-  },
   stepNumber: {
     width: 26,
     height: 26,

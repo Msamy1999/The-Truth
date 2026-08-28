@@ -61,6 +61,8 @@ declare global {
     googleTranslateElementInit?: () => void;
     /** Set once the React/DOM compatibility guards are installed. */
     __straightPathTranslationGuard?: boolean;
+    /** Set once Google's late-injected banner and tooltip guard is installed. */
+    __straightPathGoogleChromeGuard?: boolean;
   }
 }
 
@@ -114,6 +116,7 @@ export function setDocumentLanguage(language: SupportedLanguage) {
   root.lang = language;
   root.dir = language === "ar" ? "rtl" : "ltr";
   root.dataset.language = language;
+  root.removeAttribute("data-requested-language");
 }
 
 export function broadcastLanguage(language: SupportedLanguage) {
@@ -313,9 +316,9 @@ function isTranslated(language: SupportedLanguage) {
  * one frame of the text appearing, without a busy loop.
  */
 function waitForTranslationApplied(language: SupportedLanguage) {
-  return new Promise<void>((resolve) => {
+  return new Promise<boolean>((resolve) => {
     if (isTranslated(language)) {
-      resolve();
+      resolve(true);
       return;
     }
 
@@ -325,19 +328,21 @@ function waitForTranslationApplied(language: SupportedLanguage) {
 
     const observer = new MutationObserver(() => schedule());
 
-    const finish = () => {
+    const finish = (applied: boolean) => {
       if (finished) return;
       finished = true;
       window.clearTimeout(timer);
       observer.disconnect();
-      resolve();
+      resolve(applied);
     };
 
     const attempt = () => {
       timer = 0;
       if (finished) return;
-      if (isTranslated(language) || Date.now() >= deadline) {
-        finish();
+      if (isTranslated(language)) {
+        finish(true);
+      } else if (Date.now() >= deadline) {
+        finish(false);
       } else {
         schedule();
       }
@@ -440,13 +445,60 @@ function waitForTranslationToSettle() {
 
 function hideGoogleChrome() {
   document
-    .querySelectorAll<HTMLElement>("iframe.skiptranslate, .goog-te-banner-frame, body > .skiptranslate")
+    .querySelectorAll<HTMLElement>(
+      [
+        "iframe.skiptranslate",
+        ".goog-te-banner-frame",
+        ".VIpgJd-ZVi9od-ORHb-OEVmcd",
+        ".VIpgJd-ZVi9od-ORHb",
+        'iframe[title="Language Translate Widget"]',
+        "body > .skiptranslate",
+        "#goog-gt-tt",
+        ".goog-te-balloon-frame",
+        ".VIpgJd-suEOdc",
+        ".VIpgJd-yAWNEb-hvhgNd",
+      ].join(", "),
+    )
     .forEach((element) => {
       element.style.setProperty("display", "none", "important");
       element.style.setProperty("visibility", "hidden", "important");
       element.style.setProperty("pointer-events", "none", "important");
     });
+  document.documentElement.style.setProperty("top", "0", "important");
+  document.documentElement.style.setProperty("margin-top", "0", "important");
   document.body.style.setProperty("top", "0", "important");
+  document.body.style.setProperty("margin-top", "0", "important");
+}
+
+/**
+ * Google can insert its banner or translation tooltip well after the language
+ * switch resolves (for example, after translated text is tapped on a phone).
+ * Keep watching for that external chrome while leaving the translated page
+ * content and the hidden language control untouched.
+ */
+export function installGoogleChromeGuard() {
+  if (typeof MutationObserver !== "function" || !document.body) return;
+  if (window.__straightPathGoogleChromeGuard) return;
+  window.__straightPathGoogleChromeGuard = true;
+
+  let scheduled = false;
+  const scheduleHide = () => {
+    if (scheduled) return;
+    scheduled = true;
+    window.queueMicrotask(() => {
+      scheduled = false;
+      hideGoogleChrome();
+    });
+  };
+
+  const observer = new MutationObserver(scheduleHide);
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["style"],
+    childList: true,
+    subtree: true,
+  });
+  hideGoogleChrome();
 }
 
 /** Keeps the Uthmani Quran text out of machine translation. */
@@ -485,7 +537,8 @@ async function applyLanguage(
   }
 
   onStage?.("finishing");
-  await waitForTranslationApplied(language);
+  const translated = await waitForTranslationApplied(language);
+  if (!translated) return false;
   await waitForTranslationToSettle();
   hideGoogleChrome();
   return true;
@@ -553,7 +606,11 @@ export async function requestLanguage(target: SupportedLanguage, mode: Translati
   if (runInFlight) return;
   runInFlight = true;
 
-  const previous = readSavedLanguage();
+  const documentLanguage = document.documentElement.dataset.language;
+  const previous: SupportedLanguage =
+    documentLanguage === "ar" || documentLanguage === "en"
+      ? documentLanguage
+      : readSavedLanguage();
   publishRun({ target, mode, stage: "connecting" });
 
   let released = false;
@@ -573,10 +630,12 @@ export async function requestLanguage(target: SupportedLanguage, mode: Translati
     });
 
     if (!applied) {
-      // The widget never exposed a drivable control. Its cookie is honoured on
-      // a fresh document, so reload rather than stranding the reader.
-      persistLanguage(target);
-      if (mode === "switch") window.location.reload();
+      // Never claim that Arabic is active over visibly English copy. A reload
+      // can repeat the same upstream failure and strand the page in false RTL,
+      // so restore the last language and leave the reader on a usable page.
+      setDocumentLanguage(previous);
+      persistLanguage(previous);
+      broadcastLanguage(previous);
       return;
     }
 

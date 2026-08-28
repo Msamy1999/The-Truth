@@ -5,6 +5,7 @@
  */
 import type { Metadata } from "next";
 import { getCategoryBySlug } from "@/lib/content";
+import { readerDescription } from "@/lib/reader-text";
 import type { CategorySlug } from "@/types/domain";
 
 export {
@@ -24,16 +25,17 @@ export async function getCategoryMetadata(
   slug: CategorySlug,
 ): Promise<Metadata> {
   const category = await getCategoryBySlug(slug);
+  const description = readerDescription(category.description);
 
   return {
     title: category.title,
-    description: category.description,
+    description,
     alternates: {
       canonical: category.href,
     },
     openGraph: {
       title: category.title,
-      description: category.description,
+      description,
     },
   };
 }
