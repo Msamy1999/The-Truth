@@ -7,6 +7,7 @@ import {
   type SpeechChunk,
   useArticleAudio,
 } from "@/components/audio/ArticleAudioProvider";
+import { ShareArticleMenu } from "@/components/content/ShareArticleMenu";
 import { cn } from "@/lib/utils";
 import type { ArticlePlaybackNavigation } from "@/types/domain";
 
@@ -23,7 +24,7 @@ const MAX_CHUNK_LENGTH = 360;
 const COPY_STATUS_MS = 2_500;
 
 const toolButtonClass =
-  "inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+  "inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-3 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-4";
 const primaryToolClass = "bg-accent text-accent-foreground hover:brightness-110";
 const secondaryToolClass =
   "border border-border bg-card text-foreground hover:bg-muted";
@@ -268,7 +269,7 @@ export function ArticleTools({
   const isCurrent = activeSlug === articleSlug && playState !== "idle";
 
   return (
-    <div className={cn("flex flex-wrap items-center gap-2", className)}>
+    <div className={cn("flex flex-wrap items-center gap-2 print:hidden", className)}>
       <button
         type="button"
         onClick={() => startArticle(registration)}
@@ -276,7 +277,10 @@ export function ArticleTools({
         className={cn(toolButtonClass, primaryToolClass)}
       >
         <Volume2 aria-hidden="true" className="h-4 w-4" />
-        {isCurrent ? "Restart article" : "Read article"}
+        <span className="sm:hidden">{isCurrent ? "Restart" : "Read"}</span>
+        <span className="hidden sm:inline">
+          {isCurrent ? "Restart article" : "Read article"}
+        </span>
       </button>
       <button
         type="button"
@@ -289,8 +293,14 @@ export function ArticleTools({
         ) : (
           <Copy aria-hidden="true" className="h-4 w-4" />
         )}
-        Copy article
+        <span className="sm:hidden">Copy</span>
+        <span className="hidden sm:inline">Copy article</span>
       </button>
+      <ShareArticleMenu
+        articleTitle={articleTitle}
+        articleSubtitle={articleSubtitle}
+        buttonClassName={cn(toolButtonClass, secondaryToolClass)}
+      />
       <p
         aria-live="polite"
         className={cn(
