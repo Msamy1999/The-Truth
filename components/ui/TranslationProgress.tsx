@@ -72,11 +72,12 @@ export function TranslationProgress() {
   if (run.mode === "restore") {
     return (
       <div
+        data-print-hidden
         role="status"
         aria-live="polite"
         aria-label={copy.subtitle}
         translate="no"
-        className="notranslate pointer-events-none fixed inset-x-0 top-0 z-[110]"
+        className="notranslate pointer-events-none fixed inset-x-0 top-0 z-[110] print:hidden"
       >
         <div className="h-0.5 w-full bg-accent/15">
           <div
@@ -90,11 +91,12 @@ export function TranslationProgress() {
 
   return (
     <div
+      data-print-hidden
       role="status"
       aria-live="assertive"
       aria-label={copy.subtitle}
       translate="no"
-      className="notranslate fixed inset-0 z-[110] grid place-items-center bg-background/75 px-6 backdrop-blur-md motion-safe:animate-[sp-fade-in_150ms_ease-out]"
+      className="notranslate fixed inset-0 z-[110] grid place-items-center bg-background/75 px-6 backdrop-blur-md motion-safe:animate-[sp-fade-in_150ms_ease-out] print:hidden"
     >
       <div
         dir={run.target === "ar" ? "rtl" : "ltr"}

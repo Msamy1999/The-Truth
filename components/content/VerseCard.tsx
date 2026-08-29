@@ -14,6 +14,7 @@ export function VerseCard({ verse, className }: VerseCardProps) {
     return (
       <Card
         data-read-aloud-block
+        data-print-keep-together
         className={cn("border-accent/25 p-3 sm:p-3.5", className)}
       >
         <p className="text-[0.68rem] font-semibold uppercase tracking-wide text-accent sm:text-xs">
@@ -71,7 +72,11 @@ export function VerseCard({ verse, className }: VerseCardProps) {
   }
 
   return (
-    <Card data-read-aloud-block className={cn("p-3 sm:p-3.5", className)}>
+    <Card
+      data-read-aloud-block
+      data-print-keep-together
+      className={cn("p-3 sm:p-3.5", className)}
+    >
       <p className="text-[0.68rem] font-semibold uppercase tracking-wide text-accent sm:text-xs">
         Bible
       </p>

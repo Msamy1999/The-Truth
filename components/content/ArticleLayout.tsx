@@ -76,9 +76,14 @@ export function ArticleLayout({
   return (
     <>
       {collapsibleSections ? <ArticleHashOpener /> : null}
-      <Section className="border-b border-border" spacing="sm">
-        <Container>
+      <Section data-print-article-header className="border-b border-border" spacing="sm">
+        <Container data-print-article-container>
+          <div data-print-masthead className="hidden" aria-hidden="true">
+            <span>The Straight Path</span>
+            <span>thestraightpathislam.com</span>
+          </div>
           <Breadcrumbs
+            className="print:hidden"
             items={[
               { label: "Library", href: "/" },
               ...(treeBreadcrumbs.length > 0
@@ -94,7 +99,10 @@ export function ArticleLayout({
               subtitle={article.subtitle}
               titleClassName="text-2xl sm:text-3xl lg:text-3xl"
             />
-            <div className="mt-3 flex flex-wrap items-center gap-1.5">
+            <div
+              data-print-hidden
+              className="mt-3 flex flex-wrap items-center gap-1.5 print:hidden"
+            >
               {article.tags.map((tag) => (
                 <Tag key={tag}>{tag}</Tag>
               ))}
@@ -118,10 +126,13 @@ export function ArticleLayout({
         </Container>
       </Section>
 
-      <Section spacing="sm">
-        <Container>
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start">
-            <article className="min-w-0">
+      <Section data-print-article-body spacing="sm">
+        <Container data-print-article-container>
+          <div
+            data-print-article-grid
+            className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start"
+          >
+            <article data-print-article className="min-w-0">
               <div
                 data-article-readable-content
                 className={collapsibleSections ? "mt-2 space-y-3" : "mt-8 space-y-10"}
@@ -177,7 +188,11 @@ export function ArticleLayout({
               )}
 
               {relatedArticles.length > 0 ? (
-                <section id="related-articles" className="mt-12 scroll-mt-20">
+                <section
+                  id="related-articles"
+                  data-print-hidden
+                  className="mt-12 scroll-mt-20 print:hidden"
+                >
                   <PageHeader
                     titleAs="h2"
                     eyebrow="Related"
@@ -200,7 +215,10 @@ export function ArticleLayout({
               ) : null}
             </article>
 
-            <aside className="order-first lg:order-none lg:sticky lg:top-20">
+            <aside
+              data-print-hidden
+              className="order-first lg:order-none lg:sticky lg:top-20 print:hidden"
+            >
               <Card className="p-4">
                 <p className="text-sm font-semibold text-foreground">
                   On this page

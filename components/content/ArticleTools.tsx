@@ -269,7 +269,10 @@ export function ArticleTools({
   const isCurrent = activeSlug === articleSlug && playState !== "idle";
 
   return (
-    <div className={cn("flex flex-wrap items-center gap-2 print:hidden", className)}>
+    <div
+      data-print-hidden
+      className={cn("flex flex-wrap items-center gap-2 print:hidden", className)}
+    >
       <button
         type="button"
         onClick={() => startArticle(registration)}

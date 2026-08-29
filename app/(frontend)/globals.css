@@ -174,3 +174,176 @@ font[style*="vertical-align"],
     @apply bg-accent text-accent-foreground;
   }
 }
+
+/*
+ * A paper article is a document, not a screenshot of the application shell.
+ * Keep these rules outside Tailwind layers so print-only behavior is retained
+ * in every production build and in browser-generated PDFs.
+ */
+@page {
+  size: auto;
+  margin: 14mm 15mm 16mm;
+}
+
+@media print {
+  :root,
+  html.light,
+  html.dark {
+    --background: 0 0% 100%;
+    --foreground: 158 20% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 158 20% 12%;
+    --muted: 160 10% 96%;
+    --muted-foreground: 158 9% 32%;
+    --border: 156 13% 72%;
+    --accent: 172 82% 24%;
+    --accent-foreground: 0 0% 100%;
+  }
+
+  html,
+  html.light,
+  html.dark,
+  body {
+    color-scheme: light !important;
+    background: #ffffff !important;
+    color: #17211e !important;
+  }
+
+  html {
+    font-size: 10.5pt !important;
+  }
+
+  body {
+    min-width: 0 !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    text-rendering: optimizeLegibility;
+  }
+
+  [data-print-hidden] {
+    display: none !important;
+  }
+
+  main,
+  [data-print-article-container],
+  [data-print-article-grid],
+  [data-print-article] {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  [data-print-article-header],
+  [data-print-article-body] {
+    background: #ffffff !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  [data-print-article-header] {
+    border-bottom: 1px solid #b9c7c2 !important;
+    padding-bottom: 5mm !important;
+  }
+
+  [data-print-masthead] {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8mm;
+    margin-bottom: 6mm;
+    color: #47605a;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  [data-print-article-body] {
+    padding-top: 6mm !important;
+  }
+
+  [data-article-readable-content] {
+    margin-top: 0 !important;
+    gap: 0 !important;
+  }
+
+  [data-article-readable-content] > section,
+  [data-article-readable-content] > details {
+    margin-top: 7mm !important;
+  }
+
+  [data-article-readable-content] > :first-child {
+    margin-top: 0 !important;
+  }
+
+  [data-article-readable-content] details:not([open]) > :not(summary),
+  [data-print-article] > details:not([open]) > :not(summary) {
+    display: block !important;
+  }
+
+  [data-article-readable-content] details > summary svg,
+  [data-print-article] > details > summary svg {
+    display: none !important;
+  }
+
+  [data-print-keep-together],
+  [data-print-article] blockquote,
+  [data-print-article] aside,
+  [data-print-article] li {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  [data-print-keep-together] {
+    width: 100% !important;
+    margin: 3mm 0 !important;
+    border-color: #aebdb8 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  [data-print-keep-together] [lang="ar"] {
+    color: #0b7067 !important;
+  }
+
+  [data-print-article] h2,
+  [data-print-article] h3,
+  [data-print-article] summary {
+    break-after: avoid-page;
+    page-break-after: avoid;
+  }
+
+  [data-print-article] h2,
+  [data-print-article] h3,
+  [data-print-article] p,
+  [data-print-article] span,
+  [data-print-article] li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  [data-print-article] .shadow-soft,
+  [data-print-article] [class*="shadow-"] {
+    box-shadow: none !important;
+  }
+
+  [data-print-article] a {
+    color: inherit !important;
+    text-decoration-color: #7e928b !important;
+  }
+
+  [data-print-article] a[href]::after {
+    content: none !important;
+  }
+
+  [data-print-article] img,
+  [data-print-article] svg,
+  [data-print-article] table,
+  [data-print-article] pre {
+    max-width: 100% !important;
+  }
+}

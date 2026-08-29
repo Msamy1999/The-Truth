@@ -61,8 +61,9 @@ export function AnalyticsConsentBanner() {
 
   return (
     <aside
+      data-print-hidden
       aria-label="Analytics consent"
-      className="fixed inset-x-3 bottom-3 z-[100] mx-auto max-w-2xl rounded-lg border border-border bg-card p-3 text-sm text-card-foreground shadow-soft sm:inset-x-6 sm:flex sm:items-center sm:gap-4"
+      className="fixed inset-x-3 bottom-3 z-[100] mx-auto max-w-2xl rounded-lg border border-border bg-card p-3 text-sm text-card-foreground shadow-soft sm:inset-x-6 sm:flex sm:items-center sm:gap-4 print:hidden"
     >
       <p className="flex-1 leading-6">
         May we collect privacy-preserving page visits and reading time to improve this site?

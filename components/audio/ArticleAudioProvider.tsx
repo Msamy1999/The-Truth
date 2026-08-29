@@ -1151,9 +1151,10 @@ export function ArticleAudioProvider({ children }: { children: ReactNode }) {
       {children}
       {playState !== "idle" && currentArticle ? (
         <div
+          data-print-hidden
           role="group"
           aria-label={`Audio controls for ${currentArticle.title}`}
-          className="fixed inset-x-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-[70] mx-auto w-[calc(100%-1.5rem)] max-w-xl rounded-2xl border border-border/80 bg-card/95 p-2.5 shadow-[0_16px_48px_hsl(var(--background)/0.45)] ring-1 ring-foreground/5 backdrop-blur-xl sm:left-1/2 sm:right-auto sm:w-[min(38rem,calc(100vw-2rem))] sm:-translate-x-1/2 sm:p-3"
+          className="fixed inset-x-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-[70] mx-auto w-[calc(100%-1.5rem)] max-w-xl rounded-2xl border border-border/80 bg-card/95 p-2.5 shadow-[0_16px_48px_hsl(var(--background)/0.45)] ring-1 ring-foreground/5 backdrop-blur-xl sm:left-1/2 sm:right-auto sm:w-[min(38rem,calc(100vw-2rem))] sm:-translate-x-1/2 sm:p-3 print:hidden"
         >
           <div className="px-1 pb-1" aria-live="polite">
             <div className="flex items-center justify-between gap-3">
