@@ -112,8 +112,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
           }}
         />
         <a
+          data-print-hidden
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-card focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-foreground focus:shadow-soft focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-accent"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-card focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-foreground focus:shadow-soft focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-accent print:hidden"
         >
           Skip to content
         </a>

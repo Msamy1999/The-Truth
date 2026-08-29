@@ -99,11 +99,12 @@ export function NavigationLoadingIndicator() {
 
   return (
     <div
+      data-print-hidden
       role="status"
       aria-live="polite"
       aria-label="Loading page"
       translate="no"
-      className="notranslate fixed inset-0 z-[60] grid place-items-center bg-background/80 px-6 backdrop-blur-sm"
+      className="notranslate fixed inset-0 z-[60] grid place-items-center bg-background/80 px-6 backdrop-blur-sm print:hidden"
     >
       <div className="flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4 font-semibold text-foreground shadow-soft">
         <Spinner className="h-5 w-5 text-accent" />

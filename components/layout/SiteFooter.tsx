@@ -6,7 +6,7 @@ import { AnalyticsPreferences } from "@/components/analytics/AnalyticsConsent";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-background">
+    <footer data-print-hidden className="border-t border-border bg-background print:hidden">
       <Container className="grid gap-8 py-10 text-sm text-muted-foreground md:grid-cols-[1.1fr_1.5fr_0.8fr]">
         <div>
           <SiteBrand as="text" />
